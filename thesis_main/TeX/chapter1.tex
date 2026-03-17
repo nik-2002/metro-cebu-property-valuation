@@ -1,0 +1,67 @@
+\section{Background of the Study}
+
+The Residential Real Estate Price Index (RREPI, hereafter referred to as RPPI) released by the Bangko Sentral ng Pilipinas (BSP) reported a 7.5\% increase in housing prices nationwide in Q2 2025, led by double-digit growth in areas outside Metro Manila, including the Visayas \parencite{bsp2025}. This consistent upward movement in property values reflects both strong domestic consumption and the sustained demand for housing and investment properties.
+
+\subsection{Subsystem: Cebu's Economic Landscape}
+
+Within this national context, Cebu stands out as one of the Philippines’ fastest-growing regional economies, expanding by 7.3\% in 2024. Services and industry—particularly real estate, IT-BPM, and tourism—serve as key growth drivers. Cebu’s real estate sector thrives due to infrastructure expansion projects like the Cebu Bus Rapid Transit (CBRT) and Metro Cebu Expressway, both of which are expected to elevate accessibility and land values along their routes. Meanwhile, the province’s tourism and connectivity are bolstered by the Mactan-Cebu International Airport (MCIA), which served 11.32 million passengers in 2024, and continues to open new international routes.
+
+Cebu’s residential and commercial property markets have become more diverse, featuring sustainable mixed-use developments and vertical housing projects. As a result, the city has emerged as a real estate hotspot outside Metro Manila, with Metro Cebu posting an 11.5\% rise in property prices, one of the highest among areas outside NCR.
+
+\subsection{Focal Stakeholder}
+
+The Cebu real estate sector, represented by local firms such as \textbf{Cebu Premiere Real Estate (CPRE)}, operates in this dynamic yet competitive environment. CPRE serves as both a property developer and brokerage company, managing listings, pricing, and sales across Cebu. However, property pricing still largely depends on manual appraisals, comparable sales, and zonal values set by the Bureau of Internal Revenue (BIR). While such methods offer practical references, they lack the analytical precision of modern data-driven approaches. Research shows that Cebu land values are influenced by multiple factors including accessibility to transport, neighborhood quality, environmental conditions, and zoning regulations \parencite{agosto2017}. The absence of integrated, multi-source valuation tools makes pricing inconsistent and subjective.
+
+\subsection{Expectation (Ideal Scenario)}
+
+Ideally, real estate pricing in Cebu should be data-based, transparent, and standardized. A data-driven valuation model that incorporates quantifiable features—such as location, lot size, accessibility, and nearby developments—would help achieve more accurate property assessments. This would benefit not only firms like CPRE but also buyers, investors, and banks that rely on fair market values for decision-making.
+
+\section{Statement of the Problem}
+
+Given the current scenario, the decision problem is:
+\textbf{How can real estate firms in Cebu, such as CPRE, utilize data-driven models to predict property values more accurately and consistently?}
+
+From a research standpoint, the research problem lies in the limited application of automated data collection methods (such as web scraping) and empirical modeling (both statistical and machine-learning based) in local property valuation, leading to inconsistent and subjective pricing. Despite the existence of valuation standards and indices like the RPPI, many local firms still depend on slow manual methods without empirical models or scalable datasets.
+
+\section{Significance of the Study}
+
+Addressing this gap is crucial, as a predictive valuation model could improve market transparency and operational efficiency in Cebu’s real estate industry. A data-based system benefits multiple stakeholders:
+
+\begin{enumerate}
+    \item \textbf{Real estate brokers and appraisers}, by providing standardized valuation tools.
+    \item \textbf{Property buyers and investors}, by ensuring fair and data-backed pricing.
+    \item \textbf{Banks and lending institutions}, through more accurate collateral assessments.
+    \item \textbf{Local governments}, by gaining access to data that can help update zonal values and taxation benchmarks \parencite{bsp2025}.
+\end{enumerate}
+
+Moreover, by incorporating "Future Factors" such as the Cebu Bus Rapid Transit (CBRT) lines, this study offers a forward-looking view that traditional appraisals often miss. It also explicitly measures the "Valuation Gap" between static Zonal Values and dynamic Market Prices.
+
+Ultimately, this research contributes to bridging the gap between traditional property appraisal and data science, supporting Cebu’s shift toward evidence-based urban and economic planning.
+
+\section{Purpose Statement}
+
+The purpose of this study is to develop a data-driven property valuation model for Cebu’s real estate market using multiple data sources. The study aims to identify the factors that significantly influence property values and apply both regression-based and machine-learning techniques to improve valuation accuracy. This aligns with the goal of enhancing fairness and consistency in real estate transactions in Cebu.
+
+\section{Research Questions}
+
+\begin{enumerate}
+    \item What measurable factors significantly influence property prices in Cebu City?
+    \item How can predictive analytics and data modeling be applied to property valuation in Cebu?
+    \item Which modeling techniques (e.g., hedonic regression and machine-learning methods) produce the most accurate valuation results?
+    \item How does the proposed data-driven valuation model compare with traditional appraisal methods?
+    \item How can the model support decision-making for developers, brokers, and policymakers?
+\end{enumerate}
+
+\section{Scope and Limitations}
+
+This study focuses on the residential real estate market within \textbf{Cebu City} and selected component cities of \textbf{Metro Cebu} (Mandaue, Lapu-Lapu, Talisay). The primary data source consists of \textbf{foreclosed property listings} from BDO Unibank, dated November 18, 2025, serving as a proxy for "distressed" market value. This is supplemented by publicly available \textbf{online property listings} (harvested via an automated Python web scraping pipeline from platforms like Lamudi) to represent "fair market" asking prices.
+
+The study limits its predictive modeling to three specific architectures: \textbf{Multiple Linear Regression (Hedonic)}, \textbf{Random Forest}, and \textbf{XGBoost}. The variables analyzed are strictly quantitative (e.g., Lot Area, Floor Area, Price) or categorical (e.g., Barangay, Property Type) derived from the listing descriptions.
+
+\textbf{Limitations:}
+\begin{enumerate}
+    \item \textbf{Data Source Bias}: The use of foreclosed asset data may reflect prices lower than the open market average, as banks often seek to liquidate assets quickly.
+    \item \textbf{Unobserved Heterogeneity}: The model cannot account for qualitative features not listed in the text description, such as interior finish quality (e.g., "luxury" vs. "standard"), view, or specific neighborhood prestige, which are traditionally assessed during physical ocular inspections.
+    \item \textbf{Geospatial Approximation}: Property locations are geocoded based on street or barangay level accuracy, which may introduce minor spatial errors compared to exact lot-parcel shapefiles.
+    \item \textbf{Temporal Scope}: The analysis provides a cross-sectional valuation snapshot as of late 2024 to late 2025 and does not capture long-term cyclical real estate trends spanning decades.
+\end{enumerate}

@@ -1,0 +1,108 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="izaY1mbTJdah4v79UQTx">
+        <mxGraphModel dx="796" dy="1146" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Verified Transactions" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="1354" y="8" width="330" height="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Administrative; Macro" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="211" y="210" width="526" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Listing Sources" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="8" width="611" height="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Market Value Spectrum" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;strokeColor=#d6b656;dashed=1;fontStyle=1;fontSize=18;rounded=1;fillColor=#fff2cc;" parent="1" vertex="1">
+                    <mxGeometry x="794" y="186" width="898" height="353" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="🔺 CEILING&#10;Online Listings&#10;(Asking Prices)" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="843" y="286" width="260" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="✅ TRUE MARKET VALUE&#10;(Estimated by Model)" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1106" y="396" width="260" height="102" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="🔻 FLOOR&#10;BDO Foreclosures&#10;(Distressed Prices)" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1376" y="286" width="260" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="LeeChiu&#10;390 listings" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="668" y="45" width="165" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="LifeNavi&#10;~5,237 listings" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="864" y="45" width="165" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Lamudi&#10;(Future scrape)" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="45" width="165" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="BIR Zonal Values&#10;(Per Barangay)" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="251" y="257" width="200" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="BSP RPPI&#10;(Quarterly Index)" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="497" y="259" width="200" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="BDO Foreclosures&#10;955 raw entries" style="whiteSpace=wrap;strokeWidth=2;fontSize=15;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1389" y="43" width="260" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;strokeWidth=2;" parent="1" source="9" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="854" y="143"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;strokeWidth=2;" parent="1" source="10" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="981" y="186"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;strokeWidth=2;" parent="1" source="11" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1037" y="163"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;strokeWidth=2;" parent="1" source="14" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1555" y="201"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;strokeWidth=2;" parent="1" source="12" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="433" y="449"/>
+                        </Array>
+                        <mxPoint x="1220" y="467.88113413304245" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;strokeWidth=2;" parent="1" source="13" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="622" y="395"/>
+                        </Array>
+                        <mxPoint x="1220" y="457.42857142857133" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Upper Bracket" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1179" y="335"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="Lower Bracket" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="8" target="7" edge="1">
+                    <mxGeometry x="-0.0047" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1296" y="335"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

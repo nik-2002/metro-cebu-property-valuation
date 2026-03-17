@@ -1,0 +1,147 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="tQhBDKs_PpgcRDy7EGki">
+        <mxGraphModel dx="1955" dy="1003" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="21" value="Model-Ready Dataset" style="whiteSpace=wrap;strokeWidth=2;fontSize=18;fontStyle=1;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="1280" y="377" width="271" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="6" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="5" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="361" y="417.11180124223597" as="sourcePoint"/>
+                        <mxPoint x="593.5" y="418.5559006211181" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="29" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="4" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="3" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="2" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Stage 5: Augment" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;fontStyle=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="1132" y="2" width="567" height="257" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Proximity:&#10;CBD, IT Park,&#10;CBRT Stations" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1200.25" y="50" width="178" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Admin + Macro:&#10;BIR Zonal,&#10;BSP RPPI" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1200.25" y="156" width="180" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="17" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="19" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="Stage 4: Geocode" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;fontStyle=1;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="581.5" y="68.5" width="489" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Address to&#10;Latitude/Longitude" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="606.5" y="111.5" width="206" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Assign&#10;Barangay" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="863.5" y="111.5" width="183" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;fontSize=14;" parent="1" source="15" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Stage 1: Ingest" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;rounded=1;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="-32" y="2" width="576" height="293" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="BDO Excel" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="50" width="132" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Merge and Standardize" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="132" width="223" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="LeeChiu CSV&#10;390 rows" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="8" y="132" width="226" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="LifeNavi CSVs&#10;~5,237 rows" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="-7.5" y="213" width="257" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;strokeWidth=2;fontSize=14;" parent="1" source="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="324" y="61"/>
+                        </Array>
+                        <mxPoint x="375" y="129" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;fontSize=14;" parent="1" source="9" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.373;entryY=1.047;strokeWidth=2;fontSize=14;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="10" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="337" y="245"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Amenity Score:&#10;OSM POIs&#10;within 1km" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1445.5" y="54" width="184" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Text Features:&#10;TF-IDF from&#10;descriptions" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="1444.25" y="159" width="186.5" height="76" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="curved=1;startArrow=none;endArrow=block;strokeWidth=2;fontSize=14;" parent="1" source="18" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="Stage 3: Parse" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;fontStyle=1;container=0;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="593.5" y="372" width="465" height="134" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Regex Extract:&#10;BR, TB, Area,&#10;Parking, Type" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;container=0;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="612.3106796116505" y="412" width="195.63106796116506" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Price Parsing:&#10;PHP to float" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;container=0;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="845.5631067961165" y="424" width="194.126213592233" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;fontSize=14;" parent="1" source="13" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Stage 2: Filter" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontSize=18;textShadow=0;fontStyle=1;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="77" y="377" width="358" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Metro Cebu Only" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="96.67032967032966" y="421" width="140.83956043956047" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Residential Only" style="whiteSpace=wrap;strokeWidth=2;fontSize=14;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="276.85054945054947" y="421" width="138.47912087912087" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;fontSize=14;" parent="1" source="11" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

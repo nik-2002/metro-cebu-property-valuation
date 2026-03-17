@@ -1,0 +1,47 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in]{geometry} % Standard Thesis Margins
+\usepackage{setspace}
+\doublespacing % Thesis standard
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[round]{natbib} % Use natbib for citation management
+\bibliographystyle{apalike} % Standard APA-like style
+\newcommand{\parencite}[1]{\citep{#1}} % Compatibility map: \parencite -> \citep
+\newcommand{\textcite}[1]{\citet{#1}} % Compatibility map: \textcite -> \citet
+% \usepackage[style=apa, backend=biber]{biblatex} % Removed due to missing package
+% \addbibresource{biblio.bib}
+
+\title{\textbf{Data-Driven Property Valuation Factors and Model for Cebu City:}\\
+\large{A Comparative Analysis of Hedonic Regression and Machine Learning Approaches}}
+\author{Chris Dominic Estreba\\
+\textit{School of Sciences, Engineering, and Technology}\\
+\textit{University of Asia and the Pacific}}
+\date{December 12, 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This study focuses on the residential real estate market within Cebu City and selected component cities of Metro Cebu. It aims to develop a data-driven property valuation model using a hybrid dataset of foreclosed verified floor prices and online market ceiling prices. The study compares Hedonic Regression with Machine Learning approaches (Random Forest, XGBoost) to identify key determinants of value, including the impact of future infrastructure like the Cebu Bus Rapid Transit (CBRT).
+\end{abstract}
+
+\tableofcontents
+
+\chapter{The Problem and Its Setting}
+\input{chapter1}
+
+\chapter{Review of Related Literature}
+\input{chapter2}
+
+\chapter{Research Methodology}
+\input{chapter3}
+
+\bibliography{biblio} % Output bibliography here
+
+\end{document}

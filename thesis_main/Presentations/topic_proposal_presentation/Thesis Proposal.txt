@@ -1,0 +1,344 @@
+It's a residential property, but it's only a house and lot, but it's only a house and lot, but it's only a house and lot.
+Okay.
+Tapos, pag sinabing Metro Cebu,
+define naman ito pag sinabing Metro Cebu.
+Metro Cebu, there's a specific
+area in Cebu.
+Actually, it's in here.
+Ah, naman.
+It's more of the
+right side of Cebu area.
+Ito, that's Metro Cebu.
+Okay.
+So, define naman ito.
+Okay.
+Okay.
+I don't think it's here.
+Kalimutan ko.
+We have Carcar, San Fernando,
+and then Naga City,
+Nganilia,
+Talisay, Cebu City, Lapulapo,
+Mandawi.
+Actually,
+kasi most of these are not
+really cities yet.
+Sige, ah, teka.
+So, yun,
+define mo siya, and then
+para lang, ano,
+umit-build tayo.
+Tapos,
+So, let me go to the part where you show the data structures and multiple data sets around the table.
+O even, kahit doon na lang sa ano, kung sa may pipeline something.
+May pipeline.
+So, yan.
+So, yan.
+Okay.
+Ingestion.
+Tapos, may geocoding ka.
+Yeah.
+So, well, for the pricing
+Yung data frame is mainly towards the pricing
+Predicting the price
+Sorry, miss
+Okay, so for this part here
+Ito yung parang getting the data frame.
+Yung data frame is for yung tatlo model.
+So the yung linear regression.
+And then you have the random forest and the XGBoost.
+This is all to predict the prices.
+The objective price that we're trying to get.
+We have the ceiling price using the web script data.
+And then the for price which is the foreclosed properties.
+Okay, so that's the range.
+Oh, that's the range.
+Pero pre-referring mo.
+So, ano yung predit ko?
+Yung taas, yung baba, yung gitna?
+Yung gitna.
+Kasi hindi siya.
+That's the objective truth that we're trying to get.
+Okay.
+Ano yung pinakamagandang price for this property?
+So, you're going to predict the mean.
+Okay.
+Well, with regard to that, I have yet to explore.
+If mean ba talaga yung maganda doon or...
+Million?
+Kasi you only have two, ano eh, you only have two, ano, topologs na floor sa kasiging eh, di ba?
+Okay.
+Either you predict one or the other or the...
+Yeah.
+Siguro for the safe part is mid or midyan.
+That's the default.
+For the first part,
+Ang core value na gusto kong mako-compare na yun yung regression to the added content data kasi ito yung may core cost talaga na magbibigay ng valuation.
+Yes, sige. So, kung meron kang data frame tapos regression, ilan ang volume ng data frame mo?
+Well, hindi ko pa na, I can't really say kasi depend din siya sa data.
+So, pfh engineering ka pa?
+Oh, pfh engineering ka.
+And then, sige, may data frame ka.
+So, you know the dream kung paano ang gagawin niya.
+Okay.
+Whatever, you have to do what you have to do.
+Pero ano yung next step?
+Kunyari, meron ka ng regression model using that CSV.
+Ang ibig sabihin, mag-assimilate ka ng other data kung gano'n pa?
+So using the other data, the augmented data, will be from after geocoothing, after getting the longitude latitude, so my location ka na sa map na.
+Then you try to get using proximity, anayong location sa proximity ng particular property.
+Oh, yung pinagosan ka rin niya.
+Oh, yeah.
+So that's, I think, now...
+Or ano sa nilig kong modeling for that?
+Okay.
+Ay, yung sinasabi ko na pwede natin yung mga network science na approaches.
+Pating weights, pignan mo, kaya kailangang RL na related to ito.
+Meron na akong sarili mo ba eh, ba't nga wag yung lura?
+Oo.
+Pero mga yung mga data na yun, nakukuha ko na sa mga Google Maps ng OSM.
+Okay, great. Okay.
+And then, ang susunod is, paano niya i-assimilation kayo?
+Meron ka na regression model, di ba?
+Tapos nag-game, meron ka new sets of data na, ano, medyo evolving ito ha.
+I think so that's the that's the crux of the of the pieces now is where the actual work that's gonna be done
+Which is this is what we do most most of our 90% of the classes
+so now how do we after
+After getting the linear regression model the random forest model
+How do we now use some and then apply this yes and plug it into the map?
+So, paano yan? How do we plug it to QGIS, which is the tool that I'm using, because it's free.
+I'm not particularly sure kasi I haven't really gone with QGIS, how do you plug a model there.
+But there's a lot, kasi QGIS has Python. It's natively Python.
+So, it's probably easier to be able to use it.
+Dito pala yung mag-edge, kasi what you have is a model that can produce prices, and then you have data sets na geospatial data sets.
+So, ano ba yun?
+Will that be parang...
+So, may regression model ka, di ba?
+In the regression model, you have to evaluate that using MAE, MPE, MRMSE, MSC, mga ganoon na.
+Ngayon, i-compare mo ba siya na gagamit ka ng regression model na kasi related na yung siya?
+I think yun yung kung ano yung problem niya.
+Comparison model niya.
+Comparing the...
+Pagpaparad yung analysis of hedonic regression plus machine wear.
+So I think, added columns na dito sir. Sobrang mas madame na.
+So, using these values, ano na yung appropriate talaga ng price?
+Kasi ito, may additional value siya.
+Tapos yun yung dudag din eh, to the prediction.
+So, yun isip ko lang, bakit hindi na lang pag-sungahin, tapos...
+Okay, yun nga, positional siya.
+So, ko ko...
+Ahhhh.
+Awww.
+With traditional.
+May quality ito talaga.
+Haa.
+May time-yunga talaga.
+May time-yunga talaga.
+May effort-yannin.
+Kasi ito yung unique eh.
+Parang may sense ba na idagdag pa niya ito with the modeling?
+which is
+may sense na mga
+rabbit
+rabbit visits
+okay, master, Elmer
+hindi pala
+ano yung
+is this predicting or
+perspective? I mean, what I'm
+trying to say is
+You gotta have a label data
+Label data
+na makukulang
+Okay, so what if
+What if
+Kasi
+Kunyari mayroon ka na model
+Sino gagawin ko?
+Si Daddy
+Actually so
+Well
+Daddy is part of what you call a real estate brokers association of the Philippines.
+So, well, one output, but actually, it's an association of real estate brokers.
+What I can do is, it's actually prescriptive.
+So besides predicting what the price is,
+Now, yung gusto na yung makita ni Sir Randy
+to see an actual map
+na
+ano ba sir, kailangan ba interactive?
+Yeah.
+Kailangan interactive.
+Kailangan interactive.
+Actually,
+so,
+gagawa ng
+interactive map.
+So, that map now will be used
+for real estate brokers as a
+support tool
+and giving another input in how can they price their real estate properties.
+Kasi kumakit na halaman nyo ngayon.
+Ay! Kala ko parang pala.
+So, this is your Metro Cebu.
+Okay?
+Okay.
+So, let's say ito yung mga property.
+Lagay-lagay ko na lang muna dito.
+Lagay-lagay ko na lang dyan.
+Some of these may mga values na.
+Ah! Some of these.
+Parang wala kong values.
+Kasi diba? Gets mo yung point ko.
+Ang point ko is meron bang senaryo na mangyayari doon sa problem mo na
+since you gagamitid ba niya yung presyo noong halimbawa katabi na ano,
+okay, would that matter yung katabi property like doon sa prediction noong
+Kunyari property ito, test property natin ito, okay?
+Since ito ang presyo, may presyo na yan, may price na ito, may value na yan, may value na yan, okay?
+Okay?
+So, iyong bang mga prices niyan, relatively since geographically malapit siya doon?
+Yes, neighbor kasi ito.
+Will affect yung ano, okay?
+Pag hinamit na yun.
+Pag hinamit na yun.
+Kaya nang may suggest nagka-plast yun.
+Pag hinapit niya na yung pre-review.
+Ang inaana ko kasi is, kapag ka let's say ito pinresyohan mo lang ito, may effect din siya dun sa...
+Pasi sir, kasi depende sa value.
+Ang presyo ba nun because bring yung lot nun, may order siya.
+Minsan kasi ang BGC tapos slump, para kaya malapit lang siya.
+So, titignan mo din yun, yung factor na blue pack, not just proxy.
+Actually, I forgot. One crucial thing I forgot.
+Para yung explainability yung model.
+Kasi that's one crucial thing that I have to comply.
+So yun nga, i-actually yun yung ano ko. Halimbawa nakapagunap, pati-expan yung dying model. So, ginaari yun.
+So, good point na ito mismo nakakapagkat siya na ito.
+Oh, right.
+I think the plastering helps.
+Yeah.
+Kasi pag napita mo na may plaster na siya, ay tatabin niya siya, yun.
+Yung BGC, tapos ito yung slump area, pwede na namin.
+So, yung mga nakama sa something like this, parang siyang...
+Parang bagay ko yun ha.
+Hindi, ito basic kasi ito sa binatwara.
+So, limawa, for example, sa analysis, itong red, because of something like this.
+Visualize mo ito, yung visualize mo, visualize mo as your life.
+Itong mga ito, high value.
+So, I'm expecting something like this plus yung nag-doin.
+That's why I actually pictured it on it.
+a heat pump?
+not just heat pump
+kasi yung power baratay
+that's right
+the city
+mas mahal ba yung billiard ng city
+or
+okay sir
+i'm still looking forward
+sa kaya lang
+majoring club siya
+pero kaya kaya niya
+So, kaya yan. Actually, I'm very interested in it because I like fidgeting with the GIS tool right now, so I think I can pull it off.
+Yes, relatively. Kuha naman yung concept. More on the application na lang.
+It's a...
+Wait, pinakita ko itong blitzers.
+Ah, okay.
+Ano na yun?
+This is more towards the hyperparameter.
+I just listed there just for completeness.
+Kasi initially ito yung ano ko
+I wanna compare the performance of this
+Kasi this is the country eh
+At Tanzania ata
+Kaya nga eh
+Kaya nga eh
+So yun
+So yun
+So yun
+Sorry
+Yeah, ako yung comment ko lang, kasi nakikita ko na naman yung iba ng sinabi ko.
+At ako yung mali-bala yung dito sa LLB na part.
+May sa nagulungan lang dun sa, this is for the actual presentation.
+When we were discussing some of the art, it was not very in-depth.
+Hindi sa galang ka clear.
+And it was a bit confusing na kasi we're trying to describe what we plan to do.
+Pero sa RRL ko lang, parang, ano ito?
+May ginawa doon, gagawin niya.
+Okay, actually,
+I didn't want to describe too much the RRL
+kasi nalilito rin ako eh.
+Kasi marami, I...
+Mayroon talaga yun, ha?
+Yes, yes, miss.
+That's what I wanted to do for the methodology.
+Well, I revised it last minute.
+I'll take note of that.
+I'll prove that.
+Ano yung term mo dun sa mga body drivers?
+Anong term mo?
+Anong term mo?
+Ay.
+Sa
+Anong pinaka-term mo dito sa mga data?
+Your order?
+Para pinigilin dito yun.
+Value drivers na lang.
+Value drivers siguro.
+Value drivers siguro.
+Yan.
+I think ako'y mag-focus on this.
+Okay.
+Ito yung unique.
+Kasi dapat to basic na part na lang.
+Kaya yun mag-focus on unique.
+Okay.
+Pwede mo yung direct.
+Ah, pwede ba?
+No, actually.
+Tapos ano.
+Tapos partehan mo doon pa rin.
+No, actually this pwede naman.
+If ever, we can have a better...
+Kung kaya mo siyang medyo...
+Medyo mabilisan.
+But if ever, we can have...
+We can look for confidences
+na pwede.
+But you have your solution.
+If there's doubt
+sa part, you can't do it.
+No, no.
+Especially kasi walang...
+It's a new thing for
+Philippine data.
+It's a network site.
+People add their name to API
+Channel 3
+People add curious
+Pastor
+Yes with wanting to break
+I'll start with this next weeks
+So we can have a
+You know
+I'm gonna try with her
+The day
+Email
+I need to
+sa staffing na
+ito lang yung
+topics.
+Okay.
+Anang dinsya,
+we'll ask the other
+school para we
+can discuss
+whether we will
+approve your
+proposal
+or paper.
+So,
+we'll call you
+na.
+Okay.
+We'll ask
+us of paper
+and like that.

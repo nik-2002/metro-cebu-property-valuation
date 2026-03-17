@@ -1,0 +1,2687 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9012265,
+          10.3305525
+        ]
+      },
+      "properties": {
+        "name": "Bridging Homes Learning Center",
+        "type": "school",
+        "rating": 4.6,
+        "reviews": 5,
+        "vicinity": "8WJ2+6FH, First Street, La Guardia, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9061075,
+          10.3365022
+        ]
+      },
+      "properties": {
+        "name": "Apas National High School",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "0082 Omega Street, Apas, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9066458,
+          10.3244157
+        ]
+      },
+      "properties": {
+        "name": "Barrio Luz Elementary School",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Barrio, P. Cabantan, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8978652,
+          10.326047
+        ]
+      },
+      "properties": {
+        "name": "Lahug Christian School",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8VGX+C49, Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8984336,
+          10.3249184
+        ]
+      },
+      "properties": {
+        "name": "Lahug Night High School",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "371 Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9009976,
+          10.3285589
+        ]
+      },
+      "properties": {
+        "name": "University of Southern Philippines Foundation",
+        "type": "school",
+        "rating": 4.3,
+        "reviews": 127,
+        "vicinity": "USP Compound, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8982742,
+          10.324833
+        ]
+      },
+      "properties": {
+        "name": "Lahug Elementary School",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "168 Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9084921,
+          10.3222513
+        ]
+      },
+      "properties": {
+        "name": "Pope John XXIII Seminary",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WC5+W95, Pope John Paul II Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.899501,
+          10.3232923
+        ]
+      },
+      "properties": {
+        "name": "UP Cebu AS Lobby",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "168 Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9044025,
+          10.3284965
+        ]
+      },
+      "properties": {
+        "name": "Marc De Vera Choreography",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "UCMA Village, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.906085,
+          10.33264
+        ]
+      },
+      "properties": {
+        "name": "Kinder Kastle Childcare (renovation in progress)",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Avida Towers, 1 I. Villa Street, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9054262,
+          10.3337384
+        ]
+      },
+      "properties": {
+        "name": "Visayas Army Training Group, Philippine Army",
+        "type": "school",
+        "rating": 3.7,
+        "reviews": 3,
+        "vicinity": "8WM4+F5V, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.901053,
+          10.329519
+        ]
+      },
+      "properties": {
+        "name": "Beatriz D. Jereza Hall",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WH2+RC3, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9078244,
+          10.3266504
+        ]
+      },
+      "properties": {
+        "name": "St. Francis Hope",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WG5+M48, Gov. M. Cuenco Avenue, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.900299,
+          10.3287567
+        ]
+      },
+      "properties": {
+        "name": "Eladio Villa Memorial Gymnasium",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Amon Building, Amon Building, 935 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.908455,
+          10.326692
+        ]
+      },
+      "properties": {
+        "name": "Samantabhadra Educational Institute Inc. \uff08\u666e\u8ce2\u4e2d\u5b78\uff09",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "13 Gov. M. Cuenco Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9061732,
+          10.3252289
+        ]
+      },
+      "properties": {
+        "name": "KMC Virtual Assistance Services",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "LGC Bldg, 483-C Remedios Compound, Archbishop Reyes Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8986963,
+          10.3305376
+        ]
+      },
+      "properties": {
+        "name": "KiDS' WoRLD Child Development Center",
+        "type": "school",
+        "rating": 5,
+        "reviews": 8,
+        "vicinity": "2/F JY Square Mall, Lahug, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9059637,
+          10.336666
+        ]
+      },
+      "properties": {
+        "name": "Camp Lapu-Lapu National High School",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "0082 Omega Street, Apas, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9068545,
+          10.3244596
+        ]
+      },
+      "properties": {
+        "name": "Barrio Luz National High School",
+        "type": "school",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "481 Archbishop Reyes Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9063971,
+          10.3234377
+        ]
+      },
+      "properties": {
+        "name": "Barangay Luz Sitio Abellana",
+        "type": "hospital",
+        "rating": 5,
+        "reviews": 2,
+        "vicinity": "8WF4+9HC, Archbishop Reyes Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9020189,
+          10.329031
+        ]
+      },
+      "properties": {
+        "name": "Rx to Go One Stop Health Clinic",
+        "type": "hospital",
+        "rating": 5,
+        "reviews": 4,
+        "vicinity": "University of Southern Philippines Foundation, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9003477,
+          10.3332925
+        ]
+      },
+      "properties": {
+        "name": "Green Acre Cebu",
+        "type": "hospital",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": ": #27 Mallari Compound, Fulton Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9035193,
+          10.3375592
+        ]
+      },
+      "properties": {
+        "name": "Camp Lapulapu Station Hospital",
+        "type": "hospital",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WQ3+28X, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8970745,
+          10.3303589
+        ]
+      },
+      "properties": {
+        "name": "MODERN DOCTORS MEDICAL CENTER",
+        "type": "hospital",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Unit 207, 2nd Floor, Litecloud Building, Sanson Road, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8978921,
+          10.3266943
+        ]
+      },
+      "properties": {
+        "name": "Agnes Birthing Home Clinic",
+        "type": "hospital",
+        "rating": 4.5,
+        "reviews": 2,
+        "vicinity": "0572 Gor.Ave, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9098848,
+          10.3241324
+        ]
+      },
+      "properties": {
+        "name": "Mavi Medical And Aesthetic",
+        "type": "hospital",
+        "rating": 5,
+        "reviews": 3,
+        "vicinity": "Unit 1004, Meridian by AVENIR, Golam Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8979827,
+          10.3311633
+        ]
+      },
+      "properties": {
+        "name": "Generika Drugstore",
+        "type": "pharmacy",
+        "rating": 3.3,
+        "reviews": 4,
+        "vicinity": "#930 Salinas Drive COR Gorordo AVE. Lahug Cebu City, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8976623,
+          10.3302647
+        ]
+      },
+      "properties": {
+        "name": "Rose Pharmacy Sanson Road Lahug",
+        "type": "pharmacy",
+        "rating": 4,
+        "reviews": 6,
+        "vicinity": "Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.906432,
+          10.3301474
+        ]
+      },
+      "properties": {
+        "name": "Rose Pharmacy Skyrise 4A Cebu I.T. Park",
+        "type": "pharmacy",
+        "rating": 1.6,
+        "reviews": 15,
+        "vicinity": "Skyrise 4A, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9030679,
+          10.3291337
+        ]
+      },
+      "properties": {
+        "name": "Threesixty Pharmacy",
+        "type": "pharmacy",
+        "rating": 1.8,
+        "reviews": 6,
+        "vicinity": "1 La Guardia Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9034646,
+          10.3286754
+        ]
+      },
+      "properties": {
+        "name": "Rose Pharmacy AVC Salinas, Lahug",
+        "type": "pharmacy",
+        "rating": 4.3,
+        "reviews": 3,
+        "vicinity": "8WH3+F9G, Lahug, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9058969,
+          10.3283717
+        ]
+      },
+      "properties": {
+        "name": "Watson's Pharmacy",
+        "type": "pharmacy",
+        "rating": 3.5,
+        "reviews": 6,
+        "vicinity": "8WH4+89R, Jose Maria del Mar Avenue, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9073986,
+          10.3300893
+        ]
+      },
+      "properties": {
+        "name": "Watsons Ayala Malls Central Bloc",
+        "type": "pharmacy",
+        "rating": 1.9,
+        "reviews": 26,
+        "vicinity": "2nd floor, V. Padriga Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9077693,
+          10.3315496
+        ]
+      },
+      "properties": {
+        "name": "Rose Pharmacy Skyrise 1 Bldg Cebu I.T.Park",
+        "type": "pharmacy",
+        "rating": 2.3,
+        "reviews": 20,
+        "vicinity": "G/F, IT Building, I, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.902036,
+          10.3290369
+        ]
+      },
+      "properties": {
+        "name": "Rx To Go Pharmacy",
+        "type": "pharmacy",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WH2+JR7, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9070245,
+          10.3330227
+        ]
+      },
+      "properties": {
+        "name": "Brigada Pharmacy Cebu I.T. Park Branch",
+        "type": "pharmacy",
+        "rating": 5,
+        "reviews": 17,
+        "vicinity": "UNIT 1-C G/L, One Apas Residences, San Miguel Road, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.89892,
+          10.330471
+        ]
+      },
+      "properties": {
+        "name": "Watsons",
+        "type": "pharmacy",
+        "rating": 4.1,
+        "reviews": 63,
+        "vicinity": "JY Square IT Center, 1 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9018089,
+          10.3254726
+        ]
+      },
+      "properties": {
+        "name": "Preman Marketing & Distribution Network, Inc.",
+        "type": "pharmacy",
+        "rating": 5,
+        "reviews": 1,
+        "vicinity": "Algico Complex, Diamond Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8989187,
+          10.3309675
+        ]
+      },
+      "properties": {
+        "name": "GV BOTICA",
+        "type": "pharmacy",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Philippines",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.898678,
+          10.330285
+        ]
+      },
+      "properties": {
+        "name": "Jy Pharmacy",
+        "type": "pharmacy",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Ground Floor, JY Square Mall, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9058045,
+          10.3369679
+        ]
+      },
+      "properties": {
+        "name": "Six To Nine Drugs & Gen. Merchandise",
+        "type": "pharmacy",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "88 Omega Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8981411,
+          10.3314345
+        ]
+      },
+      "properties": {
+        "name": "TGP The Generics Pharmacy (JY Market, Cebu)",
+        "type": "pharmacy",
+        "rating": 3,
+        "reviews": 2,
+        "vicinity": "0768 CORNER SALINAS & VETERANS DRIVE LAHUG, CEBU CITY, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8980368,
+          10.3313375
+        ]
+      },
+      "properties": {
+        "name": "KLY PHARMACY",
+        "type": "pharmacy",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Philippines",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8980359,
+          10.3313399
+        ]
+      },
+      "properties": {
+        "name": "alapharma",
+        "type": "pharmacy",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Philippines",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8976952,
+          10.3303341
+        ]
+      },
+      "properties": {
+        "name": "Rose Pharmacy Jy Square One Lahug",
+        "type": "pharmacy",
+        "rating": 5,
+        "reviews": 3,
+        "vicinity": "Jy Square One Lahug, Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9047514,
+          10.3377223
+        ]
+      },
+      "properties": {
+        "name": "La Vita Rose PHARMACY",
+        "type": "pharmacy",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WQ3+3WJ, Omega Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8989905,
+          10.3304987
+        ]
+      },
+      "properties": {
+        "name": "China Bank - Cebu JY Square",
+        "type": "bank",
+        "rating": 3.6,
+        "reviews": 7,
+        "vicinity": "8VJX+5HX, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.906352,
+          10.3301893
+        ]
+      },
+      "properties": {
+        "name": "RCBC BRANCH - CEBU IT PARK",
+        "type": "bank",
+        "rating": 2.8,
+        "reviews": 18,
+        "vicinity": "Skyrise 4, V. Padriga Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9070437,
+          10.3307927
+        ]
+      },
+      "properties": {
+        "name": "BPI Cebu IT Park eBloc 3 Branch",
+        "type": "bank",
+        "rating": 1.4,
+        "reviews": 45,
+        "vicinity": "G/F Ayala Malls Central Bloc Padriaga Street, corner Abad Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9021545,
+          10.3296283
+        ]
+      },
+      "properties": {
+        "name": "Cebu People's Cooperative",
+        "type": "bank",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "16 Salinas Drive, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9062745,
+          10.3279134
+        ]
+      },
+      "properties": {
+        "name": "BDO TGU Tower",
+        "type": "bank",
+        "rating": 4.1,
+        "reviews": 100,
+        "vicinity": "G/F TGU Tower, Salinas Drive corner J.M. Del Mar St., Asiatown, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.906429,
+          10.3273035
+        ]
+      },
+      "properties": {
+        "name": "China Bank - Cebu IT Park",
+        "type": "bank",
+        "rating": 4.7,
+        "reviews": 3,
+        "vicinity": "Link, Jose Maria del Mar Avenue, Apas, Lahug, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8982138,
+          10.3314358
+        ]
+      },
+      "properties": {
+        "name": "Cebuana Lhuillier Pawnshop",
+        "type": "bank",
+        "rating": 1.6,
+        "reviews": 7,
+        "vicinity": "Corner Veterans &, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9048565,
+          10.3383601
+        ]
+      },
+      "properties": {
+        "name": "Cebuana Lhuillier Pawnshop - Apas",
+        "type": "bank",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Cam Lapulapu Ave, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9044728,
+          10.32183
+        ]
+      },
+      "properties": {
+        "name": "Chinatrust Commercial Bank",
+        "type": "bank",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "G/F The Forum, Archbishop Reyes Avenue, Cebu City 6000",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.904518,
+          10.321919
+        ]
+      },
+      "properties": {
+        "name": "CTBC Bank (Philippines) Corp. \u2014 Cebu-Banilad Branch",
+        "type": "bank",
+        "rating": 1,
+        "reviews": 9,
+        "vicinity": "Motoworld Cebu, Ground Floor, Archbishop Reyes Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8975012,
+          10.3286525
+        ]
+      },
+      "properties": {
+        "name": "Cebuana Lhuillier Pawnshop",
+        "type": "bank",
+        "rating": 3,
+        "reviews": 5,
+        "vicinity": "103 Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9059,
+          10.3296626
+        ]
+      },
+      "properties": {
+        "name": "Security Bank",
+        "type": "bank",
+        "rating": 2.7,
+        "reviews": 9,
+        "vicinity": "Cebu IT Park, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9064321,
+          10.3305778
+        ]
+      },
+      "properties": {
+        "name": "Metrobank Cebu Central Bloc",
+        "type": "bank",
+        "rating": 1,
+        "reviews": 36,
+        "vicinity": "Ayala Malls Central Bloc, Blk. 10, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9057731,
+          10.3292042
+        ]
+      },
+      "properties": {
+        "name": "BDO Cebu IT Park HM Tower Branch",
+        "type": "bank",
+        "rating": 3.3,
+        "reviews": 59,
+        "vicinity": "Ground Floor, HM Tower, Corner of West Geonzon Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9053877,
+          10.3286525
+        ]
+      },
+      "properties": {
+        "name": "EastWest Bank",
+        "type": "bank",
+        "rating": 2.4,
+        "reviews": 16,
+        "vicinity": "Asia Town, IT Park, Cebu IT Park G/F, Calyx Center, W. Ginonzon Street, corner Abad Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.90413,
+          10.32839
+        ]
+      },
+      "properties": {
+        "name": "Businessaid Lending Company Incorporated",
+        "type": "bank",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WH3+9M2, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9041155,
+          10.3282912
+        ]
+      },
+      "properties": {
+        "name": "Cebuana Lhuillier Pawnshop",
+        "type": "bank",
+        "rating": 4.4,
+        "reviews": 9,
+        "vicinity": "CAPITAL, UNIT 4 G/F K BLDG, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9064042,
+          10.3284087
+        ]
+      },
+      "properties": {
+        "name": "BPI Cebu IT Park Mabuhay Tower Branch",
+        "type": "bank",
+        "rating": 1.6,
+        "reviews": 56,
+        "vicinity": "G/F Mabuhay Tower Cebu IT Park, Jose Maria Del Mar Ave, cor A Abad Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9030196,
+          10.3286122
+        ]
+      },
+      "properties": {
+        "name": "Financial Brokerage Distribution",
+        "type": "bank",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Amon Building, Amon Building, 935 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9063474,
+          10.3279663
+        ]
+      },
+      "properties": {
+        "name": "Asia United Bank",
+        "type": "bank",
+        "rating": 3.7,
+        "reviews": 3,
+        "vicinity": "8WH4+5GQ, Jose Maria del Mar Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9016647,
+          10.32975
+        ]
+      },
+      "properties": {
+        "name": "Crowne Garden Hotel",
+        "type": "restaurant",
+        "rating": 3.8,
+        "reviews": 303,
+        "vicinity": "Crowne Garden Hotel, 360 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9117275,
+          10.3356327
+        ]
+      },
+      "properties": {
+        "name": "Main Hotel and Suites",
+        "type": "restaurant",
+        "rating": 4.2,
+        "reviews": 379,
+        "vicinity": "8WP6+7M5, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9073391,
+          10.3287558
+        ]
+      },
+      "properties": {
+        "name": "Chowabungga",
+        "type": "restaurant",
+        "rating": 4.4,
+        "reviews": 403,
+        "vicinity": "GF i1 Building, Jose Maria del Mar Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9098361,
+          10.3281056
+        ]
+      },
+      "properties": {
+        "name": "Abaca Baking Company\u00ae (Restaurant) - Crossroads",
+        "type": "restaurant",
+        "rating": 4.5,
+        "reviews": 832,
+        "vicinity": "Crossroads, Banilad Road, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9070001,
+          10.327896
+        ]
+      },
+      "properties": {
+        "name": "KFC",
+        "type": "restaurant",
+        "rating": 3.5,
+        "reviews": 195,
+        "vicinity": "GF, Building, Asia Town, I2 & I3, Barangay Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9067383,
+          10.3322229
+        ]
+      },
+      "properties": {
+        "name": "McDonald's Aegis",
+        "type": "restaurant",
+        "rating": 3.6,
+        "reviews": 639,
+        "vicinity": "G/F, TelePerformance Cebu, Tower Cebu IT Park, I. Villa Street, Brgy Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.908365,
+          10.3313632
+        ]
+      },
+      "properties": {
+        "name": "\u77e5\u66ae\u91cc NEW CHIBORI JAPANESE RESTAURANT",
+        "type": "restaurant",
+        "rating": 3.8,
+        "reviews": 109,
+        "vicinity": "8WJ5+G8X, Jose Maria del Mar Avenue, Apas, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9058947,
+          10.3305416
+        ]
+      },
+      "properties": {
+        "name": "Yellow Cab Pizza Co.",
+        "type": "restaurant",
+        "rating": 4.1,
+        "reviews": 568,
+        "vicinity": "G/F, eBloc 2, Cebu I.T. Park, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9053877,
+          10.3307629
+        ]
+      },
+      "properties": {
+        "name": "Army Navy - IT Park",
+        "type": "restaurant",
+        "rating": 3.8,
+        "reviews": 287,
+        "vicinity": "Stall 206, GF, eBloc 2 Tower, Asiatown, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9049609,
+          10.3312541
+        ]
+      },
+      "properties": {
+        "name": "KFC",
+        "type": "restaurant",
+        "rating": 3.5,
+        "reviews": 92,
+        "vicinity": "Level 1, E Block, Tower 3, Cebu IT Park, Stall 109, Ground Flr, Barangay Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9056083,
+          10.3312447
+        ]
+      },
+      "properties": {
+        "name": "Yakski",
+        "type": "restaurant",
+        "rating": 4.1,
+        "reviews": 478,
+        "vicinity": "8WJ4+F6X, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9058611,
+          10.3311738
+        ]
+      },
+      "properties": {
+        "name": "New York Buffalo Brad's Hot Wings",
+        "type": "restaurant",
+        "rating": 4,
+        "reviews": 324,
+        "vicinity": "Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.903819,
+          10.328731
+        ]
+      },
+      "properties": {
+        "name": "Kya Eatery",
+        "type": "restaurant",
+        "rating": 3.7,
+        "reviews": 3,
+        "vicinity": "8WH3+FGW, UCMA, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.903771,
+          10.32865
+        ]
+      },
+      "properties": {
+        "name": "Princess & Faith Kitchenette",
+        "type": "restaurant",
+        "rating": 4,
+        "reviews": 65,
+        "vicinity": "8WH3+FG2, UCMA, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9030794,
+          10.328549
+        ]
+      },
+      "properties": {
+        "name": "Hwang Gung",
+        "type": "restaurant",
+        "rating": 3.9,
+        "reviews": 244,
+        "vicinity": "Amon Building, Amon Building, 935 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.907294,
+          10.328396
+        ]
+      },
+      "properties": {
+        "name": "Soho Park | Cafe & Restaurant",
+        "type": "restaurant",
+        "rating": 4.2,
+        "reviews": 221,
+        "vicinity": "Asia Premier Residences, Ground Floor, Abad Street, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9078783,
+          10.3316853
+        ]
+      },
+      "properties": {
+        "name": "Potato Corner",
+        "type": "restaurant",
+        "rating": 4,
+        "reviews": 10,
+        "vicinity": "Skyrise 2, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9061016,
+          10.3267826
+        ]
+      },
+      "properties": {
+        "name": "Nom Nom",
+        "type": "restaurant",
+        "rating": 4.5,
+        "reviews": 4,
+        "vicinity": "487 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9008335,
+          10.3300403
+        ]
+      },
+      "properties": {
+        "name": "The Lasagneque",
+        "type": "restaurant",
+        "rating": 3,
+        "reviews": 2,
+        "vicinity": "22 Villa Isidra Village, Francisco Llamas Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9002956,
+          10.3318792
+        ]
+      },
+      "properties": {
+        "name": "Tatang's Extra Crispy Boneless Lechon",
+        "type": "restaurant",
+        "rating": 4.5,
+        "reviews": 268,
+        "vicinity": "8WJ2+Q43, Wilson Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9053877,
+          10.3307629
+        ]
+      },
+      "properties": {
+        "name": "Starbucks - eBloc 2 Tower Branch",
+        "type": "cafe",
+        "rating": 4.4,
+        "reviews": 323,
+        "vicinity": "G/F, eBloc 2 Tower, Cebu IT Park, West Geonzon Street, Brgy Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9057076,
+          10.3302678
+        ]
+      },
+      "properties": {
+        "name": "Abaca Baking Company\u00ae (Coffee Shop) - Filinvest Cyberzone, IT Park",
+        "type": "cafe",
+        "rating": 4.1,
+        "reviews": 160,
+        "vicinity": "West Geonzon Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9052619,
+          10.3294093
+        ]
+      },
+      "properties": {
+        "name": "Bo's Coffee",
+        "type": "cafe",
+        "rating": 4.5,
+        "reviews": 615,
+        "vicinity": "Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9070437,
+          10.3307927
+        ]
+      },
+      "properties": {
+        "name": "Common Ground Store",
+        "type": "cafe",
+        "rating": 3,
+        "reviews": 79,
+        "vicinity": "Central Bloc, Ayala Malls, V. Padriga Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.907184,
+          10.3295099
+        ]
+      },
+      "properties": {
+        "name": "Beanleaf",
+        "type": "cafe",
+        "rating": 3.9,
+        "reviews": 10,
+        "vicinity": "Skyrise 3, Jose Maria del Mar Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9079829,
+          10.3317129
+        ]
+      },
+      "properties": {
+        "name": "Brewmance",
+        "type": "cafe",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "I, I. Villa Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9051943,
+          10.3257915
+        ]
+      },
+      "properties": {
+        "name": "Cafe Fortuna",
+        "type": "cafe",
+        "rating": 4.7,
+        "reviews": 3,
+        "vicinity": "Philippines",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8984095,
+          10.3306778
+        ]
+      },
+      "properties": {
+        "name": "Tablea Chocolate Cafe",
+        "type": "cafe",
+        "rating": 4.2,
+        "reviews": 213,
+        "vicinity": "Ground Floor JY Square Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9085433,
+          10.3247659
+        ]
+      },
+      "properties": {
+        "name": "\u2060PICKUP COFFEE - The Greenery",
+        "type": "cafe",
+        "rating": 3.1,
+        "reviews": 9,
+        "vicinity": "Pope John Paul II Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9097498,
+          10.3297717
+        ]
+      },
+      "properties": {
+        "name": "Cafe Georg",
+        "type": "cafe",
+        "rating": 4.5,
+        "reviews": 697,
+        "vicinity": "Ground Floor, MLD Building, Gov. M. Cuenco Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9066788,
+          10.3277293
+        ]
+      },
+      "properties": {
+        "name": "Starbucks",
+        "type": "cafe",
+        "rating": 4.4,
+        "reviews": 602,
+        "vicinity": "G/F, I2 Point Bldg., Asia Town, Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9053877,
+          10.3307629
+        ]
+      },
+      "properties": {
+        "name": "The Coffee Bean & Tea Leaf",
+        "type": "cafe",
+        "rating": 4.2,
+        "reviews": 141,
+        "vicinity": "Stall 202 GL, eBloc 2 Tower, West Geonzon Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9049553,
+          10.3311013
+        ]
+      },
+      "properties": {
+        "name": "Simply Brewed",
+        "type": "cafe",
+        "rating": 4.6,
+        "reviews": 13,
+        "vicinity": "eBloc 3 Tower, West Geonzon Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9059803,
+          10.3299374
+        ]
+      },
+      "properties": {
+        "name": "Simply Brewed - Skyrise 4",
+        "type": "cafe",
+        "rating": 5,
+        "reviews": 5,
+        "vicinity": "18th, I, Cebu I.T. Park, Barangay Apas, 4, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9062604,
+          10.3302055
+        ]
+      },
+      "properties": {
+        "name": "The Civet Coffee Roasters",
+        "type": "cafe",
+        "rating": 4.1,
+        "reviews": 228,
+        "vicinity": "Skyrise 4, 4, I. Villa Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9062011,
+          10.3310174
+        ]
+      },
+      "properties": {
+        "name": "Expressa - Cebu IT Park Transport Terminal",
+        "type": "cafe",
+        "rating": 3.4,
+        "reviews": 7,
+        "vicinity": "8WJ4+CF4, West Geonzon Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.906247,
+          10.329975
+        ]
+      },
+      "properties": {
+        "name": "Coffee Dream Cafe",
+        "type": "cafe",
+        "rating": 3.6,
+        "reviews": 5,
+        "vicinity": "GF , Skyrise 4, W. Ginonzon Street Corner Padrige Street , 6000 Cebu City , Cebu",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8984361,
+          10.3307263
+        ]
+      },
+      "properties": {
+        "name": "JY Square Mall",
+        "type": "shopping_mall",
+        "rating": 3.9,
+        "reviews": 3380,
+        "vicinity": "1 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9067957,
+          10.3298473
+        ]
+      },
+      "properties": {
+        "name": "Garden Row",
+        "type": "shopping_mall",
+        "rating": 4.7,
+        "reviews": 7,
+        "vicinity": "Ayala Malls Central Bloc, V. Padriga Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9070437,
+          10.3307927
+        ]
+      },
+      "properties": {
+        "name": "The Blissbox by Melie",
+        "type": "shopping_mall",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Central Bloc, V. Padriga Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9070437,
+          10.3307927
+        ]
+      },
+      "properties": {
+        "name": "Virtual assistant Philippines agency",
+        "type": "shopping_mall",
+        "rating": 4.3,
+        "reviews": 3,
+        "vicinity": "V. Padriga St Central Bloc Mall) - 11th Floor, Lahug, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9073198,
+          10.3306811
+        ]
+      },
+      "properties": {
+        "name": "Ayala Malls Central Bloc",
+        "type": "shopping_mall",
+        "rating": 4.5,
+        "reviews": 3690,
+        "vicinity": "Central Bloc, I. Villa Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9075315,
+          10.3307484
+        ]
+      },
+      "properties": {
+        "name": "\uc544\uc774\ud2f0\ud30c\ud06c \uc544\uc584\ub77c\ubab0 \uc138\ubd80\uc2dc\ud2f0",
+        "type": "shopping_mall",
+        "rating": 3.7,
+        "reviews": 7,
+        "vicinity": "8WJ5+72V, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9075586,
+          10.3303523
+        ]
+      },
+      "properties": {
+        "name": "Ayala Central Bloc Cinema",
+        "type": "shopping_mall",
+        "rating": 3.9,
+        "reviews": 31,
+        "vicinity": "8WJ5+42V, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9090486,
+          10.3282614
+        ]
+      },
+      "properties": {
+        "name": "88th Avenue",
+        "type": "shopping_mall",
+        "rating": 4,
+        "reviews": 366,
+        "vicinity": "Lot 686 Gov. M. Cuenco Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.898755,
+          10.330074
+        ]
+      },
+      "properties": {
+        "name": "Ja\u2019S Ur F.A.B",
+        "type": "shopping_mall",
+        "rating": 4,
+        "reviews": 1,
+        "vicinity": "Ground Floor, JY Square Mall, 1 Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8990457,
+          10.3331163
+        ]
+      },
+      "properties": {
+        "name": "Trendy Shop",
+        "type": "shopping_mall",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Lahug, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9053005,
+          10.3373313
+        ]
+      },
+      "properties": {
+        "name": "Les",
+        "type": "shopping_mall",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Sitio plaza, Brgy. Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8979504,
+          10.3297447
+        ]
+      },
+      "properties": {
+        "name": "atomy cebu dream center",
+        "type": "shopping_mall",
+        "rating": 4.7,
+        "reviews": 3,
+        "vicinity": "4rd Floor Unit 406 of, at MIT bldg, 117 Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8978481,
+          10.33079
+        ]
+      },
+      "properties": {
+        "name": "Posh Concept Store",
+        "type": "shopping_mall",
+        "rating": 4,
+        "reviews": 2,
+        "vicinity": "2 Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9100476,
+          10.3243746
+        ]
+      },
+      "properties": {
+        "name": "BEZT CHOICE - Buy the Best for You!",
+        "type": "shopping_mall",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "The Meridian Condo, LICERA HQ, 1612 Golam Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8965556,
+          10.332804
+        ]
+      },
+      "properties": {
+        "name": "Sepen/11",
+        "type": "shopping_mall",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "1 Sudlon, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9062786,
+          10.3297247
+        ]
+      },
+      "properties": {
+        "name": "Citichurch",
+        "type": "church",
+        "rating": 4.9,
+        "reviews": 47,
+        "vicinity": "Tower B, Cebu IT Park, Ground Floor, Skyrise 4, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9076535,
+          10.3316062
+        ]
+      },
+      "properties": {
+        "name": "Living Word I.T. Park",
+        "type": "church",
+        "rating": 4.8,
+        "reviews": 16,
+        "vicinity": "I, I. Villa Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.904802,
+          10.3295199
+        ]
+      },
+      "properties": {
+        "name": "Church",
+        "type": "church",
+        "rating": 5,
+        "reviews": 4,
+        "vicinity": "8WH3+RW3, UCMA, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9070437,
+          10.3307927
+        ]
+      },
+      "properties": {
+        "name": "Chapel of St. John Paul II",
+        "type": "church",
+        "rating": 5,
+        "reviews": 4,
+        "vicinity": "Central Bloc, V. Padriga Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9073923,
+          10.3304499
+        ]
+      },
+      "properties": {
+        "name": "Maribago",
+        "type": "church",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WJ4+5XC, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9073923,
+          10.3304499
+        ]
+      },
+      "properties": {
+        "name": "Erlinda padar",
+        "type": "church",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WJ4+5XC, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9074349,
+          10.3319606
+        ]
+      },
+      "properties": {
+        "name": "\ud55c\uc0ac\ub791 \uad50\ud68c",
+        "type": "church",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WJ4+QXM, India Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9075231,
+          10.3318288
+        ]
+      },
+      "properties": {
+        "name": "Sanchez Ancestral House",
+        "type": "church",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WJ5+P2J, Calituban, Talibon, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9032745,
+          10.3330296
+        ]
+      },
+      "properties": {
+        "name": "Our Mother of Perpetual Help Chapel",
+        "type": "church",
+        "rating": 4.8,
+        "reviews": 4,
+        "vicinity": "8WM3+686, Stephenson Street, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9076936,
+          10.3336339
+        ]
+      },
+      "properties": {
+        "name": "Schoenstatt Sisters of Mary - Secular Institute",
+        "type": "church",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "Guadalupe Heights Village, 2nd Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9006378,
+          10.3300368
+        ]
+      },
+      "properties": {
+        "name": "Apologia Gospel Church",
+        "type": "church",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WJ2+276, Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9004938,
+          10.331065
+        ]
+      },
+      "properties": {
+        "name": "Archdiocesan Shrine of St. Th\u00e9r\u00e8se of the Child Jesus",
+        "type": "church",
+        "rating": 4.7,
+        "reviews": 491,
+        "vicinity": "8WJ2+C5H, Edison Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9092226,
+          10.3319664
+        ]
+      },
+      "properties": {
+        "name": "5Gigbucks",
+        "type": "church",
+        "rating": 5,
+        "reviews": 1,
+        "vicinity": "eBloc 1 Tower, 6000, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9075544,
+          10.3261519
+        ]
+      },
+      "properties": {
+        "name": "Senor Santo \u00d1ino",
+        "type": "church",
+        "rating": 1,
+        "reviews": 1,
+        "vicinity": "8WG5+F27, Gov. M. Cuenco Avenue, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9096279,
+          10.3283839
+        ]
+      },
+      "properties": {
+        "name": "Christ's International Fellowship - Cebu City (formerly Lifechurch)",
+        "type": "church",
+        "rating": 5,
+        "reviews": 3,
+        "vicinity": "8WH5+9V2, Creative Studio Space, Crossroads, Gov. M. Cuenco Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.901922,
+          10.3349169
+        ]
+      },
+      "properties": {
+        "name": "St Jude Thaddeus Chapel",
+        "type": "church",
+        "rating": 4.5,
+        "reviews": 52,
+        "vicinity": "8WM2+XQ7, Camp. Lapulapu Ave, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9077213,
+          10.3350882
+        ]
+      },
+      "properties": {
+        "name": "World For Christ Church",
+        "type": "church",
+        "rating": 5,
+        "reviews": 2,
+        "vicinity": "8WP5+23Q, San Miguel Road, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.908715,
+          10.334885
+        ]
+      },
+      "properties": {
+        "name": "Pit Senyor Sto. Ni\u00f1o",
+        "type": "church",
+        "rating": 1,
+        "reviews": 1,
+        "vicinity": "8WM5+XF4, San Miguel Road, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8982287,
+          10.3276039
+        ]
+      },
+      "properties": {
+        "name": "Cebu City Philippines Temple",
+        "type": "church",
+        "rating": 4.7,
+        "reviews": 402,
+        "vicinity": "Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9104062,
+          10.3331879
+        ]
+      },
+      "properties": {
+        "name": "DOMAIN EXPANSION: MALEVOLENT SHRINE BANILAD BRANCH",
+        "type": "church",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WM6+75C, Governor Cuenco Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9074359,
+          10.3255071
+        ]
+      },
+      "properties": {
+        "name": "Petron",
+        "type": "gas_station",
+        "rating": 3.7,
+        "reviews": 34,
+        "vicinity": "Pope John Paul II Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9057881,
+          10.3295691
+        ]
+      },
+      "properties": {
+        "name": "QUIK STOP",
+        "type": "gas_station",
+        "rating": 5,
+        "reviews": 1,
+        "vicinity": "8WH4+R8F, West Geonzon Street, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9027679,
+          10.3290026
+        ]
+      },
+      "properties": {
+        "name": "Petron Service Station",
+        "type": "gas_station",
+        "rating": 1.3,
+        "reviews": 15,
+        "vicinity": "1 Salinas Drive, Lahug, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.900133,
+          10.330387
+        ]
+      },
+      "properties": {
+        "name": "Shell",
+        "type": "gas_station",
+        "rating": 4.2,
+        "reviews": 126,
+        "vicinity": "Corner Salinas Drive, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9098054,
+          10.3300922
+        ]
+      },
+      "properties": {
+        "name": "Shell Mobility Banilad",
+        "type": "gas_station",
+        "rating": 4,
+        "reviews": 33,
+        "vicinity": "M J. Cuenco Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9071451,
+          10.3251283
+        ]
+      },
+      "properties": {
+        "name": "JKS Gas Station",
+        "type": "gas_station",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "8WG4+3V2, Archbishop Reyes Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9106337,
+          10.3332731
+        ]
+      },
+      "properties": {
+        "name": "New Millennium Petron",
+        "type": "gas_station",
+        "rating": null,
+        "reviews": 0,
+        "vicinity": "6000 Gov. M. Cuenco Avenue, Apas, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8984584,
+          10.329663
+        ]
+      },
+      "properties": {
+        "name": "1st Autogas",
+        "type": "gas_station",
+        "rating": 3.1,
+        "reviews": 15,
+        "vicinity": "Unioil Station - Lahug, 2 Gorordo Avenue, Cebu City",
+        "status": "CLOSED_TEMPORARILY"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.8978075,
+          10.3306989
+        ]
+      },
+      "properties": {
+        "name": "Unioil Lahug",
+        "type": "gas_station",
+        "rating": 5,
+        "reviews": 1,
+        "vicinity": "Gorordo Avenue, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.9110667,
+          10.3354793
+        ]
+      },
+      "properties": {
+        "name": "Phoenix Petroleum - Banilad",
+        "type": "gas_station",
+        "rating": 3.9,
+        "reviews": 43,
+        "vicinity": "Gov. Cuenco Ave, corner Paradise Village Road, Cebu City",
+        "status": "OPERATIONAL"
+      }
+    }
+  ]
+}

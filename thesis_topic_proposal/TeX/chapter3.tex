@@ -1,0 +1,118 @@
+\section{Research Design}
+
+This study employs a \textbf{quantitative research design} focused on predictive modeling. Specifically, we use a supervised learning approach to estimate residential property values in Cebu City. The "dependent variable" is the market price (or price per square meter), and the "independent variables" are the property structural features, location attributes, and macroeconomic indicators.
+
+The study compares a baseline \textbf{Hedonic Price Model} (Multiple Linear Regression) against non-linear \textbf{Machine Learning approaches} (Random Forest and Gradient Boosting/XGBoost). This design allows us to quantifying the trade-off between interpretability (hedonic) and predictive accuracy (ML), while explicitly testing the value of government administrative data (BIR Zonal Values) as a feature.
+
+\section{Research Population and Data Sources}
+
+The "population" for this study consists of residential properties (House \& Lot, Condominium, Vacant Lot) in the \textbf{Metro Cebu} area, with a specific focus on Cebu City.
+
+\subsection{Primary Data: Verified Floor Price (Foreclosures)}
+
+The primary dataset acts as the \textbf{"Verified Floor Price"}—a conservative baseline derived from foreclosed property listings from \textbf{BDO Unibank} (dated November 18, 2025). These values represent distressed assets, often priced below standard market rates to ensure liquidity.
+
+\begin{itemize}
+    \item \textbf{Volume}: The raw file contains \textbf{955} property entries.
+    \item \textbf{Coverage}: Includes properties across multiple regions, from which we will filter for \textbf{Cebu} (Region VII / Central Visayas).
+    \item \textbf{Key Variables}:
+    \begin{itemize}
+        \item \textbf{Location}: Region, City, Property Address.
+        \item \textbf{Physical}: Lot Area (sqm), Floor Area (sqm), Property Type.
+        \item \textbf{Financial}: Advertised Price (Php), serving as the conservative price floor.
+        \item \textbf{Descriptive}: Text field (\texttt{Property Description}) parsed for attributes like bedrooms and bathrooms.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Secondary Data: Market Ceiling Price (Online Listings)}
+
+To address the scarcity of official transaction data, we implement a \textbf{"Hybrid Data Collection Strategy"}. We supplement the foreclosed dataset with a \textbf{"Market Ceiling Price"} dataset derived from public online platforms (e.g., Lamudi, DotProperty). As validated by \textcite{sousa2024}, aggregating thousands of online listings allows us to capture the "fair market" asking price and identify pricing clusters that sparse official records miss.
+
+\subsection{Macroeconomic and Administrative Data}
+
+\begin{itemize}
+    \item \textbf{BIR Zonal Values}: Official zonal values for the specific barangays in Cebu City, used to calculate the "valuation gap."
+    \item \textbf{BSP Residential Property Price Index (RPPI)}: Quarterly index values for Areas Outside NCR (AONCR) to control for time-trend effects (inflation/market cycle).
+\end{itemize}
+
+\subsection{Validation Layer (Human-in-the-Loop)}
+
+To ground the computational model in local reality, we employ a \textbf{"Human-in-the-Loop" validation strategy}. We leverage a network of licensed real estate brokers (Subject Matter Experts) to:
+\begin{enumerate}
+    \item \textbf{Validate Outliers}: Manually review properties where the model's prediction diverges significantly from the asking price (e.g., "Why is this Lahug property so cheap?").
+    \item \textbf{Domain Sanity Check}: Confirm if the identified "Key Drivers" align with on-the-ground brokerage experience (e.g., "Gut Feel" validation).
+\end{enumerate}
+
+\section{Data Instrument}
+
+The research does not use a survey questionnaire. Instead, the "instrument" is a \textbf{computational data pipeline} built using the Python programming language.
+
+\begin{itemize}
+    \item \textbf{Data Processing}: \texttt{Pandas} for cleaning, merging, and variable transformation.
+    \item \textbf{Geocoding}: Google Maps API or OpenStreetMap (Nominatim) to convert text addresses into Latitude/Longitude coordinates.
+    \item \textbf{Modeling}: \texttt{Scikit-learn} for Linear Regression and Random Forest; \texttt{XGBoost} or \texttt{LightGBM} for gradient boosting models.
+    \item \textbf{Deployment}: \texttt{Streamlit} to create the interactive valuation dashboard for the end-user (CPRE).
+\end{itemize}
+
+\section{Data Gathering Procedures}
+
+\begin{enumerate}
+    \item \textbf{Ingestion}: The BDO Excel file is ingested into the Python environment.
+    \item \textbf{Filtering}: The dataset is filtered to include only "Residential" properties located in "Cebu City" or key Metro Cebu cities (Mandaue, Lapu-Lapu, Talisay, Minglanilla, Consolacion).
+    \item \textbf{Parsing}: The \texttt{Property Description} field is parsed using Regular Expressions (Regex) to extract structured features:
+    \begin{itemize}
+        \item Number of Bedrooms (BR)
+        \item Number of Bathrooms (TB/T\&B)
+        \item Parking/Garage availability
+    \end{itemize}
+    \item \textbf{Geocoding}: Property addresses are batch-processed to obtain spatial coordinates (Lat/Lon) and specific Barangay names.
+    \item \textbf{Augmentation}:
+    \begin{itemize}
+        \item \textbf{Proximity \& Future Factors}: Distances to key landmarks (Ayala, IT Park) and \textbf{proposed Cebu Bus Rapid Transit (CBRT) stations} are calculated. This allows the model to test if future infrastructure is already priced in.
+        \item \textbf{Amenity Scoring}: Instead of subjective ratings, an "Amenity Score" is generated by counting the number of schools, hospitals, and commercial centers within a 1km radius of the property.
+        \item \textbf{Zonal Value Mapping}: Each property is matched to its corresponding BIR Zonal Value based on its Barangay and Street/Subdivision.
+    \end{itemize}
+\end{enumerate}
+
+\section{Data Treatment and Analysis}
+
+The data analysis proceeds in three stages:
+
+\subsection{Pre-processing}
+
+\begin{itemize}
+    \item \textbf{Log Transformation}: Given the right-skewed nature of property prices (revealed in EDA), a \textbf{Log Transformation} is applied to the target variable to normalize the distribution and reduce the bias from ultra-expensive outliers.
+    \item \textbf{Outlier Detection (IQR)}: We use the \textbf{Interquartile Range (IQR)} method to filter out extreme outliers (e.g., pricing anomalies or data entry errors) rather than arbitrary percentage cutoffs.
+    \item \textbf{Imputation}: Missing values for \texttt{Lot Area} or \texttt{Floor Area} are imputed using the \textbf{Barangay-level Median} to preserve local context.
+    \item \textbf{Feature Engineering}: Creation of new variables such as \texttt{Price per Square Meter}, \texttt{Amenity Scores}, and \texttt{Valuation Gap}.
+\end{itemize}
+
+\subsection{Modeling Strategy}
+
+We train three distinct model architectures to estimate price:
+
+\begin{enumerate}
+    \item \textbf{Multiple Linear Regression (Hedonic)}: Interpretable baseline.
+    \begin{equation}
+        \ln(Price) = \alpha + \beta_1 \ln(Area) + \beta_2 (Bedrooms) + \beta_3 (Distance_{CBD}) + \epsilon
+    \end{equation}
+    \item \textbf{Random Forest Regressor}: Captures non-linearities (e.g., price plateaus) and interactions (e.g., location value depending on lot size).
+    \item \textbf{XGBoost Regressor}: High-performance gradient boosting to minimize prediction error.
+\end{enumerate}
+
+\subsection{Validation and Metrics}
+
+To ensure the model generalizes well to unseen data:
+
+\begin{itemize}
+    \item \textbf{Validation Scheme}: We use a \textbf{Time-Aware Train-Test Split} (training on older listings, testing on newer ones) or standard \textbf{K-Fold Cross Validation}.
+    \item \textbf{Performance Metrics}:
+    \begin{itemize}
+        \item \textbf{MAE (Mean Absolute Error)}: Average error in Pesos (interpretable for business).
+        \item \textbf{MAPE (Mean Absolute Percentage Error)}: Average \% error (e.g., "off by 10\%").
+        \item \textbf{RMSE (Root Mean Square Error)}: Penalizes large errors.
+        \item \textbf{R-squared ($R^2$)}: Percentage of price variation explained by the model.
+    \end{itemize}
+\end{itemize}
+
+Finally, we assess the \textbf{Feature Importance} scores from the Tree-based models to confirm which factors (e.g., Location vs. Floor Area vs. Zonal Value) are the strongest drivers of property value in Cebu.

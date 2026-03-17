@@ -1,0 +1,62 @@
+% APA 7th Edition — Student Paper Mode
+\documentclass[stu, 12pt, a4paper, floatsintext]{apa7}
+
+% --- Encoding & Fonts ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times New Roman font (APA standard)
+
+% --- Packages ---
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% --- Bibliography (APA 7 via biblatex) ---
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{biblio.bib}
+
+% --- Title Page Metadata ---
+\title{Predicting Residential Property Values in Cebu City Using Machine Learning with GIS-Derived Spatial Features}
+\shorttitle{ML Property Valuation with GIS Features}
+\authorsnames{Chris Dominic Estreba}
+\authorsaffiliations{University of Asia and the Pacific}
+\course{Bachelor of Science in Data Science}
+\professor{Randy Marasigan}
+\duedate{March 11, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This study focuses on the residential real estate market within Cebu City and selected component cities of Metro Cebu. It aims to develop a data-driven property valuation model using a hybrid dataset of foreclosed verified floor prices and online market ceiling prices harvested via automated web scraping. The study compares Hedonic Regression with Machine Learning approaches (Random Forest, XGBoost) enriched with GIS-derived spatial features to identify key determinants of value, including the impact of future infrastructure like the Cebu Bus Rapid Transit (CBRT).
+\end{abstract}
+
+\tableofcontents
+
+% ============================================================
+%  CHAPTER 1
+% ============================================================
+\clearpage
+\section{The Problem and Its Setting}
+\input{chapter1}
+
+% ============================================================
+%  CHAPTER 2
+% ============================================================
+\clearpage
+\section{Review of Related Literature}
+\input{chapter2}
+
+% ============================================================
+%  CHAPTER 3
+% ============================================================
+\clearpage
+\section{Research Methodology}
+\input{chapter3}
+
+% ============================================================
+%  REFERENCES
+% ============================================================
+\printbibliography
+
+\end{document}
