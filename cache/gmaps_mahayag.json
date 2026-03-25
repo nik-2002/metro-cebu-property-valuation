@@ -1,0 +1,3653 @@
+[
+  {
+    "place_id": "ChIJgxgftANoVDIRJnJTc07ZkyM",
+    "name": "Mahayag",
+    "types": [
+      "locality",
+      "political"
+    ],
+    "vicinity": "Mahayag",
+    "lat": 8.158351699999999,
+    "lon": 123.4159263,
+    "epsg3857": {
+      "x": 13738598.07149618,
+      "y": 911268.0991239081
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.07149618,
+        911268.0991239081
+      ]
+    },
+    "raw": {
+      "geometry": {
+        "location": {
+          "lat": 8.158351699999999,
+          "lng": 123.4159263
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.236733073842524,
+            "lng": 123.5064797231955
+          },
+          "southwest": {
+            "lat": 8.053141225129696,
+            "lng": 123.3538623777251
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Mahayag",
+      "photos": [
+        {
+          "height": 3840,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113050814302858019033\">Leah Fe Balensuje</a>"
+          ],
+          "photo_reference": "ATCDNfXWtE1mTNVJZq5-8_fg5T5rr6gaDpO4hyVJuJlOZi3ruhbC5ZBG59S1U5rJRtSh1602ViTDFxWBhiLszg1pFwnM2hggQBGVkqgtDuh_7yOryKrPCFiMh7_hicH8pf5IrmZbs27B4IEwl-5WRqlppqidBbwSiiue1jOw8ORx1dOGCb8kw2IIeOKFQhBcLy7r0oQsppt0Q1imEYPj5pAoYy-XNBmfLw2g311BOsDN5u-BFl4K0iCNE75SEcMVd00-ZNINvuwEMz3xQh8l1VmloBj1EYVbjQGpanMoBkPPJ1UULq4fnQGWpjaMtPqlvTiHP39K2-BMKWhj26lLgFaKGkLAsPXXqhI-cJDUhUND-9Kbq8XBVNW8ghTptH68J060puF9OFt_4h3qTGIWguPBYMsnP4sd95eT4f5izniPnb5xQQ42KJOhXHkgTEO66MYuERO9y9WB08JKV_MtSikLl_j_VqzlsEPBCu_J4YuK6TnHFsUeUfiCVoyV7ojYDWK2JPMuS1FQ1JZ1UDbloMUh3cGSI0dUZ0zekiWFefoAJcFpYFX8syT0Gytd9gSFyGQIgynedlPxCbAwtTQUS3RyHDXCXOYxZKaNLnufLUjnq4DS24v_jp12ZOssl6t-8gKV",
+          "width": 5120
+        }
+      ],
+      "place_id": "ChIJgxgftANoVDIRJnJTc07ZkyM",
+      "reference": "ChIJgxgftANoVDIRJnJTc07ZkyM",
+      "scope": "GOOGLE",
+      "types": [
+        "locality",
+        "political"
+      ],
+      "vicinity": "Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJf_UAtBhoVDIRvHYj1AaR_Xg",
+    "name": "Philtech Vocational Academy, Inc.",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok 7, Poblacion,, Mahayag",
+    "lat": 8.120213099999999,
+    "lon": 123.432468,
+    "epsg3857": {
+      "x": 13740439.485117033,
+      "y": 906979.3279559712
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740439.485117033,
+        906979.3279559712
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.120213099999999,
+          "lng": 123.432468
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.121598480291501,
+            "lng": 123.4337879302915
+          },
+          "southwest": {
+            "lat": 8.118900519708497,
+            "lng": 123.4310899697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "international_phone_number": "+63 939 839 4952",
+      "name": "Philtech Vocational Academy, Inc.",
+      "place_id": "ChIJf_UAtBhoVDIRvHYj1AaR_Xg",
+      "plus_code": {
+        "compound_code": "4CCJ+3X Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW54CCJ+3X"
+      },
+      "reference": "ChIJf_UAtBhoVDIRvHYj1AaR_Xg",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Purok 7, Poblacion,, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJdYjVLY5oVDIRuegkCnBXlnU",
+    "name": "Trans-Asia Shipping Lines Inc. - L & M Gas Center",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Mahayag, 7026, Zamboanga del Sur",
+    "lat": 8.130609,
+    "lon": 123.382816,
+    "epsg3857": {
+      "x": 13734912.249760166,
+      "y": 908148.3297797436
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13734912.249760166,
+        908148.3297797436
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.130609,
+          "lng": 123.382816
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.131381780291502,
+            "lng": 123.3836325802915
+          },
+          "southwest": {
+            "lat": 8.128683819708497,
+            "lng": 123.3809346197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Trans-Asia Shipping Lines Inc. - L & M Gas Center",
+      "place_id": "ChIJdYjVLY5oVDIRuegkCnBXlnU",
+      "plus_code": {
+        "compound_code": "49JM+64 Dumingag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW549JM+64"
+      },
+      "reference": "ChIJdYjVLY5oVDIRuegkCnBXlnU",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Mahayag, 7026, Zamboanga del Sur"
+    }
+  },
+  {
+    "place_id": "ChIJDx4yhRdnVDIRPbcUs8Q2XEs",
+    "name": "MoneyGram",
+    "types": [
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "WONG BLDG, RIZAL ST, Mahayag",
+    "lat": 8.15835,
+    "lon": 123.41593,
+    "epsg3857": {
+      "x": 13738598.483378295,
+      "y": 911267.9079459861
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.483378295,
+        911267.9079459861
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.15835,
+          "lng": 123.41593
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.159698980291504,
+            "lng": 123.4172789802915
+          },
+          "southwest": {
+            "lat": 8.157001019708499,
+            "lng": 123.4145810197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+63 32 348 9400",
+      "name": "MoneyGram",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1040,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104126449464995896994\">MoneyGram</a>"
+          ],
+          "photo_reference": "ATCDNfUQMqOV9i-G6vbikdDcswLgFaSKX1Y_-1txato7grXjFmYWj0aWTTkFj6kQ5E_49Cyurg9UBcWQH7Vy3QkPFo_fL5klXS6MFjexAKTtrDN2ys0jDWLzel_Dws3KIWjEU9MSQMyrHWuq3spoCyQc5HxFZ-Udq8jFFAsTSCt_OEY-aoq8iDv_4xHj04ehkWx4vFmVUBAeyu5nDeOO9PWEH1tw38oPKsnsz9DGNuqbotmShaqnITboxJNcGUKoEsS9dpOSfMdlb1cwYrlwMI1a-EtRecWbDpNqnWT7nE2zUIYvIP84hKvjf-_W9tOVz4EcSQL-9Xr_gag",
+          "width": 1849
+        }
+      ],
+      "place_id": "ChIJDx4yhRdnVDIRPbcUs8Q2XEs",
+      "plus_code": {
+        "compound_code": "5C58+89 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C58+89"
+      },
+      "reference": "ChIJDx4yhRdnVDIRPbcUs8Q2XEs",
+      "scope": "GOOGLE",
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "WONG BLDG, RIZAL ST, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ_ZT0TABnVDIRk923mnIBbz0",
+    "name": "Laica alay Mayong",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C58+89V, Mahayag",
+    "lat": 8.158351699999999,
+    "lon": 123.4159263,
+    "epsg3857": {
+      "x": 13738598.07149618,
+      "y": 911268.0991239081
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.07149618,
+        911268.0991239081
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.158351699999999,
+          "lng": 123.4159263
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1597006802915,
+            "lng": 123.4172752802915
+          },
+          "southwest": {
+            "lat": 8.157002719708498,
+            "lng": 123.4145773197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+63 997 822 4073",
+      "name": "Laica alay Mayong",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJ_ZT0TABnVDIRk923mnIBbz0",
+      "reference": "ChIJ_ZT0TABnVDIRk923mnIBbz0",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C58+89V, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ1xcSWLNnVDIR12kj2kyB_2U",
+    "name": "RICHIE'S EATERY",
+    "types": [
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Hiway, Mahayag",
+    "lat": 8.158351699999999,
+    "lon": 123.4159263,
+    "epsg3857": {
+      "x": 13738598.07149618,
+      "y": 911268.0991239081
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.07149618,
+        911268.0991239081
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.158351699999999,
+          "lng": 123.4159263
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1597006802915,
+            "lng": 123.4172752802915
+          },
+          "southwest": {
+            "lat": 8.157002719708498,
+            "lng": 123.4145773197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "international_phone_number": "+63 946 408 9376",
+      "name": "RICHIE'S EATERY",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1542,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104710007244532421498\">RICHIE&#39;S EATERY</a>"
+          ],
+          "photo_reference": "ATCDNfWUrh200yGGydebG7P1c_N4GI8jWbtLtjdt6vB94-DotV4lcBrAmbgW0LwTycwZS-BPbBlT5kmI-ph6DZzZ2Nqbw_lcruKOWPYya-72mDNuiOQ77RZdlSdD7tZ5kRMKJoZEqN2qR5ss0TAiNCFDOsIIKvjnZa641cxfKWrjz1DIvfcFaxc18nu_gedcGYexisk52xigovyVkCJ4-Ji6RGpeaopdy0PUbMcNdHnX2Y0KYqR2uXL3KwI6ZKIh3_PwvH__lLZ_bY1FMwlHF-FTy1b3Ao5ZU3XoPRxYCkV99U5nrk6z_sl2Th2fvDXZVkMCo-XvimOcr2o",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJ1xcSWLNnVDIR12kj2kyB_2U",
+      "plus_code": {
+        "compound_code": "5C58+89 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C58+89"
+      },
+      "reference": "ChIJ1xcSWLNnVDIR12kj2kyB_2U",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Hiway, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJXaXw6aRnVDIRCr4EKR0QcEs",
+    "name": "Secoya race mill",
+    "types": [
+      "point_of_interest",
+      "store",
+      "establishment"
+    ],
+    "vicinity": "Purok 5, Mahayag",
+    "lat": 8.158351699999999,
+    "lon": 123.4159263,
+    "epsg3857": {
+      "x": 13738598.07149618,
+      "y": 911268.0991239081
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.07149618,
+        911268.0991239081
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.158351699999999,
+          "lng": 123.4159263
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1597006802915,
+            "lng": 123.4172752802915
+          },
+          "southwest": {
+            "lat": 8.157002719708498,
+            "lng": 123.4145773197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "international_phone_number": "+63 936 072 5504",
+      "name": "Secoya race mill",
+      "place_id": "ChIJXaXw6aRnVDIRCr4EKR0QcEs",
+      "plus_code": {
+        "compound_code": "5C58+89 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C58+89"
+      },
+      "reference": "ChIJXaXw6aRnVDIRCr4EKR0QcEs",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "vicinity": "Purok 5, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJsxI7agBnVDIRBet-ECTkmOA",
+    "name": "marivic mayormita",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C58+89V, Mahayag",
+    "lat": 8.158351699999999,
+    "lon": 123.4159263,
+    "epsg3857": {
+      "x": 13738598.07149618,
+      "y": 911268.0991239081
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.07149618,
+        911268.0991239081
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.158351699999999,
+          "lng": 123.4159263
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1597006802915,
+            "lng": 123.4172752802915
+          },
+          "southwest": {
+            "lat": 8.157002719708498,
+            "lng": 123.4145773197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "marivic mayormita",
+      "place_id": "ChIJsxI7agBnVDIRBet-ECTkmOA",
+      "reference": "ChIJsxI7agBnVDIRBet-ECTkmOA",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C58+89V, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJc_8efABnVDIRR0DT4Xe7h2o",
+    "name": "Mary Jane cuerda",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C58+89V, Mahayag",
+    "lat": 8.158351699999999,
+    "lon": 123.4159263,
+    "epsg3857": {
+      "x": 13738598.07149618,
+      "y": 911268.0991239081
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.07149618,
+        911268.0991239081
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.158351699999999,
+          "lng": 123.4159263
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1597006802915,
+            "lng": 123.4172752802915
+          },
+          "southwest": {
+            "lat": 8.157002719708498,
+            "lng": 123.4145773197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Mary Jane cuerda",
+      "place_id": "ChIJc_8efABnVDIRR0DT4Xe7h2o",
+      "reference": "ChIJc_8efABnVDIRR0DT4Xe7h2o",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C58+89V, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJObGZegBnVDIRf2I6Ay6Pyh4",
+    "name": "Nanay",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C58+89V, Mahayag",
+    "lat": 8.158351699999999,
+    "lon": 123.4159263,
+    "epsg3857": {
+      "x": 13738598.07149618,
+      "y": 911268.0991239081
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738598.07149618,
+        911268.0991239081
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.158351699999999,
+          "lng": 123.4159263
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1597006802915,
+            "lng": 123.4172752802915
+          },
+          "southwest": {
+            "lat": 8.157002719708498,
+            "lng": 123.4145773197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Nanay",
+      "place_id": "ChIJObGZegBnVDIRf2I6Ay6Pyh4",
+      "reference": "ChIJObGZegBnVDIRf2I6Ay6Pyh4",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C58+89V, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJZ8hicQBnVDIRfz-cO5_Nq8E",
+    "name": "Georgeybanez",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C68+4X5, Mahayag",
+    "lat": 8.160272700000002,
+    "lon": 123.4174946,
+    "epsg3857": {
+      "x": 13738772.653853592,
+      "y": 911484.1306955917
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738772.653853592,
+        911484.1306955917
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.160272700000002,
+          "lng": 123.4174946
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.16340395,
+            "lng": 123.42015395
+          },
+          "southwest": {
+            "lat": 8.159228950000005,
+            "lng": 123.41660815
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Georgeybanez",
+      "place_id": "ChIJZ8hicQBnVDIRfz-cO5_Nq8E",
+      "reference": "ChIJZ8hicQBnVDIRfz-cO5_Nq8E",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C68+4X5, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJMXkpIq9nVDIR2v-N-RJo8Vs",
+    "name": "Mahayag Livestock Breeding Center",
+    "types": [
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C49+2XF, Mahayag",
+    "lat": 8.155066099999999,
+    "lon": 123.4199105,
+    "epsg3857": {
+      "x": 13739041.590611398,
+      "y": 910898.6099470264
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739041.590611398,
+        910898.6099470264
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.155066099999999,
+          "lng": 123.4199105
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.156262830291503,
+            "lng": 123.4215564302915
+          },
+          "southwest": {
+            "lat": 8.153564869708498,
+            "lng": 123.4188584697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "Mahayag Livestock Breeding Center",
+      "place_id": "ChIJMXkpIq9nVDIR2v-N-RJo8Vs",
+      "reference": "ChIJMXkpIq9nVDIR2v-N-RJo8Vs",
+      "scope": "GOOGLE",
+      "types": [
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C49+2XF, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJjfZN2X9nVDIRf8SP0Uplo4c",
+    "name": "Gumilos Sari-sari Store",
+    "types": [
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "P-1, Mahayag",
+    "lat": 8.1531381,
+    "lon": 123.4215334,
+    "epsg3857": {
+      "x": 13739222.251013007,
+      "y": 910681.793996146
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739222.251013007,
+        910681.793996146
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1531381,
+          "lng": 123.4215334
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.154464830291502,
+            "lng": 123.4223459802915
+          },
+          "southwest": {
+            "lat": 8.151766869708498,
+            "lng": 123.4196480197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "Gumilos Sari-sari Store",
+      "place_id": "ChIJjfZN2X9nVDIRf8SP0Uplo4c",
+      "plus_code": {
+        "compound_code": "5C3C+7J Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C3C+7J"
+      },
+      "rating": 5,
+      "reference": "ChIJjfZN2X9nVDIRf8SP0Uplo4c",
+      "scope": "GOOGLE",
+      "types": [
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "P-1, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJZbpeDgBnVDIRsaKGy8LijQ0",
+    "name": "Estrella Agri-Farm School of Technology Inc.",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Prk-2 Brgy. Kaangayan, Mahayag",
+    "lat": 8.1519645,
+    "lon": 123.4117079,
+    "epsg3857": {
+      "x": 13738128.481356217,
+      "y": 910549.8156697927
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738128.481356217,
+        910549.8156697927
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1519645,
+          "lng": 123.4117079
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.152988030291501,
+            "lng": 123.4128673802915
+          },
+          "southwest": {
+            "lat": 8.150290069708497,
+            "lng": 123.4101694197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "international_phone_number": "+63 963 978 4294",
+      "name": "Estrella Agri-Farm School of Technology Inc.",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3072,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102929330646309373621\">Estrella Agri-Farm School of Technology Inc.</a>"
+          ],
+          "photo_reference": "ATCDNfUj8JIHscBwXGmfHEAQrhQKKS0O7oCXJo4-pO0v5Vn-N0jR5ud-6q1Dlw9pvuQok6fCKeNRaijUqgHcp5V44bVc5PzbIz6seUMxM4J0OoEAz1q1FZKQhQVmc5OyJ10DwCy9RDjWskIFs06kpqIW8Dgobzgow3oyMP0Fiv0lWIQISuW5EqyL7qq0sIz7drMQu_Cz_LhkWPXiJSytSs_sSYbZsCJL8g04FBNY-WgAcHZpZ-EIjF_SIIax6-giKPpxsR18uTRGfDdPTjeTfEDHUduHA2ozPNo9jDtY7jzeM1btxdKIIvQ0AvRLD5Gc2EeGkmgIqDnqZC4",
+          "width": 4080
+        }
+      ],
+      "place_id": "ChIJZbpeDgBnVDIRsaKGy8LijQ0",
+      "plus_code": {
+        "compound_code": "5C26+QM Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C26+QM"
+      },
+      "reference": "ChIJZbpeDgBnVDIRsaKGy8LijQ0",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Prk-2 Brgy. Kaangayan, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJN9M2LgBnVDIRIqBg--H5KCY",
+    "name": "Tesda",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C26+QMP, Kaangayan, Mahayag",
+    "lat": 8.1519646,
+    "lon": 123.4117074,
+    "epsg3857": {
+      "x": 13738128.425696472,
+      "y": 910549.826915373
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738128.425696472,
+        910549.826915373
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1519646,
+          "lng": 123.4117074
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.152988180291501,
+            "lng": 123.4128669302915
+          },
+          "southwest": {
+            "lat": 8.150290219708497,
+            "lng": 123.4101689697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Tesda",
+      "place_id": "ChIJN9M2LgBnVDIRIqBg--H5KCY",
+      "reference": "ChIJN9M2LgBnVDIRIqBg--H5KCY",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C26+QMP, Kaangayan, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJgQT5fQBnVDIRyjcp4H6ZAsk",
+    "name": "Estrella Agri-Farm School of Technology Inc. Training and Assessment Center",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "111 Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag",
+    "lat": 8.151961199999999,
+    "lon": 123.4116932,
+    "epsg3857": {
+      "x": 13738126.844959702,
+      "y": 910549.4445656379
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738126.844959702,
+        910549.4445656379
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.151961199999999,
+          "lng": 123.4116932
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.152989080291501,
+            "lng": 123.4128552802915
+          },
+          "southwest": {
+            "lat": 8.150291119708497,
+            "lng": 123.4101573197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Estrella Agri-Farm School of Technology Inc. Training and Assessment Center",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3468,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112023883840275409970\">Estrella Agri-Farm School of Technology Inc.</a>"
+          ],
+          "photo_reference": "ATCDNfXnpeaMZQ-XuHHhtC2ppeswff3oVJF9vmpDCM5l2FvuP0_en96c2MI0E1wKPpQIKV3wumUDQoFlyEFKW4tbg7WeTvpepcH0iIEkDusMXcsIhePgfXcnnq5G4vgznqRT9uivTUv9FYvL4cVshIBPAvkzMQYiKDm1-o5T49rfnBI-JliL1BhgI5kVc94Q9NIOyk3h6ds5X7uhnQlP9cfAYr1AqenHZD0LIDtYtYmpOEM0Ra7dQcLVFrXh2scuXwjZ_b-vCRjfBAsw-9Fvc5LzVe2J3-vkXUO7thOL0LVexgF6sNz25SXznEXK2fqEw9wpYfIc_pD_M3g",
+          "width": 4624
+        }
+      ],
+      "place_id": "ChIJgQT5fQBnVDIRyjcp4H6ZAsk",
+      "plus_code": {
+        "compound_code": "5C26+QM Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C26+QM"
+      },
+      "reference": "ChIJgQT5fQBnVDIRyjcp4H6ZAsk",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "111 Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJRUoWdwBnVDIRh4XjNs0KYcQ",
+    "name": "Brg. Kaangaya, Mahayag Zamboanga del Sur",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Brgy, Prk-2, Kaangayan, Mahayag",
+    "lat": 8.151911900000002,
+    "lon": 123.4116976,
+    "epsg3857": {
+      "x": 13738127.33476546,
+      "y": 910543.9004948402
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738127.33476546,
+        910543.9004948402
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.151911900000002,
+          "lng": 123.4116976
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.152957380291506,
+            "lng": 123.4128698802915
+          },
+          "southwest": {
+            "lat": 8.150259419708501,
+            "lng": 123.4101719197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Brg. Kaangaya, Mahayag Zamboanga del Sur",
+      "place_id": "ChIJRUoWdwBnVDIRh4XjNs0KYcQ",
+      "plus_code": {
+        "compound_code": "5C26+QM Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C26+QM"
+      },
+      "reference": "ChIJRUoWdwBnVDIRh4XjNs0KYcQ",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Brgy, Prk-2, Kaangayan, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJHSFnfUpnVDIR9O7QrA8lY30",
+    "name": "Barangay Boniao",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C36+25R, Mahayag",
+    "lat": 8.1526023,
+    "lon": 123.4103887,
+    "epsg3857": {
+      "x": 13737981.628683962,
+      "y": 910621.5400393939
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13737981.628683962,
+        910621.5400393939
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1526023,
+          "lng": 123.4103887
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.153958930291502,
+            "lng": 123.4117685302915
+          },
+          "southwest": {
+            "lat": 8.151260969708499,
+            "lng": 123.4090705697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+63 927 426 7626",
+      "name": "Barangay Boniao",
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106828617313389446236\">lovely gracias</a>"
+          ],
+          "photo_reference": "ATCDNfX_mF6-OpDsnSB0HGineKWW40FiYlhAEcgO3iPI6mMsIvi8l-EV_Bfasw09lDqfDKXEXHnc2IJTsTR4udxkut2Rcvt9YA1D-0OOMalu0b9x02fQjBW2JJKfr9LDEqTS6TS2kgKAYRgeOeW-8hGiJKx8ocygTJnl4c36FrU2sfo881n_fb8xJDCqNYxbmeoHQyJXwyDAzRxZsJK1O536gD6mt-hxwhRHaa3QBtluoihMRfEmW_M6P7ytpBXFX5NQpysMxq9mnyUyaBBlYomq-WOvWgFVLM-oKkNdRmUPjUPK2IO8ZMn17kmwXJqxYpIjkw3p6q7ESBgGkR31YAPI8gO97CL-ANg1oZnggBDVr_x8oxoM1srRUUQIrTH3k_yaTAFC_IR11VoFRK_5tw46wRyqDfI1dTQKzEjDOn1egyd2jmSTBn0gs37qBH01U7Cq3tX3uj8X8GhUFVATd1X9v-vXt1xOfi3GzgylIKPCMp_T_2IYLQ-0Wdq3oCWKfgzJtL3JO4pdfMwin4-8Yeb5K42owr3ix60L8LxTCsqvhFJFSSUPvf795GdVWJf1mzd66-mDiPlgWV1ap_gBdX4umC68DOudMff5sHnJb7OKZXJ_F1eY6nujntTmDFRr66KE4VjWcA63",
+          "width": 1536
+        }
+      ],
+      "place_id": "ChIJHSFnfUpnVDIR9O7QrA8lY30",
+      "rating": 2.3,
+      "reference": "ChIJHSFnfUpnVDIR9O7QrA8lY30",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3,
+      "vicinity": "5C36+25R, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ5053GgBnVDIR0ITqY6mwqJo",
+    "name": "El Dorado Agri-Farm and Resort",
+    "types": [
+      "tourist_attraction",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C36+25R, Mahayag",
+    "lat": 8.152004800000002,
+    "lon": 123.4102617,
+    "epsg3857": {
+      "x": 13737967.491108632,
+      "y": 910554.347638962
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13737967.491108632,
+        910554.347638962
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.152004800000002,
+          "lng": 123.4102617
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.153345330291502,
+            "lng": 123.4116260802915
+          },
+          "southwest": {
+            "lat": 8.150647369708498,
+            "lng": 123.4089281197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#13B5C7",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "El Dorado Agri-Farm and Resort",
+      "opening_hours": {
+        "open_now": true
+      },
+      "place_id": "ChIJ5053GgBnVDIR0ITqY6mwqJo",
+      "rating": 5,
+      "reference": "ChIJ5053GgBnVDIR0ITqY6mwqJo",
+      "scope": "GOOGLE",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "5C36+25R, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJFZmVbsxnVDIRC1GgVIMSKGU",
+    "name": "Kaangayan Barangay Office",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C26+H93",
+    "lat": 8.15139,
+    "lon": 123.41093,
+    "epsg3857": {
+      "x": 13738041.885924328,
+      "y": 910485.209856229
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738041.885924328,
+        910485.209856229
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.15139,
+          "lng": 123.41093
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.152795880291501,
+            "lng": 123.4123115302915
+          },
+          "southwest": {
+            "lat": 8.150097919708497,
+            "lng": 123.4096135697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "Kaangayan Barangay Office",
+      "place_id": "ChIJFZmVbsxnVDIRC1GgVIMSKGU",
+      "rating": 5,
+      "reference": "ChIJFZmVbsxnVDIRC1GgVIMSKGU",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "5C26+H93"
+    }
+  },
+  {
+    "place_id": "ChIJDbtCZMRnVDIRROPw1fYqZsA",
+    "name": "CHENZX STORE",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C25+WQ6, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag",
+    "lat": 8.1522848,
+    "lon": 123.409395,
+    "epsg3857": {
+      "x": 13737871.010505961,
+      "y": 910585.8352785495
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13737871.010505961,
+        910585.8352785495
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1522848,
+          "lng": 123.409395
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.153680230291503,
+            "lng": 123.4107699802915
+          },
+          "southwest": {
+            "lat": 8.150982269708498,
+            "lng": 123.4080720197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "CHENZX STORE",
+      "place_id": "ChIJDbtCZMRnVDIRROPw1fYqZsA",
+      "reference": "ChIJDbtCZMRnVDIRROPw1fYqZsA",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C25+WQ6, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJJ3Pg5sVnVDIR7OWpQlqDNeY",
+    "name": "Kaangayan Elementary School",
+    "types": [
+      "primary_school",
+      "school",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C35+286, Mahayag",
+    "lat": 8.1525485,
+    "lon": 123.4082582,
+    "epsg3857": {
+      "x": 13737744.46250883,
+      "y": 910615.4899078455
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13737744.46250883,
+        910615.4899078455
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1525485,
+          "lng": 123.4082582
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.154084630291502,
+            "lng": 123.4097297802915
+          },
+          "southwest": {
+            "lat": 8.151386669708497,
+            "lng": 123.4070318197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Kaangayan Elementary School",
+      "photos": [
+        {
+          "height": 3240,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106094951211197658349\">Ruel Madjos</a>"
+          ],
+          "photo_reference": "ATCDNfXZjW7-rXmBppiS3XjCWBmezH1R4qAxk1LIBEL9-qbw9uuYmknz0MKMrNtnYLgQEWh0jptM8XVKylDBXW_C1CwYBXgBINmT7s8Fz14Z4a9y4Qty3mKkI_A-pH5L64Fu1lvwvqEgEGFynI9RRFGcBThdtbd-ZP9ZePgX2JCl0CM5T1QH6_R9ilkhYiLWo_2ZvxQ8zLs-7dxFzkPZ3SGiQ7HXwuyDuvVeJR0ueyJU7Y7_zeOg0X_Mzo769aMGmEZ6Ag-HiRXaxONjUAgQZizpKgbbj75DHhs4GUfsHqPAL_dfBVVJCSNwRY-pOeO4SNA2W9Y2r9HyXEH-eg2OdVYa7R9dzNrw-FNdE6LyGi4jLO3zUSkW9CFkn92NkdSdw-xBjoNaDCPPr7Yw7EDwDzhuujiZ7n0LLvW92ZkLSbyGpGaUbgPcahoVRHNvJy5ZxWXPttsDp6moLYt-h8EnegK7RopDuDWEtmIxK4ya-M7IluvW9-Txx1Ssrp-QmYLNP9WNUPD-v8KatyCRSPaQkhwQEyGbuFs0NM51qLMWVpgKQBmF6GHsE-sNb8MXsWw8KRO2dskAdZPFGmAizNMVVYLsdqvvVa71E2lStMxEuMHYuGOZjOI8cY1ftz2YfPKF2ojLIOsx8aTg",
+          "width": 4320
+        }
+      ],
+      "place_id": "ChIJJ3Pg5sVnVDIR7OWpQlqDNeY",
+      "reference": "ChIJJ3Pg5sVnVDIR7OWpQlqDNeY",
+      "scope": "GOOGLE",
+      "types": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C35+286, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJpTQVTgBnVDIR-aJ4RKD6i7U",
+    "name": "Saljuan",
+    "types": [
+      "food",
+      "point_of_interest",
+      "store",
+      "establishment"
+    ],
+    "vicinity": "4CX5+RV, Mahayag",
+    "lat": 8.1495625,
+    "lon": 123.4096875,
+    "epsg3857": {
+      "x": 13737903.57145702,
+      "y": 910279.6976372256
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13737903.57145702,
+        910279.6976372256
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1495625,
+          "lng": 123.4096875
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.150959430291502,
+            "lng": 123.4110241802915
+          },
+          "southwest": {
+            "lat": 8.148261469708498,
+            "lng": 123.4083262197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Saljuan",
+      "place_id": "ChIJpTQVTgBnVDIR-aJ4RKD6i7U",
+      "reference": "ChIJpTQVTgBnVDIR-aJ4RKD6i7U",
+      "scope": "GOOGLE",
+      "types": [
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "vicinity": "4CX5+RV, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJGcSEflVnVDIRsCkBnNUrJzE",
+    "name": "CORDITA VULCANIZING SHOP",
+    "types": [
+      "car_wash",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok 4, Kaangayan, Mahayag",
+    "lat": 8.1542443,
+    "lon": 123.4056769,
+    "epsg3857": {
+      "x": 13737457.113507245,
+      "y": 910806.1931446975
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13737457.113507245,
+        910806.1931446975
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1542443,
+          "lng": 123.4056769
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.155591980291502,
+            "lng": 123.4070518802915
+          },
+          "southwest": {
+            "lat": 8.152894019708498,
+            "lng": 123.4043539197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+63 910 857 6823",
+      "name": "CORDITA VULCANIZING SHOP",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106619791435174674261\">CORDITA VULCANIZING SHOP</a>"
+          ],
+          "photo_reference": "ATCDNfUanlEtsnFV5cV_eNcfkK5YKp7XL8Onz1kiFbMkezbY8ieZ2RzEu35e0MVyzLBZqGtkg9aLj7o4S9ITB0VJ5sB_sMa-S4nEp35lN7e7KziGuqGfegLsfVCXJW4Fv55PPHXORgnHEXssR-rkzyMsZXaSlto0TZS-NF03UCOBuZgIb6cooSDVdQlaJuv13ODTiw6rXpClEXMHRoQswkIZD_PhIlgZAY9-OBtz8Ryen39jZh5vgIXUPJF1w-yVelIpoOU7nNPLzG9B4FbDIaA7bFBSB0wQCueUC7G3gefNg1Hqe6Bb4poyg92GeHITHvW_KKkXoknIwVQ",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJGcSEflVnVDIRsCkBnNUrJzE",
+      "plus_code": {
+        "compound_code": "5C34+M7 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C34+M7"
+      },
+      "reference": "ChIJGcSEflVnVDIRsCkBnNUrJzE",
+      "scope": "GOOGLE",
+      "types": [
+        "car_wash",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Purok 4, Kaangayan, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJubk-DTpnVDIR-nmu9hXcp40",
+    "name": "BALOTAN CORDITA",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok 4, Mahayag",
+    "lat": 8.15418,
+    "lon": 123.4056433,
+    "epsg3857": {
+      "x": 13737453.373172352,
+      "y": 910798.9621957979
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13737453.373172352,
+        910798.9621957979
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.15418,
+          "lng": 123.4056433
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.155526780291503,
+            "lng": 123.4070363302915
+          },
+          "southwest": {
+            "lat": 8.152828819708498,
+            "lng": 123.4043383697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+63 909 236 3807",
+      "name": "BALOTAN CORDITA",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1536,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118306014379984563034\">nesel delacuesta</a>"
+          ],
+          "photo_reference": "ATCDNfV3Hxp3O2lVN9qKW5iAfgXg67_zDJkZl3jZPn0vqTHcHrrNJuq32otvVOAcoJq6BKJbtAGrK3oK1lpK9eFr__40GfMA35LUPbWd-i5MayGQsGtv0vLY4V-rKL54Xmt2jgtIn4TIQv7KuK--7QLosrJb7Ccn7jkm5YenAl5uuYmMS6NJgE51lVRVFgWVx4fmDggs_UWze8GClzHA8OjotVbZgy0Pg0Vkk3T6V0Os6GEqs2g6Mi74Khi2h2oYQZpPA2FF-KOO2_0gK2KLpd2OE_AujjTS4I-MviDFjc2VKNAxSaz5WK-8L-PqRJuAQYVQP1qblnHeDm5F7B00g35gtrwmGwmUuxHwEiLhN5L_oh3gjZGc33LNMcOUGhpv47KwhBqIdcuBEgfqiwVQJAMkdmywW76Pb47RO3gAoBUxL7AaNWTKjzlE_yD5IblSLKp_5kcPYX-IRe9EzPyhVhWZB_tNNgMH7cbQYiUR3kAwILiegBRZmkUNf0ltT1cBzAaW6NTljKFmtdUy5N9fq3SniOJh4_RcSl-i-KnwrAMjHt3tQcSXnCJNXPvUUynXyLQZWCI_Fc3yTzyhGCKxxOxczkuQ5bJX2mmXDL0y8JojFSikWVQKlQTWvoOsoJwKet2kqzKJBgw0",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJubk-DTpnVDIR-nmu9hXcp40",
+      "plus_code": {
+        "compound_code": "5C34+M7 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C34+M7"
+      },
+      "rating": 5,
+      "reference": "ChIJubk-DTpnVDIR-nmu9hXcp40",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 5,
+      "vicinity": "Purok 4, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ7VUjHgBnVDIRMgC2XR0meZ4",
+    "name": "NORPHE APLACA RESIDENCE",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CVC+9R, Mahayag",
+    "lat": 8.143454,
+    "lon": 123.422031,
+    "epsg3857": {
+      "x": 13739277.643591626,
+      "y": 909592.77071964
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739277.643591626,
+        909592.77071964
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.143454,
+          "lng": 123.422031
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.144834830291503,
+            "lng": 123.4234251302915
+          },
+          "southwest": {
+            "lat": 8.142136869708498,
+            "lng": 123.4207271697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "NORPHE APLACA RESIDENCE",
+      "place_id": "ChIJ7VUjHgBnVDIRMgC2XR0meZ4",
+      "reference": "ChIJ7VUjHgBnVDIRMgC2XR0meZ4",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "4CVC+9R, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJffXH7-NnVDIR9cxEeHn56Sc",
+    "name": "LOREN - C HARDWARE & CONSTRUCTION SUPPLIES",
+    "types": [
+      "hardware_store",
+      "point_of_interest",
+      "store",
+      "establishment"
+    ],
+    "vicinity": "4CVC+6W5, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag",
+    "lat": 8.143014899999999,
+    "lon": 123.4223608,
+    "epsg3857": {
+      "x": 13739314.35675969,
+      "y": 909543.3924528403
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739314.35675969,
+        909543.3924528403
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.143014899999999,
+          "lng": 123.4223608
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.144396630291501,
+            "lng": 123.4237462302915
+          },
+          "southwest": {
+            "lat": 8.141698669708497,
+            "lng": 123.4210482697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "LOREN - C HARDWARE & CONSTRUCTION SUPPLIES",
+      "place_id": "ChIJffXH7-NnVDIR9cxEeHn56Sc",
+      "reference": "ChIJffXH7-NnVDIR9cxEeHn56Sc",
+      "scope": "GOOGLE",
+      "types": [
+        "hardware_store",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "vicinity": "4CVC+6W5, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJEdnt7uNnVDIRvjVi9i0okEA",
+    "name": "PONCE STORE",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CVC+5X5, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag",
+    "lat": 8.1428881,
+    "lon": 123.4224761,
+    "epsg3857": {
+      "x": 13739327.191896977,
+      "y": 909529.1333779014
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739327.191896977,
+        909529.1333779014
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1428881,
+          "lng": 123.4224761
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.144259130291502,
+            "lng": 123.4238565802915
+          },
+          "southwest": {
+            "lat": 8.141561169708497,
+            "lng": 123.4211586197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "PONCE STORE",
+      "place_id": "ChIJEdnt7uNnVDIRvjVi9i0okEA",
+      "reference": "ChIJEdnt7uNnVDIRvjVi9i0okEA",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "4CVC+5X5, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJV7NLdslnVDIR-L0QlnJFbOo",
+    "name": "Purok 2 boniao mahayag Zamboanga del sur",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "594X+3JQ, Kaangayan",
+    "lat": 8.1552155,
+    "lon": 123.3991028,
+    "epsg3857": {
+      "x": 13736725.28804282,
+      "y": 910915.4109777352
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13736725.28804282,
+        910915.4109777352
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1552155,
+          "lng": 123.3991028
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.156566630291504,
+            "lng": 123.3999698302915
+          },
+          "southwest": {
+            "lat": 8.1538686697085,
+            "lng": 123.3972718697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Purok 2 boniao mahayag Zamboanga del sur",
+      "place_id": "ChIJV7NLdslnVDIR-L0QlnJFbOo",
+      "rating": 5,
+      "reference": "ChIJV7NLdslnVDIR-L0QlnJFbOo",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "594X+3JQ, Kaangayan"
+    }
+  },
+  {
+    "place_id": "ChIJNWWH9GBnVDIRwdOsu4961pU",
+    "name": "Mafamco",
+    "types": [
+      "storage",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "594X+3JQ, Mahayag",
+    "lat": 8.1552155,
+    "lon": 123.3991028,
+    "epsg3857": {
+      "x": 13736725.28804282,
+      "y": 910915.4109777352
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13736725.28804282,
+        910915.4109777352
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1552155,
+          "lng": 123.3991028
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.156566630291504,
+            "lng": 123.3999698302915
+          },
+          "southwest": {
+            "lat": 8.1538686697085,
+            "lng": 123.3972718697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Mafamco",
+      "place_id": "ChIJNWWH9GBnVDIRwdOsu4961pU",
+      "reference": "ChIJNWWH9GBnVDIRwdOsu4961pU",
+      "scope": "GOOGLE",
+      "types": [
+        "storage",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "594X+3JQ, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJJ0cJ6itnVDIRVOUTNIUZHDk",
+    "name": "Zarah's street food corner",
+    "types": [
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CVF+7FG, Mahayag",
+    "lat": 8.143199599999999,
+    "lon": 123.4237126,
+    "epsg3857": {
+      "x": 13739464.838447345,
+      "y": 909564.1625803299
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739464.838447345,
+        909564.1625803299
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.143199599999999,
+          "lng": 123.4237126
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.144463430291504,
+            "lng": 123.4251034802915
+          },
+          "southwest": {
+            "lat": 8.1417654697085,
+            "lng": 123.4224055197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "Zarah's street food corner",
+      "photos": [
+        {
+          "height": 5312,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105018357748271840233\">zarahmae montealto</a>"
+          ],
+          "photo_reference": "ATCDNfV_2VYsl7u6o8K-F-6jirhZ3LiKPzvqfDWSprU5k3gZ2M5kyU6xKe_X2x0tlf1F5cur8Gms8qQT9nQhHjB68In0MOwAhyfnFs2sT6yeEsN9pQUAUpAUqBu-qBruHKryQUHfrKkSHORDSrkQ9baz1SF4wSW9VKtLjDjm5O1jrjSgbQaxkmBTQzCdXfEetfvXxi2cqF1bz_svfIBk6eTiLqv4M9-fEfqJr3LyYlHKZSf0QHtvcKgq2clxysOi4oyEPe9hYZsarQmfofLMnOBs25KAZfsy3qbqzNWqKacph6cektm-MoSXrs7pBuMT1Jpry7erWhfpwK5vaAGqiXtxGwLPX-wnooWymhwLsVVH0Ukt0Hb_AVojG4B1fzXzCqnd8WMOp5ixk3CRbMF8ILMq38WHvIQYozuI3k61DqahToRwM5mVIlEhdhkk2KJtCEM1IhxzzexGpAEYqCUYHlOfnexTyMtyJ0eTQNjWzcPrY5Wkg5gFeNlfDCGWEWB1ilzj1gjzTUYexn5Z6IKq8mF4Aw0Qph2eMsmY3eDIfDAPp99YekV9Pdoh7Hdtzu0_4GCIWHje5z1EffLRzjLhucAaitF_AOY0L2nyEj_agoEv7kRmZ-ibJLXXJxJmdlm5fBKPm5dcAw",
+          "width": 2988
+        }
+      ],
+      "place_id": "ChIJJ0cJ6itnVDIRVOUTNIUZHDk",
+      "rating": 5,
+      "reference": "ChIJJ0cJ6itnVDIRVOUTNIUZHDk",
+      "scope": "GOOGLE",
+      "types": [
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2,
+      "vicinity": "4CVF+7FG, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJpYhHFJxpVDIRqREN2lJ-pgY",
+    "name": "Bag-ong Balamban",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok-7, Mahayag",
+    "lat": 8.140590699999999,
+    "lon": 123.4178595,
+    "epsg3857": {
+      "x": 13738813.274335781,
+      "y": 909270.7840118594
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738813.274335781,
+        909270.7840118594
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.140590699999999,
+          "lng": 123.4178595
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.141986230291502,
+            "lng": 123.4192138802915
+          },
+          "southwest": {
+            "lat": 8.139288269708498,
+            "lng": 123.4165159197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Bag-ong Balamban",
+      "place_id": "ChIJpYhHFJxpVDIRqREN2lJ-pgY",
+      "plus_code": {
+        "compound_code": "4CR9+64 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW54CR9+64"
+      },
+      "reference": "ChIJpYhHFJxpVDIRqREN2lJ-pgY",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Purok-7, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ8aicFkRnVDIRK5K-aFFPnw8",
+    "name": "Purok 7 upper salug daku",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CR9+75, Mahayag",
+    "lat": 8.140590699999999,
+    "lon": 123.4178595,
+    "epsg3857": {
+      "x": 13738813.274335781,
+      "y": 909270.7840118594
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738813.274335781,
+        909270.7840118594
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.140590699999999,
+          "lng": 123.4178595
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.141986230291502,
+            "lng": 123.4192138802915
+          },
+          "southwest": {
+            "lat": 8.139288269708498,
+            "lng": 123.4165159197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Purok 7 upper salug daku",
+      "place_id": "ChIJ8aicFkRnVDIRK5K-aFFPnw8",
+      "rating": 5,
+      "reference": "ChIJ8aicFkRnVDIRK5K-aFFPnw8",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "4CR9+75, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJHaAbzZdnVDIRpPa5GiWSZOY",
+    "name": "Upper Salug Daku Barangay Hall",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CRF+H7, Mahayag",
+    "lat": 8.1413885,
+    "lon": 123.4231534,
+    "epsg3857": {
+      "x": 13739402.58858809,
+      "y": 909360.4987930693
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739402.58858809,
+        909360.4987930693
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1413885,
+          "lng": 123.4231534
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.142851230291502,
+            "lng": 123.4246641302915
+          },
+          "southwest": {
+            "lat": 8.140153269708497,
+            "lng": 123.4219661697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "Upper Salug Daku Barangay Hall",
+      "photos": [
+        {
+          "height": 4144,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108323110692924382941\">John Jade Amante</a>"
+          ],
+          "photo_reference": "ATCDNfXpxTn8O6e4IRyyMt5c_gt_23l1swDz54l9UjeID086jDpkbwoCYac1Bvs9wzuClngyp5uoAf47lE_3J1k4G7PbCty4hZT20PTRtgIllBm_gumfnDh9Vje6aQIlLmo7v1zYScLgcE28Wkumz_1zZoGm51OOeqcGHaFKrMMsjqXTLA6VcrY8ufIO33Bt4CZ9ddtYsn3JymUS2NJWi9yFUX5uGxAW8E0LZOAaPf179h36UVi69P_dejCHegSF1uBUCyX6NZniF78h1yNGEmH-GASW_6JR99N3bNK22v22EIV_v48a4gb4AetQrDp45TTfof6jOIFb4XtzJ37wKznLS_dJgnv1zI__JDnFKetSegv19HinLXktHJZJfz2d-usqf_y2Y0woYepImhe6i-SJWOlroTi3CQsNizLX4ndxrrt0oLC-sp6wfAO8bgmk0kMvqX4vAtzbcb1DBfQZoLwAk8AvuOnmRT1uTmI0J4tbt1qx_3as1BOZOdPeMl-Bg8ja_YYaT-ikifM_2rd-7UH0FpOP_cZXWAdCppBBqYKUb1nIFxyk7b121mRFRfaGsGcHytr1CdpTnzKppqFsO4NA95tR3_0xKIud63Ai43B9zPSACUNPyFX2NoxiFQowsmPw",
+          "width": 1968
+        }
+      ],
+      "place_id": "ChIJHaAbzZdnVDIRpPa5GiWSZOY",
+      "rating": 5,
+      "reference": "ChIJHaAbzZdnVDIRpPa5GiWSZOY",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "4CRF+H7, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ42BcLwBnVDIRB8oW7713q0E",
+    "name": "TJ BATUCAN",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Upper Salug Daku, Mahayag",
+    "lat": 8.147361599999998,
+    "lon": 123.4311551,
+    "epsg3857": {
+      "x": 13740293.333757572,
+      "y": 910032.1958228349
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740293.333757572,
+        910032.1958228349
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.147361599999998,
+          "lng": 123.4311551
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1487822302915,
+            "lng": 123.4325016302915
+          },
+          "southwest": {
+            "lat": 8.146084269708496,
+            "lng": 123.4298036697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "TJ BATUCAN",
+      "place_id": "ChIJ42BcLwBnVDIRB8oW7713q0E",
+      "reference": "ChIJ42BcLwBnVDIRB8oW7713q0E",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Upper Salug Daku, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJs-jTcINCVDIRUMhrTlAzy-c",
+    "name": "Upper Salug Daku Elementary School",
+    "types": [
+      "school",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CRF+GJ2, Dipolog - Pagadian Road, Mahayag",
+    "lat": 8.1412516,
+    "lon": 123.4240126,
+    "epsg3857": {
+      "x": 13739498.234294582,
+      "y": 909345.1040027948
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739498.234294582,
+        909345.1040027948
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1412516,
+          "lng": 123.4240126
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.142536530291501,
+            "lng": 123.4252704802915
+          },
+          "southwest": {
+            "lat": 8.139838569708497,
+            "lng": 123.4225725197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "international_phone_number": "+63 919 370 1870",
+      "name": "Upper Salug Daku Elementary School",
+      "place_id": "ChIJs-jTcINCVDIRUMhrTlAzy-c",
+      "reference": "ChIJs-jTcINCVDIRUMhrTlAzy-c",
+      "scope": "GOOGLE",
+      "types": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "4CRF+GJ2, Dipolog - Pagadian Road, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ8_se34dnVDIRT_w6NlIID5s",
+    "name": "Guripan Elementary School",
+    "types": [
+      "primary_school",
+      "school",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C7M+RWX, Mahayag",
+    "lat": 8.1646173,
+    "lon": 123.4348455,
+    "epsg3857": {
+      "x": 13740704.147206394,
+      "y": 911972.7189964501
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740704.147206394,
+        911972.7189964501
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1646173,
+          "lng": 123.4348455
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.165896980291501,
+            "lng": 123.4363987802915
+          },
+          "southwest": {
+            "lat": 8.163199019708497,
+            "lng": 123.4337008197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Guripan Elementary School",
+      "photos": [
+        {
+          "height": 1968,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108323110692924382941\">John Jade Amante</a>"
+          ],
+          "photo_reference": "ATCDNfU5itRXX_zn7ediS1URkR9fG8wi-9cvOjG8_UKFw60IoKjWLbomKqYEJA8uYwzLsPvA6i6HKz_VO5KsJaPY94Vjfn898PnT757fjAOo7CXo7ZXeDDi5Fc4vrnBtkkwrjkuYaR8vSX37Umdm4aK_5EE2D9RnE-QlTqjYUHA81niNomBOTqYv8F54V2cWphcs07tTZbKr1czodg1JQ04gNq2XXMBVHTS8TxpoEVrs6dcA1fZjthw8O5wv8Z11ic38mA8YhutWYNAp0Zpe30N3ygSfjeKS_CJ46NkWp00uJQcHW5beZyeR_7zpjrQugGuHjTg5aZzdC5ixVa5pEp12SfSwzBnthx9xf9XixZTvpci2q5g2hRtzbCzS5J102b5u28PNViUR5OpAQXaOkgAxaQ1DRuIfIaukkJGExJQqRBgxV8VmockhF7dxjy2nDluZW8MybeEIm5V7o-D0FwCzB838qUKahUcR-fi07BGCYJiqC6foYT4-5Axy7A7WedjR4x5kgo0APpNAR6BOB8urtLb7XRNvdCz8l9n9HOdsc3A8AtLCqOwW7bJ5SJYycQGc7Ngi-bGyIdBahWz7wLCHAJsHfTQE2MyReNPQEteV0thVJduhPoOFCdnkSHabkWFG1WlxUjip",
+          "width": 4144
+        }
+      ],
+      "place_id": "ChIJ8_se34dnVDIRT_w6NlIID5s",
+      "reference": "ChIJ8_se34dnVDIRT_w6NlIID5s",
+      "scope": "GOOGLE",
+      "types": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C7M+RWX, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJNT3VMQBnVDIR9GCd9XGgCxE",
+    "name": "Mark Lepiten House",
+    "types": [
+      "point_of_interest",
+      "store",
+      "establishment"
+    ],
+    "vicinity": "Purok 6 Guripan, Mahayag",
+    "lat": 8.153652799999998,
+    "lon": 123.4353876,
+    "epsg3857": {
+      "x": 13740764.493502354,
+      "y": 910739.6752060588
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740764.493502354,
+        910739.6752060588
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.153652799999998,
+          "lng": 123.4353876
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.154996330291501,
+            "lng": 123.4366510302915
+          },
+          "southwest": {
+            "lat": 8.152298369708497,
+            "lng": 123.4339530697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "Mark Lepiten House",
+      "place_id": "ChIJNT3VMQBnVDIR9GCd9XGgCxE",
+      "plus_code": {
+        "compound_code": "5C3P+F5 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C3P+F5"
+      },
+      "rating": 5,
+      "reference": "ChIJNT3VMQBnVDIR9GCd9XGgCxE",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "Purok 6 Guripan, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJf4PRTgBnVDIRd-CzS-vkJkE",
+    "name": "TJ LAURON BATUCAN PLACE",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "P6 GURIPAN, Mahayag",
+    "lat": 8.151587,
+    "lon": 123.4360291,
+    "epsg3857": {
+      "x": 13740835.904955698,
+      "y": 910507.3636234463
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740835.904955698,
+        910507.3636234463
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.151587,
+          "lng": 123.4360291
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.152852630291504,
+            "lng": 123.4371620802915
+          },
+          "southwest": {
+            "lat": 8.150154669708499,
+            "lng": 123.4344641197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "TJ LAURON BATUCAN PLACE",
+      "photos": [
+        {
+          "height": 4608,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103331688340177695860\">Teodorico jr</a>"
+          ],
+          "photo_reference": "ATCDNfUXAQXBG7H5fKpohdzGpawSgqPQD0gYr_joH3Io1YKnspzAUCl90TlmdGk2Z6kc-SmuRJK8pqvST9TDgoW2FYLUU7NZCP7kbYfcU4R2zlI6T1nqrGPxAMMbXRRtrrSNy2IFKHuft25108ae0DmYq08kM4L4E-tAAqUgbOe4sYlVhPDM_V0qK_o29Sd5duCqTExbnWpuSOoRry2aFBrozPn5gF9aIj_D30PA7RkfjsrJ9AD2bLuuzpXncfZHPVxx1WBWKM701yn3HcyJHZeX0RQ2E2E1KGJy5stkV2G9tktIFmLrudV8P9GfSHB-NrIEsBZhSoweeLImF5rRU2YOXtVcSUTtlau93-Hqk4aut84YwKiPi-doTbvJ_b8HHEZSVyLU5cyxhZyJX6x3Dyl4n2EgdxRvQTJ-FJYvWwhWwt5_sOMq6lTxn9L40IV0J1yQDNBwRSk93ozjovuQShqpZn1xQbiuPTuhuqQvcoc8EYg_aUkDYEA9mz5EqaiA7v_YdRsmQyxqs8afhCw_V5aWJdaS19jIH_ZlzkWd_AdKLTU4i7bYsSOSkAyzxz99uhPvy6X5bCxGgBDFKxPsMR6dXMhQEV7e_9jo77BjpqaCB50Z8n5p30dVT9AMFTuxgLC5NueBREVuzmiU9UMGYXvRO1vFE_A",
+          "width": 3456
+        }
+      ],
+      "place_id": "ChIJf4PRTgBnVDIRd-CzS-vkJkE",
+      "plus_code": {
+        "compound_code": "5C2P+JC Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW55C2P+JC"
+      },
+      "reference": "ChIJf4PRTgBnVDIRd-CzS-vkJkE",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "P6 GURIPAN, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJlfIwSwBnVDIR4Y9RkfjAVA4",
+    "name": "Dodong House",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "5C2P+JCF, Mahayag",
+    "lat": 8.1515624,
+    "lon": 123.4360504,
+    "epsg3857": {
+      "x": 13740838.276060853,
+      "y": 910504.5972133398
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740838.276060853,
+        910504.5972133398
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1515624,
+          "lng": 123.4360504
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.152840330291504,
+            "lng": 123.4371727302915
+          },
+          "southwest": {
+            "lat": 8.1501423697085,
+            "lng": 123.4344747697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Dodong House",
+      "photos": [
+        {
+          "height": 4608,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103140173068802152584\">Tj Batucan</a>"
+          ],
+          "photo_reference": "ATCDNfV4-U1pbb8tqllylNM1xL1TETIVUi03bd1_xvSfRPTtWKLEXy6HXmVzsTQyXEuH9scdZjG_T2_lsFcg_0bUwv9sPZn07Wa0ryX7H-rNATBAUDzJ3eoXz8zADWa-xkVXa5nS8qc82vGootK0iRXK7Y0RJEhdjklNOITne-iJYdepDm4QiPTm0We8V_AVBRlXCsCVZRKOfLCNQmTHHESLz_o4rIxP7Gc3WNF6VhHG2_Mo7U1UUBPRC_hhfKKzqT5zbfmucRcQMMdkkcJvR1jAU73xpW99wFeLvvakVV6yazc3UAzFYTgGvqTg9RWUl-mKXLJHWtK2fHRC0iuVd3ZWv5evwVTQUXpJ7wXc0dKd7O_GQpJyZ1eiUCHhF5a6J6-277MfWuMKZD6D5tCacI1cz_TJVVTFzp46kq83wDHaXXpEpCz3WFHVK1t9QgCO9niEaXybJxwL2FlMyo4y9RmNTCVwVzjlybRWSCTBaR62tvy3Mdc1slT5F93r32Tic__GQjbeT9ArrVeMXVLjnL-9JJVSOqiv2RBgwz-ec1OOVffU56UsqnXB4EcbZaAncCnJ66oXXRvpljPgNAz9P6OQYB-jMc_wwTJTGRcccq2jJdQ08OV5F9f4y5wUU9TQNB8ylH8FOcCB",
+          "width": 3456
+        }
+      ],
+      "place_id": "ChIJlfIwSwBnVDIR4Y9RkfjAVA4",
+      "reference": "ChIJlfIwSwBnVDIR4Y9RkfjAVA4",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "5C2P+JCF, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJY2rHRctnVDIRSdWJktbQmAw",
+    "name": "BOSSJR GAS REFILLING STATION",
+    "types": [
+      "gas_station",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "594V+HPM, Sindangan-Siayan-Dumingag-Mahayag Road, Dumingag",
+    "lat": 8.156470199999998,
+    "lon": 123.3943106,
+    "epsg3857": {
+      "x": 13736191.822779039,
+      "y": 911056.5106447188
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13736191.822779039,
+        911056.5106447188
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.156470199999998,
+          "lng": 123.3943106
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.157868780291501,
+            "lng": 123.3956572302915
+          },
+          "southwest": {
+            "lat": 8.155170819708497,
+            "lng": 123.3929592697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "name": "BOSSJR GAS REFILLING STATION",
+      "place_id": "ChIJY2rHRctnVDIRSdWJktbQmAw",
+      "reference": "ChIJY2rHRctnVDIRSdWJktbQmAw",
+      "scope": "GOOGLE",
+      "types": [
+        "gas_station",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "594V+HPM, Sindangan-Siayan-Dumingag-Mahayag Road, Dumingag"
+    }
+  },
+  {
+    "place_id": "ChIJYZfJAgBnVDIRl4ehFdTwloM",
+    "name": "Boniao Mahayag Zamboanga Del Sur",
+    "types": [
+      "gas_station",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "594V+JMG, Mahayag",
+    "lat": 8.156567899999999,
+    "lon": 123.3942187,
+    "epsg3857": {
+      "x": 13736181.592517836,
+      "y": 911067.4977020092
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13736181.592517836,
+        911067.4977020092
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.156567899999999,
+          "lng": 123.3942187
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.157945730291502,
+            "lng": 123.3955662802915
+          },
+          "southwest": {
+            "lat": 8.155247769708497,
+            "lng": 123.3928683197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "international_phone_number": "+63 966 690 6552",
+      "name": "Boniao Mahayag Zamboanga Del Sur",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1536,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117837662023648262744\">Edjie Dapat</a>"
+          ],
+          "photo_reference": "ATCDNfVwLsjbip1wmYBTU-uqkNhyEPpPA2sXCP-DvrAPKKA_-1yDB-bdR0OiJcXrDGfY4py8wa-iQRn1NtibR8k1lcE9WTahc-UtsP7fiP59wUM75zqc-fxHcUMydSPw51K048l-uAulIW8lLzhS9cBjnnfAMqmIHi2jUX8GbOzGgfbIJTQUM3cvFoXEu5_YDAjEhSgLOfvlSNDWq7MphMEbaSGsX03sP0Pl_dZsoSZDmd7XdJ-3bD5txsTNowNX7e4MiNrBUTv1VSpivfeCy7zp-_J4xTj3aQ7GdTMTAHujQergbjP-QSTlowSQfqfVGxO2EYMA3srUnsgw2Vp6zTVnGJWtSBD-s1zkE0TUejKDjo3hNouxvqIGSHylODW2wGZ8jIFZL7AYfkBHZTHdNXKQCPRdqMhahoAxx2AZ8k28Td1zJvb8q9o63ecN0kOgmk5p548i3IZgCXmLgymTEV4XYdGXpGIohaikiOh7C5ptjR9x7ohE1e2ZSsdAxNUsadEjZHLQ7k1wGYxa7ReiGp2oE-4TOrf9WSVh9kIv29NMiGG3_ljImEGXtg3OPYUdoRRxnV2rkBvdTDGzC8NwTgQNlQBGHs2e5PaFhkBv9pBWP08uGhLuIBk9is_oQHaR6YgpKh3ao9qx",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJYZfJAgBnVDIRl4ehFdTwloM",
+      "reference": "ChIJYZfJAgBnVDIRl4ehFdTwloM",
+      "scope": "GOOGLE",
+      "types": [
+        "gas_station",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "594V+JMG, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ7SQLEQhoVDIREOJdsxCsaMw",
+    "name": "GALES STORE",
+    "types": [
+      "grocery_or_supermarket",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CQG+4FQ, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag",
+    "lat": 8.137828599999999,
+    "lon": 123.4262424,
+    "epsg3857": {
+      "x": 13739746.454495152,
+      "y": 908960.1797299685
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739746.454495152,
+        908960.1797299685
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.137828599999999,
+          "lng": 123.4262424
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.139153980291502,
+            "lng": 123.4275629802915
+          },
+          "southwest": {
+            "lat": 8.136456019708497,
+            "lng": 123.4248650197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shoppingcart_pinlet",
+      "name": "GALES STORE",
+      "place_id": "ChIJ7SQLEQhoVDIREOJdsxCsaMw",
+      "reference": "ChIJ7SQLEQhoVDIREOJdsxCsaMw",
+      "scope": "GOOGLE",
+      "types": [
+        "grocery_or_supermarket",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "4CQG+4FQ, Sindangan-Siayan-Dumingag-Mahayag Road, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJf33ZmjRmVDIRihGTuesdx1w",
+    "name": "BAUL AGRICULTURAL SUPPLIES",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "594R+HH4, Sindangan-Siayan-Dumingag-Mahayag Road, Dumingag",
+    "lat": 8.1563827,
+    "lon": 123.391448,
+    "epsg3857": {
+      "x": 13735873.159604695,
+      "y": 911046.6706519845
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735873.159604695,
+        911046.6706519845
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1563827,
+          "lng": 123.391448
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1577727802915,
+            "lng": 123.3927973302915
+          },
+          "southwest": {
+            "lat": 8.155074819708497,
+            "lng": 123.3900993697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "BAUL AGRICULTURAL SUPPLIES",
+      "place_id": "ChIJf33ZmjRmVDIRihGTuesdx1w",
+      "reference": "ChIJf33ZmjRmVDIRihGTuesdx1w",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "594R+HH4, Sindangan-Siayan-Dumingag-Mahayag Road, Dumingag"
+    }
+  },
+  {
+    "place_id": "ChIJl0rSrT1nVDIRjbaHHNlpToQ",
+    "name": "Jelnies House",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "595R+3G, Mahayag",
+    "lat": 8.1577129,
+    "lon": 123.3913089,
+    "epsg3857": {
+      "x": 13735857.675063524,
+      "y": 911196.2612654868
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735857.675063524,
+        911196.2612654868
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1577129,
+          "lng": 123.3913089
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.159064330291503,
+            "lng": 123.3926098802915
+          },
+          "southwest": {
+            "lat": 8.156366369708499,
+            "lng": 123.3899119197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Jelnies House",
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110113221817877936323\">Maxwell Fernandez</a>"
+          ],
+          "photo_reference": "ATCDNfW-2C92AkEioCHQ516v2qTTJkgcC0uL8x9c-TnX-jcwqg0s7CIcPcqvYG6pdIy7uWUCVi2AbLiQNoLTEya3g6VyH_Kt12Zk3aTLsNX2uZh3YjnA2x1T4ItLbPF7fWvjGYRwAYMo54noMfVtkZAU0XzDmMNu3rvswckH9fbIPkZAs7CCXLTuoAOtk5aQ_-U5lLrY7pcbjIi9XIVSjYs3_ktnebwn1-f07LZp3WZrJBaMdSsZOTe3GTswNlk0chgEDfAs1ZM5LsC233-nyEM7ROQuinyIsa1BZbnEytDBWKwl6l9ZeCeBSLv7izzkl4DrmRACMoOsj_-W_yru0DZl7N9UPulYbPV1Beq8ranWqBJOR-AhvgoRpzNgq4Z9RPx-Z4obLog1QoPRsae1f9Q_a2VGHDLUrGnhnfFUW5-0q-EkIPhIO-ZvPICc3ncmXNBVU3CEK0KBLuG_XUefCufp0FKG6h_Ud2f9eMdOGOwU-hgoMzQco-LufZI9kBrQNEY3_peTu-NL6T1OaqLbHhhJ902MOZAhNzr7Z6CZZDq8LZVSHGxedh61rb21EAOU_WzhI5npwJ5va3bp8Nc7-5UunGk-ZsnLxEmsJz1QLFKSYiEfYkVzMjBjro0_b8YDAF-RyJinbw",
+          "width": 2252
+        }
+      ],
+      "place_id": "ChIJl0rSrT1nVDIRjbaHHNlpToQ",
+      "reference": "ChIJl0rSrT1nVDIRjbaHHNlpToQ",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "595R+3G, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJmQ_VgnpnVDIRnfcoPFYR390",
+    "name": "Trade Art Printing",
+    "types": [
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Boniao, Mahayag",
+    "lat": 8.1567967,
+    "lon": 123.3912217,
+    "epsg3857": {
+      "x": 13735847.968003929,
+      "y": 911093.2278937652
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735847.968003929,
+        911093.2278937652
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1567967,
+          "lng": 123.3912217
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.158146430291504,
+            "lng": 123.3925511802915
+          },
+          "southwest": {
+            "lat": 8.1554484697085,
+            "lng": 123.3898532197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "international_phone_number": "+63 916 689 3733",
+      "name": "Trade Art Printing",
+      "opening_hours": {
+        "open_now": true
+      },
+      "place_id": "ChIJmQ_VgnpnVDIRnfcoPFYR390",
+      "plus_code": {
+        "compound_code": "594R+PF Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW5594R+PF"
+      },
+      "reference": "ChIJmQ_VgnpnVDIRnfcoPFYR390",
+      "scope": "GOOGLE",
+      "types": [
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Boniao, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ0dC23jpnVDIRaK2G3SkPo6U",
+    "name": "Matunhay's Delivery",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "P 1, Boniao, Mahayag, Mahayag",
+    "lat": 8.1565137,
+    "lon": 123.3911924,
+    "epsg3857": {
+      "x": 13735844.706342848,
+      "y": 911061.4025276231
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735844.706342848,
+        911061.4025276231
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1565137,
+          "lng": 123.3911924
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.157862980291501,
+            "lng": 123.3925362302915
+          },
+          "southwest": {
+            "lat": 8.155165019708496,
+            "lng": 123.3898382697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+63 939 608 6016",
+      "name": "Matunhay's Delivery",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3264,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112764820652960801982\">Matunhay&#39;s Delivery</a>"
+          ],
+          "photo_reference": "ATCDNfWQWkduk4LjYc-CHrnMvo83nizGsLZWGdKZFQ5cAsOAiIbzs4pkBikrqdmaeh6wbdXaz4hG0l0crsuHzsNVw6rpiG1E_-S2_uGbDJuLT1ueWWrWhrJxHs8ECndRs4e6kTfkIDFtWhhHDQtobBW9MmTiz20wDhOfnsss0IxiSPfWDeMsNXgDuOJmVBjr_sIddZZRz5tGaGy-KkCYkr3--h-aEWObwq14-QvP47KiqzvAAGLJjGrYtCLxHVtIkCRtxKe-8yG6XPEcGmyhhYUHqvwQJm2Vtd2yMumn8aSnjo4ty-2aw6z4xN7lyxmfKsH2vMXw4Wc3Jqc",
+          "width": 1592
+        }
+      ],
+      "place_id": "ChIJ0dC23jpnVDIRaK2G3SkPo6U",
+      "plus_code": {
+        "compound_code": "594R+JF Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW5594R+JF"
+      },
+      "reference": "ChIJ0dC23jpnVDIRaK2G3SkPo6U",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "P 1, Boniao, Mahayag, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJJ4jKsmtCVDIR3XKqSgyA8DU",
+    "name": "Mahayag Farmers Integrated Multi-Purpose Cooperative",
+    "types": [
+      "bank",
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "594R+2GR, National Road, Boniao, Mahayag",
+    "lat": 8.1551025,
+    "lon": 123.3912757,
+    "epsg3857": {
+      "x": 13735853.97925643,
+      "y": 910902.7033702616
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735853.97925643,
+        910902.7033702616
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1551025,
+          "lng": 123.3912757
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.156455830291502,
+            "lng": 123.3925311302915
+          },
+          "southwest": {
+            "lat": 8.153757869708498,
+            "lng": 123.3898331697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bank-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bank-intl_pinlet",
+      "international_phone_number": "+63 910 833 8091",
+      "name": "Mahayag Farmers Integrated Multi-Purpose Cooperative",
+      "place_id": "ChIJJ4jKsmtCVDIR3XKqSgyA8DU",
+      "reference": "ChIJJ4jKsmtCVDIR3XKqSgyA8DU",
+      "scope": "GOOGLE",
+      "types": [
+        "bank",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "594R+2GR, National Road, Boniao, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJcyOTqlxpVDIRkwsLYB9ux9U",
+    "name": "Metrobank ATM",
+    "types": [
+      "atm",
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Rizal Avenue, Molave",
+    "lat": 8.133819299999999,
+    "lon": 123.4121698,
+    "epsg3857": {
+      "x": 13738179.899829013,
+      "y": 908509.3288464367
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13738179.899829013,
+        908509.3288464367
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.133819299999999,
+          "lng": 123.4121698
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.135256230291501,
+            "lng": 123.4135038302915
+          },
+          "southwest": {
+            "lat": 8.132558269708497,
+            "lng": 123.4108058697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/atm-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/atm_pinlet",
+      "name": "Metrobank ATM",
+      "place_id": "ChIJcyOTqlxpVDIRkwsLYB9ux9U",
+      "plus_code": {
+        "compound_code": "4CM6+GV Molave, Zamboanga del Sur, Philippines",
+        "global_code": "6QW54CM6+GV"
+      },
+      "reference": "ChIJcyOTqlxpVDIRkwsLYB9ux9U",
+      "scope": "GOOGLE",
+      "types": [
+        "atm",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Rizal Avenue, Molave"
+    }
+  },
+  {
+    "place_id": "ChIJQ15TQz1nVDIR3Q1SRVv_-U0",
+    "name": "Boniao National High School",
+    "types": [
+      "secondary_school",
+      "school",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "594R+97H, Mahayag",
+    "lat": 8.1559365,
+    "lon": 123.3907459,
+    "epsg3857": {
+      "x": 13735795.00219021,
+      "y": 910996.4923453853
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735795.00219021,
+        910996.4923453853
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1559365,
+          "lng": 123.3907459
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.157276630291502,
+            "lng": 123.3922853302915
+          },
+          "southwest": {
+            "lat": 8.154578669708497,
+            "lng": 123.3895873697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Boniao National High School",
+      "place_id": "ChIJQ15TQz1nVDIR3Q1SRVv_-U0",
+      "reference": "ChIJQ15TQz1nVDIR3Q1SRVv_-U0",
+      "scope": "GOOGLE",
+      "types": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "594R+97H, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJtRzr9VlnVDIRQzh623puzpk",
+    "name": "Painitan ni Paopao",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok 3, Mahayag",
+    "lat": 8.149326499999999,
+    "lon": 123.3909301,
+    "epsg3857": {
+      "x": 13735815.507240415,
+      "y": 910253.1582344314
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735815.507240415,
+        910253.1582344314
+      ]
+    },
+    "raw": {
+      "business_status": "CLOSED_TEMPORARILY",
+      "geometry": {
+        "location": {
+          "lat": 8.149326499999999,
+          "lng": 123.3909301
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.150676830291502,
+            "lng": 123.3922263802915
+          },
+          "southwest": {
+            "lat": 8.147978869708497,
+            "lng": 123.3895284197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+      "international_phone_number": "+63 970 871 2509",
+      "name": "Painitan ni Paopao",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 3060,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105106896204862688205\">Painitan ni Paopao</a>"
+          ],
+          "photo_reference": "ATCDNfVY6Ke-ze6Un73TRDvsql16Bb4L6T2vCnIGytQzhp7M94KIfOpNzJUuxrSp9RQanE_tAhoKBY7lQXKJy0NOIu02jlLsqW10L3LxtKedRNrLynJaZcDTvNABuhoC8xG38qFTIlhifE-8lV5_5WzhZRd_w-qETk5Ei7aLd1XnIDiW1N1DyRrmPAlEDgqYIGwKPqDG9mrIJ77D6O-jnKRvqXmd5JOwANiLzvDwyIoHkzwAC_xp4und26mizBl_9E_od58u7LewUtxwZ_ndZTuQCa-5FusmEFrsrG6bZJJtdGIVXwDu1gPec5wHUUhSiH1uUATCnS6MtPs",
+          "width": 4080
+        }
+      ],
+      "place_id": "ChIJtRzr9VlnVDIRQzh623puzpk",
+      "plus_code": {
+        "compound_code": "49XR+P9 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW549XR+P9"
+      },
+      "rating": 4.8,
+      "reference": "ChIJtRzr9VlnVDIRQzh623puzpk",
+      "scope": "GOOGLE",
+      "types": [
+        "cafe",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 14,
+      "vicinity": "Purok 3, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ1RN8HgBpVDIRLRxIvnpWiYo",
+    "name": "Nida's Farmhouse",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok 3, Kalubihan Brgy Lower Salug Daku",
+    "lat": 8.1367934,
+    "lon": 123.4316714,
+    "epsg3857": {
+      "x": 13740350.808010668,
+      "y": 908843.769741592
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740350.808010668,
+        908843.769741592
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1367934,
+          "lng": 123.4316714
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.138151530291502,
+            "lng": 123.4328761302915
+          },
+          "southwest": {
+            "lat": 8.135453569708497,
+            "lng": 123.4301781697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Nida's Farmhouse",
+      "place_id": "ChIJ1RN8HgBpVDIRLRxIvnpWiYo",
+      "plus_code": {
+        "compound_code": "4CPJ+PM Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW54CPJ+PM"
+      },
+      "reference": "ChIJ1RN8HgBpVDIRLRxIvnpWiYo",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Purok 3, Kalubihan Brgy Lower Salug Daku"
+    }
+  },
+  {
+    "place_id": "ChIJiRD4dgBpVDIRAz5k-sXR10o",
+    "name": "Oscar's Best Lechon",
+    "types": [
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok 3, Kalubihan, Mahayag",
+    "lat": 8.136840499999998,
+    "lon": 123.4324647,
+    "epsg3857": {
+      "x": 13740439.117762713,
+      "y": 908849.0662096101
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740439.117762713,
+        908849.0662096101
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.136840499999998,
+          "lng": 123.4324647
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1382236802915,
+            "lng": 123.4332759302915
+          },
+          "southwest": {
+            "lat": 8.135525719708497,
+            "lng": 123.4305779697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+      "icon_background_color": "#4B96F3",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+      "name": "Oscar's Best Lechon",
+      "photos": [
+        {
+          "height": 4080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111285239643347557397\">Mocha Plaza</a>"
+          ],
+          "photo_reference": "ATCDNfV1TXlWEUT3jAc1IJfxrCtZqzmudq0AGNqkMRXpvDwOD9qiFC0gbGJps3ACm05MkI0PvHz6x6AZnhT752AwxSJ1apm3uy5o5hcz8QmoGNtJUj96jZdpTnrFY24gCXpo2BXUm_MPN8_gsAoBqyUXq7OyqVNAeSFipz-uLZf-N7gnSlT67Dwm76zpBSXnud_NWikk1mRiAZJYxSTXlbekdv3OeT4fOBPVQTiVgJbGQt2gNf8t9JnPqNVIIbN550fr5qIc1biM4q1J2QgzmIQNR7SbhSslTYAvZK6Lzt6tytIRHYzwyhJUewMH36GItmzmWaUHjPgGBl45VYbNM6tR-C02ixMr_2o4l2zhGN34n8QbHP7C_GKyDccSjAvc8OBuOOd9l0tdffYGEbgzxg56mbJvh18BwJcwcysHacN1Kro0N_7Ahr8WXKQb-lOwGeVsH6F1ux6tHlWmjUt9AA-BF84c_by_U3NM3zBrPHn8k0U_9jhHo1zogGieJKv149EKWpWvl2uoRLgq0HxYGj69xKVi7P8rTN9HWO5dq38VdfYmOec9_0JnClN_3eh8-_vePSRtmukVnRRksNwBQJn8UMUTV7kTZ6PeKkykR_5pbccWj5nfsKQoOnKLe0zkH2YR5yN2Bo2J0xbN_Ru9hY4BMQ",
+          "width": 3060
+        }
+      ],
+      "place_id": "ChIJiRD4dgBpVDIRAz5k-sXR10o",
+      "plus_code": {
+        "compound_code": "4CPJ+PX Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW54CPJ+PX"
+      },
+      "reference": "ChIJiRD4dgBpVDIRAz5k-sXR10o",
+      "scope": "GOOGLE",
+      "types": [
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Purok 3, Kalubihan, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJqc2bohBnVDIRdLqIayu5bbE",
+    "name": "SBKP Expanded ARC Irrigators Association",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Purok 5, Mahayag",
+    "lat": 8.1468784,
+    "lon": 123.390906,
+    "epsg3857": {
+      "x": 13735812.824440684,
+      "y": 909977.8578358089
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13735812.824440684,
+        909977.8578358089
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1468784,
+          "lng": 123.390906
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.148228930291502,
+            "lng": 123.3921845302915
+          },
+          "southwest": {
+            "lat": 8.145530969708497,
+            "lng": 123.3894865697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "SBKP Expanded ARC Irrigators Association",
+      "place_id": "ChIJqc2bohBnVDIRdLqIayu5bbE",
+      "plus_code": {
+        "compound_code": "49WR+Q9 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW549WR+Q9"
+      },
+      "reference": "ChIJqc2bohBnVDIRdLqIayu5bbE",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Purok 5, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJw8yWZQBpVDIRSC8kz1C7yKw",
+    "name": "JOY OTERO RESIDENCE",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CMJ+96, Mahayag",
+    "lat": 8.133466799999999,
+    "lon": 123.4305136,
+    "epsg3857": {
+      "x": 13740221.92230423,
+      "y": 908469.6899888483
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740221.92230423,
+        908469.6899888483
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.133466799999999,
+          "lng": 123.4305136
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.134577380291502,
+            "lng": 123.4320058302915
+          },
+          "southwest": {
+            "lat": 8.131879419708497,
+            "lng": 123.4293078697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "JOY OTERO RESIDENCE",
+      "place_id": "ChIJw8yWZQBpVDIRSC8kz1C7yKw",
+      "reference": "ChIJw8yWZQBpVDIRSC8kz1C7yKw",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "4CMJ+96, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJ4Ux06M1pVDIRuqmTM7AEZsY",
+    "name": "Salug Daku Catholic Cemetery",
+    "types": [
+      "cemetery",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "Lower Salug Daku, Mahayag",
+    "lat": 8.1307982,
+    "lon": 123.4251368,
+    "epsg3857": {
+      "x": 13739623.379666133,
+      "y": 908169.6052886134
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739623.379666133,
+        908169.6052886134
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.1307982,
+          "lng": 123.4251368
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.132142880291504,
+            "lng": 123.4266782302915
+          },
+          "southwest": {
+            "lat": 8.129444919708499,
+            "lng": 123.4239802697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cemetery_grave-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cemetery_pinlet",
+      "name": "Salug Daku Catholic Cemetery",
+      "place_id": "ChIJ4Ux06M1pVDIRuqmTM7AEZsY",
+      "plus_code": {
+        "compound_code": "4CJG+83 Mahayag, Zamboanga del Sur, Philippines",
+        "global_code": "6QW54CJG+83"
+      },
+      "reference": "ChIJ4Ux06M1pVDIRuqmTM7AEZsY",
+      "scope": "GOOGLE",
+      "types": [
+        "cemetery",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Lower Salug Daku, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJI2S-ZldpVDIRtJrJ84pcDTM",
+    "name": "Lower Salug Daku Barangay Office",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CJH+QC8, Mahayag",
+    "lat": 8.131924699999997,
+    "lon": 123.4285852,
+    "epsg3857": {
+      "x": 13740007.253798183,
+      "y": 908296.2802360649
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740007.253798183,
+        908296.2802360649
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.131924699999997,
+          "lng": 123.4285852
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.1331757802915,
+            "lng": 123.4299938802915
+          },
+          "southwest": {
+            "lat": 8.130477819708497,
+            "lng": 123.4272959197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+      "name": "Lower Salug Daku Barangay Office",
+      "photos": [
+        {
+          "height": 1968,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108323110692924382941\">John Jade Amante</a>"
+          ],
+          "photo_reference": "ATCDNfW7Q05Zs_MOAxuYjg-yeib61Zbc8sv0HfQ_QJvxt9ZKRsA1fkOMDz-XmO9Sym0ODm_Pg4oz-lkWsCUOTqliPmlr9AOGWctcjD7E4m-Sh78ds_ASAO-HxC-D2Mx9MmqpjhUUfBuWYcOYXGn7wx0fI73XXyByWUNDAxr_LrKiA6HD4i7o5w4qahXShYQC1-aScP_fUf3AZHPMvbZE34D1p7HQxWlxipGNIwJw1Pb-s-NUFDvy3JC3PEBVRo_S2x9AiO2A8SYmav04QN3Jlxaw4ZG2e1351k2M3yur7UhyF3_e7epXXEWNij-xXfmISc3SvYCX74lFYAGGC0CNz1fUv4in2SRcqeeJUFvXyQMuIcMbVy0hgQWOWF73B8j_-S-V2o4Y5Oq00ensfeb0OEJ7a8QZN_PgaY0tBhhIqKOTsfuycs67ksT9EofsZSoBciHIHYqZtJlyz5G1it9K6WA4HvLI5Gk8CG64XJ8GYryswFUYwRFxaoWOXYg7VMfJ6HZg-iy5vbzEFJIdM8_GW8_GDLjVf-4agLhTlUnwAYJ937aIujf8bW2P2gUkIjXguBor4ZdRYNk_ySSeUvc8A-Cb7z1XUod-CsHeEUjMYbA4MPnkyad5ACQfUvL132pT_71ZXE1evg",
+          "width": 4144
+        }
+      ],
+      "place_id": "ChIJI2S-ZldpVDIRtJrJ84pcDTM",
+      "rating": 4,
+      "reference": "ChIJI2S-ZldpVDIRtJrJ84pcDTM",
+      "scope": "GOOGLE",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2,
+      "vicinity": "4CJH+QC8, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJqeC-PwBnVDIRJzbtT9uo5HM",
+    "name": "purok 6 delusom",
+    "types": [
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CQQ+64, Mahayag",
+    "lat": 8.138112999999999,
+    "lon": 123.437818,
+    "epsg3857": {
+      "x": 13741035.04439278,
+      "y": 908992.1610429607
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13741035.04439278,
+        908992.1610429607
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.138112999999999,
+          "lng": 123.437818
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.139488380291501,
+            "lng": 123.4392319302915
+          },
+          "southwest": {
+            "lat": 8.136790419708497,
+            "lng": 123.4365339697085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "purok 6 delusom",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4608,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101397166762181546693\">Rayzelle Abatayo</a>"
+          ],
+          "photo_reference": "ATCDNfXdPHm8aOi8Lt5P55o07GjOrp4_n6XMQ_pbH8K7ykw3N84TrzG2o-tdIeJ27ykihUx4L5htPbUTQgXRb9cP0da4yXbzSd5X52Ot49wbHjGinLKXfJbJALfw0tbUlZqXx8CsfTFbGN6xmeyv_WeVulHBIYFS6YH4A-Z8g9KmLngXr3y9my9K7XcBWk7Ds0bnzyS3YpzKwSo6tB_NV88xb2VIvqsrk0TNxkjEOGTK0IQYD3IcmvcR2kCj-f0LauqIbqqpRfOV0nm17Bop7Qx3TJPSXos2QVM-Hsaq3f6uA8c1kHt2RnzvumqmHsJARfDv2LkrnlgvzM2fEePwHAAeOtgv5E54BWVQmMlBhzvmhOerZOzzthtYdoJF2H8mgbofDmN4cE_Y8eaGZsyhINLCc1ZZ5di6fpwPQfo5QcX_kfZmCFLH8cpOEY-C4DIcP4cMDRrOG1u7rqxaoY7dzZ5KVWopFjtnarvJ651dFaXeM2NOpSSjVVe5T-adPq8DVq9gFcHzalJPBtThFCLup6kQiuu-CV81fMj981PW5EA4GhHj3kWtOZfSVozO02WEoUzt2dK2aUwXpnMMujm-PiL8AEQZ1LICO1KspTtS9bj_imhtxskkrP0KPBx176IhO4sXFTOk8Wc9HF9UHqg3rB7-Mw",
+          "width": 3456
+        }
+      ],
+      "place_id": "ChIJqeC-PwBnVDIRJzbtT9uo5HM",
+      "rating": 5,
+      "reference": "ChIJqeC-PwBnVDIRJzbtT9uo5HM",
+      "scope": "GOOGLE",
+      "types": [
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3,
+      "vicinity": "4CQQ+64, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJX6z4BQBpVDIRlJWsTIw1Apc",
+    "name": "Canibongan",
+    "types": [
+      "church",
+      "place_of_worship",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CJH+QC8, Mahayag",
+    "lat": 8.130803499999999,
+    "lon": 123.427746,
+    "epsg3857": {
+      "x": 13739913.83448151,
+      "y": 908170.2012728858
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13739913.83448151,
+        908170.2012728858
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.130803499999999,
+          "lng": 123.427746
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.132143680291502,
+            "lng": 123.4290641802915
+          },
+          "southwest": {
+            "lat": 8.129445719708498,
+            "lng": 123.4263662197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/worship_general-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/worship_christian_pinlet",
+      "name": "Canibongan",
+      "place_id": "ChIJX6z4BQBpVDIRlJWsTIw1Apc",
+      "reference": "ChIJX6z4BQBpVDIRlJWsTIw1Apc",
+      "scope": "GOOGLE",
+      "types": [
+        "church",
+        "place_of_worship",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "4CJH+QC8, Mahayag"
+    }
+  },
+  {
+    "place_id": "ChIJd0YrX4VoVDIRChuzRFzYNTU",
+    "name": "Salug Daku Elementary School",
+    "types": [
+      "primary_school",
+      "school",
+      "point_of_interest",
+      "establishment"
+    ],
+    "vicinity": "4CJJ+VMX, Mahayag",
+    "lat": 8.132235399999999,
+    "lon": 123.4317381,
+    "epsg3857": {
+      "x": 13740358.233020704,
+      "y": 908331.2185198688
+    },
+    "geojson": {
+      "type": "Point",
+      "coordinates": [
+        13740358.233020704,
+        908331.2185198688
+      ]
+    },
+    "raw": {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 8.132235399999999,
+          "lng": 123.4317381
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 8.133338930291501,
+            "lng": 123.4328616802915
+          },
+          "southwest": {
+            "lat": 8.130640969708496,
+            "lng": 123.4301637197085
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/school-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/school_pinlet",
+      "name": "Salug Daku Elementary School",
+      "photos": [
+        {
+          "height": 1968,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108323110692924382941\">John Jade Amante</a>"
+          ],
+          "photo_reference": "ATCDNfUrN18_UA0uIB9QyXIm5hITD47fC-mglGlw6PA_eODEe79-LdkX3aKi60nZeoQj6al7ikX7v1rhuVcAAtyvchLmP86SA5Tl9UuHVlAmRiuDaQadoT_9lhsi0Zum7mACy-blYWcbN9oZVto-nu3hjQRO_-M_W_qEozuSQLcT3L27J4ceHDC8jnUAZgNoToz8eyBaRUaLKq6iobzm_uEX1y9U5EfdJzS3kkjzj0YYbetnZSG5i77RgjMRMtAFw3QZw_vNquaiTZoXsG_5wHN3XDqZzgHwEOPL3i9pybEKx3fFRq3bv0QTGLNbdubd2h32NwvB5zdx8NnZsMyY-BNGoSsXNU2Yi8bgSNJkn5ECQ2-J3FbIaHlYGlUvT3rbuFdS9zpH0wVWM45Qu7SCqoI57ZVEjk09Z36PbkOb-WSXW1LhNy8_a1nfbtZcGW7we4cTUuYD6JhlqixV2vcg1Emw4mtYY_CKs2N1Va9FvP_95xW0JXpU76UAU25cDU75hvJPE8S1VCQ3SHVUS5XwzZWkaAG0Q83hvqMWTouvMxY_S5dYXt5yMHzb0xXdsCw_4lFzf2XpTQsaVlDwnu2tzJ6BiDtNrxyV2USr82tQ2Lx7ca7Wb4dkoPlGghhr-4JtAhb4",
+          "width": 4144
+        }
+      ],
+      "place_id": "ChIJd0YrX4VoVDIRChuzRFzYNTU",
+      "reference": "ChIJd0YrX4VoVDIRChuzRFzYNTU",
+      "scope": "GOOGLE",
+      "types": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "4CJJ+VMX, Mahayag"
+    }
+  }
+]
