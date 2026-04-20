@@ -1,0 +1,1061 @@
+{
+  "workbooks": {
+    "RDO No. 80 - Mandaue City, Cebu.xls": {
+      "sheets": {
+        "NOTICE": {
+          "rows": 30,
+          "cols": 6,
+          "columns": [
+            {
+              "name": "N O T I C E",
+              "dtype": "str",
+              "missing": 13
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 13
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "object",
+              "missing": 18
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 17
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "str",
+              "missing": 7
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "str",
+              "missing": 18
+            }
+          ],
+          "numeric_summary": {}
+        },
+        " Sheet 11 (DO 23-2022)": {
+          "rows": 1702,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 950
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1011
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 330
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 331
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 10 (DO 20-2020": {
+          "rows": 10753,
+          "cols": 7,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 7063
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 8163
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 8170
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "str",
+              "missing": 8824
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "str",
+              "missing": 9329
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "str",
+              "missing": 3855
+            },
+            {
+              "name": "Unnamed: 6",
+              "dtype": "object",
+              "missing": 3505
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 9 (DO 90-2019)": {
+          "rows": 1911,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 1113
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1148
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 514
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 525
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 8 (DO 61-18)": {
+          "rows": 1931,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 1058
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1207
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 464
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 457
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 7 (DO 5-09)": {
+          "rows": 12569,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 7955
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 8386
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 2387
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 3568
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 6 (DO 63-02)": {
+          "rows": 821,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "DEPARTMENT OF FINANCE",
+              "dtype": "str",
+              "missing": 395
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 553
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 288
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 387
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 5 (DO 22-98)": {
+          "rows": 1780,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 1069
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 902
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 354
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 356
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 4 (DO 115-95)": {
+          "rows": 3718,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 1974
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 2638
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 927
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 925
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 3 (DO 108-95)": {
+          "rows": 1203,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 595
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 825
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 297
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 307
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 2 (DO 23-90)": {
+          "rows": 651,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "DEPARTMENT OF FINANCE",
+              "dtype": "str",
+              "missing": 271
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 431
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 217
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 219
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 1 (DO 22-90)": {
+          "rows": 485,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "DEPARTMENT OF FINANCE",
+              "dtype": "str",
+              "missing": 197
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 313
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 198
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 198
+            }
+          ],
+          "numeric_summary": {}
+        }
+      }
+    },
+    "RDO No. 81 - Cebu City North.xlsx": {
+      "sheets": {
+        "NOTICE": {
+          "rows": 12,
+          "cols": 6,
+          "columns": [
+            {
+              "name": "N O T I C E",
+              "dtype": "str",
+              "missing": 2
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 5
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "object",
+              "missing": 4
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 5
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "str",
+              "missing": 5
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "str",
+              "missing": 5
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 6 (DO 054-2023)": {
+          "rows": 2358,
+          "cols": 7,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 893
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 2134
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 2184
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "str",
+              "missing": 1705
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "float64",
+              "missing": 2358
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "str",
+              "missing": 805
+            },
+            {
+              "name": "Unnamed: 6",
+              "dtype": "object",
+              "missing": 852
+            }
+          ],
+          "numeric_summary": {
+            "Unnamed: 4": {
+              "count": 0.0,
+              "mean": NaN,
+              "std": NaN,
+              "min": NaN,
+              "25%": NaN,
+              "50%": NaN,
+              "75%": NaN,
+              "max": NaN
+            }
+          }
+        },
+        "Sheet 5 (DO 064-18)": {
+          "rows": 1981,
+          "cols": 7,
+          "columns": [
+            {
+              "name": "Republic of the Phillippines",
+              "dtype": "object",
+              "missing": 705
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1775
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 1819
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "str",
+              "missing": 1456
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "str",
+              "missing": 1977
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "str",
+              "missing": 731
+            },
+            {
+              "name": "Unnamed: 6",
+              "dtype": "object",
+              "missing": 726
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 4 (DO 36-07)": {
+          "rows": 1635,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 475
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 937
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 409
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 412
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 3 (DO 15-97)": {
+          "rows": 1151,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 235
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 616
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 281
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 285
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 2 (DO 20-93": {
+          "rows": 1498,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 298
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 681
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 328
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 333
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 1 (DO 26-89)": {
+          "rows": 1348,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 287
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 767
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 324
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 327
+            }
+          ],
+          "numeric_summary": {}
+        }
+      }
+    },
+    "RDO No. 82 - Cebu City, South.xls": {
+      "sheets": {
+        "NOTICE": {
+          "rows": 12,
+          "cols": 6,
+          "columns": [
+            {
+              "name": "N O T I C E",
+              "dtype": "str",
+              "missing": 2
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 5
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "object",
+              "missing": 4
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 5
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "str",
+              "missing": 5
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "str",
+              "missing": 5
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 6 (DO 86-2023)": {
+          "rows": 3017,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 1015
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 2458
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 784
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 801
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 5 (DO 16-2020)": {
+          "rows": 1951,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 524
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1332
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 519
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 473
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 4 (DO 46-07)": {
+          "rows": 1032,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 271
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 515
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 333
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 404
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 3 (DO 18-97)": {
+          "rows": 878,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 213
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 440
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 292
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 294
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 2 (DO 20-93)": {
+          "rows": 1585,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 323
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 741
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 415
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 420
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 1 (DO 26-89)": {
+          "rows": 1417,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 311
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 816
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 393
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 396
+            }
+          ],
+          "numeric_summary": {}
+        }
+      }
+    },
+    "RDO No. 83 -Talisay City, CebuWeb.xls": {
+      "sheets": {
+        "NOTICE": {
+          "rows": 28,
+          "cols": 6,
+          "columns": [
+            {
+              "name": "N O T I C E",
+              "dtype": "str",
+              "missing": 11
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 11
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "object",
+              "missing": 14
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 15
+            },
+            {
+              "name": "Unnamed: 4",
+              "dtype": "str",
+              "missing": 7
+            },
+            {
+              "name": "Unnamed: 5",
+              "dtype": "str",
+              "missing": 19
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 8(060-22)": {
+          "rows": 3305,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 1466
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1823
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 1001
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 1087
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 7 (032-20)": {
+          "rows": 8873,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 4956
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 5246
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "object",
+              "missing": 1810
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 2199
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 6 (DO-63-18)": {
+          "rows": 3291,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "REPUBLIC OF THE PHILIPPINES",
+              "dtype": "str",
+              "missing": 1524
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1722
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "object",
+              "missing": 854
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 1193
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 5 (DO 44-02)": {
+          "rows": 1008,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 386
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 558
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 371
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 372
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 4 (DO 15-02)": {
+          "rows": 419,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 191
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 261
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 231
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 231
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 3 (DO 30-97)": {
+          "rows": 1022,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 414
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 570
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 388
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 402
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 2 (DO 29-97)": {
+          "rows": 2253,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 1000
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 1130
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 705
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 684
+            }
+          ],
+          "numeric_summary": {}
+        },
+        "Sheet 1 (DO 21-93)": {
+          "rows": 4898,
+          "cols": 4,
+          "columns": [
+            {
+              "name": "Republic of the Philippines",
+              "dtype": "str",
+              "missing": 2049
+            },
+            {
+              "name": "Unnamed: 1",
+              "dtype": "str",
+              "missing": 2307
+            },
+            {
+              "name": "Unnamed: 2",
+              "dtype": "str",
+              "missing": 1342
+            },
+            {
+              "name": "Unnamed: 3",
+              "dtype": "object",
+              "missing": 1379
+            }
+          ],
+          "numeric_summary": {}
+        }
+      }
+    }
+  }
+}

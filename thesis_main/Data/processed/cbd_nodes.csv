@@ -1,0 +1,11 @@
+hub_id,label,centroid_lat,centroid_lon,poi_count,fallback
+cebu_business_park,Cebu Business Park (Cebu City primary CBD),10.317868,123.904254,90,False
+it_park,"Cebu IT Park (BPO/tech hub, Lahug)",10.326716,123.905765,65,False
+mandaue_cbd,Mandaue commercial corridor (A.C. Cortes / SM City Cebu),10.341511,123.920887,31,False
+mactan_cbd,Lapu-Lapu / Mactan commercial core (Robinsons Galleria),10.313654,123.951363,31,False
+srp,South Road Properties (SM Seaside / emerging CBD),10.271864,123.858887,13,False
+talisay_tabunok,Talisay Tabunok commercial hub (highway strip),10.244388,123.838787,18,False
+consolacion,Consolacion commercial center (SM + CityMall corridor),10.376512,123.963788,45,False
+naga_city,City of Naga poblacion and civic center,10.207879,123.758231,23,False
+minglanilla_poblacion,Minglanilla poblacion (Town Plaza / Gaisano Grand),10.246161,123.797151,24,False
+minglanilla_lipata,Minglanilla Lipata (San Roque Parish / barangay center),10.255459,123.81074,8,False

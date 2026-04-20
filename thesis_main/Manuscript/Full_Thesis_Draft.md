@@ -66,7 +66,7 @@ Addressing this valuation gap benefits multiple stakeholders:
 3. **Banks and Lending Institutions**: Improves collateral assessment accuracy through reproducible, auditable models, wich reduceds exposure to pricing errors that manual appraisals can miss.
 4. **Local Government Units (LGUs)**: Facilitates the updating of zonal values using market-based evidence, mapping the geographic divergence between official and actual prices.
 
-This study is significant within the Philippine context as the first Cebu-specific, data-driven valuation model integrating GIS-based feature engineering. While prior Philippine machine learning studies focus on Metro Manila or use aggregate indices, no work applies geocoded proximity analysis, OSM amenity scoring, and spatial autocorrelation to transaction-level data for Metro Cebu. By delivering results through an interactive QGIS map and a Streamlit web application, this study extends beyond predictive analytics into applied decision support, offering tools that are usable in a fragmented local market.
+This study is significant within the Philippine context as the first Cebu-specific, data-driven valuation model integrating GIS-based feature engineering. While prior Philippine machine learning studies focus on Metro Manila or use aggregate indices, no work applies geocoded proximity analysis, OSM amenity scoring, and spatial autocorrelation to transaction-level data for Metro Cebu. By delivering results through an interactive QGIS map and a Streamlit web application, this study aims to extend predictive analytics into applied decision support, offering tools that would be usable in a fragmented local market.
 
 ---
 
@@ -85,9 +85,9 @@ The primary data sources include:
 - **Google Maps API** for converting property addresses to latitude and longitude coordinates.
 - **OpenStreetMap (OSM)** for retrieving amenity and land-use data within property vicinities.
 
-The study evaluates three predictive models: **Hedonic Regression (OLS)**, **Random Forest**, and **XGBoost** (see Section 1.6 for rationale). Geospatial features are engineered via geocoding, Haversine proximity analysis, OSM amenity scoring, and spatial lag computation.
+The study will evaluate three predictive models: **Hedonic Regression (OLS)**, **Random Forest**, and **XGBoost** (see Section 1.6 for rationale). Geospatial features will be engineered via geocoding, Haversine proximity analysis, OSM amenity scoring, and spatial lag computation.
 
-This study produces two applied deliverables: an interactive QGIS map for spatial analysis and a Streamlit web application for property-level prediction and explanation.
+This study will produce two applied deliverables: an interactive QGIS map for spatial analysis and a Streamlit web application for property-level prediction and explanation.
 
 ### **Limitations**
 
@@ -149,7 +149,7 @@ Cebu's property market is expanding within one of the country's fastest-growing 
 
 ### **2.2.4 Cebu-Specific Empirical Work**
 
-Agosto (2020) conducted the only Cebu-specific empirical study on land value determinants, surveying 51 real estate practitioners. The study identified transport accessibility as the primary driver of land values, followed by neighborhood quality and environmental conditions. However, the study was survey-based and did not utilize transaction-level data or machine learning methods. That leaves a gap between what Cebu practitioners identify as important and what has actually been tested using property-level data and predictive models.
+Agosto (2017) conducted the only Cebu-specific empirical study on land value determinants, surveying 51 real estate practitioners. The study identified transport accessibility as the primary driver of land values, followed by neighborhood quality and environmental conditions. However, the study was survey-based and did not utilize transaction-level data or machine learning methods. That leaves a gap between what Cebu practitioners identify as important and what has actually been tested using property-level data and predictive models.
 
 ---
 
@@ -215,7 +215,7 @@ For open-source alternatives, **OpenStreetMap (OSM)** via the Nominatim geocoder
 
 Distance-based features—proximity to commercial centers, transportation hubs, schools, and employment nodes—are robust value drivers in hedonic pricing literature (Rosen, 1974; Malpezzi, 2003). Computations utilizing the Haversine formula are the standard for estimating geographic distances in urban property studies (Sinnott, 1984).
 
-Agosto (2020) confirmed that transport accessibility is the primary driver of land values in Cebu, followed by neighborhood quality. For Metro Cebu, proximity to key economic nodes—Cebu IT Park, Ayala Center Cebu, SM Seaside City, Mactan-Cebu International Airport—and planned infrastructure like the Cebu Bus Rapid Transit (CBRT) stations provide critical, measurable value signals.
+Agosto (2017) confirmed that transport accessibility is the primary driver of land values in Cebu, followed by neighborhood quality. For Metro Cebu, proximity to key economic nodes—Cebu IT Park, Ayala Center Cebu, SM Seaside City, Mactan-Cebu International Airport—and planned infrastructure like the Cebu Bus Rapid Transit (CBRT) stations provide critical, measurable value signals.
 
 ### **2.5.3 Amenity Scoring via OpenStreetMap**
 
@@ -244,9 +244,9 @@ This matters in Metro Cebu because value shifts are unlikely to be evenly distri
 
 ## **2.6 Integrating Value Drivers: Indexing vs. Raw Features**
 
-A critical challenge in geospatial ML models is how to operationalize distance metrics. Agosto (2020) identified transport accessibility and neighborhood quality as the primary value drivers in Cebu based on practitioner surveys. To integrate these findings into a machine learning pipeline, raw geospatial distances (e.g., Euclidean distance to the nearest hospital, school, or mall) are often insufficient on their own, as they can suffer from multicollinearity—a scenario where multiple distance variables are highly correlated with one another, complicating the model's feature importance weights.
+A critical challenge in geospatial ML models is how to operationalize distance metrics. Agosto (2017) identified transport accessibility and neighborhood quality as the primary value drivers in Cebu based on practitioner surveys. To integrate these findings into a machine learning pipeline, raw geospatial distances (e.g., Euclidean distance to the nearest hospital, school, or mall) are often insufficient on their own, as they can suffer from multicollinearity—a scenario where multiple distance variables are highly correlated with one another, complicating the model's feature importance weights.
 
-Recent work suggests that raw distance variables are often too fragmented to stand on their own. Rey-Blanco, Zofío, and González-Arias (2024), for example, show that accessibility indices built from point-of-interest data can improve housing price prediction in both hedonic regression and Random Forest models. Grouping individual distances and counts into broader measures such as transit accessibility or commercial density can preserve the locational signal while reducing overlap across variables. For this study, that approach provides a practical way to translate Agosto's (2020) qualitative value drivers into features that can be used consistently in the model.
+Recent work suggests that raw distance variables are often too fragmented to stand on their own. Rey-Blanco, Zofío, and González-Arias (2024), for example, show that accessibility indices built from point-of-interest data can improve housing price prediction in both hedonic regression and Random Forest models. Grouping individual distances and counts into broader measures such as transit accessibility or commercial density can preserve the locational signal while reducing overlap across variables. For this study, that approach provides a practical way to translate Agosto's (2017) qualitative value drivers into features that can be used consistently in the model.
 
 ---
 
@@ -281,7 +281,7 @@ For this study, the IVS revisions matter in two practical ways.
 
 Taken together, the literature points to four recurring themes. First, valuation work in emerging markets is persistently constrained by data scarcity and uneven market information. Second, for small to mid-sized tabular datasets, tree-based machine learning models tend to perform more reliably than deep learning approaches. Third, spatial features such as proximity, amenity access, and neighborhood effects add information that conventional structural variables alone do not capture. Fourth, any model intended for valuation practice still has to remain transparent enough to support professional review under IVS 2025.
 
-What remains missing is a Cebu-specific study that brings those strands together using property-level data. Prior Philippine ML studies focus on Metro Manila (Perdio et al., 2023; Dann et al., 2020), Central Pangasinan (Viray, 2023), or broader indicator-based approaches rather than property-level modeling (Ramolete et al., 2023). The only Cebu-specific study identified here, Agosto (2020), is valuable in showing what practitioners regard as important, but it is survey-based and does not test those factors using observed property data.
+What remains missing is a Cebu-specific study that brings those strands together using property-level data. Prior Philippine ML studies focus on Metro Manila (Perdio et al., 2023; Dann et al., 2020), Central Pangasinan (Viray, 2023), or broader indicator-based approaches rather than property-level modeling (Ramolete et al., 2023). The only Cebu-specific study identified here, Agosto (2017), is valuable in showing what practitioners regard as important, but it is survey-based and does not test those factors using observed property data.
 
 This thesis addresses that gap by developing a Metro Cebu valuation model that combines hybrid multi-source data, tree-based machine learning, geospatial feature engineering, SHAP-based explainability, and professional review. The aim is not to replace appraisal judgement, but to produce a more transparent and spatially grounded decision-support tool for the local market.
 
@@ -297,9 +297,9 @@ Chapter 3 builds on this review by showing how those ideas are translated into d
 
 ## **3.1 Research Design**
 
-This study uses a quantitative, non-experimental design to model residential property values in Metro Cebu. The analysis is predictive in that it estimates prices from observed property characteristics, and prescriptive in that the results are later organized for spatial decision support through GIS. The dependent variable is property price, or where appropriate price per square meter, while the independent variables include structural, geospatial, administrative, and macroeconomic features.
+This study will use a quantitative, non-experimental design to model residential property values in Metro Cebu. The analysis will be predictive in that it will estimate prices from observed property characteristics, and prescriptive in that the results will later be organized for spatial decision support through GIS. The dependent variable will be property price, or where appropriate price per square meter, while the independent variables will include structural, geospatial, administrative, and macroeconomic features.
 
-Three supervised learning approaches are compared in order to balance interpretability and predictive performance, while also testing whether GIS-derived and administrative variables improve the model beyond structural features alone:
+Three supervised learning approaches will be compared in order to balance interpretability and predictive performance, while also testing whether GIS-derived and administrative variables improve the model beyond structural features alone:
 
 1. **Ordinary Least Squares (OLS) / Hedonic Regression**: An interpretable baseline grounded in Hedonic Pricing Theory (Rosen, 1974). Coefficients carry direct economic meaning (e.g., "each additional bedroom adds ₱X to value").
 2. **Random Forest Regressor**: A tree-based ensemble that captures non-linear relationships and feature interactions without requiring explicit specification (Breiman, 2001).
@@ -309,7 +309,7 @@ Three supervised learning approaches are compared in order to balance interpreta
 
 ## **3.2 Data Sources: The Hybrid Strategy**
 
-Because direct deed-of-sale transaction records are not publicly accessible, the dataset is assembled from multiple sources that reflect different segments of the residential market. Foreclosure and acquired-asset listings provide a more conservative segment of observed prices, while online listings provide asking prices that reflect current market exposure more closely. The purpose of this hybrid strategy is not to claim direct observation of a single true market price, but to work with the most usable price signals available under existing data constraints.
+Because direct deed-of-sale transaction records are not publicly accessible, the dataset will be assembled from multiple sources that reflect different segments of the residential market. Foreclosure and acquired-asset listings will provide a more conservative segment of observed prices, while online listings will provide asking prices that reflect current market exposure more closely. The purpose of this hybrid strategy is not to claim direct observation of a single true market price, but to work with the most usable price signals available under existing data constraints.
 
 | Source                             | Role                      | Volume                     | Nature                    |
 | ---------------------------------- | ------------------------- | -------------------------- | ------------------------- |
@@ -330,7 +330,7 @@ The floor price dataset will aggregate foreclosed and acquired property listings
 - **PNB, RCBC, and Union Bank**: Additional listings to broaden coverage.
 - **SSS / GSIS**: Government-acquired properties within Metro Cebu.
 
-These distressed assets are treated as a lower-bound segment of the observed market rather than as direct equivalents of open-market transaction prices. Using multiple institutional sources helps reduce the bias that might result if the dataset were drawn from only one lender or seller.
+These distressed assets will be treated as a lower-bound segment of the observed market rather than as direct equivalents of open-market transaction prices. Using multiple institutional sources helps reduce the bias that might result if the dataset were drawn from only one lender or seller.
 
 **Sample Data Structure: BDO Foreclosures (Raw vs. Cleaned)**
 
@@ -372,7 +372,7 @@ To represent current asking prices in the residential market, the study also col
 
 ### **3.2.5 Target Variable**
 
-Within this hybrid dataset, foreclosure prices and online listing prices are not treated as identical market signals. A source indicator is therefore included so the model can account for systematic level differences between distressed and market-facing listings. This allows the analysis to estimate price relationships across both segments without assuming that they represent the same selling condition.
+Within this hybrid dataset, foreclosure prices and online listing prices will not be treated as identical market signals. A source indicator will therefore be included so the model can account for systematic level differences between distressed and market-facing listings. This will allow the analysis to estimate price relationships across both segments without assuming that they represent the same selling condition.
 
 **Final Feature Matrix Schema (Pre-Modeling)**
 
@@ -388,7 +388,7 @@ Within this hybrid dataset, foreclosure prices and online listing prices are not
 
 ### **3.2.6 Validation Layer: Human-in-the-Loop**
 
-Licensed real estate brokers from the CPRE network are included as a validation layer, not to replace statistical evaluation, but to check whether the model outputs remain plausible within local market practice. Their role is limited to two tasks:
+Licensed real estate brokers from the CPRE network will be included as a validation layer, not to replace statistical evaluation, but to check whether the model outputs remain plausible within local market practice. Their role will be limited to two tasks:
 
 1. **Sanity Check**: Reviewing SHAP-derived value driver rankings against practitioner knowledge.
 2. **Outlier Review**: Examining cases with high prediction error to distinguish likely data issues from genuine market anomalies.
@@ -397,20 +397,20 @@ Licensed real estate brokers from the CPRE network are included as a validation 
 
 ## **3.3 Data Pipeline**
 
-The data preparation process proceeds in five stages.
+The data preparation process proceeds in seven stages, implemented in Python.
 
-1. **Ingestion**: We will ingest BDO Excel files via Pandas and will collect Lamudi listings using web scraping logic.
-2. **Filtering**: The dataset will be restricted to residential properties within Metro Cebu (Cebu City, Mandaue, Lapu-Lapu, Talisay, Minglanilla, and Consolacion).
+1. **Ingestion**: BDO acquired asset data is ingested from Excel via Pandas. Lamudi listings are collected through a custom web scraper. Pag-IBIG foreclosed property records are ingested from structured PDFs and Excel exports.
+2. **Filtering**: The dataset is restricted to residential properties within Metro Cebu—Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion—yielding 798 records across three sources.
 3. **Regex Parsing and Cleaning**:
-   - *BDO Data*: The `Property Description` string often bundles features (e.g., "3BR 2TB"). We will apply regex patterns to extract `Bedrooms` and `Bathrooms`. Missing values in lot/floor area will be imputed based on the median of similar property types in the same barangay.
-   - *Lamudi Data*: Scraped fields often contain varying text formats (e.g., "₱ 5,000,000" or "Contact agent for price"). We will clean currency symbols and commas, dropping rows without explicit numerical prices.
-4. **Geocoding**: We will batch-process addresses through the Google Maps Geocoding API, standardizing barangay names and securing precise coordinates.
-5. **GIS Augmentation**: From these geocoded coordinates, we will engineer geospatial features:
-   - Proximity metrics (Haversine distances to key economic nodes).
-   - Amenity scores (OSM-derived counts within a 1 km radius).
-   - Spatial lag (mean price of neighboring properties within a 1 km radius).
+   - *BDO Data*: The `Property Description` field bundles features (e.g., "3BR 2TB"). Regex patterns extract `Bedrooms` and `Bathrooms`.
+   - *Lamudi Data*: Scraped price fields contain varying formats (e.g., "₱ 5,000,000" or "Contact agent for price"). Currency symbols and commas are stripped; rows without explicit numerical prices are dropped.
+   - *Pag-IBIG Data*: Minimum bid prices are extracted and tagged as floor-price observations.
+4. **Geocoding (Address → Coordinates)**: Property addresses are batch-geocoded through the Google Maps Geocoding API to obtain latitude and longitude. The API is used rather than open alternatives because of its stronger handling of Philippine informal address formats, which often reference landmarks, barangay names, or compound descriptors. Results are cached locally to avoid redundant API calls.
+5. **BIR Zonal Value Extraction and Barangay Join**: Official BIR zonal value schedules for Metro Cebu are sourced from four Revenue District Office files: RDO 80 (Mandaue City, Lapu-Lapu City, Cordova), RDO 81 (Cebu City North), RDO 82 (Cebu City South), and RDO 83 (Talisay City and surrounding municipalities). These files use a hierarchical block format—province → city/municipality → barangay → street/subdivision—which requires a custom stateful parser to extract street-level zonal values per classification code. Values are then aggregated to the barangay level as the median per classification (Residential Regular, Commercial Regular, Residential Condominium). To assign each property a barangay, reverse geocoding is applied against each property's coordinates via the Google Maps Geocoding API. The recovered barangay name serves as the join key against the BIR summary table. This approach achieves an 85.7% match rate across the dataset (Mandaue City: 95.6%; Lapu-Lapu City: 92.9%; Cebu City: 84.4%; Talisay City: 78.4%). The 21 Consolacion properties have no BIR coverage in the available RDO files and receive null zonal values.
+6. **GIS Augmentation**: From geocoded coordinates, the geospatial feature set described in §3.4.1 is computed: Haversine distances to five polycentric CBD nodes and two infrastructure anchors; amenity scores via the Google Maps Places API across six categories within a 1 km radius; and a spatial lag variable capturing the mean price of neighboring properties within 1 km.
+7. **Final ABT Assembly**: All features are merged into a single Analytics Base Table (ABT) of 798 rows × 42 columns, saved as a flat CSV for modeling.
 
-**Tools**: Python (Pandas, Scikit-learn, XGBoost, osmnx), Google Maps API for geocoding, QGIS for spatial visualization.
+**Tools**: Python (Pandas, NumPy, Scikit-learn, XGBoost, Requests), Google Maps Geocoding and Places APIs, QGIS for spatial visualization.
 
 ---
 
@@ -420,8 +420,8 @@ The data preparation process proceeds in five stages.
 | ------------------------ | ------------------------------------------------------------------------------------ | ------------------ |
 | **Structural**     | Lot Area, Floor Area, Bedrooms, Bathrooms, Parking, Property Type                    | BDO / Lamudi       |
 | **Locational**     | Barangay, Latitude/Longitude                                                         | Google Maps API    |
-| **Geospatial** ⭐  | Proximity to Ayala, IT Park, SM Seaside, Airport,**CBRT stations** (Haversine) | Geocoding + GIS    |
-| **Amenity Score**  | Count of schools, hospitals, commercial centers, transit stops within 1 km radius    | OSM / osmnx        |
+| **Geospatial** ⭐  | Haversine distances to 5 CBD nodes + Airport + CBRT (nearest station)              | Geocoding + GIS    |
+| **Amenity Score**  | Weighted index of 6 POI categories within 1 km radius                              | Google Maps Places |
 | **Spatial Lag**    | Mean price of neighboring properties within defined radius                           | Computed from data |
 | **Administrative** | BIR Zonal Value (per barangay)                                                       | BIR schedules      |
 | **Macro**          | BSP RPPI quarterly index                                                             | BSP data           |
@@ -433,26 +433,33 @@ The data preparation process proceeds in five stages.
 
 Geospatial feature construction is the part of the method that most directly connects the valuation model to the urban structure of Metro Cebu. Rather than treating location as a background descriptor, this stage translates accessibility, amenity access, and neighborhood context into variables that can enter the model explicitly.
 
-1. **Geocoding (Google Maps API)**: Each property address will be geocoded to obtain precise latitude/longitude coordinates. The Google Maps Geocoding API has been chosen for its superior handling of Philippine address formats, which often include barangay names, landmarks, or informal location descriptors.
-2. **Proximity Features (Haversine Formula)**: For each geocoded property, the Haversine formula will compute great-circle distances to key economic and infrastructure nodes:
+1. **Geocoding (Google Maps API)**: Property addresses are geocoded via the Google Maps Geocoding API to obtain latitude and longitude coordinates. The API handles Philippine informal address formats—which often include barangay names, landmarks, or compound descriptors—more reliably than open alternatives. Results are cached locally. Reverse geocoding is additionally applied to assign each property an administrative barangay name, used as the join key for BIR zonal values (see §3.3, Step 5).
 
-- Ayala Center Cebu (primary CBD)
-  - Cebu IT Park (employment hub)
-  - SM Seaside City (commercial center)
-  - Mactan-Cebu International Airport
-  - Planned Cebu Bus Rapid Transit (CBRT) station locations
+2. **Proximity Features (Haversine Formula)**: For each property, the Haversine formula computes great-circle distances to seven infrastructure and economic nodes:
+   - Cebu Business Park / Ayala Center (primary CBD)
+   - Cebu IT Park (employment hub)
+   - SM Seaside City Cebu (southern commercial anchor)
+   - Mandaue CBD (northern commercial center)
+   - Mactan CBD / Lapu-Lapu commercial core
+   - Mactan-Cebu International Airport
+   - Nearest planned CBRT (Cebu Bus Rapid Transit) station
 
-3. **Custom Value Driver Scoring Model (OSM via osmnx)**:
-   Rather than relying only on separate distance measures, the study also constructs an amenity score from OpenStreetMap data. Using the osmnx library, points of interest within a 1 kilometer network radius of each property will be queried and grouped into categories relevant to residential valuation. A 1 km radius is used because it roughly corresponds to a 10 to 15 minute walkable catchment in urban settings. The resulting score is designed to reflect neighborhood service access rather than simple amenity counts alone.
+   CBD node coordinates are defined empirically: for each node, the Google Maps Places API is queried for nearby commercial establishments and the centroid of returned results is computed. This grounds the CBD definitions in observed commercial activity rather than manually placed points or administrative boundaries.
 
-   - Educational institutions (schools, universities): Standard weight
-   - Healthcare facilities (hospitals, clinics): High weight
-   - Commercial establishments (malls, markets): Medium weight
-   - Public transport stops (jeepney routes, bus stops): High weight
+3. **Amenity Scoring (Google Maps Places API)**: Amenity access is operationalized as a weighted index of nearby points of interest within a 1 km radius. Six categories are scored:
 
-   *Note: Initial weights will be drawn from the literature and then checked during exploratory analysis so that no single amenity category dominates the index without empirical basis.*
+   | Category | Examples | Weight |
+   |---|---|---|
+   | Education | Schools, universities | 1.0 |
+   | Health | Hospitals, clinics | 1.5 |
+   | Finance | Banks, ATMs | 1.0 |
+   | Grocery | Supermarkets, wet markets | 1.2 |
+   | Transport | Bus stops, terminals, jeepney routes | 1.3 |
+   | Security | Police stations, fire stations | 0.8 |
 
-4. **Spatial Lag Variable**: To capture neighborhood price effects (spatial autocorrelation), we will compute the mean actual price of all other properties within a 1 kilometer radius of the target property. This will operationalize Tobler's First Law—that near things are more related than distant things—directly into our non-spatial ML algorithms.
+   For each category, the raw POI count within the 1 km radius is multiplied by the category weight and normalized. A composite score is computed as the weighted mean across all six categories. The 1 km radius corresponds approximately to a 10–15 minute walking catchment, consistent with pedestrian accessibility standards used in urban planning literature.
+
+4. **Spatial Lag Variable**: To capture neighborhood price effects, the mean `price_php` of all other properties within a 1 km radius of each target property is computed. Properties with no neighbors within this radius receive a null spatial lag. This variable operationalizes Tobler's First Law of Geography directly into the feature set of the non-spatial ML models.
 
 ---
 
@@ -513,7 +520,7 @@ For the ML models (Random Forest and XGBoost), hyperparameters will be optimized
 
 ### **3.7.3 SHAP Explainability**
 
-SHAP is used here to interpret model outputs at both the dataset and property level, which is important if the results are to remain reviewable in valuation practice and consistent with IVS 2025 transparency requirements.
+SHAP will be used here to interpret model outputs at both the dataset and property level, which is important if the results are to remain reviewable in valuation practice and consistent with IVS 2025 transparency requirements.
 
 - **Global SHAP (Summary Plots)**: Will identify which value drivers affect Metro Cebu property prices most across the entire dataset. This will answer RQ1 ("What value drivers significantly influence property prices in Metro Cebu?").
 - **Local SHAP (Force Plots)**: Will explain individual predictions. For example: *"This Lahug condo is valued at ₱X: +₱1.2M due to IT Park proximity, −₱300K due to small floor area, +₱200K due to high amenity score."*

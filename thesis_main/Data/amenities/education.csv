@@ -1,0 +1,861 @@
+id,lat,lon,amenity_type,amenity
+369910645,10.292108,123.9692813,school,St. Agustine International School
+413986589,10.306683,123.876072,school,South Hills International School
+962653756,10.3375835,123.9159152,school,Knowledge Garden
+1508411437,10.370327,123.9525211,school,Mount Olives Christian Academy
+1595998515,10.3486103,123.9129611,school,Woodridge International School
+1595998518,10.3455079,123.9101168,school,"PAREF Southcrest School, Inc."
+2126686790,10.3315726,123.9002115,school,CDLI
+2943806333,10.3662476,123.914021,school,Exceptional Childrens Education Center - EC2
+3082197017,10.3256849,123.8995989,school,PAREF Springdale School for Boys
+4322460489,10.3864571,123.9582129,school,UNİCEP TURKİYE FOUNDATİON
+4335331193,10.328465,123.9444716,school,Ikthus Main
+4389137289,10.3797595,123.9928853,school,GT Northeast Academy
+4403877292,10.2976376,123.9023228,school,Protect Training Center
+4414080558,10.3238747,124.0390249,school,Bayside
+4457423993,10.2452784,123.8159207,school,Talisay Mind Power and Creativity Center
+4665597789,10.3141915,123.9642381,school,Son Shine Kids International
+4708436393,10.3116239,123.9485956,school,Saint Alphonsus Catholic School
+4709153789,10.3101068,123.8856702,school,Childlink Learning Center
+4746279722,10.256625,123.8601219,school,St. Ignatius de Loyola Preparatory School Inc.
+4783966125,10.3260706,123.8978974,school,"Lahug Christian School, Inc."
+4825502731,10.2624607,123.9471634,school,Saint Dominic Savio International School
+4839668739,10.3101444,123.9044058,school,Skills
+4855185324,10.330174,123.9004865,school,North American Language Academy
+4855214221,10.3261421,123.9104971,school,EV English Academy
+4855214421,10.3309107,123.9025869,school,Yukun Chinese School
+4896251722,10.3109282,123.9586008,school,Solid Rock Christian Academy
+4936730622,10.3447959,123.9497027,school,Pope John Paul II Achievement and Learning Center
+4942416328,10.3042771,123.8933308,school,Cebu Bradford School
+5115113694,10.3796372,123.9529291,school,Sotero B. Cabahug FORUM for Literacy
+5160134324,10.3284537,123.9444975,school,Mandaue Christian School
+5222490574,10.3090353,123.8837618,school,Child Learning Foundation
+5537244897,10.3073787,123.9089744,school,Carreta Night High School
+5638733408,10.3303607,123.9004214,school,Kid's World Child Development Centre
+5707368122,10.3031838,123.9598521,school,LHM Korean language Training Centre
+5721412224,10.3121001,123.8782538,school,Gille1
+5748441018,10.2982999,123.8870819,school,Bob Hughes Christian Academy
+5804071254,10.3415836,123.9125638,school,Rivan IT Solutions
+5899821683,10.2908599,123.8660055,school,First High School for the Hearing Impaired
+5999547287,10.40222,124.0006088,school,CIJ SPATA
+6043564537,10.329536,123.9021452,school,STI Senior High
+6420688390,10.3099882,123.9914621,school,Holy Kids Academy
+6622482385,10.3175867,123.8868903,school,SMEAG Global Education
+6652708286,10.300738,123.9763841,school,Cheynair Aviation
+7041244830,10.3161472,123.9723683,school,EMD Carmelite School Foundation
+7127368487,10.3388629,123.8634585,school,Sunshine Corner Ministry
+7221752386,10.3087434,123.9502193,school,Home Care
+7229687075,10.3055339,123.9869533,school,Absadithe Montessori School
+7235013618,10.3004173,123.9803122,school,Holy Infant School Montessori
+7490950200,10.0713114,123.9276934,school,Mocaboc Primary School
+7490951632,10.0556779,123.9000468,school,Bagongbanwa High School
+7490953826,10.0244062,123.9662936,school,Ubay Primary School
+7576488410,10.1781836,124.0813372,school,Pandanon Elementary School
+7644852756,10.3017084,123.9502756,school,Gun-ob Night High School
+7644855905,10.3075898,123.989599,school,Bankal Night High School Extension
+7644862349,10.2962462,123.9632175,school,Basak Night High School Extension
+7644891789,10.3185468,123.9719807,school,Pusok Night High School
+7644892937,10.3101548,123.9578766,school,Pajo Night High School
+7650951032,10.3104134,123.8378906,school,Toong Elementary School
+7650951033,10.310606,123.8383439,school,Toong National High School
+7651011636,10.2787831,123.8551515,school,Pardo Night High School
+7662685656,10.2904983,123.8947615,school,Pasil National High School - Night
+7662754126,10.297435,123.8922175,school,Regino Mercado National High School - Night
+7662800979,10.3126993,123.915537,school,Mabolo National High School
+7662801984,10.3243557,123.9067644,school,Barrio Luz National High School
+7662904709,10.3470062,123.9119303,school,Banilad Night High School
+7668165435,10.3763936,123.9575386,school,Consolacion National Night High School
+7686756816,10.4009791,123.8515963,school,Sibugay High School
+7686756817,10.4008194,123.8513679,school,Sibugay Elementary School
+7687892085,10.3066935,123.7932024,school,Hawanay Elementary School
+7814393485,10.2366187,123.8291762,school,NEWSIM TRAINING SITE
+7960337386,10.3121154,123.9477564,school,SACS Grade School
+7960366886,10.3124065,123.9475205,school,SACS Grade School
+7965869936,10.2721167,123.8562557,school,Inayawan National Night High School Extension
+7968079149,10.3798391,123.9132594,school,San Jose Primary School
+8039740685,10.2649948,123.9620178,school,San Roque Child Development
+8078661020,10.2931862,123.8910006,school,St. Mary’s Academy of San Nicolas
+8286085417,10.29366,123.8705486,school,Don Bosco Youth Center - Punta Princesa
+8654021742,10.3347378,123.9388597,school,ACLC
+9175679195,10.3612043,123.7498505,school,Bagakay Elementary School
+9179290067,10.5348094,124.0093401,school,Malapoc Integrated School
+9181758599,10.2160349,123.7304601,school,Mainit National High School
+9184386717,10.2951193,123.8716006,school,Punta Princesa National Night High School
+9609959495,10.3301287,123.9470734,school,St John Paul II School
+9811211923,10.3557082,123.915799,school,EV English Academy
+9811212019,10.3555599,123.9150829,school,EV Academy
+10065732217,10.3123642,123.8906107,school,International Skills Republic Academy
+10732021477,10.2964307,123.8740087,school,Little Angels Montessori School of Cebu
+10768613006,10.2438562,123.7945488,school,Minglanilla Christian Development Center
+10774570979,10.2933971,123.8920268,school,YLAC San Nicolas
+10875130171,10.3096217,123.9008937,school,Compass Education RoboTech Univercity
+10892472538,10.314249,123.9073022,school,Hipodromo Night High School
+11879062882,10.3431426,123.9120379,school,KA Art School
+11879062886,10.343228,123.9120895,school,Worldly Wise Tutorial Center
+11933453637,10.5677198,123.7181987,school,Westwind Learning Center
+12460949782,10.2668754,123.8560084,school,CBD College Inc.
+12538064945,10.3374003,123.9376822,school,Mandaue Ebenezer Alliance Academy
+12747133990,10.3481846,123.9264381,school,M.V. Academy
+12782193506,10.2162455,123.7530617,school,Tangke National High School
+12782193507,10.216161,123.7532274,school,Tangke Elementary School
+13571721404,10.333272,123.9346674,school,Good Luck Education and Migration
+13597254947,10.3374003,123.9308251,school,AYL Driving School
+13611000932,10.3394795,123.9268863,school,Benedicto Technological Center
+13613646007,10.34082,123.9213496,school,K4 Driving Acadey
+13644664701,10.2584452,123.9567749,school,Benthel Asia School of Technology
+93827084,10.347854,123.9140498,school,Bright Academy
+155013886,10.2999895,123.8816606,school,Labangon BLISS Elementary School
+155013890,10.3004527,123.8796264,school,Cebu City National Science High School
+155282751,10.3093145,123.9047191,school,Sacred Heart School-Jesuit (Old Campus)
+155744992,10.31388,123.9000822,school,USC Montessori Academy
+155927182,10.301758,123.8978612,school,Philippine Christian Gospel School
+155941639,10.2946053,123.8718317,school,Punta Princesa Elementary School
+164070525,10.5242813,124.0287038,school,Severo Duterte Memorial Elementary School
+164211718,10.506669,124.0294552,school,Bibiana Mercado Integrated School
+164213354,10.4975394,124.0306015,school,Sabang Elementary School
+249318490,10.2992081,123.8987571,school,Wrocklage Yard
+252080309,10.2650188,123.836094,school,St. Scholastica's Academy
+265556079,10.307375,123.8967066,school,Cebu Institute of Medicine
+265724139,10.3467966,123.9121386,school,Banilad Elementary School
+265726523,10.3012822,123.881684,school,"Don Sergio Osmeña, Sr. Memorial High School"
+275134065,10.3168365,123.8994947,school,Maria Montessori International School - Gorordo Campus
+279729126,10.316583,123.8995657,school,La Manille School of Esthetics and Wellness
+290897675,10.2950435,123.8857854,school,San Nicolas Elementary School
+299409028,10.3054415,123.9668426,school,Bankal National High School
+300842712,10.2942824,123.8899635,school,Don Carlos Gothong Memorial National High School
+304342793,10.2431016,123.8397947,school,First Chinese Royal Academy
+312023048,10.3813967,123.906188,school,Bonita Home for Girls
+312356727,10.332392,123.8988465,school,Cambridge Child Development Centre
+312362093,10.3002163,123.9475962,school,Proverb Ville Academy
+312362188,10.3090244,123.9475889,school,Lapu-Lapu City Central Elementary School
+316532521,10.331006,123.9885743,school,Ibo Elementary School
+321929265,10.2800091,123.8548619,school,Holy Rosary School of Pardo
+321929267,10.2908726,123.8655471,school,Don Vicente Rama Memorial National High School
+363407097,10.3861757,123.9564709,school,Bagong Lipunan Elementary School
+363434762,10.2755103,124.0713226,school,Caw-oy Elementary School
+363830682,10.5846682,124.016447,school,Elpidio I. de Dios Elementary School
+364122405,10.2655986,124.0599073,school,Tungasan Elementary School
+364389514,10.2714967,124.0676777,school,Candagsao Elementary School
+364769116,10.2865247,124.0708361,school,Tingo Elementary School
+364770434,10.2864652,124.065141,school,Baring Elementary School
+368407923,10.2759201,124.059878,school,Talima Elementary School
+368437802,10.2397792,124.0531383,school,Suba Elementary School
+379689460,10.3111778,124.0057813,school,International Academy of Film and Television
+397897938,10.6007695,124.0225082,school,Luyang Elementary School
+397898395,10.587787,124.0144873,school,Carmen Central Elementary School
+397898396,10.5846634,124.0179125,school,Academia de San Agustin
+397899004,10.5828048,124.0166538,school,Cebu Academy
+397901355,10.5477176,124.0236526,school,Guinsay Elementary School
+397901390,10.5513414,124.0224421,school,Guinsay National High School
+397906497,10.532143,124.0275277,school,Taytay Integrated School
+397918853,10.471414,124.0189385,school,Magay Elementary School
+397918856,10.450707,124.0118508,school,Saint James Academy of Skills Technology
+401884073,10.2564814,123.8388406,school,San Isidro Elementary School
+401902913,10.2634477,123.8406748,school,Tabunoc Central Elementary School
+401912609,10.2579197,123.841007,school,CBS
+402307098,10.2440226,123.8496156,school,Malayan Academy
+402568557,10.3075039,123.9087813,school,Carreta Elementary School
+403989111,10.2555088,123.8398376,school,Unnamed education
+403989233,10.2565488,123.8401399,school,Unnamed education
+404020334,10.2721194,123.8457798,school,East Visayan Academy
+422583350,10.5490701,123.9024859,school,Lawaan Elementary School
+422782777,10.3025918,123.8168806,school,Jaclupan Elementary School
+422796847,10.3606537,123.7949238,school,Bitlang National High School
+425929571,10.5244606,124.024553,school,D.T. Durano Memorial Integrated School
+430280487,10.3207691,123.8849185,school,Ramon Duterte Memorial High School
+459313367,10.3277365,123.942269,school,Unnamed education
+470946023,10.3255222,123.9747,school,Pusok Elementary School
+473523338,10.2395179,123.8029591,school,Calajo-an Elementary School
+473529126,10.2390505,123.8094708,school,The Three H Redwood Academy
+482985925,10.3855948,123.9651429,school,Lamac Elementary School
+490387959,10.270455,123.9684233,school,Nissi Academy
+542691636,10.3189872,123.8969344,school,Kamputhaw Elementary School
+574663429,10.3020345,123.9501339,school,Gun-ob High School
+574663496,10.2960845,123.9629671,school,Basak Elementary School
+585270160,10.2779995,123.9726618,school,Marigondon National High School
+592753279,10.0657626,124.0625936,school,Lawis Elementary School
+609536587,10.2904714,123.8943902,school,Pasil Elementary School
+609536604,10.2906788,123.8909799,school,Sawang Calero Elementary School
+609760807,10.2897445,123.8958681,school,"Don Bosco - Pasil, Cebu City"
+612407039,10.3010824,123.8955241,school,Abellana National High School
+612615519,10.3364377,123.9578216,school,Mandaue Christian School
+613560422,10.2963894,123.9028002,school,Young Ladies Association of Charity
+614306523,10.4369433,123.869365,school,Adlaon Integrated School
+614434693,10.3365433,123.9060868,school,Apas National High School
+614520830,10.3033704,123.9022988,school,Zapatera Elementary School
+615939907,10.3124582,123.9152304,school,Bagong Lipunan Elementary School
+616059707,10.313729,123.9072312,school,Hipodromo Elementary School
+616369941,10.3262314,123.9087639,school,Samantabhadra Institute
+617130898,10.4792088,123.9447589,school,Mulao National High School
+618781453,10.3213626,123.8809977,school,Beaconhouse St. Paul
+619843383,10.3201765,123.8800203,school,Unnamed education
+619855872,10.3175489,123.8776319,school,Banawa Elementary School
+620846233,10.3930698,123.9209953,school,Cebu International School
+620898182,10.3470907,123.9275478,school,Cabancalan I Elementary School
+620906001,10.3520003,123.9338504,school,Tingub High School
+620920400,10.3445244,123.9254319,school,Little Angels Montesorri School
+620922578,10.3420106,123.9237907,school,Banilad Elementary School
+621411807,10.3423207,123.8921249,school,Cebu Pelis Institute
+623451959,10.245648,123.7538443,school,Cantao-an National High School
+624158597,10.2623721,123.7629591,school,Guindaruhan National High School
+624255776,10.2759655,123.8494707,school,Bulacao Community Elementary School
+624734222,10.2878929,123.8696767,school,Concord Technical Institute
+624766263,10.28823,123.8816146,school,Alaska High School
+624776141,10.289592,123.8659138,school,Don Vicente Rama Memorial Elementary School
+625479406,10.3242835,123.9072069,school,Barrio Luz Elementary School
+625484940,10.3226738,123.9229465,school,Subangdaku Elementary School
+626216984,10.3216009,123.8846791,school,Guadalupe Elementary School
+626778811,10.3669702,123.9261423,school,Sacred Heart School - Ateneo De Cebu
+627836930,10.3818363,123.9147172,school,Maria Montessori International School
+627919982,10.3763789,123.9111867,school,Center for Industrial Technology and Enterprise
+628148363,10.370066,123.9179865,school,Talamban National High School
+628148364,10.370126,123.9175593,school,Talamban Elementary School
+628836124,10.313491,123.9144871,school,Mabolo Elementary School
+629329281,10.2877547,123.8818411,school,Alaska Elementary School
+629433304,10.2877528,123.8772993,school,University of Cebu - Mambaling
+630794407,10.2987169,123.869015,school,Tisa II Elementary School
+630795342,10.3010896,123.8692571,school,Tisa National High School
+631858876,10.2938223,123.8705581,school,Don Bosco Youth Center - Punta Princesa
+632566091,10.2992913,123.8944454,school,Athenaeum International School
+633156116,10.2719236,123.856072,school,Inayawan Elementary School
+633156124,10.27949,123.8539487,school,Gullas High School
+635188153,10.3055381,123.7041075,school,General P. del Rosario Elementary School
+635671556,10.3662498,123.8322922,school,Bonbon Elementary School
+635775827,10.3064405,123.7124201,school,Don Andres Soriano National High School
+635775828,10.3063026,123.7115781,school,Don Andres Soriano Elementary School
+653881803,10.3687961,123.9182361,school,San Isidro Parish School
+661071770,10.0296413,124.0680191,school,Inabanga South Central Elementary School
+662292640,10.3485162,123.7026915,school,Buswang Elementary School
+662366345,10.220186,124.0399947,school,Pangan-an Elementary School
+662378076,10.2662362,123.9461385,school,Pilipog Elementary School
+662378077,10.2590618,123.9444252,school,Bangbang Elementary School
+662378078,10.2543706,123.9441505,school,Day-as Elementary School
+662378079,10.2552507,123.9441963,school,Cordova National High School
+662378081,10.2490338,123.9396082,school,Buagsong Elementary School
+662378084,10.2481715,123.9460734,school,Catarman Elementary School
+662378086,10.2541979,123.9500242,school,Cordova Central Elementary School
+662378090,10.2569616,123.960458,school,Alegria Elementary School
+664337222,10.2639969,123.9710778,school,Suba Basbas Elementary School
+665056351,10.3759763,123.7860206,school,Sudlon Elementary School
+665056353,10.4392037,123.8202297,school,Tabunan Integrated School
+665244545,10.4657298,123.7014206,school,Buanoy National High School
+665244551,10.4906277,123.7166675,school,Cornelio C. Melgar Elementary School
+665244579,10.5060256,123.7148448,school,St. Francis Academy
+665244587,10.5332168,123.719137,school,Nangka Elementary School
+665244588,10.5334424,123.720905,school,Nangka National High School
+665244589,10.5389799,123.7175876,school,Owak Elementary School
+665259584,10.5007537,123.7339117,school,Don Bosco Technical Vocational Education & Training Center - Balamban
+665259601,10.5143725,123.790891,school,Lamesa Elementary School
+665259603,10.5103214,123.7877944,school,Lamesa National High School
+665259608,10.5324399,123.7462258,school,Biasong Elementary School
+665259614,10.5178498,123.8584762,school,Ginatilan National High School
+665259621,10.4250543,123.8901185,school,Guba Elementary School
+665259622,10.4258603,123.8877562,school,Guba National High School
+665259626,10.4347831,123.9106179,school,Agsungot Elementary School
+665259627,10.4345916,123.9112334,school,Agsungot National High School
+665276565,10.516021,123.7266987,school,Milan-Cantuod National High School
+665528879,10.5539765,123.7527756,school,San Isidro Elementary School
+665528885,10.5655162,123.716087,school,Asturias Central Elementary School
+665528891,10.570673,123.7274317,school,Looc Norte Elementary School
+665528894,10.5811335,123.733497,school,Langub Elementary School
+665528896,10.5758466,123.7756323,school,Manguiao Elementary School
+665528929,10.5600549,123.8539685,school,Danasan Elementary School
+666603226,10.3284269,123.7604916,school,Loay Elementary School
+666608743,10.3676708,123.8318814,school,Bonbon National High School
+666618601,10.288047,123.8562459,school,Quiot Pardo Elementary School
+666886043,10.3198587,123.8203989,school,Camp 4 Elementary School
+666886050,10.3018795,123.8184078,school,Jaclupan National High School
+666886054,10.2780366,123.8154265,school,Maghaway National High School
+666886056,10.2722143,123.822434,school,Maghaway Elementary School
+666886057,10.2678141,123.835581,school,Lagtang Elementary School
+666886060,10.2587598,123.8222537,school,Lawaan Elementary School
+666886061,10.2650816,123.8316528,school,Lawa-an Ⅲ National High School
+666886063,10.2651631,123.8286443,school,Lawa-an Ⅲ Elementary School
+666886064,10.2490917,123.8265191,school,Mohon National High School
+668198993,10.3484811,123.8088336,school,"Dr. Emilio Osmeña, Sr. Integrated School"
+668296788,10.3741261,123.7177098,school,General Climaco National High School
+679017776,10.3240326,123.88044,school,HolySeed Christian School
+684073762,10.3777379,123.7488923,school,Pangamihan Elementary School
+699190424,10.5613209,123.714028,school,"Isler's Superior High, Inc."
+730919958,10.4130135,123.8074359,school,Cantipla Integrated School
+740946082,10.354036,123.9504095,school,Basak Elementary School
+746826612,10.3196569,123.9946727,school,EMD Carmelite School
+756106893,10.2629493,124.0513669,school,Santa Rosa Elementary School
+756141745,10.5728503,123.7281929,school,Looc Norte National High School
+758005963,10.4034464,123.924764,school,Cabangahan National High School
+760708370,10.0556603,123.9001449,school,Bagongbanua Elementary School
+763024521,10.3798544,123.8561613,school,Babag High School
+763024522,10.3802505,123.8559844,school,Babag Elementary School
+770234603,10.4537368,123.9366982,school,Lanipga National High School
+771504048,10.3976597,123.9769746,school,Arcelo Memorial National High School
+771530109,10.3983247,124.0017122,school,Suba Elementary School
+771540310,10.2988787,123.7235721,school,Apid Elementary School
+771543881,10.2269768,123.7069809,school,Antonio R. Lapiz National High School
+771544029,10.4546043,123.9765061,school,Cabadiangan Integrated School
+771544619,10.4605182,124.0066082,school,Compostela Science and Technology High School
+771545623,10.4331667,123.9930128,school,Tiltilon Elementary School
+771550461,10.2495852,123.8325443,school,"Santo Niño Preparatory School of Mohon, Talisay City, Inc."
+771556655,10.272928,123.7186739,school,Lanas National High School
+771884851,10.4482774,123.9443437,school,Tabla Elementary School
+772048628,10.4278966,123.9575498,school,San Roque Elementary School
+773041217,10.3109959,123.9666789,school,Mactan Air Base Elementary School
+773659496,10.5766394,124.0181771,school,Dawis Norte Elementary School
+773669101,10.3079933,123.7223849,school,Cantabaco National High School
+773675629,10.5753491,123.7755959,school,Manguiao National High School
+773676052,10.4671594,123.7003182,school,Buanoy Central Elementary School
+782883519,10.3783392,123.9269724,school,"Don Calixto C. Yongco, Sr. Elementary School"
+782904010,10.2089496,123.7546711,school,Naga National High School
+789782408,10.394122,123.9216165,school,Pit-os National High School
+789786144,10.3645843,123.9559823,school,Leonard Wood Elementary School
+792085080,10.374651,123.7186173,school,Old Bucao Elementary School
+793336764,10.4598972,123.9352856,school,Lanipga Elementary School
+794285272,10.3068207,123.9902174,school,Bankal National High School
+794285273,10.3063607,123.9891407,school,Bankal Elementary School
+800894146,10.0159025,123.9873527,school,Batasan Elementary School
+800907333,10.0127461,124.0838228,school,Lonoy Primary School
+800907521,10.0012678,124.0677672,school,Badiang Primary School
+800907522,10.0053482,124.0610114,school,Cagawasan Elementary School
+800907566,10.0019176,124.0851919,school,Cainsican Primary School
+800908356,10.1131605,123.9881893,school,Cuaming Elementary School
+800908885,10.0474679,124.0595048,school,Ondol Elementary School
+800922938,10.1779101,124.0799935,school,Pandanon High School
+800952503,10.0133063,124.096816,school,Liloan Sur Elementary School
+801441813,10.0368237,124.0813189,school,San Isidro Elementary School
+802393943,10.0441174,124.0696445,school,Bugang Primary School
+802393951,10.0350755,124.0594961,school,Tungod Primary School
+810368079,10.1576094,124.0449947,school,Cabul-an National High School
+810368080,10.157348,124.045507,school,Cabul-an Elementary School
+812414959,10.0657726,124.0684895,school,Santo Niño Primary School
+812419324,10.022881,124.073423,school,Tambooc Primary School
+812419326,10.0108232,124.0696712,school,Lutao Elementary School
+812420613,10.0320427,124.0700305,school,Luyo Primary School
+813070045,10.4754854,123.9390079,school,Mulao Elementary School
+813070046,10.350972,123.9586508,school,Labogon National High School
+813070048,10.1643738,123.7077675,school,San Fernando North Central Elementary School
+813070049,10.3696215,123.9385587,school,Cubacub Elementary School
+813070053,10.4723673,123.9165761,school,Paril Elementary School
+813070058,10.3728397,123.9539477,school,Consolacion Central Elementary School
+814094194,10.5773507,123.9200201,school,Santikan Elementary School
+814094197,10.3346502,123.9610378,school,Umapad Elementary School
+814094199,10.3100215,124.0093043,school,Mactan Elementary School
+814425575,10.5388616,124.0119803,school,Cambanay Elementary School
+814425589,10.5061188,123.9858106,school,Gerardo Ypil Integrated School
+814425595,10.4244404,123.9162273,school,Binaliw Elementary School
+814425596,10.4122645,123.9638853,school,Santa Cruz Elementary School
+814425598,10.2717843,123.9555953,school,Ibabao Elementary School
+814425618,10.4699761,123.9664301,school,Panangban Elementary School
+814430015,10.3438493,123.8633727,school,Napo Elementary School
+814430017,10.4456888,123.9695822,school,Ernesto V. Veloso Elementary School
+814430019,10.3182708,123.9967304,school,Buaya Elementary School
+814879141,10.3135399,123.7567225,school,Lower Campo 8 Elementary School
+814879142,10.1879276,123.7357351,school,Placido L. Señor Memorial National High School
+814879143,10.1872442,123.7368604,school,Langtad Elementary School
+814879149,10.3789929,123.8856121,school,Budlaan Integrated School
+814879162,10.2731774,123.7188478,school,Lanas Elementary School
+814879163,10.2863153,123.9922081,school,Maribago High School
+814879164,10.2858479,123.9923479,school,Maribago Elementary School
+814879166,10.3603552,123.8836491,school,Busay Elementary School
+814879167,10.2026418,124.0184097,school,Cawhagan Elementary School
+814879169,10.4240948,123.8543096,school,Taptap Elementary School
+814879170,10.3288818,123.9358085,school,Mayor A.S. Fortuna Memorial Elementary School
+814879172,10.3387848,123.9339935,school,Bakilid Elementary School
+814879173,10.175716,123.7216824,school,Pitalo Elementary School
+814879178,10.3295111,123.8860376,school,OPRRA National High School
+814879179,10.3289928,123.8865422,school,Oprra Elementary School
+814879180,10.250523,123.8592143,school,Tanke Elementary School
+814879182,10.281443,123.9366617,school,Kalawisan Elementary School
+814879183,10.3071376,123.7302179,school,Cantabaco Elementary School
+814879184,10.3016841,123.9519949,school,Gun-ob Elementary School
+814883027,10.3097187,124.0022806,school,St. Joseph's School of Mactan
+814883028,10.3096053,124.0033856,school,Mactan National High School
+814883029,10.2487177,123.8272046,school,Mohon Elementary School
+816428515,10.482656,123.7091688,school,Abucayan Elementary School
+818252183,10.1522709,123.6999794,school,Unnamed education
+818252475,10.1587411,123.7085588,school,San Fernando National High School
+818252659,10.1788688,123.7204279,school,Pitalo National High School
+818253511,10.1984347,123.7191547,school,Bairan Elementary School
+818254303,10.1906686,123.7375744,school,City of Naga Enhanced Special Science and Technology High School
+818255138,10.1936333,123.7443995,school,Cepoc Central Elementary School
+818255145,10.1936829,123.7464781,school,Tinaan National High School
+818258999,10.2124393,123.7200584,school,Cabungahan Elementary School
+818260161,10.2160389,123.7301959,school,Mainit Elementary School
+818260386,10.2319615,123.7302917,school,Don Emilio Canonigo Memorial National High School
+818260530,10.2343776,123.7251386,school,Pangdan Elementary School
+818306600,10.2579386,124.0376896,school,Poo Elementary School
+818308512,10.2852105,124.0712644,school,Nemesio-Epifania Taneo Memorial High School
+818308826,10.2532176,124.0562201,school,Sabang Elementary School
+818309709,10.2198878,124.0399709,school,Pangan-an High School
+818625320,10.3241486,124.0371349,school,Punta Engaño High School
+818625321,10.3244674,124.0369464,school,Punta Engaño Elementary School
+818625708,10.3018433,124.0018368,school,Soong Elementary School
+818625755,10.2895383,124.0014587,school,Buyong Elementary School
+818626327,10.2936119,123.983608,school,Pajac Elementary School
+818626627,10.2994682,123.981896,school,Bagong Silang Elementary School
+818626935,10.278286,123.9881127,school,Agus Elementary School
+818630418,10.3117616,123.95592,school,Pajo Elementary School
+818630587,10.3104265,123.9578381,school,Pajo National High School
+818631118,10.3041875,123.9447017,school,Look Elementary School
+818631174,10.2980802,123.943854,school,Canjulao Elementary School
+818631339,10.2968939,123.9654955,school,Lapu-Lapu Science and Technology Education Center - Elementary
+818632276,10.285496,123.95014,school,Timpolok Elementary School
+818632277,10.2915676,123.944818,school,Marie Ernestine Elementary School Main Campus
+818632373,10.2796094,123.9449537,school,Babag Ⅱ Elementary School
+818632445,10.2759339,123.9635999,school,Suba Masulog Elementary School
+818632838,10.2625845,123.9614178,school,Gabi Elementary School
+818633543,10.1725525,123.7150084,school,San Isidro Elementary School
+818633783,10.2654046,123.9511837,school,Cogon Elementary School
+818639820,10.3645082,123.6997251,school,Malubog Elementary School
+818640229,10.3488142,123.7316645,school,Biga Elementary School
+818670469,10.2455991,123.7533011,school,Cantao-an Elementary School
+818957031,10.2564685,123.7111379,school,Balirong Elementary School
+818957032,10.2563349,123.7116947,school,Balirong National High School
+818957843,10.2673541,123.756913,school,Guindarohan Elementary School
+818959146,10.2735906,123.7744642,school,Cadulawan Elementary School
+818960380,10.2801299,123.7843131,school,Manduang Integrated School
+818963140,10.2486527,123.7250777,school,Lutac Elementary School
+818964431,10.2213996,123.7613393,school,NPC-Colon Elementary School
+818968823,10.4530653,123.7428308,school,Duangan Elementary School
+818969331,10.4259094,123.713659,school,Luas Elementary School
+818969973,10.4259542,123.7012168,school,Minolos Elementary School
+818971162,10.4146488,123.727041,school,Calibasan Elementary School
+818971431,10.4089814,123.7399539,school,Lubo Elementary School
+818995291,10.4095009,123.7652973,school,Malingin Elementary School
+818995743,10.3940571,123.7568445,school,Himatungan Elementary School
+818997001,10.421566,123.7860187,school,Gaas Elementary School
+818997161,10.4103491,123.7869729,school,Tungkay Elementary School
+818997948,10.4204512,123.7856381,school,Gaas National High School
+818999017,10.3753813,123.7862808,school,Sudlon National High School
+819000207,10.3607125,123.7954196,school,Bitlang Elementary School
+819001749,10.3515007,123.7793689,school,Sinsin National High School
+819001750,10.3477503,123.7837468,school,Sinsin Elementary School
+819002190,10.3223988,123.7592925,school,Upper Campo 8 Elementary School
+819002807,10.3153208,123.7902409,school,Camp 8 Elementary School
+819003061,10.3209818,123.7865233,school,Manipis Elementary School
+819003062,10.3198722,123.7865309,school,Manipis National High School
+819291920,10.3054391,123.8121062,school,Manguilamon Elementary School
+819292828,10.3104121,123.8381481,school,Unnamed education
+819293435,10.2882454,123.8557828,school,Quiot High School
+819295263,10.2789559,123.8551517,school,Pardo Elementary School – Extension
+819298826,10.2614372,123.7963797,school,Tubod Elementary School
+819298935,10.2544613,123.7921946,school,Vito National High School
+819302455,10.2360743,123.7731431,school,Inayagan Elementary School
+819302456,10.2345168,123.7720952,school,Inayagan National High School
+819303004,10.246865,123.7828029,school,Upper Tunghaan Elementary School
+819303289,10.2408774,123.7815814,school,Mary Help of Christian School
+819304744,10.2390448,123.7927944,school,Bacay Elementary School
+819304745,10.238859,123.792056,school,Tulay National High School
+819305964,10.2405786,123.8122518,school,Tungkil Elementary School
+819305965,10.2407552,123.8120661,school,Tungkil National High School
+819338635,10.2566691,123.8607908,school,Laray Elementary School
+819350368,10.3325286,123.8332082,school,Pamutan Integrated School
+819350372,10.1969121,123.7011966,school,Ilaya Integrated School
+819517745,10.2789594,123.8463043,school,Bulacao Community High School
+819519456,10.2860335,123.8707118,school,Basak Community High School
+819522413,10.3095656,123.8525038,school,Buhisan Elementary School
+820834895,10.3040582,123.9025783,school,Zapatera National High School
+820838391,10.3875459,123.9220615,school,Bacayan Elementary School
+820839210,10.3390653,123.8799994,school,Kalunasan Elementary School
+820840155,10.4628025,123.8965317,school,Cambinocot Elementary School
+820840801,10.337017,123.9064474,school,Apas Camp Lapu-lapu Elementary School
+820842438,10.3323493,123.9275358,school,Tipolo Elementary School
+820842750,10.3186732,123.924245,school,Subangdaku Technical-Vocational High School
+820843210,10.4748002,123.9165919,school,Paril National High School
+820864421,10.3290033,123.9552156,school,Don Gerardo Ouano Memorial National High School
+820869890,10.346707,123.9407394,school,Tabok Elementary School I
+820869891,10.3469454,123.9413694,school,Tabok National High School
+820871188,10.3321044,123.9543669,school,Opao Elementary School
+820879558,10.3842516,123.9711062,school,Dominican School of Cebu Inc.
+820879561,10.3050066,123.8977408,school,St. Paul College - High School Campus
+821266216,10.368643,123.9348267,school,Canduman Elementary School
+821266217,10.369281,123.9342424,school,Canduman National High School
+821266837,10.3685204,123.9466585,school,Casili Elementary School
+821266951,10.3721655,123.9590107,school,Nangka Elementary School
+821267509,10.3788978,123.9628824,school,Cansaga Elementary School
+821268742,10.3802516,123.9721148,school,Jugan National High School
+821268743,10.379972,123.972627,school,Jugan Elementary School
+821269121,10.3875192,123.9557984,school,Pulpogan National High School
+821270768,10.3637351,123.9984885,school,Calero Integrated School
+821270873,10.3810173,123.9954637,school,Tayud Elementary School
+821271036,10.3866424,124.0127141,school,Catarman Elementary School
+821271336,10.3983068,124.0006839,school,Liloan National High School
+821271995,10.4023312,123.9974145,school,Liloan Central Elementary School
+821273796,10.393507,123.9830658,school,Yati Elementary School
+821274049,10.3991415,123.9759926,school,Simeon Ayuda Elementary School
+821274264,10.3909632,123.9566103,school,Danglag Elementary School
+821274390,10.3892868,123.9417015,school,Tolotolo Elementary School
+821274391,10.3893712,123.9422115,school,Tolotolo National High School
+821285676,10.3703029,123.8759851,school,Busay National High School
+821314728,10.4537928,123.7884033,school,Cambagocboc Elementary School
+821316365,10.4458499,123.8403572,school,Tagba-o Elementary School
+821316505,10.4434622,123.8416814,school,Tagba-o National High School
+821317263,10.4320039,123.8512904,school,Taptap Integrated School
+821318286,10.400893,123.8513869,school,Sibugay Integrated School
+821318472,10.3975931,123.915159,school,Pulangbato Elementary School
+821318891,10.4031342,123.924562,school,Cabangahan Elementary School
+821761781,10.5853117,123.7664285,school,Cubong Elementary School
+821761843,10.5999659,123.7690879,school,Bog-o Elementary School
+821761923,10.5619498,123.7949485,school,Magcalape Elementary School
+822062209,10.5983043,123.8209377,school,Baye Elementary School
+822063055,10.5472151,123.7912255,school,Ubogon Elementary School
+822063210,10.5362529,123.8102924,school,Tag-amakan Elementary School
+822063901,10.5279356,123.7889428,school,Liki Integrated School
+822063902,10.5184343,123.7665138,school,Hingatmonan Elementary School
+822064194,10.5167876,123.744075,school,Singsing Elementary School
+822064344,10.5110513,123.7465112,school,Vito Elementary School
+822064607,10.5158991,123.7272763,school,Gregoria Milan Memorial Elementary School
+822065094,10.4740653,123.7641878,school,Cansomoroy Elementary School
+822065926,10.4814058,123.7965752,school,Bayong Elementary School
+822066518,10.5669708,123.8206623,school,Bairan Elementary School
+822068299,10.4797371,123.8240008,school,Matun-og Elementary School
+822068431,10.5205427,123.863637,school,Kaluangan II Elementary School
+822069100,10.5493268,123.9020409,school,Lawaan National High School
+822069356,10.5457453,123.9160459,school,Melecio B. Tito Elementary School
+822069568,10.5538879,123.8824608,school,Cambubho Integrated School
+822095044,10.5591761,123.8558125,school,Nicolas U. Tiongko Memorial National High School
+822097130,10.5389346,123.8401182,school,Tagbubonga Elementary School
+822097295,10.5157316,123.825679,school,C. Pepito Elementary School
+822097977,10.5046769,123.9312997,school,Raymunda B. Hermosilla Integrated School
+822098836,10.5323885,123.9323331,school,Sibacan Elementary School
+822099598,10.5235123,123.9482515,school,Fortunato Ralota Elementary School
+822099599,10.5211344,123.9571553,school,Eduardo Gorre Memorial Integrated School
+822101758,10.4688207,123.9842279,school,Bagalnga Integrated School
+822103684,10.4180258,123.9289217,school,Panoypoy Elementary School
+822383425,10.5547455,124.019174,school,Dunggoan Elementary School
+822390894,10.5441877,124.0086843,school,Ubaldo Iway Memorial National High School
+823303077,10.4066769,123.9433468,school,Polog Elementary School
+823303475,10.4195871,123.9438282,school,Garing National High School
+823303831,10.4147538,123.9472798,school,Garing Elementary School
+823304460,10.418612,123.9955777,school,Jubay Elementary School
+823304657,10.4328798,123.9622162,school,Lataban National High School
+823304658,10.4328813,123.9626431,school,Lataban Elementary School
+823305213,10.4569025,123.9180776,school,Mabini Integrated School
+823305615,10.4629719,123.8762382,school,Kang-atis Elementary School
+823305975,10.462517,123.898646,school,Vicente Cosido National High School
+823335532,10.4908064,123.8920878,school,Lusaran National High School
+823335533,10.4896213,123.8911382,school,Lusaran Elementary School
+823345588,10.4969963,124.0306607,school,Sabang National High School
+823348185,10.5149882,124.007662,school,Cogon Cruz Integrated School
+823349154,10.5045841,123.9989178,school,Sandayong Sur National High School
+823349155,10.504319,123.9984028,school,Sandayong Sur Elementary School
+823350066,10.5272437,123.9725026,school,Santa Rosa Integrated School
+823350585,10.5347461,123.9827092,school,Quisol Integrated School
+823350910,10.5450085,123.9678604,school,Elpidio H. Perez Memorial Technical-Vocational High School
+823351417,10.5417051,123.97031,school,Leona Durano Zamora Elementary School
+823352099,10.5405496,123.956505,school,B. Enriquez Integrated School
+823352715,10.5417806,123.9829452,school,Binaliw Integrated School
+827994436,10.5135534,124.0171041,school,Delfin Dawe Elementary School
+827996194,10.5593315,123.9661845,school,P.G. Almendras Elementary School
+827998108,10.5245852,124.000616,school,Guinacot Integrated School
+827998403,10.537558,123.9969391,school,Malapoc Elementary School
+827998476,10.5508028,124.0117216,school,"Ramon M. Durano, Sr. Foundation Science and Technology Education Center"
+828000587,10.5637798,123.9978902,school,S. Duterte Integrated School
+828005955,10.5546881,123.9411445,school,Dungga Elementary School
+828005958,10.5609065,123.9481504,school,Portland Elementary School
+828005959,10.5600894,123.9476064,school,"Ramon M. Durano, Sr. Memorial National High School"
+828045686,10.5769595,123.9252563,school,Santican National High School
+828047408,10.5886956,123.8660069,school,Bayabas Elementary School
+828048310,10.5623793,123.8811493,school,Magtagubtub Elementary School
+828327895,10.4904271,123.9732642,school,Basak Elementary School
+829957625,10.4375107,124.0071621,school,Estaca Elementary School
+829958057,10.4551779,124.0093041,school,Compostela Central Elementary School
+830601975,10.51402,123.9042798,school,Langosig Elementary School
+830601980,10.565635,123.9806248,school,Hagnaya Elementary School
+830601983,10.3008914,123.766971,school,Calbasaan Integrated School
+830601994,10.3564721,123.9405225,school,Pagsabungan Elementary School
+830601995,10.3568938,123.9400809,school,Pagsabungan National High School
+830602026,10.3848004,123.9278302,school,Mandaue City School for the Arts
+853271692,10.5679462,124.0198072,school,Dawis Sur Elementary School
+853559258,10.4888104,123.9225005,school,Tag-ubi Integrated School
+853560372,10.5894448,123.9424785,school,Lanipga Elementary School
+853561796,10.5865379,123.9823334,school,Isabelo Nies Elementary School
+853592017,10.3127397,123.9528998,school,Poblacion Elementary School
+854396219,10.4749459,123.8536859,school,Mangabon Elementary School
+854414207,10.3788751,123.8861461,school,Budla-an Elementary School
+854416718,10.3337275,123.8721726,school,Sapangdaku Elementary School
+856189286,10.4602914,124.0126473,school,Sapak National High School Extension
+856198355,10.5167292,123.8882454,school,Kaluangan I Primary School
+856201127,10.5346667,123.8707611,school,Saksak Elementary School
+856201877,10.4976868,123.8605773,school,Cabasiangan Elementary School
+856207849,10.5114223,123.8506117,school,Casili Elementary School
+857048342,10.4933029,123.9288155,school,Dapdap Elementary School
+857051322,10.4664106,123.9488109,school,Mulao Elementary School
+859485048,10.486815,123.7640474,school,Lingatong Elementary School
+859485997,10.5961733,123.882074,school,Kan-an Elementary School
+859520162,10.4513666,123.7131195,school,Buhingtubig Elementary School
+859593648,10.2538702,123.7928247,school,Vito Elementary School
+859606285,10.2461312,123.7785688,school,Lower Tunghaan Elementary School
+859611630,10.2617044,123.7968198,school,Tubod National High School
+859924759,10.4432594,123.9327141,school,Panas Elementary School
+859986102,10.5792728,123.894984,school,Pili Elementary School
+859993234,10.6002037,123.9722928,school,Florentino Rallos Elementary School
+860013800,10.4893317,123.9539452,school,Lupa Elementary School
+901506633,10.0703446,124.0227791,school,Hambongan Elementary School
+904032963,10.246535,123.7952717,school,Immaculate Heart of Mary Academy
+924357287,10.3291415,123.9342538,school,Colegio de la Inmaculada Concepcion - Mandaue
+935192312,10.3193271,123.9337336,school,Singapore School Cebu
+958552547,10.2853324,123.7922321,school,Cuanos Integrated School
+985009946,10.0391775,124.0955015,school,Dait Sur Elementary School
+985010463,10.0442253,124.0913258,school,Fatima Primary School
+991832479,10.029465,124.0805032,school,Cagayan Primary School
+993204085,10.5263418,124.0280549,school,Beatriz D. Durano Memorial National High School
+993784123,10.287955,123.8245323,school,Iba Elementary School
+993798167,10.2547311,123.8657333,school,Tanke National High School
+993824718,10.2300896,123.7683832,school,Tuyan Central Elementary School
+993828710,10.2360834,123.7675061,school,Tuyan National High School
+994097383,10.3681676,123.9534912,school,Jagobiao National High School
+994105561,10.3392374,123.922678,school,Banilad National High School
+994113771,10.4170036,123.8708,school,Sirao Integrated School
+994444936,10.4220062,123.7796671,school,Regional Training School 7 Annex Facility
+997055011,10.3125241,123.9670048,school,Pasay City North High School – Mactan Air Base Annex
+1000680199,10.280602,123.7108152,school,Uling National High School
+1038209494,10.2657817,124.0474735,school,Santa Rosa National High School - Senior High School
+1054679322,10.2273233,123.7074843,school,Jaguimit Elementary School
+1054680045,10.5850204,123.8030293,school,Agbanga Elementary School
+1054680179,10.5873359,123.9269628,school,Santikan Elementary School
+1054680653,10.3556719,123.9365021,school,Tingub Elementary School
+1055296294,10.4543217,123.8268976,school,Sunog Elementary School
+1075237779,10.1130775,123.985065,school,Cuaming High School
+1083800117,10.2094856,123.7583581,school,Academia de San Pedro Calungsod
+1123868388,10.2067813,123.7564708,school,Exceed Learning Center High School Department
+1127956417,10.315927,123.894832,school,Sacred Heart School - Hijas de Jesus
+1133342077,10.1972935,123.7197564,school,Bairan National High School
+1133342090,10.2266932,123.7647681,school,Our Lady of Lourdes Academy of Tuyan
+1135422754,10.2487663,123.7248853,school,Lutac National High School
+1136367106,10.2075914,123.7562832,school,Exceed Learning Center Elementary Department
+1141325838,10.2590837,123.8219303,school,Lawaan National High School
+1144769102,10.2565184,123.8391699,school,San Isidro Night High School
+1144769112,10.2638311,123.8407115,school,Tabunok National High School
+1147543901,10.2682336,123.8355311,school,Lagtang National High School
+1154016300,10.2961886,123.965966,school,Lapu-Lapu Science and Technology Education Center - High School
+1154289632,10.2589275,123.8207563,school,St. Thomas Aquinas School
+1154341227,10.2429684,123.7887046,school,Southern Bethany School of Minglanilla
+1158066460,10.290195,124.0012866,school,Buyong High School
+1158593047,10.2572758,123.8252036,school,Virgen de las Escuelas Pias
+1158593048,10.2591914,123.8258578,school,Cebu Sacred Heart College
+1161076805,10.2440056,123.7948554,school,Saint Cecilia's College - Cebu Senior High School Department
+1164955373,10.3508361,123.9426977,school,Tabok II Elementary School
+1165110846,10.4269655,123.7241902,school,Guinabinhan Elementary School
+1165292015,10.399023,123.9297335,school,Sacsac Elementary School
+1167871595,10.3979448,123.976797,school,Arcelo Memorial National Night High School
+1167875409,10.4758434,123.987657,school,Tubigan Elementary School
+1167875412,10.4778165,124.0066514,school,Buluang Elementary School
+1168431087,10.438501,123.9943171,school,Tamiao Elementary School
+1172887552,10.5330146,124.0270749,school,"Mother Guaini School, Inc."
+1179752397,10.5340469,123.9424017,school,Bernardo Enriquez Elementary School
+1184839129,10.5390113,123.8922761,school,Sacsac Elementary School
+1184839161,10.5611297,123.9479868,school,Cahumayan Senior High School
+1185052432,10.552158,123.994232,school,Sandayong Norte Elementary School
+1185052435,10.5579295,123.997762,school,B. Durano Integrated School
+1185061805,10.4628426,123.7262989,school,Cantibas Elementary School
+1189391799,10.5909371,124.0211229,school,Cogon East Elementary School
+1248172547,10.2938906,123.9018453,school,Colegio del Santo Niño
+1294716224,10.3198883,123.9331036,school,Cebu Doctors' University (CDU)
+1315679277,10.3269334,123.9164241,school,Centre for International Education
+1347082919,10.2964939,123.8827565,school,Salazar Colleges of Science and Institute of Technology - Basic Education Department
+1347085166,10.2965092,123.8878707,school,Adventist Elementary School - Cebu Inc.
+1350349884,10.2545338,123.8170947,school,Linao Elementary School
+1352230872,10.3692952,123.9038667,school,Marie Ernestine School Campus North
+1416453887,10.5234152,124.0303339,school,Colegio de San Antonio de Padua
+1416927031,10.3540854,123.9576207,school,Labogon Elementary School
+1417145541,10.2643712,124.0444428,school,Santa Rosa National High School - Junior High School
+1418224412,10.3082494,123.8878641,school,Cebu Bethel Academy Foundation
+1420660875,10.3450718,123.9398286,school,Maguikay National High School
+1420679308,10.4241383,123.9157018,school,Binaliw National High School
+1451946898,10.2930535,123.8698905,school,Lourdes Parish Kindergarten School
+10865917,10.209993,123.7555368,school,Naga Central Elementary School
+10865918,10.2095287,123.7549326,school,Naga High School Special Education Center
+11012053,10.2415025,123.8237266,school,Pooc National High School
+11012054,10.2411305,123.8237321,school,Vicenta A. Manreal Elementary School
+11208168,10.5066574,123.7143696,school,Balamban Central Elementary School
+11208169,10.5073561,123.7145959,school,Balamban National High School
+11228525,10.3186487,123.9721623,school,Pusok National High School
+11697309,10.5205612,124.0276991,school,Danao City Central Elementary School
+11701550,10.2443908,123.7983251,school,Minglanilla Science High School
+11701551,10.2441362,123.7973159,school,Minglanilla Central Elementary School
+11701753,10.2909159,123.8754584,school,Mambaling National Night High School
+11701754,10.2908523,123.8750813,school,Mambaling Elementary School
+11704273,10.2997974,123.8962176,school,City Central National High School
+11704274,10.2994694,123.8957128,school,City Central Elementary School
+11704336,10.2541155,123.8616031,school,San Roque National High School
+11704337,10.2539481,123.8612715,school,San Roque Elementary School
+11704626,10.3251254,123.9438881,school,Mandaue SPED Center High School
+11704627,10.3247008,123.9435766,school,Mandaue City Comprehensive National High School
+11704628,10.3259767,123.9443481,school,Mandaue City Central School
+11759548,10.5269984,123.8023635,school,Cabagdalan National High School
+11762939,10.3795047,123.8688345,school,Malubog Integrated School — High School
+11762940,10.3792154,123.8685541,school,Malubog Integrated School — Elementary
+12277630,10.3218981,123.8995331,school,UP High School – Cebu
+12297057,10.3411683,123.9361383,school,Maguikay Elementary School
+12297058,10.3409116,123.9362898,school,Maguikay High School
+12546002,10.5176646,123.9894734,school,Cabungahan Elementary School
+12546003,10.5174788,123.9903155,school,Estefa O. Monte Memorial National High School
+12564880,10.3226425,123.9523888,school,Cesar M. Cabahug School
+12657522,10.2973495,123.8923321,school,Regino Mercado Elementary School
+12657644,10.2998982,123.8805203,school,Labangon Elementary School
+12886535,10.2074267,123.9884969,school,Gilutongan Integrated School
+12886536,10.207215,123.9883661,school,Gilutongan Elementary School
+13312335,10.028491,124.0912785,school,Inabanga High School- Nabuad
+13312336,10.0293029,124.0914931,school,Nabuad Elementary School
+13337047,10.4820457,124.0214214,school,Maslog National High School
+13337048,10.4819443,124.0218039,school,Maslog Elementary School
+13337414,10.2714505,123.8421952,school,Bulacao National High School
+13337415,10.2710952,123.8425409,school,Bulacao Elementary School
+13337432,10.2788295,123.8431355,school,Candulawan Elementary School
+13337433,10.2787553,123.8429829,school,Candulawan National High School
+13340802,10.2498096,123.8543352,school,Borromeo Brothers Elementary School
+13340803,10.2503154,123.8542391,school,Cansojong National High School
+13341487,10.2092002,123.7444503,school,Na-alad Elementary School
+13341488,10.209201,123.7449204,school,Na-alad National High School
+13344296,10.3786313,123.935704,school,Casili Night High School
+13344297,10.3788152,123.9353768,school,Casili Elementary School
+13360284,10.5263038,123.8027913,school,Cabagdalan Elementary School
+13687604,10.3055853,123.9416645,school,Lo-ok National High School
+13797512,10.292166,123.8040917,school,Tapul Elementary School
+13797513,10.2925355,123.8039017,school,Tapul National High School
+13872351,10.4559462,124.0118143,school,Compostela National High School - Evening Class
+13872352,10.4558908,124.0114427,school,Compostela National High School
+13998745,10.2779321,123.8568611,school,Pardo Elementary School
+13998746,10.2786689,123.8564898,school,Pardo National High School
+14075063,10.5950078,124.0181427,school,Carmen National High School - Night
+14075064,10.5948678,124.0186944,school,Carmen National High School - Day
+14075070,10.324523,123.8988088,school,Lahug Elementary School
+14075071,10.3250119,123.8986669,school,Lahug National Night High School
+14075072,10.5044392,123.9541731,school,Baliang National High School
+14075073,10.5042419,123.9546655,school,Eustaquio Capin Memorial Elementary School
+14075074,10.2880077,123.9460165,school,Babag Night High School
+14075075,10.2881603,123.9456152,school,Babag National High School
+14075076,10.2886939,123.9456675,school,Babag I Elementary School
+14075077,10.2807877,123.9605768,school,Sudtonggan Night High School
+14075078,10.2805197,123.9609113,school,Sudtonggan Elementary School
+15061554,10.3007915,123.9073419,school,Tejero National Night High School
+15061555,10.3005281,123.9073057,school,Tejero Elementary School
+15259897,10.1518236,123.6994308,school,Panadtaran Integrated School
+15472901,10.2560801,123.8400534,school,Monterey School Inc.
+15601682,10.2759306,123.9742853,school,Marigondon Elementary School
+16023139,10.2850413,123.9439938,school,Tiangue Elementary School
+16544810,10.281616,123.7121697,school,Uling Senior High School
+16544811,10.281782,123.7124095,school,Uling Elementary School
+17190821,10.2931826,123.9878791,school,Abuno Elementary School
+17190822,10.2926405,123.9875294,school,Abuno High School
+18043525,10.2481424,123.8333906,school,Biasong Elementary School
+18050773,10.3282984,123.9332328,school,Tipolo National High School
+18215433,10.2451225,123.8445805,school,Talisay City Science High School
+18215434,10.2457383,123.8430235,school,Talisay City National High School
+18215435,10.2456105,123.843941,school,Talisay City Central Elementary School
+18289714,10.2516268,123.9497871,school,Cordova Catholic Cooperative School
+18737930,10.2550431,123.8100093,school,Lipata Central Elementary School
+18853254,10.2695954,123.7422256,school,Cogon Elementary School
+18853255,10.2691617,123.7423925,school,Cogon National High School
+18853536,10.2401286,123.7824244,school,Tungkop Elementary School
+18853538,10.2397294,123.7826316,school,Tungkop National High School
+18897297,10.3765487,123.9575391,school,Consolacion National High School
+18897622,10.3638204,123.9613963,school,Tugbongan Elementary School
+18897625,10.3635987,123.9614014,school,Tugbongan National High School
+18901039,10.3624481,123.9816931,school,Tayud National High School
+18901040,10.3627667,123.9820397,school,Tayud Elementary School
+19028132,10.1633409,123.7068198,school,"Notre Dame Academy of San Fernando, Cebu"
+19028134,10.1621908,123.7071377,school,South Poblacion Elementary School
+19065619,10.4994864,123.7184701,school,Jose Chona Jo Memorial National High School
+19065620,10.4999493,123.7187889,school,Jose Chona Jo Elementary School
+19068569,10.3450681,123.95865,school,Paknaan Elementary School
+19068570,10.3453533,123.9589491,school,Paknaan National High School
+19096569,10.3226678,123.7724264,school,Camp 7 National High School
+19096570,10.322291,123.772538,school,Camp 7 Elementary School
+19401662,10.3109559,123.8894674,school,Cebu Cherish School
+19448050,10.3478692,123.9256421,school,Cabancalan National High School
+19448051,10.3476457,123.9253922,school,Cabancalan II Elementary School
+19450674,10.3351412,123.9435522,school,Ibabao-Estancia Elementary School
+19450675,10.3351029,123.9440311,school,Mandaue City Science High School
+19463614,10.3001248,124.0082344,school,Cebu International Academy
+19725892,10.2559669,123.8097806,school,Lipata National High School
+355114371,10.3266519,123.9453965,university,University of Visayas
+369910806,10.3072135,123.8966479,university,Cebu Institute Of Medicine
+413986599,10.3385463,123.911958,university,University of Cebu
+2666313492,10.2961147,123.8612532,university,Rogationist Seminary - Cebu
+4142385990,10.2926244,123.8633034,university,Southwestern University Basak Campus
+4195814689,10.2926258,123.9762164,university,Indiana Aerospace University
+97924550,10.3199269,123.9330963,university,Cebu Doctors University
+123170670,10.3464834,123.9157254,university,College of Dentistry and Nursing
+123170672,10.34632,123.9152922,university,Gullas College of Medicine
+155643436,10.2957804,123.8804693,university,Cebu Institute of Technology - University
+155744724,10.3125528,123.9012525,university,University of San Carlos North Campus
+155748501,10.3285659,123.90101,university,University of Southern Philippines Foundation
+155927183,10.301666,123.8967796,university,Cebu Normal University
+164213031,10.5033904,124.0291675,university,Cebu Technological University - Danao Campus
+226488302,10.2984463,123.90136,university,University of the Visayas - Main Campus
+226488304,10.2964747,123.9066339,university,Cebu Technological University
+231980624,10.3005504,123.8880124,university,University of San Carlos-South Campus
+231981848,10.2965557,123.90331,university,University of Southern Philippines Foundation
+232593773,10.2987889,123.8959576,university,Asian College of Technology
+233411723,10.3514487,123.9133044,university,USC Press
+321929269,10.2900873,123.8615569,university,University of San Jose Recoletos - Basak Campus
+397899000,10.5821034,124.0196218,university,Cebu Technological University - Carmen Campus
+413310722,10.293054,123.9762803,university,Indiana Aerospace University
+425934394,10.5188046,124.0220687,university,University of the Visayas - Danao
+459927080,10.3558303,123.9089364,university,University of San Carlos Talamban Campus
+518439329,10.5316348,123.7301505,university,Cebu Normal University - Balamban Campus
+551595958,10.2660633,123.8731296,university,UP Cebu SRP Campus
+574475951,10.2994803,123.8988975,university,University of San Carlos Downtown Campus
+624762169,10.2869239,123.8777099,university,University of Cebu - Maritime Education and Training Center
+749746212,10.326384,123.9544835,university,University of Cebu - Lapu-Lapu Mandaue Campus
+814094196,10.245943,123.7990863,university,University of the Visayas - Minglanilla Campus
+819522412,10.2975869,123.8632455,university,Don Bosco Technology Center
+1136367107,10.2090154,123.7566201,university,Cebu Technological University - Naga Extension
+1165514560,10.3717554,123.8455686,university,Cebu Technological University - Cebu City Mountain Campus
+1189391805,10.5894306,124.0196938,university,CTU Carmen Aquaculture Technology Campus
+1288631942,10.2968693,123.8970221,university,University of Cebu - Main Campus
+1289565839,10.2983891,123.8977827,university,University of Cebu - Main Campus - Jones Extension
+12277631,10.3226317,123.898783,university,University of the Philippines Cebu
+12556602,10.3032951,123.89007,university,Southwestern University PHINMA
+12664855,10.2940373,123.8974752,university,University of San Jose-Recoletos
+15767897,10.368819,123.9709328,university,Cebu Technological University - Consolacion Campus
+369910593,10.3371996,123.9305101,college,Benedicto College
+413986584,10.3233136,123.9084972,college,San Carlos Seminary College
+1740916595,10.3234041,123.9073399,college,Banilad StudyCenter
+2257902024,10.3339997,123.9377542,college,Saint Paul College Foundation Inc.
+2870511586,10.3089105,123.9017632,college,Cebu Foursquare Bible College
+3372735542,10.3079726,123.8972661,college,Velez College
+4705869590,10.3629229,123.9472303,college,Unnamed education
+4834112521,10.3234417,123.9408521,college,Mandaue City College
+4851048321,10.314497,123.9715712,college,Philippine State College of Aeronautics (Mactan Campus)
+5274436721,10.3439044,123.9174419,college,Baptist Theological College Cebu Graduate School Of Theology
+5406200621,10.2988286,123.8935856,college,Rizwoods College
+5432258121,10.5022482,124.0272264,college,Rosemont Hills Montessori College
+5825209177,10.3220441,123.9093178,college,Pope John XIII Seminary
+5846370648,10.2840821,123.8722768,college,Rizwoods Colleges
+6043563949,10.3295536,123.9020361,college,STI College
+8068847085,10.304998,123.9095978,college,Benedicto College - Cebu City Campus
+8699777993,10.2984761,123.8984093,college,USC College of Law
+155744079,10.3119036,123.8962566,college,Saint Theresa's College
+261165127,10.2961703,123.8836333,college,Salazar Colleges of Science and Institute of Technology
+363758376,10.2446688,123.7943227,college,St. Cecilia's College - Cebu
+404344655,10.2720182,123.8481671,college,University of Cebu - Pardo & Talisay Campus
+425929260,10.5236536,124.0253021,college,Northeastern Cebu Colleges
+611935854,10.3090542,123.8958957,college,Velez College Annex Building
+619865410,10.3244015,123.8835079,college,Golden Success College
+621231978,10.3116873,123.9040749,college,Colegio de la Inmaculada Concepion- Cebu
+621512641,10.330998,123.8882894,college,Lyceum of Cebu
+733193547,10.3702567,123.9188173,college,Cebu Mary Immaculate Conception
+827994703,10.5199336,124.0281806,college,Santo Tomas College
+829958058,10.4560537,124.0088503,college,Lyceum de San Sebastian
+909471246,10.4000651,124.0007158,college,La Consolacion College Liloan
+922789449,10.3414107,123.9422524,college,St. Louis College - Cebu
+937924625,10.2979008,123.8905828,college,College of Technological Sciences – Cebu
+986935901,10.3099761,123.7106572,college,De La Salle Andres Soriano Memorial College
+1136367100,10.2044177,123.7551249,college,Professional Academy of the Philippines
+1137562966,10.3134555,123.8808143,college,Matias H. Aznar Memorial College of Medicine
+1148689564,10.26234,123.9611335,college,Cordova Public College
+1328726722,10.3118226,123.8849633,college,Unnamed education
+1347064222,10.2428408,123.7949105,college,St. Cecilia's College - Cebu Annex Extension
+1390894360,10.3672705,123.9710166,college,Philippine Public Safety College
+12288761,10.294145,123.8960388,college,Cebu Eastern College
+15472900,10.2429991,123.8480311,college,Talisay City College
+18047352,10.3025345,123.9868063,college,Lapulapu Cebu International College
+18901246,10.3587074,123.990743,college,Unnamed education
+4186435331,10.3044756,123.8935549,kindergarten,Unnamed education
+5281338488,10.3474172,123.9142786,kindergarten,Montessori School of Joy
+5846373802,10.2822828,123.8685642,kindergarten,Salvatorian School
+8504700818,10.3117585,123.8954911,kindergarten,Saint Theresa's College of Cebu Kindergarten
+13020211593,10.376559,123.9555679,kindergarten,Carmelite Learning Center of Consolacion Cebu
+402589914,10.2631283,123.8412898,kindergarten,River of Praise
+403989465,10.2561468,123.83959,kindergarten,Montery School

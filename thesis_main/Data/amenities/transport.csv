@@ -1,0 +1,2644 @@
+id,lat,lon,amenity_type,amenity,lgu
+25710827,10.3245825,123.9065554,secondary,Archbishop Reyes Avenue,Cebu City
+25800031,10.3161918,123.8907957,secondary,Osmeña Boulevard,Cebu City
+25801800,10.2985014,123.8972299,secondary,Osmeña Boulevard,Cebu City
+25802488,10.2990445,123.9008286,tertiary,Sanciangko Street,Cebu City
+25937030,10.2939883,123.8969022,tertiary,Leon Kilat Street,Cebu City
+25937225,10.3106747,123.9039408,secondary,Gorordo Avenue,Cebu City
+28817154,10.3274554,123.9214006,secondary,F. Cabahug Street,Cebu City
+28817564,10.3155497,123.9163334,primary,M.J. Cuenco Avenue,Cebu City
+28833617,10.2926194,123.9039834,trunk,Cebu South Coastal Road,Cebu City
+28833618,10.3092675,123.9188807,primary,Juan Luna Avenue,Cebu City
+28834353,10.3204189,123.9039247,secondary,Archbishop Reyes Avenue,Cebu City
+28834354,10.3192859,123.9033265,secondary,Archbishop Reyes Avenue,Cebu City
+28834962,10.3158692,123.8922448,tertiary,F. Ramos Extension,Cebu City
+28908647,10.2993398,123.9089353,trunk,Sergio Osmeña Avenue,Cebu City
+28909509,10.3115027,123.899834,tertiary,Dionisio Jakosalem Street,Cebu City
+28909514,10.2932736,123.8992223,tertiary,Lincoln Street,Cebu City
+28909516,10.2943522,123.8979571,tertiary,P. Lopez Street,Cebu City
+28909518,10.2950277,123.899275,tertiary,Manalili Street,Cebu City
+28909519,10.2925392,123.9002268,tertiary,F. Gonzales Street,Cebu City
+28925803,10.2996545,123.8969793,primary,P. del Rosario Street,Cebu City
+28925805,10.2913322,123.8776783,secondary,Natalio Bacalso Avenue,Cebu City
+28951497,10.312143,123.8916056,tertiary,Don Gil Garcia Street,Cebu City
+28951498,10.317909,123.8876442,tertiary,Andres Abellana Street,Cebu City
+28951499,10.2978815,123.8879412,secondary,Vicente Rama Avenue,Cebu City
+28951500,10.3170023,123.8892149,secondary,M. Velez Street,Cebu City
+28951501,10.3190269,123.8867775,tertiary,L. Bacayo Street,Cebu City
+28956724,10.3160525,123.8901934,secondary,G. Garcia Street,Cebu City
+28956725,10.3160506,123.8905205,secondary,N. Escario Street,Cebu City
+28957488,10.3061833,123.9005606,tertiary,Sikatuna Street,Cebu City
+28957489,10.2983867,123.9019077,tertiary,Dionisio Jakosalem Street,Cebu City
+28957492,10.303869,123.8981888,tertiary,Junquera Street,Cebu City
+29261572,10.3126007,123.8910056,tertiary,Jasmine Street,Cebu City
+29261573,10.310009,123.8918459,tertiary,Don Mariano Cui Street,Cebu City
+29261588,10.3210503,123.8911527,tertiary,Villalon Drive,Cebu City
+29261594,10.3127692,123.8957821,tertiary,Don Ramon Aboitiz Street,Cebu City
+29261596,10.3133589,123.8906614,tertiary,Don Mariano Cui Street,Cebu City
+29290599,10.3546585,123.885924,primary,Cebu-Balamban Transcentral Highway,Cebu City
+29290601,10.3310435,123.8982993,primary,Salinas Drive,Cebu City
+29290602,10.3305064,123.8978501,secondary,Gorordo Avenue,Cebu City
+29291209,10.3305697,123.8924282,tertiary,Justice Street,Cebu City
+29451501,10.2978555,123.9027091,secondary,Colon Street,Cebu City
+29451508,10.3061789,123.901929,tertiary,General Echavez Street,Cebu City
+29451510,10.2931478,123.8911094,tertiary,T. Abella Street,Cebu City
+29451511,10.2925967,123.870362,secondary,Francisco Llamas Street,Cebu City
+29451512,10.3450398,123.926361,secondary,Hernan Cortes Street,Cebu City
+29451526,10.3303947,123.8805544,secondary,J. Labra Street,Cebu City
+29451527,10.3207067,123.9260214,secondary,Hernan Cortes Street,Cebu City
+29451533,10.3017025,123.9030399,tertiary,T. Padilla Street,Cebu City
+29840348,10.3729436,123.9180612,secondary,Miñoza Street,Cebu City
+32744073,10.360197,123.915757,secondary,Manuel L. Quezon Avenue,Cebu City
+32834710,10.3149615,123.9052344,secondary,Cardinal Rosales Avenue,Cebu City
+32834729,10.3079354,123.8875508,secondary,B. Rodriguez Street,Cebu City
+32834732,10.3434759,123.9121004,tertiary,Paseo Saturnino,Cebu City
+34130899,10.3463095,123.9216333,tertiary,P. Remedio Street,Cebu City
+34415877,10.3422037,123.9280201,tertiary,Aniceto Seno Road,Cebu City
+34415880,10.3384987,123.9308972,tertiary,E. V. Espina Street,Cebu City
+34617490,10.3583348,123.897737,tertiary,Paseo Elisabeth,Cebu City
+34617508,10.3570184,123.8994553,tertiary,Paseo Don Sergio,Cebu City
+34946939,10.3368994,123.8976191,primary,Veterans Drive,Cebu City
+37729738,10.354703,123.9244058,tertiary,Elias Cortes Street,Cebu City
+37729740,10.3565317,123.9254009,tertiary,Elias Cortes Street,Cebu City
+37981564,10.3242207,123.9257814,primary,M.C. Briones Street,Cebu City
+38423907,10.3406387,123.9094583,tertiary,Camp Lapu-Lapu Road,Cebu City
+38423911,10.3408716,123.9071105,tertiary,Camp Lapu-Lapu Road,Cebu City
+38423933,10.3280155,123.9046752,tertiary,Geonzon Street,Cebu City
+38423935,10.3313609,123.9066017,tertiary,Geonzon Street,Cebu City
+38423941,10.3321061,123.9065044,tertiary,San Miguel Road,Cebu City
+38423943,10.3362578,123.9080121,tertiary,San Miguel Street,Cebu City
+38423944,10.3360816,123.9075713,tertiary,San Miguel Street,Cebu City
+38426293,10.340063,123.9112386,tertiary,Camp Lapu-Lapu Road,Cebu City
+38475968,10.283554,123.8816986,secondary,F. Vestil Street,Cebu City
+38569952,10.3261463,123.9075934,secondary,Archbishop Reyes - M. Cuenco Flyover,Cebu City
+38569953,10.3270544,123.9081969,secondary,Governor M. Cuenco Avenue,Cebu City
+38569954,10.325734,123.9074899,secondary,Archbishop Reyes Avenue,Cebu City
+38571875,10.3133621,123.9010589,tertiary,F. Sotto Drive,Cebu City
+38571879,10.3129773,123.9004626,tertiary,Queens' Road,Cebu City
+38571880,10.3117762,123.8982075,tertiary,Gotianuy Street,Cebu City
+38572557,10.3095316,123.89051,tertiary,C. Rodriguez Street,Cebu City
+38607199,10.3447224,123.9124852,secondary,Governor M. Cuenco Avenue,Cebu City
+38607200,10.3413874,123.9119358,secondary,Governor M. Cuenco Avenue,Cebu City
+38607201,10.3433832,123.9122747,secondary,Governor M. Cuenco Avenue,Cebu City
+38607202,10.3418704,123.9120524,secondary,Governor M. Cuenco Avenue,Cebu City
+38607203,10.3435416,123.9125246,secondary,A. S. Fortuna Street,Cebu City
+38607204,10.3436511,123.9127599,secondary,A. S. Fortuna Street,Cebu City
+38607205,10.3437139,123.9123414,secondary,A. S. Fortuna Street,Cebu City
+38607206,10.3436333,123.9123942,secondary,Governor M. Cuenco Avenue,Cebu City
+38607207,10.3447128,123.9125487,secondary,Governor M. Cuenco Avenue,Cebu City
+39158485,10.3207037,123.9108522,secondary,F. Cabahug Street,Cebu City
+39306441,10.3196249,123.9021537,secondary,N. Escario Street,Cebu City
+39306442,10.319028,123.9009136,secondary,N. Escario Street,Cebu City
+39306443,10.3211685,123.9042779,secondary,Archbishop Reyes Avenue,Cebu City
+39306444,10.3197512,123.9035737,secondary,Archbishop Reyes Avenue,Cebu City
+39819194,10.3558396,123.9147287,secondary,Governor M. Cuenco Avenue,Cebu City
+39819799,10.326581,123.9066768,primary,Salinas Drive,Cebu City
+40070379,10.3002837,123.9050871,secondary,Bonifacio Street,Cebu City
+40897963,10.2984676,123.9084129,tertiary,V. Sotto Street,Cebu City
+40897968,10.2967681,123.9050246,tertiary,Vicente Gullas Street,Cebu City
+40897999,10.2943652,123.9044665,tertiary,Legaspi Street,Cebu City
+41108891,10.34026,123.9117398,secondary,Governor M. Cuenco Avenue,Cebu City
+41108892,10.340066,123.9117067,secondary,Governor M. Cuenco Avenue,Cebu City
+42560859,10.3384272,123.905183,tertiary,Camp Lapu-Lapu Road,Cebu City
+42560860,10.3354561,123.9106688,tertiary,Jose Maria Del Mar Avenue,Cebu City
+42745272,10.3200457,123.91776,tertiary,S. Cabahug Street,Cebu City
+42864232,10.290882,123.8773521,secondary,F. Vestil Street,Cebu City
+45489270,10.3260669,123.9225956,secondary,Hernan Cortes Street,Cebu City
+45489280,10.3221513,123.9252163,secondary,Hernan Cortes Street,Cebu City
+45489305,10.3238438,123.9238135,secondary,Hernan Cortes Street,Cebu City
+45489315,10.3230158,123.9245762,secondary,Hernan Cortes Street,Cebu City
+47066292,10.2945663,123.9076573,tertiary,C. Arellano Boulevard,Cebu City
+47066293,10.297845,123.9099016,tertiary,V. Sotto Street,Cebu City
+47066300,10.3231593,123.9244632,secondary,Hernan Cortes Street,Cebu City
+47066301,10.3221653,123.9250658,secondary,Hernan Cortes Street,Cebu City
+47244771,10.2929164,123.9037646,tertiary,Magallanes Street,Cebu City
+47244772,10.2934705,123.9035585,tertiary,Lapu-Lapu Street,Cebu City
+47244773,10.2921612,123.9034627,tertiary,M.C. Briones Street,Cebu City
+47244774,10.2920358,123.8994806,tertiary,Jose Leyson Street,Cebu City
+47244775,10.2934402,123.8978482,tertiary,F. Calderon Street,Cebu City
+47244776,10.2919295,123.8974319,tertiary,Escaño Street,Cebu City
+47244777,10.2961984,123.8984566,secondary,Osmeña Boulevard,Cebu City
+47244780,10.2945575,123.8985647,tertiary,A. Borromeo Street,Cebu City
+47245025,10.310866,123.921602,secondary,Kaohsiung Street,Cebu City
+47573731,10.3124484,123.9210703,secondary,F. Urot Street,Cebu City
+47573733,10.3133959,123.9221711,secondary,F. Urot Street,Cebu City
+48227339,10.3238427,123.9238911,secondary,Hernan Cortes Street,Cebu City
+48734496,10.3183334,123.9078771,tertiary,Samar Loop,Cebu City
+49037238,10.3067932,123.9055828,secondary,M.J. Cuenco Avenue,Cebu City
+50815001,10.3161728,123.9058263,secondary,Cardinal Rosales Avenue,Cebu City
+50815080,10.3170023,123.9039638,tertiary,Luzon Avenue,Cebu City
+50815095,10.317509,123.9028976,tertiary,Luzon Avenue,Cebu City
+50866334,10.3344552,123.9107337,secondary,Governor M. Cuenco Avenue,Cebu City
+50869750,10.3394462,123.911605,secondary,Governor M. Cuenco Avenue,Cebu City
+50873804,10.3161384,123.9057582,tertiary,Samar Loop,Cebu City
+50873805,10.3201212,123.9052626,tertiary,Mindanao Avenue,Cebu City
+50875248,10.3136369,123.9036736,secondary,Cardinal Rosales Avenue,Cebu City
+51372046,10.3319328,123.9066758,tertiary,I. Villa Street,Cebu City
+51372086,10.3352578,123.9102814,tertiary,Jose Maria Del Mar Avenue,Cebu City
+51372097,10.3320192,123.9067607,tertiary,I. Villa Street,Cebu City
+51777216,10.2979585,123.8984016,tertiary,Pelaez Street,Cebu City
+51816108,10.3206304,123.9262346,secondary,E.O. Perez Street,Cebu City
+51816109,10.3204954,123.9261715,secondary,E.O. Perez Street,Cebu City
+52254221,10.3122331,123.9231384,trunk,Sergio Osmeña Avenue,Cebu City
+52254223,10.3129488,123.9239827,trunk,Sergio Osmeña Avenue,Cebu City
+52332158,10.3204199,123.9259695,secondary,M. Logarta Avenue,Cebu City
+52333118,10.3170715,123.9250037,secondary,M. Logarta Avenue,Cebu City
+52333119,10.313439,123.9221251,secondary,F. Urot Street,Cebu City
+52333120,10.3141911,123.922852,secondary,M. Logarta Avenue,Cebu City
+52333121,10.3141348,123.922925,secondary,M. Logarta Avenue,Cebu City
+52336398,10.2997409,123.9051304,secondary,Eduardo Aboitiz Street,Cebu City
+52372261,10.3024278,123.8982304,tertiary,Junquera Street,Cebu City
+52385857,10.3086191,123.9073015,secondary,General Maxilom Avenue Extension,Cebu City
+52385865,10.3087668,123.9071443,primary,Imus Avenue,Cebu City
+52385872,10.3087676,123.9072093,secondary,General Maxilom Avenue Extension,Cebu City
+52385879,10.3096806,123.8940458,secondary,General Maxilom Avenue,Cebu City
+52385881,10.3091121,123.9074783,primary,M.J. Cuenco Avenue,Cebu City
+52385894,10.3079647,123.9085289,secondary,General Maxilom Avenue Extension,Cebu City
+53804929,10.2962148,123.8922645,tertiary,Sanciangko Street,Cebu City
+53804930,10.3107399,123.8910682,tertiary,J. Llorente Street,Cebu City
+53804932,10.3108055,123.8947088,tertiary,J. Llorente Street,Cebu City
+59914531,10.3313405,123.9285428,tertiary,P. Basubas Street,Cebu City
+62011098,10.3072972,123.8977452,tertiary,V. Ranudo Street,Cebu City
+62072998,10.2845474,123.8598406,primary,Natalio Bacalso Avenue,Cebu City
+62103039,10.3099583,123.9036975,tertiary,General Echavez Street,Cebu City
+62103040,10.3067472,123.9025034,tertiary,General Echavez Street,Cebu City
+65423518,10.379808,123.8706048,primary,Cebu-Balamban Transcentral Highway,Cebu City
+69364432,10.3795831,123.8641004,primary,Cebu-Balamban Transcentral Highway,Cebu City
+69364433,10.3788848,123.8674356,primary,Cebu-Balamban Transcentral Highway,Cebu City
+69364434,10.3764427,123.8566895,primary,Cebu-Balamban Transcentral Highway,Cebu City
+69364435,10.3777609,123.8606499,primary,Cebu-Balamban Transcentral Highway,Cebu City
+75612286,10.2941228,123.9054487,tertiary,Legaspi Extension,Cebu City
+76344245,10.2974224,123.9021025,tertiary,Dionisio Jakosalem Street,Cebu City
+76344246,10.3002611,123.9022923,tertiary,Bonifacio Street,Cebu City
+77592868,10.3208512,123.9246725,tertiary,S. O. Albaño Street,Cebu City
+77592871,10.3128114,123.9241022,trunk,Sergio Osmeña Avenue,Cebu City
+77593968,10.2944533,123.9049639,secondary,M.J. Cuenco Avenue,Cebu City
+77593969,10.2951241,123.9067204,trunk,Cebu South Coastal Road,Cebu City
+77593971,10.2851832,123.8865737,trunk,Cebu South Coastal Road,Cebu City
+77593972,10.2797683,123.8577594,tertiary,F. Jaca Street,Cebu City
+77593974,10.2915924,123.9032089,secondary,Cebu South Coastal Road,Cebu City
+77594022,10.2980015,123.9081145,trunk,Sergio Osmeña Avenue,Cebu City
+77594101,10.3155589,123.9275996,trunk,Ouano Avenue,Cebu City
+77594105,10.2899664,123.8991556,trunk,Cebu South Coastal Road,Cebu City
+77594106,10.2925591,123.9040281,trunk,Cebu South Coastal Road,Cebu City
+77594857,10.3017829,123.90155,primary,P. del Rosario Street,Cebu City
+77594858,10.3029487,123.9028316,primary,Imus Avenue,Cebu City
+77594859,10.3018336,123.9022509,tertiary,Sikatuna Street,Cebu City
+77594863,10.3047481,123.894885,secondary,Osmeña Boulevard,Cebu City
+77594864,10.3017104,123.9009163,primary,P. del Rosario Street,Cebu City
+77594865,10.2983593,123.9087954,tertiary,V. Sotto Street,Cebu City
+77594867,10.2931567,123.9072902,tertiary,Legaspi Extension,Cebu City
+77721333,10.2887283,123.8940683,trunk,Cebu South Coastal Road,Cebu City
+77721334,10.2906698,123.9006192,trunk,Cebu South Coastal Road,Cebu City
+78001733,10.3030728,123.8989548,tertiary,R.R. Landon Street,Cebu City
+78488744,10.3016361,123.9102634,tertiary,T. Padilla Street,Cebu City
+78490451,10.296532,123.8888877,tertiary,Vicente Rama Avenue,Cebu City
+78603309,10.2943519,123.893663,secondary,Colon Street,Cebu City
+78604781,10.2960038,123.9028255,tertiary,P. Gomez Street,Cebu City
+79474355,10.2898987,123.8759096,tertiary,L. Gabuya Street,Cebu City
+79587220,10.3747941,123.8508904,tertiary,Bonbon-Sudlon Road,Cebu City
+79885800,10.2935511,123.8679032,tertiary,E. Sabellano Street,Cebu City
+79886152,10.3193841,123.840306,tertiary,Buhisan Road,Cebu City
+79886153,10.311577,123.8486496,tertiary,Buhisan Road,Cebu City
+79886154,10.3007979,123.8737905,secondary,Katipunan Street,Cebu City
+79886163,10.3313543,123.8767267,tertiary,Sapangdaku Road,Cebu City
+80316061,10.2973994,123.8877011,secondary,Katipunan Street,Cebu City
+80316062,10.297279,123.8854578,secondary,Tres de Abril Street,Cebu City
+80316633,10.3197936,123.9298959,secondary,E.O. Perez Street,Cebu City
+80316701,10.3171335,123.9284694,tertiary,F.F. Cruz Avenue,Cebu City
+80317125,10.414558,123.9165942,secondary,Agpasan-Binaliw-Cebu City Road,Cebu City
+80317161,10.3646559,123.9307852,tertiary,Gregorio Suico Street,Cebu City
+80317162,10.3612773,123.9275898,tertiary,Gregorio Suico Street,Cebu City
+80318411,10.3206129,123.9107527,primary,Pope John Paul Ⅱ Avenue,Cebu City
+80318412,10.320589,123.9108113,secondary,Cardinal Rosales Avenue,Cebu City
+80318413,10.3191517,123.9085951,secondary,Cardinal Rosales Avenue,Cebu City
+80318416,10.3257367,123.9076166,primary,Pope John Paul Ⅱ Avenue,Cebu City
+80318417,10.3258629,123.9075312,primary,Pope John Paul Ⅱ Avenue,Cebu City
+80318418,10.3259798,123.9077453,secondary,Governor M. Cuenco Avenue,Cebu City
+80318419,10.3259116,123.9075856,primary,Pope John Paul Ⅱ Avenue,Cebu City
+80318420,10.3123914,123.9161999,secondary,A. Soriano Jr. Avenue,Cebu City
+80318422,10.2911512,123.8772797,secondary,F. Vestil Street,Cebu City
+80318423,10.2910843,123.8771833,secondary,F. Vestil Street,Cebu City
+80318424,10.2894694,123.8689407,primary,Mambaling Underpass,Cebu City
+80318425,10.28989,123.871849,secondary,Natalio Bacalso Avenue,Cebu City
+80318427,10.2812458,123.8569048,primary,Natalio Bacalso Avenue,Cebu City
+80318428,10.2983123,123.8920879,primary,Natalio Bacalso Avenue,Cebu City
+80318459,10.3169868,123.9130683,primary,Pope John Paul Ⅱ Avenue,Cebu City
+80318460,10.3088282,123.9190898,primary,Juan Luna Avenue,Cebu City
+80318461,10.3137837,123.9149994,primary,Juan Luna Avenue,Cebu City
+80318463,10.3175766,123.9126669,tertiary,S. Cabahug Street,Cebu City
+80394555,10.3205826,123.91558,tertiary,S. Cabahug Street,Cebu City
+80396246,10.3158846,123.929464,tertiary,F.F. Cruz Avenue,Cebu City
+80675938,10.2936042,123.9067286,tertiary,Legaspi Extension,Cebu City
+80675939,10.2932428,123.9073714,tertiary,Legaspi Extension,Cebu City
+80675940,10.2950706,123.9065589,tertiary,Sergio Osmeña Avenue,Cebu City
+80675941,10.2938427,123.9061512,tertiary,Sergio Osmeña Avenue,Cebu City
+80675985,10.2949873,123.9067074,tertiary,Sergio Osmeña Avenue,Cebu City
+81344512,10.4229371,123.8984222,tertiary,Unnamed road corridor,Cebu City
+81344549,10.331607,123.8800288,tertiary,Unnamed road corridor,Cebu City
+81345477,10.3387262,123.8799921,tertiary,CPDRC,Cebu City
+81459171,10.4052312,123.9255062,tertiary,Unnamed road corridor,Cebu City
+81459448,10.3707668,123.9030769,tertiary,Budlaan Road,Cebu City
+82162374,10.2946635,123.9050779,secondary,M.J. Cuenco Avenue,Cebu City
+82162375,10.2941531,123.900168,tertiary,Magallanes Street,Cebu City
+82162396,10.2981922,123.9037033,secondary,Mabini Street,Cebu City
+82172582,10.2924891,123.9026414,tertiary,M.C. Briones Street,Cebu City
+82172584,10.29397,123.9059207,tertiary,Sergio Osmeña Avenue,Cebu City
+82487162,10.3087737,123.8906612,secondary,B. Rodriguez Street,Cebu City
+82487339,10.3084285,123.8954491,tertiary,F. Ramos Street,Cebu City
+82487340,10.3099278,123.8939444,secondary,General Maxilom Avenue,Cebu City
+82487341,10.3098762,123.8942343,secondary,General Maxilom Avenue,Cebu City
+82487342,10.3130602,123.8920642,secondary,Osmeña Boulevard,Cebu City
+82487361,10.3174596,123.8943791,secondary,N. Escario Street,Cebu City
+82487363,10.317808,123.8962908,secondary,N. Escario Street,Cebu City
+83672930,10.3286016,123.897239,tertiary,Sudlon,Cebu City
+83672931,10.3302998,123.8918484,tertiary,Justice Street,Cebu City
+85131865,10.3128817,123.9157087,primary,Juan Luna Avenue,Cebu City
+85131876,10.3132939,123.9154812,primary,Juan Luna Avenue,Cebu City
+85131937,10.3132272,123.9154075,primary,Juan Luna Avenue,Cebu City
+85131947,10.3138348,123.9150722,primary,Juan Luna Avenue,Cebu City
+93553707,10.3610167,123.9273161,tertiary,Elias Cortes Street,Cebu City
+93553709,10.3971915,123.9166881,tertiary,Unnamed road corridor,Cebu City
+93553710,10.3968474,123.9192929,tertiary,Unnamed road corridor,Cebu City
+93553711,10.3951389,123.9213223,secondary,Bacayan - Pit-os Road,Cebu City
+93553712,10.3798363,123.9205545,secondary,Miñoza Street,Cebu City
+94057148,10.2942631,123.8999879,tertiary,Plaridel Street,Cebu City
+94057150,10.2955763,123.8980015,tertiary,P. Lopez Street,Cebu City
+94057151,10.2960049,123.8916978,tertiary,Sanciangko Street,Cebu City
+94057152,10.2960878,123.8918498,tertiary,Sanciangko Street,Cebu City
+94057153,10.2939023,123.8948391,tertiary,Panganiban Street,Cebu City
+94057155,10.2943421,123.8907523,tertiary,T. Abella Street,Cebu City
+94057156,10.2956506,123.8904084,tertiary,T. Abella Street,Cebu City
+94057159,10.2961109,123.8910801,tertiary,Tres de Abril Street,Cebu City
+94079766,10.291193,123.8976026,tertiary,Escaño Street,Cebu City
+94079773,10.2922589,123.9020783,tertiary,P. Burgos Street,Cebu City
+94079775,10.2920085,123.9001493,tertiary,F. Gonzales Street,Cebu City
+94079838,10.2955593,123.8922702,tertiary,Tres de Abril Street,Cebu City
+94079843,10.295479,123.8917155,tertiary,Lakandula Street,Cebu City
+94079850,10.2946508,123.8887122,tertiary,B. Aranas Street,Cebu City
+94079871,10.2965161,123.8861356,tertiary,Tres de Abril Street,Cebu City
+94079954,10.2935928,123.8942306,tertiary,Tres de Abril Street,Cebu City
+94079960,10.2955557,123.8898352,tertiary,Vicente Rama Avenue,Cebu City
+94079974,10.2987191,123.8879716,tertiary,J. Alcantara Street,Cebu City
+94080156,10.3004204,123.8935494,tertiary,J. Urgello Street,Cebu City
+94080239,10.3052494,123.8938116,tertiary,V. Urgello Street,Cebu City
+94080405,10.3047736,123.8982269,tertiary,F. Ramos Street,Cebu City
+94080468,10.3074334,123.8993133,tertiary,V. Ranudo Street,Cebu City
+94080775,10.3047603,123.9041748,primary,Imus Avenue,Cebu City
+94080778,10.3040611,123.9034878,primary,Imus Avenue,Cebu City
+94080796,10.3021946,123.9021507,primary,Imus Avenue,Cebu City
+94080798,10.3039801,123.9035955,primary,Imus Avenue,Cebu City
+94080966,10.2954696,123.9009741,tertiary,Plaridel Extension,Cebu City
+94080969,10.2949007,123.9042688,tertiary,Lapu-Lapu Street,Cebu City
+94081019,10.2957663,123.9051208,tertiary,Jereza Street,Cebu City
+94081130,10.2917787,123.9015615,tertiary,M.L. Quezon Boulevard,Cebu City
+94081403,10.3080798,123.8885873,secondary,B. Rodriguez Street,Cebu City
+94081414,10.3082952,123.8898066,secondary,B. Rodriguez Street,Cebu City
+94081417,10.3080201,123.8875496,secondary,B. Rodriguez Street,Cebu City
+94081421,10.3080117,123.8885915,secondary,B. Rodriguez Street,Cebu City
+94081428,10.2996028,123.8925787,tertiary,J. Alcantara Street,Cebu City
+94081431,10.2989169,123.8881964,tertiary,J. Alcantara Street,Cebu City
+94081438,10.2973585,123.8898697,primary,Natalio Bacalso Avenue,Cebu City
+94081443,10.2974312,123.8895197,primary,Natalio Bacalso Avenue,Cebu City
+94081448,10.2973384,123.8886097,primary,Natalio Bacalso Avenue,Cebu City
+94081453,10.2973159,123.8895936,primary,Natalio Bacalso Avenue,Cebu City
+94081459,10.2944369,123.8938945,secondary,Colon Street,Cebu City
+94498648,10.3147602,123.8941546,tertiary,Juana Osmeña Street,Cebu City
+94498661,10.315394,123.893142,tertiary,Don Jose Avila Street,Cebu City
+94498668,10.3133881,123.8932744,tertiary,M.P. Yap Street,Cebu City
+94498670,10.3147701,123.8913414,tertiary,Don Jose Avila Street,Cebu City
+95047094,10.3323714,123.8967409,tertiary,Salinas Drive Extension,Cebu City
+95047096,10.3339351,123.8946197,tertiary,Salinas Drive Extension,Cebu City
+95047140,10.3180435,123.9132825,tertiary,S. Cabahug Street,Cebu City
+95047144,10.322079,123.9149929,tertiary,President Roxas Street,Cebu City
+95188447,10.329397,123.8906679,tertiary,Justice Street,Cebu City
+95188464,10.3269942,123.8889754,tertiary,Unnamed road corridor,Cebu City
+95188469,10.3307492,123.8851389,tertiary,Unnamed road corridor,Cebu City
+95188470,10.3285839,123.8896912,tertiary,Villalon Drive,Cebu City
+95188475,10.3283584,123.8897162,tertiary,Unnamed road corridor,Cebu City
+95188555,10.3349693,123.8931967,tertiary,Salinas Drive Extension,Cebu City
+95188644,10.3429457,123.8896519,tertiary,Unnamed road corridor,Cebu City
+95188646,10.342177,123.8891894,tertiary,Salinas Drive Extension,Cebu City
+95196988,10.3271909,123.9208965,secondary,F. Cabahug Street,Cebu City
+95196993,10.3244685,123.9167446,secondary,F. Cabahug Street,Cebu City
+95484664,10.295968,123.9077972,tertiary,Unnamed road corridor,Cebu City
+95484666,10.3089066,123.9191823,primary,Juan Luna Avenue,Cebu City
+95484702,10.31349,123.9276512,tertiary,Doctor F.E. Zuellig Avenue,Cebu City
+95484703,10.3135793,123.9275772,tertiary,Doctor F.E. Zuellig Avenue,Cebu City
+95484704,10.3220186,123.9302269,tertiary,F.F. Cruz Avenue,Cebu City
+95484706,10.3182834,123.9281534,tertiary,F.F. Cruz Avenue,Cebu City
+95484707,10.3170567,123.928359,tertiary,F.F. Cruz Avenue,Cebu City
+96521497,10.3198167,123.8867572,tertiary,Andres Abellana Street,Cebu City
+96913616,10.2953792,123.8866304,tertiary,Carlock Street,Cebu City
+96913617,10.2967647,123.8857897,secondary,Tres de Abril Street,Cebu City
+96913665,10.2927501,123.9042496,secondary,M.J. Cuenco Avenue,Cebu City
+96913884,10.2920262,123.9011613,tertiary,Dionisio Jakosalem Street,Cebu City
+96943190,10.3417587,123.8892376,tertiary,Salinas Drive Extension,Cebu City
+96943192,10.3378723,123.8907085,tertiary,Salinas Drive Extension,Cebu City
+97521374,10.2970271,123.8978138,secondary,Osmeña Boulevard,Cebu City
+97531747,10.3230721,123.8847172,tertiary,Andres Abellana Extension,Cebu City
+97908229,10.3036822,123.9127554,secondary,General Maxilom Avenue Extension,Cebu City
+97908230,10.3060915,123.9158209,trunk,Sergio Osmeña Avenue,Cebu City
+97954214,10.3194671,123.9202366,primary,Lopez Jaena Street,Cebu City
+97954216,10.3186199,123.9191607,primary,Lopez Jaena Street,Cebu City
+98166876,10.3784,123.9261611,tertiary,Unnamed road corridor,Cebu City
+98166965,10.3833099,123.9302335,tertiary,Unnamed road corridor,Cebu City
+98166985,10.3937429,123.926947,tertiary,Unnamed road corridor,Cebu City
+98167004,10.3969636,123.9258227,tertiary,Unnamed road corridor,Cebu City
+98167381,10.3916363,123.9295298,tertiary,Unnamed road corridor,Cebu City
+98259854,10.3775452,123.9178944,tertiary,San Jose Road,Cebu City
+98260084,10.3971031,123.9114016,tertiary,Unnamed road corridor,Cebu City
+98260085,10.3981742,123.9062514,tertiary,Unnamed road corridor,Cebu City
+98260329,10.3993002,123.9066896,tertiary,Unnamed road corridor,Cebu City
+98260351,10.3703591,123.8821425,tertiary,Busay-Budlaan Road,Cebu City
+98264132,10.3926365,123.8520884,tertiary,Unnamed road corridor,Cebu City
+98264158,10.3721788,123.8442746,tertiary,Bonbon-Sudlon Road,Cebu City
+98264159,10.3744844,123.8523287,tertiary,Unnamed road corridor,Cebu City
+98264167,10.3679045,123.860496,tertiary,Unnamed road corridor,Cebu City
+98409389,10.3446492,123.892954,tertiary,Unnamed road corridor,Cebu City
+98409390,10.3438824,123.8919848,tertiary,Unnamed road corridor,Cebu City
+98409399,10.3317373,123.8742413,tertiary,Unnamed road corridor,Cebu City
+98409401,10.3352031,123.8694994,tertiary,Sapangdaku Road,Cebu City
+98409417,10.3353362,123.8665399,tertiary,Buhisan Road,Cebu City
+98409418,10.3325759,123.8535289,tertiary,Buhisan Road,Cebu City
+98409421,10.3355105,123.8666885,tertiary,Buhisan Road,Cebu City
+98409494,10.3182756,123.8766682,tertiary,Unnamed road corridor,Cebu City
+98409676,10.3266807,123.888193,tertiary,Unnamed road corridor,Cebu City
+98430106,10.3164679,123.8874842,secondary,M. Velez Street,Cebu City
+98430107,10.3168359,123.8885536,secondary,M. Velez Street,Cebu City
+98430111,10.3252399,123.8880779,tertiary,Unnamed road corridor,Cebu City
+98430114,10.3243929,123.8841159,tertiary,Singson Road,Cebu City
+98430152,10.321198,123.8808798,tertiary,Gervacio Quijada Street,Cebu City
+98430251,10.3233946,123.8869415,tertiary,Andres Abellana Extension,Cebu City
+98430268,10.3241919,123.8876066,tertiary,Tipolo Ville Road,Cebu City
+98430269,10.3239501,123.8854004,tertiary,Andres Abellana Street,Cebu City
+98430311,10.3127015,123.8827208,tertiary,J. Fortich Street,Cebu City
+98430356,10.3119272,123.8784345,secondary,Ramon Duterte Street,Cebu City
+98430361,10.314098,123.8808456,secondary,Ramon Duterte Street,Cebu City
+98430658,10.3098553,123.8827091,tertiary,I. Limkakeng Street,Cebu City
+98430671,10.3079223,123.8831602,tertiary,Dr. Pablo Abella Street,Cebu City
+98430765,10.3111955,123.8502408,tertiary,Buhisan Road,Cebu City
+98430896,10.3024441,123.8855734,tertiary,Lucio Lopez Drive,Cebu City
+98430897,10.3025055,123.8847954,tertiary,Lucio Lopez Drive,Cebu City
+98430899,10.3010263,123.8846229,tertiary,A. Lopez Street,Cebu City
+98571908,10.2966531,123.8693241,tertiary,Taurus Street,Cebu City
+98571914,10.2967368,123.8673837,tertiary,Buhisan Road,Cebu City
+98571916,10.2990288,123.8698878,secondary,Francisco Llamas Street,Cebu City
+98571917,10.2984566,123.8698427,secondary,Francisco Llamas Street,Cebu City
+98571928,10.2958895,123.8742787,tertiary,Tres de Abril Street,Cebu City
+98571929,10.2974594,123.8785597,tertiary,Tres de Abril Street,Cebu City
+98571931,10.2979617,123.88507,secondary,A. Lopez Street,Cebu City
+98683742,10.2959649,123.8729799,tertiary,Pablo S. Atillo Street,Cebu City
+98683744,10.2943206,123.8749791,tertiary,Pablo S. Atillo Street,Cebu City
+98683764,10.2928493,123.8753571,tertiary,Gabriel Elorde Street,Cebu City
+98683771,10.2961942,123.8843369,primary,Natalio Bacalso Avenue,Cebu City
+98683772,10.2946301,123.8820402,primary,Natalio Bacalso Avenue,Cebu City
+98683775,10.2920152,123.8771512,tertiary,Maria Gochan Street,Cebu City
+98683821,10.2897367,123.8704077,primary,Mambaling Underpass,Cebu City
+98683845,10.2904451,123.8662376,tertiary,Macopa Street,Cebu City
+98683882,10.2868606,123.8609173,tertiary,E. Corro Street,Cebu City
+98683887,10.2879419,123.859524,tertiary,E. Corro Street,Cebu City
+98683993,10.2936975,123.8832393,tertiary,R. Padilla Street,Cebu City
+98683995,10.2915591,123.8808544,secondary,Candido Padilla Street,Cebu City
+98683996,10.2911484,123.8791711,secondary,Candido Padilla Street,Cebu City
+98839907,10.292183,123.8884855,tertiary,Tupas Street,Cebu City
+98839982,10.2880353,123.8701748,tertiary,Colonel A. Cabreros Street,Cebu City
+98840036,10.2797734,123.8569237,tertiary,I. Tabura Street,Cebu City
+98969696,10.3088853,123.8523723,tertiary,Buhisan Road,Cebu City
+98969697,10.3105027,123.8508695,tertiary,Unnamed road corridor,Cebu City
+99142667,10.277014,123.8811453,trunk,Cebu South Coastal Road,Cebu City
+99142681,10.2737603,123.8715246,tertiary,Banog Road,Cebu City
+102243388,10.3703493,123.9200878,secondary,Governor M. Cuenco Avenue,Cebu City
+102243389,10.3714169,123.923467,secondary,Governor M. Cuenco Avenue,Cebu City
+102243392,10.4184823,123.9154601,secondary,Unnamed road corridor,Cebu City
+102243393,10.4216711,123.9156323,secondary,Unnamed road corridor,Cebu City
+102243400,10.3386575,123.8804808,tertiary,CPDRC,Cebu City
+102243401,10.3358781,123.8803485,tertiary,CPDRC,Cebu City
+102243402,10.3321276,123.8798598,tertiary,Unnamed road corridor,Cebu City
+102243403,10.3344786,123.8792788,tertiary,Unnamed road corridor,Cebu City
+102243404,10.2929993,123.8798597,primary,Natalio Bacalso Avenue,Cebu City
+102243405,10.2932139,123.8801629,primary,Natalio Bacalso Avenue,Cebu City
+102243406,10.2937781,123.8810304,primary,Natalio Bacalso Avenue,Cebu City
+102243410,10.3025549,123.8603549,tertiary,Buhisan Road,Cebu City
+102243411,10.2996991,123.8633144,tertiary,Buhisan Road,Cebu City
+102243416,10.3001894,123.9093149,trunk,Sergio Osmeña Avenue,Cebu City
+102243417,10.3008479,123.9097911,trunk,Sergio Osmeña Avenue,Cebu City
+102243418,10.3001725,123.9093861,trunk,Sergio Osmeña Avenue,Cebu City
+102243419,10.2995157,123.9089454,trunk,Sergio Osmeña Avenue,Cebu City
+102243420,10.3015002,123.910193,trunk,Sergio Osmeña Avenue,Cebu City
+102243421,10.3013572,123.9100071,trunk,Sergio Osmeña Avenue,Cebu City
+102243422,10.3015762,123.9102545,trunk,Sergio Osmeña Avenue,Cebu City
+102243423,10.3015488,123.9101472,trunk,Sergio Osmeña Avenue,Cebu City
+102243424,10.3019295,123.9083962,tertiary,T. Padilla Street,Cebu City
+102243425,10.3019291,123.9085053,tertiary,T. Padilla Street,Cebu City
+102243426,10.3007886,123.9064669,secondary,M.J. Cuenco Avenue,Cebu City
+102243427,10.3004657,123.906423,secondary,M.J. Cuenco Avenue,Cebu City
+102243428,10.3017534,123.9037689,tertiary,T. Padilla Street,Cebu City
+102243429,10.3018377,123.9051937,tertiary,T. Padilla Street,Cebu City
+103098809,10.3284649,123.8961251,tertiary,Sudlon,Cebu City
+103098811,10.328566,123.8969196,tertiary,Sudlon,Cebu City
+103098826,10.335651,123.8924333,tertiary,Salinas Drive Extension,Cebu City
+103098835,10.3123317,123.9161811,primary,Juan Luna Avenue,Cebu City
+103098836,10.3116094,123.9167831,primary,Juan Luna Avenue,Cebu City
+103098838,10.311184,123.9220753,trunk,Sergio Osmeña Avenue,Cebu City
+103098840,10.311616,123.920993,secondary,Kaohsiung Street,Cebu City
+103098842,10.3121219,123.9232354,trunk,Sergio Osmeña Avenue,Cebu City
+103534915,10.3126761,123.9165651,secondary,A. Soriano Jr. Avenue,Cebu City
+103534918,10.3123371,123.9162458,secondary,A. Soriano Jr. Avenue,Cebu City
+103534921,10.3124568,123.9163927,secondary,A. Soriano Jr. Avenue,Cebu City
+104217179,10.3704521,123.874248,tertiary,Roosevelt Drive,Cebu City
+110515534,10.3342625,123.882251,tertiary,Unnamed road corridor,Cebu City
+111478770,10.398701,123.8587938,tertiary,Unnamed road corridor,Cebu City
+111478772,10.3990751,123.8988969,tertiary,Unnamed road corridor,Cebu City
+111504241,10.3991037,123.9031729,tertiary,Unnamed road corridor,Cebu City
+111504242,10.4163443,123.905713,tertiary,Barangay Agsungot Cebu city,Cebu City
+113662961,10.4094667,123.8779684,tertiary,Unnamed road corridor,Cebu City
+113775609,10.3738302,123.8537155,tertiary,Unnamed road corridor,Cebu City
+113775620,10.4235358,123.8808996,tertiary,Unnamed road corridor,Cebu City
+119022020,10.3995941,123.8958775,tertiary,Unnamed road corridor,Cebu City
+119022021,10.4044148,123.8870924,tertiary,Unnamed road corridor,Cebu City
+123337380,10.3723947,123.881851,tertiary,Busay-Budlaan Road,Cebu City
+123337386,10.3683721,123.8794758,tertiary,Busay-Budlaan Road,Cebu City
+124129197,10.3460033,123.8728785,tertiary,Unnamed road corridor,Cebu City
+131156575,10.2899014,123.8728685,primary,Natalio Bacalso Avenue,Cebu City
+131156577,10.292039,123.8786173,secondary,Natalio Bacalso Avenue,Cebu City
+131156578,10.2925956,123.8792643,secondary,Natalio Bacalso Avenue,Cebu City
+131156579,10.2906469,123.8762927,secondary,Natalio Bacalso Avenue,Cebu City
+131156581,10.2913691,123.8773987,primary,Mambaling Flyover,Cebu City
+131156582,10.2925831,123.8792677,primary,Natalio Bacalso Avenue,Cebu City
+131156586,10.2903861,123.875604,primary,Natalio Bacalso Avenue,Cebu City
+131156587,10.2903393,123.8756132,primary,Natalio Bacalso Avenue,Cebu City
+131562983,10.400734,123.924136,tertiary,Unnamed road corridor,Cebu City
+141330603,10.3988259,123.8586993,tertiary,Unnamed road corridor,Cebu City
+154104314,10.3041123,123.8926205,tertiary,J. Urgello Street,Cebu City
+155016590,10.3035522,123.8930692,tertiary,Uytengsu Street,Cebu City
+155742383,10.3072435,123.8796662,tertiary,Dr. Pablo Abella Street,Cebu City
+155744728,10.312932,123.9001846,tertiary,Queens' Road,Cebu City
+155749919,10.3300603,123.8935661,tertiary,Doña Modesta Gaisano Street,Cebu City
+158658784,10.3780074,123.8654322,tertiary,Unnamed road corridor,Cebu City
+159782894,10.3044126,123.8991604,tertiary,F. Ramos Extension,Cebu City
+159782899,10.307701,123.8993185,tertiary,Natividad B. Toring Street,Cebu City
+160891959,10.3124146,123.9004742,tertiary,F. Sotto Drive,Cebu City
+160891960,10.3119321,123.900144,tertiary,F. Sotto Drive,Cebu City
+160891963,10.3128545,123.8997008,tertiary,Queens' Road,Cebu City
+160891965,10.3115468,123.9002167,secondary,General Maxilom Avenue,Cebu City
+160891967,10.3115409,123.9006264,secondary,General Maxilom Avenue,Cebu City
+160891969,10.3114446,123.9011277,secondary,General Maxilom Avenue,Cebu City
+160891970,10.3114871,123.9006268,secondary,General Maxilom Avenue,Cebu City
+161842494,10.371713,123.8565356,tertiary,Unnamed road corridor,Cebu City
+202797690,10.3123591,123.8929863,tertiary,Governor M. Roa Street,Cebu City
+208163289,10.3358948,123.9071746,tertiary,Omega Street,Cebu City
+208163300,10.2916095,123.903256,tertiary,M.L. Quezon Boulevard,Cebu City
+208507294,10.3490962,123.8908337,primary,Cebu-Balamban Transcentral Highway,Cebu City
+209903215,10.2951645,123.906649,trunk,Cebu South Coastal Road,Cebu City
+209903555,10.2966952,123.907536,trunk,Sergio Osmeña Avenue,Cebu City
+209950114,10.3653761,123.9140053,secondary,Governor M. Cuenco Avenue,Cebu City
+209950115,10.3653577,123.9139598,secondary,Governor M. Cuenco Avenue,Cebu City
+209950116,10.3658104,123.9138324,secondary,Governor M. Cuenco Avenue,Cebu City
+209950117,10.3664316,123.9139234,secondary,Governor M. Cuenco Avenue,Cebu City
+209950118,10.3658184,123.9139252,secondary,Governor M. Cuenco Avenue,Cebu City
+209996710,10.3664413,123.9138373,secondary,Governor M. Cuenco Avenue,Cebu City
+210004602,10.3073903,123.906566,secondary,M.J. Cuenco Avenue,Cebu City
+211374684,10.299237,123.8961759,primary,P. del Rosario Street,Cebu City
+211375163,10.2995649,123.8968048,primary,P. del Rosario Street,Cebu City
+213453376,10.2977996,123.9037493,tertiary,Mabini Street,Cebu City
+213467354,10.2986174,123.9037042,secondary,Mabini Street,Cebu City
+213467356,10.2985555,123.9048958,tertiary,Zulueta Street,Cebu City
+214574260,10.3562013,123.8931391,tertiary,Paseo Salud,Cebu City
+214574262,10.3555007,123.8903579,tertiary,Paseo John-John,Cebu City
+214574306,10.355603,123.896063,tertiary,Paseo Michel,Cebu City
+220299915,10.3061891,123.8780101,tertiary,Dr. Pablo Abella Street,Cebu City
+221565574,10.346213,123.8670331,tertiary,Kalunasan Road,Cebu City
+223358260,10.2954202,123.8933702,tertiary,Panganiban Street,Cebu City
+225540239,10.2971292,123.8920665,tertiary,Panganiban Street,Cebu City
+231454461,10.2977308,123.8850681,tertiary,Tres de Abril Street,Cebu City
+231454463,10.2977756,123.8861622,secondary,Katipunan Street,Cebu City
+233472314,10.2976142,123.9037711,tertiary,Mabini Street,Cebu City
+233472315,10.2973747,123.9037991,tertiary,Mabini Street,Cebu City
+233472316,10.29807,123.9060026,secondary,M.J. Cuenco Avenue,Cebu City
+233472318,10.2977196,123.9059376,secondary,M.J. Cuenco Avenue,Cebu City
+233472319,10.297448,123.9078171,trunk,Sergio Osmeña Avenue,Cebu City
+233472320,10.2983937,123.9084237,trunk,Sergio Osmeña Avenue,Cebu City
+233472321,10.2974059,123.9078892,trunk,Sergio Osmeña Avenue,Cebu City
+233472322,10.2967372,123.9074668,trunk,Sergio Osmeña Avenue,Cebu City
+233472323,10.2967748,123.9088797,tertiary,C. Arellano Boulevard,Cebu City
+233472324,10.2974202,123.9092189,tertiary,C. Arellano Boulevard,Cebu City
+234946827,10.3170809,123.9284114,trunk,Ouano Avenue,Cebu City
+234947397,10.3196886,123.9298289,secondary,E.O. Perez Street,Cebu City
+234947400,10.3200861,123.9289937,tertiary,F.F. Cruz Avenue,Cebu City
+234947405,10.3188186,123.9283654,tertiary,F.F. Cruz Avenue,Cebu City
+235306720,10.3042445,123.8931673,tertiary,Ascension Street,Cebu City
+235308607,10.2969767,123.8948851,tertiary,Sanciangko Street,Cebu City
+235308608,10.2950162,123.8954074,secondary,Colon Street,Cebu City
+235308610,10.2990107,123.8981811,tertiary,Pelaez Street,Cebu City
+235308611,10.2963875,123.8962707,tertiary,Leon Kilat Street,Cebu City
+235308614,10.2989567,123.8952077,tertiary,J. Alcantara Street,Cebu City
+235308615,10.2986779,123.8956008,tertiary,Leon Kilat Street,Cebu City
+235308616,10.3048046,123.8927186,tertiary,V. Urgello Street,Cebu City
+235308617,10.2966767,123.899157,tertiary,Legaspi Street,Cebu City
+235308618,10.2979622,123.8978905,tertiary,Sanciangko Street,Cebu City
+235310450,10.2998823,123.9038343,secondary,Mabini Street,Cebu City
+235310454,10.3067702,123.9100749,secondary,General Maxilom Avenue Extension,Cebu City
+235310459,10.2959873,123.8997539,tertiary,Vicente Gullas Street,Cebu City
+235310463,10.2970131,123.9057931,secondary,M.J. Cuenco Avenue,Cebu City
+235314414,10.307091,123.909788,secondary,General Maxilom Avenue Extension,Cebu City
+235314416,10.3017881,123.90961,tertiary,T. Padilla Street,Cebu City
+235314418,10.3204991,123.9260572,secondary,M. Logarta Avenue,Cebu City
+235314420,10.3061236,123.9106154,secondary,General Maxilom Avenue Extension,Cebu City
+235314421,10.3019406,123.9074474,tertiary,T. Padilla Street,Cebu City
+235314845,10.3204683,123.9277211,secondary,E.O. Perez Street,Cebu City
+235317803,10.321888,123.930323,tertiary,F.F. Cruz Avenue,Cebu City
+235384735,10.3192373,123.8996238,secondary,Gorordo Avenue,Cebu City
+235384736,10.3132962,123.9173579,secondary,A. Soriano Jr. Avenue,Cebu City
+235384737,10.3125523,123.9161326,primary,Juan Luna Avenue,Cebu City
+235384968,10.31906,123.9117069,primary,Pope John Paul Ⅱ Avenue,Cebu City
+235384969,10.31834,123.9079546,secondary,Cardinal Rosales Avenue,Cebu City
+235384970,10.3170533,123.9086888,tertiary,Samar Loop,Cebu City
+235386284,10.3088219,123.9191775,trunk,Sergio Osmeña Avenue,Cebu City
+235386285,10.3096918,123.9183756,primary,Juan Luna Avenue,Cebu City
+235386286,10.3128595,123.9192065,secondary,Kaohsiung Street,Cebu City
+235388694,10.305814,123.9109908,secondary,General Maxilom Avenue Extension,Cebu City
+235388695,10.3071607,123.909845,secondary,General Maxilom Avenue Extension,Cebu City
+235388696,10.3068242,123.9101495,secondary,General Maxilom Avenue Extension,Cebu City
+235388767,10.3010151,123.9027,tertiary,Sikatuna Street,Cebu City
+235390026,10.2927746,123.9041827,secondary,M.J. Cuenco Avenue,Cebu City
+235390027,10.3062412,123.9050785,primary,Imus Avenue,Cebu City
+235390028,10.2964784,123.8931774,tertiary,Sanciangko Street,Cebu City
+235390029,10.2928746,123.8986314,tertiary,Manalili Street,Cebu City
+235390030,10.2979905,123.8915184,tertiary,Panganiban Street,Cebu City
+235390255,10.2977378,123.890538,primary,Natalio Bacalso Avenue,Cebu City
+235464417,10.3211712,123.904357,secondary,Archbishop Reyes Avenue,Cebu City
+235464418,10.3167899,123.9021838,secondary,Archbishop Reyes Avenue,Cebu City
+235464420,10.3190667,123.9032322,secondary,Archbishop Reyes Avenue,Cebu City
+235464444,10.3198037,123.9035246,secondary,Archbishop Reyes Avenue,Cebu City
+235464553,10.318491,123.8996152,secondary,N. Escario Street,Cebu City
+235465333,10.2975045,123.8789848,tertiary,Tres de Abril Street,Cebu City
+235465334,10.2959489,123.8699581,secondary,Francisco Llamas Street,Cebu City
+235465335,10.2986361,123.8826738,secondary,Katipunan Street,Cebu City
+235465336,10.3165507,123.8899957,secondary,G. Garcia Street,Cebu City
+235466214,10.3079203,123.8866807,secondary,Vicente Rama Avenue,Cebu City
+235466215,10.3162972,123.9058703,secondary,Cardinal Rosales Avenue,Cebu City
+235466216,10.3177152,123.9026,secondary,Archbishop Reyes Avenue,Cebu City
+235466219,10.3162356,123.9057893,tertiary,Samar Loop,Cebu City
+235466223,10.3098832,123.9052195,secondary,General Maxilom Avenue,Cebu City
+235466224,10.3140545,123.9022671,secondary,Gorordo Avenue,Cebu City
+235466225,10.2969395,123.8870807,primary,Natalio Bacalso Avenue,Cebu City
+235466226,10.2972124,123.8886637,primary,Natalio Bacalso Avenue,Cebu City
+235634434,10.3859003,123.8558625,primary,Cebu-Balamban Transcentral Highway,Cebu City
+235634706,10.3161125,123.8902213,secondary,N. Escario Street,Cebu City
+235634716,10.3162118,123.8910014,secondary,N. Escario Street,Cebu City
+235634863,10.3097731,123.8927494,secondary,Fuente Osmeña Circle,Cebu City
+235635149,10.2997372,123.8968227,secondary,Osmeña Boulevard,Cebu City
+235635423,10.2958571,123.8973656,secondary,Colon Street,Cebu City
+235635468,10.2960527,123.8951545,tertiary,A. Borromeo Street,Cebu City
+235635721,10.2933089,123.8962487,tertiary,Magallanes Street,Cebu City
+235635722,10.2934863,123.8971315,tertiary,Magallanes Street,Cebu City
+235636725,10.2928138,123.8972995,tertiary,Escaño Street,Cebu City
+235636726,10.2915896,123.8979186,tertiary,M.C. Briones Street,Cebu City
+235636727,10.2939232,123.9048092,secondary,M.J. Cuenco Avenue,Cebu City
+235636728,10.2937552,123.9040196,secondary,Osmeña Boulevard,Cebu City
+235636767,10.2942032,123.9039254,tertiary,Lapu-Lapu Street,Cebu City
+235636841,10.2947116,123.90372,tertiary,Legaspi Street,Cebu City
+235636887,10.3003566,123.8983288,primary,P. del Rosario Street,Cebu City
+235639065,10.4114273,123.8497096,primary,Cebu-Balamban Transcentral Highway,Cebu City
+236092220,10.3398063,123.9060279,tertiary,Camp Lapu-Lapu Road,Cebu City
+236092573,10.3364347,123.9077693,tertiary,San Miguel Street,Cebu City
+236092574,10.3339257,123.9071757,tertiary,San Miguel Road,Cebu City
+236092834,10.3303298,123.9060936,tertiary,Geonzon Street,Cebu City
+236092835,10.3308983,123.9083564,tertiary,I. Villa Street,Cebu City
+236093276,10.3293366,123.9017073,primary,Salinas Drive,Cebu City
+236093277,10.32789,123.9045466,primary,Salinas Drive,Cebu City
+236093278,10.3240849,123.8983908,secondary,Gorordo Avenue,Cebu City
+236093279,10.3287274,123.9049894,tertiary,Geonzon Street,Cebu City
+236093526,10.3161738,123.8908938,secondary,N. Escario Street,Cebu City
+236094246,10.2940701,123.898574,tertiary,Magallanes Street,Cebu City
+236094247,10.2937268,123.8979499,tertiary,Magallanes Street,Cebu City
+236094248,10.292407,123.8982905,tertiary,Jose Leyson Street,Cebu City
+236157710,10.2998461,123.8777277,secondary,Katipunan Street,Cebu City
+236157711,10.3000188,123.8770131,secondary,Katipunan Street,Cebu City
+236157715,10.3011685,123.8783419,secondary,Salvador Extension,Cebu City
+236157716,10.302792,123.8778381,secondary,Salvador Extension,Cebu City
+236313683,10.3162644,123.8908608,secondary,N. Escario Street,Cebu City
+236314287,10.304013,123.8771541,secondary,Salvador Extension,Cebu City
+236316522,10.3302296,123.8803419,secondary,J. Labra Street,Cebu City
+236316523,10.317149,123.8851014,secondary,Vicente Rama Avenue,Cebu City
+236316524,10.3081598,123.8866645,secondary,Vicente Rama Avenue,Cebu City
+236316781,10.3110018,123.8975467,secondary,General Maxilom Avenue,Cebu City
+236316931,10.3126984,123.898758,tertiary,Queens' Road,Cebu City
+236316932,10.3170332,123.9007247,secondary,Gorordo Avenue,Cebu City
+236316933,10.3127641,123.9005998,tertiary,F. Sotto Drive,Cebu City
+236316934,10.3151585,123.901675,secondary,Gorordo Avenue,Cebu City
+236317851,10.3174106,123.9024571,secondary,Archbishop Reyes Avenue,Cebu City
+236318798,10.3202556,123.9040198,tertiary,Mindanao Avenue,Cebu City
+236318800,10.3203853,123.9038939,secondary,Archbishop Reyes Avenue,Cebu City
+236318802,10.3194261,123.9064577,tertiary,Mindanao Avenue,Cebu City
+236319170,10.3184181,123.9079449,tertiary,Samar Loop,Cebu City
+236319171,10.3189294,123.9085586,secondary,Cardinal Rosales Avenue,Cebu City
+236319228,10.3162012,123.9057212,secondary,Cardinal Rosales Avenue,Cebu City
+236319279,10.3257714,123.9076802,primary,Pope John Paul Ⅱ Avenue,Cebu City
+236319625,10.3065126,123.9161439,trunk,Sergio Osmeña Avenue,Cebu City
+236319626,10.3099311,123.9203536,trunk,Sergio Osmeña Avenue,Cebu City
+236319627,10.3111615,123.9213622,secondary,Kaohsiung Street,Cebu City
+236319981,10.3108217,123.8926637,secondary,Osmeña Boulevard,Cebu City
+236319982,10.3162464,123.8909589,secondary,Osmeña Boulevard,Cebu City
+236319983,10.3153108,123.8912805,secondary,Osmeña Boulevard,Cebu City
+236319984,10.3149304,123.883148,secondary,Ramon Duterte Street,Cebu City
+236322085,10.2929908,123.9010991,tertiary,Dionisio Jakosalem Street,Cebu City
+236322086,10.2927908,123.8853634,secondary,Candido Padilla Street,Cebu City
+236322088,10.2976857,123.9011643,secondary,Colon Street,Cebu City
+236322091,10.2926776,123.8871051,tertiary,Carlock Street,Cebu City
+236322374,10.3158728,123.9082799,tertiary,Samar Loop,Cebu City
+236322595,10.302193,123.9020555,tertiary,Sikatuna Street,Cebu City
+236322790,10.2963973,123.8984425,secondary,Colon Street,Cebu City
+236323132,10.3126191,123.9113761,primary,M.J. Cuenco Avenue,Cebu City
+236323247,10.3170589,123.9087875,tertiary,Samar Loop,Cebu City
+236323812,10.3216701,123.9046342,secondary,Archbishop Reyes Avenue,Cebu City
+236324164,10.3712403,123.9244206,secondary,H. Abellana Street,Cebu City
+236482768,10.3170412,123.9177248,primary,M.J. Cuenco Avenue,Cebu City
+236483866,10.2950811,123.9048104,tertiary,Urdaneta Street,Cebu City
+236483867,10.2920579,123.8998581,tertiary,M.C. Briones Street,Cebu City
+236483868,10.3084972,123.9070568,primary,Imus Avenue,Cebu City
+236483869,10.2936119,123.8976385,tertiary,Magallanes Street,Cebu City
+236483870,10.2952556,123.9053139,secondary,M.J. Cuenco Avenue,Cebu City
+236483871,10.3097044,123.9056501,secondary,General Maxilom Avenue,Cebu City
+236483872,10.2961582,123.9042483,tertiary,Jereza Street,Cebu City
+236483873,10.2934905,123.9004759,tertiary,F. Gonzales Street,Cebu City
+236483874,10.2955918,123.9046173,tertiary,Lapu-Lapu Street,Cebu City
+236483875,10.310286,123.9084019,primary,M.J. Cuenco Avenue,Cebu City
+236483876,10.2963094,123.9049864,tertiary,Lapu-Lapu Street,Cebu City
+236483877,10.2928464,123.8980024,tertiary,F. Calderon Street,Cebu City
+236484374,10.2877217,123.8724788,tertiary,L. Gabuya Street,Cebu City
+236484376,10.2845544,123.8684808,tertiary,L. Gabuya Street,Cebu City
+236485709,10.2935361,123.8889583,secondary,Candido Padilla Street,Cebu City
+236485710,10.292489,123.8918773,tertiary,Tupas Street,Cebu City
+236485721,10.296774,123.8894506,tertiary,Tres de Abril Street,Cebu City
+236485828,10.2939646,123.8914761,secondary,Candido Padilla Street,Cebu City
+236485838,10.2942725,123.893365,secondary,Candido Padilla Street,Cebu City
+236486666,10.2993094,123.9062268,secondary,M.J. Cuenco Avenue,Cebu City
+236486667,10.2939442,123.9029011,tertiary,P. Burgos Street,Cebu City
+236541781,10.2897905,123.871854,secondary,Natalio Bacalso Avenue,Cebu City
+236541782,10.2891497,123.8675385,primary,Natalio Bacalso Avenue,Cebu City
+236552906,10.2984388,123.8933177,primary,Natalio Bacalso Avenue,Cebu City
+236552911,10.2977263,123.8910426,primary,Natalio Bacalso Avenue,Cebu City
+236552913,10.2974516,123.8903083,primary,Natalio Bacalso Avenue,Cebu City
+236557609,10.3199874,123.9098532,secondary,Cardinal Rosales Avenue,Cebu City
+236557610,10.3136937,123.9135201,primary,M.J. Cuenco Avenue,Cebu City
+236557612,10.307571,123.9063034,primary,Imus Avenue,Cebu City
+236557613,10.2960408,123.905566,secondary,M.J. Cuenco Avenue,Cebu City
+236557614,10.3065868,123.9058845,secondary,M.J. Cuenco Avenue,Cebu City
+236557615,10.3142822,123.9146947,primary,M.J. Cuenco Avenue,Cebu City
+237210379,10.3043094,123.9120913,secondary,General Maxilom Avenue Extension,Cebu City
+237210381,10.3053414,123.9112511,secondary,General Maxilom Avenue Extension,Cebu City
+237211293,10.3096106,123.9185964,primary,Juan Luna Avenue,Cebu City
+237211294,10.3037215,123.9063129,secondary,M.J. Cuenco Avenue,Cebu City
+237283341,10.3003151,123.9035841,secondary,Bonifacio Street,Cebu City
+237283342,10.3020631,123.9021118,tertiary,Sikatuna Street,Cebu City
+237284021,10.2962217,123.9085759,tertiary,C. Arellano Boulevard,Cebu City
+237284022,10.2984161,123.9071698,tertiary,V. Sotto Street,Cebu City
+237284023,10.3020072,123.910763,trunk,Sergio Osmeña Avenue,Cebu City
+237284024,10.3008548,123.9011902,tertiary,Dionisio Jakosalem Street,Cebu City
+237284025,10.3017507,123.9007977,tertiary,Dionisio Jakosalem Street,Cebu City
+237284026,10.3016253,123.9102109,trunk,Sergio Osmeña Avenue,Cebu City
+237284542,10.298705,123.9035486,secondary,Sikatuna Street,Cebu City
+237284544,10.2990945,123.9017327,tertiary,Dionisio Jakosalem Street,Cebu City
+237284546,10.299667,123.9016271,tertiary,Dionisio Jakosalem Street,Cebu City
+237285224,10.304978,123.8867061,secondary,Vicente Rama Avenue,Cebu City
+237285227,10.2995461,123.8871485,secondary,Vicente Rama Avenue,Cebu City
+237286437,10.2965827,123.9010757,tertiary,Vicente Gullas Street,Cebu City
+237286438,10.3020665,123.9107217,trunk,Sergio Osmeña Avenue,Cebu City
+237286439,10.2962753,123.901977,tertiary,Dionisio Jakosalem Street,Cebu City
+237286440,10.3036014,123.9126596,secondary,General Maxilom Avenue Extension,Cebu City
+237392054,10.3308473,123.8987104,primary,Salinas Drive,Cebu City
+237393660,10.2920742,123.8982102,tertiary,F. Calderon Street,Cebu City
+237393661,10.2975162,123.8966967,tertiary,Sanciangko Street,Cebu City
+237448558,10.2985252,123.89912,tertiary,Sanciangko Street,Cebu City
+237448559,10.2984077,123.9002053,tertiary,Junquera Street,Cebu City
+237448560,10.3109325,123.9038703,secondary,Gorordo Avenue,Cebu City
+237448561,10.2958747,123.9009339,tertiary,Legaspi Street,Cebu City
+237448562,10.3098517,123.8944181,secondary,General Maxilom Avenue,Cebu City
+237448563,10.3107835,123.9038025,secondary,General Maxilom Avenue,Cebu City
+237448564,10.3013528,123.898559,tertiary,Junquera Street,Cebu City
+237586315,10.3712404,123.8777535,primary,Cebu-Balamban Transcentral Highway,Cebu City
+237587811,10.2984824,123.8971246,secondary,Osmeña Boulevard,Cebu City
+237587813,10.2921616,123.9002845,tertiary,M.C. Briones Street,Cebu City
+237587814,10.2927928,123.8936222,tertiary,Tupas Street,Cebu City
+237589180,10.2946507,123.9014897,tertiary,Dionisio Jakosalem Street,Cebu City
+237590245,10.3186166,123.9030212,secondary,Archbishop Reyes Avenue,Cebu City
+237590248,10.3231262,123.9055936,secondary,Archbishop Reyes Avenue,Cebu City
+237590251,10.3188218,123.9031155,secondary,Archbishop Reyes Avenue,Cebu City
+237590253,10.3250141,123.9068672,secondary,Archbishop Reyes Avenue,Cebu City
+237590255,10.3189367,123.9031705,secondary,Archbishop Reyes Avenue,Cebu City
+237590257,10.3201003,123.9030934,secondary,N. Escario Street,Cebu City
+237594355,10.3170972,123.9035875,tertiary,Luzon Avenue,Cebu City
+237597771,10.3187499,123.8857917,tertiary,L. Bacayo Street,Cebu City
+237598977,10.2951179,123.8973226,tertiary,A. Borromeo Street,Cebu City
+237599373,10.2922144,123.8989243,tertiary,Jose Leyson Street,Cebu City
+237599374,10.2943292,123.9026952,secondary,Osmeña Boulevard,Cebu City
+237600485,10.3159464,123.8908835,secondary,Osmeña Boulevard,Cebu City
+237602066,10.2970037,123.8884804,tertiary,Vicente Rama Avenue,Cebu City
+237602067,10.2965941,123.8875353,tertiary,Tres de Abril Street,Cebu City
+237602068,10.29199,123.8823159,secondary,Candido Padilla Street,Cebu City
+237602069,10.2933058,123.892244,tertiary,Lakandula Street,Cebu City
+237602070,10.2953503,123.8832823,primary,Natalio Bacalso Avenue,Cebu City
+237602071,10.2950517,123.8827466,tertiary,R. Padilla,Cebu City
+237602073,10.2937943,123.8869217,tertiary,Carlock Street,Cebu City
+237680914,10.2894195,123.8690967,secondary,Natalio Bacalso Avenue,Cebu City
+237680915,10.2857381,123.8566969,tertiary,E. Sabellano Street,Cebu City
+237680916,10.2909993,123.862057,tertiary,E. Sabellano Street,Cebu City
+237680917,10.2845824,123.8598092,primary,Natalio Bacalso Avenue,Cebu City
+237682506,10.2950733,123.8826633,primary,Natalio Bacalso Avenue,Cebu City
+237682507,10.2973389,123.9001231,secondary,Colon Street,Cebu City
+237682508,10.2997262,123.8994602,tertiary,Junquera Street,Cebu City
+237684337,10.2925064,123.9016737,tertiary,M.C. Briones Street,Cebu City
+237686218,10.2911798,123.8771821,secondary,Natalio Bacalso Avenue,Cebu City
+237686219,10.2910558,123.8772809,secondary,Natalio Bacalso Avenue,Cebu City
+237686220,10.2909259,123.8774497,secondary,F. Vestil Street,Cebu City
+237686221,10.2844665,123.8806545,secondary,F. Vestil Street,Cebu City
+237686222,10.2907521,123.8775209,secondary,C Padiilla,Cebu City
+237743595,10.297237,123.8877081,primary,Natalio Bacalso Avenue,Cebu City
+237743596,10.2971874,123.8873182,primary,Natalio Bacalso Avenue,Cebu City
+237743597,10.2951792,123.9026382,tertiary,Legaspi Street,Cebu City
+237745556,10.300348,123.9064083,secondary,M.J. Cuenco Avenue,Cebu City
+237745557,10.3097195,123.9202789,trunk,Sergio Osmeña Avenue,Cebu City
+237745558,10.3000765,123.9031289,secondary,Sikatuna Street,Cebu City
+237745559,10.3123967,123.9162646,primary,Juan Luna Avenue,Cebu City
+237745560,10.293552,123.9065411,tertiary,Legaspi Extension,Cebu City
+237748763,10.2942041,123.905627,tertiary,Legaspi Extension,Cebu City
+237748764,10.2952691,123.9035003,tertiary,P. Burgos Street,Cebu City
+237748765,10.2948193,123.9051415,secondary,M.J. Cuenco Avenue,Cebu City
+237749470,10.3078317,123.9085816,secondary,General Maxilom Avenue Extension,Cebu City
+237982297,10.3155888,123.9081609,tertiary,Samar Loop,Cebu City
+237983863,10.337737,123.9299418,secondary,A. S. Fortuna Street,Cebu City
+237993511,10.3411101,123.911889,secondary,Governor M. Cuenco Avenue,Cebu City
+237993512,10.3420971,123.9120027,secondary,Governor M. Cuenco Avenue,Cebu City
+237994588,10.2954582,123.9040492,tertiary,Urdaneta Street,Cebu City
+237994589,10.2971353,123.904095,tertiary,Vicente Gullas Street,Cebu City
+237994590,10.3019206,123.9087605,tertiary,T. Padilla Street,Cebu City
+237994942,10.3230151,123.9244997,secondary,Hernan Cortes Street,Cebu City
+238047880,10.3224066,123.9237399,primary,Lopez Jaena Street,Cebu City
+238257088,10.2970559,123.9029837,tertiary,Vicente Gullas Street,Cebu City
+238257090,10.3156746,123.9070934,tertiary,Samar Loop,Cebu City
+238257091,10.2964279,123.9037151,tertiary,Mabini Street,Cebu City
+238292816,10.316793,123.9247834,secondary,M. Logarta Avenue,Cebu City
+249316202,10.3181231,123.8980294,secondary,N. Escario Street,Cebu City
+249316203,10.3182824,123.8987311,secondary,N. Escario Street,Cebu City
+249321034,10.3263919,123.928184,primary,M.C. Briones Street,Cebu City
+249321035,10.3275062,123.9293786,primary,M.C. Briones Street,Cebu City
+251913253,10.3094197,123.8437737,tertiary,Buhisan Road,Cebu City
+252230336,10.2993473,123.8698676,secondary,Francisco Llamas Street,Cebu City
+252230337,10.297963,123.8697752,secondary,Francisco Llamas Street,Cebu City
+252230338,10.2979591,123.8698195,secondary,Francisco Llamas Street,Cebu City
+252230339,10.3005339,123.8700722,secondary,Francisco Llamas Street,Cebu City
+252230342,10.2988825,123.8698089,secondary,Francisco Llamas Street,Cebu City
+256698323,10.4060858,123.8651709,tertiary,Unnamed road corridor,Cebu City
+257865077,10.3104456,123.8961585,secondary,General Maxilom Avenue,Cebu City
+262492549,10.4136819,123.8717872,tertiary,Unnamed road corridor,Cebu City
+262492570,10.4136118,123.8732677,tertiary,Unnamed road corridor,Cebu City
+262492571,10.4133639,123.8769075,tertiary,Unnamed road corridor,Cebu City
+262492572,10.4163676,123.8825348,tertiary,Unnamed road corridor,Cebu City
+262492573,10.4218223,123.886149,tertiary,Unnamed road corridor,Cebu City
+267622691,10.3099921,123.9181297,primary,Juan Luna Avenue,Cebu City
+267623053,10.3054429,123.9112981,secondary,General Maxilom Avenue Extension,Cebu City
+290801492,10.3320724,123.9102481,secondary,Governor M. Cuenco Avenue,Cebu City
+296905667,10.3297908,123.9217666,secondary,Hernan Cortes Street,Cebu City
+296905755,10.341992,123.9177697,secondary,A. S. Fortuna Street,Cebu City
+296905756,10.3386518,123.9244731,secondary,Hernan Cortes Street,Cebu City
+299232170,10.3493888,123.9051832,tertiary,Paseo Eulalia,Cebu City
+304632203,10.3231944,123.9246275,primary,M.C. Briones Street,Cebu City
+306641270,10.3346409,123.9255756,tertiary,P. Basubas Street,Cebu City
+306641272,10.3349398,123.9240761,tertiary,P. Basubas Street,Cebu City
+311726475,10.33634,123.9238708,secondary,Hernan Cortes Street,Cebu City
+316468035,10.2949412,123.8893532,tertiary,J.M. Basa Street,Cebu City
+316468038,10.2923098,123.8905729,tertiary,Tupas Street,Cebu City
+332545512,10.2877511,123.8929572,trunk,Cebu South Coastal Road,Cebu City
+332545513,10.2905895,123.9009333,secondary,Cebu South Coastal Road,Cebu City
+332545514,10.3087114,123.9072282,primary,Imus Avenue,Cebu City
+332545515,10.3078266,123.9063531,primary,Imus Avenue,Cebu City
+363270505,10.4140529,123.9055184,tertiary,Barangay Binaliw,Cebu City
+363270656,10.4029225,123.9055343,tertiary,Pit-os Road,Cebu City
+363679482,10.3562722,123.9195888,secondary,Manuel L. Quezon Avenue,Cebu City
+371854662,10.3277634,123.8919248,tertiary,Friendship Street,Cebu City
+371854768,10.3264372,123.8923128,tertiary,Friendship Street,Cebu City
+389815649,10.2809764,123.8550077,tertiary,E. Sabellano Street,Cebu City
+389815650,10.2819067,123.8556183,tertiary,E. Sabellano Street,Cebu City
+401163380,10.2947247,123.8931609,tertiary,Tres de Abril Street,Cebu City
+401441916,10.2930686,123.895058,tertiary,Magallanes Street,Cebu City
+401441917,10.2931218,123.8953045,tertiary,Magallanes Street,Cebu City
+417862136,10.3187981,123.8780478,tertiary,Unnamed road corridor,Cebu City
+420188771,10.2905928,123.9006544,trunk,Cebu South Coastal Road,Cebu City
+420188775,10.2914624,123.9031466,secondary,Cebu South Coastal Road,Cebu City
+420188778,10.2900305,123.8990887,trunk,Cebu South Coastal Road,Cebu City
+420188786,10.2804693,123.8821989,trunk,Cebu South Coastal Road,Cebu City
+420188790,10.2906278,123.9001453,secondary,Cebu South Coastal Road,Cebu City
+420189567,10.2850883,123.8866149,trunk,Cebu South Coastal Road,Cebu City
+421053851,10.2850235,123.8803596,secondary,F. Vestil Street,Cebu City
+421053852,10.2907546,123.8762299,secondary,Natalio Bacalso Avenue,Cebu City
+421053854,10.2814084,123.8829713,trunk,Cebu South Coastal Road,Cebu City
+424234989,10.3434044,123.9137381,secondary,A. S. Fortuna Street,Cebu City
+453884420,10.3230522,123.9244698,primary,Lopez Jaena Street,Cebu City
+482585839,10.353032,123.8881449,tertiary,Paseo John-John,Cebu City
+590032358,10.3128265,123.9215452,secondary,F. Urot Street,Cebu City
+590032359,10.3128424,123.9215346,secondary,F. Urot Street,Cebu City
+590032360,10.3118915,123.9207664,secondary,Kaohsiung Street,Cebu City
+597911939,10.3200659,123.9260246,secondary,M. Logarta Avenue,Cebu City
+597911940,10.3159017,123.9243481,secondary,M. Logarta Avenue,Cebu City
+597911941,10.3162254,123.9245249,secondary,Gatewalk Drive,Cebu City
+597911942,10.3153129,123.9237398,secondary,M. Logarta Avenue,Cebu City
+597911943,10.3147264,123.9262254,trunk,Ouano Avenue,Cebu City
+601269569,10.3073893,123.8962322,tertiary,F. Ramos Street,Cebu City
+601269570,10.3059745,123.8973061,tertiary,F. Ramos Street,Cebu City
+601269571,10.3100314,123.8949497,secondary,General Maxilom Avenue,Cebu City
+601269572,10.3114112,123.8995054,secondary,General Maxilom Avenue,Cebu City
+608998082,10.2918389,123.8989516,tertiary,M.C. Briones Street,Cebu City
+609118563,10.2913655,123.8984001,tertiary,F. Calderon Street,Cebu City
+609125263,10.2915763,123.9007425,tertiary,M.L. Quezon Boulevard,Cebu City
+609125265,10.2912582,123.8993301,tertiary,M.L. Quezon Boulevard,Cebu City
+609125267,10.2916328,123.8994924,tertiary,Plaridel Street,Cebu City
+609278984,10.2948391,123.8905681,tertiary,Vicente Rama Avenue,Cebu City
+609528663,10.299191,123.8939908,tertiary,J. Alcantara Street,Cebu City
+609531372,10.299504,123.8891593,tertiary,J. Alcantara Street,Cebu City
+609553054,10.293863,123.9046881,secondary,M.J. Cuenco Avenue,Cebu City
+609764119,10.2919261,123.9028762,tertiary,Lapu-Lapu Street,Cebu City
+609969635,10.2831253,123.8847642,trunk,Cebu South Coastal Road,Cebu City
+610072131,10.2862808,123.8798884,secondary,F. Vestil Street,Cebu City
+610072132,10.2863076,123.8799816,secondary,F. Vestil Street,Cebu City
+610072133,10.2886906,123.8787339,secondary,F. Vestil Street,Cebu City
+610072134,10.2886656,123.878633,secondary,F. Vestil Street,Cebu City
+610097454,10.4188999,123.9036728,tertiary,Unnamed road corridor,Cebu City
+610097455,10.4184543,123.9047621,tertiary,Unnamed road corridor,Cebu City
+610277768,10.2913769,123.8775964,tertiary,Maria Gochan Street,Cebu City
+611823984,10.3114973,123.893202,tertiary,J. Llorente Street,Cebu City
+612335324,10.3025731,123.8930186,tertiary,J. Urgello Street,Cebu City
+612716345,10.3175709,123.8916398,tertiary,Villalon Drive,Cebu City
+612719338,10.2991018,123.8884316,tertiary,J. Alcantara Street,Cebu City
+613847962,10.2979135,123.9034906,secondary,Colon Street,Cebu City
+613847963,10.2979879,123.9034819,secondary,Colon Street,Cebu City
+614434692,10.3362466,123.9073725,tertiary,San Miguel Street,Cebu City
+614623805,10.3799695,123.8902424,tertiary,Budlaan Road,Cebu City
+614623806,10.3798628,123.8876313,tertiary,Budlaan Road,Cebu City
+614623807,10.3775244,123.8840976,tertiary,Busay-Budlaan Road,Cebu City
+614656885,10.3661076,123.8629937,tertiary,Babag Road,Cebu City
+614740325,10.3080612,123.9030067,tertiary,General Echavez Street,Cebu City
+616342655,10.3310828,123.9084252,tertiary,Jose Maria Del Mar Avenue,Cebu City
+616490369,10.3277486,123.8895194,tertiary,Villalon Drive,Cebu City
+616490376,10.3244684,123.8867796,tertiary,Unnamed road corridor,Cebu City
+616490379,10.3285444,123.8900067,tertiary,Unnamed road corridor,Cebu City
+616490384,10.3234482,123.8910113,tertiary,Acacia Street,Cebu City
+616490387,10.3243731,123.8922249,tertiary,Friendship Street,Cebu City
+617110421,10.3329149,123.9104319,secondary,Governor M. Cuenco Avenue,Cebu City
+617422024,10.3262545,123.8898344,tertiary,Villalon Drive,Cebu City
+617836410,10.3288836,123.8890749,tertiary,Unnamed road corridor,Cebu City
+617838479,10.3239864,123.8883165,tertiary,Unnamed road corridor,Cebu City
+618545501,10.3227366,123.8856915,tertiary,Andres Abellana Street,Cebu City
+618573121,10.3239515,123.8707497,tertiary,Unnamed road corridor,Cebu City
+618573124,10.3239824,123.8706957,tertiary,Unnamed road corridor,Cebu City
+618573127,10.3196953,123.8739506,tertiary,Unnamed road corridor,Cebu City
+618691764,10.3189306,123.8753502,tertiary,Unnamed road corridor,Cebu City
+618691765,10.3209788,123.8722058,tertiary,Unnamed road corridor,Cebu City
+618691766,10.3225991,123.8709279,tertiary,Unnamed road corridor,Cebu City
+618810666,10.3289034,123.8877361,tertiary,Unnamed road corridor,Cebu City
+618974072,10.3111467,123.9027689,secondary,General Maxilom Avenue,Cebu City
+618975159,10.3114942,123.8995192,secondary,General Maxilom Avenue,Cebu City
+618975161,10.3114729,123.900199,secondary,General Maxilom Avenue,Cebu City
+618976310,10.3044198,123.9121463,secondary,General Maxilom Avenue Extension,Cebu City
+618976311,10.303693,123.912668,trunk,Sergio Osmeña Avenue,Cebu City
+618976664,10.3121763,123.8860354,secondary,Vicente Rama Avenue,Cebu City
+618976790,10.3114885,123.9012762,secondary,General Maxilom Avenue,Cebu City
+618976791,10.3111024,123.9026996,secondary,General Maxilom Avenue,Cebu City
+620642396,10.3601723,123.9256599,tertiary,Elias Cortes Street,Cebu City
+620642397,10.3606253,123.9267048,tertiary,Elias Cortes Street,Cebu City
+620642398,10.3423141,123.9200931,tertiary,P. Remedio Street,Cebu City
+620642401,10.3496187,123.9214878,tertiary,P. Remedio Street,Cebu City
+620642402,10.3503464,123.9232559,tertiary,P. Remedio Street,Cebu City
+620730423,10.3590516,123.9256538,tertiary,Elias Cortes Street,Cebu City
+620757602,10.3464894,123.9289902,secondary,Manuel L. Quezon Avenue,Cebu City
+620762738,10.3394257,123.9248772,secondary,A. S. Fortuna Street,Cebu City
+620775363,10.3522668,123.9245453,tertiary,Elias Cortes Street,Cebu City
+620835660,10.3615035,123.9278458,tertiary,Gregorio Suico Street,Cebu City
+620835661,10.3615249,123.9288577,tertiary,P. L. Sanchez Street,Cebu City
+620835662,10.3607808,123.929929,tertiary,P. L. Sanchez Street,Cebu City
+620919098,10.3395078,123.9246349,secondary,A. S. Fortuna Street,Cebu City
+620995885,10.3550406,123.9226946,tertiary,E. Aguirre Street,Cebu City
+621089186,10.3127993,123.8969577,tertiary,Queens' Road,Cebu City
+621089187,10.3124734,123.8982397,tertiary,Gotianuy Street,Cebu City
+621288754,10.345245,123.8930368,tertiary,Unnamed road corridor,Cebu City
+621288755,10.3361558,123.8918499,tertiary,Salinas Drive Extension,Cebu City
+621374811,10.3435724,123.8944125,primary,Veterans Drive,Cebu City
+621374812,10.3445999,123.8937545,primary,Veterans Drive,Cebu City
+621374813,10.3426178,123.8955786,primary,Veterans Drive,Cebu City
+621453891,10.3433262,123.8906913,tertiary,Unnamed road corridor,Cebu City
+621535021,10.3263234,123.8879461,tertiary,Unnamed road corridor,Cebu City
+621535022,10.3246887,123.8902801,tertiary,Villalon Drive,Cebu City
+622363717,10.3388874,123.8654333,tertiary,Sapangdaku Road,Cebu City
+623092663,10.307371,123.8541215,tertiary,Buhisan Road,Cebu City
+623092664,10.3054627,123.8570316,tertiary,Buhisan Road,Cebu City
+624696030,10.2802589,123.8551689,tertiary,Quiot Pardo Road,Cebu City
+624730119,10.2903582,123.8706591,secondary,Francisco Llamas Street,Cebu City
+624741694,10.2933252,123.876164,tertiary,Pablo S. Atillo Street,Cebu City
+624771958,10.2891994,123.8679819,primary,Natalio Bacalso Avenue,Cebu City
+624776130,10.2921938,123.870987,tertiary,Gabriel Elorde Street,Cebu City
+625487363,10.3278394,123.9217582,secondary,Hernan Cortes Street,Cebu City
+626712424,10.3578097,123.9263962,tertiary,Elias Cortes Street,Cebu City
+626778757,10.369602,123.9274088,secondary,H. Abellana Street,Cebu City
+627369551,10.3388638,123.9273209,secondary,A. S. Fortuna Street,Cebu City
+627369554,10.3325452,123.9227798,secondary,Hernan Cortes Street,Cebu City
+627907089,10.3810788,123.9154986,tertiary,Kauswagan Road,Cebu City
+627907091,10.3888077,123.9152421,tertiary,Kauswagan Road,Cebu City
+628031532,10.3850428,123.9213585,secondary,Bacayan - Pit-os Road,Cebu City
+629175097,10.2923227,123.871943,tertiary,Gabriel Elorde Street,Cebu City
+629584903,10.2833673,123.8817664,secondary,F. Vestil Street,Cebu City
+629584904,10.2855522,123.8801013,secondary,F. Vestil Street,Cebu City
+629584905,10.2855807,123.8801853,secondary,F. Vestil Street,Cebu City
+629613942,10.2978027,123.8851169,secondary,A. Lopez Street,Cebu City
+629613945,10.2978012,123.8850312,secondary,A. Lopez Street,Cebu City
+630305258,10.2956668,123.8731829,tertiary,Pablo S. Atillo Street,Cebu City
+630305259,10.2952574,123.8735604,tertiary,Pablo S. Atillo Street,Cebu City
+630902367,10.2984536,123.8697576,secondary,Francisco Llamas Street,Cebu City
+632562093,10.2992545,123.893735,tertiary,J. Alcantara Street,Cebu City
+647916739,10.3322922,123.9090168,tertiary,Jose Maria Del Mar Avenue,Cebu City
+654841568,10.3279247,123.9086336,secondary,Governor M. Cuenco Avenue,Cebu City
+654841699,10.3322579,123.90989,tertiary,Road 15,Cebu City
+654841700,10.332155,123.9102707,secondary,Governor M. Cuenco Avenue,Cebu City
+654841701,10.3319126,123.9102057,secondary,Governor M. Cuenco Avenue,Cebu City
+661090844,10.3164066,123.8912655,secondary,N. Escario Street,Cebu City
+661090845,10.3168442,123.8927839,secondary,N. Escario Street,Cebu City
+661321328,10.3007704,123.8963001,secondary,Osmeña Boulevard,Cebu City
+661321329,10.3021353,123.8958943,tertiary,R.R. Landon Street,Cebu City
+661321330,10.3046644,123.8950545,secondary,Osmeña Boulevard,Cebu City
+666117626,10.4143979,123.8296171,primary,Cebu-Balamban Transcentral Highway,Cebu City
+671183182,10.3310474,123.9084835,tertiary,Jose Maria Del Mar Avenue,Cebu City
+672956912,10.2976002,123.9059161,secondary,M.J. Cuenco Avenue,Cebu City
+672956932,10.3434227,123.9133394,secondary,A. S. Fortuna Street,Cebu City
+672956944,10.3458348,123.9127107,secondary,Governor M. Cuenco Avenue,Cebu City
+672956946,10.3208167,123.911094,secondary,F. Cabahug Street,Cebu City
+672956955,10.3192187,123.925745,secondary,M. Logarta Avenue,Cebu City
+672956980,10.3179939,123.9254554,secondary,M. Logarta Avenue,Cebu City
+672956982,10.3167488,123.9311546,tertiary,Doctor F.E. Zuellig Avenue,Cebu City
+672956983,10.3200096,123.9290368,secondary,E.O. Perez Street,Cebu City
+672956984,10.3194346,123.928754,tertiary,F.F. Cruz Avenue,Cebu City
+676981690,10.3501144,123.8694033,tertiary,Unnamed road corridor,Cebu City
+678334142,10.3258368,123.9075992,secondary,Governor M. Cuenco Avenue,Cebu City
+678343144,10.3203826,123.9038157,secondary,Mindanao Avenue,Cebu City
+678343145,10.3204378,123.9038448,secondary,Mindanao Avenue,Cebu City
+678343154,10.3184641,123.8916019,tertiary,Villalon Drive,Cebu City
+678343155,10.3184641,123.8915943,tertiary,Villalon Drive,Cebu City
+691841690,10.3286027,123.9089367,secondary,Governor M. Cuenco Avenue,Cebu City
+692906854,10.3328414,123.8838122,tertiary,Unnamed road corridor,Cebu City
+692906855,10.3346304,123.8826344,tertiary,Maya,Cebu City
+692906869,10.3371951,123.8803635,tertiary,CPDRC,Cebu City
+692906870,10.3380418,123.8804741,tertiary,CPDRC,Cebu City
+692906871,10.3405433,123.8776181,tertiary,Unnamed road corridor,Cebu City
+692912207,10.3342204,123.8819476,tertiary,Orchids Avenue,Cebu City
+703248071,10.2835567,123.885006,trunk,Cebu South Coastal Road,Cebu City
+703248072,10.282467,123.8839719,trunk,Cebu South Coastal Road,Cebu City
+717801273,10.32704,123.9060282,primary,Salinas Drive,Cebu City
+717801274,10.327189,123.905766,primary,Salinas Drive,Cebu City
+717801275,10.3271041,123.9059126,primary,Salinas Drive,Cebu City
+717801276,10.32708,123.905955,primary,Salinas Drive,Cebu City
+725232630,10.3119169,123.903366,secondary,Gorordo Avenue,Cebu City
+725232631,10.3126628,123.9029939,secondary,Gorordo Avenue,Cebu City
+785017511,10.2910738,123.9017348,secondary,Cebu South Coastal Road,Cebu City
+785017512,10.3116601,123.9224756,trunk,Sergio Osmeña Avenue,Cebu City
+785017513,10.2820223,123.883219,secondary,F. Vestil Street,Cebu City
+785017514,10.2849748,123.8802884,secondary,F. Vestil Street,Cebu City
+785020949,10.2839449,123.8811426,secondary,F. Vestil Street,Cebu City
+785103936,10.2975737,123.8821421,tertiary,Tres de Abril Street,Cebu City
+787095032,10.3160959,123.9059129,tertiary,Samar Loop,Cebu City
+787095033,10.316128,123.906263,tertiary,Samar Loop,Cebu City
+799038989,10.2987291,123.8943259,primary,Natalio Bacalso Avenue,Cebu City
+799047744,10.2982161,123.892128,primary,Natalio Bacalso Avenue,Cebu City
+821634513,10.2864817,123.8614906,tertiary,E. Corro Street,Cebu City
+821634514,10.2930336,123.8949005,tertiary,Tupas Street,Cebu City
+821634515,10.2933401,123.8803372,primary,Natalio Bacalso Avenue,Cebu City
+847477232,10.3007348,123.909627,trunk,Sergio Osmeña Avenue,Cebu City
+847919203,10.3160785,123.8863741,secondary,M. Velez Street,Cebu City
+847931765,10.3269002,123.8820914,secondary,Vicente Rama Avenue,Cebu City
+854414213,10.3761953,123.8823282,tertiary,Busay-Budlaan Road,Cebu City
+854463865,10.2951316,123.8827462,primary,Natalio Bacalso Avenue,Cebu City
+854463866,10.295022,123.8828185,primary,Natalio Bacalso Avenue,Cebu City
+854463869,10.2949611,123.8827366,primary,Natalio Bacalso Avenue,Cebu City
+854774726,10.3161564,123.8905319,secondary,N. Escario Street,Cebu City
+854774727,10.316318,123.8912951,secondary,N. Escario Street,Cebu City
+854774728,10.3163012,123.8909709,secondary,N. Escario Street,Cebu City
+854782192,10.3165547,123.8919561,secondary,N. Escario Street,Cebu City
+854782193,10.3165626,123.8917041,secondary,N. Escario Street,Cebu City
+854782194,10.3166145,123.8919898,tertiary,Villalon Drive,Cebu City
+854782195,10.3166402,123.8919257,secondary,N. Escario Street,Cebu City
+854782196,10.3164759,123.8917351,secondary,N. Escario Street,Cebu City
+854792190,10.3176165,123.9029494,tertiary,Luzon Avenue,Cebu City
+855186406,10.3020767,123.9020459,primary,P. del Rosario Street,Cebu City
+855186407,10.3019859,123.9021007,primary,P. del Rosario Street,Cebu City
+855186420,10.3068751,123.9055558,primary,Imus Avenue,Cebu City
+855186421,10.3067895,123.9056719,primary,Imus Avenue,Cebu City
+855186423,10.3066001,123.905532,primary,Imus Avenue,Cebu City
+855205154,10.3008822,123.8993099,primary,P. del Rosario Street,Cebu City
+855241188,10.2945264,123.8919427,tertiary,Lakandula Street,Cebu City
+855241189,10.2941385,123.8926243,secondary,Candido Padilla Street,Cebu City
+855241192,10.2942397,123.8935931,tertiary,Tres de Abril Street,Cebu City
+855246335,10.2969196,123.8860959,primary,Natalio Bacalso Avenue,Cebu City
+855246339,10.2972388,123.888301,secondary,Vicente Rama Avenue,Cebu City
+855246340,10.2972947,123.8881913,primary,Natalio Bacalso Avenue,Cebu City
+855284272,10.3049072,123.8999052,tertiary,Dionisio Jakosalem Street,Cebu City
+855300940,10.3338572,123.9096473,tertiary,Jose Maria Del Mar Avenue,Cebu City
+855300941,10.3353453,123.9108992,secondary,Governor M. Cuenco Avenue,Cebu City
+855311024,10.3224154,123.905129,secondary,Archbishop Reyes Avenue,Cebu City
+855311025,10.3221444,123.9049496,secondary,Archbishop Reyes Avenue,Cebu City
+855311026,10.3224851,123.9051749,secondary,Archbishop Reyes Avenue,Cebu City
+855311027,10.3195654,123.9092263,secondary,Cardinal Rosales Avenue,Cebu City
+855311028,10.3196293,123.9091216,secondary,Cardinal Rosales Avenue,Cebu City
+855311029,10.3201655,123.9099497,secondary,Cardinal Rosales Avenue,Cebu City
+855311035,10.3211882,123.9104915,primary,Pope John Paul Ⅱ Avenue,Cebu City
+855311036,10.3209852,123.9105268,primary,Pope John Paul Ⅱ Avenue,Cebu City
+855731364,10.3141376,123.9144034,primary,M.J. Cuenco Avenue,Cebu City
+855731365,10.3144723,123.9150857,primary,M.J. Cuenco Avenue,Cebu City
+859954371,10.3736325,123.8623217,tertiary,Unnamed road corridor,Cebu City
+893995433,10.3346054,123.9234151,secondary,Hernan Cortes Street,Cebu City
+894155993,10.2938839,123.9011339,tertiary,Magallanes Street,Cebu City
+894155994,10.2953318,123.9004302,secondary,Osmeña Boulevard,Cebu City
+894499541,10.3447285,123.908603,tertiary,Paseo Saturnino,Cebu City
+894964345,10.3185875,123.9224451,secondary,Gatewalk Drive,Cebu City
+896030616,10.3257588,123.9274915,primary,M.C. Briones Street,Cebu City
+896035245,10.3418294,123.9253528,secondary,Hernan Cortes Street,Cebu City
+896035246,10.3468965,123.9270998,secondary,Hernan Cortes Street,Cebu City
+896035253,10.3386548,123.9282156,secondary,A. S. Fortuna Street,Cebu City
+896035254,10.3385562,123.928504,secondary,A. S. Fortuna Street,Cebu City
+896256832,10.3480962,123.9268249,secondary,Manuel L. Quezon Avenue,Cebu City
+896256833,10.3515119,123.9237979,secondary,Manuel L. Quezon Avenue,Cebu City
+897179501,10.3194821,123.9258756,tertiary,S. O. Albaño Street,Cebu City
+897179506,10.3207073,123.9259211,secondary,Hernan Cortes Street,Cebu City
+897340822,10.3880877,123.9270959,tertiary,Unnamed road corridor,Cebu City
+897504041,10.3983351,123.8957572,tertiary,Unnamed road corridor,Cebu City
+897504042,10.3981227,123.8959072,tertiary,Unnamed road corridor,Cebu City
+897536258,10.3237543,123.8905714,tertiary,Villalon Drive,Cebu City
+897844090,10.3789062,123.8859235,tertiary,Budlaan Road,Cebu City
+898249614,10.3157164,123.8918099,tertiary,Governor M. Roa Street,Cebu City
+899705908,10.3088083,123.9072175,primary,M.J. Cuenco Avenue,Cebu City
+899705909,10.3087818,123.9072561,primary,M.J. Cuenco Avenue,Cebu City
+899705910,10.3088761,123.9070417,secondary,General Maxilom Avenue,Cebu City
+899737971,10.2933787,123.9069973,tertiary,C. Arellano Boulevard,Cebu City
+899759059,10.3035905,123.9127471,trunk,Sergio Osmeña Avenue,Cebu City
+899806171,10.3153259,123.9298362,tertiary,Doctor F.E. Zuellig Avenue,Cebu City
+900615504,10.3214175,123.9256783,secondary,Hernan Cortes Street,Cebu City
+900615505,10.3216354,123.9255673,secondary,Hernan Cortes Street,Cebu City
+900615506,10.3214399,123.9257224,secondary,Hernan Cortes Street,Cebu City
+901058738,10.2939701,123.906071,tertiary,Legaspi Extension,Cebu City
+902536288,10.3016326,123.9008232,tertiary,Dionisio Jakosalem Street,Cebu City
+902950132,10.3088978,123.8918553,secondary,B. Rodriguez Street,Cebu City
+902979204,10.3067179,123.9056179,primary,Imus Avenue,Cebu City
+902979205,10.30681,123.9055012,primary,Imus Avenue,Cebu City
+902979206,10.3063889,123.9060842,secondary,M.J. Cuenco Avenue,Cebu City
+902979207,10.3061202,123.9060818,secondary,M.J. Cuenco Avenue,Cebu City
+902979208,10.3061389,123.9061372,secondary,M.J. Cuenco Avenue,Cebu City
+902979209,10.3067347,123.9055364,secondary,M.J. Cuenco Avenue,Cebu City
+902979210,10.3065201,123.9058177,secondary,M.J. Cuenco Avenue,Cebu City
+903719895,10.3113926,123.9036353,secondary,Gorordo Avenue,Cebu City
+903719896,10.3132536,123.902698,secondary,Gorordo Avenue,Cebu City
+903719897,10.3213247,123.911946,secondary,F. Cabahug Street,Cebu City
+903719898,10.3180929,123.9186561,primary,M.J. Cuenco Avenue,Cebu City
+903719899,10.2948841,123.9014185,secondary,Osmeña Boulevard,Cebu City
+903719900,10.2952468,123.901663,tertiary,Dionisio Jakosalem Street,Cebu City
+904108006,10.3167114,123.8881853,secondary,M. Velez Street,Cebu City
+904108007,10.3234201,123.8836622,secondary,Vicente Rama Avenue,Cebu City
+904108008,10.3248184,123.8859485,tertiary,Singson Road,Cebu City
+904236153,10.3534652,123.8882642,tertiary,Paseo John-John,Cebu City
+904328239,10.2897832,123.8707033,secondary,Francisco Llamas Street,Cebu City
+904338936,10.3157816,123.8854013,secondary,Vicente Rama Avenue,Cebu City
+904338937,10.3156132,123.8854388,secondary,Vicente Rama Avenue,Cebu City
+904405468,10.3434978,123.9128412,secondary,A. S. Fortuna Street,Cebu City
+904881466,10.3144424,123.9145549,primary,Pope John Paul Ⅱ Avenue,Cebu City
+904958888,10.3166511,123.8922262,secondary,N. Escario Street,Cebu City
+904958889,10.3168038,123.8924088,secondary,N. Escario Street,Cebu City
+906068124,10.3112699,123.9220028,trunk,Sergio Osmeña Avenue,Cebu City
+906954999,10.3155591,123.9056355,secondary,Cardinal Rosales Avenue,Cebu City
+906955000,10.3134543,123.9029513,secondary,Cardinal Rosales Avenue,Cebu City
+914908826,10.3012488,123.8999838,primary,P. del Rosario Street,Cebu City
+914908827,10.3015444,123.9005446,primary,P. del Rosario Street,Cebu City
+914908828,10.3014966,123.9005556,primary,P. del Rosario Street,Cebu City
+922086607,10.2927688,123.8762637,tertiary,San Bernardino Street,Cebu City
+922086608,10.2925915,123.8765203,tertiary,San Bernardino Street,Cebu City
+922312336,10.3139494,123.9252398,trunk,Ouano Avenue,Cebu City
+922312337,10.3145684,123.9263404,trunk,Ouano Avenue,Cebu City
+922312338,10.3139425,123.9255405,trunk,Ouano Avenue,Cebu City
+922365856,10.3205316,123.9260067,secondary,E.O. Perez Street,Cebu City
+922365859,10.3206778,123.9293756,tertiary,F.F. Cruz Avenue,Cebu City
+922365860,10.3205976,123.9295059,tertiary,F.F. Cruz Avenue,Cebu City
+922781381,10.3169105,123.9311722,tertiary,Doctor F.E. Zuellig Avenue,Cebu City
+923588766,10.3132037,123.9245953,trunk,Ouano Avenue,Cebu City
+926502408,10.2942866,123.9048869,secondary,M.J. Cuenco Avenue,Cebu City
+926502409,10.2945565,123.9050216,secondary,M.J. Cuenco Avenue,Cebu City
+926502410,10.2945052,123.9050339,tertiary,Legaspi Extension,Cebu City
+926502411,10.2945353,123.9050591,secondary,M.J. Cuenco Avenue,Cebu City
+929584283,10.3167445,123.9237659,secondary,Gatewalk Drive,Cebu City
+930839299,10.3089046,123.9068573,secondary,General Maxilom Avenue,Cebu City
+931734644,10.2805453,123.8645639,tertiary,L. Gabuya Street,Cebu City
+932666815,10.3113443,123.8831584,tertiary,I. Limkakeng Street,Cebu City
+933210527,10.2945172,123.8821089,primary,Natalio Bacalso Avenue,Cebu City
+933391495,10.3287832,123.9051377,tertiary,Geonzon Street,Cebu City
+933836497,10.2859082,123.8800452,tertiary,Banog Road,Cebu City
+933881064,10.297711,123.8974877,secondary,Osmeña Boulevard,Cebu City
+933881065,10.2943598,123.9049714,tertiary,Legaspi Extension,Cebu City
+933881066,10.2944117,123.9050413,secondary,M.J. Cuenco Avenue,Cebu City
+933881067,10.2976944,123.8974388,secondary,Osmeña Boulevard,Cebu City
+933881068,10.2977302,123.8974215,tertiary,Sanciangko Street,Cebu City
+933881069,10.2962716,123.8982274,secondary,Colon Street,Cebu City
+934653731,10.2920104,123.8993882,tertiary,Plaridel Street,Cebu City
+935192310,10.3124634,123.9248859,tertiary,Doctor F.E. Zuellig Avenue,Cebu City
+936762292,10.3170262,123.8930663,secondary,N. Escario Street,Cebu City
+936762293,10.3170649,123.8933028,tertiary,Juana Osmeña Street,Cebu City
+936762294,10.3171525,123.8936713,secondary,N. Escario Street,Cebu City
+936762295,10.3174009,123.8943607,secondary,N. Escario Street,Cebu City
+936762296,10.3171804,123.8935089,secondary,N. Escario Street,Cebu City
+936770901,10.3114112,123.8925058,secondary,Osmeña Boulevard,Cebu City
+936770902,10.3131553,123.8918809,secondary,Osmeña Boulevard,Cebu City
+936770903,10.3112909,123.8926165,tertiary,J. Llorente Street,Cebu City
+936775914,10.3185867,123.9080101,secondary,Cardinal Rosales Avenue,Cebu City
+936779615,10.3155984,123.9055303,secondary,Cardinal Rosales Avenue,Cebu City
+936779616,10.3158109,123.9057136,secondary,Cardinal Rosales Avenue,Cebu City
+936779617,10.3160749,123.9056816,secondary,Cardinal Rosales Avenue,Cebu City
+936783368,10.296938,123.8989349,tertiary,Pelaez Street,Cebu City
+936783369,10.296622,123.8988292,secondary,Colon Street,Cebu City
+937916515,10.3032189,123.8954356,secondary,Osmeña Boulevard,Cebu City
+937916516,10.3023179,123.8959038,secondary,Osmeña Boulevard,Cebu City
+937916517,10.3022697,123.8957703,secondary,Osmeña Boulevard,Cebu City
+937916519,10.3037307,123.8952516,secondary,Osmeña Boulevard,Cebu City
+937916520,10.3026942,123.8956237,secondary,Osmeña Boulevard,Cebu City
+937916521,10.3037515,123.8953832,secondary,Osmeña Boulevard,Cebu City
+937916522,10.303874,123.8953394,secondary,Osmeña Boulevard,Cebu City
+937916524,10.303192,123.8955848,secondary,Osmeña Boulevard,Cebu City
+937916528,10.3081295,123.8935461,secondary,Osmeña Boulevard,Cebu City
+937924629,10.2980005,123.8916606,primary,Natalio Bacalso Avenue,Cebu City
+937924630,10.2982145,123.8918611,primary,Natalio Bacalso Avenue,Cebu City
+937924631,10.2983786,123.892291,primary,Natalio Bacalso Avenue,Cebu City
+937924632,10.2982798,123.8923258,primary,Natalio Bacalso Avenue,Cebu City
+937924633,10.2984219,123.8924632,primary,Natalio Bacalso Avenue,Cebu City
+937924634,10.2983598,123.8927132,primary,Natalio Bacalso Avenue,Cebu City
+937924635,10.2983162,123.8924793,primary,Natalio Bacalso Avenue,Cebu City
+937924636,10.2985458,123.8931176,primary,Natalio Bacalso Avenue,Cebu City
+937924638,10.2988972,123.8953666,primary,Natalio Bacalso Avenue,Cebu City
+937924639,10.2987984,123.8954461,primary,Natalio Bacalso Avenue,Cebu City
+937924640,10.2989293,123.8955028,primary,Natalio Bacalso Avenue,Cebu City
+937924641,10.2988983,123.8955646,primary,Natalio Bacalso Avenue,Cebu City
+937924642,10.2988727,123.8955219,tertiary,Leon Kilat Street,Cebu City
+937924644,10.2990054,123.8957226,primary,P. del Rosario Street,Cebu City
+937924645,10.2994688,123.8966174,primary,P. del Rosario Street,Cebu City
+937950799,10.2974915,123.8873051,secondary,Katipunan Street,Cebu City
+937957049,10.3084708,123.8866384,secondary,Vicente Rama Avenue,Cebu City
+938273364,10.3004681,123.8990395,tertiary,Junquera Street,Cebu City
+938278131,10.3109066,123.8928969,secondary,Osmeña Boulevard,Cebu City
+938638108,10.2949892,123.8966565,tertiary,Leon Kilat Street,Cebu City
+938638111,10.2935419,123.8973557,tertiary,Magallanes Street,Cebu City
+938638112,10.2933347,123.89725,tertiary,Escaño Street,Cebu City
+938643339,10.2963392,123.8982029,secondary,Osmeña Boulevard,Cebu City
+938655274,10.2948081,123.9015836,secondary,Osmeña Boulevard,Cebu City
+938655275,10.2948911,123.9015549,tertiary,Dionisio Jakosalem Street,Cebu City
+938655276,10.2955053,123.90184,tertiary,Legaspi Street,Cebu City
+938655278,10.2968596,123.9021413,tertiary,Dionisio Jakosalem Street,Cebu City
+938655279,10.2977972,123.9021154,secondary,Colon Street,Cebu City
+938655280,10.2977264,123.902069,tertiary,Dionisio Jakosalem Street,Cebu City
+938754256,10.3041135,123.9000597,tertiary,Dionisio Jakosalem Street,Cebu City
+938754264,10.3058347,123.8998215,tertiary,Dionisio Jakosalem Street,Cebu City
+938754265,10.3066397,123.8997211,tertiary,Dionisio Jakosalem Street,Cebu City
+938754274,10.3088807,123.8996842,tertiary,Dionisio Jakosalem Street,Cebu City
+938754277,10.3111824,123.899782,tertiary,Dionisio Jakosalem Street,Cebu City
+938754278,10.3113604,123.8998041,tertiary,Dionisio Jakosalem Street,Cebu City
+938767452,10.2962598,123.8983295,secondary,Osmeña Boulevard,Cebu City
+938767454,10.2964343,123.8996402,tertiary,Legaspi Street,Cebu City
+938815168,10.2932698,123.9025444,tertiary,P. Burgos Street,Cebu City
+938815169,10.2929141,123.9023682,tertiary,P. Burgos Street,Cebu City
+939120272,10.2962342,123.9000592,tertiary,Legaspi Street,Cebu City
+939125642,10.3027733,123.897745,tertiary,R.R. Landon Street,Cebu City
+939125644,10.3024697,123.8968374,tertiary,R.R. Landon Street,Cebu City
+939125648,10.2974404,123.8986726,tertiary,Pelaez Street,Cebu City
+939128986,10.3044411,123.8999799,tertiary,Dionisio Jakosalem Street,Cebu City
+939132667,10.3069097,123.8965966,tertiary,F. Ramos Street,Cebu City
+939153204,10.3108067,123.8953083,tertiary,Juana Osmeña Street,Cebu City
+939153205,10.3104485,123.8953762,tertiary,Juana Osmeña Street,Cebu City
+939153208,10.3102346,123.8954239,tertiary,Juana Osmeña Street,Cebu City
+939153209,10.310078,123.894843,secondary,General Maxilom Avenue,Cebu City
+939153210,10.3102584,123.8953736,secondary,General Maxilom Avenue,Cebu City
+939153217,10.3090659,123.8949702,tertiary,F. Ramos Street,Cebu City
+939153218,10.3094611,123.894665,tertiary,F. Ramos Street,Cebu City
+939184388,10.2977715,123.9005504,tertiary,Junquera Street,Cebu City
+939184389,10.2990358,123.8998598,tertiary,Junquera Street,Cebu City
+939187203,10.3063292,123.9060522,secondary,M.J. Cuenco Avenue,Cebu City
+939187204,10.3063826,123.9061451,secondary,M.J. Cuenco Avenue,Cebu City
+939240884,10.3110885,123.8920424,tertiary,J. Llorente Street,Cebu City
+939256235,10.3007251,123.8989052,tertiary,Junquera Street,Cebu City
+939355090,10.3191933,123.9258337,secondary,M. Logarta Avenue,Cebu City
+939355093,10.3195771,123.9259524,secondary,M. Logarta Avenue,Cebu City
+939355094,10.3195926,123.9258603,secondary,M. Logarta Avenue,Cebu City
+939355096,10.3204728,123.9259646,secondary,M. Logarta Avenue,Cebu City
+958104998,10.3149232,123.9017984,secondary,Gorordo Avenue,Cebu City
+958104999,10.3153836,123.9015633,secondary,Gorordo Avenue,Cebu City
+959649615,10.299423,123.8969187,secondary,Osmeña Boulevard,Cebu City
+959649616,10.2999529,123.8975549,primary,P. del Rosario Street,Cebu City
+959659402,10.3010229,123.8963691,secondary,Osmeña Boulevard,Cebu City
+959659403,10.2993884,123.8967995,secondary,Osmeña Boulevard,Cebu City
+959660119,10.3024366,123.9005062,tertiary,Dionisio Jakosalem Street,Cebu City
+959660120,10.301972,123.9017893,primary,P. del Rosario Street,Cebu City
+959660608,10.3024356,123.902324,primary,Imus Avenue,Cebu City
+959692823,10.3164967,123.9289717,tertiary,F.F. Cruz Avenue,Cebu City
+959692824,10.316662,123.9289638,trunk,Ouano Avenue,Cebu City
+959692828,10.3178581,123.9297519,trunk,Ouano Avenue,Cebu City
+959723981,10.3248852,123.9068259,secondary,Archbishop Reyes Avenue,Cebu City
+959723982,10.3233696,123.9090647,primary,Pope John Paul Ⅱ Avenue,Cebu City
+959723983,10.326108,123.9078684,secondary,Governor M. Cuenco Avenue,Cebu City
+959723984,10.3232334,123.9092426,primary,Pope John Paul Ⅱ Avenue,Cebu City
+959732972,10.2990632,123.894627,tertiary,J. Alcantara Street,Cebu City
+959732973,10.2979063,123.8958298,tertiary,Leon Kilat Street,Cebu City
+959735857,10.3168065,123.9063029,secondary,Cardinal Rosales Avenue,Cebu City
+959738497,10.2973026,123.8894697,primary,Natalio Bacalso Avenue,Cebu City
+959738498,10.2974219,123.8894221,primary,Natalio Bacalso Avenue,Cebu City
+959738499,10.2973972,123.8891761,primary,Natalio Bacalso Avenue,Cebu City
+959738500,10.2972728,123.8891982,primary,Natalio Bacalso Avenue,Cebu City
+965861726,10.3118201,123.9254077,tertiary,Doctor F.E. Zuellig Avenue,Cebu City
+977882922,10.3335283,123.8732014,tertiary,Sapangdaku Road,Cebu City
+977882923,10.3352616,123.8722446,tertiary,Sapangdaku Road,Cebu City
+983796020,10.3259377,123.9075176,secondary,Governor M. Cuenco Avenue,Cebu City
+983796021,10.3260299,123.907382,primary,Salinas Drive,Cebu City
+983796022,10.3260579,123.9074095,primary,Salinas Drive,Cebu City
+1012317415,10.2955309,123.9085922,tertiary,Unnamed road corridor,Cebu City
+1018779967,10.280861,123.8557665,tertiary,I. Tabura Street,Cebu City
+1019897600,10.3204263,123.9260164,secondary,E.O. Perez Street,Cebu City
+1024094491,10.2818928,123.8834218,trunk,Cebu South Coastal Road,Cebu City
+1037907541,10.3131664,123.9242525,trunk,Ouano Avenue,Cebu City
+1037907542,10.3130209,123.9243617,trunk,Ouano Avenue,Cebu City
+1044378551,10.3089129,123.9190947,trunk,Sergio Osmeña Avenue,Cebu City
+1059711877,10.3072059,123.8795896,tertiary,Dr. Pablo Abella Street,Cebu City
+1059762369,10.4070042,123.903989,tertiary,Barangay Pit os,Cebu City
+1060254440,10.3987026,123.8585925,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1081702327,10.3657166,123.8692425,tertiary,Babag Road,Cebu City
+1081702345,10.3275804,123.9084745,secondary,Governor M. Cuenco Avenue,Cebu City
+1081706277,10.3104374,123.8929198,secondary,Fuente Osmeña Circle,Cebu City
+1081706278,10.3099079,123.8934563,secondary,Fuente Osmeña Circle,Cebu City
+1081706279,10.2945035,123.8940853,secondary,Colon Street,Cebu City
+1081706280,10.2945473,123.8942146,secondary,Colon Street,Cebu City
+1081706281,10.3092436,123.8932983,secondary,Fuente Osmeña Circle,Cebu City
+1081706282,10.2924169,123.8973361,tertiary,Escaño Street,Cebu City
+1083960758,10.3309176,123.9084476,tertiary,Jose Maria Del Mar Avenue,Cebu City
+1083960759,10.3310079,123.9084227,tertiary,I. Villa Street,Cebu City
+1083960760,10.3309887,123.9083315,tertiary,Jose Maria Del Mar Avenue,Cebu City
+1083961746,10.3307662,123.9062345,tertiary,Geonzon Street,Cebu City
+1083961749,10.3300587,123.905799,tertiary,Geonzon Street,Cebu City
+1083961750,10.3305749,123.9061175,tertiary,Geonzon Street,Cebu City
+1083961751,10.3310159,123.906514,tertiary,Geonzon Street,Cebu City
+1083961752,10.330517,123.9062094,tertiary,Geonzon Street,Cebu City
+1083961753,10.3297143,123.9057086,tertiary,Geonzon Street,Cebu City
+1083961755,10.329192,123.9053854,tertiary,Geonzon Street,Cebu City
+1083961756,10.3294172,123.9054023,tertiary,Geonzon Street,Cebu City
+1083962113,10.3316098,123.9068814,tertiary,Geonzon Street,Cebu City
+1083962114,10.3318177,123.9069778,tertiary,Geonzon Street,Cebu City
+1083962115,10.331846,123.9069321,tertiary,Geonzon Street,Cebu City
+1083962116,10.3314629,123.907675,tertiary,I. Villa Street,Cebu City
+1083962117,10.3313435,123.9076343,tertiary,I. Villa Street,Cebu City
+1083962118,10.3317813,123.9069244,tertiary,I. Villa Street,Cebu City
+1094769555,10.3344561,123.8830009,tertiary,Maya,Cebu City
+1116001384,10.3285141,123.9088972,secondary,Governor M. Cuenco Avenue,Cebu City
+1116001385,10.3285617,123.9089184,secondary,Governor M. Cuenco Avenue,Cebu City
+1116001386,10.3286678,123.9089645,secondary,Governor M. Cuenco Avenue,Cebu City
+1116001387,10.3284058,123.9088489,secondary,Governor M. Cuenco Avenue,Cebu City
+1116002092,10.3317283,123.9101554,secondary,Governor M. Cuenco Avenue,Cebu City
+1116002957,10.3400145,123.9116131,tertiary,Camp Lapu-Lapu Road,Cebu City
+1116002958,10.3384635,123.9114441,secondary,Governor M. Cuenco Avenue,Cebu City
+1116006070,10.3400464,123.9114115,tertiary,Camp Lapu-Lapu Road,Cebu City
+1116014261,10.2944292,123.9051851,tertiary,Legaspi Extension,Cebu City
+1116014262,10.2937999,123.9060771,tertiary,Legaspi Extension,Cebu City
+1116014263,10.2938635,123.9059622,tertiary,Legaspi Extension,Cebu City
+1116014264,10.2938412,123.9063077,tertiary,Legaspi Extension,Cebu City
+1120737938,10.2898358,123.8719178,primary,Mambaling Underpass,Cebu City
+1120737939,10.2898638,123.87287,primary,Natalio Bacalso Avenue,Cebu City
+1120737940,10.2892419,123.8679843,primary,Natalio Bacalso Avenue,Cebu City
+1120879927,10.3290068,123.8899171,tertiary,Unnamed road corridor,Cebu City
+1123834269,10.2895299,123.8692528,secondary,Natalio Bacalso Avenue,Cebu City
+1123834270,10.2902606,123.8747745,primary,Natalio Bacalso Avenue,Cebu City
+1123834271,10.2899205,123.8733457,primary,Natalio Bacalso Avenue,Cebu City
+1123834272,10.2889317,123.8670416,primary,Natalio Bacalso Avenue,Cebu City
+1137515313,10.3280737,123.9087012,secondary,Governor M. Cuenco Avenue,Cebu City
+1137515314,10.3279874,123.9086621,secondary,Governor M. Cuenco Avenue,Cebu City
+1147539540,10.3111579,123.8939353,tertiary,J. Llorente Street,Cebu City
+1147539548,10.3150927,123.8922709,tertiary,Don Jose Avila Street,Cebu City
+1147542483,10.3124849,123.8980288,tertiary,Queens' Road,Cebu City
+1147542484,10.3123447,123.8980222,tertiary,Queens' Road,Cebu City
+1149801471,10.3817605,123.9209554,secondary,Miñoza Street,Cebu City
+1149806989,10.3115762,123.922548,trunk,Sergio Osmeña Avenue,Cebu City
+1152889630,10.3141327,123.9047508,secondary,Cardinal Rosales Avenue,Cebu City
+1152893635,10.3148278,123.9052432,secondary,Cardinal Rosales Avenue,Cebu City
+1153119396,10.291696,123.9023131,tertiary,M.L. Quezon Boulevard,Cebu City
+1154306408,10.3182933,123.9254437,secondary,M. Logarta Avenue,Cebu City
+1155282496,10.2815084,123.8832268,trunk,Cebu South Coastal Road,Cebu City
+1155282497,10.2818199,123.8834375,secondary,F. Vestil Street,Cebu City
+1157967297,10.2986,123.8944301,primary,Natalio Bacalso Avenue,Cebu City
+1157975081,10.2897161,123.8705832,secondary,Natalio Bacalso Avenue,Cebu City
+1157975082,10.2897101,123.8704259,secondary,Natalio Bacalso Avenue,Cebu City
+1158588595,10.2963185,123.8981667,tertiary,P. Lopez Street,Cebu City
+1171880840,10.3036833,123.9001092,tertiary,Dionisio Jakosalem Street,Cebu City
+1188547713,10.320048,123.9259325,secondary,M. Logarta Avenue,Cebu City
+1188547714,10.320375,123.9276215,secondary,E.O. Perez Street,Cebu City
+1188547715,10.3211133,123.9258928,secondary,Hernan Cortes Street,Cebu City
+1191533127,10.299372,123.8796765,secondary,Katipunan Street,Cebu City
+1191533128,10.2995505,123.8789499,secondary,Katipunan Street,Cebu City
+1191533129,10.2996064,123.8787201,secondary,Katipunan Street,Cebu City
+1191533130,10.2996648,123.8784779,secondary,Katipunan Street,Cebu City
+1194903323,10.3146623,123.8910314,tertiary,Don Jose Avila Street,Cebu City
+1206557195,10.3243073,123.8710042,tertiary,Unnamed road corridor,Cebu City
+1206557196,10.3243815,123.8709403,tertiary,Unnamed road corridor,Cebu City
+1207204799,10.3332879,123.9094242,tertiary,Jose Maria Del Mar Avenue,Cebu City
+1207348048,10.344828,123.9084639,tertiary,Paseo Saturnino,Cebu City
+1207348714,10.3534104,123.8882155,tertiary,Paseo John-John,Cebu City
+1216169779,10.2965802,123.8686471,tertiary,Buhisan Road,Cebu City
+1231301645,10.3178662,123.9073523,secondary,Cardinal Rosales Avenue,Cebu City
+1231301646,10.317781,123.9074176,secondary,Cardinal Rosales Avenue,Cebu City
+1231307360,10.3534838,123.8882416,tertiary,Paseo John-John,Cebu City
+1231307361,10.3534289,123.8881929,tertiary,Paseo John-John,Cebu City
+1278397431,10.3160072,123.891042,secondary,Osmeña Boulevard,Cebu City
+1278397432,10.3152525,123.8911309,secondary,Osmeña Boulevard,Cebu City
+1288882074,10.3962866,123.8592445,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1288882075,10.3979254,123.8586607,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1288882077,10.3971473,123.8589239,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1288882078,10.3983622,123.858694,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1289768677,10.3124859,123.9160497,primary,Juan Luna Avenue,Cebu City
+1289768678,10.3129499,123.9157856,primary,Juan Luna Avenue,Cebu City
+1289771412,10.3119881,123.9206878,secondary,Kaohsiung Street,Cebu City
+1289771413,10.3118525,123.9207995,secondary,Kaohsiung Street,Cebu City
+1289772322,10.3182015,123.9028254,secondary,Archbishop Reyes Avenue,Cebu City
+1289776705,10.3240521,123.9062025,secondary,Archbishop Reyes Avenue,Cebu City
+1289776707,10.3239491,123.9061345,secondary,Archbishop Reyes Avenue,Cebu City
+1289776708,10.3239029,123.9061016,secondary,Archbishop Reyes Avenue,Cebu City
+1289776709,10.3238098,123.9060401,secondary,Archbishop Reyes Avenue,Cebu City
+1293348466,10.3095481,123.91849,primary,Juan Luna Avenue,Cebu City
+1293348468,10.3097769,123.9184547,primary,Juan Luna Avenue,Cebu City
+1293348469,10.3100797,123.9181957,primary,Juan Luna Avenue,Cebu City
+1293348470,10.3091953,123.9187812,primary,Juan Luna Avenue,Cebu City
+1294663801,10.311034,123.9173966,primary,Juan Luna Avenue,Cebu City
+1294663802,10.311323,123.9171582,primary,Juan Luna Avenue,Cebu City
+1294663804,10.3109688,123.9173156,primary,Juan Luna Avenue,Cebu City
+1294663806,10.3107682,123.9174824,primary,Juan Luna Avenue,Cebu City
+1294670511,10.3057496,123.9109143,secondary,General Maxilom Avenue Extension,Cebu City
+1294670512,10.306182,123.9106906,secondary,General Maxilom Avenue Extension,Cebu City
+1295515515,10.3308378,123.9098465,secondary,Governor M. Cuenco Avenue,Cebu City
+1296759963,10.2899972,123.8733399,primary,Natalio Bacalso Avenue,Cebu City
+1296759964,10.2901258,123.8745193,primary,Natalio Bacalso Avenue,Cebu City
+1314778622,10.3159804,123.9018667,secondary,Archbishop Reyes Avenue,Cebu City
+1315622544,10.2935758,123.9012168,tertiary,Dionisio Jakosalem Street,Cebu City
+1315622545,10.2933173,123.9027074,tertiary,Magallanes Street,Cebu City
+1315622546,10.2930519,123.8999914,tertiary,Lincoln Street,Cebu City
+1315622547,10.2926134,123.8995151,tertiary,Plaridel Street,Cebu City
+1315622548,10.2969746,123.8994388,secondary,Colon Street,Cebu City
+1315622551,10.2990985,123.9033456,secondary,Sikatuna Street,Cebu City
+1315622553,10.299514,123.9032422,secondary,Sikatuna Street,Cebu City
+1315622554,10.2991197,123.9038155,secondary,Mabini Street,Cebu City
+1315622555,10.2999525,123.8906478,tertiary,J. Alcantara Street,Cebu City
+1315622556,10.2914673,123.9002221,tertiary,M.L. Quezon Boulevard,Cebu City
+1315622559,10.2908795,123.8977293,tertiary,M.L. Quezon Boulevard,Cebu City
+1315622560,10.2943092,123.8993775,tertiary,Magallanes Street,Cebu City
+1315622561,10.2933141,123.8983433,tertiary,Lincoln Street,Cebu City
+1315622562,10.2938683,123.8989163,tertiary,Manalili Street,Cebu City
+1316045982,10.40148,123.9091884,tertiary,Pit-os Road,Cebu City
+1316048002,10.3979872,123.9055738,tertiary,Unnamed road corridor,Cebu City
+1323359152,10.3015678,123.8706038,secondary,Katipunan Street,Cebu City
+1324325796,10.316678,123.9044536,tertiary,Luzon Avenue,Cebu City
+1324325797,10.316448,123.9049696,tertiary,Luzon Avenue,Cebu City
+1324328418,10.3104974,123.890402,tertiary,J. Llorente Street,Cebu City
+1324613693,10.2976444,123.9102817,tertiary,V. Sotto Street,Cebu City
+1324613701,10.2953512,123.9089155,tertiary,Unnamed road corridor,Cebu City
+1324613705,10.2929738,123.9076378,tertiary,Legaspi Extension,Cebu City
+1324625806,10.3321209,123.9102015,tertiary,Road 15,Cebu City
+1324625807,10.3324776,123.9093874,tertiary,Road 15,Cebu City
+1324631405,10.2927376,123.8794874,primary,Natalio Bacalso Avenue,Cebu City
+1324631406,10.2938557,123.8809774,primary,Natalio Bacalso Avenue,Cebu City
+1324664831,10.3124745,123.8974772,tertiary,Queens' Road,Cebu City
+1324934665,10.3200309,123.9291439,tertiary,F.F. Cruz Avenue,Cebu City
+1324940094,10.2901083,123.8739504,primary,Natalio Bacalso Avenue,Cebu City
+1324967239,10.3105281,123.8961613,secondary,General Maxilom Avenue,Cebu City
+1324967987,10.3110288,123.8980373,secondary,General Maxilom Avenue,Cebu City
+1326430767,10.3228084,123.9241951,primary,Lopez Jaena Street,Cebu City
+1326431315,10.3176583,123.9252125,secondary,M. Logarta Avenue,Cebu City
+1326435165,10.3151237,123.9237346,secondary,M. Logarta Avenue,Cebu City
+1326435166,10.3144433,123.9231822,secondary,M. Logarta Avenue,Cebu City
+1326436016,10.3282039,123.9215891,secondary,Hernan Cortes Street,Cebu City
+1326436017,10.3286523,123.9213611,secondary,Hernan Cortes Street,Cebu City
+1326436694,10.2909569,123.8981304,tertiary,M.L. Quezon Boulevard,Cebu City
+1326457295,10.3315226,123.9100936,secondary,Governor M. Cuenco Avenue,Cebu City
+1327156764,10.310948,123.9174679,primary,Juan Luna Avenue,Cebu City
+1327156765,10.3107167,123.9176595,primary,Juan Luna Avenue,Cebu City
+1327160150,10.3216779,123.8841302,secondary,Vicente Rama Avenue,Cebu City
+1327160151,10.3196303,123.8845654,secondary,Vicente Rama Avenue,Cebu City
+1327163666,10.3211114,123.9257941,secondary,Hernan Cortes Street,Cebu City
+1327164914,10.3028409,123.9019284,tertiary,Sikatuna Street,Cebu City
+1327164915,10.3045567,123.9016159,tertiary,Sikatuna Street,Cebu City
+1327166927,10.3315617,123.9086884,tertiary,Jose Maria Del Mar Avenue,Cebu City
+1327166928,10.3328774,123.9092602,tertiary,Jose Maria Del Mar Avenue,Cebu City
+1327176566,10.3149137,123.8917546,tertiary,Don Jose Avila Street,Cebu City
+1328724326,10.3185444,123.8850683,tertiary,L. Bacayo Street,Cebu City
+1328724327,10.3185056,123.8848041,secondary,Vicente Rama Avenue,Cebu City
+1328738101,10.3206602,123.9108782,secondary,F. Cabahug Street,Cebu City
+1328738102,10.3206761,123.9107585,secondary,Cardinal Rosales Avenue,Cebu City
+1328738103,10.3206522,123.9108171,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1330087773,10.3073579,123.8866835,secondary,Vicente Rama Avenue,Cebu City
+1330579436,10.3163289,123.9054316,tertiary,Luzon Avenue,Cebu City
+1330579437,10.316915,123.9040503,tertiary,Luzon Avenue,Cebu City
+1332404566,10.3074927,123.8762184,secondary,Ramon Duterte Street,Cebu City
+1337679204,10.3142189,123.9045584,secondary,Cardinal Rosales Avenue,Cebu City
+1337679205,10.3138114,123.9036907,secondary,Cardinal Rosales Avenue,Cebu City
+1337680661,10.3995379,123.9228984,tertiary,Unnamed road corridor,Cebu City
+1337681081,10.3773888,123.8918307,tertiary,Budlaan Road,Cebu City
+1337942772,10.3419973,123.8756848,tertiary,Unnamed road corridor,Cebu City
+1338599968,10.3082346,123.8821525,tertiary,I. Limkakeng Street,Cebu City
+1339486039,10.3756652,123.8522016,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1339704931,10.3400376,123.9231484,secondary,A. S. Fortuna Street,Cebu City
+1339704933,10.3396083,123.9247347,secondary,Hernan Cortes Street,Cebu City
+1339810887,10.3738705,123.882015,tertiary,Busay-Budlaan Road,Cebu City
+1339810888,10.3749843,123.8824368,tertiary,Busay-Budlaan Road,Cebu City
+1339870354,10.3394546,123.9246892,secondary,Hernan Cortes Street,Cebu City
+1339871060,10.3506349,123.9245074,secondary,Manuel L. Quezon Avenue,Cebu City
+1339871061,10.3495707,123.9253892,secondary,Manuel L. Quezon Avenue,Cebu City
+1340075106,10.3237084,123.8924029,tertiary,Friendship Street,Cebu City
+1340215890,10.3112275,123.9091677,primary,M.J. Cuenco Avenue,Cebu City
+1340215891,10.3116277,123.9095988,primary,M.J. Cuenco Avenue,Cebu City
+1340215892,10.3113393,123.9092808,primary,M.J. Cuenco Avenue,Cebu City
+1340220476,10.2956277,123.8997187,secondary,Osmeña Boulevard,Cebu City
+1340480916,10.3298625,123.8976611,secondary,Gorordo Avenue,Cebu City
+1340725656,10.2928309,123.9032466,tertiary,Lapu-Lapu Street,Cebu City
+1340725657,10.2931734,123.9030851,tertiary,Magallanes Street,Cebu City
+1340725658,10.2924596,123.9030848,tertiary,Lapu-Lapu Street,Cebu City
+1341242381,10.3127362,123.9166933,secondary,A. Soriano Jr. Avenue,Cebu City
+1342388895,10.3178362,123.9026529,secondary,Archbishop Reyes Avenue,Cebu City
+1342640691,10.3047432,123.9039794,primary,Imus Avenue,Cebu City
+1342640692,10.3055144,123.90454,primary,Imus Avenue,Cebu City
+1342640693,10.3056912,123.9048655,primary,Imus Avenue,Cebu City
+1342640698,10.3023562,123.9065143,secondary,M.J. Cuenco Avenue,Cebu City
+1342640699,10.3052948,123.9061334,secondary,M.J. Cuenco Avenue,Cebu City
+1343633815,10.3387575,123.911492,secondary,Governor M. Cuenco Avenue,Cebu City
+1343976794,10.3154078,123.9016613,secondary,Archbishop Reyes Avenue,Cebu City
+1344931809,10.3165411,123.9046432,tertiary,Luzon Avenue,Cebu City
+1344931810,10.3172522,123.9035978,tertiary,Luzon Avenue,Cebu City
+1350833721,10.2882788,123.8651047,primary,Natalio Bacalso Avenue,Cebu City
+1350833723,10.2890751,123.8676009,primary,Natalio Bacalso Avenue,Cebu City
+1351753131,10.2845334,123.8807207,secondary,F. Vestil Street,Cebu City
+1351753132,10.2841499,123.8810586,secondary,F. Vestil Street,Cebu City
+1356842496,10.3447916,123.9084583,tertiary,Paseo Saturnino,Cebu City
+1356842498,10.3447793,123.9086085,tertiary,Paseo Saturnino,Cebu City
+1356860342,10.3184116,123.9078674,secondary,Cardinal Rosales Avenue,Cebu City
+1357704058,10.2951576,123.9008448,secondary,Osmeña Boulevard,Cebu City
+1357709155,10.3190583,123.9142971,tertiary,S. Cabahug Street,Cebu City
+1360860440,10.3123634,123.8976824,tertiary,Queens' Road,Cebu City
+1363019683,10.3368114,123.9111567,secondary,Governor M. Cuenco Avenue,Cebu City
+1363019684,10.3382668,123.9114121,secondary,Governor M. Cuenco Avenue,Cebu City
+1363722319,10.3434392,123.9122946,tertiary,Paseo Saturnino,Cebu City
+1363722320,10.3433531,123.9123427,secondary,Governor M. Cuenco Avenue,Cebu City
+1363722321,10.343572,123.912319,secondary,A. S. Fortuna Street,Cebu City
+1363725523,10.3435158,123.9122427,secondary,Governor M. Cuenco Avenue,Cebu City
+1363725524,10.3434955,123.9123709,secondary,Governor M. Cuenco Avenue,Cebu City
+1364960732,10.3201074,123.9291009,secondary,E.O. Perez Street,Cebu City
+1364965110,10.3304234,123.8978255,secondary,Gorordo Avenue,Cebu City
+1364965112,10.3309803,123.8980208,secondary,Gorordo Avenue,Cebu City
+1369016661,10.3243674,123.9234426,secondary,Hernan Cortes Street,Cebu City
+1376043371,10.3170273,123.8897674,secondary,G. Garcia Street,Cebu City
+1376043372,10.3152609,123.8904922,tertiary,Don Gil Garcia Street,Cebu City
+1376054095,10.3356244,123.9078168,tertiary,San Miguel Road,Cebu City
+1376054096,10.3324627,123.9066954,tertiary,San Miguel Road,Cebu City
+1376054097,10.3368874,123.9058836,tertiary,Omega Street,Cebu City
+1379560692,10.3432309,123.9123202,secondary,Governor M. Cuenco Avenue,Cebu City
+1379560693,10.3441202,123.9103342,tertiary,Paseo Saturnino,Cebu City
+1380178750,10.3973928,123.858964,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1382204832,10.3310288,123.8800266,secondary,J. Labra Street,Cebu City
+1414559432,10.3270143,123.9082505,secondary,Governor M. Cuenco Avenue,Cebu City
+1414559433,10.3260798,123.907655,secondary,Governor M. Cuenco Avenue,Cebu City
+1414575016,10.410916,123.8782183,tertiary,Unnamed road corridor,Cebu City
+1414575017,10.4121819,123.8788239,tertiary,Unnamed road corridor,Cebu City
+1415121452,10.3160456,123.905786,secondary,Cardinal Rosales Avenue,Cebu City
+1415121453,10.3160121,123.906234,tertiary,Samar Loop,Cebu City
+1415121454,10.3158436,123.9056082,secondary,Cardinal Rosales Avenue,Cebu City
+1415121455,10.3161995,123.9059417,tertiary,Samar Loop,Cebu City
+1415121456,10.3168183,123.9064069,secondary,Cardinal Rosales Avenue,Cebu City
+1417459250,10.3751664,123.8525492,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1417459251,10.3753623,123.8522642,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1417987479,10.292598,123.8734363,tertiary,Gabriel Elorde Street,Cebu City
+1418239202,10.3086037,123.8908379,tertiary,C. Rodriguez Street,Cebu City
+1418577444,10.298118,123.8919054,primary,Natalio Bacalso Avenue,Cebu City
+1418601739,10.2948491,123.8906206,tertiary,T. Abella Street,Cebu City
+1419097569,10.3106474,123.9040493,secondary,General Maxilom Avenue,Cebu City
+1419097570,10.3107494,123.9039444,secondary,Gorordo Avenue,Cebu City
+1420105703,10.3185758,123.9191085,primary,Lopez Jaena Street,Cebu City
+1420106478,10.3202551,123.9213116,secondary,Gatewalk Drive,Cebu City
+1420296356,10.3159011,123.9293019,tertiary,F.F. Cruz Avenue,Cebu City
+1420660183,10.2977468,123.8974705,tertiary,Sanciangko Street,Cebu City
+1423467178,10.3392943,123.9254063,secondary,A. S. Fortuna Street,Cebu City
+1423467179,10.3394403,123.9248772,secondary,A. S. Fortuna Street,Cebu City
+1423467182,10.3391074,123.9261801,secondary,A. S. Fortuna Street,Cebu City
+1427501665,10.3113305,123.8986843,secondary,General Maxilom Avenue,Cebu City
+1427501666,10.3111919,123.8981883,tertiary,Gotianuy Street,Cebu City
+1428931326,10.2960891,123.8986748,secondary,Osmeña Boulevard,Cebu City
+1431166185,10.3125055,123.8950215,tertiary,Don Ramon Aboitiz Street,Cebu City
+1431166186,10.3117405,123.8951343,tertiary,Juana Osmeña Street,Cebu City
+1441823375,10.2824237,123.8829139,secondary,F. Vestil Street,Cebu City
+1441823376,10.2829578,123.8823397,secondary,F. Vestil Street,Cebu City
+1441823377,10.2828909,123.8822809,secondary,F. Vestil Street,Cebu City
+1441823378,10.2829434,123.8822242,secondary,F. Vestil Street,Cebu City
+1443617518,10.2989037,123.8954601,tertiary,Leon Kilat Street,Cebu City
+1443622000,10.3413287,123.9119014,secondary,Governor M. Cuenco Avenue,Cebu City
+1443622001,10.3415453,123.9119098,secondary,Governor M. Cuenco Avenue,Cebu City
+1443622002,10.3405831,123.9117965,secondary,Governor M. Cuenco Avenue,Cebu City
+1443622003,10.3408059,123.9118356,secondary,Governor M. Cuenco Avenue,Cebu City
+1443622004,10.3409552,123.9118618,secondary,Governor M. Cuenco Avenue,Cebu City
+1444098377,10.3922381,123.9267644,tertiary,Unnamed road corridor,Cebu City
+1444098378,10.3898711,123.9268511,tertiary,Unnamed road corridor,Cebu City
+1444098380,10.3950342,123.9264668,tertiary,Unnamed road corridor,Cebu City
+1454123865,10.3293744,123.909258,secondary,Governor M. Cuenco Avenue,Cebu City
+1454123866,10.3301083,123.9095648,secondary,Governor M. Cuenco Avenue,Cebu City
+1454123867,10.3302471,123.9096226,secondary,Governor M. Cuenco Avenue,Cebu City
+1454400086,10.2924297,123.8790567,primary,Natalio Bacalso Avenue,Cebu City
+1454400088,10.2918844,123.8782107,secondary,Natalio Bacalso Avenue,Cebu City
+1454400090,10.2925694,123.8792722,secondary,Natalio Bacalso Avenue,Cebu City
+1454400092,10.2934283,123.8804817,primary,Natalio Bacalso Avenue,Cebu City
+1454400093,10.2934536,123.8804651,primary,Natalio Bacalso Avenue,Cebu City
+1455431847,10.3147953,123.8914141,tertiary,Don Jose Avila Street,Cebu City
+1456030781,10.3166031,123.9240151,secondary,Gatewalk Drive,Cebu City
+1456286309,10.321629,123.912428,secondary,F. Cabahug Street,Cebu City
+1456816228,10.3087873,123.8936581,secondary,Osmeña Boulevard,Cebu City
+1457954994,10.3285741,123.8957587,tertiary,Sudlon,Cebu City
+1457954995,10.328532,123.8961484,tertiary,Sudlon,Cebu City
+1457954996,10.3285451,123.8957354,tertiary,Sudlon,Cebu City
+1457954997,10.3285212,123.8966177,tertiary,Sudlon,Cebu City
+1458791307,10.3252357,123.9080138,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1458791308,10.3252007,123.907942,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1459254944,10.2931959,123.8954347,tertiary,Panganiban Street,Cebu City
+1459346264,10.3026619,123.8845637,tertiary,Lucio Lopez Drive,Cebu City
+1460570757,10.3903008,123.8562232,tertiary,Unnamed road corridor,Cebu City
+1460570760,10.3982692,123.8512526,tertiary,Unnamed road corridor,Cebu City
+1460586457,10.4091167,123.9298885,tertiary,Unnamed road corridor,Cebu City
+1460606971,10.3987629,123.9253948,tertiary,Unnamed road corridor,Cebu City
+1460770378,10.406356,123.9186348,secondary,Agpasan-Binaliw-Cebu City Road,Cebu City
+1462528950,10.2891995,123.8677426,primary,Natalio Bacalso Avenue,Cebu City
+1469220210,10.4099087,123.9179352,secondary,Agpasan-Binaliw-Cebu City Road,Cebu City
+1469315819,10.3962265,123.9141058,tertiary,Kauswagan Road,Cebu City
+1469323654,10.3944818,123.9154299,tertiary,Kauswagan Road,Cebu City
+1469555581,10.3160855,123.9135427,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1469555591,10.3210529,123.9114938,secondary,F. Cabahug Street,Cebu City
+1469631983,10.3214782,123.9102269,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1469631984,10.3205443,123.9108808,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1469631985,10.3200767,123.9111621,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1469879475,10.3282308,123.9087712,secondary,Governor M. Cuenco Avenue,Cebu City
+1469879476,10.3281245,123.9087241,secondary,Governor M. Cuenco Avenue,Cebu City
+1469898831,10.3161627,123.9245433,secondary,M. Logarta Avenue,Cebu City
+1469898832,10.3161571,123.9244773,secondary,Gatewalk Drive,Cebu City
+1469900542,10.3163611,123.9242098,secondary,Gatewalk Drive,Cebu City
+1471026422,10.3212473,123.9223974,primary,Lopez Jaena Street,Cebu City
+1471104548,10.3120106,123.9164489,primary,Juan Luna Avenue,Cebu City
+1471104549,10.312077,123.9165314,primary,Juan Luna Avenue,Cebu City
+1471104550,10.310288,123.9180178,primary,Juan Luna Avenue,Cebu City
+1471104551,10.3102229,123.9179381,primary,Juan Luna Avenue,Cebu City
+1471104552,10.3104298,123.9178981,primary,Juan Luna Avenue,Cebu City
+1471144314,10.3695288,123.9167782,secondary,Miñoza Street,Cebu City
+1471144315,10.3692737,123.9167119,secondary,Governor M. Cuenco Avenue,Cebu City
+1471144316,10.3685225,123.9154018,secondary,Governor M. Cuenco Avenue,Cebu City
+1471144317,10.3677341,123.9141548,secondary,Governor M. Cuenco Avenue,Cebu City
+1471144318,10.3673369,123.9139495,secondary,Governor M. Cuenco Avenue,Cebu City
+1471144319,10.367549,123.9138448,tertiary,Budlaan Road,Cebu City
+1471144320,10.3669992,123.9139054,secondary,Governor M. Cuenco Avenue,Cebu City
+1471144321,10.3669984,123.9138626,secondary,Governor M. Cuenco Avenue,Cebu City
+1471290740,10.3326007,123.9091497,tertiary,Jose Maria Del Mar Avenue,Cebu City
+1471290744,10.3346449,123.9099715,tertiary,Jose Maria Del Mar Avenue,Cebu City
+1471422034,10.3280602,123.9045941,tertiary,Geonzon Street,Cebu City
+1471422035,10.3282916,123.904841,tertiary,Geonzon Street,Cebu City
+1471463195,10.3765294,123.9196377,secondary,Miñoza Street,Cebu City
+1471463196,10.3782072,123.9200778,secondary,Miñoza Street,Cebu City
+1471463197,10.376426,123.9193726,tertiary,San Jose Road,Cebu City
+1471724533,10.3579387,123.8847721,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1471724534,10.3612896,123.8835228,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1471773929,10.3431382,123.9121817,secondary,Governor M. Cuenco Avenue,Cebu City
+1471782236,10.3165514,123.9288571,trunk,Ouano Avenue,Cebu City
+1471798944,10.342893,123.9122619,secondary,Governor M. Cuenco Avenue,Cebu City
+1471798945,10.3427243,123.9121136,secondary,Governor M. Cuenco Avenue,Cebu City
+1471825922,10.4184643,123.8430261,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1471825923,10.4025166,123.856091,primary,Cebu-Balamban Transcentral Highway,Cebu City
+1472015727,10.3218189,123.9100162,primary,Pope John Paul Ⅱ Avenue,Cebu City
+1472047673,10.3231189,123.9243405,secondary,Hernan Cortes Street,Cebu City
+1472049210,10.3604275,123.9154027,secondary,Governor M. Cuenco Avenue,Cebu City
+1472049211,10.3628287,123.9147315,secondary,Governor M. Cuenco Avenue,Cebu City
+1472052949,10.3717798,123.8825497,tertiary,Busay-Budlaan Road,Cebu City
+1472052950,10.3692094,123.8812025,tertiary,Busay-Budlaan Road,Cebu City
+1472056225,10.3735237,123.8814263,tertiary,Busay-Budlaan Road,Cebu City
+1472066136,10.3488692,123.9132686,secondary,Governor M. Cuenco Avenue,Cebu City
+1472066477,10.3739057,123.8816663,tertiary,Busay-Budlaan Road,Cebu City
+1472079128,10.3685863,123.8736588,tertiary,Roosevelt Drive,Cebu City
+1472079129,10.3690135,123.8735523,tertiary,Roosevelt Drive,Cebu City
+1472094829,10.3277729,123.9047517,primary,Salinas Drive,Cebu City
+1472094830,10.327857,123.9046052,primary,Salinas Drive,Cebu City
+1472094831,10.3278018,123.904701,primary,Salinas Drive,Cebu City
+1472094832,10.3278294,123.9046531,primary,Salinas Drive,Cebu City
+1472107574,10.3180283,123.9253557,secondary,M. Logarta Avenue,Cebu City
+1472107576,10.3187027,123.9256789,secondary,M. Logarta Avenue,Cebu City
+1472107577,10.3187284,123.9255884,secondary,M. Logarta Avenue,Cebu City
+1472107578,10.3182646,123.9255407,secondary,M. Logarta Avenue,Cebu City
+1472108050,10.3274961,123.9052324,primary,Salinas Drive,Cebu City
+1472108051,10.3276311,123.9049986,primary,Salinas Drive,Cebu City
+1472430247,10.318098,123.9081485,tertiary,Samar Loop,Cebu City
+1472430248,10.3181836,123.9082206,tertiary,Samar Loop,Cebu City
+1472732914,10.2864356,123.8878731,trunk,Cebu South Coastal Road,Cebu City
+1472732915,10.2874635,123.8889157,trunk,Cebu South Coastal Road,Cebu City
+1472764357,10.340068,123.9111696,tertiary,Camp Lapu-Lapu Road,Cebu City
+1472764358,10.3400729,123.9111065,tertiary,Camp Lapu-Lapu Road,Cebu City
+1473724155,10.3435181,123.9134646,secondary,A. S. Fortuna Street,Cebu City
+1473724156,10.3436526,123.9122661,secondary,Governor M. Cuenco Avenue,Cebu City
+1473914092,10.3025262,123.9112662,trunk,Sergio Osmeña Avenue,Cebu City
+1473914093,10.3031181,123.9119769,trunk,Sergio Osmeña Avenue,Cebu City
+1473914094,10.3034425,123.9125627,trunk,Sergio Osmeña Avenue,Cebu City
+1473914095,10.3024651,123.9113134,trunk,Sergio Osmeña Avenue,Cebu City
+1473924057,10.3408068,123.8891815,tertiary,Salinas Drive Extension,Cebu City
+1473924437,10.3414892,123.8891431,tertiary,Salinas Drive Extension,Cebu City
+1473926688,10.3204451,123.9105803,secondary,Cardinal Rosales Avenue,Cebu City
+1473926689,10.3112562,123.9170771,primary,Juan Luna Avenue,Cebu City
+1473926690,10.3116765,123.9168659,primary,Juan Luna Avenue,Cebu City
+1473937268,10.2825197,123.8826817,secondary,F. Vestil Street,Cebu City
+1473937269,10.2821141,123.8836329,trunk,Cebu South Coastal Road,Cebu City
+1473937270,10.2845474,123.8859514,trunk,Cebu South Coastal Road,Cebu City
+1473946010,10.3302206,123.897767,secondary,Gorordo Avenue,Cebu City
+1473946011,10.3305725,123.8978733,secondary,Gorordo Avenue,Cebu City
+1473981444,10.3307129,123.8979226,secondary,Gorordo Avenue,Cebu City
+1474014886,10.3273731,123.9054457,primary,Salinas Drive,Cebu City
+1474023669,10.3104384,123.9177585,primary,Juan Luna Avenue,Cebu City
+1474023670,10.3086675,123.918989,trunk,Sergio Osmeña Avenue,Cebu City
+1474023671,10.3039426,123.9129778,trunk,Sergio Osmeña Avenue,Cebu City
+1474023672,10.3029299,123.9119049,trunk,Sergio Osmeña Avenue,Cebu City
+1474023673,10.2981661,123.9092583,tertiary,V. Sotto Street,Cebu City
+1474023674,10.2984271,123.9085916,tertiary,V. Sotto Street,Cebu City
+1474023675,10.2984476,123.9085125,tertiary,V. Sotto Street,Cebu City
+1474023676,10.2985177,123.9084906,trunk,Sergio Osmeña Avenue,Cebu City
+1474023677,10.2984881,123.9080572,tertiary,V. Sotto Street,Cebu City
+1474023678,10.2986962,123.9084917,trunk,Sergio Osmeña Avenue,Cebu City
+1474023679,10.2981506,123.9082922,trunk,Sergio Osmeña Avenue,Cebu City
+1474023683,10.2984795,123.908278,tertiary,V. Sotto Street,Cebu City
+1474023684,10.2977323,123.9080657,trunk,Sergio Osmeña Avenue,Cebu City
+1474173533,10.3139582,123.9015507,tertiary,F. Sotto Drive,Cebu City
+1474173534,10.314616,123.9016956,tertiary,F. Sotto Drive,Cebu City
+1474201978,10.3393139,123.8899009,tertiary,Salinas Drive Extension,Cebu City
+1474201979,10.3399412,123.8895369,tertiary,Salinas Drive Extension,Cebu City
+1474219297,10.3315924,123.8984787,primary,Veterans Drive,Cebu City
+1474221378,10.3284407,123.8974237,secondary,Gorordo Avenue,Cebu City
+1474221379,10.328799,123.8973907,secondary,Gorordo Avenue,Cebu City
+1474248151,10.3087256,123.8866162,secondary,Vicente Rama Avenue,Cebu City
+1474249820,10.3459838,123.9127345,secondary,Governor M. Cuenco Avenue,Cebu City
+1474249821,10.3454259,123.9126322,secondary,Governor M. Cuenco Avenue,Cebu City
+1474249822,10.3461522,123.9127615,secondary,Governor M. Cuenco Avenue,Cebu City
+1474263955,10.3107006,123.9214864,trunk,Sergio Osmeña Avenue,Cebu City
+1474365842,10.294567,123.9007913,tertiary,F. Gonzales Street,Cebu City
+1474477708,10.3056173,123.8946434,tertiary,V. Urgello Street,Cebu City
+1474483122,10.3068163,123.8942809,secondary,Osmeña Boulevard,Cebu City
+1474495938,10.305834,123.8945046,secondary,Osmeña Boulevard,Cebu City
+1474495939,10.3065799,123.8942298,secondary,Osmeña Boulevard,Cebu City
+1474497935,10.3039829,123.8951583,secondary,Osmeña Boulevard,Cebu City
+1474500475,10.3020551,123.8958431,secondary,Osmeña Boulevard,Cebu City
+1474520537,10.3076932,123.89399,secondary,Osmeña Boulevard,Cebu City
+1474540418,10.2916793,123.9002201,tertiary,F. Gonzales Street,Cebu City
+1474540419,10.2922822,123.9007697,tertiary,M.C. Briones Street,Cebu City
+1474540420,10.2954578,123.9001256,secondary,Osmeña Boulevard,Cebu City
+1474540421,10.2957926,123.8993301,secondary,Osmeña Boulevard,Cebu City
+1474540422,10.2968103,123.8991536,secondary,Colon Street,Cebu City
+1474540423,10.297047,123.9021367,tertiary,Dionisio Jakosalem Street,Cebu City
+1474540427,10.2956389,123.9017861,tertiary,Dionisio Jakosalem Street,Cebu City
+1474540428,10.2950251,123.9011282,secondary,Osmeña Boulevard,Cebu City
+1474540429,10.2943135,123.9014022,tertiary,Dionisio Jakosalem Street,Cebu City
+1474540430,10.2939975,123.9013217,tertiary,Dionisio Jakosalem Street,Cebu City
+1474540431,10.2939752,123.9008063,tertiary,Magallanes Street,Cebu City
+1474540432,10.2925184,123.9010727,tertiary,Dionisio Jakosalem Street,Cebu City
+1474540433,10.2935253,123.9026907,tertiary,P. Burgos Street,Cebu City
+1474540434,10.2945418,123.9031858,tertiary,P. Burgos Street,Cebu City
+1474550289,10.2935744,123.9044432,secondary,Osmeña Boulevard,Cebu City
+1474550290,10.2953987,123.8966868,tertiary,A. Borromeo Street,Cebu City
+1474550291,10.3000225,123.898045,tertiary,Pelaez Street,Cebu City
+1474559064,10.3062182,123.8944947,secondary,Osmeña Boulevard,Cebu City
+1474559065,10.3055144,123.8947462,secondary,Osmeña Boulevard,Cebu City
+1474559066,10.305444,123.89464,secondary,Osmeña Boulevard,Cebu City
+1474559067,10.3057852,123.8946496,secondary,Osmeña Boulevard,Cebu City
+1474559068,10.295938,123.8989938,secondary,Osmeña Boulevard,Cebu City
+1474559069,10.2952461,123.9006378,secondary,Osmeña Boulevard,Cebu City
+1474562559,10.2948396,123.8979479,tertiary,A. Borromeo Street,Cebu City
+1475672630,10.3246295,123.8850347,tertiary,Singson Road,Cebu City
+1475949942,10.3180365,123.8777462,tertiary,Unnamed road corridor,Cebu City
+1475976833,10.3140701,123.8824486,tertiary,J. Fortich Street,Cebu City
+1476188442,10.2968563,123.8887306,tertiary,Tres de Abril Street,Cebu City
+1476188443,10.2964793,123.8901282,tertiary,Tres de Abril Street,Cebu City
+1476188444,10.2963374,123.8903603,tertiary,Tres de Abril Street,Cebu City
+1476223061,10.2977787,123.9018738,secondary,Colon Street,Cebu City
+1476223062,10.3003586,123.9032159,secondary,Bonifacio Street,Cebu City
+1476223063,10.2983336,123.9062347,tertiary,V. Sotto Street,Cebu City
+1476246575,10.2980959,123.8916101,primary,Natalio Bacalso Avenue,Cebu City
+1476246581,10.2985203,123.887716,tertiary,J. Alcantara Street,Cebu City
+1476254597,10.2960868,123.8844014,primary,Natalio Bacalso Avenue,Cebu City
+1476254598,10.2957893,123.8839122,primary,Natalio Bacalso Avenue,Cebu City
+1476254599,10.2959017,123.8838389,primary,Natalio Bacalso Avenue,Cebu City
+1476254600,10.2954654,123.883212,primary,Natalio Bacalso Avenue,Cebu City
+1476254601,10.2963586,123.8849211,primary,Natalio Bacalso Avenue,Cebu City
+1476254602,10.2965845,123.885483,primary,Natalio Bacalso Avenue,Cebu City
+1476254603,10.2964628,123.8848679,primary,Natalio Bacalso Avenue,Cebu City
+1476254604,10.2970932,123.8868217,primary,Natalio Bacalso Avenue,Cebu City
+1476254605,10.2966977,123.8854323,primary,Natalio Bacalso Avenue,Cebu City
+1476254606,10.2972797,123.8880588,primary,Natalio Bacalso Avenue,Cebu City
+1476278525,10.2889361,123.8741815,tertiary,L. Gabuya Street,Cebu City
+1476311863,10.2865706,123.8708647,tertiary,L. Gabuya Street,Cebu City
+1476529079,10.325409,123.8922752,tertiary,Friendship Street,Cebu City
+1476530065,10.3292679,123.8915444,tertiary,Friendship Street,Cebu City
+1476533744,10.3290439,123.8951607,tertiary,Doña Modesta Gaisano Street,Cebu City
+1476549250,10.2984064,123.8930122,primary,Natalio Bacalso Avenue,Cebu City
+1476549251,10.2984737,123.8927127,primary,Natalio Bacalso Avenue,Cebu City
+1476549252,10.302578,123.8958064,secondary,Osmeña Boulevard,Cebu City
+1476549253,10.3025429,123.895676,secondary,Osmeña Boulevard,Cebu City
+1476560782,10.3167671,123.8919352,tertiary,Villalon Drive,Cebu City
+1476563217,10.3234786,123.8919387,tertiary,Acacia Street,Cebu City
+1476584634,10.3299649,123.8913788,tertiary,Justice Street,Cebu City
+1476588326,10.3294334,123.8867402,tertiary,Unnamed road corridor,Cebu City
+1476589593,10.3298092,123.8859967,tertiary,Unnamed road corridor,Cebu City
+1476610073,10.3157992,123.885591,secondary,M. Velez Street,Cebu City
+1476610075,10.2987464,123.88496,tertiary,A. Lopez Street,Cebu City
+1476610076,10.3026386,123.8865125,tertiary,Lucio Lopez Drive,Cebu City
+1476610077,10.3028989,123.8867324,secondary,Vicente Rama Avenue,Cebu City
+1476610078,10.3016588,123.8866949,secondary,Vicente Rama Avenue,Cebu City
+1476613529,10.3342135,123.8830438,tertiary,Maya,Cebu City
+1476619346,10.3339595,123.882088,tertiary,Unnamed road corridor,Cebu City
+1476624066,10.3346778,123.88124,tertiary,CPDRC,Cebu City
+1476627546,10.3390734,123.8795051,tertiary,Unnamed road corridor,Cebu City
+1476627888,10.3386522,123.879588,tertiary,Unnamed road corridor,Cebu City
+1476628660,10.33764,123.8791768,tertiary,Unnamed road corridor,Cebu City
+1476632650,10.3309008,123.8794927,tertiary,Sapangdaku Road,Cebu City
+1476634694,10.3173164,123.8938958,secondary,N. Escario Street,Cebu City
+1476646425,10.2924035,123.8656173,tertiary,Macopa Street,Cebu City
+1476646426,10.29277,123.8655712,tertiary,E. Sabellano Street,Cebu City
+1476649049,10.3216499,123.8859355,tertiary,Andres Abellana Street,Cebu City
+1476649395,10.3207552,123.8861354,tertiary,Andres Abellana Street,Cebu City
+1476652763,10.3283979,123.8894002,tertiary,Villalon Drive,Cebu City
+1476652764,10.3287838,123.8899706,tertiary,Unnamed road corridor,Cebu City
+1476652765,10.329314,123.8975023,secondary,Gorordo Avenue,Cebu City
+1476909564,10.301605,123.9065494,secondary,M.J. Cuenco Avenue,Cebu City
+1476909565,10.301177,123.9065181,secondary,M.J. Cuenco Avenue,Cebu City
+1476937320,10.3098745,123.8943617,tertiary,F. Ramos Street,Cebu City
+1476966777,10.2820209,123.8657269,tertiary,L. Gabuya Street,Cebu City
+1476973810,10.3169927,123.8932179,secondary,N. Escario Street,Cebu City
+1476981242,10.2842149,123.8779392,tertiary,Banog Road,Cebu City
+1476982509,10.3201703,123.90461,tertiary,Mindanao Avenue,Cebu City
+1476982510,10.3203129,123.9042247,tertiary,Mindanao Avenue,Cebu City
+1476982511,10.319987,123.9058876,tertiary,Mindanao Avenue,Cebu City
+1476982512,10.3194001,123.9066691,tertiary,Mindanao Avenue,Cebu City
+1476982513,10.3199946,123.9056665,tertiary,Mindanao Avenue,Cebu City
+1476982514,10.3200649,123.9051698,tertiary,Mindanao Avenue,Cebu City
+1476982515,10.3188395,123.907236,tertiary,Mindanao Avenue,Cebu City
+1476982516,10.3185689,123.9075799,tertiary,Mindanao Avenue,Cebu City
+1476982517,10.3188065,123.9074573,tertiary,Mindanao Avenue,Cebu City
+1476982518,10.3186053,123.9077099,tertiary,Mindanao Avenue,Cebu City
+1476994891,10.3161999,123.9055193,tertiary,Luzon Avenue,Cebu City
+1476998986,10.3053064,123.8998812,tertiary,Dionisio Jakosalem Street,Cebu City
+1476998987,10.30642,123.899748,tertiary,Dionisio Jakosalem Street,Cebu City
+1477000434,10.3159587,123.9087453,tertiary,Samar Loop,Cebu City
+1477002037,10.3158098,123.9071189,tertiary,Samar Loop,Cebu City
+1477019689,10.3105176,123.9042687,secondary,General Maxilom Avenue,Cebu City
+1477019692,10.3018996,123.9019174,primary,P. del Rosario Street,Cebu City
+1477019693,10.3016532,123.9010804,primary,P. del Rosario Street,Cebu City
+1477019694,10.3032785,123.9029244,primary,Imus Avenue,Cebu City
+1477019695,10.3062276,123.9052597,primary,Imus Avenue,Cebu City
+1477019698,10.3107368,123.9037304,secondary,General Maxilom Avenue,Cebu City
+1477019699,10.3113861,123.9017275,secondary,General Maxilom Avenue,Cebu City
+1477019702,10.3049561,123.8980685,tertiary,F. Ramos Street,Cebu City
+1477802138,10.3141076,123.8923793,tertiary,Governor M. Roa Street,Cebu City
+1477816510,10.3201226,123.90433,tertiary,Mindanao Avenue,Cebu City
+1479268660,10.3032737,123.8600077,tertiary,Buhisan Road,Cebu City
+1479268661,10.302791,123.8603538,tertiary,Buhisan Road,Cebu City
+1479278864,10.2991485,123.8941723,tertiary,J. Alcantara Street,Cebu City
+1479278865,10.3005973,123.8987839,primary,P. del Rosario Street,Cebu City
+1479278867,10.3018203,123.9012953,primary,P. del Rosario Street,Cebu City
+1479313267,10.3033608,123.9001358,tertiary,Dionisio Jakosalem Street,Cebu City
+1479313268,10.3032019,123.9001835,tertiary,Dionisio Jakosalem Street,Cebu City
+1479329664,10.3200469,123.90463,tertiary,Mindanao Avenue,Cebu City
+1479340275,10.2865333,123.8616105,primary,Natalio Bacalso Avenue,Cebu City
+1479340276,10.2869585,123.8622089,primary,Natalio Bacalso Avenue,Cebu City
+1479340277,10.2866044,123.8615499,primary,Natalio Bacalso Avenue,Cebu City
+1479340278,10.2873233,123.8627728,primary,Natalio Bacalso Avenue,Cebu City
+1479340279,10.2880962,123.8647546,primary,Natalio Bacalso Avenue,Cebu City
+1479340280,10.28741,123.8627458,primary,Natalio Bacalso Avenue,Cebu City
+1479340281,10.2870349,123.8621603,primary,Natalio Bacalso Avenue,Cebu City
+1480354254,10.371555,123.9238807,secondary,Governor M. Cuenco Avenue,Cebu City
+1480376165,10.3144868,123.8905256,tertiary,Don Jose Avila Street,Cebu City
+1480376166,10.315883,123.890012,tertiary,N. Escario Street,Cebu City
+1480835852,10.2903184,123.8993986,trunk,Cebu South Coastal Road,Cebu City
+1480835853,10.2902416,123.8994545,trunk,Cebu South Coastal Road,Cebu City
+25937229,10.3312742,123.9363675,tertiary,A. S. Fortuna Street,Mandaue City
+28960128,10.3331455,123.9370766,primary,M.C. Briones Street,Mandaue City
+28960129,10.3273533,123.9658665,primary,Marcelo Fernan Bridge,Mandaue City
+29337032,10.341736,123.947291,primary,Cebu North Road,Mandaue City
+29451535,10.3669073,123.9357452,secondary,H. Abellana Street,Mandaue City
+34168717,10.3352693,123.9601174,primary,United Nations Avenue,Mandaue City
+34168723,10.3276037,123.9657748,primary,Marcelo Fernan Bridge,Mandaue City
+34168815,10.3374161,123.9483328,tertiary,P. Burgos Street,Mandaue City
+34230205,10.3344679,123.9388439,primary,Maguikay Flyover,Mandaue City
+34230793,10.3358082,123.9406686,primary,M.C. Briones Street,Mandaue City
+34230794,10.3344331,123.9389037,primary,M.C. Briones Street,Mandaue City
+34230795,10.3343525,123.9386236,primary,M.C. Briones Street,Mandaue City
+34237299,10.3360554,123.9410761,primary,M.C. Briones Street,Mandaue City
+34237904,10.3342971,123.938654,primary,M.C. Briones Street,Mandaue City
+34237905,10.3334482,123.9372724,primary,M.C. Briones Street,Mandaue City
+34319230,10.341143,123.9574549,trunk,D.M. Cortes Avenue,Mandaue City
+34415873,10.3360572,123.9338186,tertiary,V. Albano Street,Mandaue City
+34415874,10.3360609,123.9366759,tertiary,L. Jayme Street,Mandaue City
+34415879,10.3402637,123.9338003,tertiary,Bakilid-Maguikay Road,Mandaue City
+34415882,10.3355879,123.9451252,tertiary,S.B. Cabahug Street,Mandaue City
+34415883,10.3347736,123.9455453,tertiary,Don G. LL. Ouano Street,Mandaue City
+34415884,10.3320077,123.9378868,tertiary,B. B. Cabahug Street,Mandaue City
+34487532,10.3307426,123.9364475,tertiary,B. B. Cabahug Street,Mandaue City
+34487534,10.3301352,123.9434306,tertiary,S.B. Cabahug Street,Mandaue City
+37334825,10.342751,123.9412967,tertiary,Juez M. O. Echavez Street,Mandaue City
+37700509,10.3431868,123.9599488,trunk,D.M. Cortes Avenue,Mandaue City
+37700514,10.3455839,123.9612527,tertiary,S. E. Jayme Street,Mandaue City
+37700518,10.3452068,123.951941,tertiary,S. E. Jayme Street,Mandaue City
+37825175,10.3437486,123.9342592,tertiary,M. Ceniza Street,Mandaue City
+37825179,10.3467978,123.9352731,tertiary,M. Ceniza Street,Mandaue City
+37936127,10.3348311,123.9405441,primary,A.C. Cortes Avenue,Mandaue City
+37936128,10.3351473,123.9397958,primary,A.C. Cortes Avenue,Mandaue City
+45652169,10.3520913,123.9534531,tertiary,Basak-Labogon Road,Mandaue City
+45661998,10.3407431,123.9571521,trunk,D.M. Cortes Avenue,Mandaue City
+45662000,10.34023,123.9566782,trunk,D.M. Cortes Avenue,Mandaue City
+45662004,10.3411553,123.9575111,trunk,D.M. Cortes Avenue,Mandaue City
+47419246,10.3694948,123.9403947,tertiary,Victor Vega Street,Mandaue City
+48169171,10.3309778,123.9337703,primary,M.C. Briones Street,Mandaue City
+52253088,10.3325346,123.9496084,tertiary,Don G. LL. Ouano Street,Mandaue City
+52253089,10.3407252,123.9572476,trunk,D.M. Cortes Avenue,Mandaue City
+52253090,10.3306469,123.9479555,trunk,D.M. Cortes Avenue,Mandaue City
+68906518,10.3465485,123.9642878,trunk,D.M. Cortes Avenue,Mandaue City
+68906519,10.3490976,123.9678339,trunk,Cansaga Bay Bridge,Mandaue City
+70108540,10.3455145,123.9629642,trunk,D.M. Cortes Avenue,Mandaue City
+70108542,10.3464884,123.9643388,trunk,D.M. Cortes Avenue,Mandaue City
+70108544,10.3490314,123.9678825,trunk,Cansaga Bay Bridge,Mandaue City
+72372642,10.3582334,123.9498825,primary,M.C. Briones Street,Mandaue City
+72372643,10.3412355,123.947092,primary,M.C. Briones Street,Mandaue City
+72372644,10.3410071,123.947047,primary,M.C. Briones Street,Mandaue City
+72372651,10.3426189,123.9476385,primary,Cebu North Road,Mandaue City
+72372653,10.3425368,123.947513,primary,Cebu North Road,Mandaue City
+72372654,10.341975,123.9475437,primary,Cebu North Road,Mandaue City
+72372656,10.3420333,123.9473832,primary,Cebu North Road,Mandaue City
+74877300,10.3415008,123.9472064,primary,Cebu North Road,Mandaue City
+74877313,10.3400013,123.9514275,primary,United Nations Avenue,Mandaue City
+77711239,10.3735077,123.9676701,tertiary,Governor F. B. Harrison Avenue,Mandaue City
+79291934,10.3579582,123.9355323,tertiary,B. Suico Street,Mandaue City
+79291935,10.348412,123.935602,tertiary,M. Ceniza Street,Mandaue City
+81459170,10.4013736,123.9337569,tertiary,Unnamed road corridor,Mandaue City
+81459172,10.3791735,123.9358716,tertiary,Unnamed road corridor,Mandaue City
+93818920,10.3495976,123.9362176,tertiary,B. Suico Street,Mandaue City
+93818938,10.347551,123.9418744,tertiary,P. C. Suico Street,Mandaue City
+93819227,10.3588031,123.9416551,tertiary,P. L. Sanchez Street,Mandaue City
+96027254,10.3322844,123.9556103,tertiary,R. A. Ouano Street,Mandaue City
+96027256,10.3331105,123.9568704,tertiary,R. A. Ouano Street,Mandaue City
+96675917,10.3356872,123.9436599,tertiary,Don G. LL. Ouano Street,Mandaue City
+96675918,10.3358509,123.9430282,tertiary,Don G. LL. Ouano Street,Mandaue City
+96780533,10.3386079,123.9673097,tertiary,Unnamed road corridor,Mandaue City
+96907795,10.3504161,123.956136,tertiary,Labogon-Paknaan Road,Mandaue City
+96907823,10.353431,123.9532215,tertiary,Labogon Interior Road,Mandaue City
+96907825,10.3545003,123.9562509,tertiary,Labogon Interior Road,Mandaue City
+97365802,10.359893,123.930954,tertiary,P. L. Sanchez Street,Mandaue City
+97365832,10.359963,123.9326869,tertiary,P. L. Sanchez Street,Mandaue City
+97366787,10.3704873,123.9312116,tertiary,Unnamed road corridor,Mandaue City
+97367108,10.3693276,123.9385271,tertiary,Aurelio V. Alivio Senior Street,Mandaue City
+97367113,10.3667442,123.9418685,tertiary,Unnamed road corridor,Mandaue City
+97367212,10.3693857,123.9430652,tertiary,Pedro I. Ouano Street,Mandaue City
+97367219,10.3713073,123.9456761,tertiary,Unnamed road corridor,Mandaue City
+97367225,10.3724477,123.9484547,tertiary,Unnamed road corridor,Mandaue City
+97367242,10.3719704,123.9493748,tertiary,Magnolia Street,Mandaue City
+97519968,10.368263,123.954152,tertiary,Upper Jagobiao Road,Mandaue City
+97519969,10.3659804,123.9578962,tertiary,Acacia Hills Road,Mandaue City
+97519971,10.3672021,123.9598978,tertiary,Tomas P. Go Road,Mandaue City
+97519989,10.3714802,123.9590219,tertiary,Nangka Purok 1 - V & G Access Road,Mandaue City
+97810467,10.3387154,123.95512,trunk,D.M. Cortes Avenue,Mandaue City
+97810468,10.3385994,123.9549756,trunk,D.M. Cortes Avenue,Mandaue City
+97810795,10.3386442,123.955113,primary,United Nations Avenue,Mandaue City
+97810796,10.3385939,123.9552225,primary,United Nations Avenue,Mandaue City
+97908344,10.3301548,123.9484413,primary,A.C. Cortes Avenue,Mandaue City
+97908347,10.3308654,123.9473142,primary,A.C. Cortes Avenue,Mandaue City
+97908348,10.3300484,123.94759,trunk,D.M. Cortes Avenue,Mandaue City
+97908351,10.3352812,123.951589,trunk,D.M. Cortes Avenue,Mandaue City
+97908560,10.3387994,123.9550743,primary,United Nations Avenue,Mandaue City
+97908561,10.3403529,123.9507414,primary,United Nations Avenue,Mandaue City
+97908564,10.3395509,123.9560276,trunk,D.M. Cortes Avenue,Mandaue City
+97925531,10.3756283,123.9602117,tertiary,V & G Drive,Mandaue City
+97925532,10.3745045,123.9603787,tertiary,V & G Drive,Mandaue City
+97925550,10.3741487,123.9614487,tertiary,V&G Access Road,Mandaue City
+97925563,10.3733332,123.9654675,tertiary,Purok 4 Road - V&G - Laray Access Road,Mandaue City
+98087178,10.3829519,123.9405048,tertiary,Unnamed road corridor,Mandaue City
+98087186,10.3742865,123.9550638,tertiary,Unnamed road corridor,Mandaue City
+98087199,10.3833648,123.9564678,tertiary,M. Pepito Street,Mandaue City
+98087268,10.378971,123.9540176,tertiary,Columbus Street,Mandaue City
+98087270,10.3802029,123.9512911,tertiary,Columbus Street,Mandaue City
+98087277,10.3762669,123.9566931,tertiary,Hatamosa Street,Mandaue City
+98087325,10.3730109,123.9485307,tertiary,Unnamed road corridor,Mandaue City
+98087352,10.3772593,123.9620636,primary,Cebu North Road,Mandaue City
+98087353,10.3771659,123.9619225,primary,Cebu North Road,Mandaue City
+98087357,10.3852961,123.9625708,tertiary,Diversion Road,Mandaue City
+98087359,10.3787458,123.9640346,primary,Cebu North Road,Mandaue City
+98167069,10.3822052,123.935715,tertiary,Unnamed road corridor,Mandaue City
+98167724,10.3972995,123.9516612,tertiary,Unnamed road corridor,Mandaue City
+99190181,10.3957764,123.958428,tertiary,Diversion Road,Mandaue City
+99190182,10.3988284,123.9546826,tertiary,Unnamed road corridor,Mandaue City
+161841792,10.3987188,123.9523468,tertiary,Unnamed road corridor,Mandaue City
+209553124,10.3743899,123.9557423,primary,Cebu North Road,Mandaue City
+210155876,10.3296996,123.9449748,tertiary,P. Burgos Street,Mandaue City
+234947390,10.3303948,123.9367961,tertiary,A. del Rosario Street,Mandaue City
+234947403,10.3297877,123.9334174,tertiary,A. del Rosario Street,Mandaue City
+234947404,10.3337492,123.9425649,primary,A.C. Cortes Avenue,Mandaue City
+237983870,10.3371736,123.9379473,secondary,Manuel L. Quezon Avenue,Mandaue City
+237983873,10.3387169,123.9549629,primary,United Nations Avenue,Mandaue City
+237983875,10.3405086,123.9467507,primary,M.C. Briones Street,Mandaue City
+237983882,10.3334306,123.9346074,secondary,A. S. Fortuna Street,Mandaue City
+237986160,10.3396124,123.9460144,primary,M.C. Briones Street,Mandaue City
+237986164,10.3356397,123.9405596,primary,M.C. Briones Street,Mandaue City
+237986166,10.3348706,123.9335444,secondary,A. S. Fortuna Street,Mandaue City
+237986167,10.3385561,123.9357246,tertiary,V. Albano Street,Mandaue City
+237993510,10.3308331,123.9337972,primary,M.C. Briones Street,Mandaue City
+237993514,10.3303066,123.9375192,tertiary,A. del Rosario Street,Mandaue City
+238041963,10.3378207,123.9435807,primary,M.C. Briones Street,Mandaue City
+242680396,10.3351574,123.9396848,primary,M.C. Briones Street,Mandaue City
+249852452,10.399548,123.9540048,tertiary,Unnamed road corridor,Mandaue City
+249852472,10.3999556,123.9534271,tertiary,Unnamed road corridor,Mandaue City
+255630594,10.3340741,123.9593656,tertiary,R. A. Ouano Street,Mandaue City
+355293214,10.3855956,123.9466925,tertiary,Columbus Street,Mandaue City
+362877281,10.3334764,123.9480497,tertiary,Don G. LL. Ouano Street,Mandaue City
+368713175,10.3306793,123.9370346,tertiary,A. S. Fortuna Street,Mandaue City
+408787459,10.340929,123.9471315,tertiary,S.B. Cabahug Street,Mandaue City
+451686532,10.3741258,123.9606199,tertiary,V & G Drive,Mandaue City
+451689267,10.3748783,123.9625792,tertiary,V&G Subd. - Cansaga - Purok 4 Access Road,Mandaue City
+455153194,10.3762485,123.9588792,primary,Cebu North Road,Mandaue City
+455158554,10.3732621,123.9603109,tertiary,V&G Access Road,Mandaue City
+459893586,10.3732959,123.949727,tertiary,Unnamed road corridor,Mandaue City
+476002432,10.3427344,123.9657628,tertiary,Unnamed road corridor,Mandaue City
+486279167,10.3406551,123.9497492,tertiary,P. Burgos Street,Mandaue City
+590032321,10.3351764,123.9395993,secondary,Manuel L. Quezon Avenue,Mandaue City
+590032323,10.3352119,123.9396435,secondary,Manuel L. Quezon Avenue,Mandaue City
+590032366,10.3352003,123.9443246,tertiary,Don G. LL. Ouano Street,Mandaue City
+612613943,10.33142,123.9541517,tertiary,R. A. Ouano Street,Mandaue City
+614722872,10.375931,123.9432906,tertiary,Unnamed road corridor,Mandaue City
+614722875,10.3747805,123.9467501,tertiary,Unnamed road corridor,Mandaue City
+614722878,10.3739341,123.9481707,tertiary,Unnamed road corridor,Mandaue City
+614722880,10.3721818,123.9488037,tertiary,Unnamed road corridor,Mandaue City
+614722882,10.3704269,123.9529797,tertiary,C. Congson Street,Mandaue City
+614742272,10.3791244,123.9386507,tertiary,Unnamed road corridor,Mandaue City
+614742273,10.3788141,123.938927,tertiary,Unnamed road corridor,Mandaue City
+614742286,10.3778837,123.9400648,tertiary,Unnamed road corridor,Mandaue City
+614747219,10.3732888,123.9526269,tertiary,Pandayan Street,Mandaue City
+614747221,10.373151,123.9543264,tertiary,Pandayan Street,Mandaue City
+614747222,10.3738357,123.9544676,tertiary,M. Pepito Street,Mandaue City
+620511927,10.342124,123.9370358,tertiary,V. Albaño Street,Mandaue City
+620618081,10.349037,123.9355896,tertiary,M. Ceniza Street,Mandaue City
+620639162,10.3498735,123.9489295,primary,M.C. Briones Street,Mandaue City
+620835663,10.3604772,123.9342141,tertiary,P. L. Sanchez Street,Mandaue City
+620835664,10.3611698,123.9354962,tertiary,P. L. Sanchez Street,Mandaue City
+621090520,10.3923192,123.9616593,tertiary,Diversion Road,Mandaue City
+621090522,10.3918352,123.9617028,tertiary,Diversion Road,Mandaue City
+621090545,10.3787933,123.9641008,primary,Cebu North Road,Mandaue City
+626778766,10.3698859,123.9366388,tertiary,J. Mayol,Mandaue City
+628228009,10.3501173,123.934781,tertiary,B. Suico Street,Mandaue City
+628228010,10.3539497,123.9341809,tertiary,B. Suico Street,Mandaue City
+628228011,10.352159,123.9341539,tertiary,B. Suico Street,Mandaue City
+668599805,10.3771189,123.9332402,tertiary,Unnamed road corridor,Mandaue City
+668806548,10.3705127,123.9532481,primary,Cebu North Road,Mandaue City
+669041813,10.3716994,123.9682587,tertiary,Unnamed road corridor,Mandaue City
+670138391,10.339078,123.9635771,tertiary,Unnamed road corridor,Mandaue City
+670164400,10.3327206,123.9442257,tertiary,S.B. Cabahug Street,Mandaue City
+670640943,10.3405087,123.9350705,secondary,Manuel L. Quezon Avenue,Mandaue City
+672956969,10.3414147,123.9476593,primary,United Nations Avenue,Mandaue City
+672956971,10.3319541,123.9626192,primary,United Nations Avenue,Mandaue City
+672956979,10.331915,123.9625597,primary,United Nations Avenue,Mandaue City
+725235885,10.330462,123.9478419,trunk,D.M. Cortes Avenue,Mandaue City
+725235886,10.3294629,123.9492291,primary,A.C. Cortes Avenue,Mandaue City
+749744786,10.3346905,123.9390373,primary,M.C. Briones Street,Mandaue City
+749744787,10.3336225,123.9425022,primary,A.C. Cortes Avenue,Mandaue City
+855765583,10.3374749,123.9347257,tertiary,V. Albano Street,Mandaue City
+855768717,10.3393382,123.9462897,tertiary,S.B. Cabahug Street,Mandaue City
+855770825,10.3391678,123.9454825,primary,M.C. Briones Street,Mandaue City
+856183901,10.3873262,123.9418802,tertiary,Unnamed road corridor,Mandaue City
+856219279,10.3806504,123.9679345,primary,Cebu North Road,Mandaue City
+856219280,10.3788437,123.964177,primary,Cebu North Road,Mandaue City
+858759481,10.3672132,123.951685,primary,M.C. Briones Street,Mandaue City
+860501105,10.3324106,123.9441322,tertiary,S.B. Cabahug Street,Mandaue City
+860501106,10.3386025,123.9460676,tertiary,S.B. Cabahug Street,Mandaue City
+891261294,10.335081,123.9397083,primary,A.C. Cortes Avenue,Mandaue City
+894061264,10.3318978,123.9486716,trunk,D.M. Cortes Avenue,Mandaue City
+894061265,10.331451,123.9514966,tertiary,Don G. LL. Ouano Street,Mandaue City
+894071652,10.3355244,123.940323,primary,Maguikay Flyover,Mandaue City
+894071659,10.3301402,123.9382409,tertiary,A. del Rosario Street,Mandaue City
+895754595,10.3363813,123.9478792,tertiary,P. Burgos Street,Mandaue City
+895754600,10.3343578,123.9465891,tertiary,Don G. LL. Ouano Street,Mandaue City
+895754601,10.3345562,123.9462098,tertiary,Don G. LL. Ouano Street,Mandaue City
+895754605,10.3329776,123.9463968,tertiary,P. Burgos Street,Mandaue City
+895756026,10.3364881,123.9421576,tertiary,Don G. LL. Ouano Street,Mandaue City
+895756027,10.3367275,123.9420209,primary,M.C. Briones Street,Mandaue City
+895756028,10.3365381,123.9422161,tertiary,Don G. LL. Ouano Street,Mandaue City
+895756029,10.3364409,123.9416224,primary,M.C. Briones Street,Mandaue City
+896030611,10.3363163,123.9320424,secondary,A. S. Fortuna Street,Mandaue City
+896030613,10.3354179,123.9330573,secondary,A. S. Fortuna Street,Mandaue City
+896035250,10.339282,123.9330129,tertiary,Sacris Road,Mandaue City
+896035252,10.3395906,123.9312502,tertiary,Aniceto Seno Road,Mandaue City
+896256837,10.3420414,123.9336751,secondary,Manuel L. Quezon Avenue,Mandaue City
+896256838,10.3437596,123.932057,secondary,Manuel L. Quezon Avenue,Mandaue City
+896256839,10.3409567,123.9340965,tertiary,Bakilid-Maguikay Road,Mandaue City
+897340813,10.3727925,123.9312444,tertiary,Unnamed road corridor,Mandaue City
+897340814,10.3732792,123.9312691,tertiary,Unnamed road corridor,Mandaue City
+897340815,10.3767549,123.9345699,tertiary,Unnamed road corridor,Mandaue City
+897340816,10.3755734,123.9358664,tertiary,Victor Vega Street,Mandaue City
+897760801,10.3646357,123.9444441,secondary,H. Abellana Street,Mandaue City
+897760802,10.3657585,123.9426912,tertiary,Victor Vega Street,Mandaue City
+897760806,10.3676405,123.9405393,tertiary,Aurelio V. Alivio Senior Street,Mandaue City
+897760807,10.363342,123.9473324,secondary,H. Abellana Street,Mandaue City
+897760812,10.3621539,123.9488036,secondary,H. Abellana Street,Mandaue City
+898267725,10.3636744,123.9381996,tertiary,B. Suico Street,Mandaue City
+898267726,10.3592867,123.9315211,tertiary,P. L. Sanchez Street,Mandaue City
+898267730,10.3617828,123.9367555,tertiary,P. L. Sanchez Street,Mandaue City
+898267731,10.3651131,123.9388431,tertiary,B. Suico Street,Mandaue City
+898267732,10.3651575,123.9412081,secondary,H. Abellana Street,Mandaue City
+898267736,10.3684106,123.9352552,tertiary,J. Mayol,Mandaue City
+898484901,10.3456228,123.963128,trunk,D.M. Cortes Avenue,Mandaue City
+898484902,10.3456484,123.9631023,trunk,D.M. Cortes Avenue,Mandaue City
+899031008,10.3451004,123.9478261,primary,M.C. Briones Street,Mandaue City
+899031010,10.3535915,123.9498178,primary,M.C. Briones Street,Mandaue City
+899031011,10.3543808,123.9499102,primary,M.C. Briones Street,Mandaue City
+899345858,10.3533848,123.950259,tertiary,Basak-Labogon Road,Mandaue City
+899345871,10.3498219,123.9560441,tertiary,Labogon-Paknaan Road,Mandaue City
+899742854,10.3743998,123.9548625,tertiary,M. Pepito Street,Mandaue City
+899742855,10.398517,123.9523768,tertiary,Unnamed road corridor,Mandaue City
+901481810,10.3745805,123.9603563,tertiary,V & G Drive,Mandaue City
+906966522,10.3317139,123.9458418,tertiary,P. Burgos Street,Mandaue City
+921332303,10.3523591,123.9572657,tertiary,Labogon Interior Road,Mandaue City
+921334935,10.338851,123.9447125,tertiary,N. S. Cabahug Street,Mandaue City
+921916210,10.3314051,123.9462188,primary,A.C. Cortes Avenue,Mandaue City
+921916212,10.3305672,123.9475613,primary,A.C. Cortes Avenue,Mandaue City
+921916213,10.3315188,123.9462745,primary,A.C. Cortes Avenue,Mandaue City
+921941864,10.3318465,123.9457528,primary,A.C. Cortes Avenue,Mandaue City
+921941865,10.3317303,123.9456931,primary,A.C. Cortes Avenue,Mandaue City
+921952449,10.3349928,123.9398719,primary,A.C. Cortes Avenue,Mandaue City
+922381407,10.3319973,123.9354406,primary,M.C. Briones Street,Mandaue City
+922781382,10.3394654,123.9492322,tertiary,P. Burgos Street,Mandaue City
+922781384,10.3322304,123.9448858,primary,A.C. Cortes Avenue,Mandaue City
+922781385,10.335071,123.9398193,primary,M.C. Briones Street,Mandaue City
+922781386,10.3389288,123.9343719,tertiary,L. Jayme Street,Mandaue City
+922781387,10.3323531,123.9449439,primary,A.C. Cortes Avenue,Mandaue City
+928114564,10.339813,123.9673293,tertiary,Unnamed road corridor,Mandaue City
+933668550,10.3347117,123.9405259,primary,A.C. Cortes Avenue,Mandaue City
+939350259,10.3349859,123.9396998,primary,M.C. Briones Street,Mandaue City
+939350260,10.3348882,123.9401098,primary,A.C. Cortes Avenue,Mandaue City
+962447843,10.3714214,123.9512422,tertiary,Magnolia Street,Mandaue City
+1036183558,10.3763184,123.9588756,primary,Cebu North Road,Mandaue City
+1036183559,10.3772236,123.9618847,primary,Cebu North Road,Mandaue City
+1036183561,10.3807017,123.9679164,primary,Cebu North Road,Mandaue City
+1036183562,10.381248,123.9692463,primary,Cebu North Road,Mandaue City
+1036183566,10.3787946,123.9640004,primary,Cebu North Road,Mandaue City
+1036183567,10.3788425,123.9640642,primary,Cebu North Road,Mandaue City
+1036183568,10.3811952,123.9692709,primary,Cebu North Road,Mandaue City
+1036183570,10.3801183,123.9666313,primary,Cebu North Road,Mandaue City
+1139103127,10.3382905,123.9564295,primary,United Nations Avenue,Mandaue City
+1152387705,10.3375649,123.9617416,tertiary,Unnamed road corridor,Mandaue City
+1153630682,10.390672,123.9426634,tertiary,Columbus Street,Mandaue City
+1153630683,10.3903261,123.9430918,tertiary,Columbus Street,Mandaue City
+1153630684,10.390672,123.9426848,tertiary,Columbus Street,Mandaue City
+1159170443,10.3402333,123.9466599,tertiary,S.B. Cabahug Street,Mandaue City
+1184324084,10.3620251,123.9491322,secondary,H. Abellana Street,Mandaue City
+1184324085,10.3619792,123.9495256,secondary,H. Abellana Street,Mandaue City
+1184324086,10.3622679,123.9497883,primary,M.C. Briones Street,Mandaue City
+1184324087,10.3618961,123.9497439,primary,M.C. Briones Street,Mandaue City
+1185411908,10.3713345,123.9536687,primary,Cebu North Road,Mandaue City
+1185411909,10.3728181,123.9544658,primary,Cebu North Road,Mandaue City
+1185411913,10.3755215,123.9564168,primary,Cebu North Road,Mandaue City
+1185411915,10.3740958,123.9552748,primary,Cebu North Road,Mandaue City
+1207315453,10.3399449,123.9464853,tertiary,S.B. Cabahug Street,Mandaue City
+1207315454,10.3400207,123.9463973,primary,M.C. Briones Street,Mandaue City
+1241303712,10.3756619,123.9557502,tertiary,M. Pepito Street,Mandaue City
+1308935258,10.3773175,123.9620246,primary,Cebu North Road,Mandaue City
+1308935259,10.3780251,123.9630841,primary,Cebu North Road,Mandaue City
+1316059312,10.3917882,123.9419992,tertiary,Unnamed road corridor,Mandaue City
+1324330843,10.3407382,123.9468653,primary,M.C. Briones Street,Mandaue City
+1324330844,10.3402831,123.946607,primary,M.C. Briones Street,Mandaue City
+1324331403,10.3408858,123.9489563,primary,United Nations Avenue,Mandaue City
+1324331404,10.3412627,123.9479075,primary,United Nations Avenue,Mandaue City
+1324946314,10.3705157,123.9532991,primary,Cebu North Road,Mandaue City
+1324946315,10.3724013,123.9542457,primary,Cebu North Road,Mandaue City
+1324946316,10.372151,123.9541117,primary,Cebu North Road,Mandaue City
+1337825916,10.3746431,123.9603415,tertiary,V & G Drive,Mandaue City
+1337825917,10.3745381,123.9603652,tertiary,V & G Drive,Mandaue City
+1339700673,10.3624254,123.9484396,secondary,H. Abellana Street,Mandaue City
+1339700674,10.3623278,123.9485505,secondary,H. Abellana Street,Mandaue City
+1339700800,10.361604,123.9497209,primary,M.C. Briones Street,Mandaue City
+1339702168,10.3797495,123.9660504,primary,Cebu North Road,Mandaue City
+1339702170,10.3789097,123.9641597,primary,Cebu North Road,Mandaue City
+1339702171,10.3780795,123.963049,primary,Cebu North Road,Mandaue City
+1339841509,10.3324118,123.9357935,primary,M.C. Briones Street,Mandaue City
+1339842113,10.3321033,123.9355992,primary,M.C. Briones Street,Mandaue City
+1339842398,10.3322334,123.9354503,secondary,A. S. Fortuna Street,Mandaue City
+1339844105,10.3317926,123.9357945,tertiary,A. S. Fortuna Street,Mandaue City
+1339880342,10.3755783,123.9601834,tertiary,V & G Drive,Mandaue City
+1339882296,10.3745545,123.9603388,tertiary,V & G Drive,Mandaue City
+1340209289,10.3792431,123.9647949,primary,Cebu North Road,Mandaue City
+1340224414,10.3979031,123.9559191,tertiary,Unnamed road corridor,Mandaue City
+1342176254,10.3705747,123.9533539,primary,Cebu North Road,Mandaue City
+1342176255,10.3717951,123.9540011,primary,Cebu North Road,Mandaue City
+1360929383,10.3701287,123.953208,primary,M.C. Briones Street,Mandaue City
+1360929384,10.3703257,123.953232,primary,M.C. Briones Street,Mandaue City
+1360929385,10.3634551,123.9499958,primary,M.C. Briones Street,Mandaue City
+1362794464,10.3389136,123.9451409,primary,M.C. Briones Street,Mandaue City
+1363724761,10.332125,123.9355082,secondary,A. S. Fortuna Street,Mandaue City
+1364964031,10.338699,123.9553459,primary,United Nations Avenue,Mandaue City
+1374321522,10.3409451,123.9469539,primary,M.C. Briones Street,Mandaue City
+1375606439,10.3388491,123.954635,primary,United Nations Avenue,Mandaue City
+1376434596,10.3417649,123.9474665,primary,Cebu North Road,Mandaue City
+1382899271,10.3454267,123.9594631,tertiary,S. E. Jayme Street,Mandaue City
+1382899277,10.3459969,123.9571855,tertiary,S. E. Jayme Street,Mandaue City
+1388002437,10.3356887,123.9589574,primary,United Nations Avenue,Mandaue City
+1397725618,10.340929,123.9665223,tertiary,Unnamed road corridor,Mandaue City
+1397725619,10.3403846,123.9667225,tertiary,Unnamed road corridor,Mandaue City
+1416855550,10.3786262,123.9641026,tertiary,Governor F. B. Harrison Avenue,Mandaue City
+1416867994,10.3714006,123.9678758,tertiary,Unnamed road corridor,Mandaue City
+1416867995,10.3714352,123.9679168,tertiary,Unnamed road corridor,Mandaue City
+1416899108,10.3327634,123.9491875,tertiary,Don G. LL. Ouano Street,Mandaue City
+1416903947,10.3460413,123.9474009,tertiary,P. C. Suico Street,Mandaue City
+1416919735,10.3485552,123.9560576,tertiary,Labogon-Paknaan Road,Mandaue City
+1420662369,10.3408239,123.9445948,tertiary,Juez M. O. Echavez Street,Mandaue City
+1420662370,10.3397665,123.9444789,tertiary,Juez M. O. Echavez Street,Mandaue City
+1421478141,10.3621085,123.9373908,tertiary,B. Suico Street,Mandaue City
+1421661484,10.3327353,123.9492374,tertiary,Don G. LL. Ouano Street,Mandaue City
+1421665860,10.3352164,123.9473777,tertiary,P. Burgos Street,Mandaue City
+1422960937,10.3388414,123.9552631,trunk,D.M. Cortes Avenue,Mandaue City
+1422960941,10.3403339,123.956921,trunk,D.M. Cortes Avenue,Mandaue City
+1422960943,10.3397357,123.9562011,trunk,D.M. Cortes Avenue,Mandaue City
+1422960944,10.3398697,123.9564046,trunk,D.M. Cortes Avenue,Mandaue City
+1422960948,10.3379056,123.9541458,trunk,D.M. Cortes Avenue,Mandaue City
+1422960949,10.3381825,123.9544742,trunk,D.M. Cortes Avenue,Mandaue City
+1422961438,10.3309034,123.9481052,trunk,D.M. Cortes Avenue,Mandaue City
+1451007722,10.3303122,123.9352056,tertiary,A. del Rosario Street,Mandaue City
+1459384343,10.3705287,123.9525404,tertiary,Cambiohan Street,Mandaue City
+1459614314,10.3413057,123.9663045,tertiary,Unnamed road corridor,Mandaue City
+1459614316,10.3387906,123.9653914,tertiary,Umapad Road,Mandaue City
+1459614317,10.336243,123.9601301,tertiary,Unnamed road corridor,Mandaue City
+1460586177,10.3960243,123.9383991,tertiary,Unnamed road corridor,Mandaue City
+1466372571,10.3788099,123.938788,tertiary,Unnamed road corridor,Mandaue City
+1466372572,10.3787209,123.9386424,tertiary,Unnamed road corridor,Mandaue City
+1466372577,10.3686889,123.9431619,tertiary,Pedro I. Ouano Street,Mandaue City
+1466372578,10.3682635,123.9424803,tertiary,Pedro I. Ouano Street,Mandaue City
+1469873200,10.3731165,123.9376266,tertiary,Victor Vega Street,Mandaue City
+1469874426,10.3671777,123.9422492,tertiary,Victor Vega Street,Mandaue City
+1471463192,10.3786604,123.9385402,tertiary,Unnamed road corridor,Mandaue City
+1471483135,10.3321451,123.9354175,primary,M.C. Briones Street,Mandaue City
+1471488218,10.3707834,123.9521524,tertiary,Magnolia Street,Mandaue City
+1471743349,10.3303782,123.9478699,primary,A.C. Cortes Avenue,Mandaue City
+1471743350,10.3305419,123.9478225,primary,A.C. Cortes Avenue,Mandaue City
+1471745584,10.389855,123.9558311,tertiary,M. Pepito Street,Mandaue City
+1471745585,10.3908108,123.9561798,tertiary,M. Pepito Street,Mandaue City
+1471780840,10.368477,123.9308941,secondary,H. Abellana Street,Mandaue City
+1471787353,10.3751028,123.931889,tertiary,Unnamed road corridor,Mandaue City
+1471793434,10.3767406,123.9610266,primary,Cebu North Road,Mandaue City
+1471793435,10.3768017,123.9610249,primary,Cebu North Road,Mandaue City
+1471793436,10.3769503,123.9615042,primary,Cebu North Road,Mandaue City
+1471793437,10.3770106,123.9614918,primary,Cebu North Road,Mandaue City
+1471810202,10.3391338,123.95385,primary,United Nations Avenue,Mandaue City
+1471810204,10.3393445,123.9535482,primary,United Nations Avenue,Mandaue City
+1471825413,10.3449205,123.962188,trunk,D.M. Cortes Avenue,Mandaue City
+1471829165,10.3441681,123.9652744,tertiary,Unnamed road corridor,Mandaue City
+1471829166,10.3448841,123.9642496,tertiary,Unnamed road corridor,Mandaue City
+1471829167,10.3456095,123.9632225,tertiary,Unnamed road corridor,Mandaue City
+1472009514,10.3376432,123.9579295,primary,United Nations Avenue,Mandaue City
+1472009515,10.3383903,123.9557706,primary,United Nations Avenue,Mandaue City
+1472043673,10.3433469,123.9476329,primary,M.C. Briones Street,Mandaue City
+1472097806,10.3340245,123.9402112,tertiary,B. B. Cabahug Street,Mandaue City
+1472440193,10.3930181,123.9410639,tertiary,Unnamed road corridor,Mandaue City
+1472440201,10.381402,123.9405274,tertiary,Unnamed road corridor,Mandaue City
+1472440202,10.380049,123.9397817,tertiary,Unnamed road corridor,Mandaue City
+1472454613,10.3350273,123.9400339,primary,A.C. Cortes Avenue,Mandaue City
+1472462772,10.3559115,123.9480868,tertiary,P. L. Sanchez Street,Mandaue City
+1472464626,10.3718335,123.9503253,tertiary,Magnolia Street,Mandaue City
+1472464628,10.3719269,123.9499769,tertiary,Magnolia Street,Mandaue City
+1472476015,10.379512,123.9654004,primary,Cebu North Road,Mandaue City
+1472477484,10.3776171,123.9336069,tertiary,Unnamed road corridor,Mandaue City
+1472477485,10.378278,123.9334199,tertiary,Unnamed road corridor,Mandaue City
+1472477486,10.3775538,123.9335557,tertiary,Unnamed road corridor,Mandaue City
+1472490698,10.3312091,123.9467707,primary,A.C. Cortes Avenue,Mandaue City
+1472504808,10.3309388,123.9469653,primary,A.C. Cortes Avenue,Mandaue City
+1472521189,10.3348125,123.9394506,primary,M.C. Briones Street,Mandaue City
+1472521190,10.3349193,123.9396061,primary,M.C. Briones Street,Mandaue City
+1472521191,10.3353159,123.9399049,primary,M.C. Briones Street,Mandaue City
+1472521192,10.3414414,123.9472968,primary,M.C. Briones Street,Mandaue City
+1472521193,10.3416267,123.9473928,primary,M.C. Briones Street,Mandaue City
+1472521194,10.3429837,123.9476278,primary,Cebu North Road,Mandaue City
+1473669688,10.3435238,123.947851,tertiary,S. E. Jayme Street,Mandaue City
+1473706830,10.3449865,123.962275,trunk,D.M. Cortes Avenue,Mandaue City
+1473706831,10.3449497,123.9622265,trunk,D.M. Cortes Avenue,Mandaue City
+1473706832,10.3452116,123.9625725,trunk,D.M. Cortes Avenue,Mandaue City
+1473706833,10.3394147,123.9558782,trunk,D.M. Cortes Avenue,Mandaue City
+1473706834,10.3392993,123.9557559,trunk,D.M. Cortes Avenue,Mandaue City
+1473706835,10.3390856,123.9555285,trunk,D.M. Cortes Avenue,Mandaue City
+1473706836,10.3391481,123.9555951,trunk,D.M. Cortes Avenue,Mandaue City
+1473706837,10.3389934,123.9554293,trunk,D.M. Cortes Avenue,Mandaue City
+1473706838,10.3384369,123.9547758,trunk,D.M. Cortes Avenue,Mandaue City
+1474215087,10.3331638,123.9393135,tertiary,B. B. Cabahug Street,Mandaue City
+1474215088,10.3311198,123.9455864,tertiary,P. Burgos Street,Mandaue City
+1474215090,10.3314658,123.9457376,tertiary,P. Burgos Street,Mandaue City
+1474238244,10.3437757,123.9476012,primary,M.C. Briones Street,Mandaue City
+1474238246,10.3390516,123.9543712,primary,United Nations Avenue,Mandaue City
+1475638812,10.3932984,123.9609416,tertiary,Diversion Road,Mandaue City
+1480376164,10.3995501,123.9526013,tertiary,Unnamed road corridor,Mandaue City
+1480425821,10.3348027,123.9393125,primary,Maguikay Flyover,Mandaue City
+1480425822,10.3744572,123.9604044,tertiary,V & G Drive,Mandaue City
+1490201807,10.3751289,123.9362135,tertiary,Victor Vega Street,Mandaue City
+27751190,10.3199493,123.9555674,primary,Mandaue-Mactan Bridge,Lapu-Lapu City
+28811051,10.2819247,123.9905141,primary,Mactan Circumferential Road,Lapu-Lapu City
+28811131,10.3273323,123.9790435,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+28811294,10.2881929,123.9993726,primary,Mactan Circumferential Road,Lapu-Lapu City
+28811351,10.2809109,123.9719158,primary,Basak - Marigondon Road,Lapu-Lapu City
+28811719,10.3301354,123.9837844,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+28832919,10.3237413,123.9432896,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+28960131,10.3232647,123.9694178,primary,Marcelo Fernan Bridge,Lapu-Lapu City
+29397382,10.3110512,123.9486207,primary,Lopez Jaena Street,Lapu-Lapu City
+32834716,10.2923892,123.967919,secondary,General Aviation Road,Lapu-Lapu City
+47872167,10.3041888,123.9801811,secondary,General Aviation Road,Lapu-Lapu City
+48169169,10.3292898,123.9316554,primary,M.C. Briones Street,Lapu-Lapu City
+51816634,10.3241758,123.942222,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+72370222,10.2720739,123.9457701,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+72370223,10.2633339,123.9476488,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+72370224,10.2920225,123.9454456,primary,Tiangge Road,Lapu-Lapu City
+72370225,10.2785336,123.9450446,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+72370227,10.2714062,123.9707269,primary,Mactan Circumferential National Road,Lapu-Lapu City
+76158514,10.3193868,123.9308918,secondary,E.O. Perez Street,Lapu-Lapu City
+77592870,10.3244987,123.9413232,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+77594102,10.3247663,123.936039,trunk,Ouano Avenue,Lapu-Lapu City
+77594104,10.3246488,123.9413498,trunk,Ouano Avenue,Lapu-Lapu City
+77709881,10.3209838,123.9674485,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+77709883,10.315933,123.9577029,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+77709886,10.3144711,123.9584497,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+77709890,10.3227303,123.9705902,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+77709891,10.3246965,123.9744674,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+77709893,10.3226359,123.9700725,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+77710789,10.3125542,123.9599043,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+80316635,10.3192437,123.9308757,secondary,E.O. Perez Street,Lapu-Lapu City
+95609407,10.323897,123.9428591,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+95609408,10.3238146,123.9435542,trunk,D.M. Cortes Avenue,Lapu-Lapu City
+97908353,10.3280469,123.9511121,primary,A.C. Cortes Avenue,Lapu-Lapu City
+99448653,10.3102348,123.9997856,secondary,Mactan Airport Road,Lapu-Lapu City
+99448685,10.3172886,123.9928398,secondary,General Aviation Road,Lapu-Lapu City
+99981651,10.3125141,123.988292,secondary,General Aviation Road,Lapu-Lapu City
+102243432,10.3245362,123.9412219,trunk,Ouano Avenue,Lapu-Lapu City
+102243433,10.3247014,123.941234,trunk,Ouano Avenue,Lapu-Lapu City
+102243434,10.3250557,123.9403307,trunk,Ouano Avenue,Lapu-Lapu City
+102243435,10.3245623,123.9411468,trunk,Ouano Avenue,Lapu-Lapu City
+102381377,10.3227861,123.9695113,primary,Marcelo Fernan Bridge,Lapu-Lapu City
+207885571,10.295231,123.9710677,secondary,General Aviation Road,Lapu-Lapu City
+207885572,10.2957689,123.964803,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+207885574,10.2910295,123.9670524,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+209908204,10.3130484,123.9562722,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+209908214,10.3165115,123.9613965,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+209908220,10.3143397,123.9583362,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+209909203,10.3144416,123.9583264,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+209909205,10.3127732,123.9596262,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+234946828,10.3185543,123.9320306,secondary,E.O. Perez Street,Lapu-Lapu City
+234947388,10.3193668,123.9306208,secondary,E.O. Perez Street,Lapu-Lapu City
+234947389,10.3145988,123.9587202,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+234947396,10.3110177,123.9516295,primary,G. Y. Dela Serna Street,Lapu-Lapu City
+234947398,10.3128407,123.9518531,primary,A. L. Ngujo Sr. Street,Lapu-Lapu City
+234947402,10.3116332,123.9539497,primary,Manuel Luis Quezon National Highway,Lapu-Lapu City
+235150258,10.3247682,123.9360275,trunk,Ouano Avenue,Lapu-Lapu City
+235314846,10.3195492,123.9308294,trunk,Ouano Avenue,Lapu-Lapu City
+235317804,10.325338,123.9370067,trunk,Ouano Avenue,Lapu-Lapu City
+235626191,10.3127259,123.9533994,primary,A. L. Ngujo Sr. Street,Lapu-Lapu City
+235626314,10.3235641,123.9719881,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+235626350,10.3269154,123.9784786,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+235627272,10.3099096,123.9491185,primary,G. Y. Dela Serna Street,Lapu-Lapu City
+235627273,10.3120413,123.9503286,primary,Lopez Jaena Street,Lapu-Lapu City
+235627274,10.3101015,123.9481502,primary,P. Rodriguez Street,Lapu-Lapu City
+235723558,10.3223715,123.9695393,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+237982302,10.32566,123.9387445,trunk,Ouano Avenue,Lapu-Lapu City
+237983880,10.3251692,123.9395439,trunk,Ouano Avenue,Lapu-Lapu City
+237986163,10.3295071,123.931694,primary,M.C. Briones Street,Lapu-Lapu City
+238044525,10.3280908,123.946419,trunk,D.M. Cortes Avenue,Lapu-Lapu City
+244648551,10.3184259,123.9325046,secondary,E.O. Perez Street,Lapu-Lapu City
+420014429,10.3104303,124.0110976,primary,Mactan Circumferential Road,Lapu-Lapu City
+420014430,10.3104289,124.0110672,primary,Mactan Circumferential Road,Lapu-Lapu City
+558411398,10.2704896,123.9438274,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+589178640,10.3237539,123.9685693,primary,Marcelo Fernan Bridge,Lapu-Lapu City
+589178641,10.3229904,123.9710694,primary,Marcelo Fernan Bridge,Lapu-Lapu City
+590000489,10.2841808,123.9443443,primary,Tiangge Road,Lapu-Lapu City
+590032322,10.3248959,123.9529179,primary,A.C. Cortes Avenue,Lapu-Lapu City
+590032352,10.3243612,123.9418127,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+594406447,10.3250906,123.9444685,trunk,D.M. Cortes Avenue,Lapu-Lapu City
+594406448,10.3239711,123.9436958,trunk,D.M. Cortes Avenue,Lapu-Lapu City
+627388258,10.3218651,123.9326344,trunk,Ouano Avenue,Lapu-Lapu City
+665725062,10.3239035,123.9534558,primary,A.C. Cortes Avenue,Lapu-Lapu City
+665725063,10.3199655,123.9555992,primary,Mandaue-Mactan Bridge,Lapu-Lapu City
+665725064,10.3150837,123.958131,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+665725065,10.3147014,123.9584192,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+691846605,10.3159271,123.9577555,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+691846606,10.3252041,123.9528145,primary,A.C. Cortes Avenue,Lapu-Lapu City
+749734944,10.3033718,124.0058557,primary,Mactan Circumferential Road,Lapu-Lapu City
+784991223,10.3142188,123.9580578,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+784991224,10.3146582,123.9583466,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+784991225,10.3143161,123.9585456,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+784991226,10.314519,123.9585252,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+784991227,10.3144552,123.9585116,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+784991228,10.3141572,123.9580433,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+784991229,10.3145349,123.9584632,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+784991230,10.314667,123.9586599,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+853610904,10.3105439,123.9505211,primary,G. Y. Dela Serna Street,Lapu-Lapu City
+853610907,10.3121102,123.9545839,primary,A. L. Ngujo Sr. Street,Lapu-Lapu City
+854426065,10.326203,123.9452416,trunk,D.M. Cortes Avenue,Lapu-Lapu City
+855826461,10.3244714,123.9413933,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+855826462,10.3246041,123.9414509,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+860501103,10.3264947,123.95205,primary,A.C. Cortes Avenue,Lapu-Lapu City
+860501104,10.3239264,123.953483,primary,A.C. Cortes Avenue,Lapu-Lapu City
+894056386,10.3263734,123.9453724,trunk,D.M. Cortes Avenue,Lapu-Lapu City
+894980838,10.2756497,123.9508855,primary,Cordova Bypass Road,Lapu-Lapu City
+899763834,10.2730725,123.9456792,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+906966519,10.319159,123.9305854,trunk,Ouano Avenue,Lapu-Lapu City
+915054860,10.3286386,123.9305803,primary,M.C. Briones Street,Lapu-Lapu City
+915054861,10.3285988,123.930604,primary,M.C. Briones Street,Lapu-Lapu City
+921982771,10.3194784,123.9306915,secondary,E.O. Perez Street,Lapu-Lapu City
+921982772,10.3193939,123.9307316,trunk,Ouano Avenue,Lapu-Lapu City
+921982773,10.3194513,123.9305808,trunk,Ouano Avenue,Lapu-Lapu City
+922378777,10.3286633,123.9307831,primary,M.C. Briones Street,Lapu-Lapu City
+923627898,10.3263608,123.9522083,primary,A.C. Cortes Avenue,Lapu-Lapu City
+926677883,10.2753443,123.9504462,primary,Cordova Bypass Road,Lapu-Lapu City
+933120213,10.3287866,123.9309827,primary,M.C. Briones Street,Lapu-Lapu City
+933846685,10.3245182,123.9412711,trunk,Ouano Avenue,Lapu-Lapu City
+935664545,10.3246677,123.9413066,trunk,Ouano Avenue,Lapu-Lapu City
+959692825,10.321656,123.9327418,trunk,Ouano Avenue,Lapu-Lapu City
+959692826,10.3188901,123.9317383,secondary,E.O. Perez Street,Lapu-Lapu City
+959692827,10.318986,123.9313303,secondary,E.O. Perez Street,Lapu-Lapu City
+1053191134,10.2704331,123.9438875,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+1055343895,10.2722894,123.9457481,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1055343896,10.2728242,123.9457024,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1055343897,10.2719391,123.9451745,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+1055343899,10.2715672,123.9447562,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+1055343900,10.2721372,123.9455419,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+1055350504,10.2725479,123.9461456,primary,Cordova Bypass Road,Lapu-Lapu City
+1059749230,10.2919214,123.9666534,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1059749232,10.2915288,123.9668324,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1080542882,10.2712563,123.9458699,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1104622226,10.2987798,123.974904,secondary,General Aviation Road,Lapu-Lapu City
+1104622227,10.297139,123.9732461,secondary,General Aviation Road,Lapu-Lapu City
+1165012920,10.288554,123.9680995,primary,Basak - Marigondon Road,Lapu-Lapu City
+1165012921,10.2860537,123.9691556,primary,Basak - Marigondon Road,Lapu-Lapu City
+1165012922,10.2860537,123.9691556,primary,Basak - Marigondon Road,Lapu-Lapu City
+1185205402,10.3266634,123.9519537,primary,A.C. Cortes Avenue,Lapu-Lapu City
+1185205403,10.3258892,123.9523745,primary,A.C. Cortes Avenue,Lapu-Lapu City
+1193674531,10.3291063,123.9311487,primary,M.C. Briones Street,Lapu-Lapu City
+1193674533,10.3288539,123.930856,primary,M.C. Briones Street,Lapu-Lapu City
+1193674534,10.3289835,123.9310143,primary,M.C. Briones Street,Lapu-Lapu City
+1193674535,10.328734,123.9306928,primary,M.C. Briones Street,Lapu-Lapu City
+1289772263,10.3260431,123.9766685,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1289772264,10.3260971,123.9769968,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1289772265,10.3259486,123.9767274,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1289772267,10.3259275,123.97646,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1324079387,10.2757711,123.9747393,primary,Basak - Marigondon Road,Lapu-Lapu City
+1324079388,10.2751301,123.9751119,primary,Basak - Marigondon Road,Lapu-Lapu City
+1324332733,10.3241563,123.9352299,trunk,Ouano Avenue,Lapu-Lapu City
+1324333952,10.3222424,123.9695497,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1324333953,10.3218931,123.9688954,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1328973958,10.3112401,123.9527219,primary,G. Y. Dela Serna Street,Lapu-Lapu City
+1349368610,10.3207511,123.967264,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1349368611,10.3172379,123.9622202,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1349498004,10.3192011,123.9649108,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1349498005,10.3183307,123.9639405,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1362790500,10.323759,123.9726857,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1362790501,10.3249505,123.974698,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1368964894,10.3184338,123.9638648,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1368964895,10.3190432,123.9649128,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1368964897,10.3185439,123.9639918,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1395644019,10.3150878,123.9582017,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1422944996,10.3244979,123.9415986,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+1422944997,10.3244388,123.9415549,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+1457390463,10.3240333,123.9425376,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
+1459152178,10.3113167,124.0067121,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1459152179,10.3105622,124.0098052,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1459156062,10.3084185,123.9842969,secondary,General Aviation Road,Lapu-Lapu City
+1459156063,10.3099112,123.9888415,secondary,Mactan Airport Road,Lapu-Lapu City
+1459156541,10.2925349,123.9994568,primary,Mactan Circumferential Road,Lapu-Lapu City
+1459160141,10.3183913,123.9962564,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1459160526,10.3258175,123.990764,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1459329454,10.2757821,123.9784968,primary,Mactan Circumferential National Road,Lapu-Lapu City
+1459335899,10.3009246,123.9770685,secondary,General Aviation Road,Lapu-Lapu City
+1459396070,10.2693472,123.9619849,primary,Cordova Bypass Road,Lapu-Lapu City
+1459396071,10.2698928,123.9607151,primary,Cordova Bypass Road,Lapu-Lapu City
+1459418369,10.2742584,123.9568935,primary,Cordova Bypass Road,Lapu-Lapu City
+1459418370,10.2742029,123.9567871,primary,Cordova Bypass Road,Lapu-Lapu City
+1459588542,10.3029202,123.9471728,primary,Tiangge Road,Lapu-Lapu City
+1459598851,10.2832195,123.9444812,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1459608031,10.3077186,123.9479614,primary,Tiangge Road,Lapu-Lapu City
+1465286690,10.2725971,123.9457225,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1467336432,10.3284592,123.9900396,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1467388723,10.3307305,123.9890372,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468429480,10.3008123,123.9622385,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1468429481,10.3006975,123.9622217,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1468507989,10.3002291,123.9625781,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1468575904,10.3256646,123.9759824,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468575905,10.3258286,123.9765112,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468575906,10.326423,123.97759,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468575907,10.3261891,123.9769315,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468575908,10.3254869,123.9756597,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468575910,10.3253617,123.9756598,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468575911,10.3256023,123.9760981,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468587537,10.3201663,123.994455,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468587540,10.3268032,123.978038,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468587541,10.3272849,123.9790781,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1468591818,10.2998604,123.9466627,primary,Tiangge Road,Lapu-Lapu City
+1468595048,10.3137958,123.9589998,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1468595049,10.3044357,123.9606115,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1468595050,10.304439,123.9606954,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1468811037,10.3088637,123.9608848,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1468811038,10.3088484,123.960998,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1469195591,10.2714065,123.9446611,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+1469195592,10.2724515,123.9457342,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469195593,10.272185,123.9454224,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+1469195594,10.2722982,123.9456572,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
+1469195595,10.2717802,123.9458015,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469195596,10.2739349,123.945675,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469201631,10.2715853,123.945826,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469207353,10.2997518,123.9628436,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1469208975,10.2997375,123.9628163,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1469210909,10.314323,123.9586436,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1469215083,10.3154285,123.9597119,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469325536,10.3014583,123.9616962,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1469325537,10.3015078,123.9617492,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1469591142,10.3123059,124.0054411,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591143,10.3128602,124.0047438,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591144,10.3222566,123.9928942,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591145,10.3241498,123.9914754,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591146,10.3104964,124.0082289,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591147,10.3105027,124.0078561,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591148,10.3136533,124.0037418,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591151,10.3159743,123.9997195,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591152,10.3170486,123.9981152,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591153,10.3171604,123.997882,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591154,10.3172441,123.9976788,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1469591155,10.3145309,124.0021871,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1471743352,10.3107432,123.9607502,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1471743353,10.3107479,123.9608636,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1471743354,10.3111874,123.9607939,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1471743355,10.3111638,123.9606769,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1472420000,10.3259429,123.9379222,trunk,Ouano Avenue,Lapu-Lapu City
+1472420001,10.3257695,123.9379102,trunk,Ouano Avenue,Lapu-Lapu City
+1472484727,10.326951,123.9519033,primary,A.C. Cortes Avenue,Lapu-Lapu City
+1472487881,10.3292293,123.9498043,primary,A.C. Cortes Avenue,Lapu-Lapu City
+1472487883,10.3272897,123.9517154,primary,A.C. Cortes Avenue,Lapu-Lapu City
+1473724157,10.3269136,123.9518126,primary,A.C. Cortes Avenue,Lapu-Lapu City
+1473724158,10.3272347,123.9516206,primary,A.C. Cortes Avenue,Lapu-Lapu City
+1474023667,10.3199753,123.9309143,trunk,Ouano Avenue,Lapu-Lapu City
+1474023668,10.319655,123.9307078,trunk,Ouano Avenue,Lapu-Lapu City
+1474248293,10.3251611,123.9753023,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1474248294,10.3221152,123.9693013,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
+1474248295,10.3140211,123.9588397,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
+1480425816,10.3279813,123.9510268,primary,A.C. Cortes Avenue,Lapu-Lapu City
+69348030,10.2611503,123.8350817,primary,Natalio Bacalso Avenue,Talisay City
+69348031,10.2606441,123.833855,primary,Natalio Bacalso Avenue,Talisay City
+77593966,10.2523647,123.8518839,trunk,Cebu South Coastal Road,Talisay City
+77595039,10.2534815,123.8346469,trunk,Cebu South Coastal Road,Talisay City
+77595040,10.2519326,123.8533117,trunk,Cebu South Coastal Road,Talisay City
+77595042,10.253584,123.834671,trunk,Cebu South Coastal Road,Talisay City
+80482770,10.265266,123.8366284,secondary,Rafael Rabaya Street,Talisay City
+98840145,10.2699742,123.845282,primary,Natalio Bacalso Avenue,Talisay City
+98840146,10.2718052,123.8471524,primary,Natalio Bacalso Avenue,Talisay City
+99142668,10.2605294,123.8721197,trunk,Cebu South Coastal Road,Talisay City
+99142669,10.2587326,123.870176,trunk,Cebu South Coastal Road,Talisay City
+99142670,10.2604557,123.872208,trunk,Cebu South Coastal Road,Talisay City
+99181903,10.2577546,123.8670939,trunk,Cebu South Coastal Road,Talisay City
+99181904,10.2586433,123.8702262,trunk,Cebu South Coastal Road,Talisay City
+104215040,10.2626699,123.838633,primary,Natalio Bacalso Avenue,Talisay City
+104215041,10.2639973,123.8399321,primary,Natalio Bacalso Avenue,Talisay City
+104215042,10.2627012,123.8386119,primary,Natalio Bacalso Avenue,Talisay City
+104215043,10.2620857,123.8375475,primary,Natalio Bacalso Avenue,Talisay City
+104215044,10.2631324,123.8389764,primary,Natalio Bacalso Avenue,Talisay City
+104215045,10.2610197,123.8351271,primary,Natalio Bacalso Avenue,Talisay City
+104215046,10.2605742,123.8338774,primary,Natalio Bacalso Avenue,Talisay City
+104215047,10.2595642,123.829154,primary,Natalio Bacalso Avenue,Talisay City
+104215049,10.2621556,123.8375133,primary,Natalio Bacalso Avenue,Talisay City
+210007042,10.2635575,123.8394486,primary,Tabunok Flyover,Talisay City
+235389465,10.2722654,123.8478811,primary,Natalio Bacalso Avenue,Talisay City
+236545359,10.2668105,123.8424021,primary,Natalio Bacalso Avenue,Talisay City
+237738347,10.2766093,123.852391,primary,Natalio Bacalso Avenue,Talisay City
+402072505,10.2632334,123.8400051,secondary,Rafael Rabaya Street,Talisay City
+421052925,10.2663135,123.8771033,trunk,Cebu South Coastal Road,Talisay City
+609990646,10.2732665,123.8796452,trunk,Cebu South Coastal Road,Talisay City
+610005599,10.2654551,123.8765375,trunk,Cebu South Coastal Road,Talisay City
+785017544,10.2655659,123.87646,trunk,Cebu South Coastal Road,Talisay City
+785017545,10.2650517,123.8761875,trunk,Cebu South Coastal Road,Talisay City
+785017546,10.2637366,123.8748844,trunk,Cebu South Coastal Road,Talisay City
+785017547,10.2633342,123.8747039,trunk,Cebu South Coastal Road,Talisay City
+785017549,10.2613857,123.8730169,trunk,Cebu South Coastal Road,Talisay City
+785017550,10.2614584,123.8729227,trunk,Cebu South Coastal Road,Talisay City
+785017551,10.2514135,123.8486506,trunk,Cebu South Coastal Road,Talisay City
+785017552,10.257649,123.8670611,trunk,Cebu South Coastal Road,Talisay City
+785017553,10.2578362,123.8605675,trunk,Cebu South Coastal Road,Talisay City
+785017554,10.2566676,123.8595771,trunk,Cebu South Coastal Road,Talisay City
+785017555,10.2558505,123.8588009,trunk,Cebu South Coastal Road,Talisay City
+785017556,10.2546846,123.8578892,trunk,Cebu South Coastal Road,Talisay City
+785017557,10.2535983,123.856889,trunk,Cebu South Coastal Road,Talisay City
+785017558,10.2528662,123.8560882,trunk,Cebu South Coastal Road,Talisay City
+785017559,10.253233,123.8565915,secondary,Rafael Rabaya Street,Talisay City
+785017560,10.2585741,123.8639943,trunk,Cebu South Coastal Road,Talisay City
+785017561,10.2580452,123.8610902,trunk,Cebu South Coastal Road,Talisay City
+785017562,10.2524126,123.8397646,trunk,Cebu South Coastal Road,Talisay City
+785017563,10.2528946,123.837665,trunk,Cebu South Coastal Road,Talisay City
+785017564,10.2529233,123.8370056,trunk,Cebu South Coastal Road,Talisay City
+785017565,10.2525405,123.8385764,trunk,Cebu South Coastal Road,Talisay City
+821637001,10.2717308,123.847203,primary,Natalio Bacalso Avenue,Talisay City
+821637002,10.2721579,123.847856,primary,Natalio Bacalso Avenue,Talisay City
+821637003,10.2712041,123.8465093,primary,Natalio Bacalso Avenue,Talisay City
+821637004,10.2715904,123.8468356,primary,Natalio Bacalso Avenue,Talisay City
+903973908,10.2797611,123.8817256,trunk,Cebu South Coastal Road,Talisay City
+904328238,10.2791481,123.8549574,primary,Natalio Bacalso Avenue,Talisay City
+905322537,10.2644217,123.8402884,primary,Natalio Bacalso Avenue,Talisay City
+905322538,10.2644518,123.8402538,primary,Natalio Bacalso Avenue,Talisay City
+905322539,10.2669448,123.8426172,primary,Natalio Bacalso Avenue,Talisay City
+905322540,10.2651022,123.8409318,primary,Natalio Bacalso Avenue,Talisay City
+988838917,10.2635643,123.8394569,secondary,Rafael Rabaya Street,Talisay City
+988839718,10.2640604,123.8398426,primary,Natalio Bacalso Avenue,Talisay City
+988839719,10.2630681,123.8390524,primary,Natalio Bacalso Avenue,Talisay City
+1083138507,10.2515067,123.8456499,trunk,Cebu South Coastal Road,Talisay City
+1083138508,10.2516252,123.8467247,trunk,Cebu South Coastal Road,Talisay City
+1083138509,10.2519649,123.8432507,trunk,Cebu South Coastal Road,Talisay City
+1083138510,10.2519572,123.8421645,trunk,Cebu South Coastal Road,Talisay City
+1147782868,10.2663604,123.8420796,primary,Natalio Bacalso Avenue,Talisay City
+1147783625,10.2663231,123.84195,primary,Natalio Bacalso Avenue,Talisay City
+1147783628,10.2666184,123.8423133,primary,Natalio Bacalso Avenue,Talisay City
+1147848759,10.2625721,123.8410928,secondary,Rafael Rabaya Street,Talisay City
+1147848760,10.257884,123.8488607,secondary,Rafael Rabaya Street,Talisay City
+1324331437,10.2540235,123.8322461,trunk,Cebu South Coastal Road,Talisay City
+1324331438,10.2545513,123.8299344,trunk,Cebu South Coastal Road,Talisay City
+1326429948,10.2741262,123.8498806,primary,Natalio Bacalso Avenue,Talisay City
+1326429949,10.2736351,123.849379,primary,Natalio Bacalso Avenue,Talisay City
+1340017145,10.2699168,123.8453206,primary,Natalio Bacalso Avenue,Talisay City
+1340017147,10.2678357,123.8433321,primary,Natalio Bacalso Avenue,Talisay City
+1340017149,10.2671815,123.8427344,primary,Natalio Bacalso Avenue,Talisay City
+1340017150,10.2677981,123.8433769,primary,Natalio Bacalso Avenue,Talisay City
+1345398847,10.2657616,123.8415296,primary,Natalio Bacalso Avenue,Talisay City
+1345398849,10.2658721,123.84163,primary,Natalio Bacalso Avenue,Talisay City
+1345398850,10.2658133,123.8415762,primary,Natalio Bacalso Avenue,Talisay City
+1345398852,10.2658136,123.8414753,primary,Natalio Bacalso Avenue,Talisay City
+1345398853,10.2658639,123.8415232,primary,Natalio Bacalso Avenue,Talisay City
+1345398855,10.2651578,123.8408692,primary,Natalio Bacalso Avenue,Talisay City
+1350833904,10.2728373,123.848541,primary,Natalio Bacalso Avenue,Talisay City
+1350833905,10.2733965,123.8491317,primary,Natalio Bacalso Avenue,Talisay City
+1382927503,10.2712527,123.8464426,primary,Natalio Bacalso Avenue,Talisay City
+1382927504,10.2715197,123.8468927,primary,Natalio Bacalso Avenue,Talisay City
+1423812590,10.2590206,123.8629425,trunk,Cebu South Coastal Road,Talisay City
+1423812591,10.2583545,123.8652774,trunk,Cebu South Coastal Road,Talisay City
+1474473376,10.2543841,123.8312501,trunk,Cebu South Coastal Road,Talisay City
+1474559454,10.2682464,123.8314547,secondary,Rafael Rabaya Street,Talisay City
+1474801403,10.261516,123.8363802,primary,Natalio Bacalso Avenue,Talisay City
+1474801405,10.2616032,123.83635,primary,Natalio Bacalso Avenue,Talisay City
+1474801406,10.2615371,123.83614,primary,Natalio Bacalso Avenue,Talisay City
+1474801407,10.2614277,123.8361802,primary,Natalio Bacalso Avenue,Talisay City
+1474826001,10.2706674,123.846018,primary,Natalio Bacalso Avenue,Talisay City
+1474826002,10.2707132,123.8459621,primary,Natalio Bacalso Avenue,Talisay City
+1474826003,10.2706532,123.8459077,primary,Natalio Bacalso Avenue,Talisay City
+1474826005,10.2709118,123.8461378,primary,Natalio Bacalso Avenue,Talisay City
+1474826006,10.2708761,123.846204,primary,Natalio Bacalso Avenue,Talisay City
+1474826007,10.2705939,123.8459508,primary,Natalio Bacalso Avenue,Talisay City
+1474830304,10.2671216,123.8427819,primary,Natalio Bacalso Avenue,Talisay City
+1474830305,10.266986,123.8425644,primary,Natalio Bacalso Avenue,Talisay City
+1474830307,10.2669495,123.8425318,primary,Natalio Bacalso Avenue,Talisay City
+1474830308,10.2669153,123.8425898,primary,Natalio Bacalso Avenue,Talisay City
+1474830310,10.2673366,123.8429813,primary,Natalio Bacalso Avenue,Talisay City
+1474830311,10.2675658,123.843179,primary,Natalio Bacalso Avenue,Talisay City
+1474830312,10.2673008,123.842949,primary,Natalio Bacalso Avenue,Talisay City
+1474830318,10.2681485,123.8436904,primary,Natalio Bacalso Avenue,Talisay City
+1474830319,10.2678709,123.8433649,primary,Natalio Bacalso Avenue,Talisay City
+1474830322,10.2685049,123.8439327,primary,Natalio Bacalso Avenue,Talisay City
+1474830323,10.268464,123.8439753,primary,Natalio Bacalso Avenue,Talisay City
+1474830325,10.2685067,123.8440144,primary,Natalio Bacalso Avenue,Talisay City
+1474830326,10.2685481,123.8439721,primary,Natalio Bacalso Avenue,Talisay City
+1474830327,10.2678341,123.8434062,primary,Natalio Bacalso Avenue,Talisay City
+1474830328,10.268898,123.8442915,primary,Natalio Bacalso Avenue,Talisay City
+1474830331,10.2692566,123.8447071,primary,Natalio Bacalso Avenue,Talisay City
+1474830332,10.269298,123.8446576,primary,Natalio Bacalso Avenue,Talisay City
+1474830333,10.2692287,123.8446811,primary,Natalio Bacalso Avenue,Talisay City
+1474830335,10.2692482,123.8446109,primary,Natalio Bacalso Avenue,Talisay City
+1474830336,10.2681873,123.8436479,primary,Natalio Bacalso Avenue,Talisay City
+1474830337,10.2692069,123.844661,primary,Natalio Bacalso Avenue,Talisay City
+1474830338,10.2688642,123.8443446,primary,Natalio Bacalso Avenue,Talisay City
+1474850789,10.266035,123.8417815,primary,Natalio Bacalso Avenue,Talisay City
+1474850790,10.2659742,123.8416262,primary,Natalio Bacalso Avenue,Talisay City
+1474850791,10.2667741,123.842458,primary,Natalio Bacalso Avenue,Talisay City
+1474850792,10.266664,123.8422664,primary,Natalio Bacalso Avenue,Talisay City
+1474850793,10.2666165,123.8422228,primary,Natalio Bacalso Avenue,Talisay City
+1474850794,10.2665706,123.8422701,primary,Natalio Bacalso Avenue,Talisay City
+1475632011,10.2627877,123.8407409,secondary,Rafael Rabaya Street,Talisay City
+1475632013,10.267466,123.8429883,primary,Natalio Bacalso Avenue,Talisay City
+1475632014,10.267697,123.8432026,primary,Natalio Bacalso Avenue,Talisay City
+1476321946,10.2693678,123.8784085,trunk,Cebu South Coastal Road,Talisay City
+1476656273,10.2541557,123.8574343,trunk,Cebu South Coastal Road,Talisay City
+1476672567,10.2796008,123.85541,primary,Natalio Bacalso Avenue,Talisay City
+1476674255,10.2789319,123.8547391,primary,Natalio Bacalso Avenue,Talisay City
+1476908731,10.2738903,123.8496427,primary,Natalio Bacalso Avenue,Talisay City
+1476944542,10.2722616,123.8479498,primary,Natalio Bacalso Avenue,Talisay City
+1476944543,10.2719541,123.8475499,primary,Natalio Bacalso Avenue,Talisay City
+1476944544,10.2720292,123.8474971,primary,Natalio Bacalso Avenue,Talisay City
+1476977313,10.2653747,123.8764686,trunk,Cebu South Coastal Road,Talisay City
+1476977317,10.2657223,123.8767658,trunk,Cebu South Coastal Road,Talisay City
+1476977321,10.2573582,123.8684141,trunk,Cebu South Coastal Road,Talisay City
+1476977322,10.2575126,123.8677905,trunk,Cebu South Coastal Road,Talisay City
+1476977323,10.2572546,123.8684085,trunk,Cebu South Coastal Road,Talisay City
+1476977324,10.2574111,123.8677638,trunk,Cebu South Coastal Road,Talisay City
+98087358,10.3848052,123.9749791,primary,Cebu North Road,Consolacion
+858757489,10.3889276,123.9801563,primary,Cebu North Road,Consolacion
+1468733156,10.382771,123.9718525,primary,Cebu North Road,Consolacion
+1468733157,10.3827432,123.9718682,primary,Cebu North Road,Consolacion
+204344827,10.2361812,123.7758738,trunk,Natalio Bacalso Avenue,Minglanilla
+1374643652,10.2401992,123.7819511,trunk,Natalio Bacalso Avenue,Minglanilla
+1474007447,10.2394752,123.7804124,trunk,Natalio Bacalso Avenue,Minglanilla

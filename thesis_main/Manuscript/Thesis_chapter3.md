@@ -104,20 +104,23 @@ To comply with IVS 2025 (IVS 105) and ground the computational model in local re
 
 ## **3.3 Data Pipeline**
 
-The data pipeline follows five stages, implemented in Python:
+The data pipeline follows seven stages, implemented in Python:
 
-1. **Ingestion**: We ingest BDO Excel files via Pandas and collect Lamudi listings using web scraping logic.
-2. **Filtering**: The dataset is restricted to residential properties within Metro Cebu (Cebu City, Mandaue, Lapu-Lapu, Talisay, Minglanilla, and Consolacion).
-3. **Regex Parsing and Cleaning**: 
-   - *BDO Data*: The `Property Description` string often bundles features (e.g., "3BR 2TB"). We apply regex patterns to extract `Bedrooms` and `Bathrooms`. Missing values in lot/floor area are imputed based on the median of similar property types in the same barangay.
-   - *Lamudi Data*: Scraped fields often contain varying text formats (e.g., "₱ 5,000,000" or "Contact agent for price"). We clean currency symbols and commas, dropping rows without explicit numerical prices.
-4. **Geocoding**: We batch-process addresses through the Google Maps Geocoding API, standardizing barangay names and securing precise coordinates.
-5. **GIS Augmentation**: From these geocoded coordinates, we engineer geospatial features:
-   - Proximity metrics (Haversine distances to key economic nodes).
-   - Amenity scores (OSM-derived counts within a 1 km radius).
-   - Spatial lag (mean price of neighboring properties within a 1 km radius).
+1. **Ingestion**: BDO acquired asset data is ingested from Excel via Pandas. Lamudi listings are collected via a custom web scraper. Pag-IBIG foreclosed property records are ingested from structured PDFs and Excel exports.
+2. **Filtering**: The dataset is restricted to residential properties within Metro Cebu (Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion), yielding 798 records across three sources.
+3. **Regex Parsing and Cleaning**:
+   - *BDO Data*: The `Property Description` field bundles features (e.g., "3BR 2TB"). Regex patterns extract `Bedrooms` and `Bathrooms`.
+   - *Lamudi Data*: Scraped fields contain varying price formats (e.g., "₱ 5,000,000" or "Contact agent for price"). Currency symbols and commas are stripped; rows without explicit numerical prices are dropped.
+   - *Pag-IBIG Data*: Minimum bid prices are extracted and tagged as floor-price observations.
+4. **Geocoding (Address → Coordinates)**: Property addresses are batch-geocoded through the Google Maps Geocoding API to obtain latitude/longitude coordinates. The API is used rather than open alternatives due to its superior handling of Philippine informal address formats, which often reference landmarks, barangay names, or compound descriptors. Results are cached locally to avoid redundant API calls.
+5. **BIR Zonal Value Extraction and Barangay Join**: Official BIR zonal value schedules for Metro Cebu are sourced from four Revenue District Office (RDO) files: RDO 80 (Mandaue City, Lapu-Lapu City, Cordova), RDO 81 (Cebu City North), RDO 82 (Cebu City South), and RDO 83 (Talisay City and surrounding municipalities). These files use a hierarchical block format—province → city/municipality → barangay → street/subdivision—requiring a custom stateful parser to extract street-level zonal values per classification code. Values are then aggregated to the barangay level (median per classification: Residential Regular, Commercial Regular, Residential Condominium). To assign each ABT property a barangay, we apply reverse geocoding via the Google Maps Geocoding API against each property's coordinates, recovering the administrative barangay name from the response. The barangay is then used as the join key against the BIR summary table. This approach achieves an 85.7% match rate across the dataset (Mandaue City: 95.6%; Lapu-Lapu City: 92.9%; Cebu City: 84.4%; Talisay City: 78.4%). Consolacion (21 properties) has no BIR coverage in the available RDO files and is excluded from the zonal value join.
+6. **GIS Augmentation**: From geocoded coordinates, we compute the geospatial feature set described in §3.4.1:
+   - Haversine distances to five polycentric CBD nodes and infrastructure anchors.
+   - Amenity scores via the Google Maps Places API (six categories, 1 km radius).
+   - Spatial lag (mean price of neighboring properties within 1 km).
+7. **Final ABT Assembly**: All features are merged into a single Analytics Base Table (ABT) of 798 rows × 42 columns, saved as a flat CSV for modeling.
 
-**Tools**: Python (Pandas, Scikit-learn, XGBoost, osmnx), Google Maps API for geocoding, QGIS for spatial visualization.
+**Tools**: Python (Pandas, NumPy, Scikit-learn, XGBoost, Requests), Google Maps Geocoding and Places APIs, QGIS for spatial visualization.
 
 ---
 
@@ -127,8 +130,8 @@ The data pipeline follows five stages, implemented in Python:
 | ------------------ | --------------------------------------------------------------------------------- | ------------------ |
 | **Structural**     | Lot Area, Floor Area, Bedrooms, Bathrooms, Parking, Property Type                 | BDO / Lamudi       |
 | **Locational**     | Barangay, Latitude/Longitude                                                      | Google Maps API    |
-| **Geospatial** ⭐   | Proximity to Ayala, IT Park, SM Seaside, Airport, **CBRT stations** (Haversine)   | Geocoding + GIS    |
-| **Amenity Score**  | Count of schools, hospitals, commercial centers, transit stops within 1 km radius | OSM / osmnx        |
+| **Geospatial** ⭐   | Haversine distances to 5 CBD nodes + Airport + CBRT (nearest station)             | Geocoding + GIS    |
+| **Amenity Score**  | Weighted index of 6 POI categories within 1 km radius                            | Google Maps Places |
 | **Spatial Lag**    | Mean price of neighboring properties within defined radius                        | Computed from data |
 | **Administrative** | BIR Zonal Value (per barangay)                                                    | BIR schedules      |
 | **Macro**          | BSP RPPI quarterly index                                                          | BSP data           |
@@ -140,25 +143,33 @@ The data pipeline follows five stages, implemented in Python:
 
 This is the core methodological contribution of this study. Geospatial features are extracted through the following pipeline:
 
-1. **Geocoding (Google Maps API)**: Each property address is geocoded to obtain precise latitude/longitude coordinates. The Google Maps Geocoding API is chosen for its superior handling of Philippine address formats, which often include barangay names, landmarks, or informal location descriptors.
+1. **Geocoding (Google Maps API)**: Each property address is geocoded to obtain latitude/longitude coordinates via the Google Maps Geocoding API, which handles Philippine informal address formats better than open alternatives. Results are cached locally. Reverse geocoding is additionally applied to assign each property an administrative barangay name, used as the join key for BIR zonal values (see §3.3, Step 5).
 
-2. **Proximity Features (Haversine Formula)**: For each geocoded property, the Haversine formula computes great-circle distances to key economic and infrastructure nodes:
-- Ayala Center Cebu (primary CBD)
+2. **Proximity Features (Haversine Formula)**: For each property, the Haversine formula computes great-circle distances to seven infrastructure and economic nodes:
+   - Cebu Business Park / Ayala Center (primary CBD)
    - Cebu IT Park (employment hub)
-   - SM Seaside City (commercial center)
+   - SM Seaside City Cebu (southern commercial anchor)
+   - Mandaue CBD (northern commercial center)
+   - Mactan CBD / Lapu-Lapu commercial core
    - Mactan-Cebu International Airport
-   - Planned Cebu Bus Rapid Transit (CBRT) station locations
+   - Nearest planned CBRT (Cebu Bus Rapid Transit) station
 
-3. **Custom Value Driver Scoring Model (OSM via osmnx)**: 
-   Rather than relying solely on arbitrary distances, we develop a custom amenity scoring model using OpenStreetMap data. Utilizing the `osmnx` library, we query points of interest (POI) within a 1 kilometer network radius of each property. We select a 1 km radius as it generally corresponds to a 10-15 minute walkable catchment area. The amenity score is computed not just as a raw count, but as a weighted index reflecting urban density:
-   - Educational institutions (schools, universities): Standard weight
-   - Healthcare facilities (hospitals, clinics): High weight
-   - Commercial establishments (malls, markets): Medium weight
-   - Public transport stops (jeepney routes, bus stops): High weight
+   CBD node coordinates are defined empirically: for each node, the Google Maps Places API is queried for nearby commercial establishments and the centroid of returned results is computed, rather than using a single manually specified point. This grounds CBD definitions in observed commercial activity rather than administrative boundaries.
 
-   *Note: Specific weight allocations will be finalized during initial exploratory data analysis to ensure they reflect local variance correctly.*
+3. **Amenity Scoring (Google Maps Places API)**: Amenity access is operationalized as a weighted index of nearby points of interest within a 1 km radius. Six categories are scored, reflecting the typology of urban services most relevant to residential utility:
 
-4. **Spatial Lag Variable**: To capture neighborhood price effects (spatial autocorrelation), we compute the mean actual price of all other properties within a 1 kilometer radius of the target property. This operationalizes Tobler's First Law—that near things are more related than distant things—directly into our non-spatial ML algorithms.
+   | Category | Examples | Weight |
+   |---|---|---|
+   | Education | Schools, universities | 1.0 |
+   | Health | Hospitals, clinics | 1.5 |
+   | Finance | Banks, ATMs | 1.0 |
+   | Grocery | Supermarkets, wet markets | 1.2 |
+   | Transport | Bus stops, terminals, jeepney routes | 1.3 |
+   | Security | Police stations, fire stations | 0.8 |
+
+   For each category, the raw POI count within the radius is multiplied by the category weight and normalized. A composite score is computed as the weighted mean across all six categories. The 1 km radius corresponds approximately to a 10–15 minute walking catchment, consistent with pedestrian accessibility norms used in urban planning literature.
+
+4. **Spatial Lag Variable**: To capture neighborhood price effects, we compute the mean `price_php` of all other properties within a 1 km radius of each target property. Properties with no neighbors within this radius receive a null spatial lag. This variable operationalizes Tobler's First Law of Geography directly into the feature set of non-spatial ML models.
 
 ---
 

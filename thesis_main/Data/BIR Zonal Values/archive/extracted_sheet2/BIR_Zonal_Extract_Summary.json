@@ -1,0 +1,38 @@
+{
+  "RDO No. 80 - Mandaue City, Cebu.xls": {
+    "target_sheet": " Sheet 11 (DO 23-2022)",
+    "mapping": {
+      "barangay_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES",
+      "class_col": null,
+      "value_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES"
+    },
+    "extracted_rows": 1693
+  },
+  "RDO No. 81 - Cebu City North.xlsx": {
+    "target_sheet": "Sheet 6 (DO 054-2023)",
+    "mapping": {
+      "barangay_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES UNDER",
+      "class_col": null,
+      "value_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES UNDER"
+    },
+    "extracted_rows": 2351
+  },
+  "RDO No. 82 - Cebu City, South.xls": {
+    "target_sheet": "Sheet 6 (DO 86-2023)",
+    "mapping": {
+      "barangay_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES UNDER THE",
+      "class_col": null,
+      "value_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES UNDER THE"
+    },
+    "extracted_rows": 3010
+  },
+  "RDO No. 83 -Talisay City, CebuWeb.xls": {
+    "target_sheet": "Sheet 8(060-22)",
+    "mapping": {
+      "barangay_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES",
+      "class_col": null,
+      "value_col": "SUBJECT_ IMPLEMENTATION OF THE REVISED SCHEDULES OF ZONAL VALUES OF REAL PROPERTIES"
+    },
+    "extracted_rows": 3297
+  }
+}

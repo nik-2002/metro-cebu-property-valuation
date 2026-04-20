@@ -1,0 +1,166 @@
+id,lat,lon,amenity_type,amenity
+2179391644,10.2921362,123.87649,clinic,Mambaling Health Center
+4049614390,10.3090599,123.907792,clinic,Cebu Skin Clinic
+4118002090,10.3175148,123.8851477,clinic,Metro Cebu Kidney Dialysis Center
+4122422390,10.2989044,123.8972113,clinic,Fortune Care Clinic
+4302562290,10.3300298,123.9436116,clinic,Dr. Jojo Cortes Clinic
+4302562790,10.3316948,123.9455445,clinic,Marie Stopes
+4340937722,10.2895124,123.8818025,clinic,Alaska Mambaling Barangay Health Center
+4447144789,10.3265841,123.9334485,clinic,HearthHub Clinic
+4741655243,10.329083,123.9315776,clinic,Community clinic
+4888205822,10.4090205,123.9307507,clinic,Kauswagan Community Clinic and Social Center
+4942410126,10.3236716,123.9062045,clinic,Barangay Luz Health Center
+5213581456,10.4076483,123.9981566,clinic,Liloan Doctors Outpatient Clinic
+5385358124,10.2802455,123.9454867,clinic,Babag Health Center
+5507339621,10.3181901,123.9051556,clinic,Chiropractic Clinic
+5519778825,10.2804974,123.8807426,clinic,Kaiser Mecial Clinic
+5519793521,10.3150927,123.8843725,clinic,The One Family Clinic & Laboratory
+5786024214,10.2585217,123.9484176,clinic,Unnamed health
+5846373352,10.2854585,123.8714657,clinic,Dr. Alicia Yuipco- Delfin Clinic
+6357446985,10.2964483,123.8852785,clinic,Cebu Dog and Cat
+6357875073,10.3255992,123.8803815,clinic,Unnamed health
+7015939292,10.2603372,123.8405344,clinic,Serenety Wellness Clinic (Healthcare Center)
+7130431686,10.3162743,123.9647618,clinic,Lapu-Lapu City Social Hygiene Clinic
+7141236985,10.3081492,123.9089799,clinic,Cebu City Social Hygiene Clinic
+7141264185,10.2945321,123.9030522,clinic,"Cebu Sagrada Corazon Health Services, Inc."
+7170935585,10.3148458,123.9005112,clinic,Nuclear Medicine - Perpetual Soccur Hospital
+7173788586,10.3148173,123.9005891,clinic,Cebu Urologic Institute - Perpetual Succour Hospital
+7815546585,10.287983,123.8703078,clinic,Glory Reborn Birthing Center
+7843264785,10.297792,123.9025495,clinic,St Peter - Paul Medical Clinic
+9395626417,10.3166661,123.8883113,clinic,Supercare Cebu
+9905565534,10.3030502,123.9470043,clinic,Tapang Medical Clinic
+10213231718,10.2962618,123.9652602,clinic,OMDC Medical Diagnostic Clinic
+10213231828,10.3970947,123.9792298,clinic,Lex Pharmacy
+10213233631,10.2641776,123.9465648,clinic,Coremed
+10838117336,10.3129263,123.9760213,clinic,Unnamed health
+11017829403,10.2844351,123.9692423,clinic,Expert Care MEdical Clinic
+11555599369,10.2975699,123.8795033,clinic,City Doctors Med Clinic And Pharmacy
+11875317495,10.3009639,123.878107,clinic,Kevlo Skin Clinic
+11879062895,10.3441351,123.9121982,clinic,Int'l Acupuncture and medical Clinic
+12463209401,10.4208965,123.9978174,clinic,PhilHealth
+12463209501,10.4058447,123.9985667,clinic,Dr. Rick
+12876599202,10.3048701,123.8984341,clinic,Alpha diagnostic center
+13508203456,10.3508875,123.9140751,clinic,Skin Doctors
+150954402,10.3193711,123.9071123,clinic,Maxicare Healthcare Corporation - Primary Care Center
+286883114,10.2969858,123.8855364,clinic,Uy Medical Clinic
+344072539,10.3435321,123.9612265,clinic,Cebu Institute of Medicine Community Medico-Social Services Primary Care & Lying-in Center
+374383815,10.3782245,123.9626693,clinic,LH Prime - Medical Clinic
+425699296,10.3105314,123.8967311,clinic,SuperCare Medical Services Inc. - Cebu
+425874494,10.3114263,123.893554,clinic,Unnamed health
+458019598,10.3320249,123.9560412,clinic,Barangay Umapad Health Center
+459318994,10.3249161,123.9418969,clinic,Mandaue City Health Department
+489766611,10.2668114,123.9459016,clinic,Barangay Pilipog Health Station
+895442392,10.2970422,123.8944538,clinic,Nationwide Health Systems
+899084678,10.2892108,123.9675915,clinic,Hi-Precision Diagnostics
+1117008132,10.2601663,123.983024,clinic,Unnamed health
+1147544412,10.3097759,123.8895684,clinic,Chong Hua Medical Mall
+1257380167,10.2806014,123.8561667,clinic,Montejo Medical Clinic
+1290644318,10.5691528,123.7146928,clinic,Alan L. Adlawan Infirmary Clinic
+1382711968,10.5069532,123.7157404,clinic,Dumdum Medical Clinic
+1443596510,10.331567,123.8943086,clinic,Sugbo Bagong Urgent Care and Ambulatory Services Center
+380438493,10.2942293,123.9056663,doctors,Friendly Care Clinic
+490429598,10.3244929,123.9347944,doctors,MetroCebu Oral Rehabilatation Center
+1511434752,10.2615866,123.8371629,doctors,Simbajon Medical Clinic
+1596062988,10.3717694,123.9543698,doctors,Leyson Family Clinic
+2105137357,10.3103052,123.8909237,doctors,Feminine Fertility Center
+2141052244,10.337953,123.9430759,doctors,Affliated Doctors Clinic
+2141326866,10.3378398,123.942846,doctors,Unnamed health
+2943053849,10.3763396,123.9578723,doctors,Dr. Veronica N. Alivio's Lying-in Clinic
+4047131089,10.2632973,123.8412167,doctors,Unnamed health
+4263673189,10.2440198,123.814561,doctors,Hilot house Sammy
+4340940589,10.2792119,123.8556026,doctors,Pardo Health Center
+4441554193,10.3075643,123.8962955,doctors,Dr. Wilfredo Ypil Clinic
+4695663293,10.2926017,123.9662013,doctors,LH Prime Medical Clinic
+5539823801,10.2534554,123.8608827,doctors,The Doctors Clinic
+6694461217,10.2925307,123.9662301,doctors,Villamor Eye Clinic
+7045928185,10.3149391,123.9022728,doctors,Unnamed health
+7123686385,10.5217494,124.0290785,doctors,Unnamed health
+7128883388,10.3082054,123.8920051,doctors,Unnamed health
+7169131894,10.3661441,123.9543666,doctors,Unnamed health
+7305118791,10.5196202,124.0272676,doctors,Danao City Social Hygiene Clinic
+7305118792,10.3249634,123.9418169,doctors,Mandaue City Social Hygiene Clinic
+7305118793,10.2535519,123.8292123,doctors,Talisay City Social Hygiene Clinic
+7859776785,10.2523889,123.9497726,doctors,Cordova Primary Health Care Facility
+8345877680,10.2945733,123.9030564,doctors,Unnamed health
+8345877692,10.5109015,123.7166092,doctors,Unnamed health
+8346310210,10.3223001,123.9317009,doctors,Unnamed health
+8346330054,10.3192252,123.8988881,doctors,Unnamed health
+8347739282,10.3081782,123.9090013,doctors,Unnamed health
+8347739291,10.3112288,123.8931414,doctors,Hi-Precision Diagnostics
+8695736464,10.3000885,123.9014509,doctors,Alcantara Children's Medical Clinic
+10213231832,10.2713651,123.9459514,doctors,Unnamed health
+11011294613,10.2966389,123.9647302,doctors,Skindoctors
+12468346601,10.3268054,123.9178073,doctors,Toledomed Cebu
+12743913388,10.3511504,123.9239637,doctors,Unnamed health
+13030791885,10.2957144,123.8730604,doctors,Punta Princesa Health Center
+13040661450,10.2991741,123.9031595,doctors,Pari-an Health Center
+13361420202,10.324343,123.9095448,doctors,Dr RMU
+226499165,10.2978143,123.8928188,doctors,Cebu City Medical Center Pediatrics
+541769652,10.5693447,123.714837,doctors,Asturias Rural Health Unit
+638127839,10.3764047,123.9578098,doctors,Consolacion Primary Health Facility
+638128283,10.4534187,124.0120543,doctors,Compostela Rural Health Unit
+665244563,10.5054806,123.7135395,doctors,Balamban Rural Health Unit Ⅰ
+854148464,10.2438933,123.7986669,doctors,Minglanilla Rural Health Unit
+1163516117,10.2909968,123.9671261,doctors,Arcibal Medical Clinic
+1362729422,10.2457008,123.7954767,doctors,Minglanilla Rural Health Unit Ⅰ
+1368626056,10.3125062,123.7547643,doctors,Camp 8 Health Center
+1368629884,10.2908808,123.8975009,doctors,Ermita Health Center
+1382710980,10.5056198,123.7134154,doctors,Unnamed health
+1419070928,10.2592382,123.8278179,doctors,Talisay City Health Unit Ⅲ
+1693132815,10.3406648,123.9124513,dentist,Prodent Advanced Oral Health
+2841366672,10.3125445,123.898463,dentist,Dental Innovations
+2841688305,10.317229,123.8998248,dentist,Dr. Oliver Lim Seno Zugbu Aesthetic Dental Clinic
+2841691202,10.3171313,123.8995163,dentist,Jueco Dental Clinic
+2850364640,10.310538,123.9034854,dentist,Mint Dental Clinic
+3761347218,10.3180095,123.9025148,dentist,Affinity Dental
+3796420959,10.3012078,123.9623393,dentist,QPM Dental Care Clinic
+4322706190,10.2947276,123.9021561,dentist,My Dentist
+4326423422,10.3105528,123.8940194,dentist,Dean Cesa Dental Clinic
+4540577389,10.3134291,123.8963731,dentist,Cebú Dental Care Center
+4604950394,10.2823093,123.8800319,dentist,Cebu Smiles Dentistry
+4746275223,10.2560042,123.8603055,dentist,Dr. Marchie C.Mabala Dental Clinic
+4746755625,10.2669388,123.8426767,dentist,Unnamed health
+4854318521,10.3054958,123.8943769,dentist,Dr. Jose Niñal II General Dentistry & Orthodontics
+4947883821,10.3105581,123.8895871,dentist,"Lynnette Chu, D.M.D."
+5267242729,10.3500518,123.9135591,dentist,All Smiles Dental Clinic
+5594348125,10.3127927,123.8954943,dentist,Blinky Dental Clinic
+5907483588,10.3068748,124.0099453,dentist,Newtown World Dental clinic
+6226278336,10.2897583,123.9676858,dentist,Du Baguio
+7509644085,10.2977035,123.8827658,dentist,Dr. Blinky Dental Clinic
+9467920619,10.2899818,123.8586586,dentist,April Carmelle Dy
+9521652408,10.3278629,123.9290453,dentist,Unnamed health
+9884254617,10.3820128,123.9209679,dentist,KD dental clinic
+10208475973,10.3163179,123.8929215,dentist,Sabandal Dental Clinic
+10213711617,10.4932004,123.7135581,dentist,Unnamed health
+10731981457,10.2974669,123.8781933,dentist,Rhed Owl Dental Clinic
+10885842556,10.2574357,123.8239904,dentist,Pardillo Dental Clinic
+11011294612,10.2968144,123.9647862,dentist,Unnamed health
+11011294616,10.2966793,123.9652031,dentist,Dental Cube
+11413766269,10.3172186,123.8999522,dentist,Cebu Dental Implants - Zugbu Aesthetic Dental Clinic Services Philippines
+11468683669,10.4076276,123.9978073,dentist,Aunty Tooth
+11468683674,10.4015303,123.9998449,dentist,Vista Medical & Dental Clinic
+11520071318,10.2983536,123.9638688,dentist,Adental
+11759887246,10.3234018,123.9056316,dentist,msDental clinic
+11777649506,10.3734952,123.954739,dentist,Gale's Dental Care Clinic
+11843045944,10.2988053,123.8790733,dentist,Daclan Dental Clinic
+11878641201,10.3494338,123.9131972,dentist,J-Ann Dental Care
+12393350798,10.326651,123.933355,dentist,Edem Dental Clinic
+12464404101,10.3302766,123.9484932,dentist,Nlrthside Dental Clinic
+12468906502,10.3264446,123.9779311,dentist,Mamguan Dentist
+12468909901,10.3243406,123.9741759,dentist,Quality Dental
+12473487391,10.3265542,123.9178848,dentist,China Denetal Clinic
+12517709329,10.3391879,123.9361909,dentist,Joghin's Dental Clinic
+12743913369,10.3503598,123.9245675,dentist,Sotto Arcilla
+12764346379,10.3107379,123.9494796,dentist,Glare Dental Clinic
+12767859999,10.3121585,123.9519354,dentist,Kilaton Dental Clinic
+12917800531,10.3784006,123.9632647,dentist,Prestige Dental Clinic
+12963851501,10.3049813,123.89885,dentist,Unnamed health
+13064781030,10.3288312,123.9073392,dentist,Smile Specialist Dental Care
+13361420213,10.3243219,123.9095857,dentist,Metro Smile
+13508183726,10.3507632,123.913881,dentist,Pristine Dental Care
+13568840755,10.3377518,123.9297858,dentist,Dr. Cortes Dental
+13611000935,10.3390326,123.9269963,dentist,Unnamed health
+13619404171,10.3435061,123.9140975,dentist,Dr. Danjun Bercede Dental Clinic
+13619503667,10.3453518,123.9128396,dentist,Dione Rey L Tan Dental Clinic
+13629174361,10.3491768,123.9134528,dentist,Ruflo Dental Clinic
+607906401,10.315954,123.9706846,dentist,Dental Office
