@@ -1,0 +1,33 @@
+SHAP Block Aggregation — Random Forest (deployed model)
+============================================================
+Feature block                    Sum |SHAP|   % of total
+------------------------------------------------------------
+MCRAI (9 categories)                 0.1317         3.0%
+CBD distances (8 nodes)              0.9382        21.4%
+Structural & other                   3.3211        75.6%
+TOTAL                                4.3909       100.0%
+
+Individual MCRAI rankings within full feature list:
+------------------------------------------------------------
+  Feature                         Mean |SHAP|   Overall rank
+  mcrai_education                    0.010778             27
+  mcrai_finance                      0.006473             33
+  mcrai_grocery                      0.016779             22
+  mcrai_health                       0.004628             34
+  mcrai_security                     0.007830             32
+  mcrai_transport                    0.017588             21
+  mcrai_tourism                      0.048251             17
+  mcrai_recreation                   0.008489             31
+  mcrai_retail_density               0.010852             26
+
+Individual CBD distance rankings within full feature list:
+------------------------------------------------------------
+  Feature                         Mean |SHAP|   Overall rank
+  dist_cebu_business_park_m          0.109967             10
+  dist_mandaue_cbd_m                 0.013933             24
+  dist_mactan_cbd_m                  0.086324             12
+  dist_srp_m                         0.025988             19
+  dist_talisay_tabunok_m             0.056631             15
+  dist_naga_city_m                   0.072741             13
+  dist_consolacion_m                 0.481639              4
+  dist_airport_m                     0.090956             11

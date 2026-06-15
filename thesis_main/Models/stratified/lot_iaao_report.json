@@ -1,0 +1,39 @@
+{
+  "stratum": "Vacant Lot",
+  "n_rows": 255,
+  "n_coordinate_groups": 203,
+  "filter": "residential scope 80-2000 sqm AND price_per_sqm >= 0.5x BIR zonal (Decision 41)",
+  "target": "log(price_per_sqm)",
+  "evaluation": "GroupKFold(5) pooled out-of-fold, leak-free (groups=coordinate cluster)",
+  "deployed_model": "RandomForest",
+  "best_params": {
+    "n_estimators": 400,
+    "max_features": 1.0,
+    "min_samples_leaf": 1,
+    "max_depth": null
+  },
+  "metrics_group_cv": {
+    "n": 255,
+    "MdAPE": 25.552099005846596,
+    "MAPE": 37.76474682418634,
+    "COD": 36.87707959896821,
+    "PRD": 1.2772278723307269,
+    "PE10": 24.313725490196077,
+    "PE20": 41.568627450980394,
+    "median_ratio": 1.0221287927109126
+  },
+  "iaao_benchmark": {
+    "COD_vacant_land_max": 25.0,
+    "COD_residential_improved": [
+      5.0,
+      15.0
+    ],
+    "PRD_range": [
+      0.98,
+      1.03
+    ],
+    "COD_pass": false,
+    "PRD_pass": false,
+    "note": "IAAO COD/PRD are in-sample assessment-roll standards; values here are stricter out-of-sample CV estimates on n=255."
+  }
+}

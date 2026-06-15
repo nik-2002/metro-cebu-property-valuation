@@ -1,5 +1,7 @@
 # Repo Status — 2026-04-20
 
+> Historical snapshot only. This file reflects the repo state on 2026-04-20 and is superseded by `reference/PROJECT_SNAPSHOT.md`, `reference/modeling_decisions.md`, and `Manuscript/task.md` for the current ABT/modeling state.
+
 ## Confirmed current state
 - Canonical ABT: `thesis_main/Data/processed/abt_clean.csv`
 - Current ABT shape: 1,110 rows x 50 columns

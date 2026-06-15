@@ -1,0 +1,177 @@
+[
+  {
+    "stratum":"Houses",
+    "property_id":2622,
+    "city":"Minglanilla",
+    "price_per_sqm":33862.4338624339,
+    "cooks_d":0.0871831212
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3161,
+    "city":"Cebu City",
+    "price_per_sqm":137500.0,
+    "cooks_d":0.0480158914
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3118,
+    "city":"Cebu City",
+    "price_per_sqm":20657.2769953052,
+    "cooks_d":0.0425888643
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3873,
+    "city":"Cebu City",
+    "price_per_sqm":70000.0,
+    "cooks_d":0.0363755559
+  },
+  {
+    "stratum":"Houses",
+    "property_id":471,
+    "city":"Cebu City",
+    "price_per_sqm":137931.0344827586,
+    "cooks_d":0.0208619344
+  },
+  {
+    "stratum":"Houses",
+    "property_id":695,
+    "city":"Mandaue City",
+    "price_per_sqm":53844.0,
+    "cooks_d":0.0207008012
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3401,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":17857.1428571429,
+    "cooks_d":0.0202087731
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3436,
+    "city":"Cebu City",
+    "price_per_sqm":42857.1428571429,
+    "cooks_d":0.0193651792
+  },
+  {
+    "stratum":"Houses",
+    "property_id":816,
+    "city":"Mandaue City",
+    "price_per_sqm":357142.8571428572,
+    "cooks_d":0.0189956591
+  },
+  {
+    "stratum":"Houses",
+    "property_id":742,
+    "city":"Cebu City",
+    "price_per_sqm":94736.8421052632,
+    "cooks_d":0.0187588599
+  },
+  {
+    "stratum":"Houses",
+    "property_id":460,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":91556.4598168871,
+    "cooks_d":0.0182750256
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3776,
+    "city":"Mandaue City",
+    "price_per_sqm":30526.3157894737,
+    "cooks_d":0.0169007752
+  },
+  {
+    "stratum":"Houses",
+    "property_id":410,
+    "city":"Mandaue City",
+    "price_per_sqm":104240.0,
+    "cooks_d":0.0164915902
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3872,
+    "city":"Cebu City",
+    "price_per_sqm":52500.0,
+    "cooks_d":0.0161868289
+  },
+  {
+    "stratum":"Houses",
+    "property_id":2995,
+    "city":"Cebu City",
+    "price_per_sqm":62887.5,
+    "cooks_d":0.0159848991
+  },
+  {
+    "stratum":"Houses",
+    "property_id":1570,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":10000.0,
+    "cooks_d":0.0148540948
+  },
+  {
+    "stratum":"Houses",
+    "property_id":607,
+    "city":"Cebu City",
+    "price_per_sqm":340000.0,
+    "cooks_d":0.0146896746
+  },
+  {
+    "stratum":"Houses",
+    "property_id":2497,
+    "city":"Talisay City",
+    "price_per_sqm":22535.2112676056,
+    "cooks_d":0.0137932436
+  },
+  {
+    "stratum":"Houses",
+    "property_id":747,
+    "city":"Mandaue City",
+    "price_per_sqm":301724.1379310345,
+    "cooks_d":0.0131254081
+  },
+  {
+    "stratum":"Houses",
+    "property_id":4032,
+    "city":"Consolacion",
+    "price_per_sqm":215384.6153846153,
+    "cooks_d":0.0130497422
+  },
+  {
+    "stratum":"Houses",
+    "property_id":782,
+    "city":"Mandaue City",
+    "price_per_sqm":292307.6923076923,
+    "cooks_d":0.0125569997
+  },
+  {
+    "stratum":"Houses",
+    "property_id":3108,
+    "city":"Cebu City",
+    "price_per_sqm":13018.0082447386,
+    "cooks_d":0.010455399
+  },
+  {
+    "stratum":"Houses",
+    "property_id":178,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":328566.5960591133,
+    "cooks_d":0.010451679
+  },
+  {
+    "stratum":"Houses",
+    "property_id":1599,
+    "city":"Cebu City",
+    "price_per_sqm":116666.6666666667,
+    "cooks_d":0.0099306498
+  },
+  {
+    "stratum":"Houses",
+    "property_id":1241,
+    "city":"Talisay City",
+    "price_per_sqm":125000.0,
+    "cooks_d":0.0098469785
+  }
+]

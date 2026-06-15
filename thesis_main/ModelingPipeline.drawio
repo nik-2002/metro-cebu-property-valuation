@@ -1,0 +1,169 @@
+<mxfile host="65bd71144e">
+    <diagram name="Modeling Pipeline" id="modeling_pipeline_v1">
+        <mxGraphModel dx="1644" dy="972" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1320" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Modeling Pipeline: Metro Cebu Residential Property Valuation" style="text;html=1;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontColor=#1a1a2e;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="12" width="1300" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="Data Ingestion  →  ABT Build  →  Pre-modeling Prep  →  Model Fitting  →  Evaluation &amp;amp; SHAP  →  Deployment" style="text;html=1;fontSize=12;fontStyle=2;align=center;verticalAlign=middle;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="44" width="1000" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_hdr" value="STAGE 1  ·  DATA SOURCES" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#16213e;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="74" width="1300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_lamudi" value="&lt;b&gt;Online Listings&lt;/b&gt;&lt;br&gt;&lt;font&gt;open_market tier&lt;br&gt;Lamudi (web-scraped)&lt;br&gt;~1,619 records&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="96" width="290" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_ropa" value="&lt;b&gt;Bank Foreclosures&lt;/b&gt;&lt;br&gt;&lt;font&gt;bank_ropa tier&lt;br&gt;BDO, BPI, Metrobank,&lt;br&gt;Landbank, BoC, China Bank&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="96" width="290" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_floor" value="&lt;b&gt;Floor Prices&lt;/b&gt;&lt;br&gt;&lt;font&gt;floor_price tier&lt;br&gt;BDO / Pag-IBIG&lt;br&gt;Assessed minimums&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="96" width="290" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1_bir" value="&lt;b&gt;BIR Zonal Values&lt;/b&gt;&lt;br&gt;&lt;font&gt;Administrative benchmark&lt;br&gt;Per barangay, per LGU&lt;br&gt;(joined into ABT)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="96" width="290" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_hdr" value="STAGE 2  ·  CLEANING &amp;amp; FEATURE CONSTRUCTION" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#16213e;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="200" width="1300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_clean" value="&lt;b&gt;Currency &amp;amp; Price Parsing&lt;/b&gt;&lt;br&gt;&lt;font&gt;Standardize PHP price strings&lt;br&gt;Compute price_per_sqm&lt;br&gt;Outlier flagging (p01/p99)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="222" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_taxonomy" value="&lt;b&gt;Property Type Taxonomy&lt;/b&gt;&lt;br&gt;&lt;font&gt;6 residential types (Decision 22)&lt;br&gt;6-LGU spatial filter:&lt;br&gt;Cebu City · Mandaue · Lapu-Lapu&lt;br&gt;Talisay · Minglanilla · Consolacion&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="222" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_impute" value="&lt;b&gt;Imputation + Flags&lt;/b&gt;&lt;br&gt;&lt;font&gt;area_sqm = floor → lot fallback (D1)&lt;br&gt;bedrooms / bathrooms grouped median (D2)&lt;br&gt;floor_area grouped median (D3)&lt;br&gt;is_vacant_lot · is_mactan_island flags&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="222" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2_segment" value="&lt;b&gt;market_segment Label&lt;/b&gt;&lt;br&gt;&lt;font&gt;Decision 4: 3-tier categorical&lt;br&gt;open_market · bank_ropa · floor_price&lt;br&gt;Replaces ad-hoc price_type labels&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="222" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_hdr" value="STAGE 3  ·  GIS AUGMENTATION  ⭐" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#2d7d46;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="348" width="1300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_geocode" value="&lt;b&gt;Geocoding&lt;/b&gt;&lt;br&gt;&lt;font&gt;Google Maps Places API&lt;br&gt;Address → lat / lon&lt;br&gt;Skip already-geocoded rows&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=1;fontSize=12;arcSize=20;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="370" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_cbd" value="&lt;b&gt;Network Distances&lt;/b&gt;&lt;br&gt;&lt;font&gt;osmnx Dijkstra (haversine fallback)&lt;br&gt;Distances to 8 CBD nodes:&lt;br&gt;CBP · Mandaue · Mactan · SRP&lt;br&gt;Talisay · Consolacion · Naga · Airport&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=1;fontSize=12;arcSize=20;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="370" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_mcrai" value="&lt;b&gt;MCRAI Hansen Scores&lt;/b&gt;&lt;br&gt;&lt;font&gt;9 categories (β = 2.0):&lt;br&gt;education · health · finance · grocery&lt;br&gt;transport · recreation · retail · security · tourism&lt;br&gt;Category-specific radii (500 m – 3 km)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=1;fontSize=12;arcSize=20;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="370" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3_lag" value="&lt;b&gt;Spatial Lag + BIR Join&lt;/b&gt;&lt;br&gt;&lt;font&gt;spatial_lag_price = mean of&lt;br&gt;price_per_sqm within 1 km&lt;br&gt;BIR zonal value joined per barangay&lt;br&gt;valuation_gap diagnostic computed&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=1;fontSize=12;arcSize=20;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="370" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="abt" value="&lt;b&gt;Analytics Base Table (ABT)&lt;/b&gt;&lt;br&gt;&lt;font&gt;abt_clean.csv  ·  2,047 rows × 45 columns  ·  6 LGUs&lt;br&gt;Segments: open_market (1,619) · bank_ropa · floor_price&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f4ff;strokeColor=#0055aa;shadow=1;fontSize=12;arcSize=10;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="496" width="840" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_hdr" value="STAGE 4  ·  PRE-MODELING PREPARATION" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#16213e;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="576" width="1300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_filter" value="&lt;b&gt;Modeling Filter (Decision 17)&lt;/b&gt;&lt;br&gt;&lt;font&gt;Keep market_segment = open_market&lt;br&gt;Drop 3 implausible price rows (D10)&lt;br&gt;Drop null price_per_sqm&lt;br&gt;Drop null spatial_lag_price&lt;br&gt;&lt;b&gt;→ 1,491 modeling-ready rows&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="598" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_encode" value="&lt;b&gt;Encoding &amp;amp; Imputation&lt;/b&gt;&lt;br&gt;&lt;font&gt;One-hot encode: city, property_type&lt;br&gt;(drop_first=True)&lt;br&gt;Median imputation for residual nulls&lt;br&gt;Log-transform: log_floor_area_sqm&lt;br&gt;(log-linear hedonic spec)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="598" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_matrices" value="&lt;b&gt;Two Feature Matrices&lt;/b&gt;&lt;br&gt;&lt;font&gt;&lt;b&gt;X_full&lt;/b&gt; — all features (RF, XGBoost)&lt;br&gt;&lt;b&gt;X_ols&lt;/b&gt; — drops collinear vars:&lt;br&gt;dist_talisay, is_mactan_island,&lt;br&gt;bir_zonal_rr_log, lat / lon, raw areas&lt;br&gt;Target: y = log_price&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="598" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s4_split" value="&lt;b&gt;Train / Test Split&lt;/b&gt;&lt;br&gt;&lt;font&gt;sklearn train_test_split&lt;br&gt;test_size = 0.20&lt;br&gt;random_state = 42&lt;br&gt;stratify = market_segment&lt;br&gt;Train ≈ 1,193  ·  Test ≈ 298&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="598" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s5_hdr" value="STAGE 5  ·  MODEL FITTING" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#16213e;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="744" width="1300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s5_ols" value="&lt;b&gt;Hedonic OLS&lt;/b&gt;&lt;br&gt;&lt;font&gt;statsmodels OLS  ·  X_ols&lt;br&gt;Log-log specification&lt;br&gt;Baseline comparator&lt;br&gt;&lt;b&gt;R²(test) = 0.394&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="766" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s5_rf" value="&lt;b&gt;Random Forest  ⭐ DEPLOYED&lt;/b&gt;&lt;br&gt;&lt;font&gt;sklearn RandomForestRegressor&lt;br&gt;n_estimators = 300  ·  X_full&lt;br&gt;random_state = 42&lt;br&gt;&lt;b&gt;R² = 0.807  ·  MAPE = 59.28%&lt;/b&gt;&lt;br&gt;&lt;b&gt;MAE = 4.95M  ·  RMSE = 27.45M&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#2d7d46;shadow=1;fontSize=12;arcSize=20;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="766" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s5_xgb" value="&lt;b&gt;XGBoost&lt;/b&gt;&lt;br&gt;&lt;font&gt;xgb.XGBRegressor  ·  X_full&lt;br&gt;n_estimators = 300&lt;br&gt;learning_rate = 0.05  ·  max_depth = 6&lt;br&gt;Comparator&lt;br&gt;&lt;b&gt;R² = 0.492&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="766" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s5_tune" value="&lt;b&gt;Hyperparameter Tuning&lt;/b&gt;&lt;br&gt;&lt;font&gt;tune_models.py&lt;br&gt;RandomizedSearchCV (30 iter, 5-fold)&lt;br&gt;RF + XGBoost grids&lt;br&gt;Decisions 21, 24, 25:&lt;br&gt;&lt;i&gt;tuned variants did not beat&lt;br&gt;deployed RF baseline&lt;/i&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=12;arcSize=20;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="766" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="s6_hdr" value="STAGE 6  ·  EVALUATION &amp;amp; EXPLAINABILITY" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#16213e;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="912" width="1300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s6_metrics" value="&lt;b&gt;Performance Metrics&lt;/b&gt;&lt;br&gt;&lt;font&gt;MAE · MAPE · RMSE · R²&lt;br&gt;Total price (back-transformed)&lt;br&gt;Per-sqm (PHP/m²)&lt;br&gt;Actual-vs-Predicted scatter&lt;br&gt;Out-of-sample test set&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#b85450;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="934" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="s6_shap" value="&lt;b&gt;SHAP Explainability&lt;/b&gt;&lt;br&gt;&lt;font&gt;TreeExplainer (RF + XGBoost)&lt;br&gt;Beeswarm summary (top 20 features)&lt;br&gt;Local waterfall (per property)&lt;br&gt;mean |SHAP| feature ranking&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#b85450;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="934" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="s6_block" value="&lt;b&gt;SHAP Block Aggregation&lt;/b&gt;&lt;br&gt;&lt;font&gt;Sum |SHAP| by feature block (RF):&lt;br&gt;MCRAI (9 categories)&lt;br&gt;CBD distances (8 nodes)&lt;br&gt;Structural &amp;amp; other&lt;br&gt;→ shap_block_summary_rf.txt&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#b85450;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="934" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="s6_mcrai_w" value="&lt;b&gt;MCRAI Stage-2 Weights&lt;/b&gt;&lt;br&gt;&lt;font&gt;Decision 20 — positive-only OLS&lt;br&gt;education 0.401  ·  grocery 0.310&lt;br&gt;recreation 0.199  ·  transport 0.102&lt;br&gt;Excluded: security, tourism, retail&lt;br&gt;(spatial sorting artefacts)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#b85450;shadow=1;fontSize=12;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="934" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="s7_hdr" value="STAGE 7  ·  DEPLOYMENT  ⭐" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#2d7d46;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="1070" width="1300" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s7_streamlit" value="&lt;b&gt;Streamlit Web App&lt;/b&gt;&lt;br&gt;&lt;font&gt;thesis_main/app/&lt;br&gt;Property Predictor (price_per_sqm + SHAP waterfall)&lt;br&gt;Predicted Price Surface (open_market)&lt;br&gt;Deployed model: rf_model.pkl&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=1;fontSize=12;arcSize=15;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="1092" width="450" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="s7_qgis" value="&lt;b&gt;QGIS Interactive Map&lt;/b&gt;&lt;br&gt;&lt;font&gt;Predicted price heatmap (open_market)&lt;br&gt;CBD nodes + POI coverage layers&lt;br&gt;Valuation gap (price − BIR zonal)&lt;br&gt;Broker decision support&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=1;fontSize=12;arcSize=15;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="1092" width="450" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ivs" value="&lt;b&gt;Human-in-the-Loop Validation&lt;/b&gt;  ·  Broker review · Outlier flagging · IVS Open Market Value compliance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;fontSize=12;arcSize=10;strokeWidth=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="1196" width="840" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a_s1_s2" value="" style="endArrow=block;html=1;strokeColor=#16213e;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="178" as="sourcePoint"/>
+                        <mxPoint x="700" y="218" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a_s2_s3" value="" style="endArrow=block;html=1;strokeColor=#16213e;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" target="s3_hdr">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="326" as="sourcePoint"/>
+                        <mxPoint x="700" y="366" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a_s3_abt" value="" style="endArrow=block;html=1;strokeColor=#16213e;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="474" as="sourcePoint"/>
+                        <mxPoint x="700" y="496" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a_abt_s4" value="" style="endArrow=block;html=1;strokeColor=#16213e;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="554" as="sourcePoint"/>
+                        <mxPoint x="700" y="584" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a_s4_s5" value="" style="endArrow=block;html=1;strokeColor=#16213e;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" target="s5_hdr">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="722" as="sourcePoint"/>
+                        <mxPoint x="698" y="748" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a_s5_s6" value="" style="endArrow=block;html=1;strokeColor=#16213e;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" target="s6_hdr">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="890" as="sourcePoint"/>
+                        <mxPoint x="700" y="930" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a_s6_s7" value="" style="endArrow=block;html=1;strokeColor=#2d7d46;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="1048" as="sourcePoint"/>
+                        <mxPoint x="700" y="1064" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a_s7_ivs" value="" style="endArrow=block;html=1;strokeColor=#b85450;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="1176" as="sourcePoint"/>
+                        <mxPoint x="700" y="1196" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

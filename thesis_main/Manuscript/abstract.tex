@@ -1,0 +1,9 @@
+\clearpage
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+This study developed a residential property valuation framework for Metro Cebu using machine learning and GIS-derived spatial features. The work addressed the gap between administrative benchmarks, lender-driven appraisals, and market-facing price signals by assembling a hybrid dataset of residential properties from institutional acquired assets, foreclosure listings, and open-market online listings. The study focused on six local government units in Metro Cebu: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion.
+
+The methodology combined structural, locational, administrative, and geospatial variables. Property records were geocoded, matched with barangay-level BIR zonal values, and enriched with accessibility and neighborhood-context features, including proximity to major economic nodes, amenity access, and spatial lag effects. Three predictive approaches were compared: hedonic regression, Random Forest, and XGBoost. On the current post-cleanup open-market sample, the baseline Random Forest was retained as the deployed model because it delivered the strongest overall held-out performance. Model outputs were interpreted through SHAP-based explainability and prepared for deployment through a QGIS map and a Streamlit-based decision-support application.
+
+The manuscript positions the study as a predictive and prescriptive tool for residential valuation practice in Metro Cebu. Its contribution lies in combining property-level machine learning, spatial feature engineering, and transparent explanation into a locally grounded decision-support framework that is more responsive to urban change than static administrative benchmarks alone.

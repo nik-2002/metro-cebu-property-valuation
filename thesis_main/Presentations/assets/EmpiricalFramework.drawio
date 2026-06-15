@@ -1,0 +1,152 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Empirical Framework" id="framework_v3">
+    <mxGraphModel dx="1381" dy="980" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontColor=#1a1a2e;shadow=0;" value="Empirical Framework: Data-Driven Residential Property Valuation for Metro Cebu" vertex="1">
+          <mxGeometry height="36" width="708" x="346" y="12" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;fontSize=11;fontStyle=2;align=center;verticalAlign=middle;fontColor=#666666;shadow=0;" value="Predictive Modeling  ·  Geospatial Feature Engineering  ·  Prescriptive GIS Visualization" vertex="1">
+          <mxGeometry height="18" width="466" x="467" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_hdr" parent="1" style="text;html=1;fontSize=12;fontStyle=1;align=center;fontColor=#16213e;shadow=0;verticalAlign=middle;" value="DATA SOURCES" vertex="1">
+          <mxGeometry height="20" width="122" x="638" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_lamudi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;Online Listings&lt;/b&gt;&lt;br&gt;&lt;font&gt;open_market tier&lt;br&gt;Lamudi (Web-scraped)&lt;br&gt;~1,619 records&lt;/font&gt;" vertex="1">
+          <mxGeometry height="78" width="210" x="120" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_ropa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;Bank Foreclosures&lt;/b&gt;&lt;br&gt;&lt;font&gt;bank_ropa tier&lt;br&gt;BDO, BPI, Metrobank,&lt;br&gt;Landbank + others&lt;/font&gt;" vertex="1">
+          <mxGeometry height="78" width="210" x="345" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_floor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;Floor Prices&lt;/b&gt;&lt;br&gt;&lt;font&gt;floor_price tier&lt;br&gt;BDO / Pag-IBIG&lt;br&gt;Assessed minimums&lt;/font&gt;" vertex="1">
+          <mxGeometry height="78" width="210" x="570" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_bir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;BIR Zonal Values&lt;/b&gt;&lt;br&gt;&lt;font&gt;Administrative Benchmark&lt;br&gt;Per barangay, per LGU&lt;br&gt;(Regulatory floor)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="78" width="210" x="795" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_gis" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=0;fontSize=11;arcSize=20;strokeWidth=2;" value="&lt;b&gt;GIS Data Sources  ⭐&lt;/b&gt;&lt;br&gt;&lt;font&gt;Google Maps Places API&lt;br&gt;(POI + Geocoding)&lt;br&gt;OpenStreetMap (osmnx)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="78" width="220" x="1020" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pipeline_arrow" parent="1" style="shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;fillColor=#e0e0e0;strokeColor=#888888;shadow=0;" value="" vertex="1">
+          <mxGeometry height="42" width="1182" x="109" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="pipe_label" parent="1" style="text;html=1;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;fontColor=#333333;shadow=0;" value="DATA PIPELINE:  Ingest  →  Clean &amp;amp; Standardize  →  Geocode (Google Maps API)  →  GIS Augment (CBD Distances · MCRAI)  →  ABT Build" vertex="1">
+          <mxGeometry height="24" width="782" x="309" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="abt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f4ff;strokeColor=#0055aa;shadow=0;fontSize=12;arcSize=10;strokeWidth=2;" value="&lt;b&gt;Analytics Base Table (ABT)&lt;/b&gt;&lt;br&gt;&lt;font&gt;2,047 rows  ·  6 LGUs: Cebu City · Mandaue City · Lapu-Lapu City · Talisay City · Minglanilla · Consolacion&lt;br&gt;Segments: open_market (1,619) · bank_ropa · floor_price   |   Modeling-ready: 1,491 open_market rows&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="572" x="414" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="iv_hdr" parent="1" style="text;html=1;fontSize=13;fontStyle=1;align=center;fontColor=#16213e;shadow=0;" value="VALUE DRIVERS  (Independent Variables  →  Target: price_per_sqm, PHP/m²)" vertex="1">
+          <mxGeometry height="20" width="1300" x="50" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="iv_struct" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;Structural&lt;/b&gt;&lt;br&gt;&lt;font&gt;Lot Area (m²)&lt;br&gt;Floor Area (m²)&lt;br&gt;Bedrooms, Bathrooms&lt;br&gt;Parking&lt;br&gt;Property Type (6 types)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="284" y="302" as="geometry" />
+        </mxCell>
+        <mxCell id="iv_local" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Locational&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font&gt;City / LGU (6)&lt;br&gt;Barangay&lt;br&gt;Latitude / Longitude&lt;br&gt;is_mactan_island flag&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="488" y="317" as="geometry" />
+        </mxCell>
+        <mxCell id="iv_geo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=0;fontSize=11;arcSize=20;strokeWidth=2;" value="&lt;b&gt;Geospatial (GIS)  ⭐&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;&lt;font&gt;Network Distances to 8 CBDs (osmnx):&lt;br&gt;CBP · Mandaue · Mactan · SRP · Talisay&lt;br&gt;Consolacion · Naga City · Airport&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font&gt;&lt;font style=&quot;&quot;&gt;MCRAI Score — 9 categories:&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;education · health · finance · grocery&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;transport · recreation · retail · security · tourism&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Spatial Lag (1 km neighbor mean)&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="163" width="217" x="946" y="291" as="geometry" />
+        </mxCell>
+        <mxCell id="iv_admin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=0;fontSize=11;arcSize=20;" value="&lt;font&gt;&lt;b style=&quot;&quot;&gt;Admin / Macro&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;BIR Zonal Value&lt;br&gt;(Regulatory Benchmark)&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="697" y="317" as="geometry" />
+        </mxCell>
+        <mxCell id="merge" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#16213e;shadow=0;" value="" vertex="1">
+          <mxGeometry height="17" width="18" x="691" y="429" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_m" edge="1" parent="1" source="iv_struct" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;strokeWidth=1.5;shadow=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="merge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_l_m" edge="1" parent="1" source="iv_local" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;strokeWidth=1.5;shadow=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="merge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_g_m" edge="1" parent="1" source="iv_geo" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2d7d46;strokeWidth=2;shadow=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="merge">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="744" y="431" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_a_m" edge="1" parent="1" source="iv_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;strokeWidth=1.5;shadow=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="merge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="model_bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f8f8;strokeColor=#666666;arcSize=6;shadow=0;" value="" vertex="1">
+          <mxGeometry height="152" width="916" x="242" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="model_hdr" parent="1" style="text;html=1;fontSize=13;fontStyle=1;align=center;fontColor=#16213e;shadow=0;" value="MODELING ENGINE" vertex="1">
+          <mxGeometry height="20" width="1300" x="50" y="489" as="geometry" />
+        </mxCell>
+        <mxCell id="ols" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;Hedonic OLS&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px&#39;&gt;Baseline Comparator&lt;br&gt;Log-log specification&lt;br&gt;Interpretable coefficients&lt;br&gt;R²(test) = 0.394&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="335" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="rf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#2d7d46;shadow=0;fontSize=11;arcSize=20;strokeWidth=2;" value="&lt;b&gt;Random Forest&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px&#39;&gt;⭐ DEPLOYED MODEL&lt;br&gt;Non-linear · Ensemble&lt;br&gt;R²=0.807  MAPE=59.28%&lt;br&gt;MAE=4.95M  RMSE=27.45M&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="590" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="xgb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;XGBoost&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px&#39;&gt;Comparator&lt;br&gt;Gradient Boosting&lt;br&gt;R²=0.492&lt;br&gt;(post-taxonomy cleanup)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="845" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="spectrum" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#999999;strokeWidth=1;shadow=0;" value=" ">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="333" y="610" as="sourcePoint" />
+            <mxPoint x="1060" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="spec_l" parent="1" style="text;html=1;align=center;fontSize=12;fontColor=#F4BC19;shadow=0;verticalAlign=middle;" value="← Interpretability" vertex="1">
+          <mxGeometry height="12" width="130" x="335" y="616" as="geometry" />
+        </mxCell>
+        <mxCell id="spec_r" parent="1" style="text;html=1;align=center;fontSize=12;fontColor=#F4BC19;shadow=0;verticalAlign=middle;" value="Predictive Accuracy →" vertex="1">
+          <mxGeometry height="12" width="130" x="935" y="616" as="geometry" />
+        </mxCell>
+        <mxCell id="e_m_mod" edge="1" parent="1" source="merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#16213e;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;shadow=0;" target="model_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4" connectable="0" parent="e_m_mod" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value=" " vertex="1">
+          <mxGeometry relative="1" x="-0.0229" y="1" as="geometry">
+            <mxPoint x="-1" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="out_bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f8f8;strokeColor=#666666;arcSize=6;shadow=0;" value="" vertex="1">
+          <mxGeometry height="105" width="958" x="221" y="662" as="geometry" />
+        </mxCell>
+        <mxCell id="out_hdr" parent="1" style="text;html=1;fontSize=13;fontStyle=1;align=center;fontColor=#16213e;shadow=0;verticalAlign=middle;" value="OUTPUTS (Predictive)" vertex="1">
+          <mxGeometry height="20" width="198" x="600" y="668" as="geometry" />
+        </mxCell>
+        <mxCell id="out_price" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;Predicted Price&lt;/b&gt;&lt;br&gt;&lt;font&gt;price_per_sqm (PHP/m²)&lt;br&gt;Back-transformed from log&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="250" x="242" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="out_gap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;Valuation Gap&lt;/b&gt;&lt;br&gt;&lt;font&gt;price_per_sqm − BIR zonal value&lt;br&gt;Diagnostic: market vs. regulatory&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="350" x="524" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="out_shap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=0;fontSize=11;arcSize=20;" value="&lt;b&gt;SHAP Explainability&lt;/b&gt;&lt;br&gt;&lt;font&gt;Global (beeswarm) + Local (waterfall)&lt;br&gt;Feature attribution per property&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52" width="260" x="906" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mod_out" edge="1" parent="1" source="model_bg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#16213e;strokeWidth=2;shadow=0;" target="out_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="deliv_hdr" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#2d7d46;align=center;shadow=0;" value="CORE DELIVERABLES (Prescriptive)" vertex="1">
+          <mxGeometry height="20" width="228" x="585" y="791" as="geometry" />
+        </mxCell>
+        <mxCell id="deliv_app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=0;fontSize=11;arcSize=15;strokeWidth=2;" value="&lt;b&gt;Streamlit Web App&lt;/b&gt;&lt;br&gt;&lt;font&gt;Property Predictor (price_per_sqm + SHAP)&lt;br&gt;Predicted Price Surface (open_market)&lt;br&gt;BIR Zonal vs. Market Price Comparison&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="242" x="351" y="811" as="geometry" />
+        </mxCell>
+        <mxCell id="deliv_qgis" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3e6;strokeColor=#2d7d46;shadow=0;fontSize=11;arcSize=15;strokeWidth=2;" value="&lt;b&gt;QGIS Interactive Map&lt;/b&gt;&lt;br&gt;&lt;font&gt;Predicted Price Heatmap (open_market)&lt;br&gt;CBD Node + POI Coverage Layers&lt;br&gt;Broker Decision Support Tool&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="208" x="813" y="811" as="geometry" />
+        </mxCell>
+        <mxCell id="e_out_app" edge="1" parent="1" source="out_bg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2d7d46;strokeWidth=2;shadow=0;" target="deliv_app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_out_qgis" edge="1" parent="1" source="out_bg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2d7d46;strokeWidth=2;shadow=0;" target="deliv_qgis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="validation" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=0;fontSize=11;arcSize=12;strokeWidth=2;" value="&lt;b&gt;HUMAN-IN-THE-LOOP VALIDATION&lt;/b&gt;&lt;br&gt;&lt;font&gt;Broker Review  |  Outlier Flagging  |  IVS Compliance (Open Market Value definition)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="454" x="472" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="e_app_val" edge="1" parent="1" source="deliv_app" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=1.5;shadow=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="validation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_qgis_val" edge="1" parent="1" source="deliv_qgis" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=1.5;shadow=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="validation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

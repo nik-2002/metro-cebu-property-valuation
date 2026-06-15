@@ -1,0 +1,146 @@
+{
+  "metrics": {
+    "ols": {
+      "MAPE": 160.2872,
+      "MAE": 11012839.9792,
+      "RMSE": 59436820.7836,
+      "R2": 0.232858
+    },
+    "rf": {
+      "MAPE": 54.759,
+      "MAE": 6538548.3292,
+      "RMSE": 31602095.2162,
+      "R2": 0.783132
+    },
+    "xgb": {
+      "MAPE": 43.9281,
+      "MAE": 6242659.7846,
+      "RMSE": 30106432.868,
+      "R2": 0.803174
+    },
+    "rf_tuned": {
+      "MAPE": 64.5049,
+      "MAE": 8967186.2749,
+      "RMSE": 44976325.6786,
+      "R2": 0.560729
+    },
+    "xgb_tuned": {
+      "MAPE": 47.1463,
+      "MAE": 8812258.5432,
+      "RMSE": 46342713.2457,
+      "R2": 0.533633
+    }
+  },
+  "rf_top10": [
+    "dist_naga_city_m",
+    "property_type_Single Detached",
+    "property_type_House and Lot",
+    "longitude",
+    "property_type_Condominium",
+    "dist_consolacion_m",
+    "dist_mactan_cbd_m",
+    "property_type_Residential",
+    "area_sqm",
+    "floor_area_sqm"
+  ],
+  "xgb_top10": [
+    "dist_naga_city_m",
+    "property_type_Single Detached",
+    "property_type_Condominium",
+    "longitude",
+    "dist_consolacion_m",
+    "property_type_Residential",
+    "dist_mactan_cbd_m",
+    "floor_area_sqm",
+    "property_type_House and Lot",
+    "is_vacant_lot"
+  ],
+  "city_mape_desc": [
+    {
+      "city": "Talisay City",
+      "n": 13,
+      "mape": 65.7772,
+      "mae": 12175115.8054,
+      "rmse": 39003930.1616
+    },
+    {
+      "city": "Mandaue City",
+      "n": 64,
+      "mape": 51.4151,
+      "mae": 2134676.4657,
+      "rmse": 14348767.1125
+    },
+    {
+      "city": "Minglanilla",
+      "n": 12,
+      "mape": 47.219,
+      "mae": 139707.6388,
+      "rmse": 350200.0531
+    },
+    {
+      "city": "Cebu City",
+      "n": 86,
+      "mape": 42.1648,
+      "mae": 13075998.3083,
+      "rmse": 47091038.3907
+    },
+    {
+      "city": "Lapu-Lapu City",
+      "n": 108,
+      "mape": 39.9691,
+      "mae": 4405411.41,
+      "rmse": 21917029.7994
+    },
+    {
+      "city": "Consolacion",
+      "n": 21,
+      "mape": 33.2865,
+      "mae": 41714.1331,
+      "rmse": 139797.974
+    }
+  ],
+  "type_mape_desc": [
+    {
+      "property_type": "Vacant Lot",
+      "n": 46,
+      "mape": 76.9101,
+      "mae": 1015051.2768,
+      "rmse": 5935825.0707
+    },
+    {
+      "property_type": "Residential",
+      "n": 16,
+      "mape": 57.9116,
+      "mae": 56050225.1406,
+      "rmse": 111561444.9772
+    },
+    {
+      "property_type": "Condominium",
+      "n": 130,
+      "mape": 39.7006,
+      "mae": 3958161.8917,
+      "rmse": 19803487.51
+    },
+    {
+      "property_type": "House and Lot",
+      "n": 69,
+      "mape": 34.6087,
+      "mae": 25140.9868,
+      "rmse": 32154.1603
+    },
+    {
+      "property_type": "Single Detached",
+      "n": 37,
+      "mape": 34.4294,
+      "mae": 11835813.6622,
+      "rmse": 25365165.726
+    },
+    {
+      "property_type": "Townhouse",
+      "n": 6,
+      "mape": 11.1237,
+      "mae": 8622.3392,
+      "rmse": 14265.6683
+    }
+  ]
+}

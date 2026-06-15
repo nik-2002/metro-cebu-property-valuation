@@ -1,0 +1,22 @@
+[
+  {
+    "stratum":"Condo",
+    "n_ols":1011,
+    "ols_feature_count":21,
+    "r_squared":0.2646524069,
+    "adj_r_squared":0.2490383529,
+    "aic":1335.1571606672,
+    "bic":1443.3684554856,
+    "breusch_pagan_lm":30.7613827103,
+    "breusch_pagan_lm_p_value":0.0777218924,
+    "breusch_pagan_f":1.4779203934,
+    "breusch_pagan_f_p_value":0.0761647594,
+    "breusch_pagan_interpretation":"no strong heteroscedasticity signal",
+    "jarque_bera_stat":1537.5410599688,
+    "jarque_bera_p_value":0.0,
+    "jarque_bera_interpretation":"non-normal residuals",
+    "durbin_watson":1.618084473,
+    "durbin_watson_interpretation":"near 2, no strong autocorrelation signal",
+    "covariance_type":"HC3"
+  }
+]

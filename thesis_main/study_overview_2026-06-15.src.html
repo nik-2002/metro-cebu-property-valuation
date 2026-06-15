@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metro Cebu Residential Price Estimator — Illustrated Study Overview</title>
+<style>
+  :root{--ink:#1f2733;--muted:#5b6675;--line:#e3e8ef;--bg:#fff;--soft:#f6f8fb;--accent:#0b5cab;
+    --accent2:#0a7d6b;--warn:#9a5b00;--warnbg:#fff6e6;--good:#0a7d6b;--bad:#b3261e;--chip:#eef3f9;--math:#fbfaf4}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;color:var(--ink);background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.62;font-size:16.5px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:248px 1fr;gap:34px}
+  nav.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding:26px 8px 40px 0;border-right:1px solid var(--line)}
+  nav.toc h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  nav.toc a{display:block;color:var(--muted);text-decoration:none;font-size:13.5px;padding:4px 8px;border-radius:7px}
+  nav.toc a:hover{background:var(--soft);color:var(--ink)}
+  nav.toc a.lead{color:var(--ink);font-weight:600;margin-top:8px}
+  main{padding:30px 0 90px;min-width:0}
+  header.hero{padding:8px 0 18px;border-bottom:2px solid var(--line);margin-bottom:26px}
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:12.5px}
+  h1{font-size:30px;line-height:1.18;margin:6px 0 8px}.sub{color:var(--muted);font-size:17px;margin:0}
+  h2.sec{font-size:23px;margin:46px 0 6px;padding-top:10px;border-top:1px solid var(--line)}
+  h2.sec .n{color:var(--accent);font-weight:800;margin-right:8px}
+  h3{font-size:18px;margin:24px 0 6px}h4{font-size:15.5px;margin:18px 0 4px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  p{margin:10px 0}ul,ol{margin:10px 0 10px 4px;padding-left:22px}li{margin:5px 0}a{color:var(--accent)}
+  .lede{font-size:18px;color:#33404f}
+  .keynums{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+  .stat{flex:1 1 150px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .stat .v{font-size:24px;font-weight:800;color:var(--accent)}.stat .l{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .plain{background:#eef6f4;border:1px solid #cfe7e1;border-left:4px solid var(--accent2);border-radius:10px;padding:12px 15px;margin:14px 0}
+  .plain b{color:var(--accent2)}
+  .note{background:var(--warnbg);border:1px solid #f0dcb6;border-left:4px solid var(--warn);border-radius:10px;padding:12px 15px;margin:14px 0;font-size:15px}
+  .note b{color:var(--warn)}
+  .formula{background:var(--math);border:1px solid #e7e2cd;border-radius:10px;padding:14px 16px;margin:14px 0;font-family:"Cambria","Georgia",serif;font-size:16.5px;overflow-x:auto}
+  .formula .lbl{font-family:inherit;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:700}
+  .eq{font-style:italic}.eq b,.fn{font-style:normal}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--soft);font-weight:700}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .tag{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:1px 9px;font-size:12px;color:var(--muted);margin:2px 3px 2px 0}
+  .good{color:var(--good);font-weight:700}.bad{color:var(--bad);font-weight:700}
+  figure{margin:18px 0;text-align:center;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px}
+  figure img{max-width:100%;height:auto;border-radius:6px;background:#fff;cursor:zoom-in;transition:filter .12s}
+  figure img:hover{filter:brightness(.96)}
+  figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:left}
+  /* click-to-enlarge lightbox */
+  .lb{position:fixed;inset:0;background:rgba(15,20,28,.93);display:none;align-items:center;justify-content:center;z-index:10000;padding:2.5vh 2.5vw;cursor:zoom-out}
+  .lb.open{display:flex}
+  .lb img{max-width:96vw;max-height:96vh;width:auto;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.55);background:#fff}
+  .lb .x{position:fixed;top:12px;right:20px;color:#fff;font-size:34px;line-height:1;font-weight:300;cursor:pointer;opacity:.85;user-select:none}
+  .lb .x:hover{opacity:1}
+  .lb .hint{position:fixed;bottom:14px;left:0;right:0;text-align:center;color:#cdd6e0;font-size:12.5px}
+  @media print{.lb{display:none!important}}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .grid2 figure,.grid3 figure{margin:0}
+  dl.gloss dt{font-weight:700;margin-top:12px}dl.gloss dd{margin:2px 0 0 0;color:#37424f}
+  .small{font-size:13.5px;color:var(--muted)}hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+  @media (max-width:900px){.wrap{grid-template-columns:1fr}nav.toc{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line)}.grid2,.grid3{grid-template-columns:1fr}}
+  @media print{nav.toc{display:none}.wrap{grid-template-columns:1fr}figure{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="toc">
+  <h2>Contents</h2>
+  <a class="lead" href="#summary">Quick summary</a>
+  <a class="lead" href="#business">1 · Business context</a>
+  <a href="#rqs">2 · Research questions</a>
+  <a href="#rrl">3 · Literature</a>
+  <a class="lead" href="#scrape">4 · Data gathering</a>
+  <a href="#clean">5 · Data cleaning</a>
+  <a href="#eda">6 · EDA (data plots)</a>
+  <a class="lead" href="#features">7 · Feature engineering + MCRAI formulas</a>
+  <a href="#prep">8 · Data preparation</a>
+  <a class="lead" href="#model">9 · Modeling</a>
+  <a href="#journey">10 · Journey, tuning &amp; evaluation ★</a>
+  <a href="#insights">11 · Insights</a>
+  <a class="lead" href="#deploy">12 · Deployment</a>
+  <a href="#app">13 · The web app</a>
+  <a href="#recs">14 · Recommendations</a>
+  <a href="#conclusion">15 · Conclusion</a>
+  <a class="lead" href="#glossary">Glossary</a>
+  <a href="#formulas">Formula reference</a>
+</nav>
+<main>
+<header class="hero">
+  <div class="kicker">Illustrated Study Overview · 15 June 2026</div>
+  <h1>A Data-Driven Residential Price Map for Metro Cebu</h1>
+  <p class="sub">From online listings and geography to a tested machine-learning price surface — the full
+  study, with formulas, plots, and plain-language explanations.</p>
+</header>
+
+<section id="summary">
+<h2 class="sec"><span class="n">·</span>Quick summary (30 seconds)</h2>
+<p class="lede">This study built a tool that estimates the <b>open-market asking price per square
+metre</b> of a residential property anywhere in Metro Cebu — from where it is, what's around it, and its
+basic characteristics — and delivers it as an interactive web app with a colour-coded <b>price surface</b>.</p>
+<div class="keynums">
+  <div class="stat"><div class="v">3,616</div><div class="l">cleaned listings used to train the models</div></div>
+  <div class="stat"><div class="v">6 / 8</div><div class="l">cities covered / economic centres used as reference points</div></div>
+  <div class="stat"><div class="v">3</div><div class="l">models — condos, houses, vacant lots</div></div>
+  <div class="stat"><div class="v">19 / 23 / 38%</div><div class="l">typical error (condo / house / lot)</div></div>
+</div>
+<p>The market is split into three groups because each is priced differently. The deployed models are
+<b>Random Forests</b>. It's a <b>decision-support reference</b> — to support appraisers, banks, buyers,
+and assessors — not a replacement for professional judgement.</p>
+<div class="note"><b>Sources:</b> every number and plot here comes from the live model files, the
+project's decision log, and its reference notes — the current deployed system. It does not use the
+(separately maintained, out-of-date) thesis manuscript.</div>
+</section>
+
+<section id="business">
+<h2 class="sec"><span class="n">1</span>The business problem</h2>
+<p>Metro Cebu is one of the fastest-growing property markets in the Philippines, yet there is <b>no
+single, transparent, up-to-date reference</b> for residential value. Brokers use personal know-how; banks
+appraise for collateral; the government's <b>BIR zonal values</b> update only every few years and are
+widely outdated; online listings are current but carry "asking-price" noise.</p>
+<div class="plain"><b>In plain terms — "BIR zonal value"</b> is the <b>Bureau of Internal Revenue</b>'s
+official price-per-square-metre for each small district (<b>barangay</b>), used mainly for taxes. It's an
+administrative floor, not a live market price, and is often years out of date.</div>
+<p>The study fills the gap with a <b>data-driven price surface</b> trained on thousands of real listings,
+and flags where official values diverge from the market.</p>
+<h3>Where: 6 cities, 8 economic centres</h3>
+<p>Training data covers six <b>local government units (LGUs — cities/municipalities)</b>:</p>
+<p><span class="tag">Cebu City</span><span class="tag">Mandaue City</span><span class="tag">Lapu-Lapu City</span><span class="tag">Talisay City</span><span class="tag">Minglanilla</span><span class="tag">Consolacion</span></p>
+<p>Metro Cebu is <b>polycentric</b> — many centres, not one downtown — so each property's road-network
+distance is measured to eight <b>CBD nodes (Central Business District nodes)</b>:</p>
+<p><span class="tag">Cebu Business Park</span><span class="tag">Mandaue CBD</span><span class="tag">Mactan CBD</span><span class="tag">SRP</span><span class="tag">Talisay–Tabunok</span><span class="tag">Consolacion</span><span class="tag">Naga City</span><span class="tag">Airport</span></p>
+<p class="small">Eight-node choice grounded in polycentric theory (Giuliano &amp; Small, 1991) and the
+JICA Mega Cebu Roadmap 2050. Naga City is a distance-anchor only; its listings aren't in training.</p>
+</section>
+
+<section id="rqs">
+<h2 class="sec"><span class="n">2</span>The research questions</h2>
+<table>
+<tr><th style="width:46%">Question</th><th>Short answer</th></tr>
+<tr><td><b>RQ1 — Value drivers:</b> location, structure, or amenities?</td><td><b>Location dominates.</b> Distance to centres + neighbourhood price level are strongest; structure matters for built homes, raw location for lots.</td></tr>
+<tr><td><b>RQ2 — Best model:</b> regression, Random Forest, or XGBoost?</td><td>The two tree models <b>tie</b> and both beat regression; <b>Random Forest deployed</b> for robustness/simplicity.</td></tr>
+<tr><td><b>RQ3 — Do geography features help?</b></td><td><b>Yes, for every type</b> — differently (condos: overall access; lots: specific amenity access).</td></tr>
+<tr><td><b>RQ4 — Market vs BIR value:</b></td><td>For vacant land, the market runs roughly <b>2–4× above</b> the official BIR value.</td></tr>
+</table>
+</section>
+
+<section id="rrl">
+<h2 class="sec"><span class="n">3</span>What the research literature says</h2>
+<p>Decades of research support the idea that <em>where</em> a property is — and how easily it reaches jobs
+and amenities — is built into its price.</p>
+<ul>
+  <li><b>Hedonic pricing</b> — price = sum of the values of a property's parts. Backbone of property modelling.</li>
+  <li><b>Bid-rent theory</b> — buyers pay more for better access; value falls with distance. Strongest for vacant land.</li>
+  <li><b>Polycentric urbanism (Giuliano &amp; Small, 1991)</b> — metros have several centres; justifies eight nodes.</li>
+  <li><b>Hansen accessibility / gravity model (Hansen, 1959)</b> — nearby amenities count more, fading with distance. The engine behind MCRAI.</li>
+  <li><b>Spatial autocorrelation</b> — near properties have similar prices; justifies the neighbourhood-price feature.</li>
+</ul>
+<p>Reference research also confirmed three design choices for the custom index: deriving weights from data
+(two-stage hedonic), a distance-decay setting β = 2.0 within the documented 1.75–2.0 range for congested
+developing-country cities, and category-specific reach radii rather than one fixed radius.</p>
+<div class="note"><b>Why not an off-the-shelf equity map (e.g., OHANA)?</b> Equity frameworks find where
+services <em>should</em> be (policy), not what the market <em>pays</em>. They use coarse 1 km grids,
+straight-line distances, and equal weights — wrong for parcel-level pricing. So a market-calibrated index
+was built instead.</div>
+<h3>Closest comparable studies</h3>
+<ul>
+  <li><b>Ramolete et al. (2023), <i>The Philippine Statistician</i></b> — nearest Philippine study: Lamudi
+  + amenities + government indicators + tree models for Cavite/Manila houses, ~<b>10.7–21%</b> error. Main benchmark.</li>
+  <li><b>Agosto (Cebu City)</b> — only prior Cebu work; ranked <b>mobility</b> and <b>livability</b> as the top value drivers.</li>
+  <li><b>Tiglao &amp; Rivera (2006, Manila)</b> and SE-Asian work (Bangkok condos: transit ≈52% of value; Jakarta) — accessibility is central in congested Asian cities.</li>
+</ul>
+<p class="small">Citations drawn from the project's reference/literature notes; confirm exact details before formal academic use.</p>
+</section>
+
+<section id="scrape">
+<h2 class="sec"><span class="n">4</span>Gathering the data (web scraping)</h2>
+<p>There's no public registry of actual sale prices in the Philippines, so the study used <b>online
+listings</b> as the next-best market evidence.</p>
+<div class="plain"><b>In plain terms — "web scraping"</b> means a program that visits a website and
+automatically copies listing details (price, size, location) into a spreadsheet.</div>
+<table>
+<tr><th>Source</th><th class="num">Kept</th><th>Notes</th></tr>
+<tr><td>Lamudi (main)</td><td class="num">1,579</td><td>Primary site; needed special handling to get past bot-protection.</td></tr>
+<tr><td>FilipinoHomes</td><td class="num">1,203</td><td>Highest-precision coordinates, via its behind-the-scenes data feed.</td></tr>
+<tr><td>DotProperty</td><td class="num">565</td><td>District-level text, then geocoded.</td></tr>
+<tr><td>Lamudi (anti-bot batch)</td><td class="num">270</td><td>Second pull via browser-automation.</td></tr>
+<tr><td><b>Total cleaned</b></td><td class="num"><b>3,616</b></td><td>After all cleaning &amp; de-duplication.</td></tr>
+</table>
+<div class="plain"><b>In plain terms — "geocoding"</b> turns an address or place name into map coordinates so
+the property can be placed and measured against the economic centres. Vague addresses can land on a
+district centre rather than the exact lot — a limitation handled in cleaning.</div>
+<p>A fifth portal (<b>OnePropertee</b>) was scraped but <b>dropped entirely</b> for unreliable prices and
+coarse coordinates — removing a bad source is itself a quality decision.</p>
+</section>
+
+<section id="clean">
+<h2 class="sec"><span class="n">5</span>Cleaning the data</h2>
+<p>Raw listings are messy. A transparent filter "funnel" reduced many raw rows to a trustworthy set:</p>
+<ul>
+  <li><b>Open-market only</b> — bank foreclosures and government floor-price records removed (different value types).</li>
+  <li><b>Distressed "pasalo"/assume-balance listings removed</b> (loan-takeover deals priced below market).</li>
+  <li><b>Sanity limits</b> on price and size; <b>de-duplication</b> of relistings.</li>
+  <li><b>Spatial cap</b> — at most ~3 listings per ~11 m map cell, so one over-listed building can't dominate.</li>
+</ul>
+<div class="grid2">
+  <figure><img src="FIG:geocoding" alt="Geocoding clusters"><figcaption>Where listings cluster on shared coordinates. About a third of house/lot listings geocode to a <b>district centre</b> (vague addresses) — a documented noise source that does not corrupt the honest scoring (Section 10).</figcaption></figure>
+  <figure><img src="FIG:duplicates" alt="Duplicate listings by strictness"><figcaption>How many listings collapse as duplicates under increasingly strict matching — the basis for the de-duplication rule.</figcaption></figure>
+</div>
+<div class="plain"><b>A bug caught and fixed.</b> Early data measured the target two ways across scrape
+batches (total price vs price-per-sqm), so the model partly "learned" the batch. The target was rebuilt
+consistently as <b>price per square metre</b>, making the models honest and interpretable.</div>
+</section>
+
+<section id="eda">
+<h2 class="sec"><span class="n">6</span>Exploring the data (EDA)</h2>
+<p><b>EDA — Exploratory Data Analysis</b> means looking at the data with charts before modelling, to
+understand its shape and spot problems. Key pictures:</p>
+<h4>What prices look like</h4>
+<div class="grid2">
+  <figure><img src="FIG:target_box" alt="Price by property type"><figcaption>Price per square metre by property group. Condos sit highest, vacant lots lowest, with wide spread — a big reason to model the three groups separately.</figcaption></figure>
+  <figure><img src="FIG:price_lgu" alt="Price by city"><figcaption>Price per square metre across the six cities — Cebu City and Lapu-Lapu command premiums; the outer LGUs are cheaper.</figcaption></figure>
+</div>
+<div class="grid3">
+  <figure><img src="FIG:condo_pdist" alt="Condo price distribution"><figcaption>Condominium prices/sqm.</figcaption></figure>
+  <figure><img src="FIG:house_pdist" alt="House price distribution"><figcaption>House prices/sqm.</figcaption></figure>
+  <figure><img src="FIG:lot_pdist" alt="Lot price distribution"><figcaption>Vacant-lot prices/sqm (widest spread).</figcaption></figure>
+</div>
+<h4>What correlates with price</h4>
+<p>These rank each feature by how strongly it moves with price (Spearman correlation). Location features —
+distance to the business district, neighbourhood price level, BIR value — sit near the top in every group.</p>
+<div class="grid3">
+  <figure><img src="FIG:condo_corr" alt="Condo feature-price correlation"><figcaption>Condominiums.</figcaption></figure>
+  <figure><img src="FIG:house_corr" alt="House feature-price correlation"><figcaption>Houses.</figcaption></figure>
+  <figure><img src="FIG:lot_corr" alt="Lot feature-price correlation"><figcaption>Vacant lots — distance to the business district dominates (bid-rent).</figcaption></figure>
+</div>
+<h4>Data-quality checks</h4>
+<div class="grid2">
+  <figure><img src="FIG:condo_cooks" alt="Cook's distance condo"><figcaption>An "influence" check (Cook's distance) that flags individual listings distorting the fit — this is how a mislabelled condo was found and removed.</figcaption></figure>
+  <figure><img src="FIG:lot_mcrai_lgu" alt="MCRAI availability by LGU (lot)"><figcaption>Amenity-score coverage by city. Blank patches (e.g., "security") are <b>data gaps</b>, not true absence — evidence used to drop unreliable features.</figcaption></figure>
+</div>
+</section>
+
+<section id="features">
+<h2 class="sec"><span class="n">7</span>Feature engineering &amp; the MCRAI formulas</h2>
+<p>"Features" are the input clues the model uses. Beyond area, bedrooms, and bathrooms, the study
+engineered location features — its core contribution.</p>
+<ul>
+  <li><b>Distance to the 8 economic centres</b> along the <em>real road network</em> (shortest-path), so the Mactan bridge correctly adds distance.</li>
+  <li><b>MCRAI</b> — the Metro Cebu Residential Accessibility Index (below).</li>
+  <li><b>BIR zonal value</b> for the district; <b>neighbourhood price level</b> (same-type listings within 500 m); <b>city</b>.</li>
+</ul>
+<div class="plain"><b>In plain terms — MCRAI</b> scores how well-served a location is by nearby amenities
+(schools, groceries, health, hospitals, recreation, etc.), using the "gravity" idea: closer amenities
+count more, and each amenity type has its own sensible reach distance.</div>
+
+<h3>The MCRAI formulas</h3>
+<p><b>Step 1 — per-category accessibility (Hansen gravity).</b> For a property <i>i</i> and amenity
+category <i>c</i>, add up the "pull" of every amenity of that type within the category's reach radius
+<i>R<sub>c</sub></i>; nearer amenities count much more (the pull falls with the <em>square</em> of distance):</p>
+<div class="formula">
+  <div class="lbl">Per-category accessibility score</div>
+  <span class="eq">A<sub>c</sub>(i) &nbsp;=&nbsp; <b>&Sigma;</b><sub>&nbsp;j &isin; c, &nbsp;d<sub>ij</sub> &le; R<sub>c</sub></sub> &nbsp; 1 &nbsp;/&nbsp; max( d<sub>ij</sub> , 0.5 )<sup>&nbsp;&beta;</sup></span><br>
+  <span class="small" style="font-style:normal">where d<sub>ij</sub> = road-network distance (km) from property i to amenity j; &nbsp; &beta; = 2.0 (distance-decay); &nbsp; the 0.5 km floor prevents very-near amenities from blowing up the score.</span>
+</div>
+<p><b>The reach radius differs by amenity type</b> (everyday needs are walk-scale; hospitals and schools pull from farther):</p>
+<table>
+<tr><th>Category</th><th class="num">Radius R<sub>c</sub></th><th>Category</th><th class="num">Radius R<sub>c</sub></th></tr>
+<tr><td>Hospitals</td><td class="num">5.0 km</td><td>Health (clinics)</td><td class="num">2.0 km</td></tr>
+<tr><td>Tourism</td><td class="num">3.0 km</td><td>Grocery</td><td class="num">2.0 km</td></tr>
+<tr><td>Education</td><td class="num">2.5 km</td><td>Security</td><td class="num">2.0 km</td></tr>
+<tr><td>Recreation</td><td class="num">1.5 km</td><td>Retail density</td><td class="num">1.0 km</td></tr>
+</table>
+
+<p><b>Step 2 — the composite index.</b> The categories are combined into one master score using weights
+that come from the data, not opinion:</p>
+<div class="formula">
+  <div class="lbl">MCRAI composite (used for condos &amp; houses)</div>
+  <span class="eq">MCRAI<sub>composite</sub>(i) = 0.447 &middot; A<sub>education</sub>(i) &nbsp;+&nbsp; 0.345 &middot; A<sub>grocery</sub>(i) &nbsp;+&nbsp; 0.222 &middot; A<sub>recreation</sub>(i)</span>
+</div>
+
+<h3>How the composite weights were derived (two-stage hedonic)</h3>
+<p>The weights are not guessed — they are read off the market itself:</p>
+<div class="formula">
+  <div class="lbl">Stage 1 — learn each amenity's market value (one OLS regression)</div>
+  <span class="eq">ln(price/sqm)<sub>i</sub> = &alpha; + <b>&Sigma;</b><sub>c</sub> &beta;<sub>c</sub> &middot; A<sub>c</sub>(i) + (structural &amp; control terms) + &epsilon;<sub>i</sub></span>
+</div>
+<div class="formula">
+  <div class="lbl">Stage 2 — keep positive, significant amenities; normalise their values into weights</div>
+  <span class="eq">w<sub>c</sub> = &beta;<sub>c</sub> &nbsp;/&nbsp; <b>&Sigma;</b><sub>k &isin; positive</sub> &beta;<sub>k</sub></span>
+</div>
+<p>In plain terms: run one regression to learn how much buyers actually pay for each kind of nearby
+amenity (its "implicit price," <i>β<sub>c</sub></i>); keep only the categories with a clear positive
+effect; and turn those into weights that add to 1. Here, <b>education, grocery, and recreation</b> came
+out positive and were kept. (Transport was retired in favour of direct road-distance features; and
+security, tourism, and retail density had <em>negative</em> effects — a "people sort away from
+congestion" signal — so they're kept only as standalone inputs, not in the composite.)</p>
+<figure><img src="FIG:mcrai_price" alt="MCRAI composite vs price"><figcaption>The combined MCRAI score plotted against price per square metre across the three groups — higher accessibility tends to mean higher price, validating the index.</figcaption></figure>
+
+<h3>One smart twist: different feature sets per property type</h3>
+<ul>
+  <li><b>Condos &amp; houses</b> use the single <b>combined MCRAI</b> score — for built homes, "is the area well-served overall?" is the right question, and the blend is simpler <em>and</em> slightly more accurate than the raw parts.</li>
+  <li><b>Vacant lots</b> keep the <b>six individual amenity scores</b> — bare land responds to <em>specific</em> access (a market, a hospital) that the blend would average away.</li>
+</ul>
+<div class="grid2">
+  <figure><img src="FIG:condo_mcrai" alt="Condo MCRAI distributions"><figcaption>Condominium amenity-score distributions.</figcaption></figure>
+  <figure><img src="FIG:lot_mcrai" alt="Lot MCRAI distributions"><figcaption>Vacant-lot amenity-score distributions (kept as individual features).</figcaption></figure>
+</div>
+</section>
+
+<section id="prep">
+<h2 class="sec"><span class="n">8</span>Preparing the data for modelling</h2>
+<ul>
+  <li><b>Split into three groups (stratification)</b> — condos, houses, vacant lots.</li>
+  <li><b>Predict price <em>per square metre</em>, on a log scale</b> — matches the price-map goal and tames extremes.</li>
+  <li><b>Fill gaps &amp; encode categories</b> — typical values for missing rooms (with a flag); city/type become yes/no columns.</li>
+</ul>
+<div class="formula">
+  <div class="lbl">Target &amp; back-transform</div>
+  <span class="eq">y<sub>i</sub> = ln(price/sqm)<sub>i</sub></span> &nbsp;&rarr;&nbsp; predicted price/sqm = exp(&#375;<sub>i</sub>) &nbsp;&rarr;&nbsp; total price = exp(&#375;<sub>i</sub>) &times; area<sub>i</sub>
+</div>
+<div class="formula">
+  <div class="lbl">Neighbourhood price level (spatial lag)</div>
+  <span class="eq">spatial_lag(i) = average{ price/sqm<sub>j</sub> &nbsp;:&nbsp; same property group, &nbsp; 0 &lt; d<sub>ij</sub> &le; 500 m }</span>
+</div>
+<table>
+<tr><th>Property group</th><th class="num">Listings</th><th class="num">Features</th><th>Covers</th></tr>
+<tr><td><b>Condominium</b></td><td class="num">1,300</td><td class="num">21</td><td>Vertical units / apartments</td></tr>
+<tr><td><b>Houses</b></td><td class="num">1,223</td><td class="num">24</td><td>House-and-lot, single detached, townhouse</td></tr>
+<tr><td><b>Vacant Lot</b></td><td class="num">849</td><td class="num">22</td><td>Bare residential land (80–2,000 m²)</td></tr>
+</table>
+</section>
+
+<section id="model">
+<h2 class="sec"><span class="n">9</span>Modeling</h2>
+<p>Three model families were compared per group: <b>hedonic regression (OLS)</b> — the transparent
+straight-line baseline; <b>Random Forest</b> — the deployed model; and <b>XGBoost</b> — a strong comparison.</p>
+<div class="plain"><b>In plain terms — a "Random Forest"</b> asks hundreds of slightly different "decision
+trees" (rules like "if large AND near the business park, lean higher"), each on a random slice of the
+data, then <b>averages</b> their answers. Averaging many imperfect opinions gives a stable, accurate
+estimate that handles messy data well.</div>
+<h4>Why the models can't just stack every feature: multicollinearity</h4>
+<p>Many location features move together (a well-connected area is near roads <em>and</em> amenities
+<em>and</em> pricey neighbours). A "VIF" check measures this overlap; high overlap was one reason
+redundant inputs were trimmed.</p>
+<div class="grid2">
+  <figure><img src="FIG:condo_vif" alt="Condo VIF"><figcaption>Feature-overlap (VIF) for condos — tall bars are redundant inputs, guiding the feature trim.</figcaption></figure>
+  <figure><img src="FIG:lot_vif" alt="Lot VIF"><figcaption>Feature-overlap (VIF) for vacant lots.</figcaption></figure>
+</div>
+</section>
+
+<section id="journey">
+<h2 class="sec"><span class="n">10</span>★ The journey, tuning &amp; how we know it works</h2>
+<h3>10.1 — From a "good-looking but unusable" first model to today</h3>
+<p>The first attempt was a <b>single model for everything</b> (all types pooled, predicting total price,
+tested with a naive random split). It scored a high goodness-of-fit (R² ≈ 0.81) that <em>looked</em>
+great, but its typical percentage error was about <b>59%</b> — unusable — and it carried the hidden
+target bug. Each step below fixed a real problem:</p>
+<figure style="background:#f6f8fb">
+<svg viewBox="0 0 980 250" width="100%" role="img" aria-label="Timeline of modeling improvements">
+  <line x1="40" y1="60" x2="940" y2="60" stroke="#c9d4e0" stroke-width="3"/>
+  <g font-family="sans-serif" font-size="12" fill="#1f2733" text-anchor="middle">
+    <g><circle cx="70" cy="60" r="8" fill="#b3261e"/><text x="70" y="92" font-weight="700">Start</text><text x="70" y="110" fill="#5b6675">One global model</text><text x="70" y="146" fill="#b3261e" font-weight="700">~59% err</text></g>
+    <g><circle cx="215" cy="60" r="8" fill="#0b5cab"/><text x="215" y="92" font-weight="700">Open-market</text><text x="215" y="110" fill="#5b6675">drop distressed</text></g>
+    <g><circle cx="360" cy="60" r="8" fill="#0b5cab"/><text x="360" y="92" font-weight="700">Split by type</text><text x="360" y="110" fill="#5b6675">+ fix target</text></g>
+    <g><circle cx="505" cy="60" r="8" fill="#0b5cab"/><text x="505" y="92" font-weight="700">Honest test</text><text x="505" y="110" fill="#5b6675">group by location</text></g>
+    <g><circle cx="650" cy="60" r="8" fill="#0b5cab"/><text x="650" y="92" font-weight="700">More data</text><text x="650" y="110" fill="#5b6675">1,849 &rarr; 3,616</text></g>
+    <g><circle cx="795" cy="60" r="8" fill="#0b5cab"/><text x="795" y="92" font-weight="700">Trim features</text><text x="795" y="110" fill="#5b6675">evidence-based</text></g>
+    <g><circle cx="915" cy="60" r="9" fill="#0a7d6b"/><text x="915" y="92" font-weight="700" fill="#0a7d6b">Today</text><text x="915" y="110" fill="#0a7d6b" font-weight="700">19/23/38%</text></g>
+  </g>
+</svg>
+<figcaption>Each step fixed a specific flaw: contamination, mixed property types, a hidden target bug, dishonest testing, too little data, and feature clutter.</figcaption>
+</figure>
+
+<h3>10.2 — Hyperparameter tuning (settings search)</h3>
+<div class="plain"><b>In plain terms — "hyperparameters"</b> are the model's dials (how many trees, how
+deep, how many examples per final branch). "Tuning" tries many combinations and keeps the best, scored
+with the honest location-grouped test.</div>
+<div class="grid2">
+  <figure><img src="FIG:rf_nest" alt="RF n_estimators tuning"><figcaption>Effect of the number of trees on error — gains flatten quickly, so 300 trees were enough.</figcaption></figure>
+  <figure><img src="FIG:rf_maxfeat" alt="RF max_features tuning"><figcaption>Effect of how many features each split may consider — tuned per group.</figcaption></figure>
+</div>
+<table>
+<tr><th>Group</th><th>Trees</th><th>Features/split</th><th>Min. per leaf</th><th>Max depth</th></tr>
+<tr><td>Condominium</td><td>300</td><td>70%</td><td>1</td><td>unlimited</td></tr>
+<tr><td>Houses</td><td>300</td><td>100%</td><td>2</td><td>unlimited</td></tr>
+<tr><td>Vacant Lot</td><td>300</td><td>100%</td><td>1</td><td>20</td></tr>
+</table>
+<p>Honest finding: at this data size, <b>careful tuning ≈ sensible defaults</b>, and Random Forest tied
+XGBoost. So Random Forest was deployed for robustness and simplicity.</p>
+
+<h3>10.3 — Honest evaluation</h3>
+<p>Because the goal is a price <em>map</em>, the model must be judged on <b>locations it has never seen</b>.</p>
+<div class="plain"><b>In plain terms — "leakage" and the fix.</b> If two listings on the same spot are split
+across training and testing, the model has "seen the answer" and looks better than it is. The fix —
+<b>GroupKFold by location</b> — keeps same-location listings together, so testing is always on unseen
+places. Tougher, but honest.</div>
+<h4>The scoreboard, with formulas</h4>
+<div class="formula">
+  <div class="lbl">Error ratio &amp; the metrics (computed on price/sqm, back-transformed)</div>
+  <span class="eq">r<sub>i</sub> = &#375;<sub>i</sub> / y<sub>i</sub> &nbsp;(predicted &divide; actual)</span><br><br>
+  <span class="eq"><b>MdAPE</b> = median<sub>i</sub> | &#375;<sub>i</sub> &minus; y<sub>i</sub> | / y<sub>i</sub> &times; 100 &nbsp;&nbsp;<span class="small" style="font-style:normal">(typical error — the headline)</span></span><br>
+  <span class="eq"><b>MAPE</b> = mean<sub>i</sub> | &#375;<sub>i</sub> &minus; y<sub>i</sub> | / y<sub>i</sub> &times; 100 &nbsp;&nbsp;<span class="small" style="font-style:normal">(average error — pulled up by a few extreme cases)</span></span><br>
+  <span class="eq"><b>PE20</b> = ( count of | &#375;<sub>i</sub> &minus; y<sub>i</sub> | / y<sub>i</sub> &le; 0.20 ) / n &times; 100 &nbsp;&nbsp;<span class="small" style="font-style:normal">(share within &plusmn;20%)</span></span><br>
+  <span class="eq"><b>COD</b> = 100 &times; mean<sub>i</sub> | r<sub>i</sub> &minus; median(r) | / median(r) &nbsp;&nbsp;<span class="small" style="font-style:normal">(consistency — IAAO)</span></span><br>
+  <span class="eq"><b>PRD</b> = mean(r) / ( &Sigma;&#375;<sub>i</sub> / &Sigma;y<sub>i</sub> ) &nbsp;&nbsp;<span class="small" style="font-style:normal">(fairness across cheap vs dear — ~1.0 is neutral)</span></span>
+</div>
+<p class="small">COD/PRD come from the IAAO appraisal "ratio study" standards. The models don't meet the
+strict assessment-roll bands — expected for a listings-based prototype tested the hard way — and this is reported openly.</p>
+<h4>Current results (honest, location-grouped test)</h4>
+<table>
+<tr><th>Group</th><th class="num">Listings</th><th class="num">MdAPE (typical)</th><th class="num">PE20</th><th class="num">MAPE (avg)</th><th class="num">COD</th><th class="num">PRD</th></tr>
+<tr><td><b>Condominium</b></td><td class="num">1,300</td><td class="num good">19.3%</td><td class="num">51%</td><td class="num">36.5%</td><td class="num">37.7</td><td class="num">1.21</td></tr>
+<tr><td><b>Houses</b></td><td class="num">1,223</td><td class="num good">22.7%</td><td class="num">44%</td><td class="num">35.1%</td><td class="num">35.8</td><td class="num">1.20</td></tr>
+<tr><td><b>Vacant Lot</b></td><td class="num">849</td><td class="num bad">38.4%</td><td class="num">26%</td><td class="num">58.3%</td><td class="num">55.9</td><td class="num">1.48</td></tr>
+</table>
+<figure style="background:#f6f8fb">
+<svg viewBox="0 0 720 210" width="100%" role="img" aria-label="Typical error by group">
+  <g font-family="sans-serif" font-size="13" fill="#1f2733">
+    <line x1="170" y1="20" x2="170" y2="175" stroke="#c9d4e0"/>
+    <text x="40" y="55">Condo</text><text x="40" y="105">Houses</text><text x="40" y="155">Vacant Lot</text>
+    <rect x="170" y="38" width="212" height="26" fill="#0a7d6b"/><text x="392" y="56" font-weight="700" fill="#0a7d6b">19.3%</text>
+    <rect x="170" y="88" width="250" height="26" fill="#0a7d6b"/><text x="430" y="106" font-weight="700" fill="#0a7d6b">22.7%</text>
+    <rect x="170" y="138" width="422" height="26" fill="#b3261e"/><text x="602" y="156" font-weight="700" fill="#b3261e">38.4%</text>
+    <text x="170" y="198" fill="#5b6675" font-size="12">Typical (median) percentage error — shorter is better</text>
+  </g>
+</svg>
+<figcaption>Condos and houses are predicted reasonably well; vacant lots are the honest weak point.</figcaption>
+</figure>
+<h4>Diagnostic checks</h4>
+<div class="grid2">
+  <figure><img src="FIG:lot_resid" alt="Lot residuals"><figcaption>Prediction errors vs predicted value (vacant lots) — used to check the model isn't systematically biased.</figcaption></figure>
+  <figure><img src="FIG:house_qq" alt="House Q-Q plot"><figcaption>A "Q-Q plot" checking whether errors follow the expected pattern (houses).</figcaption></figure>
+</div>
+
+<h3>10.4 — So, is it performing "okay"?</h3>
+<ul>
+  <li><b>Versus the classic regression (OLS):</b> Random Forest clearly wins on every group.</li>
+  <li><b>Versus the BIR benchmark:</b> using official values alone is far worse — the model adds real information.</li>
+  <li><b>Versus the closest Philippine study (Ramolete et al., 2023):</b> tested <em>their</em> easier way, the <b>typical</b> condo error is ~16% and houses ~22% — right at the top of their reported 10.7–21% band.</li>
+</ul>
+<h4>What drives each prediction (SHAP)</h4>
+<div class="plain"><b>In plain terms — SHAP</b> shows, for the model overall and for a single property,
+which features pushed the estimate up or down — turning a black box into something an appraiser can
+check. Each dot is one listing; position shows its push on the estimate.</div>
+<div class="grid3">
+  <figure><img src="FIG:shap_condo" alt="SHAP condo"><figcaption><b>Condominiums:</b> neighbourhood price level and size lead.</figcaption></figure>
+  <figure><img src="FIG:shap_houses" alt="SHAP houses"><figcaption><b>Houses:</b> distance to the business district, neighbourhood, and size.</figcaption></figure>
+  <figure><img src="FIG:shap_lot" alt="SHAP lot"><figcaption><b>Vacant lots:</b> distance to the business district dominates (bid-rent).</figcaption></figure>
+</div>
+<div class="note"><b>Honest framing.</b> These models are <b>not</b> assessment-grade and don't match
+mature-market systems — expected, given they learn from <em>asking prices</em> in a market with no public
+sale registry, a modest sample, and limited features. They are a credible <b>first Cebu-specific
+decision-support prototype</b>. Vacant lots stay weakest because bare-land value depends on parcel details
+absent from listings (frontage, zoning, title, slope, flood) — a <b>data ceiling</b>, not a broken model.</div>
+</section>
+
+<section id="insights">
+<h2 class="sec"><span class="n">11</span>Key insights</h2>
+<ul>
+  <li><b>Location is king (RQ1)</b> — geography carries most of the predictive power; size matters for built homes, almost everything for bare land.</li>
+  <li><b>Tree models tie; both beat regression (RQ2)</b> — Random Forest chosen for robustness/simplicity.</li>
+  <li><b>Geography helps every group, differently (RQ3)</b> — condos: overall accessibility; lots: specific access + distance to the main CBD. This justified the tailored feature sets.</li>
+  <li><b>Market sits well above official values (RQ4)</b> — for vacant land, ~2–4× the BIR benchmark.</li>
+  <li><b>Honesty as a feature</b> — the apparent accuracy "losses" along the way were the model becoming honest (earlier numbers were flattered by easy samples and leaky testing).</li>
+  <li><b>Documented limits</b> — listings ≠ sales; vague-address geocoding noise; one portal ran cheaper; the vacant-lot data ceiling.</li>
+</ul>
+</section>
+
+<section id="deploy">
+<h2 class="sec"><span class="n">12</span>Deployment</h2>
+<p>The three trained models are saved as files alongside a <b>manifest</b> — one record of each model's
+settings, exact feature list, and honest performance. The manifest is the project's "source of truth," so
+the app and any report always agree. A repeatable pipeline runs the whole chain (add listings → road
+distances → accessibility &amp; neighbourhood features → keep in-scope cities → split into groups → train
+&amp; record), and the study also produces <b>map layers (QGIS)</b> and a <b>valuation-gap layer</b>
+showing how far the market sits above BIR values, district by district.</p>
+</section>
+
+<section id="app">
+<h2 class="sec"><span class="n">13</span>The Streamlit web app</h2>
+<p>The public deliverable is a web app (<b>Streamlit</b> turns analysis into interactive web pages) with three screens:</p>
+<ul>
+  <li><b>Market Map</b> — browse real listings, filter by type, view amenities and price patterns.</li>
+  <li><b>Price Surface</b> — a colour-coded map of <em>predicted</em> price/sqm for a chosen property type; far-from-any-listing areas are greyed and labelled "low confidence."</li>
+  <li><b>Property Predictor</b> — <b>drop a pin</b>; the app fills in the city and an estimated BIR value, then returns a predicted price/sqm and total, plus a plain-language list of the <b>price drivers</b> (SHAP).</li>
+</ul>
+<p class="small">Verified (June 2026) to load the current models, match each property's features exactly to
+its model, and produce sensible predictions; the price surface was rebuilt to the latest models.</p>
+</section>
+
+<section id="recs">
+<h2 class="sec"><span class="n">14</span>Recommendations</h2>
+<h4>How to use it</h4>
+<ul>
+  <li>Treat outputs as a <b>transparent reference</b> for professional valuation/review — not a final figure (matches international valuation standards requiring human judgement).</li>
+  <li>Lean on the <b>typical-error (MdAPE)</b> figures and the per-property price drivers; treat greyed low-confidence areas with caution.</li>
+  <li>Use the <b>valuation-gap layer</b> to flag districts where BIR values lag the market.</li>
+</ul>
+<h4>How to improve it (future work)</h4>
+<ul>
+  <li><b>Lift the vacant-lot ceiling</b> with parcel attributes (zoning, flood/slope, frontage).</li>
+  <li><b>Re-geocode vague addresses</b> to remove district-centre noise.</li>
+  <li><b>Add fine-grained neighbourhood statistics</b> (e.g., barangay population density) where available.</li>
+  <li><b>Capture listing status</b> at scrape time to filter distressed sales more reliably.</li>
+</ul>
+</section>
+
+<section id="conclusion">
+<h2 class="sec"><span class="n">15</span>Conclusion</h2>
+<p>Starting from messy online listings and an unusable first model, the study built a transparent,
+location-aware tool that estimates open-market residential prices across Metro Cebu, splits the market
+into condos, houses, and lots, and tests itself the hard, honest way. Typical errors — about <b>19% for
+condos, 23% for houses</b>, and a candid <b>38% for vacant lots</b> — make the typical condo and house
+estimate competitive with the closest published Philippine study, while being upfront about where it is
+weak and why. The contribution is the <b>first Cebu-specific, geography-rich residential price surface</b>
+— a custom accessibility index, eight polycentric centres, real road-network distances, and an honest
+evaluation protocol — delivered as a usable web app, positioned as <b>decision support</b> for
+appraisers, banks, buyers, and assessors.</p>
+</section>
+
+<section id="glossary">
+<h2 class="sec"><span class="n">·</span>Glossary</h2>
+<dl class="gloss">
+  <dt>ABT (Analytics Base Table)</dt><dd>The final cleaned spreadsheet of listings and features (3,616 rows).</dd>
+  <dt>AVM (Automated Valuation Model)</dt><dd>Software that estimates property value from data; this is an AVM-style prototype.</dd>
+  <dt>Barangay</dt><dd>The smallest local district in the Philippines; BIR values are set per barangay.</dd>
+  <dt>Bid-rent theory</dt><dd>Buyers pay more for better-located land; value falls with distance from centres.</dd>
+  <dt>BIR zonal value</dt><dd>The Bureau of Internal Revenue's official price/sqm for a district (taxes); often outdated.</dd>
+  <dt>CBD node</dt><dd>Central Business District node — an economic centre; eight are used as distance references.</dd>
+  <dt>COD (Coefficient of Dispersion)</dt><dd>An appraisal measure of how consistent estimates are; lower is better.</dd>
+  <dt>CRISP-DM</dt><dd>Cross-Industry Standard Process for Data Mining — the six-step roadmap followed here.</dd>
+  <dt>EDA</dt><dd>Exploratory Data Analysis — charting the data before modelling to understand it and spot problems.</dd>
+  <dt>Geocoding</dt><dd>Turning an address/place name into map coordinates.</dd>
+  <dt>GroupKFold (by location)</dt><dd>Honest testing that keeps same-location listings together so the model is tested on unseen places.</dd>
+  <dt>Hansen / gravity accessibility</dt><dd>Scoring nearby amenities with closer ones counting more (pull fades with distance).</dd>
+  <dt>Hedonic pricing</dt><dd>Modelling price as the sum of the values of a property's parts.</dd>
+  <dt>Hyperparameters</dt><dd>A model's adjustable settings (e.g., number of trees); tuning searches for the best combination.</dd>
+  <dt>IAAO</dt><dd>International Association of Assessing Officers — sets the ratio-study standards (COD, PRD).</dd>
+  <dt>IVS</dt><dd>International Valuation Standards — require AVMs to be paired with professional judgement.</dd>
+  <dt>Lamudi</dt><dd>A Philippine property-listing portal; the study's main data source.</dd>
+  <dt>Leakage</dt><dd>When test data overlaps training data, making a model look better than it is.</dd>
+  <dt>LGU</dt><dd>Local Government Unit — a city/municipality; six are covered.</dd>
+  <dt>Log-transform</dt><dd>Working with the logarithm of price to tame extremes; predictions convert back to pesos.</dd>
+  <dt>MAPE / MdAPE</dt><dd>Mean / Median Absolute Percentage Error — average / typical % error. MdAPE is the headline.</dd>
+  <dt>MCRAI</dt><dd>Metro Cebu Residential Accessibility Index — the custom "how well-served is this location?" score.</dd>
+  <dt>Multicollinearity / VIF</dt><dd>When features overlap heavily; VIF measures it. High overlap means redundant inputs.</dd>
+  <dt>OLS (hedonic regression)</dt><dd>Ordinary Least Squares — the classic straight-line statistical baseline.</dd>
+  <dt>Pag-IBIG / ROPA</dt><dd>Government housing fund / bank-foreclosed stock — non-market value types excluded from training.</dd>
+  <dt>PE20</dt><dd>Share of estimates within ±20% of the true price; higher is better.</dd>
+  <dt>Polycentric</dt><dd>Having many centres rather than one downtown — Metro Cebu's structure.</dd>
+  <dt>PRD (Price-Related Differential)</dt><dd>Checks whether cheap and dear properties are valued even-handedly (~1.0 neutral).</dd>
+  <dt>Random Forest</dt><dd>A model averaging many decision trees for a stable estimate; the deployed model.</dd>
+  <dt>SHAP</dt><dd>A technique explaining how each feature pushed a prediction up or down.</dd>
+  <dt>Spatial lag</dt><dd>The average price of nearby same-type listings — a strong location signal.</dd>
+  <dt>Stratification</dt><dd>Splitting the market into groups (condo/house/lot) and modelling each separately.</dd>
+  <dt>Streamlit</dt><dd>A tool for turning Python analysis into an interactive web app.</dd>
+  <dt>Web scraping</dt><dd>Automatically collecting data from websites with a program.</dd>
+  <dt>XGBoost</dt><dd>A powerful "boosted trees" model used as a comparison to Random Forest.</dd>
+  <dt>β (beta, distance-decay)</dt><dd>How fast an amenity's pull fades with distance; β = 2.0 means pull ∝ 1/distance².</dd>
+</dl>
+</section>
+
+<section id="formulas">
+<h2 class="sec"><span class="n">·</span>Formula reference (all in one place)</h2>
+<div class="formula"><div class="lbl">Per-category accessibility</div><span class="eq">A<sub>c</sub>(i) = <b>&Sigma;</b><sub>j&isin;c, d<sub>ij</sub>&le;R<sub>c</sub></sub> 1 / max(d<sub>ij</sub>, 0.5)<sup>2</sup></span></div>
+<div class="formula"><div class="lbl">MCRAI composite (condos &amp; houses)</div><span class="eq">MCRAI<sub>composite</sub> = 0.447&middot;A<sub>education</sub> + 0.345&middot;A<sub>grocery</sub> + 0.222&middot;A<sub>recreation</sub></span></div>
+<div class="formula"><div class="lbl">Composite weights from data</div><span class="eq">Stage 1: ln(price/sqm) = &alpha; + &Sigma;<sub>c</sub> &beta;<sub>c</sub>A<sub>c</sub> + controls + &epsilon; &nbsp;&nbsp;&middot;&nbsp;&nbsp; Stage 2: w<sub>c</sub> = &beta;<sub>c</sub> / &Sigma;<sub>positive</sub> &beta;<sub>k</sub></span></div>
+<div class="formula"><div class="lbl">Target &amp; total price</div><span class="eq">y = ln(price/sqm); &nbsp; price/sqm = exp(&#375;); &nbsp; total = exp(&#375;) &times; area</span></div>
+<div class="formula"><div class="lbl">Neighbourhood price level</div><span class="eq">spatial_lag(i) = mean{ price/sqm<sub>j</sub> : same group, 0 &lt; d<sub>ij</sub> &le; 500 m }</span></div>
+<div class="formula"><div class="lbl">Accuracy metrics (r = &#375;/y)</div>
+<span class="eq">MdAPE = median |&#375;&minus;y|/y &nbsp;&middot;&nbsp; MAPE = mean |&#375;&minus;y|/y &nbsp;&middot;&nbsp; PE20 = share(|&#375;&minus;y|/y &le; 0.20)</span><br>
+<span class="eq">COD = 100&middot;mean|r&minus;med(r)|/med(r) &nbsp;&middot;&nbsp; PRD = mean(r) / (&Sigma;&#375;/&Sigma;y) &nbsp;&middot;&nbsp; R² = 1 &minus; &Sigma;(&#375;&minus;y)²/&Sigma;(y&minus;&#7929;)²</span></div>
+<p class="small">All headline figures from the project's deployment manifest (leak-free, location-grouped
+evaluation), current as of 15 June 2026. Model family: Random Forest on ln(price per square metre). This
+overview draws only on the project's reference notes, decision log, model files, and app code.</p>
+</section>
+</main>
+</div>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged plot">
+  <span class="x" aria-label="Close">&times;</span>
+  <img alt="Enlarged plot">
+  <div class="hint">Click anywhere or press Esc to close</div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'), img=lb.querySelector('img');
+  function open(src,alt){img.src=src;img.alt=alt||'Enlarged plot';lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');img.removeAttribute('src');document.body.style.overflow='';}
+  document.querySelectorAll('figure img').forEach(function(im){
+    im.addEventListener('click',function(){open(this.src,this.alt);});
+  });
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close();});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_price   R-squared:                       0.794
+Model:                            OLS   Adj. R-squared:                  0.788
+Method:                 Least Squares   F-statistic:                     131.5
+Date:                Fri, 08 May 2026   Prob (F-statistic):               0.00
+Time:                        14:22:44   Log-Likelihood:                -1969.1
+No. Observations:                1192   AIC:                             4008.
+Df Residuals:                    1157   BIC:                             4186.
+Df Model:                          34                                         
+Covariance Type:            nonrobust                                         
+=================================================================================================
+                                    coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+const                            19.1844      1.261     15.216      0.000      16.711      21.658
+bedrooms                         -0.0022      0.003     -0.626      0.531      -0.009       0.005
+bathrooms                        -0.2349      0.032     -7.243      0.000      -0.299      -0.171
+dist_airport_m                    0.0005   4.71e-05     11.618      0.000       0.000       0.001
+dist_cebu_business_park_m        -0.0004   7.79e-05     -5.527      0.000      -0.001      -0.000
+dist_mandaue_cbd_m                0.0006   6.71e-05      8.387      0.000       0.000       0.001
+dist_mactan_cbd_m                -0.0005   4.37e-05    -10.566      0.000      -0.001      -0.000
+dist_srp_m                        0.0005   5.66e-05      8.719      0.000       0.000       0.001
+dist_consolacion_m               -0.0003   2.03e-05    -15.824      0.000      -0.000      -0.000
+dist_naga_city_m                 -0.0005   4.31e-05    -10.686      0.000      -0.001      -0.000
+bir_zonal_rr_median           -2.617e-06   2.67e-06     -0.981      0.327   -7.85e-06    2.62e-06
+bir_zonal_cr_median           -7.614e-06   1.63e-06     -4.657      0.000   -1.08e-05   -4.41e-06
+bir_zonal_rc_median            1.317e-05   2.56e-06      5.151      0.000    8.15e-06    1.82e-05
+bedrooms_imputed                 -0.4093      0.132     -3.112      0.002      -0.667      -0.151
+bathrooms_imputed                -0.6243      0.202     -3.098      0.002      -1.020      -0.229
+mcrai_education                   0.0175      0.007      2.626      0.009       0.004       0.030
+mcrai_finance                    -0.0018      0.004     -0.497      0.619      -0.009       0.005
+mcrai_grocery                     0.0130      0.004      3.470      0.001       0.006       0.020
+mcrai_health                      0.0021      0.010      0.218      0.827      -0.017       0.021
+mcrai_security                   -0.0984      0.017     -5.769      0.000      -0.132      -0.065
+mcrai_transport                   0.0037      0.001      4.516      0.000       0.002       0.005
+mcrai_tourism                    -0.0236      0.004     -6.633      0.000      -0.031      -0.017
+mcrai_recreation                  0.0008      0.003      0.289      0.772      -0.004       0.006
+mcrai_retail_density             -0.0026      0.001     -1.967      0.049      -0.005   -6.43e-06
+city_Consolacion                 -2.3450      0.325     -7.210      0.000      -2.983      -1.707
+city_Lapu-Lapu City               2.4569      0.464      5.291      0.000       1.546       3.368
+city_Mandaue City                -0.7166      0.202     -3.539      0.000      -1.114      -0.319
+city_Minglanilla                 -5.9259      0.664     -8.926      0.000      -7.229      -4.623
+city_Talisay City                -2.2563      0.430     -5.247      0.000      -3.100      -1.413
+property_type_Condominium        -1.4574      0.927     -1.572      0.116      -3.276       0.361
+property_type_House and Lot      -3.6559      0.930     -3.932      0.000      -5.480      -1.832
+property_type_Single Detached    -0.7410      0.927     -0.799      0.424      -2.560       1.078
+property_type_Townhouse          -3.3658      0.956     -3.522      0.000      -5.241      -1.491
+property_type_Vacant Lot         -3.6599      0.951     -3.847      0.000      -5.527      -1.793
+log_floor_area_sqm                0.7704      0.052     14.840      0.000       0.669       0.872
+==============================================================================
+Omnibus:                      116.943   Durbin-Watson:                   1.971
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              726.418
+Skew:                          -0.177   Prob(JB):                    1.82e-158
+Kurtosis:                       6.808   Cond. No.                     7.34e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.34e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

@@ -1,0 +1,278 @@
+{
+  "Banilad, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3518061,
+    "lng": 123.9053005,
+    "formatted": "Banilad, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Sanson Road, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3314565,
+    "lng": 123.8967152,
+    "formatted": "Sanson Rd, Lahug, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Molave Highlands Subdiv., Subdiv., Yati, Liloan, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3924962,
+    "lng": 123.9696377,
+    "formatted": "M091 Fantail, St., Molave Highlands, Subdiv., Yati, Liloan, Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Tisa, Cebu City, Cebu, Pilipinas": {
+    "lat": 10.3033603,
+    "lng": 123.8662448,
+    "formatted": "Tisa, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Talamban, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3693292,
+    "lng": 123.9169018,
+    "formatted": "Talamban, Cebu City, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Lower Pakigne, Minglanilla, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.246444,
+    "lng": 123.8069463,
+    "formatted": "Lower Pakigne, Minglanilla, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Labangon, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3003418,
+    "lng": 123.8815901,
+    "formatted": "Labangon, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "The Mentigi Point by Duros Land, Daanbantayan, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 11.2673454,
+    "lng": 123.9971397,
+    "formatted": "Daanbantayan, 6013 Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Daruhan Drive, San Roque, Talisay City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.2560997,
+    "lng": 123.8538713,
+    "formatted": "Daruhan Drive, San Roque, Talisay, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2926115,
+    "lng": 123.9021934,
+    "formatted": "Cebu City, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Guadalupe, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3234205,
+    "lng": 123.8801952,
+    "formatted": "Guadalupe, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Lahug Barangay Hall, Gorordo Avenue, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.32423,
+    "lng": 123.898534,
+    "formatted": "8VFX+W8J, 168 Gorordo Ave, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Metropolis phase 1, Pulangbato, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3917337,
+    "lng": 123.9175274,
+    "formatted": "9WR9+M2R, Pulangbato, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Don Mariano Cui Street, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.312576,
+    "lng": 123.8909273,
+    "formatted": "Don Mariano Cui St, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Biasong, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2411514,
+    "lng": 123.8313596,
+    "formatted": "Biasong, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Maria Luisa Entrance Road, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3442423,
+    "lng": 123.9099079,
+    "formatted": "Paseo Saturnino, Banilad, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Taytayan, Bogo City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 11.0440908,
+    "lng": 123.9889356,
+    "formatted": "Taytayan, Bogo City, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Mohon, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2507362,
+    "lng": 123.8215894,
+    "formatted": "Mohon, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Pagsabungan, Mandaue City, Cebu, Pilipinas": {
+    "lat": 10.3568128,
+    "lng": 123.9443397,
+    "formatted": "Pagsabungan, Mandaue, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "LeGrand Heights Estates Castille, Barangay Sacsac Rd, Cebu City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3828441,
+    "lng": 123.9300245,
+    "formatted": "Barangay Sacsac Rd, Cebu City, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Tawason, Mandaue City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3781056,
+    "lng": 123.9276107,
+    "formatted": "Tawason, Mandaue, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Basak, Mandaue, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.357189,
+    "lng": 123.9513093,
+    "formatted": "Basak, Mandaue, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Jagobiao Place, TOMAS P. GO, Mandaue, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3678649,
+    "lng": 123.9560385,
+    "formatted": "TOMAS P. GO, Jagobiao, Mandaue, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Cabancalan, Mandaue City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3556827,
+    "lng": 123.9234279,
+    "formatted": "Cabancalan, Mandaue, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Pagsabungan, Mandaue, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3568128,
+    "lng": 123.9443397,
+    "formatted": "Pagsabungan, Mandaue, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Mactan, Lapu-Lapu, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2990463,
+    "lng": 123.9638531,
+    "formatted": "Mactan, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Vista Grande Subdivision, Rio de Janeiro Street, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2701798,
+    "lng": 123.8451862,
+    "formatted": "Rio de Janeiro St, Talisay, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Tabunoc, Talisay City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2642792,
+    "lng": 123.8397332,
+    "formatted": "Tabunoc, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Cebu Province Mushroom Growers Agriculture Cooperative, San Miguel Linao, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2618226,
+    "lng": 123.8176026,
+    "formatted": "125 San Miguel Linao, Talisay, 6045 Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Alberlyn South Subdivision, Cansojong, Talisay City, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2543524,
+    "lng": 123.8501813,
+    "formatted": "7V32+G37, Cansojong, Talisay, Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Kishanta Subdivision, Lagtang, Talisay City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.2754314,
+    "lng": 123.8320574,
+    "formatted": "Kishanta Subdivision, Talisay, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Corona Del Mar, In front of corona del mar, Pooc, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2425683,
+    "lng": 123.8200271,
+    "formatted": "In front of corona del mar, Pooc, Talisay, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Captain Polong Deiparine Road, Cansojong, Talisay City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.2518079,
+    "lng": 123.8541855,
+    "formatted": "Cansojong, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Bulacao Pardo, Cebu City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.2822578,
+    "lng": 123.8508969,
+    "formatted": "7VJ2+W92 new town sub, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Lawaan III, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2645497,
+    "lng": 123.8271725,
+    "formatted": "Lawaan III, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Dumlog, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2494847,
+    "lng": 123.8425243,
+    "formatted": "Dumlog, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Kishanta Subdivision, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2754314,
+    "lng": 123.8320574,
+    "formatted": "Kishanta Subdivision, Talisay, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Bulacao, Talisay, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.270857,
+    "lng": 123.8453152,
+    "formatted": "Bulacao, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "Flordeliz Street, Inayawan, Cebu City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.2709462,
+    "lng": 123.8502316,
+    "formatted": "Flordeliz St, Bulacao, Cebu City, 6000 Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Mohon Road, Pooc, Talisay City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.2474462,
+    "lng": 123.8248235,
+    "formatted": "Mohon Rd, Pooc, Talisay, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Cebu South Coastal Road, Cansojong, Talisay City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.2514747,
+    "lng": 123.8516329,
+    "formatted": "Cebu South Coastal Rd, Cansojong, Talisay, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Bulacao, Talisay City, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.270857,
+    "lng": 123.8453152,
+    "formatted": "Bulacao, Talisay, Cebu, Philippines",
+    "loc_type": "APPROXIMATE"
+  },
+  "South Town Ctr, Bulacao, Talisay, Cebu, Central Visayas, PHL, Philippines": {
+    "lat": 10.266911,
+    "lng": 123.84333,
+    "formatted": "285 Cebu S Rd, Talisay, 6045 Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Monte Carlo Subdivision, Minglanilla, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.2542922,
+    "lng": 123.7930428,
+    "formatted": "6046, Minglanilla, Cebu, Philippines",
+    "loc_type": "GEOMETRIC_CENTER"
+  },
+  "Ananda Townhomes, Unnamed Road, Consolacion, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3716912,
+    "lng": 123.9442735,
+    "formatted": "9WCV+MPC, Unnamed Road, Consolacion, Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  },
+  "Robin's Lane Subdivision Latasan Road, Nangka,Consolacion, Nangka Purok 4 Road, Consolacion, Lalawigan ng Cebu, Pilipinas": {
+    "lat": 10.3741129,
+    "lng": 123.9645978,
+    "formatted": "9XF7+JRX, Nangka Purok 4 Rd, Consolacion, Cebu, Philippines",
+    "loc_type": "ROOFTOP"
+  }
+}

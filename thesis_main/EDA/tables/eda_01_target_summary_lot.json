@@ -1,0 +1,17 @@
+[
+  {
+    "stratum":"Lot",
+    "n":849,
+    "mean":43053.7490861892,
+    "median":30000.0,
+    "std":37353.4163443162,
+    "skewness":2.2209672441,
+    "kurtosis":7.6397702055,
+    "min":2981.4432989691,
+    "max":300132.3529411764,
+    "iqr":41422.4664224664,
+    "log_price_shapiro_stat":0.9857446023,
+    "log_price_shapiro_p":0.0000002382,
+    "log_price_normality":"does not appear normal"
+  }
+]

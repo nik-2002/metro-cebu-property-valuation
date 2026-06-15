@@ -1,0 +1,57 @@
+# macOS and editor state
+.DS_Store
+**/.DS_Store
+.vscode/
+
+# Local agent/tool state
+.claude/worktrees/
+.mcp.json
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Generated caches and scraper artifacts
+cache/
+thesis_main/cache/
+thesis_main/Data/webscraping-lamudi/search.html
+thesis_main/Data/webscraping-lamudi/prop.html
+
+# LaTeX build outputs
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Model and geospatial build artifacts
+*.pkl
+*.joblib
+*.parquet
+thesis_main/QGIS/outputs/
+thesis_main/playwright/screenshots/
+
+# Local generated app data
+thesis_main/app/data/*.parquet
+

@@ -1,0 +1,181 @@
+<mxfile host="65bd71144e">
+    <diagram name="Data Pipeline" id="data-pipeline-v3">
+        <mxGraphModel dx="2055" dy="1215" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1400" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="lbl1" value="DATA COLLECTION" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="14" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="s1" value="&lt;b&gt;Lamudi Web Scraping&lt;/b&gt;&lt;br&gt;open_market tier&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;1,619 rows (Phases A–C)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="s2" value="&lt;b&gt;Bank ROPA&lt;/b&gt;&lt;br&gt;bank_ropa tier&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;BDO · BPI · Metrobank&lt;br&gt;BoC · Landbank · CBS&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="40" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="s3" value="&lt;b&gt;Floor Prices&lt;/b&gt;&lt;br&gt;floor_price tier&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;BDO · Pag-IBIG&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="40" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a1" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="s1" target="geo" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a2" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="s2" target="geo" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="s3" target="geo" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl2" value="GEOCODING" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="150" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="geo" value="&lt;b&gt;Geocoding — Google Maps API&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;lat / lon assigned to all property rows&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="174" width="380" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="geo" target="f1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl3" value="FEATURE ENGINEERING" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="262" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="f1" value="&lt;b&gt;CBD Distances&lt;/b&gt;&lt;br&gt;osmnx · Dijkstra&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;8 CBD nodes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="288" width="148" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="f2" value="&lt;b&gt;BIR Zonal Join&lt;/b&gt;&lt;br&gt;bir_zonal_rr_median&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;by barangay&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="288" width="148" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="f3" value="&lt;b&gt;MCRAI Scoring&lt;/b&gt;&lt;br&gt;Hansen gravity β=2.0&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;9 categories&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="288" width="148" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="f4" value="&lt;b&gt;Spatial Lag&lt;/b&gt;&lt;br&gt;KNN price lag&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;k=5 neighbors&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="288" width="148" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext1" value="&lt;b&gt;osmnx Road Network&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;23,501 nodes · 27,592 edges&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="288" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext2" value="&lt;b&gt;Google Maps Places API&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;9 MCRAI POI categories&lt;br&gt;education · finance · grocery&lt;br&gt;health · security · tourism&lt;br&gt;recreation · retail · transport&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="350" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext3" value="&lt;b&gt;OSM Overpass API&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;2,643 highway way centers&lt;br&gt;(transport midpoints)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="442" width="200" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext4" value="&lt;b&gt;BIR Zonal Values&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;Schedule of Zonal Values&lt;br&gt;by barangay&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="509" width="200" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="ea1" style="dashed=1;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" parent="1" source="ext1" target="f1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ea2" style="dashed=1;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" parent="1" source="ext2" target="f3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ea3" style="dashed=1;endArrow=block;endFill=1;exitX=0;exitY=0.3;entryX=1;entryY=0.7;" parent="1" source="ext3" target="f3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ea4" style="dashed=1;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;edgeStyle=orthogonalEdgeStyle;entryDx=0;entryDy=0;" parent="1" source="ext4" target="f2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="689" y="537"/>
+                            <mxPoint x="689" y="261"/>
+                            <mxPoint x="274" y="261"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a4b" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="f1" target="prep_grp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4c" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="f2" target="prep_grp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4d" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="f3" target="prep_grp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a4e" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="f4" target="prep_grp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl4" value="ABT PREPROCESSING" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="392" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="prep_grp" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="416" width="636" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1" value="Standardize&lt;br&gt;Property Types" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="428" width="140" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2" value="Market Segment&lt;br&gt;Labeling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="204" y="428" width="140" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3" value="Imputation&lt;br&gt;bedrooms · bathrooms&lt;br&gt;floor_area · area_sqm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="358" y="428" width="140" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4" value="Outlier Flagging&lt;br&gt;price_outlier_flag" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="512" y="428" width="152" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="a5" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="prep_grp" target="abt" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl5" value="ANALYTICS BASE TABLE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="516" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="abt" value="&lt;b&gt;abt_clean.csv&lt;/b&gt; — 2,047 rows × 46 columns · 6 LGUs · 3 market segments" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e65c00;strokeColor=#cc4a00;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="540" width="476" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="abt" target="filt" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="filt" value="Filter to open_market  →  1,491 modeling-ready rows" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;arcSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="158" y="618" width="400" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="a7" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="filt" target="m1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a7b" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="filt" target="m2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a7c" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="filt" target="m3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl6" value="MODELING" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="684" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="m1" value="&lt;b&gt;OLS Hedonic&lt;/b&gt;&lt;br&gt;Log-log specification&lt;br&gt;Baseline comparator&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;R²=0.08 (test)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="708" width="180" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="m2" value="&lt;b&gt;Random Forest ★&lt;/b&gt;&lt;br&gt;&lt;b&gt;DEPLOYED MODEL&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#2d6a2d&quot;&gt;R²=0.807 · MAPE=59.3%&lt;br&gt;MAE=4.95M · RMSE=27.5M&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#2d7600;fontSize=10;arcSize=10;align=center;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="238" y="708" width="240" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="m3" value="&lt;b&gt;XGBoost&lt;/b&gt;&lt;br&gt;Comparator&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;R²=0.491 (test)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="496" y="708" width="180" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="a8" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="m1" target="shap" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a8b" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="m2" target="shap" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a8c" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="m3" target="shap" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl7" value="INTERPRETABILITY" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="812" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="shap" value="&lt;b&gt;SHAP Analysis&lt;/b&gt; (RF + XGBoost)&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;Feature importance · MCRAI Stage 2 weight derivation&lt;br&gt;OLS coefficients → composite weights (education, grocery, recreation, transport)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="836" width="516" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a9" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="shap" target="o1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a9b" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="shap" target="o2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl8" value="OUTPUTS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="924" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="o1" value="&lt;b&gt;Streamlit App&lt;/b&gt;&lt;br&gt;Property Predictor&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;SHAP waterfall · city/type inputs&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="948" width="210" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="o2" value="&lt;b&gt;QGIS Price Surface Map&lt;/b&gt;&lt;br&gt;Predicted open-market price&lt;br&gt;&lt;font color=&quot;#555555&quot;&gt;continuous surface · Metro Cebu&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;arcSize=10;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="376" y="948" width="260" height="65" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

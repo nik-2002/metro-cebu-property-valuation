@@ -1,0 +1,13 @@
+dataset,strictness,duplicate_groups
+Condo,soft,241
+Condo,coord,277
+Condo,hard,0
+Houses,soft,204
+Houses,coord,254
+Houses,hard,1
+Lot,soft,108
+Lot,coord,151
+Lot,hard,1
+Master,soft,664
+Master,coord,719
+Master,hard,42

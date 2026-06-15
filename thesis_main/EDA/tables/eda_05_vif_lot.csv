@@ -1,0 +1,17 @@
+feature,vif
+dist_cebu_business_park_m,9.998912978711058
+dist_mandaue_cbd_m,6.632245797819655
+bir_zonal_rr_log,6.311191606854595
+mcrai_health,6.048169905601647
+mcrai_tourism,5.364402158446401
+mcrai_grocery,4.830608619616306
+mcrai_education,4.530018276968279
+mcrai_retail_density,3.9037789318751908
+mcrai_hospitals,3.5239575274132373
+bir_zonal_cr_median,3.24857250462561
+mcrai_recreation,2.5300756305528687
+mcrai_security,2.2937035578962957
+dist_to_trunk_road_m,1.9060544019892591
+dist_to_primary_road_m,1.7194728142825442
+spatial_lag_price,1.464733000288373
+area_sqm,1.164041718950402

@@ -1,0 +1,17 @@
+[
+  {
+    "stratum":"Condo",
+    "n":1300,
+    "mean":174227.8601764517,
+    "median":161718.5903993705,
+    "std":167355.1051463951,
+    "skewness":24.9753507463,
+    "kurtosis":790.5958310868,
+    "min":16181.2297734628,
+    "max":5500000.0,
+    "iqr":85591.4021659476,
+    "log_price_shapiro_stat":0.9230573425,
+    "log_price_shapiro_p":3.058401199e-25,
+    "log_price_normality":"does not appear normal"
+  }
+]

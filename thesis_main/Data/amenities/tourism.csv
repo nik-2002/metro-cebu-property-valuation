@@ -1,0 +1,557 @@
+id,lat,lon,amenity_type,amenity,lgu
+ChIJQYJWH1-ZqTMRL8vTiCw8NSk,10.2986579,123.9040433,tourist_attraction,1730 Jesuit House,Cebu City
+ChIJHUlipniZqTMRgHons7sSuaE,10.3340267,123.9012257,lodging,26th Avenue Guesthouse,Cebu City
+ChIJXzHnGCCZqTMRFaLxyseYui0,10.3331525,123.9074031,lodging,Alba Uno Hotel,Cebu City
+ChIJB1NVlEOZqTMRnmWoOsIVN50,10.3094336,123.90375,lodging,AllSon's Inn,Cebu City
+ChIJz9eCRKyZqTMRxK-aGEoOIGc,10.3092536,123.9035807,lodging,Almond Suites,Cebu City
+ChIJqVrGs0WZqTMRqqQyBKCWCWo,10.309881,123.899447,lodging,Alto Pension House,Cebu City
+ChIJ6xlvd0qZqTMRr4KjCN5WLDQ,10.317351,123.8894362,lodging,Amethyst Boutique Hotel Cebu,Cebu City
+ChIJn7X9OliZqTMROYyA-bukf0k,10.2992366,123.8981022,lodging,Angels Pension houseTenant referral only,Cebu City
+ChIJXT_HGCCZqTMRezm3RjOCb4g,10.3334235,123.9076554,lodging,Anri Pension House,Cebu City
+ChIJT7kt7uGbqTMRE9pS3Ayv3ao,10.2961373,123.9035625,tourist_attraction,Archdiocesan Museum of Cebu,Cebu City
+ChIJiUfgPQCZqTMRysb9xzQxmlk,10.3064718,123.9040602,tourist_attraction,Ardex Tambayan,Cebu City
+ChIJd0KiYwCZqTMR1zS_jDGPO0I,10.3128033,123.91004,tourist_attraction,Argao planta,Cebu City
+ChIJbewhEACfqTMRApvn_oQBQZ4,10.3038213,123.8774881,tourist_attraction,Arvin Valle,Cebu City
+ChIJC96PGaieqTMRT3UhcJH3Epw,10.298521,123.884083,lodging,Athalia Building,Cebu City
+ChIJdxY6YwCZqTMRJ9Rdh9Uf0Xc,10.3183828,123.8960731,tourist_attraction,Axis Avenue of Lights,Cebu City
+ChIJv_5aBe-ZqTMRYfIEMOx9Doc,10.313421,123.8929645,lodging,Bayfront Hotel Cebu - Capitol Site,Cebu City
+ChIJdWAY9omZqTMR5PT1YBVRFhM,10.3331125,123.8896094,tourist_attraction,Beverly Hills Lahug Cebu City,Cebu City
+ChIJa8YrKrWeqTMRUmeeQNYZ4OA,10.315699,123.88544,lodging,Bongavilla Beach Resort & Spa,Cebu City
+ChIJuxIAGQCZqTMRLg6VPhXaGUs,10.2994328,123.8925778,tourist_attraction,"Box mini Private, Sambag 1, Cebu city",Cebu City
+ChIJO88KUwCfqTMRXjMon7rGBD0,10.328264,123.9039259,tourist_attraction,Busay Cebu,Cebu City
+ChIJkw4YkuSbqTMRj-KNt73Rp_w,10.2914389,123.899131,tourist_attraction,Carbon Market,Cebu City
+ChIJEalesxWZqTMRXDp52gxWuPo,10.3187219,123.911479,tourist_attraction,Carmelite Monastery,Cebu City
+ChIJteVFQwCZqTMRjG4qh49SmW4,10.3223248,123.9163928,tourist_attraction,Casa De Cacao,Cebu City
+ChIJdZVg9F6ZqTMRbU7ErBLR6vU,10.299913,123.9048616,tourist_attraction,Casa Gorordo Museum,Cebu City
+ChIJp2lbZheZqTMR7TLFFL3T6n0,10.3238403,123.9119862,lodging,Casa Loreto B&B,Cebu City
+ChIJG-hAvEiZqTMR4UEoocRnlAg,10.313101,123.8959931,lodging,Casa Rosario Hotel,Cebu City
+ChIJJSDyO0WZqTMRXaEQquMpzFk,10.3076235,123.8981974,tourist_attraction,Casino Español de Cebu,Cebu City
+ChIJfWHcMheZqTMRRo96BsPdbUk,10.3226077,123.9138739,lodging,Castle Peak Hotel,Cebu City
+ChIJN46R-SKZqTMRW81jt6naGFk,10.2982908,123.8998914,lodging,Cebu Backpackers Hostel,Cebu City
+ChIJc8ZDkViZqTMRpqBHqfANjSI,10.2977752,123.9007358,lodging,Cebu Business Hotel,Cebu City
+ChIJkd_I8UmZqTMRvcp1KpRpEXs,10.3163258,123.8918445,lodging,Cebu Capitol Central Hotel & Suites,Cebu City
+ChIJdTpaeFiZqTMRfGWB8x5U_6o,10.2970616,123.8989615,lodging,Cebu Century Hotel,Cebu City
+ChIJCxCLJU-ZqTMRFlaKows-y28,10.311692,123.894274,lodging,Cebu Century Plaza Hotel,Cebu City
+ChIJf4X5EVeZqTMRQ_EpX26alNA,10.3005725,123.8954441,tourist_attraction,Cebu City Sports Center,Cebu City
+ChIJT2EdT3GZqTMR23I5HKvPEZE,10.3206788,123.913479,lodging,Cebu Family Suites powered by Cocotel,Cebu City
+ChIJ69rb5DeZqTMROYkGsbyQ6WM,10.3183864,123.8955108,lodging,Cebu Grand Hotel,Cebu City
+ChIJg9XobtGYqTMRlFw9lOZf1_M,10.3416833,123.8923123,lodging,Cebu Guest Inn,Cebu City
+ChIJVc96Lc6YqTMRt5RwGMxedlU,10.3464845,123.8938474,lodging,Cebu Hilltop Hotel,Cebu City
+ChIJZ8Tl-0uZqTMRNgSFFMEg6hs,10.3130777,123.8905612,lodging,Cebu Hotel Plus,Cebu City
+ChIJadEVV0yZqTMRekT3PI-8Jwc,10.3163291,123.8908334,tourist_attraction,Cebu Kilometer Zero,Cebu City
+ChIJmeVzvkyZqTMRyAruCgIdPwU,10.3122628,123.8872791,lodging,Cebu Leisure Lodge,Cebu City
+ChIJlWUN8-GbqTMRepueypood48,10.2955765,123.9029952,tourist_attraction,Cebu Metropolitan Cathedral,Cebu City
+ChIJmbXsobCZqTMRHO6zrj0W9lU,10.3185465,123.8973106,lodging,Cebu Mini Hotel,Cebu City
+ChIJVVVVWVeZqTMRl7svJzEKQdE,10.3013452,123.896342,tourist_attraction,Cebu Normal University Museum,Cebu City
+ChIJW2O3gyOZqTMRoUp0c3PiDXE,10.3288533,123.902264,lodging,Cebu Northwinds Hotel,Cebu City
+ChIJc8mvsT6ZqTMRrPp8G7jlLT0,10.3202607,123.903079,lodging,Cebu Parklane International Hotel,Cebu City
+ChIJ44n4BUqZqTMRnTzd5jeE0gQ,10.3168489,123.8906336,tourist_attraction,Cebu Provincial Capitol,Cebu City
+ChIJscevspmZqTMR5Obr8qGoQ4o,10.3200506,123.9093043,lodging,Cebu Quincentennial Hotel,Cebu City
+ChIJJ4s_NEqZqTMRh6LHKq63UTo,10.3154083,123.8900955,lodging,Cebu R Hotel,Cebu City
+ChIJV5J8xYCfqTMRK-t4_Ljbg20,10.3156992,123.8854366,tourist_attraction,Cebu Random Finds,Cebu City
+ChIJAXTN18KdqTMRXYi33J7nLgU,10.288078,123.8646969,tourist_attraction,Cebu Tour Guide,Cebu City
+ChIJQ5l2xgiZqTMRdKTg9DmzCv4,10.2888034,123.8589648,lodging,Cebu Tourist INN,Cebu City
+ChIJm-wlKBaZqTMRdu32VNkS5kY,10.3307323,123.8969974,lodging,Cebu Transient Rooms,Cebu City
+ChIJcyAkKmucqTMRdezbCIH3nLA,10.2814184,123.866337,lodging,Cebu Wetland Resort,Cebu City
+ChIJ11vBDACZqTMRNxp1TGePUnk,10.2979608,123.8953638,tourist_attraction,Cebu city,Cebu City
+ChIJpw3EveKbqTMR9H5KrBpLrNE,10.2963199,123.8982163,lodging,Cebu transient rooms,Cebu City
+ChIJ9xeFHgCbqTMRt17R5Lkft8U,10.2962749,123.8982511,tourist_attraction,Cebu-ya Crossing,Cebu City
+ChIJzelREliZqTMRbBwf5_wben8,10.2980205,123.8981365,lodging,Cebuview Tourist Inn,Cebu City
+ChIJ95A-5AycqTMRAigIv9nsSQs,10.2817974,123.8778229,tourist_attraction,Chapel of San Pedro Calungsod,Cebu City
+ChIJf0-17v6ZqTMRru9Cp3zvMKM,10.2989144,123.9003122,lodging,Che and James Guest House,Cebu City
+ChIJVVfSEB-ZqTMRgJ1YSstDLTQ,10.3042607,123.9111991,tourist_attraction,Christmas Village og Love,Cebu City
+ChIJm0iFLN6ZqTMRsTUOXVHB084,10.316145,123.901803,lodging,City Stay Cebu,Cebu City
+ChIJc6yApVqZqTMRqySbvCnm7T8,10.3056885,123.8973022,lodging,City Suites Ramos Tower,Cebu City
+ChIJ4dWUPl-ZqTMRRAXUfxKt42s,10.2979797,123.9036644,tourist_attraction,Colon Obelisk arcae,Cebu City
+ChIJKSX60k-ZqTMR6LAVn86QP4M,10.3080134,123.894077,lodging,Crown Regency Hotel & Towers,Cebu City
+ChIJO7I8ESSZqTMRsjABytp4VdE,10.32975,123.9016647,lodging,Crowne Garden Hotel,Cebu City
+ChIJvS_Tok6ZqTMRd4PyBLNiZgM,10.3112987,123.8920517,lodging,Cuarto Hotel Cebu,Cebu City
+ChIJXVjhUYSZqTMRVMXcCy42kbs,10.3025163,123.8977827,lodging,Diamond Hall Cebu,Cebu City
+ChIJz3CVClCZqTMRnbPqpqzAWgg,10.3061156,123.8969354,lodging,Diplomat Hotel Cebu,Cebu City
+ChIJQWc3XiiZqTMRa3p8Y5DXrEE,10.3338276,123.8968613,lodging,Double A at Mivesa,Cebu City
+ChIJwd0FORqZqTMRNojinghJTD0,10.3115413,123.9019721,lodging,"Down South Hostel, Cebu city",Cebu City
+ChIJtUqLDKibqTMRvX48jFWyLX8,10.2962772,123.8982283,tourist_attraction,Downtown Cebu City,Cebu City
+ChIJzU3MekOZqTMRu51x_Epm7Ls,10.309044,123.9035352,lodging,Dragon Home Inn,Cebu City
+ChIJo9CEckyZqTMRsOWcZ7F3G6A,10.3122222,123.8897222,lodging,Dynasty Tourist Inn,Cebu City
+ChIJ02QlTwCZqTMRN-3FPj_xPu0,10.3108839,123.9025934,tourist_attraction,Eason 一世,Cebu City
+ChIJba8X-06ZqTMROeIepFxcMjQ,10.3106572,123.8935012,lodging,Elegant Circle Inn,Cebu City
+ChIJ9ZjMMDaZqTMRR86QdZljiaU,10.3179038,123.8935274,lodging,Escario Central Hotel,Cebu City
+ChIJr7JOz06ZqTMRkGsxmFJoGks,10.3115672,123.8930644,lodging,Executive Pension,Cebu City
+ChIJbSk-JliZqTMR8l11vcbxvIY,10.2990792,123.8971555,lodging,Express Inn Osmena,Cebu City
+ChIJISbRH1GZqTMRqp24p3b0sBc,10.3038074,123.8941189,lodging,Familia Pension House,Cebu City
+ChIJERud7h-ZqTMRAlf7hPnHbFw,10.3335821,123.9090124,lodging,Felix Bnb,Cebu City
+ChIJH5u-OnecqTMRlls-lYZ7n4M,10.2713631,123.8817315,lodging,Fili Hotel at NUSTAR Resort Cebu,Cebu City
+ChIJiYix3uCbqTMRAqkwfbD7es0,10.292457,123.905636,tourist_attraction,Fort San Pedro,Cebu City
+ChIJWxk2FACdqTMRVSlZu3usEO8,10.2829604,123.8804684,tourist_attraction,Front Facing Pinkie Pie at SM Department Store,Cebu City
+ChIJ5_fUL0yZqTMRhGuA6HWAT3U,10.3110233,123.8941215,lodging,Fuente Hotel de Cebu,Cebu City
+ChIJhSp0SEmZqTMRm9QQFZ5E_gA,10.312439,123.8927511,lodging,Fuente Oro Business Suites,Cebu City
+ChIJSy3DeQCZqTMRQOLGvV13yW4,10.3102031,123.8936769,lodging,Fuente osmena cebu city,Cebu City
+ChIJbzHo9fybqTMRK_LNeAbDZu4,10.294464,123.894217,lodging,GLOJAM Town Apartelle,Cebu City
+ChIJiTH4_leZqTMROxnye9eNnwU,10.296878,123.8933777,lodging,Global 88 Apartelle,Cebu City
+ChIJwQ3KH9qYqTMRiX2vvF5-pcI,10.340663,123.8981706,tourist_attraction,Goddess of Mercy,Cebu City
+ChIJ4x77J1eZqTMR2SHCZ6h7pIs,10.3018931,123.8941821,lodging,Goland Pension House & Dormitory by SMS Hospitality,Cebu City
+ChIJAQAA0EuZqTMRa-VZiB1rJ0M,10.3138406,123.890929,tourist_attraction,Governors' Gallery,Cebu City
+ChIJk3YHxUuZqTMRUKJN9AxH9j4,10.3142694,123.8905223,lodging,Gran Tierra Suites,Cebu City
+ChIJ2W_dEV2ZqTMRzMPi2dqSOFQ,10.3058929,123.906814,tourist_attraction,Grand Tejero Cockpit Arena,Cebu City
+ChIJsahA-3ALqTMRcTMmRRshTjw,10.390784,123.7824685,lodging,Guillen Plantaciones Resort Farm,Cebu City
+ChIJM-jk5EuZqTMR8U2RqVFRPLg,10.3134494,123.8908134,lodging,Hamersons Hotel Cebu,Cebu City
+ChIJr7hXOGabqTMRCDHBnnTbKxU,10.2956808,123.9045862,lodging,HappyNest Hostel Cebu,Cebu City
+ChIJPTKTpDmZqTMRNBOwcrVHv70,10.3196171,123.8991125,lodging,Harolds Hotel Cebu City,Cebu City
+ChIJVVUJKV-ZqTMRQqcSUyQMRLo,10.2988637,123.9030021,lodging,Heaven's Pension House,Cebu City
+ChIJhwbYF6KhqTMRnblKTxe9bqo,10.2988468,123.9035745,tourist_attraction,Heritage of Cebu Monument,Cebu City
+ChIJL1s_MBSZqTMRyDffXQ-NxCQ,10.3183234,123.8929228,lodging,Hideaway 903 bnb,Cebu City
+ChIJc7grKrWeqTMRpVenIVc_UmE,10.316972,123.909306,lodging,Holiday Inn Cebu City by IHG,Cebu City
+ChIJnegG2R6ZqTMRLdJMuXY_bEw,10.3296134,123.9110502,lodging,Holiday Spa Hotel,Cebu City
+ChIJ0-Sht_GZqTMR7pS9F8JP2GA,10.3170212,123.9092805,lodging,Hop Inn Hotel Cebu City,Cebu City
+ChIJgWY_KwCbqTMRB-t4Ck3AhGY,10.2969068,123.8948654,lodging,Hope Pension House,Cebu City
+ChIJm-GLrkmZqTMRdBXuU3nvOu0,10.3131638,123.8958341,lodging,Hostel 7 Cebu,Cebu City
+ChIJ1az0qziZqTMRh25Wpd3WiMw,10.3166293,123.9022355,lodging,Hotel Elizabeth Cebu,Cebu City
+ChIJuQkNvraZqTMRQVCEY-3zhKo,10.3145681,123.8941161,lodging,Hotel One,Cebu City
+ChIJeXIkrGiZqTMR8L_JqIbOQJI,10.305,123.9125,lodging,Hotel Pier Cuatro - 2 Star,Cebu City
+ChIJtcfI_leZqTMRE5g-Rp19VY4,10.2978171,123.897782,lodging,Hotel Sogo - Cebu,Cebu City
+ChIJHTrhKnmZqTMRK-5ey8OmqRk,10.321902,123.8959999,lodging,House of Eleanor,Cebu City
+ChIJozQqKrWeqTMRXdEI8xt404I,10.3156992,123.8854366,lodging,Intosan Resort,Cebu City
+ChIJB619QvqbqTMR1iey9nPDTuM,10.2893463,123.8931727,lodging,JRM (Mariner's)Travellers Inn,Cebu City
+ChIJVVUlzlGZqTMRlQYlogH7vUw,10.3067146,123.893664,lodging,Jacith Pension House,Cebu City
+ChIJk2TA_0uZqTMRfJkfO8wLrlU,10.312583,123.891297,lodging,Jasmin Pension House,Cebu City
+ChIJzRtNRHefqTMRlITY_0QhyuM,10.3156992,123.8854366,lodging,Jo.Ceb,Cebu City
+ChIJB3YOn1qfqTMRK35NDEcv4L8,10.3211434,123.8796533,tourist_attraction,Jovan-Chris P. Chicken & Rellik Rellik,Cebu City
+ChIJ40-A7RecqTMR3k8P-RT__BU,10.290659,123.8644898,tourist_attraction,Jumalon Butterfly Sanctuary And Art Gallery,Cebu City
+ChIJUyI2-zKdqTMRkmeM31fs2-Q,10.2897096,123.8688062,lodging,KRYST TOURIST INN,Cebu City
+ChIJn4q83z2cqTMR0CyLm92aSho,10.2870649,123.8619996,lodging,Kaizen Pension House,Cebu City
+ChIJDf9gawCZqTMRPgKpAWAxzkE,10.3439804,123.9007609,tourist_attraction,Kalachuchi-an Overlooking View,Cebu City
+ChIJlZFLSWiZqTMR7vv8a8ZYyHE,10.3237159,123.9119254,lodging,Kasa Boutique Hotel - Kasambagan,Cebu City
+ChIJW5-ww6udqTMR_uvgl6H8feI,10.2713121,123.8815228,tourist_attraction,Kawit Light Beacon,Cebu City
+ChIJ262p4YWZqTMRzPFwqX-y5h4,10.3120982,123.9022302,lodging,Klowei Transient Home,Cebu City
+ChIJ_zms8yCZqTMRHYqGVRNryC8,10.3314518,123.898379,tourist_attraction,LBM Transport Corridor Pt.A,Cebu City
+ChIJveOEGpufqTMRyDXa2bA5myU,10.3754768,123.8245387,lodging,Lava Mountain River Farm,Cebu City
+ChIJi5rMPgCfqTMRESfiNM6PvlE,10.3209978,123.880759,tourist_attraction,Leaning Tower of Yoga,Cebu City
+ChIJ8aOHb8SbqTMRu6TQBw88B8c,10.296514,123.8927557,lodging,Leo's Inn,Cebu City
+ChIJDc1S7DeZqTMRD8zajawEIQM,10.3173187,123.8934224,lodging,Lex Hotel Cebu,Cebu City
+ChIJC9_zSQCdqTMRH9Ef6EBZMNE,10.2989125,123.8539933,tourist_attraction,Linao Sa Nazareth (TUBOD BUHISAN CEBU CITY),Cebu City
+ChIJ1cvy2OadqTMRPOlJ5dCyyB0,10.3001404,123.8499629,tourist_attraction,Lumadnong Swimming Pool,Cebu City
+ChIJMUxTlk6ZqTMRb6rATEaXG2A,10.3108396,123.89231,lodging,M Citi Suites,Cebu City
+ChIJb6aHbpWZqTMRELq7gKfG974,10.3105425,123.894165,lodging,MARITIME SEAMAN DORMITORY FUENTE CEBU CITY,Cebu City
+ChIJi1_jFwCZqTMReKeWw-ieF1I,10.3027701,123.8981971,tourist_attraction,MASAHE DE CEBU,Cebu City
+ChIJ1ZvfoHGZqTMRNe_uOx9khIo,10.3155211,123.8945865,lodging,MCA Suites by Hiverooms,Cebu City
+ChIJ40DZUDmZqTMR-VOP6aFTBVc,10.3204998,123.9019709,lodging,MJ Hotel & Suites,Cebu City
+ChIJU2ypFECZqTMRJp_u5_1Zrpk,10.3142919,123.9063614,lodging,Magabelle Guesthouse,Cebu City
+ChIJQVwA2-ObqTMR--ZXFjrCXiQ,10.2935626,123.9019549,tourist_attraction,Magellan's Cross,Cebu City
+ChIJOU8g6lCZqTMRDhxcY8I0Lyk,10.3070174,123.8948755,lodging,Magnolia Pension,Cebu City
+ChIJV6m2HECdqTMRMgVMNbIU278,10.2909084,123.8732763,lodging,Mambaling Pension House 1,Cebu City
+ChIJgYekB6adqTMRGQlSGs7xMiA,10.2909522,123.8726899,lodging,Mambaling Pension House 2,Cebu City
+ChIJiVFrsD6ZqTMRDkLpdo7759o,10.3198424,123.9032783,lodging,Mandarin Plaza Hotel,Cebu City
+ChIJy_0cnUaZqTMRcU3hpnZc2Mw,10.3107861,123.9025547,lodging,Mango Park Hotel,Cebu City
+ChIJ4ZswOwCZqTMRnHKe-eA7ZiA,10.2999252,123.9004195,tourist_attraction,Manigos & Fukushima Integrated Farm,Cebu City
+ChIJX_qEFtqYqTMRXLB5YKVbEYQ,10.3417299,123.8974558,lodging,Marco Polo Plaza Cebu,Cebu City
+ChIJfcRjBACdqTMR0t2IgLhE_ko,10.2904373,123.8844648,tourist_attraction,Marie Stella cho,Cebu City
+ChIJ-X1K7YOdqTMRjxTuDmPm8Nw,10.2851525,123.8646178,tourist_attraction,Mart Andre R. Fernandez,Cebu City
+ChIJs8eiGzSZqTMR4BnligHzP7U,10.3246767,123.8902688,lodging,Mayflower Inn,Cebu City
+ChIJ4Vm4siaZqTMRISv16iNQN58,10.3313256,123.9026801,lodging,Metro Park Hotel,Cebu City
+ChIJ_W0U1hCZqTMRY_PmTqQSX8g,10.3219068,123.9140641,lodging,Mezzo Hotel,Cebu City
+ChIJa3rWl5mdqTMRlEJ2NJXfmz4,10.2975534,123.8826533,tourist_attraction,Michael Navarro's Mansion,Cebu City
+ChIJp45-1uObqTMRKiyk55UEjGY,10.2941085,123.9021057,tourist_attraction,Minor Basilica of the Holy Child of Cebu (Basilica Minore Del Sto. Niño de Cebu),Cebu City
+ChIJ3624yy2dqTMRvuZiJaQ8tYc,10.298376,123.8815066,lodging,Moonstar Cebu,Cebu City
+ChIJkRLIDF2ZqTMRYsvjh5V6j3M,10.303791,123.9064311,tourist_attraction,Museo Sugbo,Cebu City
+ChIJ8ZVZy0iZqTMRw8bIBH31tSs,10.3121741,123.895262,lodging,NS Royal Hotel,Cebu City
+ChIJxfT9I1WdqTMRiqcYGYapnLw,10.2721471,123.880803,lodging,NUSTAR Resort Cebu,Cebu City
+ChIJiacczRWZqTMRx8rVSE2dIVQ,10.3191985,123.9109979,lodging,New Era Cebu Pension Inn Inc.,Cebu City
+ChIJmfyOO1qZqTMR4gL2cxMy0tA,10.3019111,123.8991772,lodging,OYO 703 Gplace,Cebu City
+ChIJhQ4DZv2fqTMRJhhhY9eER8Q,10.3154415,123.8852063,lodging,Oceana Resort,Cebu City
+ChIJBy7GWP2bqTMRcwxWh2mqUnU,10.2973943,123.8958342,lodging,One Central Hotel,Cebu City
+ChIJ69rb5DeZqTMRfNGBX2itk9U,10.3172892,123.8961329,tourist_attraction,Our Lady of the Sacred Heart Parish,Cebu City
+ChIJxZmjGUaZqTMRR5u5Tob6zGI,10.3128236,123.8972112,tourist_attraction,Our Mother of Perpetual Help - Redemptorist Church,Cebu City
+ChIJKcSMdQCfqTMRn8cIXGDu8NM,10.3071268,123.8794743,tourist_attraction,PHDream,Cebu City
+ChIJHWHRXVCZqTMREpGQ28OUiuo,10.3054951,123.8954428,lodging,Pacific Pensionne House,Cebu City
+ChIJH31t--KbqTMRCBPqIw_ap9M,10.2950404,123.8991687,lodging,Pacific Tourist Inn - Manalili,Cebu City
+ChIJ94CrU1uZqTMRAPXss2giR9Q,10.3063091,123.902118,lodging,Palazzo Pensionne - 2.5 Star,Cebu City
+ChIJiQGd9liZqTMRX8l9J4jjUPU,10.2985051,123.899969,lodging,Palm Grass The Cebu Heritage Hotel,Cebu City
+ChIJTdd-knKZqTMRZ6lo5mIFj2g,10.3149443,123.8941876,lodging,Paragon Suites,Cebu City
+ChIJI-Q9vUuZqTMReWgG8h-y65w,10.313991,123.889345,tourist_attraction,Philippine Chinese Spiritual Temple,Cebu City
+ChIJR3ruO0WfqTMRGBL1kQa3o_k,10.3209856,123.879426,tourist_attraction,Pillar of wisdom,Cebu City
+ChIJ1x1EHOGbqTMR5_q34HlTerk,10.2931907,123.9051262,tourist_attraction,Plaza Independencia,Cebu City
+ChIJ_YfgbwDrqzMR1Qox8Oj6hQU,10.2903933,123.8892618,tourist_attraction,Poblacion Badian Cebu,Cebu City
+ChIJJxDW8SWZqTMRerKFmhlf_Vk,10.330002,123.897506,lodging,Prestigio,Cebu City
+ChIJyfcqAn-ZqTMRdH9Y2GhqYvw,10.3089706,123.8948841,lodging,Primeway Suites Cebu,Cebu City
+ChIJm2Mp6xiZqTMRemzTwBMXRVk,10.328227,123.909507,tourist_attraction,Qube Gallery,Cebu City
+ChIJm4OrCxSfqTMRLfBAb696MG8,10.3193763,123.903053,lodging,Quest Hotel and Conference Center - Cebu,Cebu City
+ChIJBSJbFAeZqTMR4VHMIryOclk,10.3425943,123.8989881,tourist_attraction,Rads Travel and Tours,Cebu City
+ChIJ__-v5-GbqTMRZsiTt-BnJLw,10.296025,123.9037752,tourist_attraction,Rajah Humabon Monument & Humabon Historical Marker,Cebu City
+ChIJLbHm_E6ZqTMRnBIgLPvLUdI,10.3103677,123.8937906,lodging,Rajah Park Hotel,Cebu City
+ChIJfxaWNRecqTMRuFzuH1CZ6bc,10.2896875,123.8688125,lodging,RedDoorz near Baclay Drive Super Metro,Cebu City
+ChIJjbWCWzOZqTMRvm_ZfSL-ekQ,10.3233164,123.8867128,lodging,Remedios House,Cebu City
+ChIJH29TyJieqTMRb_5fcBzIDWY,10.3067361,123.8619225,lodging,Ring Resthouse,Cebu City
+ChIJXRBPR1qZqTMRU9w0tiP-E6o,10.3031712,123.8986903,lodging,Robe's Pension House,Cebu City
+ChIJ05I2ewCZqTMRhXFJQGR5SqE,10.3176557,123.8983275,tourist_attraction,Rose karyl cortes,Cebu City
+ChIJMVE7ClGZqTMRTndr0qi6NYw,10.3051685,123.8938567,lodging,Roseate Pensione,Cebu City
+ChIJHcdXjEmZqTMR5RIYST1NZz0,10.3158776,123.8918922,lodging,Rublin Hotel Cebu,Cebu City
+ChIJEyWnqmyZqTMRrrqU4cQyuvc,10.314437,123.9139748,tourist_attraction,"Saint Joseph the Patriarch Parish Church - Mabolo, Cebu City",Cebu City
+ChIJ__-_XeGbqTMRCvSGTNmYh4g,10.2934338,123.9029421,lodging,Sampaguita Suites,Cebu City
+ChIJBcCjoBCZqTMR6eiaTPj17po,10.3247558,123.9152907,lodging,Sarrosa International Hotel & Residential Suites,Cebu City
+ChIJYTodHCGZqTMRctjzc1NnwGk,10.3177013,123.9069729,lodging,Seda Ayala Center Cebu,Cebu City
+ChIJCbpCDmCfqTMRd1MMY7nuWw8,10.3771034,123.8626812,lodging,Serenity Farm and Resort Busay,Cebu City
+ChIJZ1ujV46fqTMRnfjf4je4PFQ,10.3086242,123.8690934,tourist_attraction,Seth's Oasis,Cebu City
+ChIJmWpTJ1uZqTMRtrfyet0Poxo,10.3058411,123.899708,lodging,Shejoje Poshtel Hostel,Cebu City
+ChIJE3LAbwCZqTMRGMlclP8ewPQ,10.3185396,123.8959376,tourist_attraction,Sining Cebu Monument,Cebu City
+ChIJz_XF1U-ZqTMRLuh28VvaWq0,10.3078635,123.8941119,tourist_attraction,Sky Experience Adventure,Cebu City
+ChIJpfOXpZCfqTMRvO_xiz1910s,10.3686442,123.8600563,lodging,Soul Sierra,Cebu City
+ChIJH7JqzVmZqTMRekdik6U_mg0,10.2999013,123.8976274,tourist_attraction,Sto. Rosario Parish,Cebu City
+ChIJAaoG--ObqTMRRGDPktel7bk,10.2923284,123.9019282,tourist_attraction,Sugbu Chinese Heritage Museum,Cebu City
+ChIJH2dXVG6ZqTMRojLDDDlkRrA,10.3071817,123.9168406,lodging,Sugbutel Family Hotel,Cebu City
+ChIJuZUKo6OeqTMRDe5KPlRcC38,10.307409,123.867985,lodging,THE PURRFECT BOOKSTORE,Cebu City
+ChIJocIZfv6bqTMRMHD_dmj-wqg,10.295522,123.8911419,tourist_attraction,Taboan Public Market,Cebu City
+ChIJIbDGqEWZqTMRoelsHQAPXYs,10.3088973,123.8990527,tourist_attraction,The Archdiocesan Shrine of the Most Sacred Heart of Jesus,Cebu City
+ChIJXZDS_wqcqTMRtjB3-gvX4X4,10.2818699,123.8830231,tourist_attraction,The Cube - SM Seaside City,Cebu City
+ChIJfRI3rGyZqTMRBWJSbUL8GgA,10.314338,123.914153,tourist_attraction,The Millennium Park,Cebu City
+ChIJM1Qmg6idqTMRcT-LMnq1Nvo,10.3000947,123.8643691,lodging,The Nest @ Cebu,Cebu City
+ChIJiUhyyFCZqTMRh40SfNjj-qo,10.3272392,123.9086056,lodging,The Pad Co-Living,Cebu City
+ChIJf3SFOOWZqTMRHW59kWyT6n4,10.3183181,123.9020735,lodging,The Partridge Guesthouse - 2.5 Star,Cebu City
+ChIJ1S3jykKZqTMRQJtv2zP4Vzs,10.313082,123.911817,lodging,The Persimmon Cebu,Cebu City
+ChIJNc2Y66eZqTMRyPD_5Pxm4cg,10.3614287,123.8865494,lodging,The Secret Hut,Cebu City
+ChIJz_wi8lOZqTMRpcyKxRIeIZM,10.3121191,123.9023268,lodging,Transient Rooms Cebu City,Cebu City
+ChIJ5U8gYOObqTMR9VlHCHeG6YM,10.2922348,123.898498,lodging,Travelers Home Pension House,Cebu City
+ChIJNclPmaWZqTMR1NrN6K7-fvc,10.3172701,123.8986396,lodging,U Feel Home Guesthouse,Cebu City
+ChIJRQwOD2mZqTMRxficdn7xsYU,10.3015723,123.8895457,tourist_attraction,Uncle Third,Cebu City
+ChIJQRl4S1iZqTMRZzvp3uOXAFg,10.300141,123.8983322,tourist_attraction,University of San Carlos Museum,Cebu City
+ChIJa-Afs0mZqTMR0FOXoQImySY,10.315607,123.894134,lodging,Vacation Hotel Cebu,Cebu City
+ChIJ8YGNzzyZqTMRqErRGAqxdck,10.3247918,123.9045043,lodging,Waterfront Cebu City Hotel & Casino,Cebu City
+ChIJU1O8RTmZqTMRvo6rDn8dQKM,10.320089,123.9014872,lodging,Wellcome Hotel,Cebu City
+ChIJq6qqqvmZqTMRhl6EaHS4YnI,10.2925591,123.8654552,lodging,Westview Pension by RedDoorz,Cebu City
+ChIJNY2kCIafqTMR487Pqwv1prM,10.3144365,123.8820366,tourist_attraction,Wiggy Ventures,Cebu City
+ChIJ6ZVAjESZqTMR0Svev5SPWUw,10.3083273,123.9014366,lodging,Win's Pension House,Cebu City
+ChIJQVmidwCZqTMRLfc5Pe9glHI,10.3310314,123.8964992,lodging,Wjv inn,Cebu City
+ChIJmRDV5l6ZqTMR_TGUzibVfww,10.2992716,123.9039535,tourist_attraction,Yap-San Diego Ancestral House,Cebu City
+ChIJs8s9reWdqTMRRqGxkV24zcg,10.2872608,123.860049,lodging,Zebu Transients,Cebu City
+ChIJQx7VOyCZqTMRj5OAFWrMrsw,10.3333023,123.9071744,lodging,Zerenity Hotel & Suites,Cebu City
+ChIJGZvNFQCZqTMR2iVYSWr3tM0,10.320637,123.8980801,tourist_attraction,cEBuKid,Cebu City
+ChIJA3VhW9GdqTMRod_G4esDqq4,10.2998637,123.858378,tourist_attraction,lantaw city view,Cebu City
+ChIJWcbZPL-ZqTMRxRmC9-jgx4o,10.3128524,123.8935974,lodging,lyf Cebu City,Cebu City
+ChIJ7YIcOEKZqTMRA2oX2OGjV_w,10.3084012,123.8933989,tourist_attraction,南方第１４陸軍病院関係者慰霊碑,Cebu City
+ChIJi4I0YwmjqTMRvP88T3ga8UA,10.3785642,123.9616286,lodging,Aling's Place,Consolacion
+ChIJR764ZgCjqTMRO1ULBQFv6Z0,10.374941,123.961862,lodging,Balay ni Ghar ug ni Fred,Consolacion
+ChIJ5UJkMQCjqTMRVBQmNIsDHCI,10.373822,123.965146,lodging,Balay ni Kayle,Consolacion
+ChIJR20XOgCjqTMRWzOHilbw9pM,10.3785826,123.9445467,tourist_attraction,Balay ni kenjie,Consolacion
+ChIJ4R1tVyqZqTMRYdcAKu20IyQ,10.3659943,123.9631223,lodging,Banin’s PAYAG,Consolacion
+ChIJJVaUbACjqTMRt_F5UDLvQ0g,10.376936,123.974392,lodging,Bogsty’s Lodging House,Consolacion
+ChIJ8yGmm_SjqTMRckBbRVydLls,10.3910892,123.942134,tourist_attraction,Carding Farm,Consolacion
+ChIJ-bamLQCjqTMRwboPma8HzJc,10.3818902,123.9640421,lodging,Consolacion,Consolacion
+ChIJBznrfKuiqTMRX5S_E6mMKVE,10.37008,123.9728089,lodging,"Consolacion close to SM Mall , 30 mins to Airport",Consolacion
+ChIJiUmUwPSZqTMRlHXJO0tymu0,10.3284012,124.0413367,lodging,Coral Point Gardens Resort,Consolacion
+ChIJO0nlpZmjqTMR0it3fSffZUA,10.3790879,123.9598079,lodging,Cueva,Consolacion
+ChIJ2Q_Gt6SiqTMRMSxHKUsTzVY,10.3761912,123.9596328,lodging,Daddy's World,Consolacion
+ChIJDZi6Eg6jqTMR2hxiSDxXWbU,10.3779508,123.9616684,lodging,ESKINA PAJO,Consolacion
+ChIJP8SXtoajqTMR3Ov1DgiTtgc,10.3695742,123.9692983,lodging,Edlee's Place,Consolacion
+ChIJj1FAY92jqTMRaUHpU4DZq5c,10.3792966,123.9712197,lodging,GT Mountain View Jugan,Consolacion
+ChIJsUwumUOjqTMRcMSe-RGOGn0,10.3710787,123.9669639,lodging,House ni Boss Cairon,Consolacion
+ChIJYRFANrG9qTMRLxYk36gyk1w,10.3656137,123.9815798,tourist_attraction,Hunong diri Nes,Consolacion
+ChIJp15fhg2jqTMRSw3ZyXLwtNM,10.3731798,123.941793,lodging,JR Maxilom Transient House in Cebu,Consolacion
+ChIJE7phcYqjqTMRVqbzcpTubVA,10.3713184,123.9590284,lodging,Julia,Consolacion
+ChIJ071O5rGjqTMRME6WJ075954,10.3971133,123.9654119,tourist_attraction,KDG Aviary,Consolacion
+ChIJoS160hKjqTMR3ewxpDxY2QU,10.376958,123.9745416,lodging,LUNA HOUSE,Consolacion
+ChIJ66PAQS2jqTMRJ7ssxAc42Gs,10.3801937,123.9651141,lodging,Maglasang Avenue,Consolacion
+ChIJTyA5RACjqTMRCK9eos16zrw,10.3724037,123.9741833,lodging,MayorD’s Place,Consolacion
+ChIJL9UCWgCjqTMRucsJmyyJaqk,10.3755477,123.9597767,lodging,Motel hourly rate,Consolacion
+ChIJT9vAOgCjqTMR-LbhfqCsn7w,10.3800027,123.9612781,lodging,Pulpogan consolacion,Consolacion
+ChIJqxIPj3ijqTMRei0OJX9witQ,10.3692944,123.9708469,lodging,Purechoice/Cepi Staff house,Consolacion
+ChIJS9ANRI2ZqTMRXcO3g69axmw,10.3772552,123.9680229,lodging,Queensland consolacion,Consolacion
+ChIJmwcoGQCjqTMRiiO4prmvKqo,10.3732741,123.9628151,lodging,Randy mamites,Consolacion
+ChIJf4uNvqSiqTMR-AcJS6O7Zqs,10.3757014,123.9593978,lodging,Roadside Pension House,Consolacion
+ChIJTZuyeOujqTMRIszPng29EwM,10.3733965,123.9617053,lodging,Ronnie & Rosa House,Consolacion
+ChIJPVJAvqWiqTMR8TvVPq2Mt-c,10.3730678,123.9626378,lodging,SAKURA GUEST HOUSE,Consolacion
+ChIJf_syYcGjqTMRH3yowthi4EQ,10.3684258,123.9662108,lodging,Shiela Aguitong,Consolacion
+ChIJr4URo7CiqTMREgJxC9Rgwrg,10.379951,123.964428,lodging,South Shores,Consolacion
+ChIJDQh5BlGiqTMRvLCP2PbyP5w,10.4032007,123.9239853,lodging,St. John's Country Palace,Consolacion
+ChIJrVtNQQCZqTMRTxR8Ux4Aru0,10.3501342,123.9699485,tourist_attraction,Statue of The Seven - Pyro,Consolacion
+ChIJoQpkTDajqTMRVqBFx39_49w,10.3685073,123.9631884,lodging,The Kee's,Consolacion
+ChIJZ9ESAQCZqTMR5vj9r0GNq90,10.3398859,123.9736543,tourist_attraction,Umapad Mangrove Area,Consolacion
+ChIJ_dzQZKSiqTMR27OBpZpMp8Q,10.3734895,123.9591566,lodging,WJV inn Consolacion,Consolacion
+ChIJsa14kSmjqTMRdPJps62vUmQ,10.4266815,123.9406487,lodging,Wooloo,Consolacion
+ChIJVbA5PgCjqTMRfwe_OhEU7jM,10.370814,123.947306,tourist_attraction,aryel,Consolacion
+ChIJ4-MscwCjqTMRZ70op67aHxc,10.3793894,123.9691026,lodging,balay sa dato,Consolacion
+ChIJoeQhCzqjqTMRCKnMFNfJCC0,10.3749558,123.9625834,lodging,nangkaville apts,Consolacion
+ChIJTflJejOXqTMRbhRL-bfxLfU,10.2864043,124.0011993,lodging,1521 Mactan Resort,Lapu-Lapu City
+ChIJm7kUpaWXqTMRf_M5B2MOfQY,10.3157252,123.9959018,lodging,3MS TOURIST INN,Lapu-Lapu City
+ChIJ8xfZ-MCZqTMRQBNfpOFU6CE,10.3175115,123.962255,lodging,ACE Penzionne,Lapu-Lapu City
+ChIJL30uGACRqTMRvR5eYBKRdTc,10.2752649,123.9843852,lodging,AOSMEC Pool Camp Hotel,Lapu-Lapu City
+ChIJkfObJbCQqTMR2oBW3BXhW_g,10.2787703,123.9864092,lodging,AOSMEC Square Hotel,Lapu-Lapu City
+ChIJzRSKQrSbqTMRclvWnc4Ams8,10.2872219,123.936436,tourist_attraction,Agwanta Treehouse,Lapu-Lapu City
+ChIJGQ_f1raQqTMRESJ0br4jVXA,10.2782061,123.9931215,lodging,Alfheim Poolvilla Resort,Lapu-Lapu City
+ChIJTSkim46ZqTMRA7jRjgzVIaE,10.2980236,123.9466275,lodging,Alt Complex,Lapu-Lapu City
+ChIJ7-c9hPuWqTMRSI9TusqnP0o,10.313828,124.025533,lodging,Aozora Seaside Mactan,Lapu-Lapu City
+ChIJRzNaJMCZqTMRBCyTZB_2GjE,10.3101507,123.9544579,lodging,Axis Pension Hotel,Lapu-Lapu City
+ChIJtXZ3FOmZqTMRroAq9ID5Z5o,10.3061675,123.9602237,lodging,BCBP Mactan Breakfast Fellowship Venue,Lapu-Lapu City
+ChIJg8UgApmZqTMRkRVq8cIx6Mk,10.3146972,123.9647601,lodging,BEDS & FRIENDS Hostel Mactan,Lapu-Lapu City
+ChIJ2842n6mZqTMR2FUWCYIFVy0,10.3255397,123.9328515,lodging,BIG Hotel - Mandaue Cebu,Lapu-Lapu City
+ChIJc-jnr8SZqTMRNbKggJqPsIk,10.3140462,123.9630929,lodging,BMIGOS INN v2.0,Lapu-Lapu City
+ChIJjxxKsKmXqTMRx9q2VwJpCDE,10.3023035,124.0014995,lodging,Barrio House Mactan,Lapu-Lapu City
+ChIJF-BO8HKZqTMRki7lh_0pniM,10.3118418,123.9212061,lodging,Bayfront Hotel Cebu North Reclamation,Lapu-Lapu City
+ChIJjce2kPuWqTMRYP6-ZLEpvHw,10.3141,124.026354,lodging,Be Resort Mactan,Lapu-Lapu City
+ChIJAUcc3zSXqTMR6E6jrOLk728,10.2875282,124.0003102,lodging,Bluewater Maribago Beach Resort,Lapu-Lapu City
+ChIJ7adz-viZqTMRBozhRYC0USU,10.2931535,123.9658681,lodging,BnT Inn (Airport hotel and Hostel),Lapu-Lapu City
+ChIJG_6Km-GZqTMRbgWCP5sRcLE,10.313682,123.9588234,lodging,Bridgeview Hotel,Lapu-Lapu City
+ChIJNzaS6sOZqTMRMRmeyXEZIqE,10.3128967,123.9595355,lodging,Budget Rooms Mactan Cebu,Lapu-Lapu City
+ChIJbb8QRwCZqTMRLxUhd1gc7lg,10.3120113,123.9181856,tourist_attraction,CEBU CITY PHILIPPINES,Lapu-Lapu City
+ChIJ6TRkcxqaqTMRqsEHcfqQSBk,10.2805815,123.9597855,lodging,"CJL TRANSIENT HOUSE B-Basak Lapu-lapu City Cebu,Mactan",Lapu-Lapu City
+ChIJpbKpi3KZqTMRZvNFVxnDGk4,10.312582,123.9543731,lodging,Camora transient rooms,Lapu-Lapu City
+ChIJyyixncCZqTMRkvzht1XIdOQ,10.3131603,123.9529094,lodging,Casa Norberto Pension House,Lapu-Lapu City
+ChIJtVSFcQCXqTMRAUxUlkW2kHQ,10.3257295,123.9768311,tourist_attraction,Cat Haven Feeding Spot,Lapu-Lapu City
+ChIJGR8bXcWZqTMR_4tPJaY43NY,10.3181916,123.9629442,lodging,Cebu Dulcinea Hotel - Mactan Lapu Lapu Airport Transit Hotel,Lapu-Lapu City
+ChIJAeMZOKaXqTMRKevsTa2OYkU,10.3283793,123.9754802,tourist_attraction,Cebu Island Hopping,Lapu-Lapu City
+ChIJUwHYcgiZqTMRS0t5hwMbMAE,10.3215087,123.9290491,lodging,Cebu Westown Lagoon,Lapu-Lapu City
+ChIJq9OIPjWXqTMRjB-is53s6oA,10.2865516,123.9993767,lodging,Cebu White Sands Resort and Spa,Lapu-Lapu City
+ChIJbSG4YMGZqTMRaDCD-db2sZY,10.312912,123.9579762,lodging,Chambre Hotel Mactan,Lapu-Lapu City
+ChIJOaxJNNaZqTMRLTJiRL8nuVI,10.3217538,123.9760131,lodging,Clockwork Orange Luxury Suites,Lapu-Lapu City
+ChIJ0-RDCzaXqTMR3WBWspW7-jU,10.2903964,123.9986569,lodging,Coconut Pension House,Lapu-Lapu City
+ChIJn9XiLOWZqTMRGohhVWK_LQk,10.3159286,123.9601312,lodging,Connecting Flight Mactan Cebu Hostel,Lapu-Lapu City
+ChIJt2xmRzKXqTMRrsTGrKWYPwM,10.2883261,124.0061286,lodging,Costabella Tropical Beach Hotel,Lapu-Lapu City
+ChIJHU1Fz6uZqTMRwUxXSbW7Eyw,10.2927247,123.9716685,lodging,Cozy Inn Mactan,Lapu-Lapu City
+ChIJn3TY6oyXqTMRi1RHXN8dIR4,10.3106135,124.0137914,lodging,Cristina Pension House,Lapu-Lapu City
+ChIJc6C-uNqZqTMRY7ZWbEJDbQg,10.2786101,123.9918752,lodging,Cube9 Resort and Spa,Lapu-Lapu City
+ChIJLa6SIACZqTMRAc6Wu98tfBc,10.3249471,123.9674531,tourist_attraction,Dayagdal's Fishing Spot,Lapu-Lapu City
+ChIJvWVgkPSbqTMR_F6KKCI4ka8,10.2821621,123.9363932,lodging,Dormi Bene Pension Inn,Lapu-Lapu City
+ChIJzcMz4-6ZqTMR7vOqlq-3R-U,10.3024964,123.9608592,lodging,Eloisa Royal Suites,Lapu-Lapu City
+ChIJh8qTO6SXqTMRkVRrNdxLCO0,10.3045982,123.9861638,tourist_attraction,Elsi the LCIC cat,Lapu-Lapu City
+ChIJdeO2RAmZqTMR0qd6UV5y7DI,10.3094675,123.9592859,lodging,Express Inn Lapu-Lapu Branch,Lapu-Lapu City
+ChIJYZ6yLpuQqTMR5JvxuK0ilto,10.2594543,123.9836411,lodging,Feelgood Dive Resort,Lapu-Lapu City
+ChIJc6sF4kWZqTMRx1JRMbp-6vs,10.3166769,123.9683949,lodging,Gallarde's Pension House,Lapu-Lapu City
+ChIJhzgNurebqTMR0SLp1iAkMlg,10.2696237,123.9660223,lodging,Gem's Paradise Resort,Lapu-Lapu City
+ChIJ1S_BSwCZqTMRoCVUevdD1FY,10.321627,123.9492918,tourist_attraction,Geo Tech Solutions,Lapu-Lapu City
+ChIJ7UNUFtGZqTMRM1MLoQ1gSMk,10.3211145,123.9679031,lodging,Goldberry Suites & Hotel Mactan,Lapu-Lapu City
+ChIJ4bU_-RKZqTMR9nQwm2zH74I,10.3112017,123.9282091,tourist_attraction,Gothong Private Wharf,Lapu-Lapu City
+ChIJhXI7lIibqTMRz2jLt410Bic,10.2813057,123.9749357,tourist_attraction,Guba na Sakyanan,Lapu-Lapu City
+ChIJydHRQdyZqTMR4txhTmkUGIM,10.3165141,123.9668838,lodging,Halfway House Hostel,Lapu-Lapu City
+ChIJU_IxCS6XqTMRV2W5EBLoxlU,10.2900397,124.0086583,lodging,"Happy Beach Cebu, Mactan",Lapu-Lapu City
+ChIJvXkNez6YqTMRvxN2JOHwyrM,10.3113284,123.9621443,lodging,IT compound,Lapu-Lapu City
+ChIJl_kGGG-ZqTMR8hxhM4oSons,10.3222111,123.975611,lodging,Jiji's Hostel,Lapu-Lapu City
+ChIJA8aOt7WQqTMRfJ6wYOO_eUs,10.282778,123.9955854,lodging,"Jpark Island Resort and Waterpark, Cebu",Lapu-Lapu City
+ChIJb9v5i-qZqTMRt0bSZzUfVno,10.3163392,123.96709,lodging,Kaimito House,Lapu-Lapu City
+ChIJ9wxSIAiXqTMRmFa3bIlqD2A,10.3168646,123.9649095,tourist_attraction,Kalipayan Solas Seaside Beach,Lapu-Lapu City
+ChIJC9AcRjWXqTMRyWkMmLHzAlU,10.286228,123.9981474,lodging,Karancho Beach House,Lapu-Lapu City
+ChIJ4fRvUIaZqTMR-GeiGoIWbBE,10.3078042,123.9504601,lodging,Kave’s Lodging House ( 24 Hours),Lapu-Lapu City
+ChIJazt7AwOaqTMRMQSLUTCsems,10.2864714,123.9659656,lodging,Lapu-Lapu Cottages & Restaurant,Lapu-Lapu City
+ChIJwS4vfgCZqTMRECAaOKM9b34,10.3015218,123.9614199,tourist_attraction,Lapu-Lapu Petron Lake,Lapu-Lapu City
+ChIJc9c9htuXqTMRhMtpGpQuyYs,10.3157159,123.9959226,lodging,LapuLapu Transient House,Lapu-Lapu City
+ChIJnR03UtqZqTMRr9Ct5JXzGE0,10.3153926,123.9673679,lodging,Little Norway Guest House,Lapu-Lapu City
+ChIJszKf3EyYqTMR4Ek2V5_Wm5I,10.3310997,123.9448435,lodging,Lord's Pension House,Lapu-Lapu City
+ChIJOzMLg4CZqTMRcznsTwV-_bw,10.3198121,123.9738525,lodging,MACTAN AIRPORT HILLTOP HOTEL,Lapu-Lapu City
+ChIJ9WCJpa-ZqTMR_edYzTEr7Xo,10.3179084,123.9715689,lodging,Mactan Airport Guesthouse,Lapu-Lapu City
+ChIJNQ2mtrqXqTMR3xkkK-8_Quc,10.3080177,124.0005007,lodging,Mactan Hostel,Lapu-Lapu City
+ChIJa__SM9GZqTMRm6O3kGFgGYg,10.3159324,123.960184,lodging,Mactan-Cebu Airport Budget HoteL,Lapu-Lapu City
+ChIJI_usTwCbqTMRg5F3A5UdknY,10.2818972,123.9642532,tourist_attraction,Magaam Eethu,Lapu-Lapu City
+ChIJo37_OxqZqTMRhv5v7olRrTI,10.3199756,123.9384725,tourist_attraction,Mandani Bay Boardwalk,Lapu-Lapu City
+ChIJUWTCfgCZqTMRdI0d0_9nZkg,10.3285048,123.9370113,tourist_attraction,Mandaue,Lapu-Lapu City
+ChIJlTHQK16bqTMRsHhv74V3dWU,10.2626463,123.9713853,lodging,Mariegold Villa Resort,Lapu-Lapu City
+ChIJY6COGEyXqTMREpHuolWXvis,10.29132,123.990573,lodging,Matilde's House - Mactan Cebu Transient House,Lapu-Lapu City
+ChIJKaKxab6ZqTMR2ATZPLtq2S0,10.3125,123.9486111,tourist_attraction,Nuestra Señora de Regla Parish National Shrine,Lapu-Lapu City
+ChIJ_egNnKOZqTMRsb1G9BiGBPQ,10.3057261,123.9524188,lodging,OYO 685 K Fortune Apartelle,Lapu-Lapu City
+ChIJgzBhZrGZqTMRht5eVJWq818,10.3254348,123.9448306,lodging,PMG Pension House,Lapu-Lapu City
+ChIJYf1u53iaqTMRkIP4iV91zuw,10.2556673,123.9729694,lodging,Pacific Cebu Resort International Inc.,Lapu-Lapu City
+ChIJHwnMwfuWqTMRgrCyn2XQ3pc,10.3159485,124.028205,lodging,"Palmbeach Resort, Mactan, Cebu",Lapu-Lapu City
+ChIJT1YrBpuQqTMRo2EU1FusETE,10.2605254,123.9828074,lodging,"Plantation Bay, a Real Resort with a Real Spa",Lapu-Lapu City
+ChIJD0B6XQCZqTMRUUw0y7OI5Mg,10.3197437,123.9722147,tourist_attraction,Pusok,Lapu-Lapu City
+ChIJP-HBcQCZqTMRzlD5zi1pjG4,10.3107057,123.9510738,lodging,QUINN ALORA BODY & FOOT MASSAGE SERVICES,Lapu-Lapu City
+ChIJbVvPu32ZqTMR654ATL7dSV0,10.30528,123.9474376,lodging,Queensland Hotel Drive Inn - Lapu Lapu,Lapu-Lapu City
+ChIJ98_q922ZqTMRzevEqZ2sjhw,10.3098183,123.9194217,lodging,"Radisson Blu Hotel, Cebu",Lapu-Lapu City
+ChIJ4wWwI9uXqTMRA8g0zPl2Ynk,10.3125281,123.9932226,lodging,RedDoorz @ 3Ms Tourist Inn,Lapu-Lapu City
+ChIJ14_enwacqTMRPN-s97swsZ0,10.2974375,123.9485625,lodging,RedDoorz Hostel @ St. Paul Village LapuLapu,Lapu-Lapu City
+ChIJ-xz5NzqZqTMRklZ79x0hvq8,10.3275475,123.9466333,lodging,RedDoorz Plus New Era Budget Hotel Mandaue former RedDoorz Plus near UV Mandaue Cebu,Lapu-Lapu City
+ChIJoV-h9p2QqTMR23FTQLCGOSo,10.2631813,123.9750581,lodging,RedDoorz Plus near Camella La Brisa Lapulapu,Lapu-Lapu City
+ChIJy4u3YwOaqTMR0MrLLbM5BOY,10.28456,123.9656888,lodging,RedDoorz near Shopwise Basak-Sudtunggan Lapu Lapu,Lapu-Lapu City
+ChIJSXMmGUqYqTMRkdTU7ZXETYw,10.3338654,123.9515012,lodging,Residenz Inn,Lapu-Lapu City
+ChIJ753o0BqRqTMROLOtgZEtOxA,10.2530581,124.0290799,lodging,Sagastrand Beach Resort,Lapu-Lapu City
+ChIJK3Gx-OGWqTMROX_qKq-4KGs,10.3081301,124.0200301,lodging,"Shangri-La Mactan, Cebu",Lapu-Lapu City
+ChIJ7WcyPeOWqTMREG1ywuQD6Ys,10.3102726,124.0231906,lodging,THE MARK RESORT,Lapu-Lapu City
+ChIJxcttJDKXqTMRCgiih6FD72E,10.2899858,124.0068711,lodging,Tambuli Seaside Resort and Spa,Lapu-Lapu City
+ChIJtwZmULaQqTMRmNUsD4eh4PI,10.2788644,123.9948348,lodging,The Beach Park-Hadsan,Lapu-Lapu City
+ChIJmVt4a9GZqTMRRuNZfE1R8QQ,10.3214794,123.9677576,lodging,The Bellavista Hotel,Lapu-Lapu City
+ChIJW619zx-XqTMRT1yPdbXw78A,10.3035254,124.0193458,lodging,The Mactan Newtown Beach,Lapu-Lapu City
+ChIJ8RVHsb-ZqTMRvRQ0ogCkyfw,10.3125819,123.9589662,lodging,The Pocket Hotel,Lapu-Lapu City
+ChIJbQ-LkK6ZqTMRpU-sWO2KR2g,10.3189757,123.9651724,lodging,The Public Hostel,Lapu-Lapu City
+ChIJsdZwfxqcqTMRG47Cf7M9pAk,10.2987618,124.0157325,lodging,The Reef Island Resort,Lapu-Lapu City
+ChIJ_1B1TgCZqTMR40UWf75qHfw,10.316059,123.9615481,lodging,Transient House near Mactan Airport,Lapu-Lapu City
+ChIJWStU5mmXqTMR6tG-wsNvQgk,10.3253814,123.977083,lodging,Travelbee Airport Inn,Lapu-Lapu City
+ChIJjbZjUwCZqTMRCtPQIOejBAI,10.3131034,123.9520062,tourist_attraction,Upper Lapu-lapu Falls,Lapu-Lapu City
+ChIJteV40BmXqTMR1zdw6xYruo0,10.3063003,124.0090272,lodging,Very Good Hotel,Lapu-Lapu City
+ChIJyyqQV4CZqTMR8Oihi-aqf4I,10.3036407,123.9523135,lodging,Victoria's Travellers Inn,Lapu-Lapu City
+ChIJ23AvqCGXqTMRPT62H-il-Sc,10.2998733,124.0161361,lodging,Vista Mar Beach Resort & Country Club,Lapu-Lapu City
+ChIJBUzmbNGZqTMRnTGniLEk9N0,10.3200177,123.9657188,lodging,WJV INN PUSOK,Lapu-Lapu City
+ChIJV-uNlFyXqTMR06MsLEW7iWQ,10.3061957,123.9827708,lodging,WJV Inn Hangar,Lapu-Lapu City
+ChIJF5VQajeZqTMRTTNdqhMN-SE,10.3302073,123.9632321,lodging,WaterWorld Cebu,Lapu-Lapu City
+ChIJQ3xGVcWYqTMRzSwC1tkklkc,10.3168295,123.9779633,lodging,Waterfront Airport Hotel & Casino Mactan,Lapu-Lapu City
+ChIJ_18XrSGZqTMRi4VhGOH0EI4,10.2969274,123.9649371,tourist_attraction,Watever KTV,Lapu-Lapu City
+ChIJxTTP2u-ZqTMRwVKr94vBNP8,10.3276176,123.9408865,lodging,Wjv-inn Mandaue Centro,Lapu-Lapu City
+ChIJ5zrJRa6ZqTMRh90Jy505400,10.3117282,123.9521031,lodging,You and Me Inn,Lapu-Lapu City
+ChIJIQUXxK6ZqTMR4GNoEFEgLjs,10.3248348,123.9367827,lodging,bai Hotel Cebu,Lapu-Lapu City
+ChIJo0SffgCXqTMRTFDk4Qbmfc4,10.326076,123.975157,tourist_attraction,"ronda, st cruz",Lapu-Lapu City
+ChIJX3818viYqTMRuPvi8Ihc4Lc,10.338882,123.929307,lodging,Allure Hotel & Suites,Mandaue City
+ChIJo0FUhwSZqTMR4EsAV9Vv4NY,10.3276021,123.9219854,lodging,Alpa City Suites,Mandaue City
+ChIJJ-txqayZqTMRYwPlq3oNLL4,10.3306681,123.9361803,lodging,Apartelle Zee,Mandaue City
+ChIJnWHYInmiqTMRNb-Uub9srqg,10.3743154,123.9235997,tourist_attraction,Archival's Eco-House,Mandaue City
+ChIJV82PYeiYqTMRsCj6_VoCUDg,10.3448125,123.9108125,lodging,Asmara Urban Resort & Lifestyle Village Inc.,Mandaue City
+ChIJT2uu9_yYqTMRHSyHBy3mmrM,10.3284228,123.9289577,lodging,Cebu Backpackers' Place,Mandaue City
+ChIJj8nFl_SZqTMR9ZRQQrcu3rk,10.3345882,123.9436428,tourist_attraction,Cebu mandaue,Mandaue City
+ChIJxYp5TA2ZqTMR8HpubBYJW28,10.3256491,123.9170895,lodging,Citi Park Hotel,Mandaue City
+ChIJNaLAkQSZqTMRZulbzgyKPmU,10.3274363,123.9209895,lodging,Cityscape Hotel Cebu and Mandaue (Official),Mandaue City
+ChIJNVdDCEeZqTMR_vk1TasmWkU,10.3681902,123.9300831,lodging,Cornerstone Manor Inn,Mandaue City
+ChIJ8z8T0ZWYqTMRE57h00Gphes,10.3585053,123.9107686,tourist_attraction,D' Family Park,Mandaue City
+ChIJ907Yyf2YqTMRygxlls5DbUs,10.3352101,123.942128,lodging,Dohera Hotel,Mandaue City
+ChIJh6YlnC-ZqTMRGAqOCoYLjXQ,10.3415278,123.9130027,lodging,Eia by Dawata,Mandaue City
+ChIJuQBLraGZqTMROEAPfRA1iUA,10.3478716,123.9274764,tourist_attraction,Explore Cebu with Ray,Mandaue City
+ChIJRVsHdQCZqTMRqF5d-unyAiE,10.3356453,123.939241,tourist_attraction,Finetrehan,Mandaue City
+ChIJe5AwpAOZqTMRfFT0Sm26hYI,10.329685,123.92244,lodging,Freewilly Guest House,Mandaue City
+ChIJ8TpSgh-ZqTMRj8ansTIEG9c,10.3519898,123.9092505,lodging,House Happiness,Mandaue City
+ChIJJ8aD4dyZqTMRohYm2c5Zno8,10.3497199,123.9476734,lodging,Insular Square Inn,Mandaue City
+ChIJFx7nDgCZqTMR9ZhMQBtHtWc,10.3350934,123.9343325,tourist_attraction,J DISTRICT,Mandaue City
+ChIJgZYZMwCZqTMRw9XRuRUP_Kc,10.3610739,123.9386595,tourist_attraction,JBCC AVIARY,Mandaue City
+ChIJRbfvcgCjqTMRrMor1mtO0Eg,10.3778976,123.9170128,tourist_attraction,Kabayuan Ni Lhuillier,Mandaue City
+ChIJLVujYQCZqTMR57w9pKtieuo,10.366731,123.9262268,tourist_attraction,Knight Juanito King Scouthall (Leaders' Council),Mandaue City
+ChIJ8XvpIKObqTMRFVpNy153mMo,10.3648579,123.9129771,tourist_attraction,LF Cebu Tour Package,Mandaue City
+ChIJ5dFEHQeZqTMRRrq9o6LOOTY,10.3256496,123.927645,lodging,Leope Hotel,Mandaue City
+ChIJNxb3RgCZqTMR2ZanXoKX5VU,10.3244305,123.9209189,tourist_attraction,Lim Salamanca,Mandaue City
+ChIJB52l4_uYqTMRCQJQMay5TBU,10.3382832,123.9245077,lodging,Lylie Hotel,Mandaue City
+ChIJ31-S8zeYqTMRhmCV0T1CRH8,10.3381384,123.9540299,lodging,Maayo Hotel,Mandaue City
+ChIJpck9uuGYqTMRniQppjWAwZA,10.3356327,123.9117275,lodging,Main Hotel and Suites,Mandaue City
+ChIJK-NJhPCYqTMR6gUP31IgBeg,10.3429604,123.9224701,lodging,Mandaue Transient House,Mandaue City
+ChIJczxZktOZqTMRlaGc4M0hoOY,10.3429686,123.9225196,lodging,Mandaue Transient House,Mandaue City
+ChIJH74_AOaYqTMRVz0cIcjWt0U,10.342047,123.9161035,lodging,Mango Tree House,Mandaue City
+ChIJEYMRo1OYqTMR2h8nULoTi7k,10.3338597,123.9376003,lodging,Metro Park Hotel - Mandaue,Mandaue City
+ChIJA4r4sOCYqTMRcGJ3sam6Fq8,10.3393117,123.9094445,lodging,"Montebello Hotel, Cebu",Mandaue City
+ChIJp5r-eLOZqTMRUG0Or7nf05U,10.3364916,123.9524525,lodging,New Era Mandaue Budget Hotel,Mandaue City
+ChIJ-WtwtVCYqTMR3az2RR_Sh3s,10.3398552,123.9361361,lodging,OYO 749 La Maria Pension And Tourist Inn Hotel,Mandaue City
+ChIJfVWuPDuZqTMRCrmU7hMY5u0,10.3574954,123.9266805,tourist_attraction,Ozkanding team,Mandaue City
+ChIJ-5ffOQCZqTMRX5KggJqYmTs,10.3453346,123.9580888,tourist_attraction,"Paknaan, Mandaue City, Cebu",Mandaue City
+ChIJDcJgIgaZqTMR90HmtGloefo,10.3658227,123.9223438,tourist_attraction,Paseo susano 15,Mandaue City
+ChIJXQ9MjvuYqTMRyavyzpfx1i0,10.3381193,123.922925,lodging,Queensland Hotel,Mandaue City
+ChIJVXEoeG2YqTMR9QW8Ft_1QHY,10.3582727,123.9500968,lodging,RE-CJC Pension House,Mandaue City
+ChIJI6q5evOYqTMRMzGMJlTXbUw,10.3499846,123.9242304,lodging,Ranile's Pension House,Mandaue City
+ChIJ04eqhwSZqTMRAnWNhFwbsUs,10.3289414,123.9214959,lodging,RedDoorz @ Asiana Pension Inn Mandaue City,Mandaue City
+ChIJ7bXA6GyYqTMR1sk_fdHxmMg,10.3553339,123.9510272,lodging,RedDoorz @ Dona Jacinta Basak Mandaue,Mandaue City
+ChIJVVURolOYqTMR8PyAWKZODhM,10.3338749,123.937435,lodging,RedDoorz @ Highway Mandaue,Mandaue City
+ChIJX1DZfD6ZqTMRYjEB-6nL6-o,10.3398697,123.9361363,lodging,RedDoorz @ La Maria Pension & Tourist Inn,Mandaue City
+ChIJ29j-S0CYqTMRNRx2B8jpkQ0,10.3473125,123.9491875,lodging,RedDoorz @ Leoncia Apartelle Mandaue City,Mandaue City
+ChIJ0S_i01KYqTMRm6TH507kMcQ,10.3312763,123.9392533,lodging,RedDoorz @ Maanyag Pension House Mandaue,Mandaue City
+ChIJx3SS9o6ZqTMRGzqO_65ZDrM,10.3374181,123.9358561,lodging,RedDoorz Hotel Booking by JNM,Mandaue City
+ChIJ6affGQCZqTMRCNIUP_QBIjs,10.351631,123.932198,tourist_attraction,Renalyn's house,Mandaue City
+ChIJJ0WlLwCZqTMRyfGWZdH_IME,10.3336781,123.9404358,tourist_attraction,Renante,Mandaue City
+ChIJe3JgCQCZqTMRKm7uQC7gUGI,10.3314163,123.9426436,tourist_attraction,Renante,Mandaue City
+ChIJ39emPACZqTMR4CyAXEJZHdQ,10.332565,123.9110767,tourist_attraction,Ronie,Mandaue City
+ChIJwXzkcQOZqTMRsG9yX80RPnM,10.3240338,123.9239591,lodging,S&M Hotel - Mandaue,Mandaue City
+ChIJbxN1z4yYqTMRnWMyIoLgn-4,10.3488963,123.926175,lodging,Sabina Suites,Mandaue City
+ChIJx3RLqXmZqTMRrgzgasTsb18,10.3344258,123.923319,lodging,Sagami Stay Cebu,Mandaue City
+ChIJq6qmr02YqTMRW8Tj4BbDbxI,10.3332377,123.9437517,lodging,Salome's Pension,Mandaue City
+ChIJwxrD4saZqTMRETxLE1n4jns,10.3406997,123.9086196,lodging,TRANSIT Guest House,Mandaue City
+ChIJP7d2mPiYqTMRzK7LiwpmltE,10.3370751,123.9313767,lodging,The Orchard Cebu,Mandaue City
+ChIJRbFYVWOZqTMRYOLmOBAXTwo,10.3285698,123.9305133,tourist_attraction,Tipolo skywalk,Mandaue City
+ChIJk1jKSFSYqTMRnQfrHdph96M,10.3348759,123.9343921,lodging,Toyoko Inn Cebu,Mandaue City
+ChIJgdw4-pOZqTMRrfTMXs7yyQM,10.3310823,123.9354299,tourist_attraction,Travel tour guide,Mandaue City
+ChIJh5aABtmZqTMRgCiRBg7PRns,10.366386,123.9362207,lodging,WJV INN CANDUMAN,Mandaue City
+ChIJOcRyOkyZqTMRZezJRkq1sC0,10.3570581,123.9501554,lodging,WJV Inn Basak Mandaue,Mandaue City
+ChIJ-wigQACZqTMRT1gPK6odvPI,10.3483965,123.9250548,lodging,WJV Inn Cabancalan,Mandaue City
+ChIJY5xcYZeZqTMR9UQXWULr0yk,10.3416775,123.9339162,lodging,WJV Inn Casuntingan,Mandaue City
+ChIJn_ZxFgCZqTMR8vvDQJZnRCg,10.3613436,123.9301043,tourist_attraction,balay sa pinaka pogi ng buong kalawakan,Mandaue City
+ChIJk2YC0UmZqTMRuLM-ghx7lZY,10.356777,123.9141252,lodging,ゲストハウス＆シェアハウス Cebu Style,Mandaue City
+ChIJwbsdJX6dqTMR9eB7BRkSoS4,10.2426564,123.787914,lodging,DLT Suites,Minglanilla
+ChIJPfTQMjmdqTMRC-7h9jSFAjw,10.2433719,123.82243,lodging,AQua Cainta Resort,Talisay City
+ChIJSeZC5SedqTMRh_F9NCf_wzw,10.2361087,123.8327426,lodging,Aeo mangoujuicesan zone 3 purok malinawon,Talisay City
+ChIJ4cZrOQCdqTMRXLMAwUeLbvw,10.2711702,123.8607987,lodging,Angelica's Home,Talisay City
+ChIJa46VWT-dqTMRxTzCAsSOAtY,10.2742422,123.8606572,lodging,Antonio Abangan Compound,Talisay City
+ChIJnSgUzT6dqTMRmyha18iK_sE,10.243495,123.8223954,lodging,Aqua Cainta Resort Homestay,Talisay City
+ChIJ4V8IA7OdqTMRdeXXzHIcmb8,10.2401897,123.837395,lodging,Arobo,Talisay City
+ChIJ37cGEN2cqTMROL2jIwYro7A,10.2431722,123.8497376,lodging,Aznar Beach Resort,Talisay City
+ChIJdzTzVu2dqTMRoBTIO1U75Nk,10.2440081,123.8481061,tourist_attraction,Aznar Floating Cottage,Talisay City
+ChIJ8_FXK5KdqTMRV9MAUcLwCk0,10.2383194,123.8241423,lodging,B&B JanPetTam,Talisay City
+ChIJ0d0c7LGdqTMRhc1T7QzsXDI,10.2664629,123.8577324,lodging,BGS PLACE INAYAWAN,Talisay City
+ChIJla9csiidqTMR-goCqhH92i8,10.2363243,123.8357621,lodging,Basha house,Talisay City
+ChIJE2TfT82dqTMRTyw-eL4h860,10.2369854,123.8271812,tourist_attraction,Biasong Beach,Talisay City
+ChIJjzAqZwCdqTMRvvVq-m68n30,10.2402627,123.8292033,lodging,Biasong Talisay Bayswater,Talisay City
+ChIJxaJzEgCdqTMRXoIvaoqf4MY,10.2800525,123.8589354,lodging,Bittick,Talisay City
+ChIJQXg2eACdqTMR6R2SwLvn1t0,10.2375691,123.8417969,tourist_attraction,Broken Wall of Talisay,Talisay City
+ChIJs821OACdqTMRbprsdr88d1s,10.2375856,123.841814,tourist_attraction,Broken Wall of Talisay,Talisay City
+ChIJi_ySGCmdqTMR1CBcii0zMjI,10.2672214,123.8637377,lodging,Bryan mahilum,Talisay City
+ChIJgexFGwCdqTMRdTcK3At8FcQ,10.2777464,123.82099,tourist_attraction,"Camp Site, Tubahan Libes",Talisay City
+ChIJY91lpmedqTMRsEdukr708UU,10.2647126,123.8621425,lodging,Casa Jaca,Talisay City
+ChIJyz58IjmdqTMRZVIxvTHz1hY,10.24226,123.8220978,lodging,Casa Talisay Sleeps 6 with Garage,Talisay City
+ChIJ83aGSwCdqTMRYDXhvRkcgZk,10.2755464,123.8169485,lodging,Casa Vista by Hooga Home,Talisay City
+ChIJbXdOSyOdqTMRjAFHoxAfr68,10.2434664,123.8299866,lodging,Casathea Hometel Cebu,Talisay City
+ChIJA_9Bhj6dqTMRFDXQh6Psaec,10.24543,123.8237915,lodging,Cebu's Hidden Gem,Talisay City
+ChIJo6qqqhqdqTMRS_g8PA-XWzI,10.2520849,123.8390884,lodging,Celbyrne Pension Hauz,Talisay City
+ChIJU9VmcwCdqTMRmYMkputyHDo,10.2826235,123.8582651,tourist_attraction,Chris ann,Talisay City
+ChIJb8KnOi2dqTMRkWLa01QBMwQ,10.2418916,123.8309178,lodging,Ciotarz Inn,Talisay City
+ChIJEQSkuzqdqTMRYf-L_Dq_VnA,10.2385796,123.8358585,lodging,Creative tinsmith,Talisay City
+ChIJ2fq8nRidqTMRt671KgbUT8A,10.2464979,123.833955,tourist_attraction,Crocolandia,Talisay City
+ChIJ5bLJKQCdqTMRV9G450_u6h4,10.239253,123.826946,lodging,D'BUSON'S TRAVELERS HOME,Talisay City
+ChIJQR-y2wOdqTMRsuJKyl_S-tU,10.2376024,123.8242301,tourist_attraction,Dagat sa Pooc,Talisay City
+ChIJGb1Osg6dqTMR6Rrw8wQLdz0,10.2578374,123.8175929,lodging,Dosi Hotel,Talisay City
+ChIJZ8LtoLKdqTMRmhCnHSPpYj0,10.275196,123.839957,lodging,Elegant 3BR Private Home in Vista Grande,Talisay City
+ChIJB6vQpRudqTMRPZvwMdptMhE,10.2774357,123.8539274,tourist_attraction,GSR Travel and Tours,Talisay City
+ChIJ8SAoUACdqTMRfwRMikkw3NY,10.2709182,123.8574255,lodging,GV,Talisay City
+ChIJ14PBPFWcqTMR5bTNTs21kyw,10.2668523,123.842235,lodging,GV Hotel Talisay,Talisay City
+ChIJsZnYHy-dqTMRWv5jr-yPgNw,10.2347829,123.8339569,lodging,Gallego Private Resort,Talisay City
+ChIJ8-UJgxudqTMRWALVLrigVeU,10.2403082,123.8380051,lodging,Gavinzki's Crib,Talisay City
+ChIJc18zq02dqTMRGY78odSOxaU,10.2663263,123.8436586,lodging,Glenn Pension House,Talisay City
+ChIJQ_B4nnidqTMRty67XyBYFtE,10.245479,123.8317162,lodging,Green Getz Inn,Talisay City
+ChIJGem9WDidqTMRZXNssOZ9UiY,10.2411509,123.8206253,lodging,Hidden Gem: Cebu's Best Escape,Talisay City
+ChIJvf6-WDidqTMRnPb8VzBvp1Q,10.2410774,123.8206177,lodging,Hidden Gem: Cebu's Best Escape,Talisay City
+ChIJ6cjiewCdqTMRopY4z3DogvI,10.2685582,123.8648496,lodging,Hydee Lynn racaza,Talisay City
+ChIJQSRpyJedqTMRTOphCw4_hgI,10.2663772,123.8589348,lodging,Ila Tosiong,Talisay City
+ChIJZwimDACdqTMR48faCaVoFY0,10.2673542,123.8583827,lodging,Inday jacky lemoran,Talisay City
+ChIJSVQOtDKdqTMRIyR2x7h2cqE,10.23683,123.8376663,lodging,JC Biz,Talisay City
+ChIJkQagUACdqTMRnxNrCnQmPEQ,10.2547551,123.8258928,tourist_attraction,JC's rooftop,Talisay City
+ChIJh43rOBGdqTMRvWRjbsng_Vs,10.2681796,123.8589798,lodging,Jaca Garage,Talisay City
+ChIJuwgCaACdqTMRyVlvv7Mvc-A,10.2741279,123.8568387,lodging,Jacquelene lemoran,Talisay City
+ChIJxxkCwP-cqTMRkBhzbEQ338I,10.2638895,123.8425032,lodging,Jam Beach House,Talisay City
+ChIJ03ouLgCdqTMRTknHqY-tqB0,10.2447013,123.8319083,lodging,Kathleen Montemayor Geronda,Talisay City
+ChIJ7wwgkcmdqTMRuxuk8UpVmwY,10.2681136,123.8614014,lodging,Kumander Insiik,Talisay City
+ChIJP0LkDwCdqTMRoZzmUIzmVBI,10.2512853,123.8054905,tourist_attraction,Kuya Jhames's habal habal,Talisay City
+ChIJPUlhdfydqTMRcEamu23Cjr4,10.265669,123.8580613,lodging,LOB,Talisay City
+ChIJbykCwLKdqTMRBfKZplzfgXo,10.2418926,123.8309182,lodging,Lala Land Short Stays,Talisay City
+ChIJ5dWngqOdqTMR0L9hSeHJHgE,10.2661677,123.8648152,lodging,Lerma carin,Talisay City
+ChIJFV2ziF6dqTMRHPXRgWHcAGU,10.2743844,123.8600929,lodging,Lerna carin,Talisay City
+ChIJ-yncJgCdqTMR1hrIfYsbFOI,10.2470412,123.8335307,lodging,Lopez’s,Talisay City
+ChIJ_eeCTQCdqTMRwDfyLQaxzRs,10.2482395,123.8308733,tourist_attraction,Love ko's memorial house,Talisay City
+ChIJM6BtSgCdqTMRZs6XO1ezNcw,10.2599177,123.8318114,tourist_attraction,Love ko's old house near bridge,Talisay City
+ChIJwQnaRQCdqTMRTxZIozHQE8Q,10.257916,123.838792,tourist_attraction,Love ko's tatai uturn slot,Talisay City
+ChIJ-TZ8IjmdqTMRI1--WQs2q6k,10.24226,123.8221,lodging,"Lovely 3-bed House in Talisay, Cebu, Philippines",Talisay City
+ChIJVa0M8VWdqTMRn3VuRUtAoD0,10.2542579,123.8458642,lodging,M&J Pension House,Talisay City
+ChIJU2m7GACdqTMRKQGBJIAWkI8,10.2390173,123.8242949,lodging,Medester B Hauz,Talisay City
+ChIJ_7bO8oZ3qTMR9LrmyCEy-sY,10.2437431,123.7941903,lodging,Mingla Rooms,Talisay City
+ChIJ4RSZuNqdqTMRKaGv-Aim1RI,10.2678501,123.8432186,lodging,Nacho Hostel Cebu,Talisay City
+ChIJ55nswz6dqTMRTFyvgvcHllo,10.2443476,123.8225555,lodging,Our Home is your Home. The best place to spend your vacation.,Talisay City
+ChIJX1F-JgCdqTMRzj6o45SLwWs,10.2382986,123.8121458,tourist_attraction,PUROK JASMINE 1,Talisay City
+ChIJ4ct9fwCdqTMRwgPj9GWr5rI,10.2865981,123.8522797,tourist_attraction,Pardo viewdeck,Talisay City
+ChIJe4Z3blydqTMRLgb6ALEI3xw,10.2481606,123.8277116,lodging,Parent de tily,Talisay City
+ChIJJ2ozGyGdqTMRYRf5rfYoio0,10.2714353,123.86114,lodging,Patcho's house,Talisay City
+ChIJBaypMPadqTMRuTPG75eUxxE,10.2366938,123.8358458,lodging,"Phase 2, Block 8, Lot 10, Deca Homes Baywalk 2",Talisay City
+ChIJzcllujCdqTMROnDmyp3l5sg,10.237507,123.8250728,lodging,Rainbow Beach Room & Cottage,Talisay City
+ChIJpfUw2f-cqTMRYURsruu7wRE,10.2520835,123.8390859,lodging,RedDoorz near Talisay District Hospital,Talisay City
+ChIJZ3AQWACdqTMR8LRhMj0YpR4,10.2685582,123.8648496,lodging,Rica rasonabe,Talisay City
+ChIJGah3RwCdqTMRpNTq5V6BslQ,10.272159,123.846986,tourist_attraction,Riverside - Bulacao River,Talisay City
+ChIJVWmYVm-dqTMRocfrOg0oNRQ,10.2394951,123.8363112,lodging,Romahan,Talisay City
+ChIJ9UNroGWcqTMRboEcdJcxfbM,10.270077,123.871756,lodging,Routvisor Inn Aparhotel,Talisay City
+ChIJtQULZQCdqTMRdNKvcb3FFmM,10.2396468,123.8266167,lodging,SEAMASTERS HOME,Talisay City
+ChIJ63Z1-1-dqTMRV83IXiVRCCM,10.2383194,123.8241423,lodging,SENIOR PEDRO,Talisay City
+ChIJK1KjKemdqTMRYmaHh9-_Nqs,10.2585214,123.8613162,tourist_attraction,SRP,Talisay City
+ChIJA2rSTACdqTMRojp5tWmQkNM,10.2654199,123.8778304,tourist_attraction,Salty Cruise Cebu PH,Talisay City
+ChIJz4OpEQCdqTMRrq-b0puzjCQ,10.279746,123.8602319,lodging,Santillan Kinasang-an,Talisay City
+ChIJ5TyqXUacqTMRVXr50qCNsC4,10.2795084,123.8546017,tourist_attraction,Santo Tomas de Villanueva Parish,Talisay City
+ChIJRzeRwd2cqTMRF_9eFv-tRYM,10.2439448,123.8477871,tourist_attraction,Sta. Teresa de Avila Church,Talisay City
+ChIJSyf9QZadqTMROGgSLufhOiA,10.2746286,123.8597751,lodging,Star Legends Adventures,Talisay City
+ChIJHUdYYACdqTMRQkO-DdWSOts,10.2657129,123.8606234,tourist_attraction,TAYA Roof Deck,Talisay City
+ChIJP4RPosidqTMRuDrhyYfrTAg,10.2576304,123.8179666,lodging,Talisay Cebu Transient,Talisay City
+ChIJ_zkS6qmdqTMRCpL3Nh3uvAY,10.2668841,123.8341936,lodging,The Hive Rentals,Talisay City
+ChIJwRTVKgCdqTMRJthM8-8t5uc,10.2703039,123.8610217,tourist_attraction,The palm tree,Talisay City
+ChIJq6qqzTudqTMRmRohWgWp0K0,10.2581562,123.8276432,lodging,Thrice Admirable Rentals,Talisay City
+ChIJR28dfACdqTMRaVjl4EXDlRs,10.270893,123.8562986,lodging,Toledo,Talisay City
+ChIJt3JwAvydqTMRj9za24ZbizM,10.2532882,123.8085784,lodging,Toncil Homestay,Talisay City
+ChIJDaxKbJKdqTMRyLj6xiQZeMI,10.2480095,123.8001211,lodging,Travelbee Minglanilla Inn,Talisay City
+ChIJ5-_YihWZqTMRCOZKasfVLH0,10.2621497,123.7986719,lodging,Tubod Flowing Water Resort,Talisay City
+ChIJizQbHy-dqTMRh1y5PbTPykQ,10.2375252,123.8263746,lodging,VALAN BEACH RESORT,Talisay City
+ChIJKRpyDwCdqTMRmGMfbSxwVGQ,10.2687969,123.8751767,tourist_attraction,Venue Arc 2,Talisay City
+ChIJSXp2bK-dqTMR7SldkvnrcGk,10.2364843,123.8360049,lodging,Viktoria’s Place,Talisay City
+ChIJAyVSVQWdqTMRHkuS5snoruA,10.2362511,123.8319074,lodging,Villa Teresita Resort,Talisay City
+ChIJVdybDgCdqTMRsxguiLvP6c0,10.2654265,123.8409869,lodging,WJV Inn Tabunok 2,Talisay City
+ChIJxVOXNgCdqTMRoW_m_fj3ua8,10.2374853,123.8314174,lodging,YKL CEBU Transient Houses2,Talisay City
+ChIJn0l92RedqTMRaQ3h_LG7_cE,10.2478599,123.8280868,lodging,Your Home Away From Home,Talisay City
+ChIJlXOURhabqTMRJQke80Bo_z4,10.2564103,123.8659921,lodging,rjc Hostel Bar Talisay City,Talisay City
+ChIJbZkzWACdqTMRX-rY_OovQoc,10.2578827,123.8382578,tourist_attraction,tatai house,Talisay City
+ChIJaydEPQCdqTMR8x8AvQGsFyc,10.2481273,123.8309457,tourist_attraction,​Paseo Feliz & Paseo Eustaquia,Talisay City

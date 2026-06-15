@@ -1,0 +1,41 @@
+MCRAI Stage 2 Weights — Decision 20 Final Composite Specification
+============================================================
+  Final composite uses positive-coefficient OLS categories only.
+  Excluded from composite: mcrai_security, mcrai_tourism, mcrai_retail_density
+  See modeling_decisions.md Decision 20 and lit_decision20_spatial_sorting.md.
+  Weights below are the rounded implementation values used in compute_hansen_scores.py.
+
+Category                  Final Weight
+------------------------------------------------------------
+mcrai_education               0.401000
+mcrai_grocery                 0.310000
+mcrai_recreation              0.199000
+mcrai_transport               0.102000
+
+Diagnostic only — OLS Stage 1 coefficients on open_market sample:
+------------------------------------------------------------
+  Significance threshold: p < 0.05
+
+Category                          Coef    p-value   Sig?
+------------------------------------------------------------
+mcrai_education               0.017451     0.0088    YES
+mcrai_finance                -0.001803     0.6192     no
+mcrai_grocery                 0.013023     0.0005    YES
+mcrai_health                  0.002149     0.8272     no
+mcrai_security               -0.098351     0.0000    YES
+mcrai_transport               0.003728     0.0000    YES
+mcrai_tourism                -0.023552     0.0000    YES
+mcrai_recreation              0.000772     0.7725     no
+mcrai_retail_density         -0.002629     0.0494    YES
+
+Diagnostic only — |coef| normalized across significant categories:
+------------------------------------------------------------
+  mcrai_education          : 0.109936
+  mcrai_grocery            : 0.082041
+  mcrai_security           : 0.619602
+  mcrai_transport          : 0.023487
+  mcrai_tourism            : 0.148375
+  mcrai_retail_density     : 0.016559
+  Sum                      : 1.000000
+
+NOTE: The normalized |coef| values above are retained as diagnostics only. They do not define mcrai_composite after Decision 20.

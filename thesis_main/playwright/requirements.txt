@@ -1,0 +1,9 @@
+# Playwright Lamudi scraping subproject
+# Install into the project venv at "16 Thesis/.venv", then run:
+#   python -m playwright install chromium
+playwright==1.60.0
+playwright-stealth==2.0.3
+
+# Shared with the rest of the thesis env (parsing / data handling):
+beautifulsoup4
+pandas

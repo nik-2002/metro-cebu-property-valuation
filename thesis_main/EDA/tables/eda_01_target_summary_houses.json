@@ -1,0 +1,17 @@
+[
+  {
+    "stratum":"Houses",
+    "n":1223,
+    "mean":80305.0757547682,
+    "median":71940.2173913044,
+    "std":43843.0378340261,
+    "skewness":2.2291777699,
+    "kurtosis":8.2942501987,
+    "min":8465.2501481419,
+    "max":363636.3636363637,
+    "iqr":40016.9108909684,
+    "log_price_shapiro_stat":0.9815171429,
+    "log_price_shapiro_p":0.0,
+    "log_price_normality":"does not appear normal"
+  }
+]

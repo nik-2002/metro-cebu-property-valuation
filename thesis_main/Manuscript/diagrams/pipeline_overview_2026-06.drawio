@@ -1,0 +1,168 @@
+<mxfile host="app.diagrams.net" modified="2026-06-13T00:00:00.000Z" agent="claude" version="24.0.0">
+  <diagram name="Pipeline Overview" id="overview-1">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Metro Cebu Residential Valuation — End-to-End Pipeline (CRISP-DM)  ·  abt_clean.csv 1,849 rows  ·  open_market only" style="text;html=1;align=center;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="1420" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bizband" value="BUSINESS UNDERSTANDING — Problem: the Metro Cebu &quot;valuation gap&quot; (BIR zonal lags · bank appraisals conservative · listing prices = asking-noise).   Clients: Consumers (buyers/sellers) + Brokers (validators).   Goal: a transparent, property-level open-market price → QGIS map + Streamlit app." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacing=8;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="1420" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Lane backgrounds ===== -->
+        <mxCell id="lane2" value="" style="rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="40" y="130" width="270" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="" style="rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="330" y="130" width="330" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="lane4" value="" style="rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;opacity=40;" vertex="1" parent="1">
+          <mxGeometry x="680" y="130" width="290" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="lane5" value="" style="rounded=0;fillColor=#f8cecc;strokeColor=#b85450;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="990" y="130" width="240" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="lane6" value="" style="rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="130" width="210" height="430" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Lane headers ===== -->
+        <mxCell id="h2" value="2 · DATA UNDERSTANDING" style="text;html=1;align=center;fontStyle=1;fontSize=11;fontColor=#3a7d34;" vertex="1" parent="1">
+          <mxGeometry x="40" y="135" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="3 · DATA PREPARATION" style="text;html=1;align=center;fontStyle=1;fontSize=11;fontColor=#a35b00;" vertex="1" parent="1">
+          <mxGeometry x="330" y="135" width="330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h4" value="4 · MODELING" style="text;html=1;align=center;fontStyle=1;fontSize=11;fontColor=#9a7d1a;" vertex="1" parent="1">
+          <mxGeometry x="680" y="135" width="290" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h5" value="5 · EVALUATION" style="text;html=1;align=center;fontStyle=1;fontSize=11;fontColor=#9c3a36;" vertex="1" parent="1">
+          <mxGeometry x="990" y="135" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h6" value="6 · DEPLOYMENT" style="text;html=1;align=center;fontStyle=1;fontSize=11;fontColor=#6c4a85;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="135" width="210" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Data Understanding ===== -->
+        <mxCell id="d_src" value="SOURCES (3 tiers)&#10;• open_market = Lamudi  [DEPLOYED]&#10;• bank_ropa  [reference only]&#10;• floor_price BDO/PagIBIG  [reference]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="160" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d_scrape" value="COLLECT — Lamudi, TWO scraper generations&#10;① requests + BeautifulSoup (legacy): 4,477 raw&#10;   → 1,419 unique in-scope (bulk of the ABT)&#10;② Playwright (2026-06, after Lamudi's CAPTCHA/JS&#10;   wall blocked ①): 665 raw → 275 net-new" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="246" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d_geo" value="GEOCODE missing coords (Google)&#10;geocode_missing.py — Cebu bbox guard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="330" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d_int" value="INTEGRITY AUDIT (read-only)&#10;eda_data_integrity.py&#10;duplicates · coord clusters · bad prices · MCRAI coverage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;align=left;spacing=6;fontSize=10;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="395" width="240" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Data Preparation ===== -->
+        <mxCell id="p_clean" value="CLEAN&#10;stage_lamudi_batch.py (price bounds, 6-LGU map, residential, spatial cap, dedup, BIR join)&#10;→ filter_to_lgu_scope.py (polygon)&#10;→ cleanup_abt_final.py (open_market only)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="345" y="160" width="300" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p_enrich" value="ENRICH (geospatial features)&#10;• CBD network distances — 8 nodes (enrich_cbd_and_lag.py)&#10;• road distances trunk/primary (compute_road_distances.py)&#10;• MCRAI 8 categories + composite (compute_hansen_scores.py)&#10;• spatial_lag_price (1km) · BIR zonal join" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="345" y="270" width="300" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p_abt" value="MASTER TABLE — abt_clean.csv 1,849 × 51 (open_market)&#10;Lamudi 1,579 + 2026-06 Playwright batch 270" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#d79b00;align=center;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="345" y="388" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_strat" value="STRATIFY (prepare_stratified_abt.py) — target = log(price/sqm)&#10;Condo 687 · Houses 674 · Lot 255 (80–2000 sqm, ≥½ BIR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="345" y="435" width="300" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Modeling ===== -->
+        <mxCell id="m_models" value="THREE MODELS&#10;• OLS / Hedonic — transparent baseline&#10;• Random Forest — DEPLOYED&#10;• XGBoost — comparator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="160" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_tune" value="TUNING — finalize_stratified_groupcv.py&#10;24-setting RF grid, scored by MdAPE&#10;under GroupKFold(5)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="255" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m_leak" value="LEAK-FREE GroupKFold&#10;groups = coordinate cluster&#10;(relistings / same-pin rows never straddle folds)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacing=6;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="695" y="330" width="260" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="m_deep" value="▶ see modeling_deepdive diagram&#10;(feature sets · RF vs XGB · why RF won)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d6b656;strokeColor=#b09500;align=center;spacing=6;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="695" y="410" width="260" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Evaluation ===== -->
+        <mxCell id="e_panel" value="iaao_panel()&#10;Headline: MdAPE · PE20&#10;Support: MAPE · COD · PRD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="160" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e_nums" value="LEAK-FREE RESULTS&#10;Condo  MdAPE 20.1% · PE20 49.8%&#10;Houses MdAPE 22.1% · PE20 45.0%&#10;Lot    MdAPE 25.6% · PE20 41.6%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="245" width="210" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="e_frame" value="NOT IAAO-compliant&#10;→ decision-support AVM prototype&#10;(honest, defensible framing)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacing=6;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="345" width="210" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Deployment ===== -->
+        <mxCell id="dep_app" value="STREAMLIT APP (4 pages)&#10;Home · Market Map · Price Surface · Property Predictor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="160" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_stack" value="STACK&#10;streamlit · scikit-learn · shap&#10;pydeck · folium (CartoDB tiles)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="255" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_qgis" value="QGIS layers&#10;(incl. valuation_gap.geojson)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="335" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_cloud" value="Streamlit Cloud deploy&#10;(deferred — next sprint)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9673a6;align=center;spacing=6;fontSize=10;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="395" width="180" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- ===== RQ mapping footer ===== -->
+        <mxCell id="rqband" value="RESEARCH-QUESTION MAPPING" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=center;fontStyle=1;fontSize=11;verticalAlign=top;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="575" width="1420" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="rq1" value="RQ1 — value drivers&#10;→ SHAP / RF importance + EDA feature relationships" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="605" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rq2" value="RQ2 — best model&#10;→ model_comparison_groupcv.csv (OLS/RF/XGB, same GroupKFold)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="605" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rq3" value="RQ3 — geospatial uplift&#10;→ ablation_groupcv.csv (structural → +admin → +geospatial)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="755" y="605" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rq4" value="RQ4 — valuation gap&#10;→ valuation_gap_summary.csv + valuation_gap.geojson" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;align=left;spacing=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="605" width="335" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ===== Flow arrows between lanes ===== -->
+        <mxCell id="f1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="d_int" target="p_clean">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="p_strat" target="m_models">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="m_leak" target="e_panel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="e_nums" target="dep_app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="d_src" target="d_scrape">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f0b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="d_scrape" target="d_geo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f0c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="d_geo" target="d_int">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fp1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="p_clean" target="p_enrich">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fp2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="p_enrich" target="p_abt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fp3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#555555;" edge="1" parent="1" source="p_abt" target="p_strat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

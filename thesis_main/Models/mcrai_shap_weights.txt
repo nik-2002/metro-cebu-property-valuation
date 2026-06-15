@@ -1,0 +1,15 @@
+MCRAI SHAP-Derived Weights (test set, RF)
+============================================================
+  Category                     Mean |SHAP|  Norm. Weight
+------------------------------------------------------------
+  mcrai_grocery                   0.034784      0.261021
+  mcrai_retail_density            0.024809      0.186168
+  mcrai_recreation                0.019221      0.144235
+  mcrai_transport                 0.014502      0.108826
+  mcrai_health                    0.014360      0.107755
+  mcrai_tourism                   0.007753      0.058179
+  mcrai_finance                   0.007538      0.056562
+  mcrai_security                  0.006124      0.045951
+  mcrai_education                 0.004171      0.031302
+------------------------------------------------------------
+  Sum                             0.133263      1.000000

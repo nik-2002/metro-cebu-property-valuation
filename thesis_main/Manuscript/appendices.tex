@@ -1,0 +1,84 @@
+\section*{Appendix A: Data Documentation}
+
+\begin{table}[htbp]
+\caption{Sample Structure of Cleaned BDO Foreclosure Records}
+\label{tab:chapter3-bdo-structure}
+\begin{center}
+\begin{tabular}{p{0.28\textwidth} p{0.28\textwidth} p{0.30\textwidth}}
+\toprule
+Raw Column (BDO Excel) & Processed Feature & Description \\
+\midrule
+REGION & Region & Filtered to Region VII \\
+CITY\_PROVINCE & City & Filtered to Metro Cebu LGUs \\
+PROPERTY\_ADDRESS & Address & Geocoded string \\
+LOT\_AREA & Lot Area & Numeric (sqm) \\
+FLOOR\_AREA & Floor Area & Numeric (sqm) \\
+MINIMUM\_BID\_PRICE & Actual Price & Numeric target variable (PHP) \\
+PROPERTY\_DESCRIPTION & Bedrooms, Bathrooms & Parsed via regex \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Sample Structure of Cleaned Lamudi Listing Records}
+\label{tab:chapter3-lamudi-structure}
+\begin{center}
+\begin{tabular}{p{0.26\textwidth} p{0.26\textwidth} p{0.34\textwidth}}
+\toprule
+Raw Field (Web Scrape) & Processed Feature & Description \\
+\midrule
+Location & Barangay, City & Parsed location string \\
+Price & Actual Price & Target variable (PHP), cleaned of currency symbols \\
+Bedrooms & Bedrooms & Numeric extract \\
+Bathrooms & Bathrooms & Numeric extract \\
+Floor area & Floor Area & Numeric extract (sqm) \\
+Land Size & Lot Area & Numeric extract (sqm) \\
+Latitude / Longitude & Latitude, Longitude & Direct coordinate mapping \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Final Feature Matrix Schema Used for the Modeling Workflow}
+\label{tab:chapter3-feature-matrix}
+\begin{center}
+\begin{tabular}{p{0.18\textwidth} p{0.54\textwidth} p{0.18\textwidth}}
+\toprule
+Feature Group & Variables & Type \\
+\midrule
+\textbf{Identifiers / Metadata} & Property ID, source, market segment (stored in ABT; excluded from final fitted feature matrix) & Metadata \\
+\textbf{Structural} & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, vacancy / imputation flags & Numeric / Categorical \\
+\textbf{Locational} & City, Barangay, Latitude, Longitude, \emph{is\_mactan\_island} & Numeric / Categorical \\
+\textbf{Geospatial} & Network distance to Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport & Numeric (meters) \\
+\textbf{MCRAI} & \emph{mcrai\_education} through \emph{mcrai\_retail\_density}, plus \emph{mcrai\_composite} & Numeric (index scores) \\
+\textbf{Administrative / Neighborhood} & BIR zonal-value features and \emph{spatial\_lag\_price} & Numeric (PHP) \\
+\textbf{Target} & \emph{price\_per\_sqm}, \emph{price\_php}, \emph{log\_price} & Numeric \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section*{Appendix B: Supplementary Tables}
+
+\begin{table}[htbp]
+\caption{Geographic Distribution of the Final ABT by LGU and Market Segment}
+\label{tab:appendix-abt-city-distribution}
+\begin{center}
+\begin{tabular}{p{0.22\textwidth} p{0.10\textwidth} p{0.11\textwidth} p{0.11\textwidth} p{0.11\textwidth} p{0.11\textwidth}}
+\toprule
+City or Municipality & Rows & Share & open\_market & bank\_ropa & floor\_price \\
+\midrule
+Cebu City & 723 & 35.32\% & 488 & 211 & 24 \\
+Lapu-Lapu City & 643 & 31.41\% & 558 & 44 & 41 \\
+Mandaue City & 351 & 17.15\% & 307 & 11 & 33 \\
+Talisay City & 122 & 5.96\% & 84 & 37 & 1 \\
+Consolacion & 119 & 5.81\% & 111 & 4 & 4 \\
+Minglanilla & 89 & 4.35\% & 71 & 13 & 5 \\
+\midrule
+Total & 2{,}047 & 100.00\% & 1{,}619 & 320 & 108 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}

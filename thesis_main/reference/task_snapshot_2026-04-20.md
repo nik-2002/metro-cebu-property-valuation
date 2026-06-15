@@ -1,5 +1,7 @@
 # Manuscript Task Snapshot
 
+> Historical snapshot only. This file reflects the task state on 2026-04-20 and is superseded by `Manuscript/task.md` for the current modeling and manuscript status.
+
 > Snapshot date: 2026-04-20
 > Canonical tracker: `thesis_main/Manuscript/task.md`
 

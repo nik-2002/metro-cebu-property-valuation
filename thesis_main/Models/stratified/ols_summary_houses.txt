@@ -1,0 +1,54 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_price   R-squared:                       0.320
+Model:                            OLS   Adj. R-squared:                  0.283
+Method:                 Least Squares   F-statistic:                     6.511
+Date:                Fri, 05 Jun 2026   Prob (F-statistic):           2.56e-19
+Time:                        12:13:14   Log-Likelihood:                -257.01
+No. Observations:                 539   AIC:                             572.0
+Df Residuals:                     510   BIC:                             696.4
+Df Model:                          28                                         
+Covariance Type:                  HC3                                         
+=================================================================================================
+                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+const                            12.6339     10.253      1.232      0.218      -7.462      32.729
+bedrooms                         -0.0916      0.030     -3.068      0.002      -0.150      -0.033
+bathrooms                         0.1002      0.029      3.422      0.001       0.043       0.158
+bedrooms_imputed                 -0.4342      0.239     -1.820      0.069      -0.902       0.033
+bathrooms_imputed                 0.2812      0.250      1.127      0.260      -0.208       0.770
+dist_cebu_business_park_m     -3.629e-05   2.42e-05     -1.501      0.133   -8.37e-05    1.11e-05
+dist_mandaue_cbd_m             2.556e-05   1.81e-05      1.416      0.157   -9.83e-06    6.09e-05
+dist_to_trunk_road_m           1.984e-05   1.61e-05      1.231      0.218   -1.18e-05    5.14e-05
+dist_to_primary_road_m        -2.669e-05   2.19e-05     -1.217      0.223   -6.97e-05    1.63e-05
+mcrai_education                  -0.0080      0.004     -2.213      0.027      -0.015      -0.001
+mcrai_grocery                     0.0040      0.002      2.273      0.023       0.001       0.008
+mcrai_health                     -0.0041      0.002     -2.305      0.021      -0.008      -0.001
+mcrai_hospitals                9.435e-05      0.029      0.003      0.997      -0.056       0.056
+mcrai_recreation                  0.0016      0.001      1.418      0.156      -0.001       0.004
+mcrai_security                    0.0092      0.008      1.087      0.277      -0.007       0.026
+mcrai_tourism                    -0.0008      0.002     -0.388      0.698      -0.005       0.003
+mcrai_retail_density              0.0011      0.001      1.474      0.140      -0.000       0.003
+bir_zonal_rr_log                  0.0580      0.064      0.910      0.363      -0.067       0.183
+bir_zonal_cr_median            5.628e-07   1.32e-06      0.427      0.670   -2.02e-06    3.15e-06
+spatial_lag_price              2.518e-09   1.36e-09      1.847      0.065   -1.54e-10    5.19e-09
+city_Consolacion                 -0.1294      0.175     -0.740      0.459      -0.472       0.213
+city_Lapu-Lapu City              -0.2791      0.185     -1.513      0.130      -0.641       0.083
+city_Mandaue City                -0.1173      0.142     -0.826      0.409      -0.396       0.161
+city_Minglanilla                 -0.0566      0.180     -0.314      0.754      -0.410       0.297
+city_Talisay City                -0.1915      0.129     -1.484      0.138      -0.444       0.061
+property_type_House and Lot      -0.8844     10.228     -0.086      0.931     -20.931      19.162
+property_type_Single Detached    -0.8129     10.228     -0.079      0.937     -20.860      19.234
+property_type_Townhouse          -0.9902     10.229     -0.097      0.923     -21.038      19.057
+log_area_sqm                     -0.1590      0.040     -3.997      0.000      -0.237      -0.081
+==============================================================================
+Omnibus:                       23.720   Durbin-Watson:                   1.935
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               49.310
+Skew:                          -0.233   Prob(JB):                     1.96e-11
+Kurtosis:                       4.406   Cond. No.                     1.81e+09
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 1.81e+09. This might indicate that there are
+strong multicollinearity or other numerical problems.

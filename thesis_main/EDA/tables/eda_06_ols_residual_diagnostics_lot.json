@@ -1,0 +1,22 @@
+[
+  {
+    "stratum":"Lot",
+    "n_ols":671,
+    "ols_feature_count":17,
+    "r_squared":0.3467357096,
+    "adj_r_squared":0.3297288291,
+    "aic":1328.2668352883,
+    "bic":1409.4246797537,
+    "breusch_pagan_lm":56.2475099076,
+    "breusch_pagan_lm_p_value":0.0000043132,
+    "breusch_pagan_f":3.5145300762,
+    "breusch_pagan_f_p_value":0.0000023951,
+    "breusch_pagan_interpretation":"heteroscedastic",
+    "jarque_bera_stat":5.0291590801,
+    "jarque_bera_p_value":0.080896919,
+    "jarque_bera_interpretation":"residuals approximately normal",
+    "durbin_watson":1.8867418955,
+    "durbin_watson_interpretation":"near 2, no strong autocorrelation signal",
+    "covariance_type":"HC3"
+  }
+]

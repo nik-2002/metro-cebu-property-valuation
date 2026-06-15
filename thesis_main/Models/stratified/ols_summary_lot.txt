@@ -1,0 +1,47 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_price   R-squared:                       0.524
+Model:                            OLS   Adj. R-squared:                  0.478
+Method:                 Least Squares   F-statistic:                     6.837
+Date:                Fri, 05 Jun 2026   Prob (F-statistic):           1.72e-14
+Time:                        12:13:24   Log-Likelihood:                -221.86
+No. Observations:                 240   AIC:                             487.7
+Df Residuals:                     218   BIC:                             564.3
+Df Model:                          21                                         
+Covariance Type:                  HC3                                         
+=============================================================================================
+                                coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                         8.7865      2.508      3.503      0.000       3.871      13.703
+dist_cebu_business_park_m    -0.0001   5.36e-05     -2.210      0.027      -0.000   -1.34e-05
+dist_mandaue_cbd_m         3.701e-05   5.14e-05      0.720      0.472   -6.37e-05       0.000
+dist_to_trunk_road_m      -2.154e-05   3.78e-05     -0.570      0.569   -9.57e-05    5.26e-05
+dist_to_primary_road_m     6.861e-05   6.09e-05      1.126      0.260   -5.08e-05       0.000
+mcrai_education              -0.0161      0.015     -1.064      0.287      -0.046       0.014
+mcrai_grocery                 0.0030      0.004      0.809      0.419      -0.004       0.010
+mcrai_health                  0.0081      0.004      1.949      0.051    -4.7e-05       0.016
+mcrai_hospitals               0.0920      0.054      1.699      0.089      -0.014       0.198
+mcrai_recreation              0.0060      0.005      1.139      0.255      -0.004       0.016
+mcrai_security               -0.0153      0.026     -0.591      0.555      -0.066       0.035
+mcrai_tourism                -0.0137      0.010     -1.417      0.157      -0.033       0.005
+mcrai_retail_density         -0.0014      0.003     -0.447      0.655      -0.008       0.005
+bir_zonal_rr_log              0.2510      0.246      1.020      0.308      -0.231       0.733
+bir_zonal_cr_median         1.62e-06   5.01e-06      0.323      0.747   -8.21e-06    1.14e-05
+spatial_lag_price          4.668e-09   5.24e-09      0.891      0.373    -5.6e-09    1.49e-08
+city_Consolacion              0.0921      0.488      0.189      0.850      -0.864       1.048
+city_Lapu-Lapu City           0.3409      0.423      0.807      0.420      -0.487       1.169
+city_Mandaue City             0.4057      0.287      1.412      0.158      -0.157       0.969
+city_Minglanilla              0.0001      0.718      0.000      1.000      -1.407       1.407
+city_Talisay City             0.1474      0.467      0.316      0.752      -0.768       1.062
+log_area_sqm                 -0.0473      0.042     -1.118      0.264      -0.130       0.036
+==============================================================================
+Omnibus:                       16.169   Durbin-Watson:                   2.089
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               33.377
+Skew:                           0.307   Prob(JB):                     5.65e-08
+Kurtosis:                       4.720   Cond. No.                     1.46e+09
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 1.46e+09. This might indicate that there are
+strong multicollinearity or other numerical problems.

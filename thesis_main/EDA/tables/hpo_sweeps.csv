@@ -1,0 +1,130 @@
+model,param,stratum,value,MdAPE
+Random Forest,n_estimators,Condominium,100,20.39702298619861
+Random Forest,n_estimators,Condominium,200,20.159594594870043
+Random Forest,n_estimators,Condominium,300,20.572331190461668
+Random Forest,n_estimators,Condominium,400,20.081576560227386
+Random Forest,n_estimators,Condominium,500,20.42714761040092
+Random Forest,n_estimators,Condominium,600,20.151949142624602
+Random Forest,n_estimators,Houses,100,22.544647302207366
+Random Forest,n_estimators,Houses,200,22.72467079216767
+Random Forest,n_estimators,Houses,300,22.138222722712953
+Random Forest,n_estimators,Houses,400,22.384538766783464
+Random Forest,n_estimators,Houses,500,22.420973619335726
+Random Forest,n_estimators,Houses,600,22.627805028863886
+Random Forest,n_estimators,Vacant Lot,100,26.41965356263196
+Random Forest,n_estimators,Vacant Lot,200,25.718478359626218
+Random Forest,n_estimators,Vacant Lot,300,26.442271985240307
+Random Forest,n_estimators,Vacant Lot,400,25.552099005846596
+Random Forest,n_estimators,Vacant Lot,500,25.630831021511735
+Random Forest,n_estimators,Vacant Lot,600,26.49070498620585
+Random Forest,max_depth,Condominium,3,22.787894763533178
+Random Forest,max_depth,Condominium,5,20.910045455003214
+Random Forest,max_depth,Condominium,10,21.12252908522163
+Random Forest,max_depth,Condominium,15,20.41791666939705
+Random Forest,max_depth,Condominium,20,20.213468505220455
+Random Forest,max_depth,Condominium,None,20.081576560227386
+Random Forest,max_depth,Houses,3,23.233016621718804
+Random Forest,max_depth,Houses,5,23.908514435767042
+Random Forest,max_depth,Houses,10,23.06648011924297
+Random Forest,max_depth,Houses,15,22.327620250568046
+Random Forest,max_depth,Houses,20,22.138222722712953
+Random Forest,max_depth,Houses,None,22.25116766205297
+Random Forest,max_depth,Vacant Lot,3,27.21328179233695
+Random Forest,max_depth,Vacant Lot,5,24.945143225185586
+Random Forest,max_depth,Vacant Lot,10,25.638568073887
+Random Forest,max_depth,Vacant Lot,15,25.569270349991058
+Random Forest,max_depth,Vacant Lot,20,25.552099005846596
+Random Forest,max_depth,Vacant Lot,None,25.552099005846596
+Random Forest,max_features,Condominium,0.3,21.162276644624754
+Random Forest,max_features,Condominium,0.5,20.240553470986168
+Random Forest,max_features,Condominium,0.7,20.406343822729113
+Random Forest,max_features,Condominium,0.9,20.081576560227386
+Random Forest,max_features,Condominium,1.0,20.584876067851653
+Random Forest,max_features,Houses,0.3,23.123838095842803
+Random Forest,max_features,Houses,0.5,23.048258776844165
+Random Forest,max_features,Houses,0.7,22.847865845391517
+Random Forest,max_features,Houses,0.9,22.553201669500254
+Random Forest,max_features,Houses,1.0,22.138222722712953
+Random Forest,max_features,Vacant Lot,0.3,25.740192969067945
+Random Forest,max_features,Vacant Lot,0.5,25.523600676520797
+Random Forest,max_features,Vacant Lot,0.7,26.26085036778819
+Random Forest,max_features,Vacant Lot,0.9,26.75504695256099
+Random Forest,max_features,Vacant Lot,1.0,25.552099005846596
+Random Forest,min_samples_leaf,Condominium,1,20.17140808204978
+Random Forest,min_samples_leaf,Condominium,2,20.081576560227386
+Random Forest,min_samples_leaf,Condominium,4,21.350941178958816
+Random Forest,min_samples_leaf,Condominium,8,21.905086355736046
+Random Forest,min_samples_leaf,Houses,1,22.917877476111965
+Random Forest,min_samples_leaf,Houses,2,22.138222722712953
+Random Forest,min_samples_leaf,Houses,4,23.850784279308286
+Random Forest,min_samples_leaf,Houses,8,24.833172207896148
+Random Forest,min_samples_leaf,Vacant Lot,1,25.552099005846596
+Random Forest,min_samples_leaf,Vacant Lot,2,27.11710941562493
+Random Forest,min_samples_leaf,Vacant Lot,4,26.93156739247795
+Random Forest,min_samples_leaf,Vacant Lot,8,27.699017746350663
+XGBoost,n_estimators,Condominium,100,21.040325523275815
+XGBoost,n_estimators,Condominium,200,21.758193069433716
+XGBoost,n_estimators,Condominium,300,21.423432030991442
+XGBoost,n_estimators,Condominium,400,22.00600027210824
+XGBoost,n_estimators,Condominium,500,21.993130764410417
+XGBoost,n_estimators,Condominium,600,22.258681146741445
+XGBoost,n_estimators,Houses,100,23.111348375711483
+XGBoost,n_estimators,Houses,200,22.622524629650233
+XGBoost,n_estimators,Houses,300,22.815249332644804
+XGBoost,n_estimators,Houses,400,21.93486392869371
+XGBoost,n_estimators,Houses,500,22.189052834009658
+XGBoost,n_estimators,Houses,600,22.28621097858394
+XGBoost,n_estimators,Vacant Lot,100,25.157728913121645
+XGBoost,n_estimators,Vacant Lot,200,24.047741073685614
+XGBoost,n_estimators,Vacant Lot,300,24.25835728687161
+XGBoost,n_estimators,Vacant Lot,400,24.855327820761996
+XGBoost,n_estimators,Vacant Lot,500,24.63111708242527
+XGBoost,n_estimators,Vacant Lot,600,24.554025143714043
+XGBoost,max_depth,Condominium,2,22.00390585470231
+XGBoost,max_depth,Condominium,3,21.423432030991442
+XGBoost,max_depth,Condominium,4,20.922300044667907
+XGBoost,max_depth,Condominium,5,21.53901694114475
+XGBoost,max_depth,Condominium,6,21.49619722046454
+XGBoost,max_depth,Condominium,8,21.008913889016
+XGBoost,max_depth,Houses,2,23.56941711960664
+XGBoost,max_depth,Houses,3,22.189052834009658
+XGBoost,max_depth,Houses,4,21.993468802886255
+XGBoost,max_depth,Houses,5,22.94685610441201
+XGBoost,max_depth,Houses,6,22.453571039353037
+XGBoost,max_depth,Houses,8,22.225804815866923
+XGBoost,max_depth,Vacant Lot,2,26.533499084881562
+XGBoost,max_depth,Vacant Lot,3,26.876421494030556
+XGBoost,max_depth,Vacant Lot,4,26.145657927376508
+XGBoost,max_depth,Vacant Lot,5,24.25835728687161
+XGBoost,max_depth,Vacant Lot,6,24.300077711862333
+XGBoost,max_depth,Vacant Lot,8,25.20974331567879
+XGBoost,learning_rate,Condominium,0.01,21.089525630288676
+XGBoost,learning_rate,Condominium,0.03,21.74579757673001
+XGBoost,learning_rate,Condominium,0.05,21.423432030991442
+XGBoost,learning_rate,Condominium,0.1,23.019466023559907
+XGBoost,learning_rate,Condominium,0.2,22.930734455628286
+XGBoost,learning_rate,Condominium,0.3,24.69394049956881
+XGBoost,learning_rate,Houses,0.01,22.949260311597936
+XGBoost,learning_rate,Houses,0.03,22.724228513830543
+XGBoost,learning_rate,Houses,0.05,22.189052834009658
+XGBoost,learning_rate,Houses,0.1,23.15507464082969
+XGBoost,learning_rate,Houses,0.2,23.17051680313093
+XGBoost,learning_rate,Houses,0.3,23.819093372832516
+XGBoost,learning_rate,Vacant Lot,0.01,26.95353056042171
+XGBoost,learning_rate,Vacant Lot,0.03,24.58040850404477
+XGBoost,learning_rate,Vacant Lot,0.05,24.25835728687161
+XGBoost,learning_rate,Vacant Lot,0.1,25.56764964532583
+XGBoost,learning_rate,Vacant Lot,0.2,25.538702283929037
+XGBoost,learning_rate,Vacant Lot,0.3,29.1880396153511
+XGBoost,subsample,Condominium,0.6,21.76980538929769
+XGBoost,subsample,Condominium,0.8,20.810061629280906
+XGBoost,subsample,Condominium,0.9,21.423432030991442
+XGBoost,subsample,Condominium,1.0,21.53113894122527
+XGBoost,subsample,Houses,0.6,23.875519705120336
+XGBoost,subsample,Houses,0.8,22.59306279021398
+XGBoost,subsample,Houses,0.9,22.189052834009658
+XGBoost,subsample,Houses,1.0,21.45209362544213
+XGBoost,subsample,Vacant Lot,0.6,26.84782101447518
+XGBoost,subsample,Vacant Lot,0.8,27.53949864462252
+XGBoost,subsample,Vacant Lot,0.9,24.25835728687161
+XGBoost,subsample,Vacant Lot,1.0,27.48851655995974

@@ -1,11 +1,9 @@
 id,lat,lon,amenity_type,amenity
 2126257880,10.3313114,123.8979719,marketplace,Unnamed grocery
-2423120712,10.3738946,123.9894627,marketplace,Capulay Market
 3182113257,10.3318902,123.8989382,marketplace,Lahug Market
 4617877692,10.3007358,123.9805427,marketplace,Pajac Wet Market
 5581833955,10.3961012,123.9222796,marketplace,Pit-os Public Market
 5846393438,10.28971,123.8740805,marketplace,Tabada Public Market
-5996357579,10.3081053,123.7104419,marketplace,Lutopan Wet Market
 7244388167,10.2868775,123.968978,marketplace,Unnamed grocery
 7401965134,10.350546,123.9247314,marketplace,Cabancalan Mini Market
 7409755885,10.2949359,123.8691384,marketplace,Punta Princesa Public Market
@@ -13,44 +11,30 @@ id,lat,lon,amenity_type,amenity
 7637096586,10.3557324,123.9502065,marketplace,Basak Tyangi
 10892465897,10.3117865,123.9085388,marketplace,Unnamed grocery
 11817509751,10.321997,123.9060321,marketplace,Public Market Barangay Luz
-11966445399,10.5701392,123.7162793,marketplace,Asturias New Public Market
-12627847701,10.38844,124.0102421,marketplace,Sea Urchin & Fish Market
 12743913327,10.34959,123.9251154,marketplace,Inse Loling's Market
 47870461,10.3108589,123.9503086,marketplace,Lapu-Lapu City Public Market
 207704673,10.3159047,123.8852419,marketplace,Banawa Public Market
 241568591,10.2917163,123.899841,marketplace,Carbon Unit 3 Public Market
-249852427,10.421951,123.99573,marketplace,New Liloan Public Market
 282040498,10.3045675,123.8992822,marketplace,F. Ramos Public Market
 308237871,10.2794988,123.8557098,marketplace,Pardo Public Market
-312168289,10.1609069,123.7071101,marketplace,San Fernando Public Market
 335725378,10.2912434,123.8980233,marketplace,Carbon Unit 1 Public Market
 335725779,10.2914802,123.8989673,marketplace,Carbon Interim Public Market
 355848025,10.360436,123.9158652,marketplace,Cabancalan Test Market
 355848026,10.3600389,123.9159366,marketplace,Cabancalan Market
-363904992,10.5913229,124.0185336,marketplace,Carmen Public Market
 402324001,10.263398,123.838473,marketplace,Talisay City Public Market
 420187149,10.289665,123.8914401,marketplace,Cebu City Fish Market
 472435813,10.2704833,123.8566176,marketplace,Inayawan Public Market
 577608098,10.3750833,123.9608193,marketplace,Consolacion Public Market
-608871444,10.205567,123.7599547,marketplace,City of Naga Public Market
 609537243,10.2914629,123.8919861,marketplace,Pasil Fish Market
-816428553,10.5043341,123.7136245,marketplace,Balamban Public Market
 855780899,10.3276686,123.9414342,marketplace,Mandaue City Public Market
 930834742,10.2633379,123.8386014,marketplace,Talisay City Public Market
 1119902685,10.3015293,123.9043482,marketplace,Tiburcio Padilla Public Market
 1139295030,10.2417411,123.7984801,marketplace,The Marketplace Minglanilla
-1148096606,10.2504777,123.9490733,marketplace,Cordova Public Market
-1148689555,10.2718117,123.9460992,marketplace,Pilipog Wet Market
-1148697156,10.3071511,123.7029887,marketplace,Don Andres Soriano Public Market
-1158613003,10.2307492,123.7689753,marketplace,City of Naga Satellite Market
 1172321959,10.3116626,123.907989,marketplace,Hipodromo Public Market
-1185061802,10.4683264,123.7025609,marketplace,Buanoy Public Market
 1208983114,10.368259,123.9329032,marketplace,Unnamed grocery
 1284550290,10.318054,123.9148656,marketplace,Unnamed grocery
 1354574440,10.3409933,123.9351264,marketplace,JJ Market Place
 12658509,10.2955046,123.8911713,marketplace,Tabo-an Public Market
-19065268,10.5677174,123.7173558,marketplace,Asturias Public Market
-19377229,10.5172748,124.026096,marketplace,Danao City Public Market
 355114441,10.3262532,123.9523026,supermarket,Johann Commercial
 369910696,10.2979824,123.8953864,supermarket,Healtea
 369910743,10.332877,123.9495527,supermarket,Metro Fresh & Easy
@@ -76,7 +60,6 @@ id,lat,lon,amenity_type,amenity
 4043132000,10.266767,123.8430413,supermarket,Robinsons Supermarket
 4047221705,10.3504218,123.9484124,supermarket,SM supermaket
 4063026765,10.2646479,123.8406111,supermarket,Happy Mart
-4120006092,10.4007392,123.999626,supermarket,Gaisano Supermarket
 4173736304,10.2572311,123.8591856,supermarket,Gaisano Capital SRP
 4347773292,10.3454018,123.9309033,supermarket,Gaisano Capital Casuntingan
 4404045290,10.2818791,123.8798232,supermarket,Savemore Seaside City
@@ -99,7 +82,6 @@ id,lat,lon,amenity_type,amenity
 6994221677,10.3128875,123.8945143,supermarket,Robinsons Supermarket
 7103844002,10.2866383,123.9706706,supermarket,Gaisano Grand Mall Supermarket
 7111851104,10.3165685,123.9632001,supermarket,Unnamed grocery
-7119086872,10.2572064,123.9478955,supermarket,Gaisano Supermarket
 7140626602,10.3077824,124.0131151,supermarket,Robinson's Easy Mart
 7229485487,10.2608259,123.8384827,supermarket,Shopwell
 7229485490,10.312406,123.951346,supermarket,Sosyo Supermart
@@ -122,7 +104,6 @@ id,lat,lon,amenity_type,amenity
 10300105110,10.3116757,123.8984543,supermarket,Puregold
 10300105209,10.3727465,123.9549396,supermarket,Puregold
 10587614161,10.3899148,123.9506197,supermarket,Bitoon Store
-10593365376,10.2082622,123.7580244,supermarket,Savemore
 10632535636,10.2593295,123.8231456,supermarket,All Day Supermarket
 10786693513,10.2901186,123.9905941,supermarket,Go Mart Express
 10847817169,10.2994795,123.9620507,supermarket,Gaisano Grand Mall Supermarket
@@ -153,7 +134,6 @@ id,lat,lon,amenity_type,amenity
 299410005,10.3019171,123.9628598,supermarket,Robinsons Supermarket
 312176906,10.3105383,123.9522545,supermarket,La Nueva
 363758988,10.2448166,123.795081,supermarket,La Nueva Supermart
-397897993,10.5920927,124.0178387,supermarket,Metro Supermarket
 459313361,10.3317077,123.9468591,supermarket,Prince Warehouse Club
 459313368,10.326718,123.9408504,supermarket,Colonnade Supermarket Mandaue
 527926392,10.2763729,123.8574724,supermarket,Gaisano Saversmart Inayawan
@@ -164,20 +144,13 @@ id,lat,lon,amenity_type,amenity
 615950129,10.3207168,123.9095798,supermarket,Landers Superstore Cebu
 624768675,10.2890821,123.8710523,supermarket,Shopwise
 626778762,10.3664303,123.9341967,supermarket,San Rose Market
-628918008,10.3739297,123.9886352,supermarket,Metro Supermarket
 665214352,10.290149,123.9678885,supermarket,Gaisano Savers Mart
-665244560,10.5027634,123.7147511,supermarket,Gaisano Sari-Sari Store
-676727828,10.3082211,123.7095192,supermarket,Lourdes Store
 746561572,10.3004992,123.9633509,supermarket,SM Hypermart
-809874314,10.2075996,123.7590487,supermarket,Metro Market Naga
-853554785,10.5167705,124.0244879,supermarket,Gaisano Central Mall
 888546468,10.2845687,123.9657061,supermarket,Shopwise Express
 891261296,10.3352946,123.938929,supermarket,Savemore Market
 933315848,10.3267254,123.9408445,supermarket,Colonade Supermarket
-1019804779,10.4046846,123.9836478,supermarket,Grocery Store
 1174906481,10.3131955,123.9552357,supermarket,Super Metro
 1174906482,10.3680021,123.9318882,supermarket,Metro Supermarket Canduman
-1185729753,10.5663974,123.7166491,supermarket,Prince Hypermart
 1267684300,10.3112533,123.8763689,supermarket,The Marketplace
 1426041571,10.2415171,123.7992607,supermarket,O!Save Supermarket Philippines
 413986522,10.3167191,123.9339478,mall,Boardwalk Plaza
@@ -205,14 +178,11 @@ id,lat,lon,amenity_type,amenity
 155930841,10.2995971,123.8693354,mall,Gaisano Capital Tisa
 156416254,10.3307099,123.9074101,mall,Ayala Malls Central Bloc
 181595819,10.3357854,123.9343911,mall,SM City JMall
-189316202,10.4030822,123.999509,mall,Bay Mall Liloan
 189316203,10.3625507,123.9488529,mall,Save More Canduman
 202730464,10.3095603,123.8953402,mall,Raintree Mall
 207704676,10.3150859,123.8845037,mall,One Pavillion Mall
 209950119,10.3663253,123.9135162,mall,Gaisano Grand Mall Talamban
-218555002,10.5040355,123.7213148,mall,Gaisano Town Center Balamban
 231880189,10.3091986,123.9135276,mall,GMall of Cebu
-246178319,10.2081745,123.7580638,mall,Leah Mall
 265536981,10.3141755,123.9179295,mall,APM Mall
 283299163,10.3086987,123.8898399,mall,City Soho Mall
 286775838,10.3281592,123.9096052,mall,Unnamed grocery
@@ -228,26 +198,18 @@ id,lat,lon,amenity_type,amenity
 426086151,10.3128627,123.8924749,mall,Coco Mall
 430918361,10.3501896,123.9483964,mall,Insular Square Mall
 459313377,10.3286798,123.9423885,mall,Gaisano Grand Mall Mandaue
-538656445,10.4007265,123.9992778,mall,Gaisano Grand Mall Liloan
 539905149,10.3117408,123.9185159,mall,SM City Cebu
 611225002,10.2918952,123.879912,mall,Gaisano Grand Jai-alai
-620778880,10.51922,124.0260294,mall,Gaisano Capital Danao
 628222573,10.3693689,123.918471,mall,Times Square Talamban
 638937631,10.2831742,123.993275,mall,Shangs Island Town Center
 821829490,10.3357267,123.9343975,mall,SM City JMall
-853554796,10.5186753,124.0266738,mall,CityMall Danao
-853587277,10.2575047,123.9480496,mall,Gaisano Grand Mall Cordova
 854392349,10.2573991,123.8593671,mall,Gaisano Capital SRP
 915773039,10.3806352,123.9643282,mall,SM City Consolacion
-957126127,10.5210664,124.0297449,mall,Sands Gateway Mall
-993204745,10.5221982,124.0299792,mall,Metro Danao
 1083135350,10.2663944,123.8777819,mall,Unnamed grocery
 1154403918,10.2962248,123.9838864,mall,Primark Town Center Mactan
 1155046471,10.3072984,124.0094712,mall,LG Garden Walk
 1166003553,10.299745,123.97855,mall,Unnamed grocery
 1166259040,10.2996898,123.9620542,mall,Gaisano Grand Plaza Mactan
-1185431320,10.4927148,123.7139946,mall,Gaisano Grand Balamban
-1224946781,10.2068541,123.7577179,mall,Youka
 1230770153,10.3264529,123.9759124,mall,Island Central
 1240005479,10.2986326,123.964073,mall,City Time Square - Mactan
 1249721640,10.321973,123.9337478,mall,NorthDrive Mall
@@ -288,7 +250,6 @@ id,lat,lon,amenity_type,amenity
 2860419707,10.3135348,123.9026526,convenience,Florence Convenience Store
 2885402396,10.3113504,123.9009377,convenience,Helpa Store
 2887286012,10.3172685,123.9021294,convenience,2Five8
-2909095802,10.2082925,123.7582676,convenience,7-Eleven
 2943143986,10.3323392,123.9065009,convenience,7-Eleven
 3105254992,10.2908454,123.9672427,convenience,7-Eleven
 3140263634,10.313528,123.8926422,convenience,7-Eleven
@@ -310,7 +271,6 @@ id,lat,lon,amenity_type,amenity
 3389180036,10.3076609,123.8956326,convenience,Zalos
 3528541442,10.3298096,123.9325352,convenience,7-Eleven
 3528542484,10.3603602,123.9155791,convenience,7-Eleven
-3545963541,10.5064656,123.7155293,convenience,7-Eleven
 3545969050,10.3495203,123.9132404,convenience,Uncle John's
 3545969795,10.334557,123.9406132,convenience,7-Eleven
 3545972064,10.325329,123.9267632,convenience,7-Eleven
@@ -326,9 +286,6 @@ id,lat,lon,amenity_type,amenity
 3777096269,10.3197351,123.9037275,convenience,7-Eleven
 3784851448,10.3283256,123.907299,convenience,Quik Stop
 3789667620,10.3117172,123.9212327,convenience,7-Eleven
-3789677721,10.3992413,123.9996667,convenience,7-Eleven
-3789687792,10.3903276,123.9819512,convenience,7-Eleven
-3789691354,10.3906194,123.9818415,convenience,Cindy's Store
 3789691519,10.3764165,123.9587452,convenience,7-Eleven
 3796461574,10.3013475,123.9628987,convenience,7-Eleven
 3812244326,10.3195438,123.9038156,convenience,Quick Stop
@@ -338,27 +295,21 @@ id,lat,lon,amenity_type,amenity
 4047179626,10.2492045,123.8390215,convenience,7-Eleven
 4092078775,10.2565694,123.8376964,convenience,Store
 4137477448,10.3096202,123.9011182,convenience,7-Eleven
-4142728293,10.0322577,124.0664724,convenience,Inabanga Shops
 4167397734,10.3304611,123.9002542,convenience,Shell Select
 4167423211,10.3455992,123.8933845,convenience,RR&V Sari-sari Store
 4167476394,10.3021646,123.8981702,convenience,7-Eleven
 4176623593,10.2384836,123.8383471,convenience,Arvin Store
-4185818454,10.3743915,123.9893654,convenience,7-Eleven
 4185827567,10.3310408,123.9367932,convenience,Nook Express
 4189296818,10.3301187,123.9428677,convenience,Nery Store
 4195029292,10.2948096,123.890548,convenience,7-Eleven
 4195049813,10.2980352,123.8848224,convenience,7-Eleven
 4195049837,10.2928359,123.8942804,convenience,7-Eleven
 4207022905,10.2936015,123.9027903,convenience,7-Eleven
-4213220589,10.2580931,123.9484932,convenience,7-Eleven
 4228652031,10.2930202,123.8972226,convenience,Kerrian's Store
-4290036090,10.1620265,123.7063139,convenience,7-Eleven
 4307045893,10.3138702,123.9306744,convenience,BS Store
-4417497591,10.3751582,123.9857262,convenience,RJs Store
 4450941628,10.2977621,123.9010265,convenience,7-Eleven
 4462666089,10.2434714,123.8394603,convenience,Basalo Store
 4552061608,10.3492513,123.9490613,convenience,Shell Select
-4553565990,10.3988317,123.9686283,convenience,Unnamed grocery
 4583428389,10.3162364,123.9789813,convenience,Unnamed grocery
 4622721289,10.2969874,123.9043828,convenience,7-Eleven
 4644092591,10.3049262,123.9089207,convenience,7-Eleven
@@ -375,7 +326,6 @@ id,lat,lon,amenity_type,amenity
 4690483692,10.2424685,123.8240398,convenience,Rein Store
 4690483693,10.2506139,123.8343265,convenience,Geraldez Marketing
 4690486692,10.2520546,123.8303863,convenience,Perleen Store
-4696385394,10.3987804,123.9683761,convenience,3 Sister Store
 4708436293,10.2746383,123.9752842,convenience,7-Eleven
 4708436297,10.2766662,123.9745182,convenience,Metro Value Mart
 4716616992,10.3114744,123.9219524,convenience,Bonjour
@@ -389,7 +339,6 @@ id,lat,lon,amenity_type,amenity
 4875466285,10.326361,123.9330969,convenience,Unnamed grocery
 4929945209,10.3249004,123.9065186,convenience,Route Stop
 4942416325,10.3161234,123.9784526,convenience,7-Eleven
-4942416422,10.4699695,123.7010358,convenience,7-Eleven
 4945248621,10.3236009,123.9321059,convenience,7-Eleven
 4993878521,10.3155768,123.8947918,convenience,Zipp Mart
 5015704821,10.2838759,123.9943763,convenience,Cuk Cuk
@@ -434,7 +383,6 @@ id,lat,lon,amenity_type,amenity
 5828588189,10.3261325,123.9759713,convenience,Unnamed grocery
 5846373349,10.2863593,123.8706487,convenience,Tin-tin and Linzanmel Store
 5856614940,10.3135801,123.8803755,convenience,7-Eleven
-5863136991,10.4261941,123.9927498,convenience,daniel sari sari store
 5902143390,10.2996355,123.9784075,convenience,7-Eleven
 5906751187,10.2906155,123.8693958,convenience,Alynn's Store
 5908153186,10.3079085,124.0148405,convenience,7-Eleven
@@ -465,11 +413,9 @@ id,lat,lon,amenity_type,amenity
 7229485586,10.3689335,123.9282116,convenience,ZION CENTRALE CONVENIENCE STORE
 7229485587,10.3241881,123.9237779,convenience,EZ7 MART
 7229485589,10.2805105,123.8550704,convenience,Mac Convenience
-7229485590,10.3834998,123.9979833,convenience,Tayud
 7229485685,10.3715661,123.9173877,convenience,Towerville Convenience Store
 7229485686,10.3225284,123.9136357,convenience,Oki-oki
 7234860956,10.2981734,123.963926,convenience,7-Eleven
-7246957687,10.0317216,124.066606,convenience,Teong Hua Trade Centet
 7260034935,10.3398405,123.9249231,convenience,7-Eleven
 7273839443,10.3330383,123.9096246,convenience,7-Eleven
 7389867034,10.3471889,123.9279492,convenience,7-Eleven
@@ -486,7 +432,6 @@ id,lat,lon,amenity_type,amenity
 8479337747,10.3091171,123.8375215,convenience,Sari Sari Store
 8558814711,10.3278154,123.9509367,convenience,Shell Select
 8562702063,10.2602742,123.8696334,convenience,Manayon Store
-8624734413,10.2732141,123.7301686,convenience,Unnamed grocery
 8666252364,10.3375289,123.9240593,convenience,Unnamed grocery
 8696556336,10.3055088,123.8997496,convenience,7-Eleven
 8699777992,10.2986952,123.8981438,convenience,7-Eleven
@@ -502,13 +447,10 @@ id,lat,lon,amenity_type,amenity
 9725934816,10.3106586,123.8961779,convenience,7-Eleven
 9764235646,10.3139535,123.8945336,convenience,Quik Stop
 9777987444,10.3081574,123.8955468,convenience,Quickstop
-9810720719,10.2717673,123.7128943,convenience,Kahliya Store
 9840901193,10.3139102,123.9134065,convenience,7-Eleven
 9840914185,10.312425,123.9102972,convenience,FamilyMart
 9849264381,10.2732771,123.8491831,convenience,7-Eleven
 9849821014,10.2541023,123.8549544,convenience,Shop
-9854737091,10.2042552,123.7545486,convenience,Urban Valuemart
-9931823772,10.2093512,123.757875,convenience,Glo-ren's Store
 10215978334,10.2604841,123.9824171,convenience,Poppa Banana
 10603910513,10.3140846,123.8805207,convenience,Side Store
 10681161184,10.3149341,123.9069579,convenience,White Tindahan
@@ -519,8 +461,6 @@ id,lat,lon,amenity_type,amenity
 10867431080,10.2703039,123.8471818,convenience,Two Sister Store
 10895550958,10.3064553,123.8945624,convenience,MerryMart
 10901157526,10.2922658,123.8910389,convenience,7-Eleven
-10938960603,10.228354,123.7671784,convenience,Izuks Sari-Sari Store
-10938960604,10.2282487,123.7670873,convenience,Cristorey Store
 10939197952,10.316973,123.9092129,convenience,7-Eleven
 10983464705,10.2460062,123.8280091,convenience,7-Eleven
 10983464805,10.2423681,123.8476602,convenience,7-Eleven
@@ -531,17 +471,13 @@ id,lat,lon,amenity_type,amenity
 11137460998,10.2968309,123.9502959,convenience,easy shop1
 11201262445,10.3394703,123.9253722,convenience,Shell Shop
 11201593813,10.3677396,123.9331741,convenience,Unnamed grocery
-11308695822,10.1612477,123.7071206,convenience,Liz Store
 11399608975,10.3713436,123.9243778,convenience,7-Eleven
-11468166369,10.4651492,124.0084592,convenience,Virginia
-11468683673,10.4018146,123.9996066,convenience,RS Minimart
 11468702672,10.3602526,123.9804165,convenience,7-Eleven
 11468737369,10.3330069,123.949163,convenience,7-Eleven
 11469041171,10.2453128,123.7951659,convenience,7-Eleven
 11469041370,10.2477474,123.8009292,convenience,Everyday mart
 11469042669,10.2540409,123.8091922,convenience,Enzo's meat marker
 11469055969,10.2572406,123.860558,convenience,Shop
-11469055970,10.2692678,123.9459529,convenience,Caltex shop
 11469133770,10.2953204,123.9460399,convenience,Metro market
 11472016977,10.3026077,123.9920109,convenience,Carlos store
 11472018773,10.3009949,123.9812749,convenience,Vivianne minimart
@@ -569,7 +505,6 @@ id,lat,lon,amenity_type,amenity
 12179915233,10.359153,123.9154627,convenience,Unnamed grocery
 12185353265,10.2394737,123.792289,convenience,7-Eleven
 12283233375,10.300605,123.8742107,convenience,AYP Water Technology
-12318208526,10.521389,124.0289494,convenience,7-Eleven
 12412028270,10.273914,123.8486289,convenience,K and J Store
 12463222303,10.3100821,123.95386,convenience,7-Eleven
 12463289801,10.3011389,123.9942413,convenience,7-Eleven
@@ -630,7 +565,6 @@ id,lat,lon,amenity_type,amenity
 12747135215,10.3495735,123.9251915,convenience,Unnamed grocery
 12762802224,10.3110881,123.9487805,convenience,Christopher Store
 12764571375,10.3127154,123.9541514,convenience,Bragat's Store
-12764577264,10.3132555,123.9480224,convenience,777 Convenience Store
 12764577278,10.3145052,123.9512955,convenience,PJJ Store
 12767866016,10.3136671,123.9509195,convenience,Matutinao Store
 12768454940,10.3144856,123.9512476,convenience,Liza Store
@@ -676,7 +610,6 @@ id,lat,lon,amenity_type,amenity
 13070338686,10.2838597,123.9945913,convenience,7-Eleven
 13076935008,10.3373758,123.9537969,convenience,Shell Select
 13092518529,10.3464719,123.9646634,convenience,JanRon Store
-13097714092,10.4257279,123.9591848,convenience,Unnamed grocery
 13152194806,10.3353592,123.922403,convenience,Unnamed grocery
 13188173585,10.3433141,123.9138407,convenience,D'4GIGZ General Merchendise
 13251607314,10.3370409,123.9314861,convenience,The Convenience Store
@@ -695,7 +628,6 @@ id,lat,lon,amenity_type,amenity
 389748091,10.3366369,123.8424361,convenience,Nong Ime Store & Eatery
 404024241,10.2489714,123.8393674,convenience,Gaisano Mart
 437711366,10.3020061,123.8952151,convenience,7-Eleven
-456868363,10.2624257,123.9462619,convenience,Unnamed grocery
 458025643,10.3466836,123.9484677,convenience,7-Eleven
 473464824,10.2579744,123.8690907,convenience,Shell Select
 473464858,10.257744,123.869244,fuel,Shell SRP
@@ -705,18 +637,15 @@ id,lat,lon,amenity_type,amenity
 508559088,10.2406217,123.8448103,convenience,4M and J store
 508559089,10.2406552,123.8446598,convenience,Amor and lowell Store
 527926393,10.2746335,123.8597006,convenience,7-Eleven
-542147438,10.4472641,123.784351,convenience,Sari-sari Store
 614513896,10.3022343,123.9062857,convenience,Unnamed grocery
 624154293,10.2392191,123.779222,convenience,7-Eleven
 624948457,10.2880745,123.8636566,convenience,Shell Shop
-627213968,10.3693888,123.9948578,convenience,Rosal's Store
 732272062,10.3693859,123.9178485,convenience,7-Eleven
 763030748,10.3366354,123.8426187,convenience,Unnamed grocery
 854463863,10.2951687,123.88245,convenience,Shell Select
 901498634,10.2422127,123.7853973,convenience,Shell Select
 925940645,10.3235772,123.9730888,convenience,Shell
 993792305,10.259789,123.8303369,convenience,Shell Select
-1098449871,10.307522,123.708581,convenience,7-Eleven
 1189961330,10.3724915,123.9476696,convenience,CCC Yellow Store
 1203013786,10.3042381,123.9853267,convenience,GO Mart Express
 1237722027,10.2949755,123.9865213,convenience,Robinsons Easymart
@@ -725,13 +654,10 @@ id,lat,lon,amenity_type,amenity
 1249708828,10.3214755,123.9318468,convenience,Shell Select
 1274011623,10.4233602,123.915903,convenience,Unnamed grocery
 1285448271,10.3112094,123.9564832,convenience,Unnamed grocery
-1285459019,10.4233897,123.7778474,convenience,Unnamed grocery
-1293634097,10.3973137,123.7408324,convenience,Unnamed grocery
 1328973961,10.3113976,123.9540444,convenience,7-Eleven
 1361879131,10.2692073,123.8448796,convenience,Shell Select
 1375463027,10.2446167,123.8495019,convenience,Metro Value Mart
 1376054064,10.3340246,123.9073185,convenience,7-Eleven
-1416487247,10.4542682,124.0132454,convenience,7-Eleven
 1418864435,10.2518737,123.8458597,convenience,7-Eleven
 1420321086,10.2872624,123.9443228,convenience,7-Eleven
 1421669118,10.3285179,123.9415148,convenience,Shell Select

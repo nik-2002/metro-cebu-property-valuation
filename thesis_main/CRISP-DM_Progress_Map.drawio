@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" modified="2026-06-05T00:00:00.000Z" agent="Claude Code" version="24.0.0">
+  <diagram id="crispdm-progress" name="CRISP-DM Progress Map">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="title" value="&lt;b&gt;Metro Cebu Residential Valuation Thesis &amp;mdash; CRISP-DM Progress Map&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;color:#555;&quot;&gt;Where the project stands as of 5 June 2026 &amp;bull; open-market AVM for predicted ₱/sqm across 6 LGUs&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1080" height="56" as="geometry" />
+        </mxCell>
+
+        <!-- LEGEND -->
+        <mxCell id="legend" value="&lt;b&gt;Legend&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;background:#d5e8d4;&quot;&gt;&amp;nbsp;Done&amp;nbsp;&lt;/span&gt;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;background:#fff2cc;&quot;&gt;&amp;nbsp;Active / re-opened this iteration&amp;nbsp;&lt;/span&gt;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;background:#f8cecc;&quot;&gt;&amp;nbsp;Weak spot / open problem&amp;nbsp;&lt;/span&gt;&amp;nbsp;&amp;nbsp; ⭐ = YOU ARE HERE" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="88" width="690" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- DEADLINES -->
+        <mxCell id="deadlines" value="&lt;b&gt;⏰ Deadlines&lt;/b&gt;&lt;br&gt;&lt;b&gt;6 Jun 2026&lt;/b&gt; &amp;mdash; new thesis draft due (tomorrow)&lt;br&gt;&lt;b&gt;20 Jun 2026&lt;/b&gt; &amp;mdash; redefense&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#555;&quot;&gt;Redefense fixes: stratification ✓ &amp;bull; deeper EDA ✓ &amp;bull; stronger CBD justification ✓&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="744" y="88" width="376" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== PHASE BOXES ===================== -->
+
+        <!-- 1. BUSINESS UNDERSTANDING -->
+        <mxCell id="bu" value="&lt;b&gt;1 &amp;nbsp;BUSINESS UNDERSTANDING&lt;/b&gt;&amp;nbsp;✓&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;text-align:left;font-size:11px;&quot;&gt;• Goal: predictive + prescriptive &lt;b&gt;AVM&lt;/b&gt; for open-market residential &lt;b&gt;₱/sqm&lt;/b&gt; across Metro Cebu&lt;br&gt;• Deliverable: Streamlit price-surface decision-support app&lt;br&gt;• Scope locked: &lt;b&gt;6 LGUs&lt;/b&gt;; Naga = CBD node only&lt;br&gt;• &lt;b&gt;open_market only&lt;/b&gt; (IVS-104 Market Value) &amp;mdash; bank/ROPA + floor-price tiers dropped&lt;br&gt;&lt;span style=&quot;color:#777;&quot;&gt;Decisions 4, 17, 18&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="330" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- 2. DATA UNDERSTANDING / EDA -->
+        <mxCell id="du" value="&lt;b&gt;2 &amp;nbsp;DATA UNDERSTANDING / EDA&lt;/b&gt;&amp;nbsp;✓&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;text-align:left;font-size:11px;&quot;&gt;• Sources: Lamudi listings (~4,477 raw), 8 CBD nodes, 9 MCRAI amenity categories&lt;br&gt;• &lt;b&gt;Stratified EDA&lt;/b&gt;: price distributions, correlations, VIF, per-stratum OLS diagnostics&lt;br&gt;• Found 3 natural strata &amp;mdash; Condo (area-driven) vs Lot/Houses (BIR-zonal-driven); CV differs&lt;br&gt;• Zero-rate / geographic-spread checks across all 6 LGUs&lt;br&gt;&lt;span style=&quot;color:#777;&quot;&gt;Decisions 5, 27, 28, 32, 34g&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="330" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- 3. DATA PREPARATION -->
+        <mxCell id="dp" value="&lt;b&gt;3 &amp;nbsp;DATA PREPARATION&lt;/b&gt;&amp;nbsp;⭐ re-opened&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;text-align:left;font-size:11px;&quot;&gt;• Cleaning: outliers, impossible price/area, dup listings, property-type recode&lt;br&gt;• &lt;b&gt;Feature engineering:&lt;/b&gt; area_sqm, osmnx network distance to 8 CBD nodes, MCRAI composite (2-stage weights), spatial_lag_price, BIR zonal&lt;br&gt;• &lt;b&gt;Target fix:&lt;/b&gt; log(price_per_sqm) (Decision 34 bug)&lt;br&gt;• Clean strata: Condo 654 / Houses 558 / &lt;b&gt;Lot 204&lt;/b&gt;&lt;br&gt;• &lt;b&gt;ACTIVE: data expansion&lt;/b&gt; &amp;mdash; Playwright scraper (D37) to add land listings&lt;br&gt;&lt;span style=&quot;color:#777;&quot;&gt;Decisions 1-3, 6-16, 20, 22, 26, 34, 37&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="800" y="160" width="330" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- 4. MODELING -->
+        <mxCell id="mod" value="&lt;b&gt;4 &amp;nbsp;MODELING&lt;/b&gt;&amp;nbsp;✓ &amp;mdash; to re-run&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;text-align:left;font-size:11px;&quot;&gt;• Pipeline: OLS (comparator) → Random Forest → XGBoost → SHAP&lt;br&gt;• &lt;b&gt;3 stratified RF models deployed&lt;/b&gt; (best-per-stratum by test MAPE)&lt;br&gt;• SHAP clean, no leakage (Condo: area/spatial-lag; Houses: dist-CBP; Lot: Mandaue/CBP dist)&lt;br&gt;• &lt;b&gt;Pending (D38):&lt;/b&gt; re-run on expanded data, per-stratum tuning, &lt;b&gt;k-fold CV&lt;/b&gt;, XGBoost-for-Lot&lt;br&gt;&lt;span style=&quot;color:#777;&quot;&gt;Decisions 21, 23-25, 35, 38&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="800" y="560" width="330" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- 5. EVALUATION -->
+        <mxCell id="ev" value="&lt;b&gt;5 &amp;nbsp;EVALUATION&lt;/b&gt;&amp;nbsp;✓ &amp;mdash; weak spot flagged&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;text-align:left;font-size:11px;&quot;&gt;• Metrics: MAPE, &lt;b&gt;median APE (headline)&lt;/b&gt;, R²&lt;br&gt;• Condo: MAPE 32.8% / med 13.9%&lt;br&gt;• Houses: MAPE 31.9% / med 20.3%&lt;br&gt;• &lt;span style=&quot;background:#f8cecc;&quot;&gt;&lt;b&gt;Vacant Lot: 54.7% / med 33.6% &amp;mdash; WEAK&lt;/b&gt;&lt;/span&gt;&lt;br&gt;• &lt;b&gt;To do:&lt;/b&gt; benchmark vs IAAO AVM/ratio-study (MdAPE, PE10/20, COD/PRD) &amp;mdash; verify thresholds&lt;br&gt;&lt;span style=&quot;color:#777;&quot;&gt;Decisions 35a-c, 38e&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="420" y="560" width="330" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- 6. DEPLOYMENT -->
+        <mxCell id="dep" value="&lt;b&gt;6 &amp;nbsp;DEPLOYMENT&lt;/b&gt;&amp;nbsp;✓&lt;hr size=&quot;1&quot;&gt;&lt;div style=&quot;text-align:left;font-size:11px;&quot;&gt;• Streamlit app rebuilt to &lt;b&gt;stratified per-sqm layer&lt;/b&gt; (routes by property_type; neighbour-lookup for location features)&lt;br&gt;• &lt;b&gt;Market Map dashboard&lt;/b&gt;: ~1,416 real listings colored by stratum + CBD nodes + LGU outline&lt;br&gt;• Per-stratum SHAP in app; runs at localhost:8503&lt;br&gt;• Deferred: drop-pin live prediction&lt;br&gt;&lt;span style=&quot;color:#777;&quot;&gt;Decisions 35d, 36&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacing=8;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="330" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- CENTRAL DATA NODE -->
+        <mxCell id="data" value="&lt;b&gt;DATA (ABT)&lt;/b&gt;&lt;br&gt;open_market Lamudi &amp;bull; 6 LGUs&lt;br&gt;Target: &lt;b&gt;log(₱/sqm)&lt;/b&gt;&lt;br&gt;Condo 654 &amp;bull; Houses 558 &amp;bull; Lot 204" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="450" y="425" width="270" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== FLOW ARROWS ===================== -->
+
+        <!-- BU -> DU -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="bu" target="du">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- DU -> DP -->
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="du" target="dp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- DP <-> MODELING  (the active iteration) -->
+        <mxCell id="e3" value="&lt;b&gt;ITERATION LOOP ⭐&lt;/b&gt;&lt;br&gt;scrape more Lot listings →&lt;br&gt;re-merge / re-enrich →&lt;br&gt;re-run stratified models" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=block;endArrow=block;strokeColor=#b85450;strokeWidth=4;fontColor=#b85450;fontSize=11;" edge="1" parent="1" source="dp" target="mod">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- MODELING -> EVALUATION -->
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="mod" target="ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- EVALUATION -> DEPLOYMENT -->
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="ev" target="dep">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- DEPLOYMENT -> BU  (big outer loop back) -->
+        <mxCell id="e6" value="refine / iterate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#9673a6;strokeWidth=2;fontColor=#9673a6;" edge="1" parent="1" source="dep" target="bu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- YOU ARE HERE callout -->
+        <mxCell id="here" value="⭐ &lt;b&gt;YOU ARE HERE&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;Second CRISP-DM iteration: the full loop is done once (data → model → app live). Now circling Data Prep ↔ Modeling to &lt;b&gt;expand the Vacant Lot data&lt;/b&gt; (Playwright scrape, D37) and lift the one weak stratum before the redefense.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="800" y="420" width="330" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- NEXT STEPS strip -->
+        <mxCell id="next" value="&lt;b&gt;▶ Immediate next steps (in order)&lt;/b&gt;&amp;nbsp;&amp;nbsp; 1) Antigravity runs the full Playwright scrape (10 pages → properties) &amp;nbsp;→&amp;nbsp; 2) Claude builds 2 post-scrape filters (residential-only; city ∈ 6 LGUs) &amp;nbsp;→&amp;nbsp; 3) append-only merge → re-run compute_road_distances → compute_hansen_scores → prepare_stratified_abt → run_models_stratified &amp;nbsp;→&amp;nbsp; 4) k-fold CV + per-stratum tuning + median-APE / IAAO benchmark &amp;nbsp;→&amp;nbsp; 5) manuscript: Ch3/4 target fix, Ch7 stratified results, Ch8 per-stratum SHAP" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="800" width="1090" height="70" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

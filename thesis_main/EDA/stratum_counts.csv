@@ -1,0 +1,4 @@
+stratum,total_rows,rows_with_price,cities_covered,lgu_breakdown
+Condominium,706,706,"[""Cebu City"", ""Consolacion"", ""Lapu-Lapu City"", ""Mandaue City"", ""Minglanilla"", ""Talisay City""]","{""Cebu City"": 223, ""Consolacion"": 2, ""Lapu-Lapu City"": 337, ""Mandaue City"": 136, ""Minglanilla"": 4, ""Talisay City"": 4}"
+Vacant Lot,217,217,"[""Cebu City"", ""Consolacion"", ""Lapu-Lapu City"", ""Mandaue City"", ""Minglanilla"", ""Talisay City""]","{""Cebu City"": 66, ""Consolacion"": 34, ""Lapu-Lapu City"": 47, ""Mandaue City"": 52, ""Minglanilla"": 3, ""Talisay City"": 15}"
+Houses,568,568,"[""Cebu City"", ""Consolacion"", ""Lapu-Lapu City"", ""Mandaue City"", ""Minglanilla"", ""Talisay City""]","{""Cebu City"": 166, ""Consolacion"": 62, ""Lapu-Lapu City"": 130, ""Mandaue City"": 98, ""Minglanilla"": 50, ""Talisay City"": 62}"

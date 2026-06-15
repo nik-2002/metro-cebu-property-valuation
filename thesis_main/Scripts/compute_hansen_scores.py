@@ -1,91 +1,66 @@
-"""
-Compute Hansen Gravity accessibility scores for properties.
+"""Compute Metro Cebu Residential Accessibility Index (MCRAI) scores."""
 
-For each property, computes 6 category-specific Hansen scores (education, finance,
-grocery, health, security, transport) and a weighted composite score.
-
-Uses vectorized haversine distance with numpy for performance.
-"""
-
+import sys
 import numpy as np
 import pandas as pd
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from network_utils import load_metro_cebu_graph, network_distances_from_properties
 
-def haversine_km(lat1, lon1, lat2_arr, lon2_arr):
-    """
-    Compute haversine distance in km from (lat1, lon1) to arrays (lat2_arr, lon2_arr).
-    
-    Args:
-        lat1, lon1: scalars, property coordinates
-        lat2_arr, lon2_arr: 1D numpy arrays, amenity coordinates
-    
-    Returns:
-        1D numpy array of distances in km
-    """
-    R = 6371.0
-    dlat = np.radians(lat2_arr - lat1)
-    dlon = np.radians(lon2_arr - lon1)
-    a = np.sin(dlat / 2) ** 2 + np.cos(np.radians(lat1)) * np.cos(np.radians(lat2_arr)) * np.sin(dlon / 2) ** 2
-    return R * 2 * np.arcsin(np.sqrt(a))
+BETA = 2.0
+FLOOR_KM = 0.5
 
-
-def compute_hansen_score(lat, lon, amenity_lats, amenity_lons, radius_km=5.0, beta=2.0):
-    """
-    Compute Hansen accessibility score for a property.
-    
-    Args:
-        lat, lon: property coordinates
-        amenity_lats, amenity_lons: 1D numpy arrays of amenity coordinates
-        radius_km: only consider amenities within this distance (default 5.0 km)
-        beta: decay parameter for 1/d^beta (default 2.0)
-    
-    Returns:
-        Hansen score (float)
-    """
-    # Handle case where amenity arrays are empty
-    if len(amenity_lats) == 0 or len(amenity_lons) == 0:
-        return 0.0
-    
-    # Compute distances to all amenities in this category
-    distances = haversine_km(lat, lon, amenity_lats, amenity_lons)
-    
-    # Filter to those within radius
-    within_radius = distances <= radius_km
-    distances_within = distances[within_radius]
-    
-    # If none within radius, score is 0
-    if len(distances_within) == 0:
-        return 0.0
-    
-    # Apply 0.5 km floor
-    distances_within = np.maximum(distances_within, 0.5)
-    
-    # Compute Hansen score
-    score = np.sum(1.0 / (distances_within ** beta))
-    
-    return score
+CATEGORY_RADII_KM = {
+    # Decision 30 (2026-05-22): education 0.8→2.5 (jeepney-mode-corrected school catchment,
+    # Philippine learner survey median home-to-school distance 3-5 km); hospitals 3.0→5.0
+    # (standard tertiary-care catchment methodology, 42 hospitals across 6 LGUs).
+    "education":      2.5,
+    "health":         2.0,
+    "hospitals":      5.0,
+    "grocery":        2.0,
+    "security":       2.0,
+    "tourism":        3.0,
+    "recreation":     1.5,
+    "retail_density": 1.0,
+}
 
 
 def main():
-    # Setup paths
     base_dir = Path(__file__).resolve().parents[1]
     abt_path = base_dir / "Data" / "processed" / "abt_clean.csv"
     amenities_dir = base_dir / "Data" / "amenities"
-    
-    # Load ABT
+
     print(f"Loading ABT from {abt_path}")
     abt = pd.read_csv(abt_path)
     print(f"ABT shape before: {abt.shape}")
-    
-    # Check required columns
-    if 'latitude' not in abt.columns or 'longitude' not in abt.columns:
-        raise ValueError("ABT must have 'latitude' and 'longitude' columns")
-    
-    # Load amenity CSVs
-    amenity_categories = ['education', 'finance', 'grocery', 'health', 'security', 'transport']
+
+    hansen_cols = [col for col in abt.columns if col.startswith("hansen_")]
+    if hansen_cols:
+        abt.drop(columns=hansen_cols, inplace=True)
+        print(f"Dropped legacy hansen columns: {hansen_cols}")
+
+    # Decision 28: mcrai_finance retired (no SE Asian hedonic basis).
+    # Decision 29: mcrai_transport retired in favor of dist_to_trunk_road_m / dist_to_primary_road_m.
+    for stale_col in ("mcrai_finance", "mcrai_transport"):
+        if stale_col in abt.columns:
+            abt.drop(columns=[stale_col], inplace=True)
+            print(f"Dropped stale {stale_col} column")
+
+    if "latitude" not in abt.columns or "longitude" not in abt.columns:
+        raise ValueError("ABT must have latitude and longitude columns")
+
+    amenity_categories = [
+        "education",
+        "grocery",
+        "health",
+        "hospitals",
+        "security",
+        "tourism",
+        "recreation",
+        "retail_density",
+    ]
     amenities = {}
-    
     for category in amenity_categories:
         path = amenities_dir / f"{category}.csv"
         if not path.exists():
@@ -93,68 +68,72 @@ def main():
         df = pd.read_csv(path)
         amenities[category] = df
         print(f"Loaded {len(df)} {category} amenities")
-    
-    # Initialize new columns
-    for category in amenity_categories:
-        abt[f'hansen_{category}'] = 0.0
-    
-    # Compute Hansen scores for each category
-    for category in amenity_categories:
-        print(f"Computing hansen_{category}...")
-        
-        amenity_df = amenities[category]
-        amenity_lats = amenity_df['lat'].values
-        amenity_lons = amenity_df['lon'].values
-        
-        # Compute score for each property
-        scores = []
-        for idx, row in abt.iterrows():
-            score = compute_hansen_score(
-                row['latitude'],
-                row['longitude'],
-                amenity_lats,
-                amenity_lons
-            )
-            scores.append(score)
-        
-        abt[f'hansen_{category}'] = scores
-    
-    # Compute composite score with weights
-    print("Computing hansen_composite...")
-    weights = {
-        'transport': 0.25,
-        'grocery': 0.20,
-        'education': 0.20,
-        'health': 0.15,
-        'finance': 0.15,
-        'security': 0.05
+
+    print("\nLoading Metro Cebu road network...")
+    G = load_metro_cebu_graph()
+
+    valid_mask = abt["latitude"].notna() & abt["longitude"].notna()
+    valid_indices = abt.index[valid_mask].tolist()
+    source_coords = list(zip(abt.loc[valid_mask, "latitude"], abt.loc[valid_mask, "longitude"]))
+
+    amenity_coords = {
+        category: (amenities[category]["lat"].values, amenities[category]["lon"].values)
+        for category in amenity_categories
     }
-    
-    abt['hansen_composite'] = (
-        weights['transport'] * abt['hansen_transport'] +
-        weights['grocery'] * abt['hansen_grocery'] +
-        weights['education'] * abt['hansen_education'] +
-        weights['health'] * abt['hansen_health'] +
-        weights['finance'] * abt['hansen_finance'] +
-        weights['security'] * abt['hansen_security']
+
+    print(f"\nComputing network distances for {len(source_coords)} properties...")
+    dist_results = network_distances_from_properties(
+        G,
+        source_coords,
+        amenity_coords,
+        category_radii=CATEGORY_RADII_KM,
     )
-    
-    # Round all Hansen columns to 4 decimal places
-    hansen_cols = [col for col in abt.columns if col.startswith('hansen_')]
-    for col in hansen_cols:
+
+    for category in amenity_categories:
+        abt[f"mcrai_{category}"] = 0.0
+
+    for category in amenity_categories:
+        print(f"Computing mcrai_{category}...")
+        col_vals = [0.0] * len(abt)
+        for list_pos, df_idx in enumerate(valid_indices):
+            dists = dist_results[list_pos][category]
+            if len(dists) == 0:
+                col_vals[df_idx] = 0.0
+            else:
+                dists_floored = np.maximum(dists, FLOOR_KM)
+                col_vals[df_idx] = float(np.sum(1.0 / (dists_floored ** BETA)))
+        abt[f"mcrai_{category}"] = col_vals
+
+    print("Computing mcrai_composite...")
+    # Stage 2 MCRAI weights — Decision 20 (positive-coefficient OLS categories only),
+    # renormalized after Decision 29 retired mcrai_transport in favor of
+    # dist_to_trunk_road_m and dist_to_primary_road_m (computed in compute_road_distances.py).
+    # security, tourism, retail_density remain individual model features only (not in composite).
+    weights = {
+        "education":  0.447,
+        "grocery":    0.345,
+        "recreation": 0.222,
+    }
+    abt["mcrai_composite"] = sum(weights[category] * abt[f"mcrai_{category}"] for category in weights)
+
+    mcrai_cols = [col for col in abt.columns if col.startswith("mcrai_")]
+    for col in mcrai_cols:
         abt[col] = abt[col].round(4)
-    
-    # Print statistics before saving
+
+    if "is_mactan_island" not in abt.columns:
+        abt["is_mactan_island"] = (abt["city"] == "Lapu-Lapu City").astype(int)
+        print(f"is_mactan_island added: {abt['is_mactan_island'].sum()} rows = 1")
+
+    amenity_score_cols = [col for col in abt.columns if col.startswith("amenity_score_")]
+    if amenity_score_cols:
+        abt.drop(columns=amenity_score_cols, inplace=True)
+        print(f"Dropped amenity_score columns: {amenity_score_cols}")
+
     print(f"\nABT shape after: {abt.shape}")
-    print("\nHansen score statistics:")
-    for col in hansen_cols:
-        zero_count = (abt[col] == 0.0).sum()
-        print(f"\n{col}:")
-        print(f"  Mean: {abt[col].mean():.4f}")
-        print(f"  Std:  {abt[col].std():.4f}")
-        print(f"  Zero scores: {zero_count} rows")
-    
-    # Overwrite ABT
+    print("\nMCRAI score statistics:")
+    for col in mcrai_cols:
+        print(f"  {col}: mean={abt[col].mean():.4f}  zeros={(abt[col] == 0.0).sum()}")
+
     print(f"\nSaving ABT to {abt_path}")
     abt.to_csv(abt_path, index=False)
     print("Done.")

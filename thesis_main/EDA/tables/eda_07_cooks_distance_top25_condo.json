@@ -1,0 +1,177 @@
+[
+  {
+    "stratum":"Condo",
+    "property_id":3679,
+    "city":"Cebu City",
+    "price_per_sqm":18872.4634146341,
+    "cooks_d":0.5554816561
+  },
+  {
+    "stratum":"Condo",
+    "property_id":2855,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":105000.0,
+    "cooks_d":0.2363038588
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3511,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":16746.4114832536,
+    "cooks_d":0.1683616025
+  },
+  {
+    "stratum":"Condo",
+    "property_id":456,
+    "city":"Cebu City",
+    "price_per_sqm":83333.3333333333,
+    "cooks_d":0.0582215154
+  },
+  {
+    "stratum":"Condo",
+    "property_id":464,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":300000.0,
+    "cooks_d":0.045690789
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3300,
+    "city":"Cebu City",
+    "price_per_sqm":16181.2297734628,
+    "cooks_d":0.0387947122
+  },
+  {
+    "stratum":"Condo",
+    "property_id":2316,
+    "city":"Cebu City",
+    "price_per_sqm":5500000.0,
+    "cooks_d":0.035146225
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3286,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":16666.6666666667,
+    "cooks_d":0.0340449706
+  },
+  {
+    "stratum":"Condo",
+    "property_id":1613,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":16666.6666666667,
+    "cooks_d":0.0323893998
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3102,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":17647.0588235294,
+    "cooks_d":0.0305996925
+  },
+  {
+    "stratum":"Condo",
+    "property_id":2571,
+    "city":"Talisay City",
+    "price_per_sqm":33862.4338624339,
+    "cooks_d":0.0270968224
+  },
+  {
+    "stratum":"Condo",
+    "property_id":2642,
+    "city":"Talisay City",
+    "price_per_sqm":36319.612590799,
+    "cooks_d":0.0232642555
+  },
+  {
+    "stratum":"Condo",
+    "property_id":1637,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":26966.2921348315,
+    "cooks_d":0.0230844649
+  },
+  {
+    "stratum":"Condo",
+    "property_id":2276,
+    "city":"Cebu City",
+    "price_per_sqm":227705.5214723926,
+    "cooks_d":0.0182090381
+  },
+  {
+    "stratum":"Condo",
+    "property_id":1257,
+    "city":"Minglanilla",
+    "price_per_sqm":68111.4551083591,
+    "cooks_d":0.0177408558
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3922,
+    "city":"Mandaue City",
+    "price_per_sqm":20766.7731629393,
+    "cooks_d":0.0175483238
+  },
+  {
+    "stratum":"Condo",
+    "property_id":2570,
+    "city":"Talisay City",
+    "price_per_sqm":150000.0,
+    "cooks_d":0.0175364802
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3014,
+    "city":"Cebu City",
+    "price_per_sqm":41666.6666666667,
+    "cooks_d":0.0170543503
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3961,
+    "city":"Cebu City",
+    "price_per_sqm":23734.1772151899,
+    "cooks_d":0.0169288979
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3572,
+    "city":"Cebu City",
+    "price_per_sqm":20000.0,
+    "cooks_d":0.0149340532
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3120,
+    "city":"Cebu City",
+    "price_per_sqm":52631.5789473684,
+    "cooks_d":0.0132362539
+  },
+  {
+    "stratum":"Condo",
+    "property_id":1460,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":41666.6666666667,
+    "cooks_d":0.0117820035
+  },
+  {
+    "stratum":"Condo",
+    "property_id":1667,
+    "city":"Mandaue City",
+    "price_per_sqm":552630.0,
+    "cooks_d":0.0106010635
+  },
+  {
+    "stratum":"Condo",
+    "property_id":444,
+    "city":"Lapu-Lapu City",
+    "price_per_sqm":30094.7867298578,
+    "cooks_d":0.0104785316
+  },
+  {
+    "stratum":"Condo",
+    "property_id":3759,
+    "city":"Mandaue City",
+    "price_per_sqm":21739.1304347826,
+    "cooks_d":0.0097739571
+  }
+]

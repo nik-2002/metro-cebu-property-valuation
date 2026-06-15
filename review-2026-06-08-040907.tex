@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\title{Technical Review of the Metro Cebu Property Valuation Manuscript}
+\author{Paper-review audit}
+\date{June 8, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Overall Assessment}
+
+The manuscript has a coherent applied goal: build a Metro Cebu residential valuation workflow from open-market listings, geospatial features, administrative benchmarks, machine-learning models, SHAP explanations, and GIS/Streamlit deliverables. The strongest parts are the clear segmentation of open-market versus distressed/floor-price records, the frank acknowledgement that the retained Random Forest still has high error, and the attempt to keep the tool framed as decision support rather than automated appraisal.
+
+The main weaknesses are technical rather than stylistic. The most important issue is a target-variable drift between \path{price_per_sqm}, \path{price_php}, and \path{log_price}. A second major issue is that \path{spatial_lag_price} appears to be computed before the train/test split from neighboring property prices, which risks leakage and may make the held-out metrics too optimistic. The research questions on geospatial uplift and valuation-gap magnitude are also not fully answered by the reported results. These should be fixed before treating the model comparison and conclusions as final.
+
+I checked the equation-bearing and implementation-facing parts explicitly: the hedonic equation, the MCRAI formula, the Stage 2 MCRAI weights, the train/test split, feature-matrix descriptions, SHAP interpretation, valuation-gap discussion, and appendices. I found no inverse-trigonometric or branch-convention issue because the manuscript contains no such formulas. The relevant implementation ambiguities instead concern target definition, spatial-lag construction, MCRAI scaling, and feature inclusion/exclusion.
+
+\section*{Highest-Priority Fixes}
+
+\begin{enumerate}
+\item Choose one supervised target and make every chapter consistent. If the deployed model predicts total price, describe \path{log_price}/\path{price_php} as the modeling target and \path{price_per_sqm} as a diagnostic/unit-price field. If the model predicts unit price, retrain and re-report the evaluation on \path{price_per_sqm}.
+\item Recompute or re-specify \path{spatial_lag_price} so that test-set features do not use held-out target values. Then rerun the model comparison.
+\item Add a structural-only ablation and a geospatial-augmented model comparison, or soften the claim that geospatial features ``significantly improve'' performance.
+\item Report the valuation-gap distribution, or revise RQ4 so it asks how the gap is operationalized and mapped rather than ``how large'' it is.
+\item Fix the MCRAI weight normalization, document the Stage 1 coefficient table, and test whether the MCRAI signs/weights are stable despite the high OLS condition number.
+\item Correct the percentage tables and make Appendix A distinguish the canonical ABT schema from the fitted feature matrix.
+\end{enumerate}
+
+\section*{Technical and Methodological Findings}
+
+\subsection*{1. Target-variable drift is a definite internal inconsistency}
+
+\textbf{Location.} \path{chapter3.tex:5}, \path{chapter3.tex:77}, \path{chapter4.tex:72}, \path{chapter5.tex:11}, \path{chapter5.tex:43}, \path{chapter6.tex:17}, \path{chapter7.tex:7}, and \path{appendices.tex:57}.
+
+\textbf{Problem.} The manuscript alternates between three target descriptions. Chapter 3 first says all three models use total property price in PHP, log-transformed as \path{log_price}. Later in the same chapter it says the primary target for model comparison is \path{price_per_sqm}. Chapter 4 states that \path{price_per_sqm} is the target variable. Chapter 6 then states that all models were fit on \path{log_price}, and Chapter 7 reports back-transformed total-price errors.
+
+\textbf{Why it matters.} This changes the meaning of the model, the correlations, MAPE, the SHAP interpretation, and the valuation-gap diagnostic. A model trained on total price can legitimately rank area and property type very differently from a model trained on price per square meter. It also changes whether \path{spatial_lag_price} should be a lag of total price or unit price.
+
+\textbf{Suggested fix.} Add a short ``Target definition'' paragraph near the start of Chapter 3 and repeat the same wording in Chapters 4--7. For example: ``The supervised prediction target is \path{log_price}, defined as the natural log of total asking price \path{price_php}; predictions are back-transformed to total PHP for evaluation. \path{price_per_sqm} is retained as a diagnostic unit-price field and for valuation-gap interpretation, not as the fitted target.'' If that is not true, retrain on \path{price_per_sqm} and update the evaluation table.
+
+\subsection*{2. The spatial-lag feature likely leaks outcome information}
+
+\textbf{Location.} \path{chapter3.tex:106}, \path{chapter3.tex:180}, \path{chapter5.tex:113}, and \path{chapter6.tex:13}.
+
+\textbf{Problem.} The manuscript says \path{spatial_lag_price} is the mean price of other properties within 1 km and that rows without the lag are dropped before modeling. The train/test split is described only later. There is no statement that spatial lags for test rows were computed using training data only, cross-fitting, pre-existing comparable evidence, or another leakage-safe procedure.
+
+\textbf{Why it matters.} If a test property's feature vector includes mean prices computed from held-out neighbors, the held-out evaluation is no longer a clean out-of-sample test. The problem is especially serious because \path{spatial_lag_price} is target-adjacent and is required for inclusion in the model. Even if the lag excludes the focal row, it can still contain test-set outcomes from neighboring rows or information that would not be available for a new prediction.
+
+\textbf{Suggested fix.} Rebuild the lag in a leakage-safe way and describe it explicitly. Options include: compute test-row lags only from training rows; use K-fold out-of-fold lags for training rows; compute lags from external comparable listings available before the valuation date; or drop the lag and compare performance. Then rerun the model comparison, especially the Random Forest metrics.
+
+\subsection*{3. RQ3 is not answered by an ablation or significance test}
+
+\textbf{Location.} \path{chapter1.tex:56} and \path{chapter9.tex:15}.
+
+\textbf{Problem.} RQ3 asks whether geospatial features ``significantly improve model performance compared to structural-only models.'' Chapter 9 concedes that there is no standalone structural-only ablation table and no isolated uplift number. SHAP rankings show that some geospatial variables are influential, but SHAP importance is not the same as a performance-improvement test against a structural-only baseline.
+
+\textbf{Why it matters.} The claim of improvement is central to the thesis title and contribution. Without a structural-only comparator, the manuscript supports ``geospatial features are used and appear important,'' not ``geospatial features significantly improve performance.''
+
+\textbf{Suggested fix.} Add a simple ablation table: structural-only, structural+administrative, structural+distance, structural+distance+MCRAI, and full model with spatial lag. Report the same held-out metrics or repeated cross-validation metrics. If no ablation is added, revise RQ3 and the conclusion to say that geospatial features were central to interpretation but that incremental predictive uplift was not isolated.
+
+\subsection*{4. RQ4 asks for a magnitude that the results do not report}
+
+\textbf{Location.} \path{chapter1.tex:57}, \path{chapter3.tex:137}, \path{chapter9.tex:17}, and \path{chapter10.tex:11}.
+
+\textbf{Problem.} RQ4 asks ``How large is the `Valuation Gap' between the model's data-driven predictions and traditional BIR Zonal Values?'' The conclusion states that no metro-wide summary statistic is reported and that the gap is answered operationally rather than statistically.
+
+\textbf{Why it matters.} This leaves one research question only partially answered. The reader cannot tell whether the gap is typically small, extreme, concentrated by LGU, concentrated by property type, or driven by outliers.
+
+\textbf{Suggested fix.} Add a valuation-gap results table with at least median, mean, IQR, 10th/90th percentiles, and counts by LGU and property type. Define whether the gap is \path{price_per_sqm - bir_zonal_rr_median}, a ratio, a percentage gap, or a model-predicted gap. If the thesis does not want to report this statistic, rewrite RQ4 as an operational deliverable question.
+
+\subsection*{5. The Stage 2 MCRAI weights do not sum to one}
+
+\textbf{Location.} \path{chapter3.tex:178}, \path{chapter6.tex:114}, \path{chapter6.tex:121}, and \path{chapter6.tex:142}.
+
+\textbf{Problem.} The manuscript says the positive OLS categories were renormalized into a four-part vector, but the reported weights are 0.401, 0.310, 0.199, and 0.102. These sum to 1.012, not 1.000.
+
+\textbf{Why it matters.} The composite is presented as a formal implementation artifact. A non-normalized weight vector undermines reproducibility and can change the scale of \path{mcrai_composite}.
+
+\textbf{Suggested fix.} Correct the source weights or state that they are rounded approximations. If the current proportions are intended, a normalized three-decimal version is approximately 0.396, 0.306, 0.197, and 0.101. Update the text, table, figure caption, and saved-weight description consistently.
+
+\subsection*{6. OLS coefficient-based MCRAI weighting is unstable without more diagnostics}
+
+\textbf{Location.} \path{chapter6.tex:48}, \path{chapter6.tex:114}, \path{chapter7.tex:53}, and \path{chapter8.tex:33}.
+
+\textbf{Problem.} The manuscript uses OLS coefficient signs to screen MCRAI categories, but it also reports a condition number of $7.98 \times 10^6$ and still calls the model sufficient for its baseline role. That condition number remains very high. The manuscript does not show the Stage 1 coefficient table, standard errors, VIFs, scaling choices, or robustness checks for the positive/negative MCRAI signs.
+
+\textbf{Why it matters.} If the OLS design is highly collinear, coefficient signs can flip under small data or specification changes. The Stage 2 composite, the ``spatial sorting'' interpretation, and some recommendations depend on those signs.
+
+\textbf{Suggested fix.} Add a compact OLS diagnostic appendix: standardized coefficients, standard errors, confidence intervals, VIFs or correlation diagnostics, and a sensitivity check across alternative OLS specifications or bootstrap samples. If the signs are unstable, frame the positive-only MCRAI composite as exploratory rather than a validated index.
+
+\subsection*{7. MCRAI scale and dimensionality need a clearer implementation convention}
+
+\textbf{Location.} \path{chapter3.tex:148}, \path{chapter3.tex:151}, \path{chapter3.tex:154}, and \path{chapter3.tex:157}.
+
+\textbf{Problem.} The formula
+\[
+MCRAI_{ic}=\sum_{j\in c}\frac{1}{\max(d_{ij},0.5)^\beta}, \qquad \beta=2,
+\]
+uses distances in kilometers and category-specific search radii. The text does not say whether scores are standardized before entering OLS, whether categories with more POIs or larger search radii are normalized, or whether duplicate/near-duplicate POIs are capped.
+
+\textbf{Why it matters.} A raw gravity sum is scale-sensitive. Categories with denser POI inventories can receive larger scores because of data collection density rather than true residential accessibility. This especially matters because OLS coefficients are later used to decide the composite weights.
+
+\textbf{Suggested fix.} State the units and normalization convention. For example, standardize each category score within the modeling subset before OLS screening, report descriptive ranges, and specify duplicate handling. If raw scores are intentionally used, explain why cross-category scale differences do not bias the Stage 2 weights.
+
+\subsection*{8. Appendix A mixes ABT fields, targets, and fitted features}
+
+\textbf{Location.} \path{appendices.tex:44}, \path{appendices.tex:51}, \path{appendices.tex:55}, \path{appendices.tex:57}, and \path{chapter5.tex:111}.
+
+\textbf{Problem.} Appendix A is captioned as the ``Final Feature Matrix Schema Used for the Modeling Workflow,'' but it includes identifiers/metadata, target variables, and \path{mcrai_composite}. Chapter 5 says \path{mcrai_composite} is excluded from the model matrix because it is redundant with the component scores.
+
+\textbf{Why it matters.} This is implementation-facing ambiguity. A reader trying to reproduce \path{X_full} cannot tell which columns are actual predictors, which are target/diagnostic fields, and which are stored only in the ABT.
+
+\textbf{Suggested fix.} Split the appendix into two tables: ``Canonical ABT schema'' and ``Fitted predictor matrices.'' For \path{X_full} and \path{X_ols}, list included predictors or at least list all excluded fields: identifiers, source fields, \path{market_segment}, targets, diagnostics, \path{mcrai_composite}, and OLS-specific drops.
+
+\subsection*{9. Several percentage tables use inconsistent denominators}
+
+\textbf{Location.} \path{chapter4.tex:21}--\path{chapter4.tex:30} and \path{chapter4.tex:195}--\path{chapter4.tex:203}.
+
+\textbf{Problem.} In Table 4's source-composition rows, several shares do not match the stated total of 2,047 rows. For example, Bank of Commerce should be $234/2047=11.43\%$, not 11.28\%; BPI should be 3.18\%, not 3.13\%; PagIBIG should be 4.69\%, not 4.63\%; BDO should be 0.59\%, not 0.58\%. The missingness table also appears to use a denominator other than 2,047: \path{lot_area_sqm} should be $1758/2047=85.88\%$, not 84.72\%, and \path{barangay_geocoded} should be 40.74\%, not 40.19\%.
+
+\textbf{Why it matters.} These are small but concrete arithmetic errors in descriptive evidence. They reduce confidence in later quantitative tables.
+
+\textbf{Suggested fix.} Recompute all descriptive percentages from the final frozen ABT after confirming the row count. Add one sentence saying all shares use 2,047 as denominator unless otherwise noted.
+
+\subsection*{10. Listing-price terminology overstates the evidence in a few places}
+
+\textbf{Location.} \path{chapter3.tex:19}, \path{chapter3.tex:29}, \path{chapter3.tex:56}, \path{chapter4.tex:21}, \path{chapter4.tex:222}, and \path{chapter5.tex:39}.
+
+\textbf{Problem.} The manuscript is careful in several places that Lamudi records are asking prices, but Table 4 calls them ``Arm's-length asking-price listings,'' and Chapter 5 says open-market listings are the closest proxy to Market Value in the IVS sense. Asking prices may be market-facing, but they are not necessarily arm's-length transactions or verified market values.
+
+\textbf{Why it matters.} The valuation basis is central to the thesis. Overstating listing prices as arm's-length market evidence could invite criticism from appraisers and valuation-standard readers.
+
+\textbf{Suggested fix.} Replace ``Arm's-length asking-price listings'' with ``market-facing asking-price listings.'' Use ``proxy for open-market asking-price levels'' unless transaction evidence or professional validation supports a stronger Market Value claim. Keep the existing limitations language in Chapter 8 and mirror it in the abstract and conclusion.
+
+\subsection*{11. Some SHAP conclusions overstate geospatial dominance}
+
+\textbf{Location.} \path{chapter7.tex:61}--\path{chapter7.tex:65}, \path{chapter8.tex:7}, \path{chapter8.tex:13}, and \path{chapter9.tex:11}.
+
+\textbf{Problem.} The SHAP table shows property-type dummies and bedrooms at the top of both models, with distance variables also important. Chapter 9 says the strongest recurring drivers were geospatial rather than purely structural, which is stronger than the table supports.
+
+\textbf{Why it matters.} The thesis should not understate the importance of property-type segmentation and structural fields, especially when they dominate the top SHAP ranks.
+
+\textbf{Suggested fix.} Rephrase to: ``The strongest recurring drivers were property type, selected structural variables, and polycentric locational variables. The geospatial variables were important, but not the only dominant signal.''
+
+\subsection*{12. The OLS model is mislabeled as log-log}
+
+\textbf{Location.} \path{chapter3.tex:215}--\path{chapter3.tex:220}, \path{chapter6.tex:44}, and \path{chapter7.tex:35}.
+
+\textbf{Problem.} Table 7 labels OLS as a ``log-log baseline,'' but the equation logs the dependent variable and floor area while leaving bedrooms, bathrooms, distances, MCRAI components, BIR features, and spatial lag in levels.
+
+\textbf{Why it matters.} ``Log-log'' implies elasticities for logged predictors. The current specification is mixed log-linear/semi-log, so coefficient interpretation differs across predictors.
+
+\textbf{Suggested fix.} Rename the row ``OLS (log-price hedonic baseline)'' or ``OLS mixed log-linear baseline.'' If elasticities are desired, log-transform the continuous distance, area, BIR, and lag variables where appropriate and document zero-handling.
+
+\section*{Meaningful Editorial and Reference Findings}
+
+\subsection*{Citation and reference integrity}
+
+\textbf{Location.} \path{main.tex:93}, \path{chapter1.tex:13}, \path{chapter1.tex:15}, \path{chapter1.tex:23}, \path{chapter2.tex:15}, \path{chapter2.tex:54}, \path{chapter2.tex:55}, and \path{chapter2.tex:177}.
+
+\textbf{Problem.} The manuscript uses \verb|\nocite{*}|, which prints every bibliography entry whether cited or not. A source scan found 66 bibliography entries but only 35 keys cited through LaTeX citation commands. The manuscript also contains many plain-text citations such as ``(BSP, 2025)'' and ``Viray (2023)'' instead of \verb|\parencite| or \verb|\textcite|. The PSA Region 7 growth claim appears in text but no obvious PSA bibliography entry is present.
+
+\textbf{Why it matters.} The reference list may include uncited works while some in-text references are not linked to bibliography entries. This weakens citation auditability and APA consistency.
+
+\textbf{Suggested fix.} Remove \verb|\nocite{*}| unless the institution requires a full bibliography of consulted works. Convert plain-text citations to \verb|\parencite|/\verb|\textcite| and add a proper PSA Region 7 entry if the growth statistic is retained.
+
+\subsection*{A few wording issues affect technical clarity}
+
+\begin{itemize}
+\item \path{chapter2.tex:99}: ``have beneficiary coverage'' appears to be a word-choice error. Suggested fix: ``have benefited from coverage'' or ``have better coverage.''
+\item \path{chapter3.tex:169}: ``Road-corridor / highway way centers'' contains a duplicated/awkward ``way.'' Suggested fix: ``road-corridor/highway access points'' or ``transport corridors and highway access points.''
+\item \path{chapter8.tex:13}: ``bedrooms count'' should be ``bedroom count.''
+\item \path{title_page.tex:18}: ``School of Sciences, Engineering, And Technology'' should likely use lowercase ``and'' unless the institution's official name capitalizes it that way.
+\item \path{appendices.tex:16} and \path{appendices.tex:32}: ``Actual Price'' is used for BDO/Lamudi processed fields. For Lamudi, ``asking price'' is more precise; for foreclosure/floor-price records, ``minimum bid price'' or ``listed floor price'' may be more accurate.
+\end{itemize}
+
+\section*{Proofing-Sweep Notes}
+
+The bundled mechanical proofing scan was run against a combined manuscript source text. It found no actionable duplicated-comma, duplicated-period, malformed quote-comma, product-capitalization, ``plugging into together,'' or \path{arctan(x/y)}-style branch issues. The only scan hit was a semicolon-capitalization candidate in \path{chapter4.tex:144}; after spot-checking, it appears acceptable because the post-semicolon word is the proper noun ``Consolacion.''
+
+The high-confidence proofing fixes worth making are therefore the local wording issues listed above, plus the reference-list cleanup around \verb|\nocite{*}| and plain-text citations.
+
+\section*{Items Needing External Verification}
+
+The review above is based on internal manuscript consistency and straightforward arithmetic. The following claims should be verified against current primary or authoritative sources before submission:
+
+\begin{itemize}
+\item \path{chapter1.tex:13} and \path{chapter1.tex:15}: the PSA Region 7 2024 growth figure and the BSP/RREPI 2025 Metro Cebu price-growth claim.
+\item \path{chapter2.tex:157}--\path{chapter2.tex:162}: the effective date and quoted requirements of IVS 2025, especially the exact wording attributed to IVS 105.
+\item \path{chapter1.tex:47} and \path{chapter1.tex:73}: the ``no existing study'' / ``first Cebu-specific'' novelty claim. This should either be externally verified through a documented search strategy or softened.
+\item \path{chapter10.tex:34}: the manuscript already notes that tourism-corridor externality support is thinner. Keep that caveat unless more directly relevant literature is added.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,16 @@
+stage,filter,rows_surviving
+Stage 1: legacy requests+BeautifulSoup,raw scrape,4477
+Stage 1: legacy requests+BeautifulSoup,has coordinates,3459
+Stage 1: legacy requests+BeautifulSoup,valid price 500k-500M,3163
+Stage 1: legacy requests+BeautifulSoup,inside 6 LGUs,2826
+Stage 1: legacy requests+BeautifulSoup,residential recode,2638
+Stage 1: legacy requests+BeautifulSoup,after spatial cap (<= 3/pin),1470
+Stage 1: legacy requests+BeautifulSoup,unique in-scope listings,1419
+Stage 2: Playwright (post-CAPTCHA),raw scrape,665
+Stage 2: Playwright (post-CAPTCHA),has coordinates,654
+Stage 2: Playwright (post-CAPTCHA),valid price 500k-500M,600
+Stage 2: Playwright (post-CAPTCHA),inside 6 LGUs,560
+Stage 2: Playwright (post-CAPTCHA),residential recode,533
+Stage 2: Playwright (post-CAPTCHA),after spatial cap (<= 3/pin),400
+Stage 2: Playwright (post-CAPTCHA),unique in-scope listings,372
+Stage 2: Playwright (post-CAPTCHA),NET-NEW vs pre-batch ABT,275

@@ -179,7 +179,6 @@ id,lat,lon,amenity_type,amenity,lgu
 77593974,10.2915924,123.9032089,secondary,Cebu South Coastal Road,Cebu City
 77594022,10.2980015,123.9081145,trunk,Sergio Osmeña Avenue,Cebu City
 77594101,10.3155589,123.9275996,trunk,Ouano Avenue,Cebu City
-77594105,10.2899664,123.8991556,trunk,Cebu South Coastal Road,Cebu City
 77594106,10.2925591,123.9040281,trunk,Cebu South Coastal Road,Cebu City
 77594857,10.3017829,123.90155,primary,P. del Rosario Street,Cebu City
 77594858,10.3029487,123.9028316,primary,Imus Avenue,Cebu City
@@ -188,7 +187,6 @@ id,lat,lon,amenity_type,amenity,lgu
 77594864,10.3017104,123.9009163,primary,P. del Rosario Street,Cebu City
 77594865,10.2983593,123.9087954,tertiary,V. Sotto Street,Cebu City
 77594867,10.2931567,123.9072902,tertiary,Legaspi Extension,Cebu City
-77721333,10.2887283,123.8940683,trunk,Cebu South Coastal Road,Cebu City
 77721334,10.2906698,123.9006192,trunk,Cebu South Coastal Road,Cebu City
 78001733,10.3030728,123.8989548,tertiary,R.R. Landon Street,Cebu City
 78488744,10.3016361,123.9102634,tertiary,T. Padilla Street,Cebu City
@@ -406,7 +404,6 @@ id,lat,lon,amenity_type,amenity,lgu
 98840036,10.2797734,123.8569237,tertiary,I. Tabura Street,Cebu City
 98969696,10.3088853,123.8523723,tertiary,Buhisan Road,Cebu City
 98969697,10.3105027,123.8508695,tertiary,Unnamed road corridor,Cebu City
-99142667,10.277014,123.8811453,trunk,Cebu South Coastal Road,Cebu City
 99142681,10.2737603,123.8715246,tertiary,Banog Road,Cebu City
 102243388,10.3703493,123.9200878,secondary,Governor M. Cuenco Avenue,Cebu City
 102243389,10.3714169,123.923467,secondary,Governor M. Cuenco Avenue,Cebu City
@@ -810,7 +807,6 @@ id,lat,lon,amenity_type,amenity,lgu
 311726475,10.33634,123.9238708,secondary,Hernan Cortes Street,Cebu City
 316468035,10.2949412,123.8893532,tertiary,J.M. Basa Street,Cebu City
 316468038,10.2923098,123.8905729,tertiary,Tupas Street,Cebu City
-332545512,10.2877511,123.8929572,trunk,Cebu South Coastal Road,Cebu City
 332545513,10.2905895,123.9009333,secondary,Cebu South Coastal Road,Cebu City
 332545514,10.3087114,123.9072282,primary,Imus Avenue,Cebu City
 332545515,10.3078266,123.9063531,primary,Imus Avenue,Cebu City
@@ -827,7 +823,6 @@ id,lat,lon,amenity_type,amenity,lgu
 417862136,10.3187981,123.8780478,tertiary,Unnamed road corridor,Cebu City
 420188771,10.2905928,123.9006544,trunk,Cebu South Coastal Road,Cebu City
 420188775,10.2914624,123.9031466,secondary,Cebu South Coastal Road,Cebu City
-420188778,10.2900305,123.8990887,trunk,Cebu South Coastal Road,Cebu City
 420188786,10.2804693,123.8821989,trunk,Cebu South Coastal Road,Cebu City
 420188790,10.2906278,123.9001453,secondary,Cebu South Coastal Road,Cebu City
 420189567,10.2850883,123.8866149,trunk,Cebu South Coastal Road,Cebu City
@@ -1635,8 +1630,6 @@ id,lat,lon,amenity_type,amenity,lgu
 1472108051,10.3276311,123.9049986,primary,Salinas Drive,Cebu City
 1472430247,10.318098,123.9081485,tertiary,Samar Loop,Cebu City
 1472430248,10.3181836,123.9082206,tertiary,Samar Loop,Cebu City
-1472732914,10.2864356,123.8878731,trunk,Cebu South Coastal Road,Cebu City
-1472732915,10.2874635,123.8889157,trunk,Cebu South Coastal Road,Cebu City
 1472764357,10.340068,123.9111696,tertiary,Camp Lapu-Lapu Road,Cebu City
 1472764358,10.3400729,123.9111065,tertiary,Camp Lapu-Lapu Road,Cebu City
 1473724155,10.3435181,123.9134646,secondary,A. S. Fortuna Street,Cebu City
@@ -1822,11 +1815,9 @@ id,lat,lon,amenity_type,amenity,lgu
 1480835853,10.2902416,123.8994545,trunk,Cebu South Coastal Road,Cebu City
 25937229,10.3312742,123.9363675,tertiary,A. S. Fortuna Street,Mandaue City
 28960128,10.3331455,123.9370766,primary,M.C. Briones Street,Mandaue City
-28960129,10.3273533,123.9658665,primary,Marcelo Fernan Bridge,Mandaue City
 29337032,10.341736,123.947291,primary,Cebu North Road,Mandaue City
 29451535,10.3669073,123.9357452,secondary,H. Abellana Street,Mandaue City
 34168717,10.3352693,123.9601174,primary,United Nations Avenue,Mandaue City
-34168723,10.3276037,123.9657748,primary,Marcelo Fernan Bridge,Mandaue City
 34168815,10.3374161,123.9483328,tertiary,P. Burgos Street,Mandaue City
 34230205,10.3344679,123.9388439,primary,Maguikay Flyover,Mandaue City
 34230793,10.3358082,123.9406686,primary,M.C. Briones Street,Mandaue City
@@ -2239,7 +2230,6 @@ id,lat,lon,amenity_type,amenity,lgu
 1480425821,10.3348027,123.9393125,primary,Maguikay Flyover,Mandaue City
 1480425822,10.3744572,123.9604044,tertiary,V & G Drive,Mandaue City
 1490201807,10.3751289,123.9362135,tertiary,Victor Vega Street,Mandaue City
-27751190,10.3199493,123.9555674,primary,Mandaue-Mactan Bridge,Lapu-Lapu City
 28811051,10.2819247,123.9905141,primary,Mactan Circumferential Road,Lapu-Lapu City
 28811131,10.3273323,123.9790435,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 28811294,10.2881929,123.9993726,primary,Mactan Circumferential Road,Lapu-Lapu City
@@ -2252,8 +2242,6 @@ id,lat,lon,amenity_type,amenity,lgu
 47872167,10.3041888,123.9801811,secondary,General Aviation Road,Lapu-Lapu City
 48169169,10.3292898,123.9316554,primary,M.C. Briones Street,Lapu-Lapu City
 51816634,10.3241758,123.942222,trunk,Don Andres Soriano Avenue,Lapu-Lapu City
-72370222,10.2720739,123.9457701,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
-72370223,10.2633339,123.9476488,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 72370224,10.2920225,123.9454456,primary,Tiangge Road,Lapu-Lapu City
 72370225,10.2785336,123.9450446,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 72370227,10.2714062,123.9707269,primary,Mactan Circumferential National Road,Lapu-Lapu City
@@ -2321,7 +2309,6 @@ id,lat,lon,amenity_type,amenity,lgu
 594406448,10.3239711,123.9436958,trunk,D.M. Cortes Avenue,Lapu-Lapu City
 627388258,10.3218651,123.9326344,trunk,Ouano Avenue,Lapu-Lapu City
 665725062,10.3239035,123.9534558,primary,A.C. Cortes Avenue,Lapu-Lapu City
-665725063,10.3199655,123.9555992,primary,Mandaue-Mactan Bridge,Lapu-Lapu City
 665725064,10.3150837,123.958131,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
 665725065,10.3147014,123.9584192,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
 691846605,10.3159271,123.9577555,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
@@ -2343,7 +2330,6 @@ id,lat,lon,amenity_type,amenity,lgu
 860501103,10.3264947,123.95205,primary,A.C. Cortes Avenue,Lapu-Lapu City
 860501104,10.3239264,123.953483,primary,A.C. Cortes Avenue,Lapu-Lapu City
 894056386,10.3263734,123.9453724,trunk,D.M. Cortes Avenue,Lapu-Lapu City
-894980838,10.2756497,123.9508855,primary,Cordova Bypass Road,Lapu-Lapu City
 899763834,10.2730725,123.9456792,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 906966519,10.319159,123.9305854,trunk,Ouano Avenue,Lapu-Lapu City
 915054860,10.3286386,123.9305803,primary,M.C. Briones Street,Lapu-Lapu City
@@ -2353,23 +2339,14 @@ id,lat,lon,amenity_type,amenity,lgu
 921982773,10.3194513,123.9305808,trunk,Ouano Avenue,Lapu-Lapu City
 922378777,10.3286633,123.9307831,primary,M.C. Briones Street,Lapu-Lapu City
 923627898,10.3263608,123.9522083,primary,A.C. Cortes Avenue,Lapu-Lapu City
-926677883,10.2753443,123.9504462,primary,Cordova Bypass Road,Lapu-Lapu City
 933120213,10.3287866,123.9309827,primary,M.C. Briones Street,Lapu-Lapu City
 933846685,10.3245182,123.9412711,trunk,Ouano Avenue,Lapu-Lapu City
 935664545,10.3246677,123.9413066,trunk,Ouano Avenue,Lapu-Lapu City
 959692825,10.321656,123.9327418,trunk,Ouano Avenue,Lapu-Lapu City
 959692826,10.3188901,123.9317383,secondary,E.O. Perez Street,Lapu-Lapu City
 959692827,10.318986,123.9313303,secondary,E.O. Perez Street,Lapu-Lapu City
-1053191134,10.2704331,123.9438875,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
-1055343895,10.2722894,123.9457481,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
-1055343896,10.2728242,123.9457024,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
-1055343897,10.2719391,123.9451745,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
-1055343899,10.2715672,123.9447562,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
-1055343900,10.2721372,123.9455419,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
-1055350504,10.2725479,123.9461456,primary,Cordova Bypass Road,Lapu-Lapu City
 1059749230,10.2919214,123.9666534,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
 1059749232,10.2915288,123.9668324,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
-1080542882,10.2712563,123.9458699,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1104622226,10.2987798,123.974904,secondary,General Aviation Road,Lapu-Lapu City
 1104622227,10.297139,123.9732461,secondary,General Aviation Road,Lapu-Lapu City
 1165012920,10.288554,123.9680995,primary,Basak - Marigondon Road,Lapu-Lapu City
@@ -2413,14 +2390,11 @@ id,lat,lon,amenity_type,amenity,lgu
 1459160526,10.3258175,123.990764,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1459329454,10.2757821,123.9784968,primary,Mactan Circumferential National Road,Lapu-Lapu City
 1459335899,10.3009246,123.9770685,secondary,General Aviation Road,Lapu-Lapu City
-1459396070,10.2693472,123.9619849,primary,Cordova Bypass Road,Lapu-Lapu City
-1459396071,10.2698928,123.9607151,primary,Cordova Bypass Road,Lapu-Lapu City
 1459418369,10.2742584,123.9568935,primary,Cordova Bypass Road,Lapu-Lapu City
 1459418370,10.2742029,123.9567871,primary,Cordova Bypass Road,Lapu-Lapu City
 1459588542,10.3029202,123.9471728,primary,Tiangge Road,Lapu-Lapu City
 1459598851,10.2832195,123.9444812,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1459608031,10.3077186,123.9479614,primary,Tiangge Road,Lapu-Lapu City
-1465286690,10.2725971,123.9457225,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1467336432,10.3284592,123.9900396,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1467388723,10.3307305,123.9890372,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1468429480,10.3008123,123.9622385,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
@@ -2442,13 +2416,7 @@ id,lat,lon,amenity_type,amenity,lgu
 1468595050,10.304439,123.9606954,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
 1468811037,10.3088637,123.9608848,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
 1468811038,10.3088484,123.960998,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
-1469195591,10.2714065,123.9446611,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
-1469195592,10.2724515,123.9457342,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
-1469195593,10.272185,123.9454224,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
-1469195594,10.2722982,123.9456572,trunk,Cebu-Cordova Link Expressway,Lapu-Lapu City
-1469195595,10.2717802,123.9458015,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1469195596,10.2739349,123.945675,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
-1469201631,10.2715853,123.945826,primary,Manuel L. Quezon National Highway,Lapu-Lapu City
 1469207353,10.2997518,123.9628436,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
 1469208975,10.2997375,123.9628163,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
 1469210909,10.314323,123.9586436,primary,Maximo V. Patalinjug Jr. Avenue,Lapu-Lapu City
@@ -2636,7 +2604,6 @@ id,lat,lon,amenity_type,amenity,lgu
 1476977323,10.2572546,123.8684085,trunk,Cebu South Coastal Road,Talisay City
 1476977324,10.2574111,123.8677638,trunk,Cebu South Coastal Road,Talisay City
 98087358,10.3848052,123.9749791,primary,Cebu North Road,Consolacion
-858757489,10.3889276,123.9801563,primary,Cebu North Road,Consolacion
 1468733156,10.382771,123.9718525,primary,Cebu North Road,Consolacion
 1468733157,10.3827432,123.9718682,primary,Cebu North Road,Consolacion
 204344827,10.2361812,123.7758738,trunk,Natalio Bacalso Avenue,Minglanilla

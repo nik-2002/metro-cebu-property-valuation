@@ -10,12 +10,10 @@ id,lat,lon,amenity_type,amenity
 4741655243,10.329083,123.9315776,clinic,Community clinic
 4888205822,10.4090205,123.9307507,clinic,Kauswagan Community Clinic and Social Center
 4942410126,10.3236716,123.9062045,clinic,Barangay Luz Health Center
-5213581456,10.4076483,123.9981566,clinic,Liloan Doctors Outpatient Clinic
 5385358124,10.2802455,123.9454867,clinic,Babag Health Center
 5507339621,10.3181901,123.9051556,clinic,Chiropractic Clinic
 5519778825,10.2804974,123.8807426,clinic,Kaiser Mecial Clinic
 5519793521,10.3150927,123.8843725,clinic,The One Family Clinic & Laboratory
-5786024214,10.2585217,123.9484176,clinic,Unnamed health
 5846373352,10.2854585,123.8714657,clinic,Dr. Alicia Yuipco- Delfin Clinic
 6357446985,10.2964483,123.8852785,clinic,Cebu Dog and Cat
 6357875073,10.3255992,123.8803815,clinic,Unnamed health
@@ -30,15 +28,11 @@ id,lat,lon,amenity_type,amenity
 9395626417,10.3166661,123.8883113,clinic,Supercare Cebu
 9905565534,10.3030502,123.9470043,clinic,Tapang Medical Clinic
 10213231718,10.2962618,123.9652602,clinic,OMDC Medical Diagnostic Clinic
-10213231828,10.3970947,123.9792298,clinic,Lex Pharmacy
-10213233631,10.2641776,123.9465648,clinic,Coremed
 10838117336,10.3129263,123.9760213,clinic,Unnamed health
 11017829403,10.2844351,123.9692423,clinic,Expert Care MEdical Clinic
 11555599369,10.2975699,123.8795033,clinic,City Doctors Med Clinic And Pharmacy
 11875317495,10.3009639,123.878107,clinic,Kevlo Skin Clinic
 11879062895,10.3441351,123.9121982,clinic,Int'l Acupuncture and medical Clinic
-12463209401,10.4208965,123.9978174,clinic,PhilHealth
-12463209501,10.4058447,123.9985667,clinic,Dr. Rick
 12876599202,10.3048701,123.8984341,clinic,Alpha diagnostic center
 13508203456,10.3508875,123.9140751,clinic,Skin Doctors
 150954402,10.3193711,123.9071123,clinic,Maxicare Healthcare Corporation - Primary Care Center
@@ -49,14 +43,11 @@ id,lat,lon,amenity_type,amenity
 425874494,10.3114263,123.893554,clinic,Unnamed health
 458019598,10.3320249,123.9560412,clinic,Barangay Umapad Health Center
 459318994,10.3249161,123.9418969,clinic,Mandaue City Health Department
-489766611,10.2668114,123.9459016,clinic,Barangay Pilipog Health Station
 895442392,10.2970422,123.8944538,clinic,Nationwide Health Systems
 899084678,10.2892108,123.9675915,clinic,Hi-Precision Diagnostics
 1117008132,10.2601663,123.983024,clinic,Unnamed health
 1147544412,10.3097759,123.8895684,clinic,Chong Hua Medical Mall
 1257380167,10.2806014,123.8561667,clinic,Montejo Medical Clinic
-1290644318,10.5691528,123.7146928,clinic,Alan L. Adlawan Infirmary Clinic
-1382711968,10.5069532,123.7157404,clinic,Dumdum Medical Clinic
 1443596510,10.331567,123.8943086,clinic,Sugbo Bagong Urgent Care and Ambulatory Services Center
 380438493,10.2942293,123.9056663,doctors,Friendly Care Clinic
 490429598,10.3244929,123.9347944,doctors,MetroCebu Oral Rehabilatation Center
@@ -74,21 +65,16 @@ id,lat,lon,amenity_type,amenity
 5539823801,10.2534554,123.8608827,doctors,The Doctors Clinic
 6694461217,10.2925307,123.9662301,doctors,Villamor Eye Clinic
 7045928185,10.3149391,123.9022728,doctors,Unnamed health
-7123686385,10.5217494,124.0290785,doctors,Unnamed health
 7128883388,10.3082054,123.8920051,doctors,Unnamed health
 7169131894,10.3661441,123.9543666,doctors,Unnamed health
-7305118791,10.5196202,124.0272676,doctors,Danao City Social Hygiene Clinic
 7305118792,10.3249634,123.9418169,doctors,Mandaue City Social Hygiene Clinic
 7305118793,10.2535519,123.8292123,doctors,Talisay City Social Hygiene Clinic
-7859776785,10.2523889,123.9497726,doctors,Cordova Primary Health Care Facility
 8345877680,10.2945733,123.9030564,doctors,Unnamed health
-8345877692,10.5109015,123.7166092,doctors,Unnamed health
 8346310210,10.3223001,123.9317009,doctors,Unnamed health
 8346330054,10.3192252,123.8988881,doctors,Unnamed health
 8347739282,10.3081782,123.9090013,doctors,Unnamed health
 8347739291,10.3112288,123.8931414,doctors,Hi-Precision Diagnostics
 8695736464,10.3000885,123.9014509,doctors,Alcantara Children's Medical Clinic
-10213231832,10.2713651,123.9459514,doctors,Unnamed health
 11011294613,10.2966389,123.9647302,doctors,Skindoctors
 12468346601,10.3268054,123.9178073,doctors,Toledomed Cebu
 12743913388,10.3511504,123.9239637,doctors,Unnamed health
@@ -96,16 +82,11 @@ id,lat,lon,amenity_type,amenity
 13040661450,10.2991741,123.9031595,doctors,Pari-an Health Center
 13361420202,10.324343,123.9095448,doctors,Dr RMU
 226499165,10.2978143,123.8928188,doctors,Cebu City Medical Center Pediatrics
-541769652,10.5693447,123.714837,doctors,Asturias Rural Health Unit
 638127839,10.3764047,123.9578098,doctors,Consolacion Primary Health Facility
-638128283,10.4534187,124.0120543,doctors,Compostela Rural Health Unit
-665244563,10.5054806,123.7135395,doctors,Balamban Rural Health Unit Ⅰ
 854148464,10.2438933,123.7986669,doctors,Minglanilla Rural Health Unit
 1163516117,10.2909968,123.9671261,doctors,Arcibal Medical Clinic
 1362729422,10.2457008,123.7954767,doctors,Minglanilla Rural Health Unit Ⅰ
-1368626056,10.3125062,123.7547643,doctors,Camp 8 Health Center
 1368629884,10.2908808,123.8975009,doctors,Ermita Health Center
-1382710980,10.5056198,123.7134154,doctors,Unnamed health
 1419070928,10.2592382,123.8278179,doctors,Talisay City Health Unit Ⅲ
 1693132815,10.3406648,123.9124513,dentist,Prodent Advanced Oral Health
 2841366672,10.3125445,123.898463,dentist,Dental Innovations
@@ -131,14 +112,11 @@ id,lat,lon,amenity_type,amenity
 9521652408,10.3278629,123.9290453,dentist,Unnamed health
 9884254617,10.3820128,123.9209679,dentist,KD dental clinic
 10208475973,10.3163179,123.8929215,dentist,Sabandal Dental Clinic
-10213711617,10.4932004,123.7135581,dentist,Unnamed health
 10731981457,10.2974669,123.8781933,dentist,Rhed Owl Dental Clinic
 10885842556,10.2574357,123.8239904,dentist,Pardillo Dental Clinic
 11011294612,10.2968144,123.9647862,dentist,Unnamed health
 11011294616,10.2966793,123.9652031,dentist,Dental Cube
 11413766269,10.3172186,123.8999522,dentist,Cebu Dental Implants - Zugbu Aesthetic Dental Clinic Services Philippines
-11468683669,10.4076276,123.9978073,dentist,Aunty Tooth
-11468683674,10.4015303,123.9998449,dentist,Vista Medical & Dental Clinic
 11520071318,10.2983536,123.9638688,dentist,Adental
 11759887246,10.3234018,123.9056316,dentist,msDental clinic
 11777649506,10.3734952,123.954739,dentist,Gale's Dental Care Clinic
@@ -164,3 +142,406 @@ id,lat,lon,amenity_type,amenity
 13619503667,10.3453518,123.9128396,dentist,Dione Rey L Tan Dental Clinic
 13629174361,10.3491768,123.9134528,dentist,Ruflo Dental Clinic
 607906401,10.315954,123.9706846,dentist,Dental Office
+ChIJtcd1RVCZqTMRu-Dimp3v_rc,10.305543,123.894911,pharmacy,5th Avenue Pharmacy
+ChIJU4xj502ZqTMRk2UHt5MPuHc,10.3088719,123.89089,pharmacy,Botikang Pinoy
+ChIJGQ2KguKbqTMRnidRQPiPcZU,10.2969949,123.899197,pharmacy,Citidrug 2-in-1 Drugstore
+ChIJGSCioUeZqTMRoEtKZcN6X34,10.3149776,123.8994662,pharmacy,Coco Life Health Care
+ChIJE9-iMkqZqTMRoygtNhIMpPE,10.3128776,123.892862,pharmacy,Completesolution Pharmacy and General Merchandise
+ChIJh8QWUlCZqTMRPVt9nb3zLDc,10.3053681,123.8945379,pharmacy,Dr. Iben Ting Pharmacy
+ChIJa_xax8qeqTMR9tb7B5zhXN4,10.31874,123.884613,pharmacy,Extreme Xcience Product Center
+ChIJ1RhdFkiZqTMRAsZjG9F1200,10.3159146,123.8956858,pharmacy,ExtremeXcience Incorporated
+ChIJEbLjX2eZqTMRJkNyHi3NYgQ,10.3020149,123.908147,pharmacy,Farmacia Ignacio
+ChIJz0z56ROZqTMRaZyekJXmNNs,10.3184049,123.9150409,pharmacy,Farmacia Ni Dok
+ChIJUThKgdGeqTMRLaWxMa22ipo,10.3303003,123.8800774,pharmacy,GENERIKA DRUGSTORE
+ChIJxTT3AFeZqTMRrLjJ4xDOOYE,10.3047226,123.9141351,pharmacy,GENERIKA DRUGSTORE REGIONAL OFFICE
+ChIJsbQnlliZqTMRMj4gEOgwS9E,10.297578,123.9009488,pharmacy,Generika
+ChIJ-ScRCSaZqTMRZVLU4gjd5yE,10.3311633,123.8979827,pharmacy,Generika Drugstore
+ChIJGf2hoxWZqTMR29whoVJNfBs,10.3222655,123.9054957,pharmacy,Generika Drugstore
+ChIJcf4Xl_6bqTMRudRiTuJqDs0,10.294689,123.890527,pharmacy,Generika Drugstore
+ChIJlb4jtVCZqTMRAwsj7_DrwhM,10.2961209,123.8988727,pharmacy,Generika Drugstore
+ChIJCwrYzRWbqTMRf-u9hSXrWVs,10.2935011,123.8968888,pharmacy,Generika Drugstore (Magallanes Branch)
+ChIJfWMh9hucqTMRJhnI1RACgx4,10.2958383,123.8699077,pharmacy,Generika Drugstore - Punta Princesa
+ChIJwwMntJOfqTMRDsT7hT-pv6o,10.3003828,123.8846963,pharmacy,Generika Drugstore Labangon A. Lopez St.
+ChIJhTpcWQCdqTMRIfqoHqqWdhA,10.2889591,123.8741474,pharmacy,Generika Drugstore Mambaling
+ChIJgUL5Fi2ZqTMR8kKNsd-jtZE,10.3290207,123.8873516,pharmacy,Generika drugstore
+ChIJi6awAVCZqTMR5N8SGppn3sI,10.3069065,123.8967291,pharmacy,Green World Woo Tekh Philippines Incorporated
+ChIJq0DOus2eqTMREOqEFitTPdg,10.3265485,123.8821078,pharmacy,Healty Pharmacy
+ChIJea813EiZqTMRLmWBmiU4kCk,10.3131045,123.8946703,pharmacy,Jvzea Pharmaceuticals
+ChIJMWO8ORacqTMRKTBd6u0KBv4,10.2883769,123.864607,pharmacy,La Nueva Pharmacy Basak Pardo
+ChIJuZPUDACcqTMReF7ByNgHcpI,10.2976891,123.8853148,pharmacy,La Nueva Pharmacy Tres De Abril
+ChIJm6KJ5EmZqTMRZ5nsE8cYOYI,10.316833,123.8922138,pharmacy,Lema Pharmaceuticals Inc
+ChIJHy5wIVuZqTMRQ8PjjPOWuWA,10.305584,123.900018,pharmacy,M Lhuillier Pharmacy
+ChIJ08VKRkmZqTMRxM2mULvpWuU,10.312992,123.892571,pharmacy,Mega Value Drug Store
+ChIJQQ5Cl06ZqTMRKJXKGoFD_6w,10.3109297,123.8921255,pharmacy,Megavalue Drugstore
+ChIJR6nEAT-ZqTMR7Nw1hjug7uw,10.3190505,123.9041061,pharmacy,Mercury Drug
+ChIJlTnfTiKZqTMR3ZsGpz9DpwI,10.3282608,123.9057247,pharmacy,Mercury Drug
+ChIJaZ5fZD6cqTMRByrgDC2nRAQ,10.2863416,123.8610891,pharmacy,Mercury Drug - Cebu City Basak Pardo
+ChIJX0lwMs6YqTMROjZyJhbinwg,10.3464523,123.8938962,pharmacy,Mercury Drug - Cebu City Busay
+ChIJYyxcSwCbqTMR1pDPr-TlSZM,10.2957154,123.897527,pharmacy,Mercury Drug - Cebu City Colon
+ChIJfS910kqZqTMRF6uGWske33o,10.3161051,123.8860701,pharmacy,Mercury Drug - Cebu City Guadalupe
+ChIJ87gF4myZqTMRIcupkvBH4QU,10.3127681,123.9164287,pharmacy,Mercury Drug - Cebu City Mabolo A. Soriano
+ChIJ2UQigUmZqTMRIhmrHW2GCBI,10.3149469,123.8915141,pharmacy,Mercury Drug - Cebu City Osmeña Avila
+ChIJR9a5DxycqTMR3wm2YfH29Jc,10.2966203,123.8697273,pharmacy,Mercury Drug - Cebu City Punta Princesa
+ChIJbV0vl-KbqTMR8sCBgGy4qrE,10.2963171,123.8985862,pharmacy,Mercury Drug - Metro Colon
+ChIJETqz_U6ZqTMRaqZf10Msx-I,10.3099531,123.8939964,pharmacy,Mercury Drug Pharmacy Fuente
+ChIJMerTvBCcqTMR2JG6_7rqNEQ,10.2904559,123.8705277,pharmacy,Metro Pharmacy
+ChIJx2zniFiZqTMRGPd65IOK8BM,10.2976918,123.8999784,pharmacy,Metro Pharmacy
+ChIJpTq15U-ZqTMRgnA9ZB7k8WU,10.3075914,123.8959601,pharmacy,Mom's Best Value Pharmacy
+ChIJSQ47nkeZqTMRzgTHomI6i5A,10.315423,123.9005143,pharmacy,Pharmacy
+ChIJTXfNjEuZqTMRduLqQO--ku8,10.3134327,123.8896,pharmacy,Prosel Pharmaceuticals and Distributors Incorporated
+ChIJE8uuNzWZqTMRWcbCZp3giYY,10.319208,123.886326,pharmacy,Rose Institute Of Cosmetology And Pharmacy
+ChIJ48uiu-yZqTMRv3EyGmh_07Y,10.3182169,123.9151896,pharmacy,Rose Pharmacy
+ChIJ6RxLDQCZqTMR4wGoOE4wuzI,10.3030412,123.8901511,pharmacy,Rose Pharmacy
+ChIJS0Ss3FKZqTMRWEz8Gnn_jvU,10.3063432,123.8868881,pharmacy,Rose Pharmacy
+ChIJUe1FLlCZqTMRPICm8MZT--E,10.3066137,123.8944889,pharmacy,Rose Pharmacy
+ChIJfVxl_U-ZqTMRY-vgewdQ8Bs,10.3070405,123.8963701,pharmacy,Rose Pharmacy
+ChIJh5Nmg0mZqTMRDwLsCBHOABY,10.3150509,123.8918428,pharmacy,Rose Pharmacy
+ChIJw3Thw1eZqTMRiOzAP3zk1rk,10.298178,123.8953976,pharmacy,Rose Pharmacy
+ChIJx6T8aZyZqTMRDraUIjC9iaA,10.3307927,123.9070437,pharmacy,Rose Pharmacy
+ChIJz8QBrz-ZqTMRAEPmrSdK-M4,10.3187234,123.9040191,pharmacy,Rose Pharmacy
+ChIJud4RgeKbqTMR0KfqRHlL2kM,10.2968505,123.8994622,pharmacy,Rose Pharmacy - Colonade
+ChIJi-tGTbWdqTMRLKzE6qKCfGM,10.288006,123.8578774,pharmacy,Rose Pharmacy - Quiot
+ChIJBZ3pfwCZqTMR7NlZe6gUUmM,10.3170693,123.9060727,pharmacy,Rose Pharmacy - The Market place Ayala
+ChIJAfxnxbSZqTMRVASgql-Z8p8,10.3286754,123.9034646,pharmacy,"Rose Pharmacy AVC Salinas, Lahug"
+ChIJVbLEt26ZqTMR3U9zpLm_t4s,10.3168072,123.8939452,pharmacy,Rose Pharmacy Capitol Site Escario
+ChIJc2NUa06ZqTMRF3grh7ZfvW4,10.301764,123.9062157,pharmacy,Rose Pharmacy Cebu Catmon
+ChIJz0fzymyZqTMRLL-BmKBPbO0,10.3142857,123.9150675,pharmacy,Rose Pharmacy Express Inn
+ChIJi6eh_k6ZqTMRIB_T7TrUoSQ,10.3106398,123.8933665,pharmacy,Rose Pharmacy Fuente Osmena
+ChIJ0R_53LSeqTMRiRb606bNo7U,10.3152739,123.884574,pharmacy,Rose Pharmacy Gaisano Capital One Pavillion
+ChIJM6Qtz-KbqTMRerQBXpJw_2k,10.296599,123.8963228,pharmacy,Rose Pharmacy Gaisano Capital South
+ChIJMebQNzWZqTMR1mJa2LmRHmM,10.319409,123.8860073,pharmacy,Rose Pharmacy Inc.
+ChIJAftanqaZqTMRu9r6ErBhH6A,10.3006373,123.8991177,pharmacy,Rose Pharmacy Junquera P. Del Rosario St. Cebu City
+ChIJ8ZBU5iWZqTMR2-0KKKzPMmc,10.3303341,123.8976952,pharmacy,Rose Pharmacy Jy Square One Lahug
+ChIJYZM3CBycqTMRc8UmwYoANKc,10.295091,123.869631,pharmacy,Rose Pharmacy Metro Fresh N' Easy
+ChIJs4S11qieqTMRWHFYv0fwBRc,10.304022,123.8771181,pharmacy,Rose Pharmacy Salvador Extension Labangon
+ChIJFyDM8yWZqTMRPLDDW6ZM_BY,10.3302647,123.8976623,pharmacy,Rose Pharmacy Sanson Road Lahug
+ChIJJXl5lRCcqTMRrJWgfEsPgSg,10.2896297,123.8711071,pharmacy,Rose Pharmacy Shopwise Mall Basak
+ChIJP7_z2SGZqTMRbQDVqbmj_w0,10.3315496,123.9077693,pharmacy,Rose Pharmacy Skyrise 1 Bldg Cebu I.T.Park
+ChIJObeDo1SZqTMRpQjXRinNYQQ,10.3301474,123.906432,pharmacy,Rose Pharmacy Skyrise 4A Cebu I.T. Park
+ChIJdwFK8pOZqTMRJ0g8iNiSVK0,10.3274187,123.9065579,pharmacy,Rose Pharmacy | i2 Building - Cebu IT Park
+ChIJM8q-OG6ZqTMRKelTLNE1BLs,10.3128984,123.8945403,pharmacy,SOUTHSTAR DRUG BASE LINE CEBU CITY
+ChIJ73jihU6ZqTMRGPPUY8lC9Hg,10.3109331,123.8918866,pharmacy,Southstar Drug Cebu Capitol Site Robinsons Cybergate
+ChIJDXgRmQOZqTMRdt1u_SI573k,10.3285748,123.9008548,pharmacy,Southstar Drug Cebu Kamputhaw Baseline
+ChIJQx2QT2aZqTMRdWT19939Pa0,10.3037455,123.9114473,pharmacy,Southstar Drug Cebu Robinsons Galleria
+ChIJR8x1O4iZqTMRwubGnS-UpOM,10.3115198,123.9005135,pharmacy,Southstar Drug Cebu Robinsons Galleria
+ChIJc89C406ZqTMRgkaWKvUEv1k,10.3104177,123.8938408,pharmacy,TGP The Generics Pharmacy
+ChIJD4p-0OKbqTMRy-jsjQyaSE4,10.295635,123.8980634,pharmacy,"TGP The Generics Pharmacy (Colon St Cor Lopez, Cebu)"
+ChIJE7ug06CeqTMRqoTZOjQa0bw,10.3000584,123.8776129,pharmacy,"TGP The Generics Pharmacy (Katipunan Street, Toledo)"
+ChIJYVOtucqeqTMRIr4a34ubvhA,10.318736,123.884884,pharmacy,"TGP The Generics Pharmacy (Regner Meier Zentrum Bldg, Cebu)"
+ChIJ21H9GdKeqTMREia5lxD1Ob8,10.3291553,123.881079,pharmacy,The Generics Pharmacy
+ChIJ9xdz6k2ZqTMRtPrMcLCunUs,10.3084436,123.8899829,pharmacy,Three Sixty
+ChIJqYlCdBCcqTMRDn8kbr1S8xc,10.2901176,123.8728911,pharmacy,Three Sixty Pharmacy
+ChIJaQiKdhucqTMRhhD0WciTcaA,10.2944411,123.8698545,pharmacy,Three Sixty Pharmacy - Punta Princesa
+ChIJ1Xfi6RucqTMRx4Fk6_8vuoE,10.300273,123.8762854,pharmacy,ThreeSixty Pharmacy
+ChIJLXQ6heKbqTMRG7NejLvL4p4,10.2983887,123.8938285,pharmacy,ThreeSixty Pharmacy
+ChIJX-Sgr2uZqTMRWSj0lcLB66A,10.3120383,123.9114615,pharmacy,ThreeSixty Pharmacy
+ChIJY52Jy12ZqTMRaFvQaCGRNIw,10.3019611,123.905612,pharmacy,ThreeSixty Pharmacy - T. Padilla Branch
+ChIJ1ZQAFNKeqTMRDt451lqvh3o,10.3165227,123.8854217,pharmacy,ThreeSixty Pharmacy - V Rama
+ChIJ1Xfi6RucqTMR23-agG4wClc,10.3004964,123.8695229,pharmacy,Threesixty Pharmacy
+ChIJ5_fUL0yZqTMRg8HghxarMyU,10.3110286,123.8917189,pharmacy,Threesixty Pharmacy
+ChIJXbAMOD-cqTMRlJLkjY6HU-s,10.2836215,123.8587324,pharmacy,Threesixty Pharmacy
+ChIJJz3h5UmZqTMReT6MRSXASAQ,10.3164882,123.892207,pharmacy,Threesixty Pharmacy - Escario Branch
+ChIJXyYze1KZqTMRGsCkwRkmgnA,10.3085421,123.8910214,pharmacy,VSMMC DOH PHARMACY
+ChIJ7SYAdQCdqTMR2AVtX5JIE2Q,10.2829133,123.8807045,pharmacy,WATSONS - SM Seaside Cebu Department Store
+ChIJK8Z7kMeZqTMRPKUjA6k9suI,10.3181163,123.8962804,pharmacy,WATSONS AXIS ENTERTAINMENT AVE ESCARIO CEBU
+ChIJX28gTLSZqTMR8zBQMByKTpY,10.3176994,123.9046058,pharmacy,WATSONS AYALA CENTER CEBU MALL 1
+ChIJQemarz-ZqTMRpsFWhl12wbw,10.3174033,123.9058511,pharmacy,WATSONS AYALA CENTER CEBU MALL 2
+ChIJL6_xsSmZqTMRg8N4r5EMVv0,10.2977768,123.9006624,pharmacy,WATSONS CEBU BUSINESS HOTEL
+ChIJbcXy51eZqTMRqpNukNekMao,10.297921,123.895407,pharmacy,WATSONS ELIZABETH MALL
+ChIJ53w8JCedqTMRltlCU42FRi0,10.2915289,123.8800922,pharmacy,WATSONS GAISANO GRAND MALL JAI ALAI
+ChIJ_SwZ6k6ZqTMRj8DTLDKYquo,10.3108563,123.8930538,pharmacy,WATSONS MA. CRISTINA BLDG
+ChIJCVoOBEyZqTMRLY6LH4Q526I,10.310899,123.8917749,pharmacy,WATSONS ROBINSONS CYBERGATE CEBU
+ChIJfxdXbGaZqTMR0cC3FAfZu5Q,10.3046812,123.9113578,pharmacy,WATSONS ROBINSONS GALLERIA CEBU
+ChIJJaGCLwGZqTMRXfcBwTyeLeI,10.3125,123.91711,pharmacy,WATSONS SM CITY CEBU RELOCATION
+ChIJLw-57RadqTMRq6miJdKhr6Q,10.2820741,123.8813908,pharmacy,WATSONS SM SEASIDE MALL 1
+ChIJT7pPcAucqTMRmujvjEuifKE,10.2818458,123.8809244,pharmacy,WATSONS SM SEASIDE MALL 2
+ChIJuy4_We-dqTMRpYXv0x5OJbc,10.282605,123.88075,pharmacy,WATSONS SM SEASIDE MALL DEPARTMENT STORE
+ChIJOz5NE22bqTMR1tzAWldwXKk,10.2966804,123.898674,pharmacy,WATSONS THE EDEN COLON
+ChIJOfqnVOiZqTMR3VPYgGiZP4s,10.3283134,123.9057395,pharmacy,WATSONS THE WALK ABAD ST CEBU
+ChIJh11asryZqTMR6f8h5EKylkw,10.3283717,123.9058969,pharmacy,Watson's Pharmacy
+ChIJ1QmF3CWZqTMR-vHv3dRqa1w,10.330471,123.89892,pharmacy,Watsons
+ChIJGdacNgCZqTMRDb4aRNFQ-Rg,10.3180584,123.8962337,pharmacy,Watsons - Vibo
+ChIJoW-E1_yZqTMRuyPidn76JIA,10.3300893,123.9073986,pharmacy,Watsons Ayala Malls Central Bloc
+ChIJSTXNk1iZqTMRs8vKNni0iB8,10.2978375,123.9005939,pharmacy,Watsons pharmacy
+ChIJV7Ai6aSiqTMRkqx0SqO1kdw,10.3751953,123.9601511,pharmacy,ALFAR Pharmacy
+ChIJfYqAoaSiqTMRvu-tMxOJWKM,10.3757942,123.9586019,pharmacy,Arendain's Pharmacy & General Merchandise
+ChIJxWG5voCjqTMR52GwosSKhE0,10.3849029,123.974908,pharmacy,BING PHARMACY- YATI LILOAN
+ChIJS5uF6KSiqTMR_BjIDp1qji8,10.3754043,123.9602757,pharmacy,Bing Pharmacy
+ChIJ6RM1g9-jqTMRXtMz0IeUNQo,10.3761544,123.956674,pharmacy,Biomed Pharmacy - Consolacion
+ChIJp7PXJvyXqTMRivzMGVRLhBA,10.361245,123.980757,pharmacy,Budie's Point Pharmacy & Convenience Store
+ChIJE-Cws7aiqTMRYECsH7gaBJk,10.3806649,123.9685237,pharmacy,CEDLAR'S Pharmacy
+ChIJRXt8RXWYqTMRPFOUckhg7bQ,10.3672354,123.9519869,pharmacy,D' Seven Pharmacy And General Mdse.
+ChIJLzVxOKKiqTMRYbDYChYnaUk,10.3735917,123.9547748,pharmacy,Ecpy
+ChIJoedZ76SiqTMRnbaeqwguhYM,10.3751551,123.9603253,pharmacy,Emmanuel Pharmacy
+ChIJTWP56aSiqTMRr1mzVtasi1w,10.3754403,123.9601004,pharmacy,Evercare Pharmacy
+ChIJseQnTbSiqTMREpeRN41Gmog,10.3824423,123.971382,pharmacy,F and J Pharmacy and General Merchandise
+ChIJN1yjz7CiqTMR070FTw8joxs,10.3802612,123.9657785,pharmacy,FARMACIAS ZAMORA CORP
+ChIJK5r6OgCjqTMRY8QTSOxd5OQ,10.3764424,123.9589731,pharmacy,Generika Consolacion
+ChIJ292XO6KiqTMRArvmORspagU,10.3796059,123.9554907,pharmacy,Generika Drugstore
+ChIJ-3QQXgCjqTMR56NOu4nOvbM,10.3776793,123.9624112,pharmacy,Healthway Pharmacy
+ChIJCbbcNgCZqTMRhPB8bgBICaU,10.3650216,123.9640798,pharmacy,Intra Marou
+ChIJa4SGPnWYqTMRQZpApcWf2mI,10.366568,123.9514566,pharmacy,Jagobiao Pharmacy and General Merchandise
+ChIJ23P1xaGiqTMRVlqEllgPoS0,10.3707805,123.9536704,pharmacy,KONZEPT DRUG & CONVENIENCE STORE
+ChIJ8Sc9JPyXqTMRYXDm9_dWjGo,10.3613171,123.9810802,pharmacy,Krisjames Pharmacy
+ChIJAZHeRr-iqTMRntTFHwWGFU4,10.3855872,123.9573058,pharmacy,LARRAH MAE PHARMACY
+ChIJHyXV5qSiqTMRoIlmrBuTSIY,10.3752868,123.9602952,pharmacy,Malunjao's Pharmacy & General Merchandise
+ChIJe3weM7uiqTMR_8AuvXfALJ0,10.3767689,123.9602321,pharmacy,Mercury Drug (Work)
+ChIJxba2s7aiqTMRqje6F5g-kZM,10.3806706,123.9685305,pharmacy,Molly PHARMACY
+ChIJrycoPHWYqTMRpggP1VQgibs,10.3665114,123.9515217,pharmacy,NORCH MED Pharmacy
+ChIJp6GaVACjqTMRKOr4rhBzI70,10.3809927,123.9686755,pharmacy,North Med Pharmacy
+ChIJzzRFXkKZqTMRswE8yE45pp4,10.373772,123.9592968,pharmacy,RHEAN Pharmacy
+ChIJv3UG5qSiqTMRe7ZKJjm9eIU,10.3749495,123.9603509,pharmacy,RPY Pharmacy
+ChIJ5X4fJgCjqTMR1JU7KVajVqE,10.3818277,123.9677263,pharmacy,Right Care Pharmacy
+ChIJ_e8rPgCXqTMRdH7l9H6NlEo,10.3601553,123.980403,pharmacy,Rose Pharmacy
+ChIJUacJagCjqTMRshDRGpKAx70,10.3759535,123.9602393,pharmacy,Rose Pharmacy - ADM Building
+ChIJT12xqbaiqTMRvtJgytT7RY8,10.380892,123.969382,pharmacy,Rose Pharmacy - CPG Arcade
+ChIJ2eqoRgCjqTMRbgp561kr34Y,10.375612,123.9562254,pharmacy,Rose Pharmacy - Jomabo Building
+ChIJJ_YpPHWYqTMRMokhE-82ewo,10.366509,123.9515053,pharmacy,SURESAVE PHARMACY
+ChIJcZkYVHWYqTMRdg42r7Om41s,10.3677356,123.9523132,pharmacy,Sal's Pharmacy
+ChIJI2Pq2LCiqTMRJJklMorZk8Y,10.3798725,123.9665416,pharmacy,Shan Pharmacy
+ChIJl2Lb4ryiqTMRAT1kh-24b68,10.3789299,123.9556292,pharmacy,SoliMed Pharmacy
+ChIJE8HeYZWjqTMRScEzkRVpeCE,10.3806565,123.9685048,pharmacy,Sunrise Pharmacy - Consolacion
+ChIJNc1Urb2iqTMRmLV-OPq8K6M,10.3801906,123.955482,pharmacy,TGP The Generics Pharmacy
+ChIJz13RAByjqTMR8K5HuIdYdMw,10.375464,123.9600644,pharmacy,"TGP The Generics Pharmacy (Cansaga, Consolacion)"
+ChIJ523OW2KZqTMRbJx16ctXtsk,10.3674359,123.952212,pharmacy,"TGP The Generics Pharmacy (Jagobiao, Mandaue)"
+ChIJv-EUJwCjqTMRE6H610xEKU0,10.38042,123.965815,pharmacy,"TGP The Generics Pharmacy (Lamac, Consolacion)"
+ChIJKXy4IfyXqTMREpzsJnAOAw4,10.3609872,123.9808177,pharmacy,The Generics Pharmacy
+ChIJrQ4-TKKiqTMRs3miaqc6WxU,10.3739032,123.9551745,pharmacy,Thinkcare Pharmacy
+ChIJt5jZw6SiqTMRIAFkXo0RRdY,10.3756415,123.9600371,pharmacy,Three Sixty Pharmacy
+ChIJkTQQdnOYqTMRKJIscuNeKHc,10.3625257,123.9500368,pharmacy,ThreeSixty Pharmacy
+ChIJXznsW6OiqTMRCqIoukPoDko,10.3760566,123.9578604,pharmacy,Trumas
+ChIJn9NGDfijqTMRLGTH9lmS7l0,10.3800186,123.9661793,pharmacy,VIDI-C PHARMACY
+ChIJK4-D3gOjqTMRo16GPxuydlg,10.381679,123.962331,pharmacy,WATSONS DISTRIBUTION CENTER CEBU
+ChIJk26ckqSiqTMRUpNLwdav5zg,10.3749519,123.9592079,pharmacy,WATSONS SAVEMORE CITY MALL CONSOLACION
+ChIJtUahsBmjqTMRByPuZHJO2_w,10.380639,123.964149,pharmacy,WATSONS SM CITY CONSOLACION
+ChIJuWPrGACjqTMR2geHcsuNPZ4,10.3757354,123.9569043,pharmacy,Watsons building
+ChIJe1sUrjWYqTMRRpQcWk6cSqc,10.3319565,123.9550629,pharmacy,FMC Biopolymer
+ChIJofajROyZqTMRDSYqi4t5XTg,10.303238,123.956254,pharmacy,Farmacia
+ChIJ4ZKq4A-aqTMRMcVpOHzG3D4,10.2785318,123.9642051,pharmacy,Farmacia Ni Dok
+ChIJKW8P1_6bqTMRkRcD4WK5Xq0,10.2864727,123.9686523,pharmacy,Generika Drugstore
+ChIJO4Hd9K2ZqTMRTPlppsPBhlk,10.3268399,123.9407943,pharmacy,Generika Drugstore
+ChIJWfypzHKXqTMR7iJZx17JkkU,10.3159562,123.9972694,pharmacy,Generika Drugstore
+ChIJQ82wCgCbqTMRMcQAo3QSVFM,10.276767,123.9744828,pharmacy,Generika Pharmacy
+ChIJGeIS2r-ZqTMRydikMWDMxXs,10.3104978,123.9506494,pharmacy,LN Pharmacy
+ChIJlcIchLKZqTMRjVUANx3tTGc,10.3284926,123.9418755,pharmacy,La Nueva Pharmacy Mandaue
+ChIJ9zaNbQCZqTMRqUyei7WTW3c,10.3129202,123.9523458,pharmacy,Maystar Pharmacy
+ChIJFZwrx7KZqTMR46RD1cTmQkU,10.3295389,123.943102,pharmacy,Mercury Drug
+ChIJAbAKkviZqTMRt95Q41AH_mY,10.2899719,123.96734,pharmacy,Mercury Drug - Lapu-Lapu City Basak
+ChIJ8agc8r-ZqTMRv0p1JOUSKA0,10.3109439,123.952057,pharmacy,Mercury Drug - Lapu-Lapu City G. Y. Dela Serna
+ChIJ5ecw3JKZqTMRGtp8tALr7Cw,10.3025446,123.9515365,pharmacy,Mercury Drug - Lapu-Lapu City Gun-ob
+ChIJ_duTOjKXqTMRGmrGzGdcZKc,10.3075024,124.0099235,pharmacy,Mercury Drug - Lapu-Lapu City Mactan
+ChIJ-TSmTL6ZqTMRPJjn6rj6Uxc,10.3118605,123.9498672,pharmacy,Mercury Drug - Lapu-Lapu City Poblacion
+ChIJs6dCkq2ZqTMRCuB5ZweNfjU,10.3272844,123.940767,pharmacy,Mercury Drug - Mandaue City Mantuyong
+ChIJM5JXcb-ZqTMRAKDmn42a-c0,10.3128774,123.9516643,pharmacy,PHARMACY
+ChIJWY3MGaaZqTMRp6hS_C7xco0,10.3298839,123.947258,pharmacy,Pharmaplus
+ChIJB10Ms0KZqTMRL0tgpsypubk,10.3022439,123.9513816,pharmacy,Rose Pharmacy
+ChIJE9Z3_GmZqTMR3IJnojCzFWE,10.3263948,123.9452832,pharmacy,Rose Pharmacy
+ChIJXYM75--ZqTMRd7CzZcRmWs4,10.2983027,123.9638705,pharmacy,Rose Pharmacy
+ChIJcfuqVg2ZqTMR7CfoHnTqKZg,10.3143498,123.9182793,pharmacy,Rose Pharmacy
+ChIJndt6oG2ZqTMRPG15HkpoHhQ,10.3114191,123.9178164,pharmacy,Rose Pharmacy
+ChIJz3zNLMGZqTMRKNf60ZdQObY,10.3130988,123.9560028,pharmacy,Rose Pharmacy - GMC Lapulapu
+ChIJXd0wzr-ZqTMR8Lzu7z5LVNI,10.3111441,123.9491175,pharmacy,Rose Pharmacy - Radaza LapuLapu
+ChIJTZ_3ou-ZqTMRIdm152IcshI,10.301176,123.962334,pharmacy,Rose Pharmacy - Robinsons's MEPZ
+ChIJ8XstO8WZqTMRmX3Z3UQ7DwQ,10.3167793,123.9629131,pharmacy,Rose Pharmacy Gaisano Capital Mactan Island Mall
+ChIJoylPfwGaqTMRgXXh5UlhN3I,10.28648,123.9703773,pharmacy,Rose Pharmacy Gaisano Grand Mall Basak
+ChIJmxZvhrKZqTMRZrzJU2y1_Pw,10.3283989,123.9424781,pharmacy,Rose Pharmacy Gaisano Grand Mall Centro Mandaue
+ChIJH8KJT8yZqTMRurlvUjZhiRo,10.2998457,123.9652712,pharmacy,Rose Pharmacy MEPZ II Basak
+ChIJTX9Pg3-XqTMRi3RbgokH_nQ,10.3262613,123.9775545,pharmacy,Rose Pharmacy Marina Mall Mactan
+ChIJz87hHgCbqTMRNFU0cznE2Xc,10.2901171,123.9451379,pharmacy,Rose pharmacy
+ChIJ2YZJ93-XqTMRdrfJJ8vP7a0,10.3262547,123.9757859,pharmacy,Southstar Drug Lapu-Lapu Cebu Island Central Mall
+ChIJWUhRrtiXqTMRYmyAujs2L18,10.3232661,123.9833355,pharmacy,Southstar Drug Lapu-Lapu Cebu Island Central Mall
+ChIJscFdm3-XqTMRazIjJCKzUbc,10.3260327,123.9776786,pharmacy,TGP The Generics Pharmacy
+ChIJI1TxeK2ZqTMROFXFaN2NoPw,10.3283204,123.9411258,pharmacy,"TGP The Generics Pharmacy (A. Del Rosario Street, Mandaue)"
+ChIJe-MC05qZqTMR9qawJ8771uQ,10.3125536,123.9511573,pharmacy,"TGP The Generics Pharmacy (Lopez-Jaena Street, Lapu-Lapu)"
+ChIJdVxtJDuaqTMRJf5bxDhledM,10.2788823,123.9444244,pharmacy,The Generics Pharmacy
+ChIJrwvk6e-ZqTMRITaQiXCxBxM,10.2998929,123.9628738,pharmacy,"The Generics Pharmacy - Basak Lapu-Lapu City, Cebu"
+ChIJtaPGnAGaqTMRdNflWOzPjlE,10.2859466,123.9710372,pharmacy,"The Generics Pharmacy - Gaisano Lapu-Lapu City, Cebu"
+ChIJpf3ErlmXqTMRDY0GW8gtG6k,10.2993824,123.9783207,pharmacy,ThreeSixty Pharmacy - Basak Cagodoy Bankal
+ChIJVWcJ-AWZqTMRThNaj16Bi6M,10.323048,123.924148,pharmacy,ThreeSixty Pharmacy - Subangdako Branch
+ChIJhwo8wr-ZqTMRhz-tWtqb5Qw,10.3135789,123.9574642,pharmacy,ThreeSixty Pharmacy - Ybanez & Voloso
+ChIJca2yo--ZqTMRTFrT2d5HlCY,10.3012087,123.9621826,pharmacy,Threesixty Pharmacy
+ChIJT_1wMACZqTMRlO2nWDYuIE8,10.2960452,123.9645104,pharmacy,WATSONS BASAK LAPU LAPU
+ChIJ28qcTTWZqTMRH4sKQjmPRhA,10.3125568,123.9511321,pharmacy,WATSONS CHUG BLDG LAPU LAPU
+ChIJI7fBJMWZqTMRmY4MSgWY0Uk,10.3165732,123.9629098,pharmacy,WATSONS GAISANO ISLAND MALL MACTAN
+ChIJT_SWV02ZqTMRBxgHb3p1CRs,10.3112342,123.9517264,pharmacy,WATSONS GV HOTEL LAPU LAPU
+ChIJIWx3HYCXqTMRmLU7ubAJ7BA,10.3265828,123.9758581,pharmacy,WATSONS ISLAND CENTRAL MACTAN
+ChIJJcmBAnCRqTMR4eT269nfBzg,10.2846059,123.9956883,pharmacy,WATSONS JTO 2 MARIBAGO
+ChIJ80L_iOWXqTMR9qmR7SQGLes,10.3077692,124.0124837,pharmacy,WATSONS MACTAN NEWTOWN LAPU-LAPU
+ChIJ29TIHLOXqTMRfKL6YaoCaWM,10.3266565,123.9788047,pharmacy,WATSONS MAHI CENTER MACTAN
+ChIJV_OQDKmZqTMR6Axz6IkAHV0,10.324902,123.933979,pharmacy,WATSONS PARKMALL MANDAUE
+ChIJIcQ1f3-XqTMR6dApeVpJ5eI,10.326015,123.977883,pharmacy,WATSONS SAVEMORE MACTAN
+ChIJ8xICXzWXqTMRhSahdZHb248,10.2864607,123.9975025,pharmacy,WATSONS SAVEMORE MARIBAGO CEBU
+ChIJv2B_7BaZqTMRjxv7iV3ZSWo,10.3007463,123.9633583,pharmacy,WATSONS SAVEMORE PRIMARK MACTAN
+ChIJs3swdm2ZqTMRrNl-brPRD7s,10.3117152,123.9183318,pharmacy,WATSONS SM CITY CEBU ANNEX NORTHWING
+ChIJj5G8cm2ZqTMRSiouL9RrIqQ,10.312277,123.91792,pharmacy,WATSONS SM CITY CEBU DEPARTMENT STORE
+ChIJJQXdd22ZqTMRApoOUa8NGRo,10.3116907,123.918449,pharmacy,WATSONS SM CITY CEBU MALL 2
+ChIJfc3OogyZqTMRWWYQaCFy2i0,10.3152079,123.9239117,pharmacy,WATSONS SM HYPERMARKET CEBU
+ChIJFRJAj--ZqTMRoRVQMB4E_-Q,10.3006288,123.9632058,pharmacy,WATSONS SM HYPERMARKET LAPU-LAPU
+ChIJv0LJj7KZqTMRcGW66pnbe4I,10.3285454,123.9423094,pharmacy,Watsons
+ChIJO_N8QgCRqTMRnED7V9PpgQA,10.2845848,123.9956474,pharmacy,Watsons Maribago
+ChIJdyuZz_eZqTMRx5OomDMhsvE,10.3203127,123.9376353,pharmacy,Watsons Pharmacy - Mandani Bay
+ChIJsy63YRmXqTMRrXF6WlEcQtQ,10.3076726,124.0123918,pharmacy,Watsons Pharmarcy
+ChIJQwcCPwCXqTMRSrxmr1TkuqY,10.2963086,123.9837932,pharmacy,Watsons Savemore Primark Mactan
+ChIJjxjwe6CZqTMRobArNz1Oe88,10.3154015,123.9307303,pharmacy,Zuellig Pharma Corporation Cebu Warehouse
+ChIJ7yC3s3-YqTMR-XliQ9QW8e8,10.3680756,123.9322227,pharmacy,Botika ni Mama
+ChIJC7Maa5yYqTMRm8XDgWExrk8,10.3685092,123.9151546,pharmacy,Botika ni Mama
+ChIJM97u6QWZqTMRl1CuuUgvXg4,10.3242317,123.9238366,pharmacy,Farmacia Ni Dok
+ChIJG1dpJsaZqTMRQcuC7GE60uI,10.342357,123.9332539,pharmacy,First Bay Pharma Distributor
+ChIJubwLr3OYqTMRMnuphzugj4g,10.3613395,123.9495503,pharmacy,Generika
+ChIJjQlUcGaiqTMRJMPlWQRKDxI,10.3865064,123.9212228,pharmacy,Generika Drugstore Bacayan
+ChIJI8SwTFSYqTMR3CXdn7H5oUQ,10.334868,123.933224,pharmacy,JB Orchid Pharmaceuticals Incorpoated
+ChIJJbfd4lSYqTMRDOjbcbIye_k,10.3333333,123.9333333,pharmacy,Jumbolon Philippines Inc
+ChIJdwvElneiqTMRKFmFWIsBOaA,10.3687904,123.9162269,pharmacy,Mercury Drug
+ChIJi-nC9GyYqTMRhdZaluwb1Q0,10.354986,123.950139,pharmacy,Mercury Drug - Mandaue City Basak Fatima
+ChIJ2bjqM1KYqTMRWHxSGqUcry4,10.334906,123.939029,pharmacy,Mercury Drug - Mandaue City Maguikay
+ChIJH7hYLgCZqTMRBV9iJLK7huI,10.3415248,123.9201929,pharmacy,Rose Pharmacy
+ChIJb0tqGwCZqTMRgFcBsvI4JxU,10.3699898,123.9192635,pharmacy,Rose Pharmacy
+ChIJlciQokmYqTMR2IdRhNF45VE,10.335625,123.950501,pharmacy,Rose Pharmacy - Bridges Town Square Mandaue
+ChIJ_Qz_aTWZqTMRy5xE-9Lq7dc,10.3619428,123.949476,pharmacy,Rose Pharmacy - Canduman
+ChIJCVVXSAeZqTMRVPdSglRxnlY,10.3268896,123.9290196,pharmacy,Rose Pharmacy Arcada 5 Tipolo
+ChIJNy5FfvmYqTMRvSffX_Fso64,10.3395591,123.925271,pharmacy,Rose Pharmacy Bakilid Mandaue
+ChIJ-a-mKAWZqTMRewV7k16pea8,10.3256085,123.9198078,pharmacy,Rose Pharmacy GAGFA IT Center Kasambagan
+ChIJU-5Fu1iYqTMRxyPnCNZedcY,10.3453604,123.931084,pharmacy,Rose Pharmacy Gaisano Capital Casuntingan
+ChIJo9-6YpmYqTMREqiihKNqEsk,10.365944,123.913619,pharmacy,Rose Pharmacy Gaisano Grand Mall Talamban
+ChIJJ0HhYCyZqTMREWQxY2c1sKw,10.3326414,123.9365322,pharmacy,Rose Pharmacy Guizo Mandaue
+ChIJ46iWQGqYqTMRb7e87IYeqAY,10.3501417,123.9484509,pharmacy,Rose Pharmacy Insular Square
+ChIJwzrj7pCYqTMRkiIhpXrtsas,10.3612189,123.9154872,pharmacy,Rose Pharmacy M Cuenco Ave Talamban
+ChIJ2RCO7hqZqTMRmrcWwo42iGA,10.3264047,123.9176173,pharmacy,Rose Pharmacy Robinsons Easymart Kasambagan
+ChIJh12IS0mZqTMRHwSuz5RAQEY,10.3281659,123.9214414,pharmacy,Rose Pharmacy Store Support Center
+ChIJ79pzFuiYqTMReq00lX8ZuqM,10.3452138,123.9091608,pharmacy,Rose Pharmacy Strip Mall Maria Luisa Banilad
+ChIJnW6aM-GYqTMRoMN2bYZmKfk,10.3387863,123.9118061,pharmacy,Rose Pharmacy UC Banilad
+ChIJN9-UaUGYqTMRSQuqc2kErS0,10.3459328,123.9481693,pharmacy,Rose Pharmacy VNU Arcade Pakanan
+ChIJZQoM1_uYqTMRXwaY-2TWE1c,10.3352457,123.934021,pharmacy,Rose Pharmacy sm J Mall
+ChIJQ8XUojGZqTMRvXMMQDO33lU,10.3454758,123.9128691,pharmacy,Rose Pharmacy | Banilad Place Residences
+ChIJzRvviuaYqTMRAtar7g31-aU,10.3409428,123.9128969,pharmacy,Rose Pharmacy | Banilad Town Centre
+ChIJ5UfFSzWZqTMR1F1cnn8hcaU,10.3281973,123.9213899,pharmacy,Rosexpress Medicine Delivery
+ChIJ43W0S5GZqTMR9eemuCgvLBA,10.3666773,123.9326829,pharmacy,Southstar Drug Warehouse Cebu
+ChIJebg0TWqYqTMR9pdFDglF1yM,10.3514483,123.9491025,pharmacy,"TGP The Generics Pharmacy (National Highway Fatima, Mandaue)"
+ChIJ1aCSgVGYqTMRTRw6_neRwPA,10.3360229,123.938855,pharmacy,The Generics Pharmacy
+ChIJVWqSwEaYqTMRbd13SiOjgd4,10.343235,123.948593,pharmacy,The Realmed Pharmacy
+ChIJ-ZONSvOYqTMRtQFHLRddzcY,10.3495252,123.9252296,pharmacy,Three Sixty Pharmacy
+ChIJpV5NKBeZqTMRILQ1Jquzs3s,10.3316249,123.9358247,pharmacy,Three Sixty Pharmacy
+ChIJifm4_36YqTMRP-WrdLzsptg,10.3676551,123.9334453,pharmacy,ThreeSixty Pharmacy
+ChIJcyKpPIWZqTMRGLbK9P2yV-4,10.3384748,123.9113027,pharmacy,WATSONS GAISANO COUNTRY MALL BANILAD
+ChIJ02uqZVyZqTMRo7jwRWx_aUk,10.3433602,123.9190043,pharmacy,WATSONS OAKRIDGE IT CENTER TOWER 2
+ChIJi1hibUaYqTMRaOD4GJZWR10,10.3404582,123.9483897,pharmacy,WATSONS PACIFIC MALL MANDAUE
+ChIJiVMTkXOYqTMRvK9ALPt8NbU,10.3627011,123.9489597,pharmacy,WATSONS SAVEMORE BASAK
+ChIJkfOlq9SZqTMRPvGK-uT4g54,10.3626591,123.9489115,pharmacy,WATSONS SAVEMORE CANDUMAN
+ChIJccbzolCYqTMRBnV9mhF_d3k,10.3353672,123.938991,pharmacy,WATSONS SAVEMORE MAGUIKAY
+ChIJed0MUfqZqTMRK-sgFwerf74,10.33546,123.934111,pharmacy,WATSONS SM CITY J MALL DEPARTMENT STORE
+ChIJmQDLewOZqTMRnUb1cpDkPn8,10.33546,123.934111,pharmacy,WATSONS SM CITY J MALL HYPERMARKET
+ChIJq4lgrvWZqTMR6utx90CJdCQ,10.3506798,123.9138799,pharmacy,WATSONS VERVE POINT TALAMBAN
+ChIJGVdSEB2dqTMRX3GJ4TLcqgQ,10.2542345,123.8392525,pharmacy,A1 Child Pharmacy
+ChIJU7S6w1ucqTMRG5Tc-zoMUT4,10.2691559,123.8562555,pharmacy,ALFAR Pharmacy
+ChIJGXxRn52dqTMRyHXYVZZ-VHQ,10.2373761,123.8381421,pharmacy,ANNIE PHARMACY
+ChIJofsu6kGdqTMRibaSrZwfSgw,10.2489783,123.8388554,pharmacy,Alfar Pharmacy
+ChIJPU6BdpidqTMRznD9zSPu9zc,10.2588966,123.8232252,pharmacy,AllDay RX - Talisay
+ChIJl2RF5kWcqTMRIy-mRapPY-o,10.2777585,123.8534061,pharmacy,Amvicelan Pharmacy
+ChIJhTxJ70acqTMRBMdp0vkbg4A,10.279776,123.8561,pharmacy,Angel Eric Pharmacy
+ChIJm_YabQCdqTMRfOa1qK1DkP4,10.2457944,123.8448932,pharmacy,Annie Pharmacy Talisay City
+ChIJiyIuukScqTMRy4plXPt-fWk,10.2702128,123.8561786,pharmacy,Arvin’s Pharmacy
+ChIJ8caU8yCdqTMRDosUMIkkAJI,10.2434523,123.8394751,pharmacy,BIAZ PHARMACY
+ChIJ6Uqbv1ucqTMR4mWFQSRjYK0,10.2695989,123.8563306,pharmacy,BOTICA NINO
+ChIJ3TFzukScqTMRV1FEuzWJE4Y,10.2736778,123.8569078,pharmacy,Bkc Pharmacy
+ChIJW39Js5SdqTMR14AUdAzyk-o,10.2519787,123.8294623,pharmacy,Botica John
+ChIJK_IOBkOcqTMRaPwo6-eWFBA,10.274879,123.860025,pharmacy,Botika Ni Mama
+ChIJB4UtigKdqTMRyj99gpmYde0,10.25808,123.840016,pharmacy,CHI PHARMACY
+ChIJm3163kacqTMRWLfZiIWCYcU,10.2800958,123.8566507,pharmacy,Click Pharmacy and General Merchandise
+ChIJ3S8KQuydqTMRVI6jWYAybWk,10.2467746,123.8085944,pharmacy,Curly
+ChIJCc5lBB2dqTMR9F7H69qZlg0,10.2539683,123.8387497,pharmacy,D&R Pharmacy
+ChIJR9WQj1CdqTMRK_FbDyfRb4c,10.2541734,123.8391747,pharmacy,DRS PHARMACY & GENERAL MERCHANDISE
+ChIJe83ypNGdqTMRB5sPvtsc4X8,10.2377751,123.837072,pharmacy,DaisyMed Pharmacy
+ChIJuUa5xEGcqTMRCapbVn6iXdc,10.2788181,123.8626953,pharmacy,Dial's Pharmacy
+ChIJa7v7CUSdqTMRz3legPS1exQ,10.2445739,123.8122003,pharmacy,Dran Cyber Cafe
+ChIJz5PmRA6dqTMRugpKryibztQ,10.2595347,123.8262592,pharmacy,Emma's Pharmacy
+ChIJV4wDuxKdqTMReP2N2i6Bq10,10.2616042,123.8250992,pharmacy,Emzcey Pharmacy
+ChIJ8zXMgOecqTMRlrcri9qYuzk,10.2451132,123.8498339,pharmacy,Ens Pharmacy
+ChIJ8UTg0z2dqTMRIxk4FeSCnbg,10.2458307,123.8248099,pharmacy,Ent Pharmacy
+ChIJbY4bJgCdqTMR3FBKNQcM5_Q,10.2542706,123.8391061,pharmacy,Everyday Pharmacy
+ChIJfx-U7kWcqTMR0U0m98C-gHk,10.2775407,123.8532107,pharmacy,Farmacia Alma
+ChIJUTK7-bGdqTMR39F1GGkuAtE,10.2462361,123.8392995,pharmacy,Farmacia Delfin
+ChIJuz1cTQCdqTMRiTvmhxE3AD0,10.2538432,123.8386941,pharmacy,Farmacia Sto. Niño
+ChIJbxdnL1mcqTMRZLG7JcmmEDU,10.2662561,123.8571254,pharmacy,Farmacia ni Mama
+ChIJa5-f9DmdqTMRC-INKK-F1NI,10.2395186,123.824042,pharmacy,Four C Pharmacy
+ChIJM9ITKu-cqTMRfp2sLag9seI,10.2494648,123.8550273,pharmacy,GENERIKA DRUGSTORE
+ChIJZWdnF1mcqTMRA-s_5T_wdEI,10.2665823,123.8561926,pharmacy,GINA PHARMACY
+ChIJ7T4vwO6cqTMRaCfWEFl5hT4,10.25025,123.856341,pharmacy,GP Pharma and Nutraceuticals
+ChIJv4wBcQCdqTMRQ19qOCCKVIM,10.2458557,123.8248229,pharmacy,Gabriel's Pharmacy
+ChIJJ-ywvgCdqTMRMEPdwUPy9hE,10.2641212,123.8382938,pharmacy,Generika Drugstore
+ChIJO9FB-0acqTMR22mkFlgncCo,10.280121,123.855695,pharmacy,Generika Drugstore
+ChIJ9ZImWQCdqTMR4Nv3P5OHWrY,10.2763605,123.8574615,pharmacy,Generika Drugstore - Inayawan
+ChIJIaTjxZKdqTMRmdg_uLvzuVU,10.2532255,123.8608476,pharmacy,Generika Drugstore San Roque Talisay
+ChIJyYqWNgCdqTMRu-3Hz3cZl9o,10.2449308,123.8392931,pharmacy,Generika Dumlog Talisay
+ChIJMUYUgFSdqTMRmN9yWF5_NJI,10.2541392,123.839283,pharmacy,Gia Pharmacy
+ChIJzyRUDQCdqTMRCfcCL1gyrFQ,10.2484323,123.8405644,pharmacy,Grainsmart
+ChIJpT8hzR-dqTMRgM-Qh6h8aRg,10.2485033,123.8402213,pharmacy,Grenah's Pharmacy
+ChIJiaKisRCdqTMRTDhfVrSfnaQ,10.2526305,123.8291447,pharmacy,Hfc Pharmacy
+ChIJE_-rbFmcqTMR8T0MB6Pogx4,10.267152,123.8561512,pharmacy,La Nueva Pharmacy Inayawan
+ChIJp_3Dsa6dqTMRKvCrL7krm7g,10.2538957,123.8391975,pharmacy,La Nueva Pharmacy Talisay
+ChIJZcFVm26dqTMRzMWu6-dKqj8,10.2559655,123.8128588,pharmacy,MIKAELA'S PHARMACY AND GENERAL MERCHANDISE
+ChIJKZXLIQCdqTMRZ-MSflWFBNM,10.2496733,123.8256182,pharmacy,MediLife Pharmacy
+ChIJZQC3Vf2dqTMRx-eybX7vaf8,10.244572,123.8121866,pharmacy,Medsite Drugs
+ChIJEciGW86dqTMRFKk0rMiIKzU,10.2489997,123.8387965,pharmacy,Mercury Drug
+ChIJFc6gdkacqTMR0gR4m4FvOQE,10.2785686,123.8541782,pharmacy,Mercury Drug
+ChIJlyo140acqTMRGoWHQ17mBYk,10.2802598,123.855781,pharmacy,Mercury Drug
+ChIJBYZDuFGcqTMRwQfR4C89kXo,10.2727786,123.8486865,pharmacy,Mercury Drug - Cebu City Bulacao Pardo
+ChIJNVoZYZidqTMRV98KjAcxGs0,10.2540982,123.809141,pharmacy,Mercury Drug - Minglanilla Linao
+ChIJOznmT054qTMRhPwpgw-swEc,10.245186,123.7957287,pharmacy,Mercury Drug - Minglanilla Poblacion
+ChIJkz7xsgGdqTMRBakXJEBIwqc,10.263014,123.839151,pharmacy,Mercury Drug - Talisay City Tabunok
+ChIJFxc6EACdqTMRlGJrBy8euy8,10.2644606,123.8401454,pharmacy,Mercury Drug - Talisay City Tabunok N. Bacalso Ave.
+ChIJp8eksCCdqTMR4Sbc48K3X14,10.2694204,123.8538102,pharmacy,Nathan and kate drugstore
+ChIJy0uZH0ecqTMRfeLXu4yZEms,10.2805337,123.8564081,pharmacy,Ns Pharmacy And General Merchandise
+ChIJC8z360adqTMR8Q81zhixMBU,10.2461362,123.8246231,pharmacy,Oscor Pharmacy
+ChIJydDaSxOdqTMR8G2cnQoO4Sk,10.2432506,123.8310996,pharmacy,PharmaSulit
+ChIJvZNsMtycqTMR9UNzgIyIJa4,10.2426578,123.8474692,pharmacy,Pharmacy Street
+ChIJC0RbbVucqTMRFd9yePD8zyw,10.2713899,123.8565611,pharmacy,Pharmariner Drugstore And Gen. Merchandise
+ChIJlwpj8redqTMRnwNRhTEQy9g,10.2440481,123.8469076,pharmacy,Pharmelia Pharmacy
+ChIJR4DQYU-cqTMRMeY5nli1eqE,10.2770913,123.8522665,pharmacy,Preferred Pharmacy and General Merchandise
+ChIJdd6KQQ6dqTMRRoVEmqxbOvQ,10.258967,123.825869,pharmacy,Pro Drug
+ChIJH9MnGgCdqTMRnjyU0g52xzg,10.2806291,123.855959,pharmacy,Promedical Drug Pharmacy
+ChIJGYtMTQCdqTMR8L-_LbT57xA,10.2699146,123.8564388,pharmacy,Purchaser's Pharmacy
+ChIJJfI0_kacqTMRy4ToCcNWT-M,10.2804182,123.8550588,pharmacy,Purchaser's Pharmacy-TABURA
+ChIJAQ1VYgCdqTMRLPLiItcGNNI,10.2434627,123.8395016,pharmacy,Riaz Pharmacy
+ChIJ-aH5lPOcqTMR-WZWBkdqc_w,10.2571044,123.8595015,pharmacy,Rose Pharmacy
+ChIJP0I_xyidqTMRlQQNf3Nf0Ys,10.2747041,123.8596153,pharmacy,Rose Pharmacy
+ChIJp3H2OoydqTMRFYE7idDXpqI,10.2510473,123.8052483,pharmacy,Rose Pharmacy
+ChIJs_KhXm2dqTMRaSXUgD-sPqo,10.2580586,123.8175659,pharmacy,Rose Pharmacy
+ChIJf52nTACdqTMRfcyjsclM3dE,10.2631221,123.8393286,pharmacy,Rose Pharmacy - Paseo Anastacia
+ChIJryrok3ydqTMRtWny5IJX7Pg,10.2447759,123.8393085,pharmacy,Rose Pharmacy Dumlog Bascon Talisay
+ChIJBbEqWlWcqTMRJB0qUEBoIWk,10.265523,123.841999,pharmacy,Rose Pharmacy Gaisano Grand Fiesta Mall
+ChIJtcl3NgCdqTMRS_JYY_I3KSo,10.2689535,123.8561125,pharmacy,Rose Pharmacy Inayawan
+ChIJE0yYXgCdqTMRYtXYKWLeX4c,10.263724,123.838831,pharmacy,Rose Pharmacy Lagtang Tabunok
+ChIJrbcJ726dqTMRhkdPLtAz2EU,10.255558,123.8115507,pharmacy,Rose Pharmacy Plaza Margarita
+ChIJrQ55TeGbqTMR-PZciXAnUaQ,10.2736325,123.8490868,pharmacy,Rose Pharmacy Prince Warehouse Club Bulacao
+ChIJWQV41QGdqTMR4nmrCPLFKbc,10.2627658,123.8410878,pharmacy,Rose Pharmacy Rabaya St.Tabunok
+ChIJd5INyg2dqTMRtWfXPUeQUBs,10.2787271,123.8547995,pharmacy,Rose Pharmacy- Pardo
+ChIJp3YzOvqdqTMRyLkEgcit4rc,10.2623226,123.8382761,pharmacy,SOUTHSTAR DRUG
+ChIJZxrBLNidqTMRSz1PHNZS-_k,10.2472097,123.8000336,pharmacy,SOUTHSTAR DRUG ROBINSONS MINGLANILLA CEBU
+ChIJB7B_RG2dqTMR0YLXxgp9iWs,10.2576609,123.8177583,pharmacy,SOVEREIGN PHARMACY
+ChIJIyeA42mdqTMR2d4I-BUj-tw,10.2543238,123.8394714,pharmacy,"Savemed Pharmacy, Talisay city"
+ChIJkW6aSQCdqTMR3J7AyxZSI6c,10.2739361,123.856693,pharmacy,Shawe Pharmacy
+ChIJwYJSfA-dqTMRBdjST3spDxQ,10.2598349,123.829781,pharmacy,Southstar Drug Talisay Cebu Lawaan III
+ChIJf1PTZgCdqTMRY02GCAudGcI,10.2513058,123.8266022,pharmacy,TEDI Pharmacy
+ChIJH5XcmnudqTMRAUv8daANZ_0,10.2460727,123.8283389,pharmacy,TGP The Generics Pharmacy
+ChIJW9IYvkScqTMRNCqw2bwOjKw,10.2743342,123.8567389,pharmacy,"TGP The Generics Pharmacy (F Jaca St, Cebu)"
+ChIJlZVY9kacqTMRPAi5p96yWuo,10.2760564,123.8517094,pharmacy,"TGP The Generics Pharmacy (South Road Poblacion Pardo, Cebu)"
+ChIJF2_VXgCdqTMRkRGEkHWWy-A,10.2800171,123.8556794,pharmacy,The Generics Pharmacy - Pardo Church
+ChIJ9dON-TmdqTMR_NMiZDWoQ4I,10.2388999,123.8240658,pharmacy,Three L.Pharmacy
+ChIJw8J0-BmdqTMRyuu98EiU_-g,10.2521313,123.8305548,pharmacy,Three Sixty Pharmacy - Fidel Bas cor R Geraldez st.
+ChIJpX4z6EacqTMRwDX7hnB2wzk,10.2795,123.8560652,pharmacy,ThreeSixty Pharmacy
+ChIJnYuw-AGdqTMRMfAm-PhGXsw,10.2604798,123.8411197,pharmacy,ThreeSixty Pharmacy - South Agora Building
+ChIJ9Y0Z9ACdqTMR0BOOnvnMjds,10.264223,123.838032,pharmacy,Threesixty Pharmacy
+ChIJOePLMgCdqTMR-2olE_IOKdg,10.2748463,123.8602083,pharmacy,Threesixty Pharmacy - Cogon
+ChIJJfhOUh6dqTMRYijNs9moHoE,10.2489078,123.8388294,pharmacy,Threesixty Pharmacy - Sangi Road
+ChIJC4hkvd2cqTMRzBpOPaY-qyo,10.2439191,123.8486836,pharmacy,VRV PHARMACY
+ChIJIaulhkacqTMRJT1ykVh9t_A,10.2788724,123.8554732,pharmacy,Vinori Pharmacy
+ChIJcwcRXxadqTMRIYe40maBPE0,10.2501219,123.8260041,pharmacy,Vital Pharmacy And General Merchandise
+ChIJPbGSmEOdqTMRAFxUgmeOZFY,10.2651402,123.8770962,pharmacy,WATSONS FILINVEST IL CORSO CEBU
+ChIJRdkBlMKdqTMRBHSWQ7GzqlE,10.2654724,123.8417354,pharmacy,WATSONS GAISANO GRAND FIESTA MALL TABUNOK
+ChIJ73i-z--dqTMRVH-VKkzoULE,10.2443671,123.7927264,pharmacy,WATSONS GAISANO GRAND MINGLANILLA
+ChIJR7JNa0mdqTMRscir_zhWL2Y,10.2623336,123.8382735,pharmacy,WATSONS RF VILLO CENTER SOUTH TABUNOK
+ChIJQykMBlWcqTMRbewSO6R3U2I,10.2668904,123.8436342,pharmacy,WATSONS SOUTH TOWN CENTRE TABUNOK
+ChIJCcUARUecqTMROO56Ur1j-ak,10.2819707,123.8570472,pharmacy,Wen's Pharmacy
+ChIJ3frRgd2cqTMRkcWPZyaLKe8,10.2448828,123.8494601,pharmacy,Yanem Eighteen Pharmacy
+ChIJsQ3Vgd2cqTMR-g0_YFeq9J8,10.2448921,123.8494952,pharmacy,addiel Pharmacy
+ChIJe9JSPgCdqTMRKt4ZKqcqq6Q,10.2446828,123.8242563,pharmacy,st. roque pharmacy

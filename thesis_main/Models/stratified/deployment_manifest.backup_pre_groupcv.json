@@ -1,0 +1,189 @@
+{
+  "random_state": 42,
+  "target": "log_price = log(price_per_sqm)  (Decision 34)",
+  "prediction": "exp(model output) = price_per_sqm; total price = price_per_sqm * area_sqm",
+  "evaluation": "GroupKFold(5) leak-free, groups = coordinate cluster (Decision 42)",
+  "deployment": "Random Forest per stratum, tuned by group-CV MdAPE",
+  "iaao_reference": "IAAO Standard on Ratio Studies (2013): COD residential improved 5-15, vacant land <=25; PRD 0.98-1.03. In-sample assessment-roll bands; values here are stricter out-of-sample CV estimates.",
+  "strata": {
+    "condo": {
+      "label": "Condominium",
+      "n_rows": 1300,
+      "n_coordinate_groups": 693,
+      "deployed_family": "Random Forest",
+      "best_params": {
+        "n_estimators": 300,
+        "max_features": 0.7,
+        "min_samples_leaf": 1,
+        "max_depth": null
+      },
+      "evaluation": "GroupKFold(5) pooled out-of-fold, leak-free (groups=coordinate cluster)",
+      "selection_basis": "lowest group-CV MdAPE among RF grid",
+      "metrics_group_cv": {
+        "n": 1300,
+        "MdAPE": 19.32256844017964,
+        "MAPE": 36.54418464068372,
+        "COD": 37.680387693070664,
+        "PRD": 1.2148238987651268,
+        "PE10": 27.923076923076923,
+        "PE20": 51.0,
+        "median_ratio": 0.9654600047838893
+      },
+      "iaao_benchmark": {
+        "kind": "residential improved",
+        "COD_max": 15.0,
+        "PRD_range": [
+          0.98,
+          1.03
+        ],
+        "COD_pass": false,
+        "PRD_pass": false
+      },
+      "model_file": "condo_model.pkl",
+      "features": [
+        "area_sqm",
+        "bedrooms",
+        "bathrooms",
+        "bedrooms_imputed",
+        "bathrooms_imputed",
+        "dist_cebu_business_park_m",
+        "dist_mandaue_cbd_m",
+        "dist_mactan_cbd_m",
+        "dist_srp_m",
+        "dist_talisay_tabunok_m",
+        "dist_consolacion_m",
+        "dist_naga_city_m",
+        "dist_airport_m",
+        "mcrai_composite",
+        "bir_zonal_rr_median",
+        "spatial_lag_price",
+        "city_Consolacion",
+        "city_Lapu-Lapu City",
+        "city_Mandaue City",
+        "city_Minglanilla",
+        "city_Talisay City"
+      ]
+    },
+    "houses": {
+      "label": "Houses",
+      "n_rows": 1223,
+      "n_coordinate_groups": 830,
+      "deployed_family": "Random Forest",
+      "best_params": {
+        "n_estimators": 300,
+        "max_features": 1.0,
+        "min_samples_leaf": 2,
+        "max_depth": null
+      },
+      "evaluation": "GroupKFold(5) pooled out-of-fold, leak-free (groups=coordinate cluster)",
+      "selection_basis": "lowest group-CV MdAPE among RF grid",
+      "metrics_group_cv": {
+        "n": 1223,
+        "MdAPE": 22.668769862436527,
+        "MAPE": 35.08846937568412,
+        "COD": 35.75492106372565,
+        "PRD": 1.2034900822113745,
+        "PE10": 23.46688470973017,
+        "PE20": 44.317252657399834,
+        "median_ratio": 0.9800264913767671
+      },
+      "iaao_benchmark": {
+        "kind": "residential improved",
+        "COD_max": 15.0,
+        "PRD_range": [
+          0.98,
+          1.03
+        ],
+        "COD_pass": false,
+        "PRD_pass": false
+      },
+      "model_file": "houses_model.pkl",
+      "features": [
+        "area_sqm",
+        "bedrooms",
+        "bathrooms",
+        "bedrooms_imputed",
+        "bathrooms_imputed",
+        "dist_cebu_business_park_m",
+        "dist_mandaue_cbd_m",
+        "dist_mactan_cbd_m",
+        "dist_srp_m",
+        "dist_talisay_tabunok_m",
+        "dist_consolacion_m",
+        "dist_naga_city_m",
+        "dist_airport_m",
+        "mcrai_composite",
+        "bir_zonal_rr_median",
+        "spatial_lag_price",
+        "city_Consolacion",
+        "city_Lapu-Lapu City",
+        "city_Mandaue City",
+        "city_Minglanilla",
+        "city_Talisay City",
+        "property_type_House and Lot",
+        "property_type_Single Detached",
+        "property_type_Townhouse"
+      ]
+    },
+    "lot": {
+      "label": "Vacant Lot",
+      "n_rows": 849,
+      "n_coordinate_groups": 628,
+      "deployed_family": "Random Forest",
+      "best_params": {
+        "n_estimators": 400,
+        "max_features": 1.0,
+        "min_samples_leaf": 2,
+        "max_depth": 20
+      },
+      "evaluation": "GroupKFold(5) pooled out-of-fold, leak-free (groups=coordinate cluster)",
+      "selection_basis": "lowest group-CV MdAPE among RF grid",
+      "metrics_group_cv": {
+        "n": 849,
+        "MdAPE": 38.99534822349225,
+        "MAPE": 57.863383770531584,
+        "COD": 55.507142050038176,
+        "PRD": 1.4819248813336752,
+        "PE10": 13.30977620730271,
+        "PE20": 25.91283863368669,
+        "median_ratio": 1.0408826752148879
+      },
+      "iaao_benchmark": {
+        "kind": "vacant land",
+        "COD_max": 25.0,
+        "PRD_range": [
+          0.98,
+          1.03
+        ],
+        "COD_pass": false,
+        "PRD_pass": false
+      },
+      "model_file": "lot_model.pkl",
+      "features": [
+        "area_sqm",
+        "dist_cebu_business_park_m",
+        "dist_mandaue_cbd_m",
+        "dist_mactan_cbd_m",
+        "dist_srp_m",
+        "dist_talisay_tabunok_m",
+        "dist_consolacion_m",
+        "dist_naga_city_m",
+        "dist_airport_m",
+        "mcrai_education",
+        "mcrai_grocery",
+        "mcrai_health",
+        "mcrai_hospitals",
+        "mcrai_recreation",
+        "mcrai_tourism",
+        "mcrai_retail_density",
+        "bir_zonal_rr_median",
+        "spatial_lag_price",
+        "city_Consolacion",
+        "city_Lapu-Lapu City",
+        "city_Mandaue City",
+        "city_Minglanilla",
+        "city_Talisay City"
+      ]
+    }
+  }
+}
