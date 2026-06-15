@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metro Cebu Market Map</title>
+  </head>
+  <body>
+    <div id="app">
+      <aside class="rail">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <div class="brand-name">Metro Cebu</div>
+            <div class="brand-sub">Valuation Webapp</div>
+          </div>
+        </div>
+
+        <div class="view-switch" aria-label="App view">
+          <button id="market-view" class="active" type="button">Market Map</button>
+          <button id="surface-view" type="button">Price Surface</button>
+          <button id="predict-view" type="button">Predictor</button>
+        </div>
+
+        <div id="market-controls">
+          <label>
+            <span>Target LGU</span>
+            <select id="lgu-filter"></select>
+          </label>
+
+          <label>
+            <span>Barangay</span>
+            <select id="barangay-filter"></select>
+          </label>
+
+          <fieldset>
+            <legend>Market Stratum</legend>
+            <label class="check"><input type="checkbox" name="stratum" value="Condominium" checked /> Condominium</label>
+            <label class="check"><input type="checkbox" name="stratum" value="Houses" checked /> Houses</label>
+            <label class="check"><input type="checkbox" name="stratum" value="Vacant Lot" checked /> Vacant Lot</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Map Layers</legend>
+            <label class="check"><input type="checkbox" id="heatmap-toggle" /> Price heatmap</label>
+            <label class="check"><input type="checkbox" id="lgu-toggle" checked /> LGU boundaries</label>
+            <label class="check"><input type="checkbox" id="poi-toggle" checked /> MCRAI POIs</label>
+          </fieldset>
+
+          <label class="range-control">
+            <span>Listing node size <output id="node-size-value">6 px</output></span>
+            <input id="node-size-slider" type="range" min="3" max="14" step="1" value="6" />
+          </label>
+
+          <fieldset>
+            <legend>POI Categories</legend>
+            <label class="check"><input type="checkbox" name="poi" value="Grocery" checked /> Grocery</label>
+            <label class="check"><input type="checkbox" name="poi" value="Retail" checked /> Retail</label>
+            <label class="check"><input type="checkbox" name="poi" value="Health" /> Health</label>
+            <label class="check"><input type="checkbox" name="poi" value="Hospitals" /> Hospitals</label>
+            <label class="check"><input type="checkbox" name="poi" value="Education" /> Education</label>
+            <label class="check"><input type="checkbox" name="poi" value="Security" /> Security</label>
+            <label class="check"><input type="checkbox" name="poi" value="Recreation" /> Recreation</label>
+            <label class="check"><input type="checkbox" name="poi" value="Tourism" /> Tourism</label>
+          </fieldset>
+        </div>
+
+        <div id="surface-controls" hidden>
+          <label>
+            <span>Property Archetype</span>
+            <select id="surface-archetype">
+              <option value="sdh">Single Detached</option>
+              <option value="condo">Condominium</option>
+              <option value="vacant">Vacant Lot</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>Surface Layers</legend>
+            <label class="check"><input type="checkbox" id="hide-low-confidence" /> Hide low-confidence barangays</label>
+            <label class="check"><input type="checkbox" id="surface-lgu-toggle" checked /> LGU boundaries</label>
+          </fieldset>
+        </div>
+
+        <div id="predict-controls" hidden>
+          <label>
+            <span>Property type</span>
+            <select id="predict-type">
+              <option value="Condominium">Condominium</option>
+              <option value="House and Lot">House and Lot</option>
+              <option value="Single Detached">Single Detached</option>
+              <option value="Townhouse">Townhouse</option>
+              <option value="Vacant Lot">Vacant Lot</option>
+            </select>
+          </label>
+
+          <label>
+            <span id="predict-area-label">Floor area (sqm)</span>
+            <input id="predict-area" class="field-input" type="number" min="0.01" step="0.01" value="60" />
+          </label>
+
+          <div id="predict-rooms">
+            <label>
+              <span>Bedrooms · Bathrooms</span>
+            </label>
+            <div class="field-pair">
+              <input id="predict-bedrooms" class="field-input" type="text" inputmode="numeric" placeholder="Beds (optional)" />
+              <input id="predict-bathrooms" class="field-input" type="text" inputmode="numeric" placeholder="Baths (optional)" />
+            </div>
+            <p class="rail-hint">Optional — blank uses the training median.</p>
+          </div>
+
+          <label>
+            <span>City (from pin)</span>
+          </label>
+          <div id="predict-city" class="predict-pill empty">Drop a pin on the map →</div>
+
+          <label>
+            <span>BIR zonal — residential</span>
+          </label>
+          <div id="predict-bir-readout" class="bir-readout"><small>Set once a pin is inside Metro Cebu.</small></div>
+          <label class="check"><input type="checkbox" id="predict-bir-override" /> Override BIR value</label>
+          <input id="predict-bir-value" class="field-input" type="number" min="1" step="1" hidden />
+
+          <button id="predict-run" class="predict-btn" type="button" disabled>Predict Price</button>
+          <p class="rail-hint">Click the map to set the location. City and BIR value follow the pin automatically.</p>
+        </div>
+      </aside>
+
+      <main class="map-shell">
+        <header class="topbar">
+          <div>
+            <h1 id="page-title">Residential Market Map</h1>
+            <p id="subtitle">Loading current listing data...</p>
+          </div>
+          <div id="legend" class="legend"></div>
+        </header>
+        <div id="map"></div>
+      </main>
+
+      <aside class="panel">
+        <section id="selected-section">
+          <h2>Selected Property</h2>
+          <div id="selected-property" class="empty">Select a listing on the map.</div>
+        </section>
+        <section id="market-section">
+          <h2>Market Intelligence</h2>
+          <div class="metrics">
+            <div><strong id="metric-count">0</strong><span>Mapped listings</span></div>
+            <div><strong id="metric-median">n/a</strong><span>Median / sqm</span></div>
+            <div><strong id="metric-average">n/a</strong><span>Average / sqm</span></div>
+            <div><strong id="metric-pois">0</strong><span>Visible POIs</span></div>
+          </div>
+        </section>
+        <section id="ranking-section">
+          <h2>Median PHP/sqm by LGU</h2>
+          <div id="lgu-ranking" class="ranking"></div>
+        </section>
+        <section id="surface-section" hidden>
+          <h2>Surface Summary</h2>
+          <div class="metrics">
+            <div><strong id="surface-visible">0</strong><span>Visible barangays</span></div>
+            <div><strong id="surface-median">n/a</strong><span>Median / sqm</span></div>
+            <div><strong id="surface-low">0%</strong><span>Low confidence</span></div>
+            <div><strong id="surface-selected">None</strong><span>Selected barangay</span></div>
+          </div>
+          <p class="panel-note">Values are median model-grid predictions aggregated to barangay polygons. Low-confidence barangays are dominated by extrapolated grid cells.</p>
+        </section>
+        <section id="predict-section" hidden>
+          <h2>Estimate</h2>
+          <div id="predict-result" class="empty">Drop a pin inside Metro Cebu, then press Predict Price.</div>
+        </section>
+      </aside>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

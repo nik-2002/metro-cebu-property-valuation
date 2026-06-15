@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
-import streamlit as st
 from sklearn.neighbors import BallTree
 
+from lib._cache import cache_resource
 from lib.config import ABT_PATH, LOCAL_LOOKUP_COLS
 
 
@@ -50,7 +50,7 @@ class MCRAILookup:
         return {col: float(weighted[col]) for col in LOCAL_LOOKUP_COLS}
 
 
-@st.cache_resource
+@cache_resource
 def get_mcrai_lookup() -> MCRAILookup:
     """Build the nearest-neighbour lookup once per Streamlit process."""
     return MCRAILookup()

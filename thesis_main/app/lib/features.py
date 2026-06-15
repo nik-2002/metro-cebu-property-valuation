@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-import streamlit as st
 
+from lib._cache import cache_data
 from lib.config import ABT_PATH, METRO_CEBU_CITIES, PROPERTY_TYPES, STRATUM_MAP
 from lib.mcrai_lookup import get_mcrai_lookup
 from lib.predict import get_model
@@ -11,7 +11,7 @@ from lib.predict import get_model
 _LAST_FALLBACK = False
 
 
-@st.cache_data
+@cache_data
 def get_training_medians() -> pd.Series:
     """Load training medians lazily instead of at module import time."""
     return pd.read_csv(ABT_PATH).median(numeric_only=True)

@@ -3,12 +3,12 @@ import pickle
 
 import numpy as np
 import pandas as pd
-import streamlit as st
 
+from lib._cache import cache_resource
 from lib.config import MANIFEST_PATH, MODEL_LABEL, STRATUM_LABELS, STRATUM_MODEL_FILES
 
 
-@st.cache_resource
+@cache_resource
 def load_models() -> dict:
     """Load the three best-per-stratum models once."""
     models = {}
@@ -18,7 +18,7 @@ def load_models() -> dict:
     return models
 
 
-@st.cache_resource
+@cache_resource
 def load_manifest() -> dict:
     with open(MANIFEST_PATH) as fh:
         return json.load(fh)

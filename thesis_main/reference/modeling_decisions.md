@@ -2123,4 +2123,27 @@ structure).
 Files: `Scripts/investigate_mcrai_lot_2026-06-15.py`, `finalize_stratified_groupcv.py STRATUM_DROP`,
 `Models/stratified/deployment_manifest.json`.
 
-**Next decision number: 50.**
+## Decision 50 — RQ2/RQ3 rerun on the 3,616-row ABT + manuscript checklist refresh (2026-06-15)
+Re-ran `answer_rq2_rq3.py` to refresh the RQ2 (model head-to-head) and RQ3 (geospatial ablation)
+outputs, which were stale (pre-expansion, 06-13). **Script change:** applied the deployed `STRATUM_DROP`
+(Decision 47i/49) to the tree feature matrix so RQ2's RF and the RQ3 ablation tiers use the SAME lean
+feature sets as deployment — giving ONE coherent RF number per stratum. Verified: RF MdAPE now matches
+the manifest exactly (19.32 / 22.67 / 38.36 → PASS for all three). OLS keeps its hedonic baseline set.
+
+**RQ2 (leak-free GroupKFold, MdAPE):** Condo OLS 24.5 / RF 19.3 / XGB 19.8; Houses 25.1 / 22.7 / 23.6;
+Lot 44.8 / 38.4 / 40.2. Trees beat OLS 5–6pp; **RF edges XGB on all three** (0.5–1.9pp) — comparable, RF
+the modest winner, deployed for robustness/simplicity.
+
+**RQ3 ablation (Structural → +Admin → +Geospatial, ΔMdAPE):** geospatial helps all three vs
+structural-only (Condo +5.65, Houses +4.18, Lot +12.95 pp). **Decomposition (pure engineered geospatial
+on top of city+BIR):** Condo +3.70, Lot +3.77 (geospatial carries BOTH), Houses −0.66 (admin location
+carries houses). **Updates the prior finding** — lots are carried by engineered geospatial too, not just
+administrative location.
+
+**Checklist refresh:** rewrote `Manuscript/ch_correction_checklist_2026-06-13.md` with current numbers +
+the missing Decision 47–49 items (multi-source data story, per-stratum feature selection, lot MCRAI
+cleanup, source-heterogeneity + lot-ceiling limitations). The checklist is now the trustworthy rewrite map.
+Outputs: `model_comparison_groupcv.csv`, `ablation_groupcv.csv` (both rerun). RQ4 (`answer_rq4.py`) still
+pending. Manuscript prose remains the next phase.
+
+**Next decision number: 51.**

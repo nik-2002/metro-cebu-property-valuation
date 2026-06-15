@@ -1,0 +1,21 @@
+{
+  "name": "metro-cebu-valuation-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "export:data": "python3 scripts/export_static_data.py",
+    "api": "WEBAPP_API=1 python3 -m uvicorn api.main:app --host 127.0.0.1 --port 8000 --reload",
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.20",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.16"
+  }
+}

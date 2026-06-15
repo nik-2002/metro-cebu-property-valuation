@@ -1,0 +1,14 @@
+# FastAPI inference backend for the Metro Cebu valuation webapp.
+# Reuses thesis_main/app/lib unchanged, so the numeric stack must match the
+# environment that trained the pickles in Models/stratified/ (the thesis env:
+# scikit-learn 1.8.x, numpy 2.x, pandas 3.x). Pinning loosely to avoid unpickle
+# warnings; if you hit a version mismatch, install into the same env Streamlit uses.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+scikit-learn>=1.8
+pandas>=2.0
+numpy>=1.26
+shapely>=2.1
+# Optional — enables the SHAP price-driver panel. Without it /api/predict still
+# returns the price; drivers come back empty with a "SHAP unavailable" note.
+# shap>=0.45

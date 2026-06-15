@@ -3,8 +3,8 @@ import importlib.util
 
 import numpy as np
 import pandas as pd
-import streamlit as st
 
+from lib._cache import cache_resource
 from lib.predict import get_model
 
 
@@ -67,7 +67,7 @@ def shap_is_available() -> bool:
     return importlib.util.find_spec("shap") is not None
 
 
-@st.cache_resource
+@cache_resource
 def load_shap_explainer(stratum_key: str):
     if not shap_is_available():
         raise ImportError("SHAP is not installed in the active environment.")

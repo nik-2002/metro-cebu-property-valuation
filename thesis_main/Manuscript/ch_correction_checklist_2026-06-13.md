@@ -1,67 +1,153 @@
-# Chapter Correction Checklist — from the 2026-06-13 verification sprint
+# Chapter Correction Checklist — manuscript rewrite map
 
-> Exact manuscript edits to make in the NEXT loop (prose rewriting was deliberately
-> deferred). Every item is grounded in code or in Decision 44. Do not edit chapters
-> until the RQ2/RQ3/RQ4 analysis numbers are in (`model_comparison_groupcv.csv`,
-> `ablation_groupcv.csv`, `valuation_gap_summary.csv`).
+> Origin: 2026-06-13 verification sprint. **REFRESHED 2026-06-15** with current deployed numbers
+> (Decisions 47–49) and the RQ2/RQ3 rerun. Every number below is from the live
+> `Models/stratified/deployment_manifest.json` + `model_comparison_groupcv.csv` /
+> `ablation_groupcv.csv` (re-run 2026-06-15 on the 3,616-row ABT). **The manuscript chapters are
+> stale (they describe the retired global model); do NOT copy from them — rewrite from this map +
+> the reference docs.**
 
-## Research Re-Alignment — paste-ready RQ + contribution wording (decided 2026-06-13)
+## CURRENT DEPLOYED STATE (the source of truth — use these everywhere)
+- **ABT = 3,616 rows** (open-market). Sources: Lamudi 1,579 + FilipinoHomes 1,203 + DotProperty 565 + Lamudi_pw 270.
+- **Strata:** Condo **1,300** / Houses **1,223** / Vacant Lot **849**.
+- **Deployed RF (leak-free GroupKFold), MdAPE / PE20 / MAPE / COD / PRD:**
+  - Condo **19.3 / 51 / 36.5 / 37.7 / 1.21** (21 features)
+  - Houses **22.7 / 44 / 35.1 / 35.8 / 1.20** (24 features)
+  - Vacant Lot **38.4 / 26 / 58.3 / 55.9 / 1.48** (22 features)
+- **Per-stratum features (Decision 47i/49):** all strata drop `bir_zonal_rr_log`, `bir_zonal_cr_median`,
+  both road-distance features. Condo + Houses collapse MCRAI to `mcrai_composite` only. Vacant Lot keeps
+  6 individual MCRAI (education, grocery, health, hospitals, recreation, tourism) — composite, security,
+  retail_density dropped. spatial_lag = same-stratum within 500 m.
 
-These re-worded statements match the honest findings (Decision 44f). Use them in Ch1 §Research Questions and §Significance.
+---
 
-**RQ1 (unchanged):** What value drivers significantly influence residential property prices in Metro Cebu?
-- *Answer (deployed-RF importance):* **location dominates** — geospatial/location features are 75–84% of model importance across all strata. **Vacant Lot:** distance-to-CBP alone = **47%** (land value ≈ location; consistent with bid-rent, Alonso/Muth). **Houses:** dist-CBP 24% + size + neighbourhood (spatial lag) + road/health access. **Condo:** more balanced — size (16%), neighbourhood price level (spatial lag 14%), lifestyle amenities (recreation/tourism), airport. *Caveat:* impurity importance favours continuous features; ablation + univariate correlations agree location dominates. *Note the importance↔ablation reconciliation:* geospatial features are what the model **uses** (high importance), while city+BIR are a **redundant substitute** that cushions the ablation for houses/lots (not condos — RQ3).
+## Research Re-Alignment — paste-ready RQ answers (current numbers)
 
-**RQ2 (reframed — "most suitable for deployment," not "lowest MAPE"):** Among Hedonic Regression (OLS), Random Forest, and XGBoost, which model is most suitable for deployment, balancing out-of-sample accuracy (MdAPE/PE20), robustness on small per-stratum samples, and interpretability?
-- *Answer:* the tree models clearly outperform the hedonic OLS baseline; Random Forest and XGBoost perform equivalently (within ~1.3pp, i.e. sampling noise); Random Forest is deployed for its robustness on small samples and deployment simplicity, not a decisive accuracy edge.
+**RQ1 — value drivers (unchanged question).**
+- *Answer (deployed-RF importance):* **location dominates.** **Vacant Lot:** distance-to-CBP is the
+  single biggest driver (~**31%** RF importance) — land value ≈ location (bid-rent, Alonso/Muth), with
+  area and individual amenity access (grocery/education) next. **Condo:** **neighbourhood price level
+  (spatial lag ~29%)** leads, then unit size (area ~17%, bedrooms ~8%), airport, composite accessibility.
+  **Houses:** distance-to-CBP (~19%) + neighbourhood (spatial lag ~16%) + size (~15%). *Caveat:* impurity
+  importance favours continuous features; the RQ3 ablation + correlations agree location dominates.
+  ⚠ If a single "geospatial = X% of importance" figure is wanted, recompute it from the current models;
+  the per-feature values above are from the 2026-06-15 deployed RF.
 
-**RQ3 (reframed — headline YES + decomposition):** Do geospatial features — proximity to economic nodes, MCRAI accessibility, and spatial autocorrelation — improve valuation accuracy over a structural-only model, and how does that contribution differ across property types?
-- *Answer:* **yes for all three strata** vs structural-only (Vacant Lot +15.7pp, Condo +3.9pp, Houses +2.8pp MdAPE). Decomposition: the **engineered geospatial features carry the gain for condominiums**, while for houses and lots most of the locational signal is already captured by **administrative location (city + BIR zonal value)**. The model therefore adds the most value where administrative benchmarks are weakest.
+**RQ2 — most suitable model for deployment (not "lowest MAPE").**
+- *Answer (current, leak-free GroupKFold, MdAPE):*
+  | Stratum | OLS | Random Forest | XGBoost |
+  |---|---|---|---|
+  | Condo | 24.5 | **19.3** | 19.8 |
+  | Houses | 25.1 | **22.7** | 23.6 |
+  | Vacant Lot | 44.8 | **38.4** | 40.2 |
+  Tree models clearly beat OLS (5–6pp). **RF edges XGB on all three by 0.5–1.9pp** — close enough to call
+  comparable, but RF is the modest winner; deployed for robustness on small samples + simplicity
+  (scikit-learn only). Frame as "RF best / tied, deployed for robustness," NOT a decisive accuracy gulf.
 
-**RQ4 (minor):** How large is the valuation gap between the model's data-driven predictions and BIR zonal values across Metro Cebu?
-- *Answer:* large and positive everywhere (95–100% of listings exceed BIR). Clean land-to-land comparison (vacant lots): market ≈ 2–4× BIR. (Caveat condo/house % — land-vs-floor unit mismatch.)
+**RQ3 — do geospatial features help, and how does it differ by type? (headline YES + decomposition).**
+- *Answer (ablation, RF, same folds, ΔMdAPE):* **yes for all three vs structural-only** — Condo
+  **+5.65pp**, Houses **+4.18pp**, Vacant Lot **+12.95pp**. **Decomposition (engineered geospatial ON TOP
+  of administrative location city+BIR):** Condo **+3.70pp**, Vacant Lot **+3.77pp** (engineered geospatial
+  carries BOTH), Houses **−0.66pp** (administrative location alone carries houses; engineered geospatial
+  adds nothing beyond it). The model adds the most value where administrative benchmarks are weakest
+  (condos, lots).  *(Updates the old "admin carries houses AND lots" — lots are now carried by geospatial too.)*
 
-**Re-aligned contribution (for §Significance / abstract):** A Cebu-specific, property-level valuation model whose geospatial features and stratified design add the most value precisely where administrative benchmarks fail (vertical condominiums), and which quantifies a large, systematic gap between market prices and BIR zonal values — delivered as QGIS layers and a Streamlit decision-support app.
+**RQ4 — valuation gap vs BIR (minor).**
+- *Answer:* large and positive everywhere (95–100% of listings exceed BIR). Clean land-to-land (vacant
+  lots): market ≈ **2–4× BIR**. Caveat condo/house % (land-vs-floor unit mismatch).
+  ⚠ **Rerun `answer_rq4.py`** to refresh `valuation_gap_summary.csv` on the 3,616-row ABT before quoting
+  per-LGU figures (current geojson/summary predate Decision 49).
+
+**Re-aligned contribution (§Significance / abstract):** A Cebu-specific, property-level valuation model
+whose geospatial features + stratified, per-type feature design add the most value precisely where
+administrative benchmarks fail (vertical condominiums and bare lots), quantifying a large systematic gap
+between market prices and BIR zonal values — delivered as QGIS layers + a Streamlit decision-support app.
 
 ---
 
 ## Chapter 1 — Problem & Setting
-- [ ] **RQ2 + RQ3 wording (§Research Questions):** replace with the re-aligned statements in the "Research Re-Alignment" section above (RQ2 → "most suitable for deployment"; RQ3 → headline-yes + decomposition). Metric is MdAPE/PE20.
-- [ ] **§1.6 Model Selection:** keep OLS/RF/XGB framing, but state the **deployment verdict explicitly**: RF deployed, XGB tested-not-retained, OLS diagnostic — and give the *why* (Decision 44d), not only the metric.
-- [ ] **Abstract + Ch1 "IVS 2025":** resolve the bib-key mismatch (biblio.bib has `ivs2020`; prose says "IVS 2025"). Either add the correct IVS edition entry or align the prose to the cited edition. (carried over from task.md)
-- [ ] Confirm "eight polycentric CBD nodes" wording matches the 8 used in code (CBP, Mandaue, Mactan, SRP, Talisay-Tabunok, Consolacion, Naga, Airport).
-- [ ] **Abstract** — the line "the baseline Random Forest was retained ... because it delivered the strongest overall held-out performance" is no longer supported (RF ≈ XGB under leak-free CV). Soften to: "Random Forest and XGBoost performed comparably; Random Forest was deployed for its robustness on small per-stratum samples and deployment simplicity." Also align the abstract to the open-market-only deployed scope and MdAPE/PE20 metrics.
+- [ ] **RQ2 + RQ3 wording (§Research Questions):** use the re-aligned statements above.
+- [ ] **§1.6 Model Selection:** state the deployment verdict (RF deployed, XGB tested-not-retained, OLS diagnostic) + the *why*.
+- [ ] **Abstract overclaim:** "baseline Random Forest … strongest overall held-out performance" is unsupported. Soften to "RF and XGBoost performed comparably (RF marginally ahead); RF deployed for robustness on small per-stratum samples + simplicity." Align abstract to open-market-only scope + MdAPE/PE20.
+- [ ] **IVS edition** — resolve bib-key mismatch (biblio.bib `ivs2020` vs prose "IVS 2025").
+- [ ] Confirm "eight polycentric CBD nodes" matches code (CBP, Mandaue, Mactan, SRP, Talisay-Tabunok, Consolacion, Naga, Airport).
 
 ## Chapter 3 — Methodology (largest changes)
-- [ ] **Data gathering — tell the two-scraper-generation story.** §3.4 currently says only "Lamudi listings were collected through a custom web scraper" (line ~96) and lists "Requests" as a tool — it omits the real history. Document both generations using the verified funnel in `reference/data_collection_funnel.csv`: (1) the **legacy `requests` + BeautifulSoup scraper** — **4,477 raw → 1,419 unique in-scope**, the bulk that became the ~1,579 open-market pre-batch ABT; (2) the **Playwright browser scraper** added in 2026-06 after **Lamudi deployed a JS-challenge / CAPTCHA wall** the `requests` scraper couldn't pass — **665 raw → 275 net-new**. Drop the funnel table straight into §3.4. (NB: count parsed rows, not `wc -l` — the description field has embedded newlines.) Decision-log history is consolidated in **Decision 45**.
-- [ ] **MCRAI radii** — replace any 5km/finance-3km text with the **code values**: education 2.5km, health 2.0km, hospitals 5.0km, grocery 2.0km, security 2.0km, tourism 3.0km, recreation 1.5km, retail 1.0km; β=2.0, 0.5km floor. (Decision 44a)
-- [ ] **MCRAI composite** — state it is **3 categories**: education 0.447, grocery 0.345, recreation 0.222. Note transport moved to road-distance features and finance was retired. Remove the 4-category/transport-weight description. (Decision 44a; Decisions 28–29)
-- [ ] **Transport accessibility** — describe via `dist_to_trunk_road_m` / `dist_to_primary_road_m`, NOT a transport-MCRAI category.
-- [ ] **Strata counts** — Condo 687, Houses 674, Lot 255 (from abt_clean 1,849×51). Replace 654/558/204.
+- [ ] **Data gathering — tell the FULL multi-source story (Decisions 45 + 47).** Two phases:
+  - *Phase 1 — Lamudi, two scraper generations (Decision 45):* legacy `requests`+BeautifulSoup (bulk),
+    then a **Playwright browser scraper** added after Lamudi deployed a JS-challenge/CAPTCHA wall →
+    **Lamudi total 1,579 + 270 (anti-bot batch)**.
+  - *Phase 2 — multi-portal expansion (Decision 47):* added **FilipinoHomes (1,203**, via its backend
+    JSON API → precise coords) and **DotProperty (565**, barangay-text geocoded). **OnePropertee was
+    scraped but dropped** (contamination: mis-extracted per-sqm prices + city-centroid geocoding, OOF
+    over-prediction). Net ABT **1,849 → 3,616**. Use the funnel from `reference/source_expansion_2026-06-14.md`.
+- [ ] **MCRAI radii** — code values: education 2.5 / health 2.0 / hospitals 5.0 / grocery 2.0 / security 2.0 / tourism 3.0 / recreation 1.5 / retail 1.0 km; β=2.0; 0.5 km floor.
+- [ ] **MCRAI composite** — **3 categories**: education 0.447, grocery 0.345, recreation 0.222. Transport moved to road-distance features; finance retired. Remove any 4-category/transport-weight text.
+- [ ] **Transport accessibility** — via `dist_to_trunk_road_m` / `dist_to_primary_road_m`, not a transport-MCRAI category. (Note: both road features were later dropped from the deployed models — Decision 47i — keep this nuance.)
+- [ ] **Strata counts** — **Condo 1,300, Houses 1,223, Lot 849** (ABT 3,616). *(was 687/674/255 — STALE)*
 - [ ] **Target** — `log_price = log(price_per_sqm)`; predict per-sqm, ×area for total.
-- [ ] **Evaluation protocol** — describe **GroupKFold(5) by coordinate cluster** (leak-free) and MdAPE/PE20 + COD/PRD panel; do not claim IAAO compliance.
-- [ ] **Hyperparameter tuning** — document both grids (RF: n_estimators/max_features/min_samples_leaf/max_depth; XGB: n_estimators/max_depth/learning_rate/subsample), the **MdAPE-under-GroupKFold** selection, and the per-stratum best params (tables in walkthrough §4). Reference the elbow-method sweep plots in `EDA/plots/11_hyperparameter_tuning/` and the results table `EDA/tables/hpo_*` as methodology evidence. Note a wider exploratory search confirmed the deployed settings.
-- [ ] **Deployment** — RF per stratum is deployed; OLS is the comparator baseline; XGB was evaluated under the same protocol (RQ2).
-- [ ] **Lot scope filter** — 80–2000 sqm AND price ≥ ½ BIR zonal (Decision 41).
+- [ ] **Evaluation protocol** — GroupKFold(5) by coordinate cluster (leak-free); MdAPE/PE20 headline + COD/PRD panel; do not claim IAAO compliance.
+- [ ] **NEW — Per-stratum feature selection (Decisions 47i/49).** Document as a methodology contribution:
+  evidence-grounded trimming (VIF, OLS significance, leave-one-block ablation, MCRAI zero-rates) →
+  all strata drop redundant BIR-log/BIR-commercial + road distances; condo/houses collapse the 9 MCRAI
+  categories to the composite (0.57–0.96 inter-correlated → redundant); **vacant lot keeps 6 individual
+  MCRAI** (grocery/hospitals OLS-significant) but drops composite (exact collinearity, R²=1.0), security
+  (36.9% LGU-uneven data gap), retail_density (≈0 correlation). Net: condo 33→21, houses 36→24, lot 29→22
+  features at parity accuracy. *Story:* different property types are priced by different geospatial
+  structure (built homes → one accessibility summary; bare land → specific amenity access).
+- [ ] **Hyperparameter tuning** — document RF grid (n_estimators/max_features/min_samples_leaf/max_depth) + XGB grid, selection by **MdAPE under GroupKFold**, per-stratum best params (manifest). Reference `EDA/plots/11_hyperparameter_tuning/` sweep plots. Note tuned ≈ defaults (models insensitive at this data size).
+- [ ] **Deployment** — RF per stratum deployed; OLS comparator baseline; XGB evaluated under same protocol.
+- [ ] **Lot scope filter** — area 80–2000 sqm AND price ≥ ½ BIR zonal (Decision 41).
 
 ## Chapter 7 — Results
-- [ ] Insert the **RQ2 head-to-head table** from `model_comparison_groupcv.csv`: OLS vs RF vs XGB per stratum, all under the same GroupKFold. **Honest finding:** tree models beat OLS; **RF ≈ XGB (tied within ~1.3pp = noise)**. Frame RF deployment as parsimony/robustness, NOT a decisive accuracy win. Do not claim RF is "the most accurate."
-- [ ] Insert the **RQ3 ablation table** from `ablation_groupcv.csv` (Structural → +Admin → +Geospatial). **Headline:** geospatial+location features improve **all three strata** vs structural-only (Lot +15.7pp, Condo +3.9pp, Houses +2.8pp MdAPE) → RQ3 = YES. **Decomposition:** engineered geospatial carries condos; administrative location (city+BIR) carries houses/lots. Present both — headline yes, then the nuance.
-- [ ] Replace any single-split / MAPE-only results with the leak-free MdAPE/PE20 numbers (Condo 20.1/49.8, Houses 22.1/45.0, Lot 25.6/41.6).
-- [ ] **Benchmarking note** — add a short subsection positioning the models against external AVM benchmarks (see `reference/avm_benchmarks_2026-06-13.md`): IAAO ratio-study COD 5–15/PRD 0.98–1.03, IAAO AVM acceptance (⚠ verify), Zillow median error 1.74% on-market/7.20% off-market, academic ML MAPE ~7–10%. Be explicit: we are NOT assessment-grade or transaction-AVM-grade; we beat the **local** baselines (OLS + BIR) under honest CV. Use the apples-to-oranges caveats (listings not sales, small n, no quality features, sparse market). Verify the ⚠ primary sources before final citation.
-- [ ] **Ramolete et al. like-for-like benchmark (NEW, `reference/ramolete_replication_2026-06-14.md`)** — we re-ran our models under their random 80/20 protocol. **Honest finding, do not overclaim "we're just more honest":** the protocol switch lifts RF MAPE only **2–5pp** (Condo +5.1, Houses +1.9, Lot +3.4 — largest for condos, as their coordinate clustering is densest). Even under their split our MAPE is **~30%**, still above their **10.7–21%**; the rest of the gap is genuine (their 3,212 Cavite houses vs our 674, thinner Cebu market, their PSA/DTI features + AdaBoost/segmentation). **Lead with MdAPE:** our RF typical error under the random split is **15.9% (condo) / 21.3% (houses)** — at the top of their band — so the median property is competitive; a tail of hard properties inflates the mean. Use the **houses stratum** (house-dominated data) as the fair comparison, not the aggregate. Table in the replication doc §4; paste-ready prose §6.
-- [ ] **Hyperparameter tuning evidence** — drop the elbow-method plots (`EDA/plots/11_hyperparameter_tuning/`) and note the wider search confirmed deployed params are at the optimum; curves are flat (models insensitive to settings).
+- [ ] **RQ2 head-to-head table** from `model_comparison_groupcv.csv` (rerun 2026-06-15): OLS / RF / XGB per
+  stratum (numbers in the RQ2 table above). **Honest finding:** trees beat OLS; **RF best/tied with XGB**
+  (within ~2pp). Frame RF deployment as robustness/parsimony, not a decisive accuracy win.
+- [ ] **RQ3 ablation table** from `ablation_groupcv.csv` (rerun 2026-06-15): Structural → +Admin →
+  +Geospatial. Headline: geospatial improves all three (Condo +5.65, Houses +4.18, Lot +12.95 pp).
+  Decomposition: engineered geospatial carries **condos AND lots** (+3.70 / +3.77 pp pure geospatial);
+  administrative location carries **houses** (−0.66 pp pure geospatial).
+- [ ] **Replace stale single-split / MAPE-only results** with the leak-free MdAPE/PE20 numbers:
+  **Condo 19.3/51, Houses 22.7/44, Lot 38.4/26.** *(was 20.1/49.8, 22.1/45.0, 25.6/41.6 — STALE)*
+- [ ] **External AVM benchmark subsection** (`reference/avm_benchmarks_2026-06-13.md`): IAAO ratio-study
+  COD 5–15/PRD 0.98–1.03, IAAO AVM acceptance (⚠ verify), Zillow 1.74% on-/7.20% off-market, academic ML
+  ~7–10% MAPE. Be explicit: NOT assessment- or transaction-AVM-grade; we beat the LOCAL baselines (OLS + BIR)
+  under honest CV. Apples-to-oranges caveats (listings not sales, small n, no quality features, sparse market).
+- [ ] **Ramolete et al. like-for-like (Decision 48, refreshed; `reference/ramolete_replication_2026-06-14.md`).**
+  Under their random 80/20 protocol, RF random-split MdAPE = **Condo 16.2 / Houses 22.1 / Lot 36.2**; the
+  protocol switch lifts MAPE only **Condo +5.1 / Houses +1.3 / Lot +1.8 pp** (leakage is small). Even their
+  way, our MAPE stays above their 10.7–21% band — the rest of the gap is genuine (their **3,212** Cavite
+  houses vs our **1,223**, thinner Cebu market, their PSA/DTI features). **Lead with MdAPE:** our typical
+  condo (~16%) / houses (~22%) sits at the top of their band → median property competitive; a hard-case tail
+  inflates the mean. Use the **houses stratum** as the fair comparison (their data is house-dominated).
+- [ ] **HP-tuning evidence** — drop the `EDA/plots/11_hyperparameter_tuning/` curves; note the wider search confirmed deployed params (curves flat → models insensitive).
 
 ## Chapter 8 — Interpretation
-- [ ] Refresh per-stratum **SHAP** narrative (RQ1) from the regenerated plots in `EDA/plots/10_stratified_models/` (current rows). Keep the simpler defense narrative on top of SHAP.
+- [ ] Refresh per-stratum **SHAP** narrative (RQ1). ⚠ The on-disk SHAP PNGs in
+  `EDA/plots/10_stratified_models/` keep reverting (Google Drive sync) — regenerate fresh
+  (`Scripts/regen_shap_2026-06-15.py` / `build_overview_html.py`) right before use, or take the
+  base64-embedded copies from `study_overview_2026-06-15.html`. Keep the simpler defense narrative on top.
 
 ## Chapter 9 — Conclusions
-- [ ] **RQ4 valuation gap** — report the quantified gap by LGU×stratum from `valuation_gap_summary.csv`; reference `valuation_gap.geojson` as the prescriptive map. **Lead with vacant lots (clean land-to-land): market ≈ 2–4× BIR.** **Caveat condo/house percentages** (>1000%) as inflated by a unit mismatch (BIR = land/sqm vs price = floor/sqm). 95–100% of listings exceed BIR in every LGU.
-- [ ] Re-answer RQ1–RQ4 directly, each pointing to its artifact. Keep RQ2 (RF≈XGB) and RQ3 (condo-only geospatial gain) honest, not overclaimed.
+- [ ] **RQ4 valuation gap** — report by LGU×stratum from `valuation_gap_summary.csv` (⚠ rerun `answer_rq4.py`
+  first). Lead with vacant lots (clean land-to-land): market ≈ **2–4× BIR**. Caveat condo/house % (unit mismatch).
+- [ ] Re-answer RQ1–RQ4 directly, each pointing to its artifact. Keep RQ2 (RF best/tied) + RQ3 (condo+lot geospatial gain) honest.
 
-## Limitations (Ch3 data section + Ch9/limitations) — NEW from 2026-06-14
-- [ ] **Centroid-snapped geocoding** (`reference/shared_pin_investigation_2026-06-14.md`) — disclose honestly: a large share of rows share an exact coordinate, but for **houses/lots this is mostly a geocoding artifact, not real geography**. Listings with incomplete addresses (subdivision/barangay/city, no street number) were snapped to a barangay/subdivision **centroid**: ~**83% of shared house rows** and ~**80% of shared lot rows** are centroid-snaps; net ~**31–37% of the Houses and Lot strata** sit on a centroid. Condos are mostly genuine multi-unit buildings (the 64-unit Marigondon tower) but ~39% are still centroid-snaps. **Implication:** the spatial features (CBD distances, MCRAI, road distances, spatial lag) of centroid rows were computed from the centroid, not the true parcel → spatial-feature noise on ~⅓ of houses/lots, a plausible contributor to the high-MAPE error tail. **Note it does NOT break the leak-free CV** (GroupKFold groups by exact lat/lon → a centroid's listings all fall in one fold; no train/test leakage). Frame as a data-quality limitation + future-work fix (re-geocode incomplete addresses), not an evaluation flaw.
+## Limitations (Ch3 data section + Ch9)
+- [ ] **Centroid-snapped geocoding** (`reference/shared_pin_investigation_2026-06-14.md`): ~31–37% of
+  houses/lots sit on a barangay/subdivision centroid (vague addresses) → spatial-feature noise on ~⅓ of
+  those strata, a plausible high-MAPE-tail contributor. Does NOT break leak-free CV (GroupKFold groups by
+  exact lat/lon). Frame as data-quality limitation + future re-geocode.
+- [ ] **NEW — Source heterogeneity (Decision 47h):** combining portals introduces source-level price
+  effects — FilipinoHomes lists ~14% cheaper stock at equal features; no source feature is available at
+  prediction time. Disclose.
+- [ ] **NEW — Vacant-lot data ceiling (Decision 47f/47h):** lot is the weakest stratum (~38%) because
+  bare-land value depends on unobserved parcel attributes (frontage, zoning, title, slope, flood) absent
+  from listings. The honest ~38% (not the earlier optimistic 25.6% on a small concentrated sample) is a
+  data ceiling, not a modeling failure.
 
 ## Cross-cutting
-- [ ] Remove any remaining "Mapbox token" or "manifest contract bug" caveats — both resolved (Decision 44a).
-- [ ] Ensure terminology consistency: "MCRAI" (full name on first use), MdAPE/PE20 as headline metrics.
+- [ ] Remove any "Mapbox token" / "manifest contract bug" caveats (resolved).
+- [ ] Terminology: "MCRAI" full name on first use; MdAPE/PE20 as headline metrics.
+- [ ] ⚠ **Do not reintroduce manuscript chapter numbers** — the chapters themselves are being rewritten
+  from this map; numbers come from the manifest + reference docs, never the old chapter prose.

@@ -42,6 +42,12 @@ PROCESSED_DIR = os.path.join(THESIS_DIR, "Data", "processed")
 MODELS_DIR = os.path.join(THESIS_DIR, "Models", "stratified")
 MANIFEST = os.path.join(MODELS_DIR, "deployment_manifest.json")
 
+import sys as _sys
+_sys.path.insert(0, SCRIPT_DIR)
+# Deployed per-stratum feature selection (Decisions 47i/49) — applied so the RQ2 RF and the
+# RQ3 ablation use the SAME lean feature sets as the deployed models (one coherent RF number).
+from finalize_stratified_groupcv import STRATUM_DROP
+
 RANDOM_STATE = 42
 N_SPLITS = 5
 TARGET = "log_price"
@@ -160,6 +166,11 @@ def main():
     for key, cfg in STRATA.items():
         df = pd.read_csv(os.path.join(PROCESSED_DIR, cfg["csv"])).reset_index(drop=True)
         X_full, X_ols, y_s = build_full_and_ols(df, key)
+        # Match the deployed model: drop the per-stratum-selected columns from the tree feature
+        # matrix (RF + XGB + the RQ3 ablation tiers). OLS keeps its own hedonic baseline set.
+        _drop = [c for c in STRATUM_DROP.get(key, []) if c in X_full.columns]
+        if _drop:
+            X_full = X_full.drop(columns=_drop)
         y = y_s.to_numpy(float)
         actual = df["price_per_sqm"].to_numpy(float)
         groups = df.groupby(["latitude", "longitude"]).ngroup().to_numpy()
