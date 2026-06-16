@@ -1,7 +1,7 @@
 # Manuscript Tasks
 
 > Tracking manuscript, ABT readiness, modeling, and supporting outputs.
-> Last updated: 2026-06-17 (manuscript FIRST PASS rewrite done on dev/manuscript)
+> Last updated: 2026-06-17 (manuscript first pass + 2 verification passes done; private remote backup set up)
 
 ---
 
@@ -26,15 +26,57 @@
 - [x] biblio.bib — verified stratification refs added (droes2019, usman2020); all 44 used keys valid.
 - [x] Draft-compiles with pdflatex, no LaTeX errors.
 
-### NEXT — section-by-section high-quality pass (with author), open items to address
-- [ ] Voice: trim em-dashes, undergraduate tone per feedback_manuscript_voice (first pass left em-dashes).
+### Pass 2 — accuracy verification (commit d5b8dc50)
+> Cross-checked EVERY number in every chapter against the source of truth (manifest,
+> model_comparison_groupcv.csv, ablation_groupcv.csv, valuation_gap_summary.csv,
+> shap_block_summary_rf.txt, abt_clean.csv, ramolete_randomsplit_comparison.csv,
+> compute_hansen_scores.py weights/radii). RQ2/RQ3/RQ4/SHAP/metrics/params all confirmed correct.
+- [x] Fixed Ch3 + Ch5: Lamudi bulk count 1,579 -> **1,578** (actual source count).
+- [x] Fixed Ch4 property-type shares (double-rounding artifact): Condo 38.0->38.5, Lot 26.0->25.6,
+      House&Lot 24.0->23.7, SingleDetached 7.0->7.2, Townhouse 5.0->5.1.
+- [x] Fixed Ch7 condo worst-decile over-prediction 100% -> **106%** (actual OOF value).
+- [x] Fixed Ch10: valuation-gap "not reduced to one statistic" claim (it IS quantified, ~3x BIR);
+      Streamlit -> web application.
+- [x] **Stale EDA figures caught + regenerated.** Top-level EDA price figures were pre-expansion
+      (open-market median ~111k vs current ~82k; wrong city order) from legacy run_eda.py. Regenerated
+      price_by_city_open_market.png + price_by_property_type.png + missingness_top15.png from the frozen
+      3,616 ABT via new `Scripts/regen_ch4_eda_figs_2026-06-17.py`. Removed price_by_segment.png figure
+      (3-tier data not in processed ABT) -> folded into prose.
+
+### Pass 3 — APA format + end-to-end (commit afa5fe04)
+> User: APA paper -> no heading numbers, not justified.
+- [x] VERIFIED apa7 class already correct: secnumdepth=0 (headings unnumbered, just titles) and `man`
+      mode is ragged-right/flush-left (not justified). No change needed. TOC confirms no section numbers.
+- [x] Read Ch2 (literature) for the first time; fixed two issues: "transaction-based" research gap ->
+      "property-level" (thesis is listing-based, not transactions); Tanzania "nearly identical to our BDO
+      dataset" -> "close to the individual property strata (1,300/1,223/849)".
+- [x] Cross-chapter consistency confirmed: 3,616 ABT + 1,300/1,223/849 strata + MdAPE 19.3/22.7/38.4
+      aligned across chapters. Full pdflatex compile clean: **104 pages, no LaTeX errors**.
+
+### Infrastructure (this session)
+- [x] **Private remote backup set up** (was NONE before — work existed only on local disk).
+      `gh repo create metro-cebu-valuation-thesis --private` -> github.com/nik-2002/metro-cebu-valuation-thesis
+      (confirmed isPrivate=true; scraped data not publicly exposed). All 9 branches + tags pushed.
+      Note: stale branches `main` / `modeling` / `codex-...` / `claude/awesome-stonebraker` carry old
+      .venv bloat (8,847 files each); active branches (clean-baseline, dev/*) are clean. The live baseline
+      is `clean-baseline-2026-06-15`, NOT `main` (main is stale/bloated).
+- [x] Synced dev/modeling -> dev/manuscript (fast-forward) so manuscript has Decisions 51-53 + refreshed
+      RQ4/SHAP/EDA consolidation.
+
+### NEXT — section-by-section high-quality pass (with author), open items
+- [ ] Voice: trim em-dashes, undergraduate tone per feedback_manuscript_voice (passes 1-3 left em-dashes).
+- [ ] **Install biber (~80 MB, `sudo tlmgr install biber`)** then full build
+      (`pdflatex; biber; pdflatex; pdflatex`) to resolve citations + rebuild LOF/LOT + regenerate the
+      stale committed main.pdf. biber NOT installed locally; all 44 cite keys are valid so they will resolve.
+- [ ] **Ch2 missing bib entries (author to add — NOT invented):** Wibowo (2023), Samsudin (2022),
+      Becsky-Nagy & Sachicola (2025), Sinnott (1984), Tax Policy Study (2023). Cited in prose, no biblio.bib entry.
 - [ ] Complete the droes2019 / usman2020 bib entries (volume/pages/DOI/publisher).
 - [ ] Ch6: optionally add a regenerated 3-category MCRAI composite-weights figure (old 4-cat figure dropped).
 - [ ] Verify/regenerate diagrams/Data-Pipeline-Updated.png to show the 3-portal multi-source pipeline.
 - [ ] Ch5: optionally add a precise data-prep funnel table from reference/data_collection_funnel.csv.
 - [ ] Ch4: optionally restore specific Spearman rho values from current EDA tables (qualitative now).
-- [ ] Full compile with biber (not installed locally) to resolve citations + rebuild LOF/LOT.
-- [ ] Ch10 recommendations — not yet reviewed against current findings.
+- [ ] Ch10 recommendations — light fixes done (valuation-gap, web-app); full review against findings still pending.
+- [ ] Decide eventual merge to mainline: promote clean-baseline-2026-06-15 as real main (old `main` is stale/bloated).
 
 ---
 
