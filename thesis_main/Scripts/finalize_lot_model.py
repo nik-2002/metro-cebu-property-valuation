@@ -45,7 +45,7 @@ THESIS_DIR = os.path.dirname(SCRIPT_DIR)
 ROOT_DIR = os.path.dirname(THESIS_DIR)
 PROCESSED_DIR = os.path.join(THESIS_DIR, "Data", "processed")
 MODELS_DIR = os.path.join(THESIS_DIR, "Models", "stratified")
-SHAP_DIR = os.path.join(ROOT_DIR, "EDA", "plots", "10_stratified_models")
+SHAP_DIR = os.path.join(THESIS_DIR, "EDA", "plots", "10_stratified_models")
 os.makedirs(SHAP_DIR, exist_ok=True)
 
 RANDOM_STATE = 42

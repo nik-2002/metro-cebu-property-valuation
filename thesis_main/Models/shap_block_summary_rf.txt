@@ -1,33 +1,60 @@
-SHAP Block Aggregation — Random Forest (deployed model)
-============================================================
-Feature block                    Sum |SHAP|   % of total
-------------------------------------------------------------
-MCRAI (9 categories)                 0.1317         3.0%
-CBD distances (8 nodes)              0.9382        21.4%
-Structural & other                   3.3211        75.6%
-TOTAL                                4.3909       100.0%
+SHAP Block Aggregation — Random Forest (deployed stratified models)
+Regenerated 2026-06-16 from deployed pkls (matches deployment_manifest.json).
+========================================================================
 
-Individual MCRAI rankings within full feature list:
+[Condominium]  n=1300  features=21
 ------------------------------------------------------------
-  Feature                         Mean |SHAP|   Overall rank
-  mcrai_education                    0.010778             27
-  mcrai_finance                      0.006473             33
-  mcrai_grocery                      0.016779             22
-  mcrai_health                       0.004628             34
-  mcrai_security                     0.007830             32
-  mcrai_transport                    0.017588             21
-  mcrai_tourism                      0.048251             17
-  mcrai_recreation                   0.008489             31
-  mcrai_retail_density               0.010852             26
+  Block                     Sum|SHAP|    % of total
+  CBD distances                0.1381     30.2%
+  MCRAI                        0.0224      4.9%
+  spatial_lag_price            0.1529     33.5%
+  BIR zonal                    0.0102      2.2%
+  city/type dummies            0.0029      0.6%
+  structural                   0.1305     28.6%
+  Top 8 features (mean|SHAP|):
+         0.1529   spatial_lag_price
+         0.0715   bedrooms
+         0.0442   area_sqm
+         0.0265   dist_consolacion_m
+         0.0237   dist_airport_m
+         0.0224   mcrai_composite
+         0.0204   dist_mactan_cbd_m
+         0.0154   dist_cebu_business_park_m
 
-Individual CBD distance rankings within full feature list:
+[Houses]  n=1223  features=24
 ------------------------------------------------------------
-  Feature                         Mean |SHAP|   Overall rank
-  dist_cebu_business_park_m          0.109967             10
-  dist_mandaue_cbd_m                 0.013933             24
-  dist_mactan_cbd_m                  0.086324             12
-  dist_srp_m                         0.025988             19
-  dist_talisay_tabunok_m             0.056631             15
-  dist_naga_city_m                   0.072741             13
-  dist_consolacion_m                 0.481639              4
-  dist_airport_m                     0.090956             11
+  Block                     Sum|SHAP|    % of total
+  CBD distances                0.1923     38.5%
+  MCRAI                        0.0195      3.9%
+  spatial_lag_price            0.0673     13.5%
+  BIR zonal                    0.0128      2.6%
+  city/type dummies            0.0321      6.4%
+  structural                   0.1759     35.2%
+  Top 8 features (mean|SHAP|):
+         0.1097   dist_cebu_business_park_m
+         0.0892   area_sqm
+         0.0673   spatial_lag_price
+         0.0667   bathrooms
+         0.0219   property_type_Townhouse
+         0.0201   dist_mandaue_cbd_m
+         0.0195   mcrai_composite
+         0.0168   dist_airport_m
+
+[Vacant Lot]  n=849  features=22
+------------------------------------------------------------
+  Block                     Sum|SHAP|    % of total
+  CBD distances                0.4561     56.8%
+  MCRAI                        0.1796     22.4%
+  spatial_lag_price            0.0374      4.7%
+  BIR zonal                    0.0216      2.7%
+  city/type dummies            0.0085      1.1%
+  structural                   0.0995     12.4%
+  Top 8 features (mean|SHAP|):
+         0.3633   dist_cebu_business_park_m
+         0.0995   area_sqm
+         0.0446   mcrai_grocery
+         0.0374   spatial_lag_price
+         0.0370   mcrai_tourism
+         0.0318   mcrai_education
+         0.0257   mcrai_hospitals
+         0.0239   dist_mandaue_cbd_m

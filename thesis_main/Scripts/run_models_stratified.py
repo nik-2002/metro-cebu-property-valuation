@@ -64,7 +64,7 @@ ROOT_DIR   = os.path.dirname(THESIS_DIR)            # workspace root (16 Thesis/
 
 PROCESSED_DIR = os.path.join(THESIS_DIR, "Data", "processed")
 MODELS_DIR    = os.path.join(THESIS_DIR, "Models", "stratified")
-SHAP_DIR      = os.path.join(ROOT_DIR, "EDA", "plots", "10_stratified_models")
+SHAP_DIR      = os.path.join(THESIS_DIR, "EDA", "plots", "10_stratified_models")
 
 os.makedirs(MODELS_DIR, exist_ok=True)
 os.makedirs(SHAP_DIR, exist_ok=True)

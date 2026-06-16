@@ -2147,3 +2147,61 @@ Outputs: `model_comparison_groupcv.csv`, `ablation_groupcv.csv` (both rerun). RQ
 pending. Manuscript prose remains the next phase.
 
 **Next decision number: 51.**
+
+## Decision 51 — RQ4 valuation gap refreshed on the 3,616-row ABT (2026-06-16)
+Re-ran `answer_rq4.py` on the current 3,616-row open-market ABT. The output files
+(`Models/stratified/valuation_gap_summary.csv`, `Data/processed/valuation_gap_per_property.csv`,
+`QGIS/data/valuation_gap.geojson`) now reflect the expanded data and **supersede the n=1,616 figures
+in the Decision 44 narrative** (which were never updated in place — left as historical record). No
+script or model change: same leak-free out-of-fold RF predictions, manifest `best_params`,
+GroupKFold(5) by coordinate cluster, target `log_price` back-transformed via `exp`.
+
+**Coverage:** 3,372 valid properties (3,616 minus 244 rows with missing/zero `bir_zonal_rr_median`).
+Strata: Condo 1,300 / Houses 1,223 / Lot 849.
+
+**Headline finding (vacant lots, clean land-to-land vs land-area BIR):** market `price_per_sqm` runs
+**~3× the BIR zonal benchmark overall**, ranging **2.2× (Cebu City) → 4.8× (Mandaue)** by LGU
+(Consolacion 4.5×, Lapu-Lapu 3.0×, Minglanilla 2.7×, Talisay 2.5×). Model-predicted lot prices track
+the same band (2.1×–5.8×). BIR lags the market almost everywhere: `pct_market_above_bir` ≈ 100% in
+every LGU except Cebu City lots (88%) — i.e. BIR zonal values are systematically below open-market
+levels across Metro Cebu.
+
+**Caveat — condo/house gaps are NOT directly comparable and must not be headlined.** Their median
+listing gaps (~736% condo, ~634% houses) are inflated because the numerator is a floor-area
+`price_per_sqm` while the BIR denominator is a land-area benchmark — a unit mismatch, not a true
+overvaluation. The defensible RQ4 claim is the **vacant-lot** comparison (land-to-land); condo/house
+figures are reported only as directional context with the mismatch flagged.
+
+**Next decision number: 52.**
+
+## Decision 52 — SHAP interpretation artifacts refreshed + EDA moved inside thesis_main (2026-06-16)
+**Integrity fix, no model change.** The committed SHAP artifacts were stale and misrepresented the
+deployed models: the beeswarm PNGs showed individual MCRAI + road-distance features (retired/dropped
+per Decisions 47i/49), and `Models/shap_block_summary_rf.txt` still listed `mcrai_finance`/
+`mcrai_transport`. Regenerated all three beeswarms + a deployment-matched block summary directly from
+the saved pkls (new `Scripts/regen_shap_2026-06-16.py`; one TreeExplainer pass per stratum; asserts
+`n_features_in_` match). Cross-checked: deployed pkl feature lists == `deployment_manifest.json`
+exactly (condo 21 / houses 24 / lot 22).
+
+**SHAP block aggregation (mean|SHAP|, deployed RF):**
+- **Condo:** spatial_lag_price 33.5% · CBD distances 30.2% · structural 28.6% · MCRAI 4.9% · BIR 2.2%
+  · city/type 0.6%. Local comps + size dominate; land-based BIR nearly irrelevant for vertical units.
+- **Houses:** CBD distances 38.5% · structural 35.2% · spatial_lag 13.5% · city/type 6.4% · MCRAI 3.9%
+  · BIR 2.6%. `dist_cebu_business_park_m` is the single top feature (bid-rent to primary CBD).
+- **Lot:** CBD distances 56.8% · MCRAI 22.4% · structural 12.4% · spatial_lag 4.7% · BIR 2.7% ·
+  city/type 1.1%. Purest land-value gradient; `dist_cebu_business_park_m` alone ≈ 45% of lot mean|SHAP|.
+  Highest MCRAI share of any stratum — empirically supports Decision 49 keeping individual MCRAI for
+  lots while condo/houses use `mcrai_composite`.
+
+Geospatial share (CBD + MCRAI + spatial_lag): Condo ~68.6%, Houses ~55.9% (~62% incl. admin location),
+Lot ~83.9% — consistent with the RQ1 location-dominance finding.
+
+**Repo hygiene:** all thesis content now lives under `thesis_main/`. The SHAP plots had been writing to
+a stray workspace-root `EDA/` (scripts computed `SHAP_DIR` from `ROOT_DIR`, a leftover from the old
+Drive layout where `EDA/` sat beside `thesis_main/`). Pointed `SHAP_DIR` at `THESIS_DIR/EDA/...` in
+`finalize_stratified_groupcv.py`, `finalize_lot_model.py`, `run_models_stratified.py`; merged the fresh
+plots into `thesis_main/EDA/` and deleted the root `EDA/`. Workspace root now holds only non-thesis
+metadata (presentations, checklists, README, config). **NOTE: applied on `dev/modeling` only — must be
+merged to `main` + other worktrees to remove the duplicate EDA everywhere.**
+
+**Next decision number: 53.**
