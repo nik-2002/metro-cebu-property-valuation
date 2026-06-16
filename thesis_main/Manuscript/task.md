@@ -1,7 +1,41 @@
 # Manuscript Tasks
 
 > Tracking manuscript, ABT readiness, modeling, and supporting outputs.
-> Last updated: 2026-06-16 (webapp — HF Space deploy package built + run.command launcher verified; neither deployed yet)
+> Last updated: 2026-06-16 (repo moved off Google Drive → ~/Documents/projects-data-science/thesis; 3 worktrees set up)
+
+---
+
+## Session 2026-06-16 — Repo moved off Google Drive + 3 parallel worktrees
+
+> Goal: work the three streams in parallel without stepping on each other —
+> modeling (CRISP-DM), the webapp, and the manuscript.
+
+### Done
+- [x] **Repo copied off Google Drive** to a clean local path (no spaces, no Drive sync churn):
+      `/Users/nicoestreba/Documents/projects-data-science/thesis`. Old Drive path kept as a
+      one-time **backup** (no git remote exists — Drive + Time Machine are the only backups).
+      **Work in the local copy from now on; do not edit the Drive folder.**
+- [x] **`.venv` survived the move** (relative `python` symlink + everything invokes `python -m …`):
+      sklearn 1.8.0 / numpy 2.4.3 / pandas 3.0.1 / shap 0.51.0 load fine at the new path.
+- [x] **Three worktrees** under `~/Documents/projects-data-science/thesis-worktrees/`, all off
+      `clean-baseline-2026-06-15` (05a64d71): `modeling` → `dev/modeling`, `webapp` → `dev/webapp`,
+      `manuscript` → `dev/manuscript`. Removed the stale `awesome-stonebraker-06be10` agent worktree.
+- [x] **Shared-resource wiring** (`.venv` + `Models/stratified/*.pkl` are git-ignored, so worktrees
+      don't get them from checkout): each worktree's `.venv` is a symlink to the main `.venv`;
+      **webapp** symlinks the deployed pkls (read-only, tracks the live baseline); **modeling** has
+      independent pkl **copies** (retrain-safe — can't clobber the frozen deployment); **manuscript**
+      needs neither. Added `.venv` to `.git/info/exclude` so the symlink isn't flagged untracked.
+- [x] **Verified runnable:** webapp worktree backend predicts 261,694/sqm condo @ CBP (5 SHAP drivers,
+      MdAPE 19.3) through the symlinked venv+pkls; `npm install` done. Modeling worktree loads
+      `condo_model.pkl` (RandomForestRegressor, 21 feats). All four trees git-clean.
+- [x] **Claude memory carried to the new path:** memory is keyed to the folder path, so the set was
+      copied to `~/.claude/projects/-Users-nicoestreba-Documents-projects-data-science-thesis/memory/`
+      and each worktree namespace's `memory/` symlinks to it (unified memory wherever Claude runs).
+
+### Notes / next
+- Workflow: Codex does hands-on edits inside a worktree; Claude advises from the main hub (more context).
+- Consider a **private GitHub remote** for off-machine code backup (won't cover git-ignored pkls/venv/raw data — Drive copy still needed for those).
+- `MOVE_TO_LOCAL_CHECKLIST.md` at repo root is the throwaway move guide — delete whenever.
 
 ---
 
