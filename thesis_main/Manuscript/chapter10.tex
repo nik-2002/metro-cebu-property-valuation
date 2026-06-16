@@ -8,7 +8,7 @@ The second recommendation is to focus comparable-property analysis on the variab
 
 The third recommendation is to interpret the spatial sorting result from the OLS Stage 2 model carefully. The negative coefficients on security, tourism, and retail density did not mean that these uses are always harmful to residential value. They pointed to context effects such as congestion, commercial intensity, or neighborhood sorting. Practitioners should therefore avoid assuming that physical proximity to police infrastructure, tourism strips, or dense commercial activity automatically adds residential value without checking the surrounding land-use context.
 
-The fourth recommendation is to use the valuation-gap output as a screening device for institutional review. The thesis did not reduce the valuation gap to one metro-wide statistic, but it did preserve the gap as a diagnostic field in the analytical base table and map outputs. This makes it useful for flagging places where market-facing estimates and official BIR benchmarks appear to diverge enough to justify closer appraisal review.
+The fourth recommendation is to use the valuation-gap output as a screening device for institutional review. The thesis both quantified the gap and preserved it as a diagnostic field in the analytical base table and map outputs. For the clean land-to-land comparison on vacant lots, market prices ran roughly three times the BIR zonal benchmark, and listings exceeded the benchmark in close to all LGUs. This makes the gap useful for flagging places where market-facing estimates and official BIR benchmarks diverge enough to justify closer appraisal review.
 
 
 \subsection{Recommendations for Policy}\label{recommendations-for-policy}
@@ -37,7 +37,7 @@ The sixth recommendation is to verify the evidentiary basis for the tourism exte
 
 \subsection{Recommendations for Deployment}\label{recommendations-for-deployment}
 
-The first deployment recommendation is to keep the Streamlit app tied to the project virtual environment so that all dependencies, including SHAP, are available at runtime. The app should be launched through the project environment rather than the system Python. A simple launcher script or startup note that activates the correct environment before running the app is sufficient for most handoff scenarios.
+The first deployment recommendation is to keep the web application tied to the project virtual environment so that all dependencies, including SHAP, are available at runtime. The backend should be launched through the project environment rather than the system Python. A simple launcher script or startup note that activates the correct environment before running the application is sufficient for most handoff scenarios.
 
 The second deployment recommendation is to ensure the map layer uses a tokenless base tile provider. CartoDB Positron or a comparable public tile source avoids any dependency on external API keys and keeps the price surface page functional across different host environments without additional configuration.
 
@@ -45,7 +45,7 @@ The third recommendation is to make the model scope explicit everywhere a user s
 
 The fourth recommendation is to formalize a refresh cycle for data and model maintenance. The POI inventory, Lamudi listing coverage, and official benchmark schedules will drift over time. For that reason, the deployment workflow should include a regular update cadence for POI refresh, ABT rebuilding, prediction export, and model retraining. A six-month cycle is a reasonable starting point for keeping the app useful without treating it as a live real-time system.
 
-The fifth recommendation is to keep the Streamlit app and QGIS outputs consistent with each other. Both deliverables draw from the same saved model artifact and the same prediction export. Whenever the model is retrained or the ABT is updated, the prediction layer should be regenerated and verified against both the app and the QGIS map before either is shown externally.
+The fifth recommendation is to keep the web application and QGIS outputs consistent with each other. Both deliverables draw from the same saved model artifacts and the same prediction export. Whenever the model is retrained or the ABT is updated, the prediction layer should be regenerated and verified against both the application and the QGIS map before either is shown externally.
 
 \subsection{Closing Note}\label{closing-note}
 
