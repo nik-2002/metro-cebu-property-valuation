@@ -1,145 +1,101 @@
 \section{Data Preparation}\label{data-preparation}
 
-This chapter covers the CRISP-DM data preparation phase for the frozen analytics base table (ABT). Chapter 4 described the condition of the data. This chapter explains what was done to turn that file into a modeling-ready dataset. The focus here is on filtering, missing-data treatment, feature engineering, encoding, and the final train-test split used by the modeling script.
+This chapter covers the CRISP-DM data preparation phase for the frozen analytics base table (ABT). Chapter 4 described the condition of the data. This chapter explains what was done to turn that file into a modeling-ready dataset. The focus here is on filtering, missing-data treatment, feature engineering, encoding, and the stratum split used by the modeling script.
 
 \subsection{\texorpdfstring{\textbf{Scope of Preparation Work}}{Scope of Preparation Work}}\label{scope-of-preparation-work}
 
-The preparation work started from the frozen ABT with 2{,}047 rows and 50 columns. The ABT already reflected the six-LGU study scope used in this thesis: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed in the system only as a CBD distance anchor through dist\_naga\_city\_m. Its four scraped listings were excluded before the ABT freeze because they were too few to support stable LGU-level learning.
+The preparation work produced a frozen open-market ABT of 3{,}616 rows for the six-LGU study scope: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed in the system only as a CBD distance anchor through \emph{dist\_naga\_city\_m}; it was not part of the training LGU set. Bank ROPA and administrative floor-price records were retained in the wider data system as conservative reference layers and were not pooled into the open-market modeling file.
 
-The goal of this phase was more specific than general ABT cleaning. It was to build the exact dataset used by the modeling pipeline in thesis\_main/Scripts/run\_models.py. This meant keeping the ABT as the full reference file, but applying a narrower set of preparation steps for the training data.
+This open-market ABT was assembled from several listing portals: Lamudi (1{,}579 from the bulk scraper and 270 from the later browser-based anti-bot batch), FilipinoHomes (1{,}203), and DotProperty (565). A fourth portal, OnePropertee, was scraped but dropped after its records were found to contaminate the model with mis-extracted per-square-meter prices and centroid-level geocoding. The merge, de-duplication, distressed-listing removal, and price-band filters that reduced the raw scrape to the final 3{,}616 rows are documented in the data-collection funnel and summarized in Chapter 4.
 
-The preparation flow is summarized in Table~\ref{tab:chapter5-prep-flow}. The biggest change was the restriction to the open\_market segment. After that, the script removed only rows that could not support the target variable or the spatial-lag feature.
-
-\begin{table}[htbp]
-\caption{Preparation Flow from Frozen ABT to Modeling-Ready Dataset}
-\label{tab:chapter5-prep-flow}
-\begin{center}
-\begin{tabular}{p{0.34\textwidth} p{0.12\textwidth} p{0.12\textwidth} p{0.17\textwidth}}
-\toprule
-Preparation Step & Rows Kept & Share of ABT & Rows Removed \\
-\midrule
-Frozen ABT before Chapter 5 filtering & 2{,}047 & 100.00\% & -- \\
-Filter to open\_market & 1{,}619 & 79.09\% & 428 \\
-Drop three integrity rows & 1{,}616 & 78.95\% & 3 \\
-Drop null price\_per\_sqm & 1{,}509 & 73.72\% & 107 \\
-Drop null spatial\_lag\_price & 1{,}491 & 72.84\% & 18 \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-
-By the end of this phase, 1{,}491 rows remained for model fitting. This means 72.84\% of the frozen ABT entered the final training workflow. The removed rows were not dropped because they were statistically inconvenient. They were dropped because they could not support the definition of the target variable or the required neighborhood context.
+The goal of this phase was to turn that frozen ABT into the exact matrices used by the stratified modeling pipeline. This meant keeping the ABT as the reference file, then applying integrity filters and splitting the data by property type for separate model fitting.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Cleaning and Filtering}}{Cleaning and Filtering}}\label{cleaning-and-filtering}
 
-The first cleaning step was a scope decision. The ABT kept three market segments for reference: open\_market, bank\_ropa, and floor\_price. However, the deployed task of the thesis was the estimation of open-market residential prices. Because of that, the modeling script filtered the ABT to market\_segment = open\_market before any encoding or model fitting. This removed 428 rows from the broader file and left 1{,}619 open-market observations.
+The cleaning that produced the open-market ABT followed the valuation basis of the thesis. Open-market listings represent the closest available proxy to Market Value in the IVS sense, while bank ROPA and administrative floor-price records reflect different pricing conditions and should not be pooled into the same training target \parencite{ivs2025}.
 
-This step also aligned the training data with the thesis valuation basis. Open-market listings represent the closest available proxy to Market Value in the IVS sense, while bank ROPA and administrative floor-price records reflect different pricing conditions and should not be pooled into the same training target \parencite{ivs2025}. The ABT still retained those other segments, but they were treated as reference layers rather than training labels.
+Several filters were applied during the multi-source cleaning step. Distressed and mortgage-assumption listings, which quote loan balances rather than market value, were removed by keyword. Duplicate listings were collapsed on coordinate, price, and area, and a spatial cap limited the number of listings per location cell so that a few dense clusters could not dominate a stratum. A per-stratum price-per-square-meter sanity band removed area-entry errors and extreme mispricing. One condominium record was dropped because it was a misclassified house-sized unit.
 
-A second cleaning step handled obvious integrity failures. Three rows with property\_id values 468, 714, and 769 were removed before model fitting. These rows had implausible unit prices that were not defensible for residential valuation in Metro Cebu. Their removal was a hard data-integrity action, not a general outlier-pruning rule.
+The remaining model-requirement filters were tied to the target and the spatial-lag feature. Rows with a null \emph{price\_per\_sqm} were removed because the target could not be computed, and rows with a null \emph{spatial\_lag\_price} were removed because the neighborhood-price feature was part of the final design. After all filtering, the open-market ABT held 3{,}616 rows across the cleaned residential taxonomy: Condominium, House and Lot, Townhouse, Single Detached, and Vacant Lot.
 
-The remaining row filters were tied to model requirements. Rows with null price\_per\_sqm were removed because the target variable could not be computed. Rows with null spatial\_lag\_price were also removed because the neighborhood-price feature was part of the final design. After these two filters, the open-market subset decreased from 1{,}616 to 1{,}491 rows.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Property-type cleanup was already applied before this stage. The ABT used a standardized six-class residential taxonomy: Condominium, House and Lot, Townhouse, Single Detached, Vacant Lot, and Apartment. The earlier generic Residential label had already been removed before this stage, so Chapter 5 started from a residential-only file with the cleaned final taxonomy.
+\subsection{\texorpdfstring{\textbf{Stratum Split}}{Stratum Split}}\label{stratum-split}
+
+The modeling-ready data was split into three strata for separate model fitting, because condominiums, houses, and vacant lots are priced on very different per-square-meter logics. Table~\ref{tab:chapter5-strata-split} shows the resulting sizes.
+
+\begin{table}[htbp]
+\caption{Open-Market ABT Split into Modeling Strata}
+\label{tab:chapter5-strata-split}
+\begin{center}
+\begin{tabular}{p{0.30\textwidth} p{0.16\textwidth} p{0.36\textwidth}}
+\toprule
+Stratum & Rows & Membership \\
+\midrule
+Condominium & 1{,}300 & Vertical residential units \\
+Houses & 1{,}223 & Single Detached, House and Lot, Townhouse \\
+Vacant Lot & 849 & Bare land within the lot scope filter \\
+\midrule
+Total & 3{,}616 & Open-market listings \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+The vacant-lot stratum used an additional scope filter, keeping lots between 80 and 2{,}000 square meters with a price of at least half the BIR zonal value, to exclude commercial-scale parcels and obvious data errors.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Missing Data Treatment}}{Missing Data Treatment}}\label{missing-data-treatment}
 
-Missing-data treatment followed the practical pattern of the project: keep the file usable, preserve meaning when possible, and avoid inventing information that the sources did not actually provide.
+Missing-data treatment followed the practical pattern of the project: keep the file usable, preserve meaning when possible, and avoid inventing information that the sources did not provide.
 
-The first structural decision involved size variables. The thesis used area\_sqm as the main size feature, with floor\_area\_sqm preferred when available and lot\_area\_sqm used as fallback. This was paired with an is\_vacant\_lot flag so that land-only listings stayed visible to the model. This design was important because vacant lots are priced on land area, while most open-market condominium listings do not carry a meaningful lot-area field.
+The first structural decision involved size variables. The thesis used \emph{area\_sqm} as the main size feature, with floor area preferred when available and lot area used as fallback. This mattered because vacant lots are priced on land area while condominium listings are priced on floor area. Vacant lots carried only this size field; they had no bedroom or bathroom attributes, and none were imputed for them.
 
-The second issue was structural absence in lot\_area\_sqm. In the open-market segment, lot\_area\_sqm was fully missing because Lamudi listings did not systematically provide lot area. The modeling script treated this as an all-null column, filled it with 0 inside the feature matrix, and then dropped log\_lot\_area\_sqm from the OLS matrix because it became a constant field. This kept the matrix complete without pretending that lot area was observed for those listings.
-
-The ABT already carried preparation flags for bedrooms, bathrooms, and floor area. In the open-market segment, the file contained 449 rows with bedrooms\_imputed = 1, 299 rows with bathrooms\_imputed = 1, and 107 rows with floor\_area\_imputed = 1. After the final training filters, the remaining 1{,}491-row modeling subset still contained 397 bedroom-imputed rows and 253 bathroom-imputed rows, while floor\_area\_imputed dropped to 0 because the rows with unresolved floor-area issues were removed together with the null target rows.
-
-The final model-build script still applied one more safeguard step. After filtering and encoding, it checked the remaining numeric columns for nulls and used median imputation where needed. In the current frozen pipeline, this affected bedrooms, bathrooms, bir\_zonal\_cr\_median, and bir\_zonal\_rc\_median. The all-null lot\_area\_sqm column was handled separately and filled with 0 rather than sent through the median imputer.
-
-Table~\ref{tab:chapter5-missing-treatment} summarizes the main missing-data actions that carried into the final matrix.
-
-\begin{table}[htbp]
-\caption{Main Missing-Data Treatments Used in Chapter 5}
-\label{tab:chapter5-missing-treatment}
-\begin{center}
-\small
-\begin{tabular}{p{0.19\textwidth} p{0.23\textwidth} p{0.19\textwidth} p{0.18\textwidth}}
-\toprule
-Field or Issue & Treatment Used & Why It Was Needed & Effect on Final Matrix \\
-\midrule
-area\_sqm / is\_vacant\_lot & Use floor area first, then lot area fallback; keep vacancy flag & Separate built space from land-only listings & Kept one usable size signal across property types \\
-lot\_area\_sqm in open\_market & Fill all-null column with 0 in the model script & Lamudi rows structurally lacked lot-area values & Matrix stayed complete; constant log form was dropped from OLS \\
-bedrooms and bathrooms & Keep audit flags in the ABT, then median-impute remaining numeric nulls & Interior details were incomplete in part of the listings & Structural fields stayed usable without dropping many rows \\
-bir\_zonal\_cr\_median and bir\_zonal\_rc\_median & Median-impute remaining numeric nulls after filtering & Some zonal classes were still missing by location & Administrative columns stayed usable in the final matrix \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-
-No separate feature scaling or normalization step was applied in this phase. The pipeline did not include a scaler, and the final models did not require one for the implemented workflow.
+For condominiums and houses, bedrooms and bathrooms were sometimes missing and were median-imputed, with audit flags retained so imputed values stayed visible. In the condominium stratum, 242 rows had an imputed bedroom value and 146 an imputed bathroom value; in the house stratum, 39 rows had an imputed bedroom value and 62 an imputed bathroom value. After filtering and encoding, any remaining numeric nulls were median-imputed as a final safeguard, and structurally absent columns were filled with zero rather than imputed.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Market Segment Treatment}}{Market Segment Treatment}}\label{market-segment-treatment}
 
-The market\_segment field stayed in the ABT because it was useful for audit and provenance work. It allowed the project to keep open\_market, bank\_ropa, and floor\_price rows in one canonical file. However, it was not used as a model feature in the final training workflow.
+The deployed task of the thesis was the estimation of open-market residential prices, so the modeling ABT contained open-market listings only. Bank ROPA and floor-price records were kept in the wider data system as conservative reference layers, not as training labels. Because the modeling file was open-market only, the market-segment field was constant and was excluded from the feature matrix.
 
-Once the dataset was filtered to open\_market only, market\_segment became a constant column. A constant string field adds no useful variation, so it was excluded from the feature matrix. This prevented the model from learning a meaningless dummy for a segment that no longer varied in the training data.
-
-This step also kept the model aligned with the actual prediction objective of the Streamlit app. The deployed map estimates open-market residential price levels across Metro Cebu. It does not estimate forced-sale or administrative floor-price values.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection{\texorpdfstring{\textbf{Outlier Flagging}}{Outlier Flagging}}\label{outlier-flagging}
-
-The project treated outliers in two different ways. First, the ABT kept a soft price\_outlier\_flag field. This flag marked values outside the 1st to 99th percentile range of price\_php in the full ABT. In the frozen file, 19 rows had price\_outlier\_flag = True: 14 in open\_market, four in bank\_ropa, and one in floor\_price. These rows were not automatically removed just because they were extreme.
-
-For bank ROPA rows, the same percentile rule was backfilled in the ABT so the flag would be consistent across sources. This preserved the flag as a diagnostic variable without forcing a blanket deletion policy.
-
-Second, the project used a much narrower hard-drop rule for obvious integrity failures. Only the three implausible open-market rows with property\_id 468, 714, and 769 were removed before model fitting. This distinction mattered. Soft outlier flags were used to warn the analyst that a price was unusual. Hard integrity drops were reserved for rows that were not credible enough to keep in a residential valuation model.
+This kept the model aligned with its prediction objective. The deployed map estimates open-market residential price levels across Metro Cebu; it does not estimate forced-sale or administrative floor-price values.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Feature Engineering}}{Feature Engineering}}\label{feature-engineering-ch5}
 
-Most of the heavy feature engineering had already been completed before this chapter, but Chapter 5 still had to decide which engineered fields would actually enter the model matrices.
+Most of the heavy feature engineering had already been completed before this chapter, but Chapter 5 still had to decide which engineered fields would enter each stratum's matrix.
 
-The project kept the eight network-distance variables for the tree-based models: Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport distances. The is\_mactan\_island flag was also retained in the full matrix because Lapu-Lapu properties sit in a different road-network and bridge-access context.
+The project kept the eight network-distance variables: Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport distances. For accessibility, the ABT carried eight category-level Metro Cebu Residential Accessibility Index (MCRAI) fields plus the \emph{mcrai\_composite}. The older \emph{amenity\_score\_*} fields had already been dropped because they duplicated the same concept with a weaker formulation, and the retired finance category and transport category were removed, with transport accessibility represented through the road-network distances instead.
 
-For accessibility, the final ABT retained the nine category-level Metro Cebu Residential Accessibility Index (MCRAI) fields. The older amenity\_score\_* fields had already been dropped because they duplicated the same concept with a weaker formulation. The ABT also stored mcrai\_composite, but the model matrix excluded it because it is a weighted summary of the nine component scores and would create redundancy if used together with them.
+The \emph{spatial\_lag\_price} field, the mean price of other same-type properties within 500 meters, was treated as a required engineered feature rather than an optional one. Rows with a null spatial lag were removed during filtering instead of being imputed.
 
-The spatial\_lag\_price field was treated as a required engineered feature, not an optional add-on. Because of that, rows with null spatial\_lag\_price were removed during the filtering stage instead of being imputed.
-
-The OLS baseline used a narrower version of the feature set than Random Forest and XGBoost. This was done to reduce collinearity and coefficient instability. In the current script, X\_ols dropped dist\_talisay\_tabunok\_m, is\_mactan\_island, bir\_zonal\_rr\_log, is\_vacant\_lot, latitude, longitude, lot\_area\_sqm, floor\_area\_sqm, area\_sqm, and log\_lot\_area\_sqm. It then added log\_floor\_area\_sqm as the area term for the log-linear hedonic baseline.
+As described in Chapters 3 and 6, the feature set was then trimmed per stratum from exploratory evidence. All three strata dropped the redundant BIR log and commercial-zonal columns and the two road-class distance features. The condominium and house models used the single MCRAI composite, while the vacant-lot model used six individual MCRAI categories and dropped the composite. The OLS baseline used a slightly tighter set within each stratum, replacing the raw area fields with a log-area term and removing variables that were collinear with adjacent CBD-distance terms, to keep the hedonic coefficients stable.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{\texorpdfstring{\textbf{Encoding and Final Modeling-Ready Dataset}}{Encoding and Final Modeling-Ready Dataset}}\label{encoding-and-final-modeling-ready-dataset}
+\subsection{\texorpdfstring{\textbf{Encoding and Final Modeling-Ready Matrices}}{Encoding and Final Modeling-Ready Matrices}}\label{encoding-and-final-modeling-ready-dataset}
 
-The final preparation step converted the cleaned dataset into model matrices. The script one-hot encoded city and property\_type using drop\_first = True. This produced five city dummy variables and five property-type dummy variables in the full feature matrix.
-
-After encoding and numeric-null handling, the full matrix used for Random Forest and XGBoost had shape 1{,}491 $\times$ 48. The OLS baseline matrix had shape 1{,}491 $\times$ 39 after the extra stability drops described earlier. Table~\ref{tab:chapter5-final-matrix} summarizes the result.
+The final preparation step converted each stratum into model matrices. City and property type were one-hot encoded with \emph{drop\_first = True}. After encoding and numeric-null handling, the retained feature counts were 21 for condominiums, 24 for houses, and 22 for vacant lots, as summarized in Table~\ref{tab:chapter5-final-matrix}. Instead of a single train-test split, model quality was estimated with five-fold grouped cross-validation by coordinate cluster, so that co-located listings could not leak across folds.
 
 \begin{table}[htbp]
-\caption{Final Modeling-Ready Matrices and Split}
+\caption{Final Modeling-Ready Matrices by Stratum}
 \label{tab:chapter5-final-matrix}
 \begin{center}
-\begin{tabular}{p{0.28\textwidth} p{0.18\textwidth} p{0.34\textwidth}}
+\begin{tabular}{p{0.26\textwidth} p{0.14\textwidth} p{0.18\textwidth} p{0.20\textwidth}}
 \toprule
-Output & Shape or Size & Notes \\
+Stratum & Rows & Features & Validation \\
 \midrule
-Full tree-model matrix (X\_full) & 1{,}491 $\times$ 48 & Used for Random Forest and XGBoost \\
-OLS matrix (X\_ols) & 1{,}491 $\times$ 39 & Used for the log-linear baseline after extra stability drops \\
-Training split & 1{,}192 rows & 80\% of the modeling-ready data \\
-Test split & 299 rows & 20\% of the modeling-ready data \\
-Categorical encoding & 5 city dummies, 5 property-type dummies & Created with one-hot encoding and drop\_first = True \\
+Condominium & 1{,}300 & 21 & GroupKFold (5) \\
+Houses & 1{,}223 & 24 & GroupKFold (5) \\
+Vacant Lot & 849 & 22 & GroupKFold (5) \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-The final modeling-ready subset remained concentrated in the same main residential markets seen in Chapter 4, especially Lapu-Lapu City and Cebu City. Even after the row drops, the dataset still covered all six LGUs and all six standardized residential property types.
-
-Overall, the data preparation phase was conservative. It did not chase a perfectly tidy dataset. Instead, it applied a small number of defensible filters, preserved the main valuation signals, and made the feature matrix complete enough for model fitting. Chapter 6 discusses how these prepared matrices were used in OLS, Random Forest, and XGBoost.
+Overall, the data preparation phase was conservative. It applied a small number of defensible filters, preserved the main valuation signals, kept the matrices complete enough for model fitting, and split the data by property type. Chapter 6 discusses how these prepared matrices were used in OLS, Random Forest, and XGBoost.

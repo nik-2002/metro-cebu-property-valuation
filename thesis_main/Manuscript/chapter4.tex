@@ -4,39 +4,30 @@ This chapter covers the CRISP-DM data understanding phase for the frozen analyti
 
 \subsection{\texorpdfstring{\textbf{Initial Data Collection}}{Initial Data Collection}}\label{initial-data-collection}
 
-The final ABT had 2{,}047 rows and 50 columns. It combined three segments in one file: open-market listings, bank real and other properties acquired (ROPA), and floor-price records. This setup made it easier to compare sources before applying the training filters used later in the workflow.
+The frozen open-market ABT had 3{,}616 rows and 51 columns. It collected open-market residential listings from several portals into one file. Bank ROPA and administrative floor-price records were maintained separately as conservative reference layers and were not part of this modeling file, because they reflect distressed and administrative pricing rather than open-market value.
 
-Table~\ref{tab:abt-source-composition} shows the source mix. Lamudi had 1{,}619 rows (79.09\%), so it dominated the file. Bank sources had 320 rows (15.63\%). Most of these came from Bank of Commerce. BDO and Pag-IBIG had 108 floor-price rows (5.28\%).
+Table~\ref{tab:abt-source-composition} shows the source mix. Lamudi was the largest contributor, through a bulk scraper and a later browser-based batch that recovered listings after the site added an anti-bot wall. FilipinoHomes and DotProperty widened the coverage and reduced dependence on any single portal.
 
 \begin{table}[htbp]
-\caption{Final ABT Composition by Source and Market Segment}
+\caption{Open-Market ABT Composition by Source}
 \label{tab:abt-source-composition}
 \begin{center}
-\scriptsize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{0.22\textwidth} p{0.15\textwidth} p{0.09\textwidth} p{0.09\textwidth} p{0.25\textwidth}}
+\begin{tabular}{p{0.30\textwidth} p{0.12\textwidth} p{0.11\textwidth} p{0.27\textwidth}}
 \toprule
-Source & Market Segment & Rows & Share & Role in ABT \\
+Source & Rows & Share & Role in ABT \\
 \midrule
-Lamudi & open\_market & 1{,}619 & 79.09\% & Arm's-length asking-price listings used for the deployed market-value surface \\
-Bank of Commerce & bank\_ropa & 234 & 11.28\% & Distressed residential inventory \\
-BPI & bank\_ropa & 65 & 3.13\% & Distressed residential inventory \\
-Metrobank & bank\_ropa & 15 & 0.72\% & Distressed residential inventory \\
-China Bank Savings & bank\_ropa & 4 & 0.19\% & Distressed residential inventory \\
-Landbank & bank\_ropa & 2 & 0.10\% & Distressed residential inventory \\
-PagIBIG & floor\_price & 96 & 4.63\% & Administrative floor-price benchmark \\
-BDO & floor\_price & 12 & 0.58\% & Administrative floor-price benchmark \\
+Lamudi (bulk) & 1{,}578 & 43.6\% & Arm's-length asking-price listings \\
+FilipinoHomes & 1{,}203 & 33.3\% & Listings with precise embedded coordinates \\
+DotProperty & 565 & 15.6\% & Listings geocoded from barangay text \\
+Lamudi (browser batch) & 270 & 7.5\% & Anti-bot recovery batch \\
 \midrule
-Total & all segments & 2{,}047 & 100.00\% & Frozen ABT before Chapter 5 filtering \\
+Total & 3{,}616 & 100.0\% & Frozen open-market ABT \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-The ABT covered six LGUs: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed as a CBD distance anchor, but it was not included as a training LGU. Based on the logged decision, the four Naga listings from Phase C were dropped before merge because they were too few for stable learning.
-
-
-Cebu City and Lapu-Lapu City together accounted for 66.73\% of ABT rows. All 643 Lapu-Lapu rows carried \emph{is\_mactan\_island} = 1. The full breakdown by LGU and market segment is shown in Appendix B.
+The ABT covered six LGUs: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed as a CBD distance anchor but was not a training LGU. Cebu City and Lapu-Lapu City together held the largest share of rows, reflecting the concentration of online residential listings in the core and island submarkets.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -50,98 +41,77 @@ The ABT columns can be grouped into eight blocks. The table below gives the main
 \begin{center}
 \scriptsize
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{0.18\textwidth} p{0.29\textwidth} p{0.07\textwidth} p{0.26\textwidth}}
+\begin{tabular}{p{0.18\textwidth} p{0.31\textwidth} p{0.07\textwidth} p{0.24\textwidth}}
 \toprule
 Feature Group & Representative Columns & Count & Role in Chapter 4 description \\
 \midrule
-Identifiers and provenance & property\_id, source, price\_type, geocode\_source, market\_segment & 7 & Row identity and source provenance \\
-Structural and flags & property\_type, area\_sqm, floor\_area\_sqm, lot\_area\_sqm, bedrooms, bathrooms, flag columns & 10 & Physical attributes and structural sparsity \\
-Location and scope & city, latitude, longitude, barangay\_geocoded, is\_mactan\_island & 5 & Study-area placement and island tagging \\
-CBD-distance features & Eight retained dist variables for CBP, Mandaue, Mactan, SRP, Tabunok, Consolacion, Naga, and Airport & 8 & Network access to polycentric anchors \\
+Identifiers and provenance & property\_id, source, geocode\_source, market\_segment & 6 & Row identity and source provenance \\
+Structural and flags & property\_type, area\_sqm, floor\_area\_sqm, lot\_area\_sqm, bedrooms, bathrooms, imputation flags & 10 & Physical attributes and structural sparsity \\
+Location and scope & city, latitude, longitude, barangay\_geocoded & 4 & Study-area placement \\
+CBD-distance features & Eight dist variables for CBP, Mandaue, Mactan, SRP, Tabunok, Consolacion, Naga, and Airport & 8 & Network access to polycentric anchors \\
 Administrative zonal fields & bir\_zonal\_rr\_median, bir\_zonal\_cr\_median, bir\_zonal\_rc\_median, bir\_zonal\_rr\_log & 4 & BIR benchmark linkage \\
 Target and derived price fields & price\_php, price\_per\_sqm, log\_price, valuation\_gap, price\_outlier\_flag & 5 & Target, transform, and diagnostics \\
 Spatial context & spatial\_lag\_price & 1 & Neighbor-price context \\
-MCRAI accessibility fields & Nine category scores plus mcrai\_composite & 10 & Accessibility coverage summary \\
+MCRAI accessibility fields & Eight category scores plus mcrai\_composite & 9 & Accessibility coverage summary \\
 \midrule
-Total & Full ABT schema & 50 & Frozen chapter reference file \\
+Total & Full ABT schema & 51 & Frozen chapter reference file \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-Three columns are key for this thesis flow. First, price\_per\_sqm is the target variable. Second, valuation\_gap is a diagnostic field based on price\_per\_sqm and BIR residential benchmarks. Third, the MCRAI block keeps both category-level scores and the mcrai\_composite score.
+Three columns are key for this thesis flow. First, \emph{price\_per\_sqm} is the target variable. Second, \emph{valuation\_gap} is a diagnostic field based on \emph{price\_per\_sqm} and the BIR residential benchmark. Third, the MCRAI block keeps both the eight category-level scores and the \emph{mcrai\_composite} score. The earlier finance category was retired and transport accessibility was moved to the road-distance features, so the framework now carries eight amenity categories.
 
-This schema also shows why the ABT was not yet a final model matrix at this stage. Some fields were complete and stable, like CBD distances and most geospatial features. Other fields depended heavily on source behavior, especially structural housing fields.
+This schema also shows why the ABT was not yet a final model matrix at this stage. Some fields were complete and stable, like CBD distances. Other fields depended heavily on source behavior, especially structural housing fields.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Initial Data Exploration}}{Initial Data Exploration}}\label{initial-data-exploration}
 
-Initial exploration focused on target distribution, property-type mix, geographic spread, and accessibility coverage. Out of 2{,}047 rows, 1{,}940 had non-null price\_per\_sqm. The 107 missing unit-price rows all came from Lamudi records with incomplete input fields needed for unit-price calculation.
-
-\begin{table}[htbp]
-\caption{Distribution of price\_per\_sqm by Market Segment}
-\label{tab:price-by-segment}
-\begin{center}
-\scriptsize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{0.16\textwidth} p{0.10\textwidth} p{0.14\textwidth} p{0.14\textwidth} p{0.16\textwidth} p{0.12\textwidth}}
-\toprule
-Market Segment & Non-null Rows & Q1 & Median & Mean & Q3 \\
-\midrule
-open\_market & 1{,}512 & PHP~65{,}323.96 & PHP~111{,}303.56 & PHP~140{,}135.47 & PHP~178{,}751.00 \\
-bank\_ropa & 320 & PHP~16{,}600.00 & PHP~21{,}000.00 & PHP~30{,}000.56 & PHP~32{,}960.20 \\
-floor\_price & 108 & PHP~58{,}506.38 & PHP~91{,}017.27 & PHP~90{,}188.61 & PHP~119{,}481.21 \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-
-Table~\ref{tab:price-by-segment} shows a clear spread across segments. Open-market values were much higher than bank ROPA values on both median and mean. The open-market distribution was also right-skewed, with a long upper tail.
+Initial exploration focused on target distribution, property-type mix, geographic spread, and accessibility coverage. The open-market \emph{price\_per\_sqm} distribution was right-skewed, with a first quartile near PHP~47{,}500, a median near PHP~82{,}000, and a third quartile near PHP~152{,}000, with a long upper tail. This skew is why the modeling target was log-transformed.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{../../EDA/price_by_segment.png}
-\caption{Distribution of price\_per\_sqm by Market Segment. Open-market values were substantially higher than bank ROPA values, with a wider upper tail reflecting the spread in residential asking prices across Metro Cebu.}
+\includegraphics[width=0.85\textwidth]{../EDA/price_by_segment.png}
+\caption{Distribution of price\_per\_sqm for the open-market listings against the conservative reference layers. Open-market values sat well above bank ROPA values, with a wider upper tail reflecting the spread in residential asking prices across Metro Cebu.}
 \label{fig:price-by-segment}
 \end{figure}
 
+Property-type composition is shown in Table~\ref{tab:property-type-composition}. Condominiums were the largest class, and vacant lots had far lower median unit prices than vertical or built housing types. This mix is exactly why the study modeled the property types separately rather than pooling them.
+
 \begin{table}[htbp]
-\caption{Property-Type Composition and Median price\_per\_sqm}
+\caption{Property-Type Composition and Median price\_per\_sqm (Open-Market ABT)}
 \label{tab:property-type-composition}
 \begin{center}
-\begin{tabular}{p{0.20\textwidth} p{0.11\textwidth} p{0.11\textwidth} p{0.20\textwidth}}
+\begin{tabular}{p{0.22\textwidth} p{0.11\textwidth} p{0.11\textwidth} p{0.22\textwidth}}
 \toprule
 Property Type & Rows & Share & Median price\_per\_sqm \\
 \midrule
-Condominium & 862 & 42.11\% & PHP~166{,}666.67 \\
-Vacant Lot & 461 & 22.52\% & PHP~18{,}041.24 \\
-House and Lot & 412 & 20.13\% & PHP~73{,}252.03 \\
-Single Detached & 221 & 10.80\% & PHP~87{,}500.00 \\
-Townhouse & 89 & 4.35\% & PHP~51{,}546.54 \\
-Apartment & 2 & 0.10\% & PHP~160{,}363.37 \\
+Condominium & 1{,}391 & 38.0\% & PHP~163{,}473 \\
+Vacant Lot & 924 & 26.0\% & PHP~29{,}106 \\
+House and Lot & 856 & 24.0\% & PHP~72{,}169 \\
+Single Detached & 259 & 7.0\% & PHP~80{,}000 \\
+Townhouse & 184 & 5.0\% & PHP~57{,}900 \\
+Apartment & 2 & 0.1\% & PHP~160{,}363 \\
 \bottomrule
 \end{tabular}
 \end{center}
+\footnotesize{Counts are for the full open-market ABT before the per-stratum scope filters applied in Chapter 5.}
 \end{table}
-
-Table~\ref{tab:property-type-composition} shows that condominiums were the largest class in the ABT. Vacant lots had much lower median unit prices than vertical housing types. This mix helped explain the wide spread in the target field.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{../../EDA/price_by_property_type.png}
+\includegraphics[width=0.85\textwidth]{../EDA/price_by_property_type.png}
 \caption{Median price\_per\_sqm by Property Type. Condominiums commanded the highest unit prices; vacant lots had the lowest, reflecting their land-only composition without built area.}
 \label{fig:price-by-property-type}
 \end{figure}
 
-Lapu-Lapu records also stood out in the geographic review. The city had 558 open-market rows, and all 643 rows from that LGU had is\_mactan\_island = 1. This confirms that a large part of the ABT sits in the island market context.
-
-Geographic spread in the open-market subset was also uneven. Cebu City had the highest median unit price at PHP~142{,}886.60/sqm, followed by Lapu-Lapu City at PHP~125{,}799.56/sqm and Mandaue City at PHP~114{,}500.00/sqm. Minglanilla, Talisay City, and Consolacion formed a lower-price band, with medians between PHP~54{,}881.34 and PHP~70{,}520.26/sqm. This indicates that the premium open-market signal in the ABT remained concentrated in the core and island urban submarkets rather than the peripheral suburban LGUs. The CBD-distance matrix also showed that the southern corridor distances moved together very closely, especially the SRP--Tabunok pair ($r = 0.959$) and the Tabunok--Naga pair ($r = 0.973$). This was an early warning that the linear benchmark model would later require a collinearity check even though the nodes remained substantively meaningful.
+Geographic spread in the open-market subset was uneven. Cebu City had the highest median unit price at about PHP~113{,}600 per square meter, followed by Mandaue City at about PHP~96{,}100 and Lapu-Lapu City at about PHP~92{,}100. Talisay City, Minglanilla, and Consolacion formed a lower-price band, with medians between about PHP~47{,}100 and PHP~56{,}800 per square meter. The premium open-market signal therefore stayed concentrated in the core and island submarkets rather than the peripheral suburban LGUs. The CBD-distance matrix also showed that several southern-corridor distances moved together closely, an early warning that the linear baseline would later need a collinearity check even though the nodes remained substantively meaningful.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{../../EDA/price_by_city_open_market.png}
-\caption{Median price\_per\_sqm by LGU for the Open-Market Subset. Cebu City and Lapu-Lapu City showed the highest median unit prices; Consolacion, Talisay, and Minglanilla formed a lower-price band.}
+\includegraphics[width=0.85\textwidth]{../EDA/price_by_city_open_market.png}
+\caption{Median price\_per\_sqm by LGU for the Open-Market Subset. Cebu City, Mandaue, and Lapu-Lapu showed the highest median unit prices; Talisay, Minglanilla, and Consolacion formed a lower-price band.}
 \label{fig:price-by-city}
 \end{figure}
 
@@ -153,74 +123,65 @@ Geographic spread in the open-market subset was also uneven. Cebu City had the h
 \toprule
 MCRAI Field & Zero Rate & Exploratory Reading \\
 \midrule
-mcrai\_education & 39.86\% & Education access remained sparse for peripheral and island locations \\
-mcrai\_finance & 36.34\% & Finance nodes were still clustered around denser urban centers \\
-mcrai\_health & 32.10\% & Hospital and clinic access was uneven across the six-LGU scope \\
-mcrai\_security & 30.22\% & Security infrastructure remained absent in many residential catchments \\
-mcrai\_retail\_density & 21.59\% & Retail and food density improved after query expansion but was not universal \\
-mcrai\_recreation & 6.80\% & Recreation coverage was broad but still thinner in selected peripheral locations \\
-mcrai\_transport & 5.59\% & Corridor-based transport access was widespread, not complete \\
-mcrai\_grocery & 2.60\% & Grocery access was near-universal in the final file \\
-mcrai\_tourism & 0.58\% & Tourism and hospitality nodes were almost always observed within the broad catchment \\
-mcrai\_composite & 0.24\% & Positive-weight composite coverage was effectively complete \\
+mcrai\_security & 26.6\% & Security infrastructure was absent in many residential catchments \\
+mcrai\_retail\_density & 15.8\% & Retail and food density improved after query expansion but was not universal \\
+mcrai\_recreation & 12.0\% & Recreation coverage was broad but thinner in some peripheral locations \\
+mcrai\_health & 10.0\% & Clinic access was uneven across the six-LGU scope \\
+mcrai\_grocery & 4.3\% & Grocery access was near-universal in the final file \\
+mcrai\_hospitals & 3.1\% & Hospital catchments were broad given the 5 km radius \\
+mcrai\_tourism & 1.5\% & Tourism and hospitality nodes were almost always observed \\
+mcrai\_education & 0.3\% & Education access was effectively complete in the final file \\
+mcrai\_composite & 0.2\% & Positive-weight composite coverage was effectively complete \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-Table~\ref{tab:mcrai-zero-rates} shows that MCRAI coverage was generally strong, but not uniform across categories. Grocery, tourism, and the composite score had very low zero rates. Education, finance, health, and security had higher zero rates.
+Table~\ref{tab:mcrai-zero-rates} shows that MCRAI coverage was generally strong, but not uniform. Education, the composite, tourism, and grocery had very low zero rates, while security and retail density had higher zero rates. The higher security zero rate, concentrated unevenly across LGUs, was one reason that category was later dropped from the vacant-lot model.
 
-A rank-based exploratory check on the open-market subset showed that location and accessibility fields aligned positively with unit price, while several size-related structural fields moved in the opposite direction. \texttt{bir\_zonal\_rr\_median} ($\rho = 0.343$) and \texttt{mcrai\_composite} ($\rho = 0.273$) were positively associated with \texttt{price\_per\_sqm}. By contrast, \texttt{floor\_area\_sqm} ($\rho = -0.461$), \texttt{bedrooms} ($\rho = -0.450$), and \texttt{bathrooms} ($\rho = -0.321$) were negatively associated with \texttt{price\_per\_sqm}. This does not mean the target was inverted. It reflects the arithmetic of a unit-price target and the composition of the sample: compact condominiums in Cebu City and Lapu-Lapu City tend to command higher PHP/sqm, while larger detached homes and land-oriented listings more often sit in lower-density submarkets where total asking price can still be high but price per square meter is lower. Consistent with this reading, the same structural variables remained positively associated with total asking price in the open-market subset.
-
-The updated retail-density behavior after the targeted POI re-fetch is visible in the frozen ABT. Minglanilla had 6.74\% overall zeros in mcrai\_retail\_density, and 5.63\% in the open-market subset. In the same open-market subset, Talisay City had 18.82\% and Lapu-Lapu City had 24.33\%. For transport, open-market zero rates remained higher in Minglanilla (29.58\%) and Lapu-Lapu City (14.85\%).
-
-For BIR linkage, the frozen ABT had full coverage for bir\_zonal\_rr\_median across all 2{,}047 rows. The incomplete part was valuation\_gap, which was missing in the same 107 rows where price\_per\_sqm was missing.
+A rank-based exploratory check on the open-market subset showed that location and accessibility fields aligned positively with unit price, while several size-related structural fields moved in the opposite direction. The BIR residential benchmark and the MCRAI composite were positively associated with \emph{price\_per\_sqm}, while floor area, bedrooms, and bathrooms were negatively associated with it. This does not mean the target was inverted. It reflects the arithmetic of a per-square-meter target and the composition of the sample: compact condominiums in Cebu City and Lapu-Lapu City tend to command higher PHP per square meter, while larger detached homes and land-oriented listings more often sit in lower-density submarkets where total asking price can still be high but price per square meter is lower. Consistent with this reading, the same structural variables remained positively associated with total asking price.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Data Quality Assessment}}{Data Quality Assessment}}\label{data-quality-assessment}
 
-Data quality checks looked at missingness, integrity flags, cross-segment differences, and external-data contamination issues that were fixed before freeze.
+Data quality checks looked at missingness, integrity, source differences, and external-data contamination issues that were fixed before freeze.
 
 \begin{table}[htbp]
-\caption{Major Missingness Patterns in the Final ABT}
+\caption{Major Missingness Patterns in the Open-Market ABT}
 \label{tab:missingness-patterns}
 \begin{center}
 \scriptsize
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{0.18\textwidth} p{0.09\textwidth} p{0.09\textwidth} p{0.20\textwidth} p{0.22\textwidth}}
+\begin{tabular}{p{0.22\textwidth} p{0.10\textwidth} p{0.55\textwidth}}
 \toprule
-Field & Nulls & Share & Concentration & Reading for Chapter 5 \\
+Field & Share Null & Reading for Chapter 5 \\
 \midrule
-lot\_area\_sqm & 1{,}758 & 84.72\% & 100.00\% of open\_market rows; 82.41\% of floor\_price rows & Structural source absence, not random missingness \\
-barangay\_geocoded & 834 & 40.19\% & Weakest barangay recovery in Consolacion and Mandaue & Location granularity remained uneven \\
-bedrooms & 334 & 16.10\% & 20.28\% of open\_market rows & Mostly Lamudi field gaps \\
-bathrooms & 237 & 11.42\% & 14.39\% of open\_market rows & Mostly Lamudi field gaps \\
-price\_per\_sqm & 107 & 5.23\% & All 107 nulls came from Lamudi rows & Target derivation incomplete for a small open-market subset \\
-valuation\_gap & 107 & 5.23\% & Same rows as price\_per\_sqm & Diagnostic field depends on target availability \\
-floor\_area\_sqm & 78 & 3.76\% & 4.74\% of open\_market rows & Residual Lamudi incompleteness \\
-area\_sqm and log\_price & 78 each & 3.76\% & Same rows as floor\_area\_sqm nulls & Derived-field propagation of source gaps \\
-spatial\_lag\_price & 23 & 1.11\% & Thinly spread across all segments & Neighbor-based context unavailable for a small edge subset \\
+lot\_area\_sqm & 100.0\% & Structural source absence; open-market listings carry floor area, not lot area \\
+bir\_zonal\_rc\_median & 35.6\% & Some residential-condominium zonal classes were missing by location \\
+barangay\_geocoded & 22.4\% & Location granularity remained uneven for vague addresses \\
+bedrooms & 18.2\% & Mostly portal field gaps; imputed for condominiums and houses \\
+bathrooms & 17.5\% & Mostly portal field gaps; imputed for condominiums and houses \\
+bir\_zonal\_cr\_median & 9.1\% & Some commercial zonal classes missing by location \\
+spatial\_lag\_price & 3.8\% & Neighbor-based context unavailable for a small edge subset \\
+price\_per\_sqm / valuation\_gap & 3.2\% & Target derivation incomplete for a small subset \\
+floor\_area\_sqm / area\_sqm & 2.5\% & Residual portal incompleteness \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-The largest missingness issue was structural. lot\_area\_sqm was fully missing in open-market rows and heavily missing in floor-price rows. This reflects source limitations, not random noise.
+The largest missingness issue was structural. Lot area was fully missing in the open-market file because listings report floor area rather than lot area; this reflects a source limitation, not random noise, and it is the reason the vacant-lot model relies on lot size while the other strata use floor area. The bedroom and bathroom gaps were concentrated in portal listings and were median-imputed with audit flags for the condominium and house strata, while vacant lots carried no bedroom or bathroom fields at all.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{../../EDA/missingness_top15.png}
-\caption{Top-15 Fields by Missingness Rate in the Frozen ABT. lot\_area\_sqm dominated because it was structurally absent in virtually all open-market rows rather than randomly missing.}
+\includegraphics[width=0.85\textwidth]{../EDA/missingness_top15.png}
+\caption{Top fields by missingness rate in the frozen open-market ABT. Lot area dominated because it was structurally absent in open-market listings rather than randomly missing.}
 \label{fig:missingness}
 \end{figure}
 
-The remaining structural gaps were mostly in Lamudi rows. In the frozen ABT, floor\_area\_sqm had 78 nulls total, and bedrooms and bathrooms nulls were concentrated in the open-market segment.
+The ABT also kept soft outlier flags separate from hard integrity drops. The soft \emph{price\_outlier\_flag} marked extreme unit prices without removing them automatically, while a smaller set of implausible rows was hard-dropped during cleaning. Source differences were also clear: combining several portals introduced source-level price effects, which is recorded as a limitation in Chapter 9 because the source field cannot be used at prediction time.
 
-The ABT also kept soft outlier flags separate from hard integrity drops. There were 19 rows with price\_outlier\_flag = True (14 open-market, four bank ROPA, one floor-price). These flags did not automatically remove rows. A smaller integrity set was identified for downstream removal: row 431 (property\_id 468), row 658 (property\_id 714), and row 705 (property\_id 769). Their unit prices were PHP~3.68, PHP~4.13, and PHP~4.60, which are not plausible for residential valuation in this context.
+Another issue was fixed before freeze in the POI pipeline. Earlier runs had a bounding-box bug that allowed out-of-scope points to pass the LGU filter. The corrected freeze removed this contamination before final MCRAI recomputation.
 
-Cross-segment behavior was also clear. Bank ROPA unit prices were systematically lower than open-market values. Floor-price records represented a different pricing basis. This supports the later segmentation step tied to valuation standards, where open\_market is used as the modeling scope for Market Value estimation \parencite{ivs2025}.
-
-Another issue was fixed before freeze in the POI pipeline. Earlier runs had a bounding-box bug that allowed out-of-scope points (for example from Bohol, Batangas, and Tagaytay) to pass the LGU filter. The corrected freeze removed this contamination before final MCRAI recomputation.
-
-Overall, the ABT at this stage was rich and usable for analysis, but still not model-ready in raw form. It had strong geospatial and benchmark coverage, but it also had source-driven structural gaps, a few implausible rows, and clear segment differences in price behavior. Chapter 5 explains how these findings were handled in data preparation.
+Overall, the ABT at this stage was rich and usable for analysis, but still not model-ready in raw form. It had strong geospatial and benchmark coverage, but also source-driven structural gaps, a few implausible rows, and clear differences in price behavior across submarkets. Chapter 5 explains how these findings were handled in data preparation.

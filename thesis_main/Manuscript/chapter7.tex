@@ -1,139 +1,125 @@
 \section{Evaluation}\label{evaluation}
 
-This chapter presents the CRISP-DM evaluation phase for the final set of fitted models. Chapter 6 explained how the OLS baseline, Random Forest, XGBoost, and tuned variants were specified and trained. The focus here is the held-out test-set evidence used to judge model quality, select the production model, and examine the error pattern of the retained model. Broader interpretation of what these results mean for Metro Cebu valuation practice is reserved for Chapter 8.
+This chapter presents the CRISP-DM evaluation phase for the final set of fitted models. Chapter 6 explained how the OLS baseline, Random Forest, and XGBoost were specified and trained within each property stratum. The focus here is the leak-free cross-validated evidence used to judge model quality, select the production model, and examine the error pattern of the retained model. Broader interpretation of what these results mean for Metro Cebu valuation practice is reserved for Chapter 8.
 
 \subsection{\texorpdfstring{\textbf{Evaluation Approach}}{Evaluation Approach}}\label{evaluation-approach}
 
-The study retained four evaluation metrics because each one described model quality from a different angle. All reported values were computed on the 299-row held-out test set after back-transforming predictions from log total property price to total property price in Philippine Peso.
+All reported metrics were computed out-of-fold under five-fold grouped cross-validation, with coordinate clusters as the groups, so that co-located listings could not appear in both training and test folds. Predictions were made on the log price-per-square-meter target, then back-transformed; percentage errors were computed on the per-square-meter scale.
 
-Mean Absolute Percentage Error (MAPE) measured the average percentage gap between the actual and predicted total property price. In plain terms, it showed how far the model missed relative to the size of the observed price. This metric was retained because it is easy to compare across studies and is useful when the thesis needs a single percentage error summary.
+The study led with two headline metrics and kept three more as supporting diagnostics. The median absolute percentage error (MdAPE) measured the error for a typical property and was chosen as the headline because, unlike the mean, it is not dragged around by a small number of extreme misses. The proportion of predictions within 20 percent of the actual price (PE20) gave a plain-language accuracy rate that a practitioner could read directly.
 
-Mean Absolute Error (MAE) measured the average absolute peso-denominated error, in this case in total Philippine Peso per property. It showed how large the miss was in the same units used by the back-transformed prediction target. This metric was retained because it is more concrete than MAPE when discussing the size of a typical prediction error.
-
-Root Mean Square Error (RMSE) measured the square root of the average squared error. Because the errors were squared before averaging, RMSE gave more weight to larger misses than MAE. This metric was retained to show whether a model was especially sensitive to a smaller number of very large errors.
-
-The coefficient of determination ($R^2$) measured how much of the variance in the observed total property price was explained by the model. It did not describe error size directly, but it remained useful because it showed whether the model captured the broader price pattern in the test set. The study kept $R^2$ together with MAPE, MAE, and RMSE so that no single metric would dominate the evaluation decision.
+The mean absolute percentage error (MAPE) was retained as a supporting metric because it is the figure most other studies report, which makes cross-study comparison possible, though it is sensitive to the error tail. The coefficient of dispersion (COD) measured how tightly the ratio of predicted to actual price clustered, and the price-related differential (PRD) checked whether the model valued cheaper and more expensive properties even-handedly. COD and PRD are reported in the spirit of assessment ratio studies; the thesis does not claim compliance with IAAO ratio-study thresholds, and those values are used only as context.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Final Model Comparison}}{Final Model Comparison}}\label{final-model-comparison}
 
-Table \ref{tab:model-comparison} presents the final comparison across the five evaluated model artifacts on the current post-cleanup sample. The tree-based models still performed much better than the OLS hedonic baseline on the held-out set, but the strongest overall result now came from the baseline Random Forest model, which achieved $R^2 = 0.807$, MAPE = 59.28\%, MAE = 4.95 million PHP and RMSE = 27.45 million PHP, all expressed in total property price. The confirmation-tuned Random Forest achieved the lowest MAPE at 53.00\%, but that gain came with materially worse $R^2$ and RMSE. Both XGBoost variants also trailed the baseline Random Forest on the retained overall criteria.
+Table~\ref{tab:model-comparison} presents the head-to-head comparison of the three approaches within each stratum. The pattern was consistent across property types: the two tree-based models clearly beat the OLS hedonic baseline, by roughly five to six percentage points of MdAPE, and the Random Forest edged out XGBoost in all three strata by a small margin. The gap between Random Forest and XGBoost was narrow enough to call the two comparable, with Random Forest the modest winner.
 
-The OLS baseline performed much worse than the tree models on every retained metric. Its held-out $R^2$ fell to 0.083, while MAPE rose to 201.63\%. This gap showed that the interpretable hedonic baseline remained useful as a comparator, but it was not the best predictive option for the current open-market dataset.
-
-The tuned models also failed to displace the retained baseline. Tuning improved XGBoost relative to its baseline and reduced MAPE for Random Forest, but neither tuned variant matched the baseline Random Forest on the held-out RMSE and $R^2$ balance used for deployment selection. 
 \begin{table}[htbp]
-\caption{Held-Out Test-Set Comparison of Final Model Artifacts}
+\caption{Leak-Free Cross-Validated Comparison by Stratum (Median Absolute Percentage Error)}
 \label{tab:model-comparison}
 \begin{center}
 \small
-\begin{tabular}{p{0.31\textwidth} p{0.10\textwidth} p{0.13\textwidth} p{0.16\textwidth} p{0.16\textwidth}}
+\begin{tabular}{p{0.20\textwidth} p{0.12\textwidth} p{0.16\textwidth} p{0.12\textwidth} p{0.12\textwidth} p{0.10\textwidth}}
 \toprule
-Model & $R^2$ & MAPE & MAE & RMSE \\
+Stratum & OLS & Random Forest & XGBoost & PE20 (RF) & PRD (RF) \\
 \midrule
-OLS (log-log baseline) & 0.083 & 201.63\% & 9.82M & 59.82M \\
-Random Forest (baseline) & \textbf{0.807} & 59.28\% & \textbf{4.95M} & \textbf{27.45M} \\
-Random Forest (tuned) & 0.680 & \textbf{53.00\%} & 5.08M & 35.34M \\
-XGBoost (baseline) & 0.492 & 60.14\% & 6.32M & 44.54M \\
-XGBoost (tuned) & 0.557 & 58.93\% & 6.06M & 41.58M \\
+Condominium & 24.5 & \textbf{19.3} & 19.8 & 51\% & 1.21 \\
+Houses & 25.1 & \textbf{22.7} & 23.6 & 44\% & 1.20 \\
+Vacant Lot & 44.8 & \textbf{38.4} & 40.2 & 26\% & 1.48 \\
 \bottomrule
 \end{tabular}
 \end{center}
+\footnotesize{MdAPE values per model; PE20 and PRD shown for the deployed Random Forest. Supporting diagnostics for the Random Forest: condominium COD 37.7 / MAPE 36.5; houses COD 35.8 / MAPE 35.1; vacant lot COD 55.9 / MAPE 58.3.}
 \end{table}
+
+The OLS baseline trailed the tree models in every stratum, which confirmed that a linear hedonic specification was useful as an interpretable comparator but was not the best predictive option for this data. The condominium and house models reached a typical error near 19 and 23 percent, while the vacant-lot model was clearly the hardest, with a typical error near 38 percent. That ordering is revisited in the residual analysis below.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Best Model Selection}}{Best Model Selection}}\label{best-model-selection}
 
-The baseline Random Forest model was selected as the final production model because it had the strongest overall held-out performance under the study's retained multi-metric rule. It achieved the highest $R^2$, the lowest MAE, and the lowest RMSE among all evaluated candidates in Table \ref{tab:model-comparison}. Although the confirmation-tuned Random Forest produced the lowest MAPE, its weaker RMSE and $R^2$ meant it was not the better deployment choice for total market-value prediction. The Streamlit application is therefore aligned with the saved artifact Models/rf\_model.pkl.
+The Random Forest was selected as the production model in all three strata. It posted the lowest MdAPE of the three approaches in every stratum, and it did so while remaining the simpler tree model to deploy and maintain, since it depends only on scikit-learn and is less sensitive to parameter choices than gradient boosting at this data size. Because the Random Forest advantage over XGBoost was small, the deployment decision is framed honestly as ``Random Forest best or tied, deployed for robustness and simplicity'' rather than as a decisive accuracy win.
 
-The baseline model also performed better than its tuned variants on the retained overall criteria. This suggested that the simpler starting configuration was already close to the useful range for the current training sample of 1{,}192 rows. The confirmation-tuned Random Forest increased the number of trees and reduced max\_features to 0.8, but its held-out performance still remained below the simpler baseline once RMSE and $R^2$ were considered. The tuned XGBoost also improved over the weaker XGBoost baseline, yet it still generalized materially worse than the retained Random Forest baseline. In this case, tuning did not overturn the incumbent model.
-
-The comparison also showed a clear difference between predictive and explanatory roles. OLS remained the interpretable hedonic benchmark used for coefficient-based reference and for the Stage 2 MCRAI weighting process. The tree models, however, were much stronger at prediction. For that reason, the evaluation phase retained baseline Random Forest as the production estimator while keeping OLS as the econometric baseline.
-
-This model choice satisfied the predictive part of the thesis objective. The study aimed to build a defensible valuation support model for the open-market residential segment, and the evaluation results showed that the baseline Random Forest artifact was the strongest saved model for that role.
+The comparison also showed a clear division of roles. OLS remained the interpretable hedonic benchmark used for coefficient-based reference and for grounding the MCRAI composite weights. The tree models were the stronger predictors. The evaluation phase therefore retained the Random Forest as the production estimator for each stratum while keeping OLS as the econometric baseline.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{\texorpdfstring{\textbf{SHAP Feature Attribution}}{SHAP Feature Attribution}}\label{shap-feature-attribution}
+\subsection{\texorpdfstring{\textbf{Do the Geospatial Features Help? (Ablation)}}{Do the Geospatial Features Help? (Ablation)}}\label{ablation}
 
-SHAP was applied to the two retained baseline tree models so that their prediction logic could be described in a more transparent way. The ranking used mean absolute SHAP values computed on the held-out test set. Table \ref{tab:shap-top10} summarizes the top ten features for each baseline model.
-
-The two baseline models shared a similar top-feature structure. Property-type dummies occupied the top positions in both---property\_type\_Single Detached and property\_type\_Condominium ranked first and second in both models, followed by bedrooms and dist\_consolacion\_m. Size variables (area\_sqm and floor\_area\_sqm), the Mandaue City dummy, the is\_vacant\_lot flag, and several distance features filled out the remaining top-ten positions, with minor ordering differences between the two models. These common rankings showed that the retained tree models relied on a similar mix of property-type segmentation, structural attributes, and polycentric locational signals.
-
-An important result from this section is what did \emph{not} appear in the top ten. No individual mcrai\_* feature entered the top ten list for either baseline tree model. This does not mean that the Metro Cebu Residential Accessibility Index (MCRAI) variables had no role in prediction. It means only that, in the final SHAP ranking for the held-out set, the strongest marginal contributions came first from the distance, coordinate, and property-type variables.
+To test whether the engineered geospatial features earned their place, each stratum's Random Forest was refitted in three tiers under the same folds: structural features only; then adding administrative location (city and BIR zonal value); then adding the full geospatial set (node distances, MCRAI, spatial lag). Table~\ref{tab:ablation} reports the change in typical error.
 
 \begin{table}[htbp]
-\caption{Top Ten SHAP Features for the Retained Baseline Tree Models}
-\label{tab:shap-top10}
+\caption{Ablation by Feature Tier (MdAPE, Leak-Free Cross-Validation)}
+\label{tab:ablation}
 \begin{center}
 \small
-\begin{tabular}{p{0.07\textwidth} p{0.37\textwidth} p{0.37\textwidth}}
+\begin{tabular}{p{0.22\textwidth} p{0.16\textwidth} p{0.18\textwidth} p{0.20\textwidth}}
 \toprule
-Rank & Random Forest & XGBoost \\
+Stratum & Structural & + Administrative & + Geospatial \\
 \midrule
-1 & property\_type\_Single Detached & property\_type\_Single Detached \\
-2 & property\_type\_Condominium & property\_type\_Condominium \\
-3 & bedrooms & bedrooms \\
-4 & dist\_consolacion\_m & dist\_consolacion\_m \\
-5 & city\_Mandaue City & floor\_area\_sqm \\
-6 & is\_vacant\_lot & city\_Mandaue City \\
-7 & property\_type\_Vacant Lot & is\_vacant\_lot \\
-8 & area\_sqm & longitude \\
-9 & floor\_area\_sqm & dist\_naga\_city\_m \\
-10 & dist\_cebu\_business\_park\_m & dist\_cebu\_business\_park\_m \\
+Condominium & 24.9 & 23.0 & \textbf{19.3} \\
+Houses & 27.1 & 22.3 & \textbf{23.0} \\
+Vacant Lot & 51.5 & 42.3 & \textbf{38.6} \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-Figure \ref{fig:shap-rf} presents the Random Forest SHAP beeswarm plot, while Figure \ref{fig:shap-xgb} presents the XGBoost SHAP beeswarm plot. These figures were retained as explainability evidence for the final baseline models. The substantive interpretation of why these features dominated in Metro Cebu is deferred to Chapter 8.
+Compared with a structural-only model, the full geospatial set improved every stratum: condominiums by about 5.7 points, houses by about 4.2 points, and vacant lots by about 13.0 points. The decomposition is more revealing. When the engineered geospatial features were added \emph{on top of} administrative location, they carried a clear additional gain for condominiums (about 3.7 points) and vacant lots (about 3.8 points), but added essentially nothing for houses (about $-0.7$ points, a slight worsening). For houses, knowing the city and the BIR zonal value already captured most of the location signal, and the custom geospatial features mostly duplicated it. The reading is that the model's engineered features add the most value precisely where administrative benchmarks are weakest, which is vertical condominiums and bare lots.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{\textbf{SHAP Feature Attribution}}{SHAP Feature Attribution}}\label{shap-feature-attribution}
+
+SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum beeswarms in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} show this directly. Grouping the SHAP contributions into blocks gives the clearest summary:
+
+\begin{itemize}
+\item \textbf{Condominium}: neighborhood price level (spatial lag, about 34 percent of the SHAP magnitude) and CBD-distance access (about 30 percent) led, with unit size and bedrooms next. Administrative benchmarks contributed little.
+\item \textbf{Houses}: distance to the Cebu Business Park was the single strongest feature, and CBD distances as a block (about 39 percent) led, followed by structural size (about 35 percent) and neighborhood price.
+\item \textbf{Vacant Lot}: distance to the Cebu Business Park alone accounted for close to half of the model's attribution, and the individual MCRAI amenity categories together carried about 22 percent, their largest share in any stratum.
+\end{itemize}
+
+Across all three strata, location-related features (CBD distances, MCRAI, and the spatial lag) carried the large majority of the attribution, which is consistent with the value-driver question in RQ1. The substantive interpretation of why these features dominate in Metro Cebu is developed in Chapter 8.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{../../EDA/shap_rf_summary.png}
-\caption{SHAP Beeswarm Summary for the Baseline Random Forest Model}
-\label{fig:shap-rf}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_summary.png}
+\caption{SHAP Beeswarm Summary for the Deployed Condominium Random Forest}
+\label{fig:shap-condo}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{../../EDA/shap_xgb_summary.png}
-\caption{SHAP Beeswarm Summary for the Baseline XGBoost Model}
-\label{fig:shap-xgb}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_summary.png}
+\caption{SHAP Beeswarm Summary for the Deployed House Random Forest}
+\label{fig:shap-houses}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_summary.png}
+\caption{SHAP Beeswarm Summary for the Deployed Vacant-Lot Random Forest}
+\label{fig:shap-lot}
 \end{figure}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Residual Analysis}}{Residual Analysis}}\label{residual-analysis}
 
-Residual analysis was centered on the retained production Random Forest model because that was the artifact carried forward to the application layer. The first diagnostic check was the actual-versus-predicted scatter plot shown in Figure \ref{fig:rf-actual-vs-pred}. The observations followed the expected positive pattern around the 45-degree reference line, but the spread still widened for high-value cases. This was consistent with the RMSE reported in Table \ref{tab:model-comparison}. The model captured the overall direction of price variation better than the competing artifacts, but it still produced a number of large misses at the upper end of the market.
+The residual pattern was consistent and informative across all three strata. At the center of the distribution the models were close to unbiased, with median signed errors within a few percent of zero. The damage was concentrated in the error tail. For each stratum, the worst tenth of predictions were properties priced far below the norm for their location and size, and the model predicted the location-implied price and overshot: the worst-decile condominiums were over-predicted by about 100 percent, houses by about 97 percent, and vacant lots by about 181 percent.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.82\textwidth]{../../EDA/rf_actual_vs_predicted.png}
-\caption{Log-Scale Actual versus Predicted Total Property Price for the Baseline Random Forest Test Set}
-\label{fig:rf-actual-vs-pred}
-\end{figure}
-
-Figure \ref{fig:xgb-actual-vs-pred} shows the equivalent scatter for the baseline XGBoost model. The wider spread at the upper end was consistent with XGBoost's weaker RMSE of 44.54 million PHP relative to the retained Random Forest baseline.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.82\textwidth]{../../EDA/xgb_actual_vs_predicted.png}
-\caption{Log-Scale Actual versus Predicted Total Property Price for the Baseline XGBoost Test Set. Compared with the baseline Random Forest, XGBoost showed a wider scatter at the upper end of the price range, consistent with its weaker RMSE of 44.54 million PHP.}
-\label{fig:xgb-actual-vs-pred}
-\end{figure}
-
-No artifact-backed script in the current repository generated reliable residual breakdown tables by LGU or by property type for the held-out test set. For that reason, the residual discussion is limited here to the actual-versus-predicted scatter plot, which is the saved diagnostic figure directly produced in the workflow. That plot is still informative: it shows a positive overall relationship between actual and predicted values, but with visibly wider spread among higher-value cases. In practical terms, the production Random Forest model captured the broad direction of price variation while still producing several large misses at the upper end of the market.
+These extreme misses were not random. They were atypically cheap listings whose low price reflects something the listing does not record, such as condition, title issues, distressed or pre-selling pricing, or, for lots, terrain and access. The model sees a normal location and size and reasonably predicts a normal price. This is the same finding seen three ways: the PRD above 1.0 in every stratum (a mild tendency to over-value cheaper properties), the gap between the good typical error and the larger average error, and the heavy worst-decile over-prediction. The vacant-lot stratum showed the strongest version of this, which is why its typical error stayed near 38 percent. Chapter 9 records the specific data limitations behind this tail.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Benchmark Comparison}}{Benchmark Comparison}}\label{benchmark-comparison}
 
-The production Random Forest result can be placed in context using two studies already discussed in the literature review. Nyanda et al. (2024) reported that boosting achieved a MAPE of 48.0\% in the dual-market Dar es Salaam setting, while Random Forest recorded about 52.7\% in the same mixed-market setup \parencite{nyanda2024}. The Metro Cebu deployed baseline Random Forest model posted a higher MAPE at 59.28\%, which is worse than both Nyanda et al.'s Random Forest benchmark and their boosting benchmark. The confirmation-tuned Random Forest reduced MAPE to 53.00\%, closer to Nyanda et al.'s Random Forest result, but it did so with materially weaker RMSE and $R^2$ than the deployed baseline. This comparison should be read cautiously because the market structure, price scale, and variable design were different across the studies. Even so, it reinforces that the Metro Cebu listing-based target remains noisy even when the retained model is the strongest overall local artifact.
+The closest Philippine reference point is \textcite{ramolete2023}, who reported MAPE in the 10 to 21 percent range using a richer feature set on a larger, house-dominated dataset under a random train-test split. Two adjustments make the comparison fair. First, the present models were re-evaluated under their random 80/20 protocol rather than the stricter grouped cross-validation, which raised the Random Forest MAPE only modestly (about 5.1 points for condominiums, 1.3 for houses, and 1.8 for vacant lots). This showed that coordinate leakage was a small part of the gap, not the main story. Second, leading with the median rather than the mean, the typical condominium error of about 16 percent and house error of about 22 percent under the matched split sit at the top of Ramolete's band, so the median property is competitive while a hard-case tail inflates the mean.
 
-Sousa et al. (2024) are useful in a different way. Their work did not provide a direct regression benchmark for the present model table, but it supported the use of large online listing datasets to reveal price segmentation that may not be visible in sparse official records \parencite{sousa2024}. That point matters for interpreting the Metro Cebu MAPE. The thesis relied on open-market listing data rather than clean transaction records. As a result, the evaluation used a noisier target that likely carried wider asking-price variation, seller strategy effects, and submarket mixing than a more standardized transaction database.
+The remaining gap is genuine and explainable rather than a sign of weaker method. Ramolete's house sample was much larger (about 3{,}212 houses versus 1{,}223 here), the Cebu market is thinner, and their model used socio-economic features from PSA and DTI sources that this study did not include. The fairest like-for-like comparison is the house stratum, since their data is house-dominated.
 
-For that reason, the production model's MAPE should be described honestly. A MAPE of 59.28\% was high in absolute terms, especially compared with cleaner Organisation for Economic Co-operation and Development-style automated valuation settings or tightly controlled institutional datasets. At the same time, the result remained defensible for a noisy Philippine listing-based dataset that covered multiple LGUs, multiple residential property types, and a broad open-market price range. The evaluation phase therefore supported a balanced conclusion: the retained Random Forest model was the best available artifact in the current workflow on the retained overall criteria, but it was still subject to substantial prediction error that should be acknowledged clearly in the thesis.
+Two further benchmarks frame the result. \textcite{nyanda2024} reported a boosting MAPE near 48 percent and a Random Forest near 53 percent in a noisy, mixed-market Tanzanian setting, which is the kind of emerging-market, listing-based context most similar to this one. Against tightly controlled automated valuation systems, by contrast, the present errors are clearly higher; commercial and assessment-grade systems report single-digit median errors on cleaner transaction data. The honest reading is that this model beats the local baselines that matter for the thesis, the OLS hedonic and the BIR zonal benchmark, under an honest evaluation, but it is not assessment- or transaction-grade. \textcite{sousa2024} support the underlying choice: large online listing datasets reveal price segmentation that sparse official records miss, at the cost of a noisier target carrying asking-price spread, seller strategy, and submarket mixing.
+
+For that reason the result is described plainly. The deployed Random Forest is the strongest model in the workflow under leak-free evaluation, and its typical-property error is competitive with the closest Philippine study, but it still carries a real error tail that the thesis acknowledges rather than hides.

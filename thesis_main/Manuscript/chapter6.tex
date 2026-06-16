@@ -1,155 +1,118 @@
 \section{Modeling}\label{modeling}
 
-This chapter covers the CRISP-DM modeling phase for the prepared open-market dataset. Chapter 5 described how the training data was assembled. This chapter explains how the three models were specified, fit, and tuned in the current pipeline. Detailed evaluation results are discussed in Chapter 7.
+This chapter covers the CRISP-DM modeling phase for the prepared open-market dataset. Chapter 5 described how the training data was assembled. This chapter explains how the three models were specified, fit, and validated within each property stratum in the current pipeline. Detailed evaluation results are discussed in Chapter 7.
 
 \subsection{\texorpdfstring{\textbf{Model Selection Rationale}}{Model Selection Rationale}}\label{chapter6-model-selection-rationale}
 
-The study used three models because each one served a different role in the analysis. Ordinary Least Squares (OLS) was used as the interpretable hedonic baseline rooted in implicit-price theory \parencite{rosen1974}. Random Forest was included because it can capture non-linear relationships and feature interactions without requiring a fixed functional form \parencite{breiman2001}. XGBoost was included because gradient boosting usually performs well on structured tabular data and was expected to be the strongest predictive model in the final comparison \parencite{chen2016}. Chapter 3 already introduced these models conceptually. The focus here is the actual fitting setup used in the saved implementation.
+The study used three models because each one served a different role. Ordinary Least Squares (OLS) was the interpretable hedonic baseline rooted in implicit-price theory \parencite{rosen1974}. Random Forest was included because it can capture non-linear relationships and feature interactions without a fixed functional form \parencite{breiman2001}. XGBoost was included because gradient boosting usually performs well on structured tabular data \parencite{chen2016}. Chapter 3 introduced these models conceptually; the focus here is the fitting setup used in the saved implementation.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{\texorpdfstring{\textbf{Train/Test Split}}{Train/Test Split}}\label{train-test-split}
+\subsection{\texorpdfstring{\textbf{Stratified Fitting and Leak-Free Validation}}{Stratified Fitting and Leak-Free Validation}}\label{stratified-fitting}
 
-The modeling script took the 1{,}491-row output from Chapter 5 and split it into training and test subsets using an 80:20 ratio. This produced 1{,}192 training rows and 299 test rows. The split used random\_state = 42 so that the same rows would be assigned to the same fold every time the script was rerun.
+Rather than fitting one model across all property types, the pipeline split the open-market data into three strata and fit a separate set of models for each: condominiums (1{,}300 rows), houses (1{,}223 rows), and vacant lots (849 rows). All models used the same target, \emph{log\_price}, the log of price per square meter, which kept the training target consistent across OLS, Random Forest, and XGBoost. Predictions were back-transformed and multiplied by area to recover total price for reporting.
 
-The code also passed market\_segment to the split function as a stratification variable. In practice, this did not change the final class balance because the modeling dataset had already been filtered to open\_market only. The stratification argument remained in the script as a carryover from the broader ABT design, but after the open-market restriction it acted only as a consistency check.
-
-All three models were fit on the same target vector, log\_price. This kept the training target consistent across OLS, Random Forest, and XGBoost. Chapter 7 reports the back-transformed error metrics for comparison.
+Model quality was estimated with five-fold grouped cross-validation (GroupKFold), where the groups were coordinate clusters. Listings that shared a location were kept together in the same fold, so a property could not appear in both training and test folds in near-identical spatial form. This was a deliberate guard against coordinate leakage, which would otherwise flatter a spatial model whose neighborhood and spatial-lag features make co-located listings resemble copies of one another. All headline metrics in Chapter 7 were computed out-of-fold under this protocol. A separate analysis re-ran the models under a conventional random 80:20 split to compare against an external benchmark study; that comparison is reported in Chapter 7 and is not the basis for the deployed metrics.
 
 \begin{table}[htbp]
-\caption{Training Data Used in the Modeling Phase}
+\caption{Stratified Modeling Setup}
 \label{tab:chapter6-split}
 \begin{center}
-\begin{tabular}{p{0.34\textwidth} p{0.18\textwidth} p{0.26\textwidth}}
+\begin{tabular}{p{0.30\textwidth} p{0.20\textwidth} p{0.30\textwidth}}
 \toprule
 Item & Value & Notes \\
 \midrule
-Modeling-ready rows & 1{,}491 & Output passed forward from Chapter 5 \\
-Training rows & 1{,}192 & 80\% of the modeling dataset \\
-Test rows & 299 & 20\% of the modeling dataset \\
-Random seed & 42 & Used for reproducible splitting \\
-Stratification field & market\_segment & Constant open\_market field after filtering \\
-Common supervised target & log\_price & Shared across all three fitted models \\
+Strata & 3 & Condominium, Houses, Vacant Lot \\
+Condominium rows & 1{,}300 & Fitted separately \\
+House rows & 1{,}223 & Fitted separately \\
+Vacant-lot rows & 849 & Fitted separately \\
+Validation & GroupKFold (5) & Groups = coordinate clusters (leak-free) \\
+Random seed & 42 & Reproducible fitting and folds \\
+Common supervised target & log\_price & Log of price per square meter \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{\textbf{Per-Stratum Feature Sets}}{Per-Stratum Feature Sets}}\label{per-stratum-feature-sets}
+
+The feature matrix was not identical across strata. As described in Chapter 3, each stratum's features were trimmed from evidence (variance inflation factors, OLS significance, leave-one-block ablation, and MCRAI zero rates). All three strata dropped the redundant BIR log and commercial-zonal columns and the two road-class distance features. The condominium and house models then collapsed the eight individual MCRAI categories into the single \emph{mcrai\_composite}, while the vacant-lot model kept six individual MCRAI categories but dropped the composite, security, and retail density. The resulting feature counts were 21 for condominiums, 24 for houses, and 22 for vacant lots.
+
+The tree-based models used each stratum's full retained feature set. The OLS baseline used a slightly tighter version within each stratum, removing variables that were highly collinear with adjacent CBD-distance terms and replacing raw area fields with a log-area term, so the baseline followed a stable log-linear hedonic form. These tighter controls were a stability choice for coefficient interpretation, not a claim that the dropped columns lacked predictive value, since tree splits tolerate redundant and correlated predictors more easily.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{OLS Hedonic Baseline}}{OLS Hedonic Baseline}}\label{ols-hedonic-baseline}
 
-The OLS baseline was fit in \emph{statsmodels} using the X\_ols matrix and the log\_price target. This was the most constrained specification among the three models because it had to remain stable enough for coefficient interpretation. The final saved summary in Models/ols\_summary.txt used 1{,}192 training observations and 39 modeled terms after the constant was added.
-
-The OLS feature set followed three decisions from the modeling log. First, dist\_talisay\_tabunok\_m was removed because it was highly collinear with adjacent CBD-distance variables. Second, is\_mactan\_island, bir\_zonal\_rr\_log, and is\_vacant\_lot were removed from X\_ols because they duplicated information already represented by dummy variables or their raw counterparts. Third, the raw area fields were replaced with a log-scale area term so the baseline would follow a log-linear hedonic form rather than a raw linear size effect. In the current script this meant dropping lot\_area\_sqm, floor\_area\_sqm, and area\_sqm from X\_ols, then adding log\_floor\_area\_sqm back as the retained size term.
-
-These changes were not applied to the tree-based models. Random Forest and XGBoost were allowed to keep the full X\_full matrix because tree splits are more tolerant of redundant and correlated predictors. The tighter OLS feature set was therefore a stability choice, not a general claim that the dropped columns had no predictive value.
-
-The condition-number check showed why this narrower OLS matrix was necessary. The earlier unstable form had a condition number of about $1.04 \times 10^{16}$. The saved OLS summary reported a condition number of $7.98 \times 10^{6}$. This was still large, but it was much lower than the earlier near-singular specification and was sufficient for the baseline role assigned to OLS in this study.
-
-\begin{table}[htbp]
-\caption{Model Matrices Used in Chapter 6}
-\label{tab:chapter6-matrices}
-\begin{center}
-\begin{tabular}{p{0.20\textwidth} p{0.17\textwidth} p{0.44\textwidth}}
-\toprule
-Matrix & Shape & Use in the Modeling Pipeline \\
-\midrule
-X\_full & 1{,}491 $\times$ 48 & Full feature matrix used by Random Forest and XGBoost \\
-X\_ols & 1{,}491 $\times$ 39 & Reduced matrix used by the OLS hedonic baseline \\
-OLS target & 1{,}491 $\times$ 1 & log\_price vector fit with \emph{statsmodels} OLS \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
+Within each stratum the OLS baseline was fit in \emph{statsmodels} on the log price-per-square-meter target. It was the most constrained specification of the three because it had to remain stable enough for coefficient interpretation. Heteroscedasticity and non-normal residuals were treated as diagnostic issues for the OLS comparator and addressed with robust (HC3) standard errors; they were not blockers for the deployed tree models. OLS was retained as an interpretable comparator and as the basis for screening the MCRAI category signs, not as the deployed model.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Random Forest}}{Random Forest}}\label{random-forest}
 
-The production Random Forest model was fit with 300 trees using \emph{scikit-learn}'s \emph{RandomForestRegressor} \parencite{breiman2001}. The saved object used n\_estimators = 300, random\_state = 42, and n\_jobs = -1. Other controls were left at the library defaults in the current environment. In the saved model object this resolved to settings such as max\_depth = None, min\_samples\_split = 2, min\_samples\_leaf = 1, and max\_features = 1.0.
+The Random Forest was the deployed model in all three strata, fit with \emph{scikit-learn}'s \emph{RandomForestRegressor} using 300 trees \parencite{breiman2001}. The per-stratum settings selected under grouped cross-validation are listed in Table~\ref{tab:chapter6-rf-params}. No scaling step was applied before fitting, since tree models are invariant to monotone feature scaling.
 
-The model was trained on X\_full rather than X\_ols. This let the ensemble learn from the complete structural, locational, administrative, and accessibility feature set without the stricter collinearity controls imposed on the OLS baseline. No scaling step was applied before fitting.
+\begin{table}[htbp]
+\caption{Deployed Random Forest Settings by Stratum}
+\label{tab:chapter6-rf-params}
+\begin{center}
+\begin{tabular}{p{0.24\textwidth} p{0.14\textwidth} p{0.18\textwidth} p{0.20\textwidth}}
+\toprule
+Stratum & Trees & Max features & Min samples / leaf \\
+\midrule
+Condominium & 300 & 0.7 & 1 \\
+Houses & 300 & 1.0 & 2 \\
+Vacant Lot & 300 & 1.0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\footnotesize{Maximum depth was left unbounded in all three strata.}
+\end{table}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{XGBoost}}{XGBoost}}\label{xgboost}
 
-The baseline XGBoost comparator was fit with the \emph{XGBRegressor} implementation from the \emph{xgboost} package \parencite{chen2016}. The saved baseline object used n\_estimators = 300, learning\_rate = 0.05, max\_depth = 6, random\_state = 42, objective = reg:squarederror, and verbosity = 0. Other controls were left at the estimator defaults.
-
-Like the Random Forest model, XGBoost used the full X\_full matrix and the same log\_price target vector. This kept the comparison fair across the two tree-based models. The baseline configuration was intentionally simple because it already performed well on the prepared dataset and did not require an extensive parameter stack to produce a competitive fitted model.
+The XGBoost comparator was fit with the \emph{XGBRegressor} implementation from the \emph{xgboost} package \parencite{chen2016}, on the same per-stratum feature sets and the same \emph{log\_price} target as the Random Forest. This kept the comparison fair across the two tree-based models. As Chapter 7 reports, XGBoost performed comparably to the Random Forest in every stratum but did not surpass it.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Hyperparameter Tuning}}{Hyperparameter Tuning}}\label{hyperparameter-tuning-ch6}
 
-Hyperparameter tuning was implemented in a separate script, thesis\_main/Scripts/tune\_models.py. The current confirmation workflow used a 5$\times$3 repeated cross-validation design on the same 1{,}192-row training subset used by the production pipeline, with RMSE-first refitting so that the saved comparison stayed aligned with the deployment objective in total property price.
-
-For Random Forest, the search was narrowed around the deployed baseline regime through a baseline-centered grid. The best tuned configuration saved by the script used n\_estimators = 400, max\_depth = None, min\_samples\_split = 2, min\_samples\_leaf = 1, and max\_features = 0.8. For XGBoost, the best tuned configuration used n\_estimators = 200, learning\_rate = 0.07, max\_depth = 7, min\_child\_weight = 5, subsample = 0.9, and colsample\_bytree = 0.8.
-
-The tuned models were saved as rf\_tuned.pkl and xgb\_tuned.pkl, but they were not retained as production models. When the saved artifacts were evaluated on the held-out 299-row test set, the baseline Random Forest still delivered the strongest overall result with $R^2 = 0.807$. The confirmation-tuned Random Forest reduced MAPE but fell to $R^2 = 0.680$, while baseline and tuned XGBoost reached only $R^2 = 0.492$ and $R^2 = 0.557$, respectively. The baseline Random Forest configuration was therefore retained as the sole production model because none of the tuned or boosted alternatives improved out-of-sample overall performance.
-
-\begin{table}[htbp]
-\caption{Baseline and Tuned Model Configurations Used in Chapter 6}
-\label{tab:chapter6-tuning}
-\begin{center}
-\small
-\begin{tabular}{p{0.21\textwidth} p{0.37\textwidth} p{0.10\textwidth} p{0.10\textwidth}}
-\toprule
-Model & Key Configuration & Test $R^2$ & Production Status \\
-\midrule
-RF baseline & n\_estimators = 300; max\_features = 1.0 by current sklearn default & 0.807 & Retained \\
-RF tuned & n\_estimators = 400; max\_depth = None; min\_samples\_split = 2; min\_samples\_leaf = 1; max\_features = 0.8 & 0.680 & Reference only \\
-XGBoost baseline & n\_estimators = 300; learning\_rate = 0.05; max\_depth = 6 & 0.492 & Reference only \\
-XGBoost tuned & n\_estimators = 200; learning\_rate = 0.07; max\_depth = 7; min\_child\_weight = 5; subsample = 0.9; colsample\_bytree = 0.8 & 0.557 & Reference only \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
+For the tree-based models, a parameter grid was searched under the same grouped cross-validation, with the median absolute percentage error as the selection criterion so that tuning stayed aligned with the headline deployment metric. The Random Forest grid covered the number of trees, the share of features per split, the minimum samples per leaf, and the maximum depth; the XGBoost grid covered the number of trees, learning rate, depth, and subsample. The tuning curves were close to flat across the search range, which indicated that the models were not very sensitive to these settings at this data size, and the deployed parameters sat at or near the defaults. The per-stratum hyperparameter sweep figures are included in the appendix material in \texttt{EDA/plots/11\_hyperparameter\_tuning/}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{\texorpdfstring{\textbf{MCRAI Stage 2 Weight Derivation}}{MCRAI Stage 2 Weight Derivation}}\label{mcrai-stage2-weight-derivation}
+\subsection{\texorpdfstring{\textbf{MCRAI Composite Weight Derivation}}{MCRAI Composite Weight Derivation}}\label{mcrai-stage2-weight-derivation}
 
-The Stage 2 MCRAI composite was built from the Stage 1 OLS coefficient signs rather than using all nine categories. The final composite did not use all nine MCRAI categories. Instead, it retained only the positive-coefficient OLS categories and renormalized them into a four-part weight vector. The saved weights file in Models/mcrai\_stage2\_weights.txt reported the final implementation weights as 0.401 for mcrai\_education, 0.310 for mcrai\_grocery, 0.199 for mcrai\_recreation, and 0.102 for mcrai\_transport.
+The MCRAI composite was built from the OLS coefficient signs rather than by forcing all categories into one additive score. It retained only the positive-coefficient household-access categories and renormalized them into a three-part weight vector: 0.447 for education, 0.345 for grocery, and 0.222 for recreation. Transport accessibility was represented separately through the road-network distance features rather than as a composite category, and finance was retired from the framework.
 
-Security, tourism, and retail\_density were not used in the composite even though they remained in the model as standalone feature columns. The same was true for finance and health, which stayed in the component set but did not receive positive-composite weights. In other words, the composite index became a narrower summary measure, while the full models still learned from the full set of category-level MCRAI inputs.
-
-An earlier branch of the project had tested SHAP-based weight derivation from the Random Forest model. That approach is recorded in Decisions 14 and 15, but it is now historical only. The controlling specification for the current manuscript is the positive-only OLS composite written to the saved Stage 2 weights file.
+The remaining categories, including security, tourism, and retail density, were not used in the composite because their OLS coefficients were negative or near zero, which is interpreted in Chapter 8 as spatial sorting rather than direct disamenity. The condominium and house models used the composite as their single accessibility summary, while the vacant-lot model used the individual categories instead, because for bare land the categories were not interchangeable.
 
 \begin{table}[htbp]
-\caption{Final Stage 2 MCRAI Composite Weights}
+\caption{MCRAI Composite Weights (Positive-Coefficient Categories)}
 \label{tab:chapter6-mcrai-weights}
 \begin{center}
 \begin{tabular}{p{0.28\textwidth} p{0.18\textwidth} p{0.34\textwidth}}
 \toprule
-Category & Final Weight & Role in the Current Workflow \\
+Category & Weight & Role in the Current Workflow \\
 \midrule
-mcrai\_education & 0.401 & Retained in composite and as a standalone model feature \\
-mcrai\_grocery & 0.310 & Retained in composite and as a standalone model feature \\
-mcrai\_recreation & 0.199 & Retained in composite and as a standalone model feature \\
-mcrai\_transport & 0.102 & Retained in composite and as a standalone model feature \\
+mcrai\_education & 0.447 & Composite (condo/house) and standalone feature (lot) \\
+mcrai\_grocery & 0.345 & Composite (condo/house) and standalone feature (lot) \\
+mcrai\_recreation & 0.222 & Composite (condo/house); not retained for lots \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-The current scripts also excluded mcrai\_composite from the feature matrices used for model fitting. This avoided rank deficiency because the composite is a weighted summary of the nine component scores that already entered the model separately.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.75\textwidth]{../../EDA/mcrai_shap_weights.png}
-\caption{Stage 2 MCRAI Composite Weights Derived from OLS Coefficient Signs. Four positive-coefficient categories were retained: education (0.401), grocery (0.310), recreation (0.199), and transport (0.102). The remaining five categories carried negative or near-zero OLS coefficients and were excluded from the composite.}
-\label{fig:mcrai-weights}
-\end{figure}
+To avoid rank deficiency, the composite and its component categories were not used together in the same model: the condominium and house models used the composite, and the vacant-lot model used the individual components.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{SHAP Setup}}{SHAP Setup}}\label{shap-setup}
 
-SHAP was configured after model fitting for the two tree-based models using \emph{shap.TreeExplainer} \parencite{lundberg2017}. In the current implementation, the explainer was applied to the held-out test set for the saved baseline Random Forest and XGBoost models. The script then computed mean absolute SHAP values by feature and exported beeswarm summary plots to the EDA folder.
-
-This setup was used only for the tree models. The OLS baseline already had an interpretable coefficient structure, so SHAP was not necessary for that part of the pipeline. The SHAP step in Chapter 6 therefore served as the technical bridge between model fitting and the explainability analysis discussed in Chapter 7.
+SHAP was configured after model fitting for the deployed Random Forest in each stratum using \emph{shap.TreeExplainer} \parencite{lundberg2017}. The explainer was applied to each stratum's data, mean absolute SHAP values were computed by feature, and per-stratum beeswarm summaries were exported. Because the OLS baseline already had an interpretable coefficient structure, SHAP was not needed for that part of the pipeline. The SHAP step served as the technical bridge between model fitting and the explainability analysis discussed in Chapters 7 and 8.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
