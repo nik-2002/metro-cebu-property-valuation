@@ -17,6 +17,14 @@ type Listing = {
   stratum: "Condominium" | "Houses" | "Vacant Lot";
   address: string;
   areaSqm: number | null;
+  bedrooms?: number | null;
+  bathrooms?: number | null;
+  bedroomsImputed?: boolean;
+  bathroomsImputed?: boolean;
+  mcrai?: Record<string, number | null>;
+  dist?: Record<string, number | null>;
+  birZonalRr?: number | null;
+  spatialLag?: number | null;
 };
 
 type Poi = {
@@ -30,13 +38,32 @@ type Poi = {
 type SurfaceProperties = {
   barangay: string;
   lgu: string;
+  adm4_pcode?: string;
   price_per_sqm: number;
+  price_q25?: number;
+  price_q75?: number;
   price_label: string;
   confidence_label: string;
   point_count: number;
   low_confidence?: boolean;
   fillColor?: string;
   classLabel?: string;
+};
+
+type BarangayFeatureRecord = {
+  n_listings: number;
+  mcrai: Record<string, number>;
+  dist: Record<string, number>;
+  bir_zonal_rr_median?: number;
+  spatial_lag_price?: number;
+  listing_price_median: number;
+  listing_price_min: number;
+  listing_price_max: number;
+};
+
+type BarangayFeatures = {
+  mcrai_max: Record<string, number>;
+  barangays: Record<string, BarangayFeatureRecord>;
 };
 
 type SurfaceFeature = GeoJSON.Feature<GeoJSON.Geometry, SurfaceProperties>;
@@ -97,6 +124,7 @@ type State = {
   predictLoading: boolean;
   predictResult: PredictResponse | null;
   predictError: string | null;
+  predictNearby: Array<{ listing: Listing; dist: number }>;
 };
 
 const metroCebuCities = [
@@ -154,6 +182,43 @@ const priceStops = [
 const surfacePalette = ["#eff3ff", "#c6dbef", "#9ecae1", "#6baed6", "#2171b5"];
 const lowConfidenceColor = "#94a3b8";
 
+const mcraiLabels: Record<string, string> = {
+  composite: "Overall access (composite)",
+  education: "Education",
+  grocery: "Grocery",
+  health: "Health",
+  hospitals: "Hospitals",
+  recreation: "Recreation",
+  security: "Security",
+  tourism: "Tourism",
+  retail_density: "Retail density",
+};
+const mcraiOrder = [
+  "composite",
+  "grocery",
+  "health",
+  "education",
+  "retail_density",
+  "tourism",
+  "recreation",
+  "hospitals",
+  "security",
+];
+const cbdLabels: Record<string, string> = {
+  cbp: "Cebu Business Park",
+  mandaue: "Mandaue CBD",
+  mactan: "Mactan CBD",
+  srp: "SRP",
+  talisay: "Talisay–Tabunok",
+  consolacion: "Consolacion",
+  naga: "Naga City",
+  airport: "Airport",
+};
+const roadLabels: Record<string, string> = {
+  trunk_road: "Trunk road",
+  primary_road: "Primary road",
+};
+
 const state: State = {
   view: "market",
   lgu: "All LGUs",
@@ -183,16 +248,40 @@ const state: State = {
   predictLoading: false,
   predictResult: null,
   predictError: null,
+  predictNearby: [],
 };
 
 let listings: Listing[] = [];
 let pois: Poi[] = [];
+let barangayFeatures: BarangayFeatures = { mcrai_max: {}, barangays: {} };
 let surfaces: Record<SurfaceKey, SurfaceCollection> = {} as Record<SurfaceKey, SurfaceCollection>;
 let lguLayer: L.GeoJSON | null = null;
 let listingLayer = L.layerGroup();
 let poiLayer = L.layerGroup();
 let surfaceLayer: L.GeoJSON | null = null;
 let predictMarker: L.CircleMarker | null = null;
+let predictBufferLayer: L.Circle | null = null;
+let predictNearbyLayer = L.layerGroup();
+
+const PREDICT_RADIUS_M = 1000;
+
+function haversineM(aLat: number, aLon: number, bLat: number, bLon: number): number {
+  const earth = 6371000;
+  const toRad = (deg: number) => (deg * Math.PI) / 180;
+  const dLat = toRad(bLat - aLat);
+  const dLon = toRad(bLon - aLon);
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLon / 2) ** 2;
+  return 2 * earth * Math.asin(Math.sqrt(h));
+}
+
+function nearbyListings(pin: { lat: number; lon: number }): Array<{ listing: Listing; dist: number }> {
+  return listings
+    .map((listing) => ({ listing, dist: haversineM(pin.lat, pin.lon, listing.latitude, listing.longitude) }))
+    .filter((item) => item.dist <= PREDICT_RADIUS_M)
+    .sort((a, b) => a.dist - b.dist);
+}
 
 const map = L.map("map", {
   center: [10.32, 123.9],
@@ -291,6 +380,10 @@ function clearDynamicLayers() {
   surfaceLayer = null;
   if (predictMarker && map.hasLayer(predictMarker)) predictMarker.removeFrom(map);
   predictMarker = null;
+  if (predictBufferLayer && map.hasLayer(predictBufferLayer)) predictBufferLayer.removeFrom(map);
+  predictBufferLayer = null;
+  predictNearbyLayer.clearLayers();
+  if (map.hasLayer(predictNearbyLayer)) predictNearbyLayer.removeFrom(map);
 }
 
 function renderLguOptions() {
@@ -414,6 +507,78 @@ function renderMarketMetrics(view: Listing[], poiView: Poi[]) {
   byId("metric-pois").textContent = poiView.length.toLocaleString();
 }
 
+function roomValue(value: number | null | undefined): string {
+  if (value == null) return "";
+  return value % 1 === 0 ? String(value) : value.toFixed(1);
+}
+
+// Shared MCRAI + accessibility + BIR/spatial-lag block, used by both the barangay
+// detail panel and the in-depth property breakdown.
+function featureBlocksHtml(
+  mcrai: Record<string, number | null> | undefined,
+  dist: Record<string, number | null> | undefined,
+  bir: number | null | undefined,
+  spatialLag: number | null | undefined,
+  footerNote?: string,
+): string {
+  const parts: string[] = [];
+
+  if (mcrai && mcraiOrder.some((key) => mcrai[key] != null)) {
+    parts.push(`<div class="bd-section">Amenity access (MCRAI)</div>`);
+    for (const key of mcraiOrder) {
+      const value = mcrai[key];
+      if (value == null) continue;
+      const max = barangayFeatures.mcrai_max[key] || value || 1;
+      const width = Math.min(100, Math.max(3, (value / max) * 100));
+      parts.push(
+        `<div class="bd-bar-row"><div class="bd-bar-top"><span>${mcraiLabels[key] ?? key}</span><b>${value.toFixed(1)}</b></div>` +
+          `<div class="bd-track"><span class="bd-bar" style="width:${width.toFixed(0)}%"></span></div></div>`,
+      );
+    }
+  }
+
+  if (dist) {
+    const cbdEntries = Object.keys(cbdLabels)
+      .filter((key) => dist[key] != null)
+      .map((key) => ({ key, m: dist[key] as number }));
+    if (cbdEntries.length) {
+      const nearest = cbdEntries.reduce((a, b) => (b.m < a.m ? b : a));
+      parts.push(`<div class="bd-section">Accessibility</div>`);
+      parts.push(
+        `<div class="bd-row"><span>Nearest CBD node</span><b>${cbdLabels[nearest.key]} · ${(nearest.m / 1000).toFixed(1)} km</b></div>`,
+      );
+      const grid = cbdEntries
+        .map(
+          (entry) =>
+            `<div class="bd-dist"><span>${cbdLabels[entry.key]}</span><b>${(entry.m / 1000).toFixed(1)} km</b></div>`,
+        )
+        .join("");
+      parts.push(`<div class="bd-dist-grid">${grid}</div>`);
+    }
+    for (const key of Object.keys(roadLabels)) {
+      if (dist[key] == null) continue;
+      parts.push(
+        `<div class="bd-row"><span>${roadLabels[key]}</span><b>${((dist[key] as number) / 1000).toFixed(2)} km</b></div>`,
+      );
+    }
+  }
+
+  if (bir != null || spatialLag != null) {
+    parts.push(`<div class="bd-section">Other model features</div>`);
+    if (bir != null) {
+      parts.push(`<div class="bd-row"><span>BIR zonal — residential</span><b>${currency(bir)} /sqm</b></div>`);
+    }
+    if (spatialLag != null) {
+      parts.push(
+        `<div class="bd-row"><span>Neighbourhood price level (spatial lag)</span><b>${currency(spatialLag)}</b></div>`,
+      );
+    }
+  }
+
+  if (footerNote) parts.push(`<p class="bd-note">${footerNote}</p>`);
+  return parts.join("");
+}
+
 function renderSelectedProperty() {
   const target = byId("selected-property");
   const listing = listings.find((item) => item.propertyId === state.selectedId);
@@ -422,14 +587,40 @@ function renderSelectedProperty() {
     target.textContent = "Select a listing on the map.";
     return;
   }
+
+  const parts: string[] = [];
+  parts.push(`<strong>${currency(listing.pricePerSqm)} <span>/ sqm listed</span></strong>`);
+  parts.push(`<p>${escapeHtml(listing.stratum)} · ${escapeHtml(listing.propertyType)}</p>`);
+  parts.push(`<p>${listing.barangay ? `${escapeHtml(listing.barangay)}, ` : ""}${escapeHtml(listing.city)}</p>`);
+  if (listing.address) parts.push(`<p>${escapeHtml(listing.address)}</p>`);
+
+  const meta: string[] = [];
+  if (listing.areaSqm != null) meta.push(`${listing.areaSqm.toLocaleString()} sqm`);
+  if (listing.pricePhp != null) meta.push(`${currency(listing.pricePhp)} total`);
+  if (meta.length) parts.push(`<p class="sel-meta">${meta.join(" · ")}</p>`);
+
+  if (listing.stratum !== "Vacant Lot" && (listing.bedrooms != null || listing.bathrooms != null)) {
+    const rooms: string[] = [];
+    if (listing.bedrooms != null) rooms.push(`${roomValue(listing.bedrooms)} bed`);
+    if (listing.bathrooms != null) rooms.push(`${roomValue(listing.bathrooms)} bath`);
+    const estimated = listing.bedroomsImputed || listing.bathroomsImputed;
+    parts.push(
+      `<p class="sel-rooms">${rooms.join(" · ")}${estimated ? ` <span class="muted">(some estimated)</span>` : ""}</p>`,
+    );
+  }
+
+  parts.push(
+    featureBlocksHtml(
+      listing.mcrai,
+      listing.dist,
+      listing.birZonalRr,
+      listing.spatialLag,
+      `Property #${listing.propertyId} — record from the training ABT.`,
+    ),
+  );
+
   target.className = "selection";
-  target.innerHTML = `
-    <strong>${currency(listing.pricePerSqm)} <span>/ sqm listed</span></strong>
-    <p>${listing.stratum} · ${listing.propertyType}</p>
-    <p>${listing.barangay ? `${listing.barangay}, ` : ""}${listing.city}</p>
-    <p>${listing.address || "No address text"}</p>
-    <p>${listing.areaSqm ? `${listing.areaSqm.toLocaleString()} sqm` : ""}</p>
-  `;
+  target.innerHTML = parts.join("");
 }
 
 function renderRanking() {
@@ -496,9 +687,7 @@ function renderSurfaceLayer() {
     }),
     onEachFeature: (feature, layer) => {
       const props = feature.properties as SurfaceProperties;
-      layer.bindTooltip(
-        `<strong>${props.barangay}</strong><br>${props.lgu}<br><strong>${props.price_label}</strong><br>${props.confidence_label}<br>${props.point_count} grid cells aggregated`,
-      );
+      layer.bindTooltip(surfaceTooltip(props));
       layer.on("click", () => {
         state.selectedSurface = props;
         renderSurfaceSummary(decorated);
@@ -521,6 +710,78 @@ function renderSurfaceSummary(decorated = decoratedSurface()) {
   byId("surface-median").textContent = currency(median);
   byId("surface-low").textContent = `${Math.round((lowCount / Math.max(decorated.allFeatures.length, 1)) * 100)}%`;
   byId("surface-selected").textContent = state.selectedSurface?.barangay ?? "None";
+  renderBarangayDetail();
+}
+
+function surfaceTooltip(props: SurfaceProperties): string {
+  const range =
+    props.price_q25 != null && props.price_q75 != null
+      ? `<br>Range ${currency(props.price_q25)} – ${currency(props.price_q75)} /sqm`
+      : "";
+  const record = props.adm4_pcode ? barangayFeatures.barangays[props.adm4_pcode] : undefined;
+  const access =
+    record && record.mcrai.composite != null
+      ? `<br>Overall access (MCRAI): ${record.mcrai.composite.toFixed(0)}`
+      : "";
+  return (
+    `<strong>${escapeHtml(props.barangay)}</strong> · ${escapeHtml(props.lgu)}` +
+    `<br>Median ${escapeHtml(props.price_label)}${range}${access}` +
+    `<br><span style="opacity:0.82">${escapeHtml(props.confidence_label)} · click for features</span>`
+  );
+}
+
+function renderBarangayDetail() {
+  const target = byId("surface-detail");
+  const props = state.selectedSurface;
+  if (!props) {
+    target.className = "empty";
+    target.textContent = "Click a barangay to see the amenity scores and features behind its price.";
+    return;
+  }
+
+  const record = props.adm4_pcode ? barangayFeatures.barangays[props.adm4_pcode] : undefined;
+  const parts: string[] = [];
+  parts.push(
+    `<div class="bd-head"><strong>${escapeHtml(props.barangay)}</strong><span>${escapeHtml(props.lgu)}</span></div>`,
+  );
+  parts.push(
+    `<div class="bd-price"><strong>${escapeHtml(props.price_label)}</strong>` +
+      `<span>median · ${escapeHtml(surfaceMeta[state.surfaceKey].label)} surface</span></div>`,
+  );
+  const range =
+    props.price_q25 != null && props.price_q75 != null
+      ? `${currency(props.price_q25)} – ${currency(props.price_q75)} /sqm`
+      : "—";
+  parts.push(`<div class="bd-row"><span>Price range (q25–q75)</span><b>${range}</b></div>`);
+  if (record) {
+    parts.push(
+      `<div class="bd-row"><span>Listings sampled</span><b>${record.n_listings}</b></div>` +
+        `<div class="bd-row"><span>Actual listing median</span><b>${currency(record.listing_price_median)} /sqm</b></div>`,
+    );
+  }
+  parts.push(`<div class="bd-row"><span>Confidence</span><b>${escapeHtml(props.confidence_label)}</b></div>`);
+
+  if (!record) {
+    parts.push(
+      `<p class="bd-note">No listings fall inside this barangay, so its amenity profile can't be averaged. The price is interpolated from nearby barangays.</p>`,
+    );
+    target.className = "surface-detail";
+    target.innerHTML = parts.join("");
+    return;
+  }
+
+  parts.push(
+    featureBlocksHtml(
+      record.mcrai,
+      record.dist,
+      record.bir_zonal_rr_median,
+      record.spatial_lag_price,
+      `Amenity scores and distances are averaged over the ${record.n_listings} listing(s) inside this barangay — the location factors behind its price band.`,
+    ),
+  );
+
+  target.className = "surface-detail";
+  target.innerHTML = parts.join("");
 }
 
 function renderMarket() {
@@ -672,8 +933,36 @@ function refreshPredict() {
 function renderPredict() {
   clearDynamicLayers();
   setLayerVisibility(lguLayer, true);
+  state.predictNearby = state.predictPin ? nearbyListings(state.predictPin) : [];
+
   if (state.predictPin) {
-    predictMarker = L.circleMarker([state.predictPin.lat, state.predictPin.lon], {
+    const { lat, lon } = state.predictPin;
+    predictBufferLayer = L.circle([lat, lon], {
+      radius: PREDICT_RADIUS_M,
+      color: "#2563eb",
+      weight: 1.4,
+      fillColor: "#2563eb",
+      fillOpacity: 0.06,
+    }).addTo(map);
+
+    predictNearbyLayer.clearLayers();
+    for (const { listing, dist } of state.predictNearby) {
+      L.circleMarker([listing.latitude, listing.longitude], {
+        radius: 5,
+        color: "#ffffff",
+        weight: 1,
+        fillColor: stratumColors[listing.stratum] ?? "#64748b",
+        fillOpacity: 0.92,
+      })
+        .bindTooltip(
+          `<strong>${listing.stratum}</strong> · ${currency(listing.pricePerSqm)} /sqm<br>${Math.round(dist)} m from pin`,
+        )
+        .addTo(predictNearbyLayer);
+    }
+    predictNearbyLayer.addTo(map);
+
+    // Pin drawn last so it sits above the nearby points.
+    predictMarker = L.circleMarker([lat, lon], {
       radius: 9,
       color: "#ffffff",
       weight: 3,
@@ -681,12 +970,45 @@ function renderPredict() {
       fillOpacity: 1,
     }).addTo(map);
   }
+
   byId("page-title").textContent = "Property Price Predictor";
   byId("subtitle").textContent = state.predictPin
-    ? `Pin ${state.predictPin.lat.toFixed(5)}, ${state.predictPin.lon.toFixed(5)}`
+    ? `Pin ${state.predictPin.lat.toFixed(5)}, ${state.predictPin.lon.toFixed(5)} · ${state.predictNearby.length} listing(s) within 1 km`
     : "Click anywhere inside the six Metro Cebu LGUs.";
   byId("legend").innerHTML = "";
   refreshPredict();
+  renderPredictNearby();
+}
+
+function renderPredictNearby() {
+  const target = byId("predict-nearby");
+  if (!state.predictPin) {
+    target.hidden = true;
+    return;
+  }
+  target.hidden = false;
+  const near = state.predictNearby;
+  if (!near.length) {
+    target.innerHTML =
+      `<div class="nearby-head">Nearby listings · 1 km</div>` +
+      `<p class="bd-note">No actual ABT listings within 1 km of this pin.</p>`;
+    return;
+  }
+  const rows = near
+    .slice(0, 40)
+    .map((item, idx) => {
+      const listing = item.listing;
+      const where = listing.barangay || listing.city;
+      return (
+        `<div class="nearby-row"><span class="nearby-rank">${idx + 1}</span>` +
+        `<span class="nearby-main"><b>${currency(listing.pricePerSqm)} /sqm</b>` +
+        `<span>${escapeHtml(listing.stratum)}${where ? ` · ${escapeHtml(where)}` : ""}</span></span>` +
+        `<span class="nearby-dist">${Math.round(item.dist)} m</span></div>`
+      );
+    })
+    .join("");
+  const more = near.length > 40 ? `<p class="bd-note">Showing the 40 closest of ${near.length}.</p>` : "";
+  target.innerHTML = `<div class="nearby-head">Nearby listings · ${near.length} within 1 km</div>${rows}${more}`;
 }
 
 async function resolvePin() {
@@ -876,14 +1198,15 @@ function attachEvents() {
 }
 
 async function init() {
-  const [listingResponse, poiResponse, lguResponse, sdhResponse, condoResponse, vacantResponse] = await Promise.all([
-    fetch("/data/listings.json"),
-    fetch("/data/pois.json"),
-    fetch("/data/lgu_boundaries.geojson"),
-    fetch(`/data/${surfaceMeta.sdh.file}`),
-    fetch(`/data/${surfaceMeta.condo.file}`),
-    fetch(`/data/${surfaceMeta.vacant.file}`),
-  ]);
+  const [listingResponse, poiResponse, lguResponse, sdhResponse, condoResponse, vacantResponse] =
+    await Promise.all([
+      fetch("/data/listings.json"),
+      fetch("/data/pois.json"),
+      fetch("/data/lgu_boundaries.geojson"),
+      fetch(`/data/${surfaceMeta.sdh.file}`),
+      fetch(`/data/${surfaceMeta.condo.file}`),
+      fetch(`/data/${surfaceMeta.vacant.file}`),
+    ]);
   listings = (await listingResponse.json()) as Listing[];
   pois = (await poiResponse.json()) as Poi[];
   surfaces = {
@@ -893,11 +1216,29 @@ async function init() {
   };
   const lguGeojson = await lguResponse.json();
 
+  // Optional: barangay feature profiles power the Price Surface hover/click detail.
+  // A failure here must never blank the Market Map or Price Surface, so it is loaded
+  // separately and tolerated.
+  try {
+    const featuresResponse = await fetch("/data/barangay_features.json");
+    if (featuresResponse.ok) {
+      barangayFeatures = (await featuresResponse.json()) as BarangayFeatures;
+    }
+  } catch (error) {
+    console.warn("Barangay feature detail unavailable:", error);
+  }
+
+  // interactive:false is critical — the LGU layer is brought to the front in the
+  // Price Surface view to draw its borders over the choropleth. If it stayed
+  // interactive its (transparent) polygons would swallow every click/hover before
+  // the barangay layer underneath could receive them. As pure decoration, events
+  // pass straight through to the barangay polygons (and the predictor's map click).
   lguLayer = L.geoJSON(lguGeojson, {
+    interactive: false,
     style: {
       color: "#334155",
       weight: 1.7,
-      fillOpacity: 0,
+      fill: false,
     },
   }).addTo(map);
 

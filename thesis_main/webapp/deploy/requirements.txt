@@ -1,0 +1,11 @@
+# Pinned to the environment that trained the deployed pickles so they unpickle
+# cleanly. scikit-learn MUST match (1.8.x). Streamlit is intentionally absent —
+# the backend runs with WEBAPP_API=1, which uses the functools cache shim.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+scikit-learn==1.8.0
+numpy>=2.0,<3
+pandas>=2.0
+scipy>=1.13
+shapely>=2.1
+shap>=0.51

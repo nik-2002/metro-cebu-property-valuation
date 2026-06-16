@@ -6,6 +6,13 @@ The current prototype rebuilds the Market Map and Price Surface with static HTML
 
 ## Run
 
+**Quickest:** double-click `run.command` (or `./run.command` in a terminal). It
+starts the FastAPI backend and the Vite frontend together, opens the browser, and
+stops both on Ctrl+C. Reuses an already-running backend on port 8000 if present.
+Pass `--export` to force a fresh data export first.
+
+Manual, if you prefer two terminals —
+
 Static frontend (Market Map + Price Surface):
 
 ```bash

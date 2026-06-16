@@ -598,6 +598,204 @@ h2 {
   line-height: 1.4;
 }
 
+/* ── Barangay feature detail (Price Surface click) ──────────────────────── */
+.surface-detail {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #eef2f7;
+}
+
+.bd-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.bd-head strong {
+  font-size: 1rem;
+  color: #14233b;
+}
+
+.bd-head span {
+  color: #8791a0;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.bd-price {
+  margin-bottom: 10px;
+}
+
+.bd-price strong {
+  display: block;
+  color: #d43d4d;
+  font-size: 1.18rem;
+  font-weight: 850;
+}
+
+.bd-price span {
+  color: #8791a0;
+  font-size: 0.72rem;
+}
+
+.bd-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 0;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.bd-row b {
+  color: #14233b;
+  white-space: nowrap;
+}
+
+.bd-section {
+  margin: 14px 0 8px;
+  color: #8a94a6;
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bd-bar-row {
+  margin-bottom: 7px;
+}
+
+.bd-bar-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 3px;
+  font-size: 0.78rem;
+  color: #334155;
+}
+
+.bd-bar-top b {
+  color: #14233b;
+}
+
+.bd-track {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #eef2f7;
+}
+
+.bd-bar {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #2171b5;
+}
+
+.bd-dist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 14px;
+  margin: 2px 0 4px;
+}
+
+.bd-dist {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: #475569;
+}
+
+.bd-dist b {
+  color: #14233b;
+  white-space: nowrap;
+}
+
+.bd-note {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+/* selected-property extras */
+.selection .sel-meta {
+  margin-top: 6px;
+  color: #14233b;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.selection .sel-rooms {
+  margin-top: 2px;
+  color: #475569;
+  font-size: 0.82rem;
+}
+
+.muted {
+  color: #94a3b8;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+/* ── Predictor: nearby actual listings (1 km) ───────────────────────────── */
+.nearby-head {
+  margin: 14px 0 8px;
+  color: #8a94a6;
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nearby-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.nearby-rank {
+  flex: 0 0 auto;
+  width: 20px;
+  color: #94a3b8;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.nearby-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nearby-main b {
+  color: #14233b;
+  font-size: 0.82rem;
+}
+
+.nearby-main span {
+  overflow: hidden;
+  color: #6b7280;
+  font-size: 0.74rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nearby-dist {
+  flex: 0 0 auto;
+  color: #2563eb;
+  font-size: 0.76rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 @media (max-width: 1100px) {
   #app {
     grid-template-columns: 260px 1fr;

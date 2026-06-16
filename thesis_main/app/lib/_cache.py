@@ -34,7 +34,13 @@ if os.environ.get("WEBAPP_API") == "1":
     cache_data = _passthrough_cache
     cache_resource = _passthrough_cache
 else:  # pragma: no cover - exercised only under `streamlit run`
-    import streamlit as st
+    try:
+        import streamlit as st
 
-    cache_data = st.cache_data
-    cache_resource = st.cache_resource
+        cache_data = st.cache_data
+        cache_resource = st.cache_resource
+    except ImportError:
+        # Streamlit not installed (e.g. pruned after the JS/TS webapp shift).
+        # Fall back to functools so any non-API import of lib still works.
+        cache_data = _passthrough_cache
+        cache_resource = _passthrough_cache

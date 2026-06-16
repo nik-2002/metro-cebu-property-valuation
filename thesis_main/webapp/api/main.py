@@ -29,6 +29,7 @@ from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 # thesis_main/webapp/api -> thesis_main/app
@@ -157,3 +158,12 @@ def do_predict(req: PredictRequest) -> dict:
         "drivers": drivers,
         "driver_error": driver_error,
     }
+
+
+# Serve the built Vite frontend from the same origin when it is present, so a single
+# deployment (e.g. Hugging Face Spaces) hosts both the static site and the API with no
+# CORS. Mounted last so the /api routes above always take precedence. Skipped in local
+# dev where Vite serves the frontend (though dist/ may also exist after a build).
+_DIST = Path(__file__).resolve().parents[1] / "dist"
+if _DIST.is_dir():
+    app.mount("/", StaticFiles(directory=str(_DIST), html=True), name="frontend")

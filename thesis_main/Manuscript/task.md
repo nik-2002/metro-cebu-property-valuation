@@ -1,7 +1,93 @@
 # Manuscript Tasks
 
 > Tracking manuscript, ABT readiness, modeling, and supporting outputs.
-> Last updated: 2026-06-15 (Decision 48 — Ramolete replication refreshed; manuscript work deferred as a batch)
+> Last updated: 2026-06-16 (webapp — HF Space deploy package built + run.command launcher verified; neither deployed yet)
+
+---
+
+## Session 2026-06-15 (webapp) — JS/TS frontend + FastAPI backend; Property Predictor ported
+
+> Direction shift: the deliverable app is moving from Streamlit to a lighter Vite + TypeScript +
+> Leaflet frontend (`thesis_main/webapp/`, started by Codex) with model inference behind a small
+> FastAPI service. Streamlit app (`thesis_main/app/`) is being retired (code kept in repo).
+
+### Done this session (Claude — implemented directly, not via Codex)
+- [x] **Property Predictor ported** to TS frontend + Python API. Architecture chosen with Nico:
+      TS sends `{lat,lon,property_type,area,beds,baths,bir_override}` → FastAPI runs the EXACT thesis
+      model code → JSON back. No modeling logic reimplemented in JS; no retrain.
+- [x] **Backend** `thesis_main/webapp/api/main.py` (FastAPI): `GET /api/health`, `GET /api/resolve`
+      (point-in-polygon city + auto BIR estimate on pin drop), `POST /api/predict` (full feature
+      build → RF predict + CI band → SHAP top-5 drivers). Reuses `app/lib` unchanged.
+- [x] **Cache shim** `app/lib/_cache.py` — the ONLY change to `app/lib`. Returns `st.cache_*` normally;
+      when `WEBAPP_API=1` (set by the backend) falls back to `functools` so lib imports with no
+      Streamlit runtime. Swapped the 4 decorators in features/predict/mcrai_lookup/shap_explain.
+      `streamlit run` behaviour unchanged (verified: shim returns the real `st.cache_*`). Shim also
+      degrades to functools if streamlit is uninstalled.
+- [x] **Frontend** third "Predictor" view in `webapp/{index.html,src/main.ts,src/styles.css}`:
+      pin-drop map, type/area/beds/baths inputs, auto city pill + BIR readout (+override), Predict
+      button, results panel (price/sqm, total, CI range, MCRAI-fallback warning, SHAP drivers).
+      `vite.config.ts` proxies `/api → :8000`; `npm run api` convenience script; README + .gitignore updated.
+- [x] **Runs on the project `.venv`** (NOT conda). Installed `fastapi 0.137.0` into `./.venv`
+      (already had uvicorn, **shap 0.51.0**, shapely, streamlit, sklearn 1.8.0 / numpy 2.4.3 / pandas 3.0.1
+      → pickles load identically). npm scripts point at `../../.venv/bin/python`.
+
+### Verified
+- tsc `--noEmit` clean; `vite build` green (JS ~167 KB). Streamlit-path lib import still clean.
+- **Faithfulness:** `/api/predict` == direct lib call, exact match. CBP condo 60 sqm → **224,665/sqm**.
+- All 3 strata route (Condo 224,665 · Houses 142,577 · Lot 73,207 /sqm); BIR override flows through;
+  out-of-bounds pin → HTTP 422. SHAP drivers populate (5) on the `.venv` (shap present).
+- Verified through the Vite proxy (browser path) on `:5174` (5173 was occupied).
+
+### Decisions / notes
+- `get_last_mcrai_fallback()` is a module global → could race under truly concurrent requests.
+  Fine for single-user demo; per-request refactor if it ever goes multi-user.
+- CLAUDE.md still calls the **Streamlit app the final deliverable** — update that line once the
+  webapp is confirmed as the deliverable.
+
+### Venv lean-up (Nico's request — "shifted from streamlit")
+- Finding: `streamlit`, `streamlit_folium`, `folium`, `pydeck`, `branca` are imported ONLY by
+  `thesis_main/app/`. Nothing in `Scripts/`, the scrapers, EDA, or the webapp uses them → removing
+  them retires only the old Streamlit app. Scientific stack (sklearn, pandas, numpy, scipy, shap,
+  shapely, matplotlib, osmnx, geopandas, …) is shared by the modeling pipeline → KEEP.
+- **DECIDED 2026-06-15: KEEP Streamlit for now** — do NOT uninstall. Nico wants `app/` runnable as a
+  defense fallback; revisit the lean-up after the defense. `.venv` left unchanged. Safe-to-remove set
+  when revisited: `streamlit`, `streamlit-folium`, `folium`, `pydeck`, `branca` (+ their orphans).
+
+### Hugging Face Space deploy package (built 2026-06-15) — NOT YET DEPLOYED
+- Goal: host the whole webapp (FastAPI + built frontend) free. Chose **Hugging Face Spaces, Docker SDK**
+  (free, 16 GB RAM, port 7860). One container serves `/api/*` AND the built `dist/` at `/` via
+  `StaticFiles` → **same-origin, no CORS** (production path differs from dev, which uses the Vite proxy).
+- `thesis_main/webapp/deploy/` created (tracked): `Dockerfile` (python:3.12-slim, `ENV WEBAPP_API=1`,
+  uvicorn on :7860), `requirements.txt` (**scikit-learn==1.8.0 pinned** so pickles load, + shap, fastapi,
+  uvicorn, numpy<3, pandas, scipy, shapely — **NO streamlit**), `README.md` (HF front-matter `sdk: docker`,
+  `app_port: 7860`), `.gitattributes` (`*.pkl filter=lfs`), and `build_hf_space.py`.
+- `build_hf_space.py` assembles `webapp/hf_space/` mirroring the minimal subtree the backend imports —
+  the 7 needed `app/lib` modules, the 3 deployed pkls + manifest, `abt_clean.csv`, `lgu_boundaries.geojson`,
+  `api/main.py`, and the built `dist/` — **preserving relative paths** so lib's relative file lookups
+  resolve unchanged inside the container. `hf_space/` is git-ignored (regenerate with the script).
+- **Verified locally only** (ran the exact Docker CMD via `.venv` uvicorn on :7861): `/api/health` ok
+  (shap true), `/` → index.html 200, `/data/*` 200, JS asset 200, predict 224,665/sqm + 5 drivers.
+  Package = 28 files, ~83.5 MB. **Docker build itself NOT tested (Docker not installed locally).**
+- **STATUS: nothing pushed to Hugging Face yet.** What's left is Nico's to do (I can't log into his HF):
+  create a Docker Space (Blank, CPU free), make a Write token, then from the repo root:
+  `! ./.venv/bin/hf auth login`  then  `! ./.venv/bin/hf upload USERNAME/SPACE "thesis_main/webapp/hf_space" . --repo-type space`.
+  (`hf` CLI v1.19.0 is installed in `.venv`; `huggingface-cli` is deprecated.)
+- **CAVEAT to decide before pushing:** a **Public** Space exposes the full ABT (addresses, coordinates,
+  prices scraped from Lamudi / FilipinoHomes / DotProperty) and the live Predictor to anyone. Choose
+  **Public vs Private**. Free Spaces also **cold-start** (sleep when idle) → for the actual defense, run
+  locally via `run.command`, not the Space. Local pkls are git-ignored but DO get pushed to the Space (LFS).
+
+### One-click launcher `run.command` (added by a separate Claude session; verified here 2026-06-16)
+- `thesis_main/webapp/run.command` (untracked) — double-click in Finder (opens Terminal) or `./run.command`.
+  Starts the FastAPI backend (:8000) + Vite frontend (:5173), opens the browser, **Ctrl+C stops both**
+  (cleanup trap kills only the backend it started). Reuses a healthy backend already on :8000 instead of
+  erroring. `--export` forces a fresh data export; otherwise skipped (data is frozen). Uses `../../.venv/bin/python`.
+  `README.md` "Run" section updated to point at it (do not revert).
+- **Verified 2026-06-16, true cold start** (killed all stray backend/Vite/Streamlit first): backend healthy
+  ~8 s, single process (no `--reload`), shap true; resolve CBP → Cebu City, BIR ₱51,250; predict condo 80 m²
+  → ₱261,694/sqm = ₱20.9M, MdAPE 19.3 + 5 drivers; Vite served on :5173. NOTE: `/api/predict` request field
+  is `area_sqm` (not `floor_area_sqm`); `property_type` must be in `PROPERTY_TYPES` (e.g. "Condominium").
+- For the defense: **double-click the file yourself** so Ctrl+C works in your own Terminal window.
 
 ---
 
@@ -44,7 +130,8 @@
 - [ ] k-NN spatial-lag if 500m too sparse; re-scrape FH `status` field for status-based distressed filter.
 
 ### NEXT concrete action (when resuming)
-- [ ] Freeze: re-confirm abt_clean (3,616) ↔ 3 pkls ↔ manifest ↔ both geojson are one consistent state, then commit the `modeling` branch (currently uncommitted, 261 changes).
+- [x] **DONE 2026-06-15** — Freeze: re-confirmed abt_clean (3,616) ↔ 3 RF pkls (300 trees; feature_names_in_ match manifest 21/24/22) ↔ manifest (1,300/1,223/849; MdAPE 19.3/22.7/38.4) ↔ barangay price surfaces (199 brgys; med ppsqm condo 165k/houses 62k/vacant 34k; app+webapp copies byte-identical). One consistent state (ABT 00:53 → models 02:08-02:10 → manifest 02:10 → surfaces 10:48). Committed on `clean-baseline-2026-06-15` as `dc9efa1c` (33 files; pkls git-ignored, manifest is tracked source of truth). NOTE: task said branch `modeling`/261 changes — stale; actual was clean-baseline, 16 changes (ABT+manifest already in HEAD from prior baseline commit).
+- [ ] NEXT: app screenshots for the deliverable chapter, then the deferred manuscript batch.
 
 ---
 
