@@ -65,9 +65,10 @@
 
 ### NEXT — section-by-section high-quality pass (with author), open items
 - [ ] Voice: trim em-dashes, undergraduate tone per feedback_manuscript_voice (passes 1-3 left em-dashes).
-- [ ] **Install biber (~80 MB, `sudo tlmgr install biber`)** then full build
-      (`pdflatex; biber; pdflatex; pdflatex`) to resolve citations + rebuild LOF/LOT + regenerate the
-      stale committed main.pdf. biber NOT installed locally; all 44 cite keys are valid so they will resolve.
+- [x] **biber installed** (2026-06-17, `sudo tlmgr update --self && sudo tlmgr install biber`; BasicTeX 2026).
+      Full build `pdflatex->biber->pdflatex->pdflatex` run: **undefined citations 105->0**, APA reference
+      list populated, **112 pages** (was 104), no LaTeX errors. main.pdf rebuilt + committed (6a5ee807).
+      (Build sequence for future runs: `cd thesis_main/Manuscript && pdflatex main && biber main && pdflatex main && pdflatex main`.)
 - [ ] **Ch2 missing bib entries (author to add — NOT invented):** Wibowo (2023), Samsudin (2022),
       Becsky-Nagy & Sachicola (2025), Sinnott (1984), Tax Policy Study (2023). Cited in prose, no biblio.bib entry.
 - [ ] Complete the droes2019 / usman2020 bib entries (volume/pages/DOI/publisher).
