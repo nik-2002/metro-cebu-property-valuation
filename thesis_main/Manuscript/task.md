@@ -1,7 +1,40 @@
 # Manuscript Tasks
 
 > Tracking manuscript, ABT readiness, modeling, and supporting outputs.
-> Last updated: 2026-06-16 (webapp — HF Space deploy package built + run.command launcher verified; neither deployed yet)
+> Last updated: 2026-06-17 (manuscript FIRST PASS rewrite done on dev/manuscript)
+
+---
+
+## Session 2026-06-17 (manuscript) — Full first-pass rewrite to the deployed stratified model
+
+> On `dev/manuscript` (synced from dev/modeling first: Decisions 51-53, refreshed RQ4 + stratified
+> SHAP). Rewrote the chapters off the retired global model (single model, total price, 299-row split,
+> MAPE/MAE/RMSE/R2) to the deployed design (3 stratified per-sqm models, GroupKFold, MdAPE/PE20).
+> Committed as 82650cd4. Drafted by Claude as agreed first pass; author voice + quality pass is NEXT.
+
+### Done (first pass)
+- [x] Ch3 Methodology — stratification + strata table, multi-source data, GroupKFold, per-stratum
+      feature selection, MCRAI 8-cat (3-cat composite, transport->roads, finance retired), 500m lag,
+      MdAPE/PE20, web-app (Vite/FastAPI) deliverable. Data-pipeline figure wired.
+- [x] Ch7 Results — RQ2 head-to-head, RF best/tied, RQ3 ablation, stratified SHAP beeswarms, honest
+      residual/data-ceiling story, Ramolete like-for-like.
+- [x] Ch8 Interpretation — re-grounded on per-stratum SHAP; polycentric + bid-rent + sorting kept.
+- [x] Ch9 Conclusions — RQ1-4 answered with current numbers; RQ4 lots ~3x BIR; full limitations.
+- [x] Ch4 EDA + Ch5 Data Prep — refreshed to open-market 3,616 ABT, real stats, is_mactan_island
+      removed, figure paths ../../EDA -> ../EDA fixed.
+- [x] Ch1 + abstract — overclaim removed, web-app framing.
+- [x] biblio.bib — verified stratification refs added (droes2019, usman2020); all 44 used keys valid.
+- [x] Draft-compiles with pdflatex, no LaTeX errors.
+
+### NEXT — section-by-section high-quality pass (with author), open items to address
+- [ ] Voice: trim em-dashes, undergraduate tone per feedback_manuscript_voice (first pass left em-dashes).
+- [ ] Complete the droes2019 / usman2020 bib entries (volume/pages/DOI/publisher).
+- [ ] Ch6: optionally add a regenerated 3-category MCRAI composite-weights figure (old 4-cat figure dropped).
+- [ ] Verify/regenerate diagrams/Data-Pipeline-Updated.png to show the 3-portal multi-source pipeline.
+- [ ] Ch5: optionally add a precise data-prep funnel table from reference/data_collection_funnel.csv.
+- [ ] Ch4: optionally restore specific Spearman rho values from current EDA tables (qualitative now).
+- [ ] Full compile with biber (not installed locally) to resolve citations + rebuild LOF/LOT.
+- [ ] Ch10 recommendations — not yet reviewed against current findings.
 
 ---
 
