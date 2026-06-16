@@ -145,6 +145,18 @@ between market prices and BIR zonal values — delivered as QGIS layers + a Stre
   bare-land value depends on unobserved parcel attributes (frontage, zoning, title, slope, flood) absent
   from listings. The honest ~38% (not the earlier optimistic 25.6% on a small concentrated sample) is a
   data ceiling, not a modeling failure.
+- [ ] **NEW — Condo pre-selling down-payment contamination (Decision 53):** the cheap tail of condo
+  listings is contaminated by pre-selling **down-payments / reservation fees scraped as full unit
+  prices** (24 condos ≤ ₱1M and <25% of city norm, mostly named pre-selling projects in Mandaue /
+  Lapu-Lapu / Cebu City). A target-variable measurement error. We documented it rather than dropping
+  the rows or retraining (frozen models, near defense). Distress detection is weak because listing
+  descriptions were not retained (only short titles). Evidence:
+  `reference/condo_partial_price_suspects_2026-06-16.csv`; review: `reference/model_review_2026-06-16.md`.
+- [ ] **NEW — Intra-city terrain not captured (Decision 53 / model_review):** the largest vacant-lot
+  errors are genuinely cheap **mountain/highland barangays within a city** (e.g. Sirao, Babag in Cebu
+  City) that the model over-values because it only sees "city + distance to CBD," not elevation/slope/
+  access. Honest limitation, not data error — keep those listings. Possible future feature: DEM-based
+  elevation/slope. Review: `reference/model_review_2026-06-16.md`.
 
 ## Cross-cutting
 - [ ] Remove any "Mapbox token" / "manifest contract bug" caveats (resolved).

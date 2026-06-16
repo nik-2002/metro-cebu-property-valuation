@@ -2205,3 +2205,27 @@ metadata (presentations, checklists, README, config). **NOTE: applied on `dev/mo
 merged to `main` + other worktrees to remove the duplicate EDA everywhere.**
 
 **Next decision number: 53.**
+
+## Decision 53 — Condo pre-selling down-payment contamination: documented, models left frozen (Option A) (2026-06-16)
+**Data-quality finding during model review (no model change).** The worst condo prediction errors are
+atypically cheap listings the model over-predicts. Investigation of the cheapest condos relative to
+their own city+type norm found the dominant cause is **pre-selling down-payments / reservation fees
+scraped as if they were the full unit price**, not distress. Of the 35 condos priced under 25% of their
+city norm, **24 carry a total ≤ ₱1M** (Mandaue 9 / Cebu City 9 / Lapu-Lapu 6), and most are named real
+pre-selling projects (MIVELA Garden Residences, Grand Residences, One Astra Place, Northwoods Place) —
+22–37 sqm studios/1BR at round ₱500k–950k totals. Only 1 of the 24 carries "rush"/distress wording;
+distressed-listing detection is unreliable here because listing **descriptions were not retained** in
+the ABT (only short titles). The 24 rows are saved with full detail in
+**`reference/condo_partial_price_suspects_2026-06-16.csv`**; the fuller review write-up (including the
+intra-city terrain limitation for lots and the geocoding-LGU-mismatch finding) is in
+**`reference/model_review_2026-06-16.md`**.
+
+**Decision (Option A):** document as a limitation, do **not** drop the rows or retrain. Rationale: the
+deployed condo model + app price surface are frozen; removing ~1.8% of condos barely moves the median
+error (the headline MdAPE) and mainly tightens the mean — a cosmetic gain not worth re-running the
+frozen pipeline this close to defense, and bulk-dropping hard cheap cases to improve metrics is
+indefensible at panel. A principled location-relative price floor in cleaning + retrain (Option B) is
+recorded as a possible future improvement only. **The manuscript rewrite must state this limitation and
+cite the 24-row evidence CSV.**
+
+**Next decision number: 54.**
