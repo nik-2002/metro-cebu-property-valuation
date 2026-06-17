@@ -5,7 +5,7 @@
 - Treat the author as the primary writer. AI supports planning, critique, consistency checks, and targeted revision — not authorship.
 - The thesis is a predictive and prescriptive decision support tool for property valuation practice in Metro Cebu.
 - Keep Metro Cebu, valuation practice, geospatial features, and decision support central. Do not generalize away local specificity.
-- Final deliverable: a Streamlit web app showing a predicted open-market residential price surface across Metro Cebu.
+- Final deliverable: a Vite/TypeScript/Leaflet + FastAPI web app showing a predicted open-market residential price surface across Metro Cebu. The map visualization lives inside the app (Leaflet), fed by GeoJSON files. Streamlit was the earlier prototype and has been **dropped** (the code still exists but is not used or maintained). **QGIS is no longer used** (Decision 55) — it is not a deliverable and not a tool in the final workflow; spatial outputs are GeoJSON consumed by the in-app map. The thesis title keeps "GIS-Derived Spatial Features" (GIS ≠ QGIS; features come from Google Maps Geocoding/Places APIs + OSM via osmnx/Overpass + Nominatim reverse-geocode).
 
 ## Project Context (Durable Design Decisions)
 - **Spatial scope**: 6 LGUs — Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, Consolacion.
@@ -35,7 +35,7 @@
 
 ## Methodology Standing Rules
 - **Spatial distances**: osmnx network distance (Dijkstra, Haversine fallback) is the standard for all CBD and accessibility computations. Do not revert to Haversine-only.
-- **Market segment at prediction time**: `market_segment` is fixed to `open_market` for the deployed Streamlit map. The model estimates open-market residential price levels across Metro Cebu.
+- **Market segment at prediction time**: `market_segment` is fixed to `open_market` for the deployed web-app map. The model estimates open-market residential price levels across Metro Cebu.
 - **MCRAI radii**: category-specific (micro: 500–800m, meso: 1–2km, meso-wide: 3km). Do not apply a single global radius across all categories.
 - **MCRAI weights**: the current deployed models retain individual MCRAI features plus `mcrai_composite`; do not revive historical finance/transport MCRAI features without logging a new decision.
 - **Transport accessibility**: represented by `dist_to_trunk_road_m` and `dist_to_primary_road_m`, not the retired transport-Hansen midpoint feature. Describe accurately in Chapter 3.
