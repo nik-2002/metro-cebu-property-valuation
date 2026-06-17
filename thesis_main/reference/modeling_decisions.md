@@ -2299,3 +2299,32 @@ references. Build after the sweep: 108 pages, 0 undefined. Not visually rendered
 but the TikZ compiles and its 90 mm width fits the text block.
 
 **Next decision number: 55.**
+
+---
+
+## Decision 55 — QGIS de-scoped from a deliverable to an exploration tool; web app is the sole applied output (2026-06-17)
+
+**Context.** During the Chapter 1 voice pass, Nico questioned the "GIS-derived" framing, noting he did
+not use QGIS for feature engineering (the features come from the Google Maps Geocoding/Places APIs and
+the OpenStreetMap road network via osmnx/Overpass, with Nominatim-style reverse geocoding). Two separate
+points fell out of this: (1) the **title** and the generic "GIS-derived / GIS-based" terminology are
+defensible and stay — GIS is the field, not the QGIS application; (2) but the manuscript still presented
+**QGIS as a delivered output** in ~11 places, and Nico confirmed the price-surface map is now **only the
+Vite/Leaflet + FastAPI web application** (QGIS was used during exploration, not as a final deliverable).
+
+**Decision.** De-scope QGIS from a deliverable everywhere; the **web application is the single applied
+deliverable**. Keep the thesis title ("…Machine Learning with GIS-Derived Spatial Features") and the
+generic GIS terminology unchanged.
+
+**Edits (abstract + Ch1 + Ch3 + Ch9 + Ch10).** Abstract: "delivered through a QGIS map and a web-based…"
+→ web app only. Ch1: removed "QGIS-ready spatial layers/layers/map layers" from the deliverable sentence
+(1.1 ideal-scenario), the broker-significance bullet, the significance closer, and changed "two applied
+deliverables" → one (the web app). Ch3: dropped "through GIS" from the design intro; removed "QGIS for
+spatial visualization" from the Tools line; **merged the "QGIS Interactive Map" + "Web Decision-Support
+Application" subsubsections into a single "Web Decision-Support Application" deliverable** (kept the three
+output layers — predicted price, valuation-gap, locational context — now presented in the app). Ch9:
+"produced QGIS-ready layers" → "organized the model outputs spatially through the web application." Ch10:
+fifth recommendation reworded from "keep the web application and QGIS outputs consistent" to keeping the
+web application consistent with the saved model artifacts. Build clean: 107 pages, 0 undefined references.
+
+**Next decision number: 56.**

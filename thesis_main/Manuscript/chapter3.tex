@@ -2,7 +2,7 @@
 
 \subsection{\texorpdfstring{\textbf{Research Design}}{Research Design}}\label{research-design}
 
-This study used a quantitative, non-experimental design to model residential property values in Metro Cebu. The analysis was predictive in that it estimated prices from observed property characteristics, and prescriptive in that the results were later organized for spatial decision support through GIS. The training target was the price per square meter of each property (\emph{price\_per\_sqm}), log-transformed as \emph{log\_price} for model fitting. A per-square-meter target was used because it places condominiums, houses, and bare lots on a comparable unit basis and reduces the distortion that raw total price introduces when property sizes differ widely. Predicted unit prices were multiplied by floor or lot area to recover a total price in Philippine Peso for reporting. The independent variables included structural, geospatial, and administrative features. Macroeconomic indicators were reviewed during study design but were not retained in the final fitted specification.
+This study used a quantitative, non-experimental design to model residential property values in Metro Cebu. The analysis was predictive in that it estimated prices from observed property characteristics, and prescriptive in that the results were later organized for spatial decision support. The training target was the price per square meter of each property (\emph{price\_per\_sqm}), log-transformed as \emph{log\_price} for model fitting. A per-square-meter target was used because it places condominiums, houses, and bare lots on a comparable unit basis and reduces the distortion that raw total price introduces when property sizes differ widely. Predicted unit prices were multiplied by floor or lot area to recover a total price in Philippine Peso for reporting. The independent variables included structural, geospatial, and administrative features. Macroeconomic indicators were reviewed during study design but were not retained in the final fitted specification.
 
 Rather than fitting one model across all property types, the study estimated three separate models, one for each property stratum: condominiums, houses, and vacant lots. This stratified design responded directly to a problem identified during the earlier defense: a single model trained on mixed property types must reconcile price-per-square-meter levels that differ several times over---vertical condominium space, built houses, and bare land are priced on different logics---which inflates error and blurs interpretation. The hedonic literature supports this choice, finding that housing markets are segmented by the sorting of heterogeneous households and that stratified models fit better than pooled ones \parencite{droes2019,usman2020}. Splitting the data by property type let each model learn the value structure of its own market segment. The strata sizes are shown in Table~\ref{tab:chapter3-strata}.
 
@@ -136,7 +136,7 @@ The data preparation process proceeded through the stages summarized in Figure~\
 \item \textbf{Final ABT Assembly and Stratum Split}: All engineered features were merged into a single Analytics Base Table and saved as a flat CSV. The modeling-ready subset was produced by dropping rows with null \emph{price\_per\_sqm} or \emph{spatial\_lag\_price}, applying integrity flags, and then splitting into the condominium, house, and vacant-lot strata for separate model fitting.
 \end{enumerate}
 
-\textbf{Tools}: Python (Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Requests, Playwright, OSMnx), Google Maps Geocoding and Places APIs, and QGIS for spatial visualization.
+\textbf{Tools}: Python (Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Requests, Playwright, OSMnx), and the Google Maps Geocoding and Places APIs.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -317,20 +317,16 @@ This helped keep the model interpretable enough to function as a support tool ra
 
 \subsection{\texorpdfstring{\textbf{Deliverables}}{Deliverables}}\label{deliverables}
 
-\subsubsection{\texorpdfstring{\textbf{QGIS Interactive Map}}{QGIS Interactive Map}}\label{qgis-interactive-map}
+\subsubsection{\texorpdfstring{\textbf{Web Decision-Support Application}}{Web Decision-Support Application}}\label{web-application}
 
-The main applied output of the study was a spatial review environment that organized model results across Metro Cebu. Rather than presenting results only as tables or summary statistics, the QGIS project was designed to show how predicted values, valuation-gap diagnostics, and locational patterns were distributed across the study area.
+The main applied output of the study was a web-based decision-support application that organized model results across Metro Cebu. Rather than presenting results only as tables or summary statistics, the application was designed to show how predicted values, valuation-gap diagnostics, and locational patterns were distributed across the study area:
 
 \begin{enumerate}
 \item \textbf{Predicted Price Layers}: Point or surface outputs summarizing predicted open-market residential values across Metro Cebu.
 \item \textbf{Valuation-Gap Diagnostics}: Comparison layers showing the divergence between model-based values and BIR zonal benchmarks.
-\item \textbf{Supporting Locational Layers}: CBD-node, road-network, and amenity-accessibility context layers used to interpret the price surface geographically.
+\item \textbf{Supporting Locational Layers}: CBD-node, road-network, and amenity-accessibility context used to interpret the price surface geographically.
 \end{enumerate}
 
-The purpose of this output was to make the model easier to inspect geographically, especially for brokers, investors, and local government users who needed to compare values across locations rather than only at the level of individual records.
-
-\subsubsection{\texorpdfstring{\textbf{Web Decision-Support Application}}{Web Decision-Support Application}}\label{web-application}
-
-A web-based decision-support application complemented the QGIS environment by providing an interactive interface for inspecting the deployed open-market model. The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. An earlier Streamlit version of the application was retained as a fallback. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. While the QGIS output emphasized geographic comparison, the application provided a more direct interface for exploring individual predictions and their underlying value drivers.
+The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. An earlier Streamlit version of the application was retained as a fallback. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

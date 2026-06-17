@@ -40,15 +40,15 @@ Three converging factors make it timely to build a data-driven decision-support 
 
 The core problem is not that Cebu lacks valuation activity, professional judgment, or local market knowledge. The problem is that these judgments are often made against fragmented references. An ideal decision-support layer would organize observable property attributes, location, nearby amenities, benchmark values, and surrounding market-facing prices in one transparent framework. Such a layer would not replace brokers, banks, appraisers, or government benchmarks. Instead, it would help users see where a property sits relative to observable market evidence and why a model places weight on certain value drivers.
 
-This study therefore does not claim to produce a final appraised market value. It develops a transparent, geospatial decision-support model for interpreting market-facing residential asking-price evidence in Metro Cebu. Delivered through QGIS-ready spatial layers and a web application, the model is intended as an additional reference layer that supports professional review and transparent comparison, consistent with valuation-standard concerns around data, inputs, and model explainability \parencite{ivs2025}.
+This study therefore does not claim to produce a final appraised market value. It develops a transparent, geospatial decision-support model for interpreting market-facing residential asking-price evidence in Metro Cebu. Delivered through a web application, the model is intended as an additional reference layer that supports professional review and transparent comparison, consistent with valuation-standard concerns around data, inputs, and model explainability \parencite{ivs2025}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Statement of the Problem}}{Statement of the Problem}}\label{statement-of-the-problem}
 
-\textbf{Decision Problem}: How can Metro Cebu real estate stakeholders compare residential property price evidence more transparently when broker judgment, bank valuation, government benchmarks, and online listings each reflect different purposes and data limitations?
+\textbf{Decision Problem}: How can real estate stakeholders in Metro Cebu compare residential property price evidence more transparently, when broker judgment, bank valuation, government benchmarks, and online listings each serve a different purpose?
 
-\textbf{Research Problem}: In Metro Cebu, fast-moving residential markets are interpreted through partial references: practitioner judgment, bank appraisal, administrative benchmarks, and market-facing listings. These references are useful but difficult to compare at the property level. No Cebu-specific study identified in the reviewed literature combines property-level asking-price data with GIS-derived geospatial features, such as network distance, MCRAI scoring, and spatial autocorrelation, while also providing a spatial decision-support layer for valuation practice.
+\textbf{Research Problem}: These references are difficult to compare at the property level, and no Cebu-specific study identified in the reviewed literature combines property-level asking-price data with geospatial features, such as network distance, MCRAI scoring, and spatial autocorrelation, while also providing a spatial decision-support layer for valuation practice.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -68,13 +68,13 @@ This study therefore does not claim to produce a final appraised market value. I
 Addressing this fragmented evidence problem benefits multiple stakeholders:
 
 \begin{enumerate}
-\item \textbf{Real Estate Brokers and Appraisers}: Provides an additional evidence layer for comparing local market knowledge against structured property, location, and benchmark data. SHAP-based explainability, QGIS-ready layers, and a web interface can help make the model's reasoning easier to inspect during professional review.
+\item \textbf{Real Estate Brokers and Appraisers}: Provides an additional evidence layer for comparing local market knowledge against structured property, location, and benchmark data. SHAP-based explainability and a web interface can help make the model's reasoning easier to inspect during professional review.
 \item \textbf{Property Sellers, Buyers, and Investors}: Provides a transparent reference for interpreting whether an asking price appears high, low, or typical relative to observable market-facing evidence. It does not determine the final selling price, but it can make the starting point for discussion more evidence-based.
 \item \textbf{Banks and Lending Institutions}: Provides supplemental spatial and market-facing evidence that can be compared with collateral-oriented valuation outputs, especially where location and surrounding market conditions materially affect price.
 \item \textbf{Local Government Units (LGUs)}: Maps the divergence between market-facing asking-price evidence and administrative benchmarks, which can help identify where benchmark schedules may require closer review.
 \end{enumerate}
 
-This study is significant within the Philippine context because it develops a Cebu-specific, property-level valuation workflow that integrates GIS-based feature engineering with explainable machine learning. While prior Philippine machine learning studies focus on Metro Manila or broader indicator-based approaches, no work identified in the reviewed literature applies geocoded network-distance features, MCRAI scoring, and spatial autocorrelation to property-level residential asking-price data for Metro Cebu. By delivering results through QGIS-ready map layers and a web application, the study extends predictive analytics into applied decision support for a fragmented local market.
+This study is significant within the Philippine context because it develops a Cebu-specific, property-level valuation workflow that integrates GIS-based feature engineering with explainable machine learning. While prior Philippine machine learning studies focus on Metro Manila or broader indicator-based approaches, no work identified in the reviewed literature applies geocoded network-distance features, MCRAI scoring, and spatial autocorrelation to property-level residential asking-price data for Metro Cebu. By delivering results through a web application, the study extends predictive analytics into applied decision support for a fragmented local market.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -95,7 +95,7 @@ The study drew on open-market residential listings from several online property 
 
 The study evaluated three predictive models: \textbf{Hedonic Regression (OLS)}, \textbf{Random Forest}, and \textbf{XGBoost} (see Section 1.6 for rationale). To respect the very different price-per-square-meter logics of different property types, the models were fitted separately for condominiums, houses, and vacant lots. Geospatial features were engineered through geocoding, road-network distance, MCRAI scoring, and spatial lag computation. The fitted models were trained on open-market residential listings so that the deployed output stayed aligned with market-facing asking-price evidence.
 
-The study produced two applied deliverables: QGIS-ready spatial layers for valuation review and a web application combining an open-market residential price surface with property-level prediction and explanation.
+The study produced an applied deliverable: a web application combining an open-market residential price surface with property-level prediction and explanation.
 
 \subsubsection{\texorpdfstring{\textbf{Limitations}}{Limitations}}\label{limitations}
 
