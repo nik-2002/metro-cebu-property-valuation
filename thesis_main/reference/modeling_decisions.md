@@ -2270,7 +2270,15 @@ similar words were kept (cleaning out distressed *open-market* "pasalo" listings
 = feature tiers; the thesis itself as a "reference layer"). Compiles clean: 108 pages (was 112; the
 4-page drop is the removed subsection + table rows), 0 undefined citations.
 
-**Pre-existing issue noted, not fixed here.** Ch3 still references "Appendix A" but no appendix file
-exists — a dangling reference unrelated to this decision, flagged for a later pass.
+**Appendix also de-scoped.** The appendix (`appendices.tex`, included via `main.tex`) was itself stale:
+Appendix A led with a "Sample Structure of Cleaned BDO Foreclosure Records" table (removed; the
+open-market listing-structure table was retitled to represent the dataset), and Appendix B's "Geographic
+Distribution... by Market Segment" table used `open_market / bank_ropa / floor_price` columns with an
+old **2,047-row** total (1,619/320/108). That table was rebuilt from `abt_clean.csv` as the current
+**3,616-row open-market** distribution by LGU and modeling stratum (Condo 1,391 / House 1,301 / Lot 924;
+Cebu City 1,368 / Lapu-Lapu 870 / Mandaue 548 / Talisay 372 / Consolacion 242 / Minglanilla 216), with a
+note that "House" aggregates house-and-lot, single-detached, townhouse, and apartment. Per-cell counts
+verified against the data (first hand-estimate was wrong and corrected). Final build: 107 pages, 0
+undefined references.
 
 **Next decision number: 55.**

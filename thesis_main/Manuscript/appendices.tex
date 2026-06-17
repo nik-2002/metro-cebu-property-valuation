@@ -1,27 +1,7 @@
 \section*{Appendix A: Data Documentation}
 
 \begin{table}[htbp]
-\caption{Sample Structure of Cleaned BDO Foreclosure Records}
-\label{tab:chapter3-bdo-structure}
-\begin{center}
-\begin{tabular}{p{0.28\textwidth} p{0.28\textwidth} p{0.30\textwidth}}
-\toprule
-Raw Column (BDO Excel) & Processed Feature & Description \\
-\midrule
-REGION & Region & Filtered to Region VII \\
-CITY\_PROVINCE & City & Filtered to Metro Cebu LGUs \\
-PROPERTY\_ADDRESS & Address & Geocoded string \\
-LOT\_AREA & Lot Area & Numeric (sqm) \\
-FLOOR\_AREA & Floor Area & Numeric (sqm) \\
-MINIMUM\_BID\_PRICE & Actual Price & Numeric target variable (PHP) \\
-PROPERTY\_DESCRIPTION & Bedrooms, Bathrooms & Parsed via regex \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}[htbp]
-\caption{Sample Structure of Cleaned Lamudi Listing Records}
+\caption{Sample Structure of Cleaned Open-Market Listing Records}
 \label{tab:chapter3-lamudi-structure}
 \begin{center}
 \begin{tabular}{p{0.26\textwidth} p{0.26\textwidth} p{0.34\textwidth}}
@@ -48,7 +28,7 @@ Latitude / Longitude & Latitude, Longitude & Direct coordinate mapping \\
 \toprule
 Feature Group & Variables & Type \\
 \midrule
-\textbf{Identifiers / Metadata} & Property ID, source, market segment (stored in ABT; excluded from final fitted feature matrix) & Metadata \\
+\textbf{Identifiers / Metadata} & Property ID, source portal (stored in ABT; excluded from the final fitted feature matrix) & Metadata \\
 \textbf{Structural} & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, vacancy / imputation flags & Numeric / Categorical \\
 \textbf{Locational} & City, Barangay, Latitude, Longitude, \emph{is\_mactan\_island} & Numeric / Categorical \\
 \textbf{Geospatial} & Network distance to Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport & Numeric (meters) \\
@@ -63,22 +43,23 @@ Feature Group & Variables & Type \\
 \section*{Appendix B: Supplementary Tables}
 
 \begin{table}[htbp]
-\caption{Geographic Distribution of the Final ABT by LGU and Market Segment}
+\caption{Geographic Distribution of the Final Open-Market ABT by LGU and Property Type}
 \label{tab:appendix-abt-city-distribution}
 \begin{center}
-\begin{tabular}{p{0.22\textwidth} p{0.10\textwidth} p{0.11\textwidth} p{0.11\textwidth} p{0.11\textwidth} p{0.11\textwidth}}
+\begin{tabular}{p{0.20\textwidth} p{0.09\textwidth} p{0.09\textwidth} p{0.10\textwidth} p{0.10\textwidth} p{0.10\textwidth}}
 \toprule
-City or Municipality & Rows & Share & open\_market & bank\_ropa & floor\_price \\
+City or Municipality & Rows & Share & Condo & House & Lot \\
 \midrule
-Cebu City & 723 & 35.32\% & 488 & 211 & 24 \\
-Lapu-Lapu City & 643 & 31.41\% & 558 & 44 & 41 \\
-Mandaue City & 351 & 17.15\% & 307 & 11 & 33 \\
-Talisay City & 122 & 5.96\% & 84 & 37 & 1 \\
-Consolacion & 119 & 5.81\% & 111 & 4 & 4 \\
-Minglanilla & 89 & 4.35\% & 71 & 13 & 5 \\
+Cebu City & 1{,}368 & 37.83\% & 669 & 360 & 339 \\
+Lapu-Lapu City & 870 & 24.06\% & 444 & 273 & 153 \\
+Mandaue City & 548 & 15.15\% & 241 & 182 & 125 \\
+Talisay City & 372 & 10.29\% & 19 & 214 & 139 \\
+Consolacion & 242 & 6.69\% & 8 & 131 & 103 \\
+Minglanilla & 216 & 5.97\% & 10 & 141 & 65 \\
 \midrule
-Total & 2{,}047 & 100.00\% & 1{,}619 & 320 & 108 \\
+Total & 3{,}616 & 100.00\% & 1{,}391 & 1{,}301 & 924 \\
 \bottomrule
 \end{tabular}
 \end{center}
+\textit{Note.} The Condo, House, and Lot columns correspond to the three modeling strata. The House column aggregates house-and-lot, single-detached, townhouse, and apartment listings; Chapter~4 reports the finer property-type breakdown.
 \end{table}
