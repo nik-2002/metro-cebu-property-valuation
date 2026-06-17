@@ -146,11 +146,11 @@ The data preparation process proceeded through the stages summarized in Figure~\
 \caption{Feature Categories Used in the Thesis Workflow}
 \label{tab:chapter3-feature-categories}
 \begin{center}
-\begin{tabular}{p{0.18\textwidth} p{0.58\textwidth} p{0.16\textwidth}}
+\begin{tabular}{p{0.18\textwidth} p{0.50\textwidth} >{\raggedright\arraybackslash}p{0.24\textwidth}}
 \toprule
 Category & Features & Source \\
 \midrule
-\textbf{Structural} & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, imputation flags & Listing / bank records \\
+\textbf{Structural} & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, imputation flags & Listing portals \\
 \textbf{Locational} & City, Barangay, Latitude/Longitude & Google Maps API \\
 \textbf{Geospatial} & Network distance to Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport & Geocoding + OSM road network \\
 \textbf{MCRAI} & Eight component scores (education, grocery, health, hospitals, recreation, security, tourism, retail density) plus \emph{mcrai\_composite} & Places API POI inventory + network routing \\
