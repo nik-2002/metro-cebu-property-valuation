@@ -2229,3 +2229,48 @@ recorded as a possible future improvement only. **The manuscript rewrite must st
 cite the 24-row evidence CSV.**
 
 **Next decision number: 54.**
+
+---
+
+## Decision 54 — Bank ROPA / floor-price tiers dropped from the research; manuscript de-scoped to open-market only (2026-06-17)
+
+**Context.** While reviewing the abstract, Nico flagged that it still described a three-tier "hybrid
+dataset" (open-market listings + bank foreclosure/acquired-asset records + administrative floor-price
+references). Verification against the data confirmed his recollection: **every ABT file
+(`abt_clean.csv` and all backups/staged files) is 100% `market_segment = open_market`** — sources are
+the three online portals (Lamudi 1,578, FilipinoHomes 1,203, DotProperty 565, Lamudi_playwright 270).
+The bank ROPA and Pag-IBIG/BDO floor-price data exist only as **separate standalone files**
+(`Data/processed/bank_ropa_geocoded.csv`, `Data/processed/floor_price/pagibig_clean.csv`, the BDO xlsx)
+that were collected and geocoded under an earlier design but **never merged into any ABT and never
+modeled**. The manuscript chapters still framed them as "reference layers retained in the canonical ABT"
+and even claimed "the canonical ABT retained three market tiers" — none of which is backed by data.
+
+**Decision.** The bank ROPA / foreclosure / acquired-asset / floor-price tiers are **dropped from the
+research entirely.** The study is, and is described as, an **open-market online-listings** study across
+three portals for the six LGUs. This supersedes the earlier CLAUDE.md "Data tiers" durable design
+decision (open_market / bank_ropa / floor_price) and the "full ABT contains all three market segments"
+note — both were updated to reflect open-market-only scope.
+
+**Rationale.** The tiers play no role in any deployed output. They were never pooled into a training
+target, contributed no features, and were used (at most) for one exploratory ordering check. Carrying
+them in the narrative as "conservative benchmark layers" overstated the dataset and created a
+defensibility liability (a panel could ask to see a three-tier ABT that does not exist). Removing them
+makes the data story match the data.
+
+**Manuscript edits (7 files, on `dev/manuscript`).** abstract: three-tier hybrid framing → open-market
+listings from three portals. Ch1: "six data sources" list + "canonical ABT" sentence → open-market only.
+Ch3: removed the "Multi-Source" subsection intro, the two distressed rows in the data-sources table, the
+entire "Bank Foreclosure and Floor-Price Records" subsubsection, the "three market tiers" target-variable
+claim, and the bank/Pag-IBIG ingestion + "filtered to open_market" pipeline steps. Ch4: removed
+"reference layers" + the open-market-vs-ROPA comparison. Ch5: removed three "reference layer" mentions +
+trimmed the market-segment subsection. Ch9: removed ROPA/floor-price from the sources list and dropped
+the now-invalid "didn't pool tiers" methodological-contribution claim (renumbered First/Second/Finally).
+Ch10: scope disclaimer reworded so it no longer implies the ABT held other segments. Legitimate uses of
+similar words were kept (cleaning out distressed *open-market* "pasalo" listings; "three-tier *ablation*"
+= feature tiers; the thesis itself as a "reference layer"). Compiles clean: 108 pages (was 112; the
+4-page drop is the removed subsection + table rows), 0 undefined citations.
+
+**Pre-existing issue noted, not fixed here.** Ch3 still references "Appendix A" but no appendix file
+exists — a dangling reference unrelated to this decision, flagged for a later pass.
+
+**Next decision number: 55.**

@@ -34,11 +34,9 @@ Within each stratum, three supervised learning approaches were compared in order
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{\texorpdfstring{\textbf{Data Sources: Multi-Source Property Evidence}}{Data Sources: Multi-Source Property Evidence}}\label{data-sources-the-hybrid-strategy}
+\subsection{\texorpdfstring{\textbf{Data Sources}}{Data Sources}}\label{data-sources}
 
-Because direct deed-of-sale transaction records were not publicly accessible, the broader property evidence base was assembled from multiple sources that reflected different segments of the residential market. Foreclosure and acquired-asset records were retained as conservative benchmark layers, while open-market listings provided the labels used for the deployed prediction task. The purpose of this multi-source design was not to claim direct observation of a single true market price, but to preserve the wider valuation context while keeping the final fitted model aligned with open-market residential pricing.
-
-The open-market layer was itself built from several listing portals rather than a single site, which widened coverage and reduced dependence on any one platform's inventory. Table~\ref{tab:chapter3-data-sources} summarizes the sources and their roles.
+Because direct deed-of-sale transaction records are not publicly accessible in the Philippines, the study used open-market online listings as the closest available proxy for current residential prices. Listings represent asking prices rather than settled transactions, but at scale they capture pricing patterns that are often missing from sparse official records \parencite{sousa2024}. To widen coverage and reduce dependence on any single platform's inventory, listings were collected from several property portals rather than one site. Table~\ref{tab:chapter3-data-sources} summarizes the data sources and their roles.
 
 \begin{table}[htbp]
 \caption{Summary of Data Sources Used in the Thesis Workflow}
@@ -48,9 +46,7 @@ The open-market layer was itself built from several listing portals rather than 
 \toprule
 Source & Role & Volume & Nature \\
 \midrule
-\textbf{Open-Market Listings} & Deployed training label source & Lamudi, FilipinoHomes, DotProperty (3{,}616 open-market rows) & Asking / market-facing \\
-\textbf{Bank Foreclosure Inventory} & Conservative benchmark layer & BDO, BPI, Metrobank, Landbank, Bank of Commerce, China Bank Savings & Conservative / distressed \\
-\textbf{Floor-Price References} & Conservative benchmark layer & Pag-IBIG and BDO records & Administrative / distressed \\
+\textbf{Open-Market Listings} & Training label source & Lamudi, FilipinoHomes, DotProperty (3{,}616 rows) & Asking / market-facing \\
 \textbf{BIR Zonal Values} & Administrative benchmark & Per barangay & Static / regulatory \\
 \textbf{Google Maps APIs} & Geocoding and POI retrieval & Per property & Geospatial / dynamic \\
 \textbf{OpenStreetMap Road Network} & Routing and network topology & Per property / destination pair & Geospatial / open data \\
@@ -61,23 +57,11 @@ Source & Role & Volume & Nature \\
 
 \subsubsection{\texorpdfstring{\textbf{Open-Market Listings}}{Open-Market Listings}}\label{secondary-data-market-ceiling-price-online-listings}
 
-To represent current asking prices in the residential market, the study collected listings from public online property portals. As \textcite{sousa2024} note, large listing datasets can capture pricing patterns that are often missing from sparse official records. Open-market listings became the training scope for the deployed price-surface model, and they were gathered in two phases.
+To represent current asking prices in the residential market, the study collected listings from public online property portals. These listings became the training scope for the deployed price-surface model, and they were gathered in two phases.
 
 The first phase scraped Lamudi, the largest portal in the study, in two scraper generations. An initial collector used the \emph{requests} library with HTML parsing for bulk retrieval. After Lamudi deployed a JavaScript challenge and CAPTCHA wall that blocked the bulk collector, a second browser-based scraper built on Playwright was added to recover the remaining listings. Together these yielded 1{,}578 listings from the bulk phase and 270 from the anti-bot browser batch.
 
 The second phase widened coverage to two additional portals: FilipinoHomes, accessed through its backend JSON interface, which returned precise embedded coordinates for 1{,}203 listings; and DotProperty, which contributed 565 listings geocoded from their barangay-level address text. A fourth portal, OnePropertee, was scraped but dropped from the final dataset after its records were found to contaminate the model: its per-square-meter prices were frequently mis-extracted and its listings were geocoded to city centroids, which together produced large, systematic over-predictions on its rows. After merging, de-duplication, and the integrity filters described in \S3.3, the open-market Analytics Base Table held 3{,}616 rows. A sample of the cleaned listing structure is documented in Appendix A.
-
-\subsubsection{\texorpdfstring{\textbf{Bank Foreclosure and Floor-Price Records}}{Bank Foreclosure and Floor-Price Records}}\label{primary-data-verified-floor-price-foreclosed-acquired-assets}
-
-The conservative valuation layers aggregated foreclosed and acquired property listings from multiple institutional sources to prevent single-source bias:
-
-\begin{itemize}
-\item \textbf{BDO Unibank}: The largest single foreclosure source used in the study and the main template for raw-to-clean pipeline design.
-\item \textbf{Pag-IBIG Fund (HDMF)}: Acquired assets and floor-price references representing the more affordable residential segment.
-\item \textbf{Other bank foreclosure sources}: BPI, Metrobank, Landbank, Bank of Commerce, and China Bank Savings records were added to widen conservative market coverage.
-\end{itemize}
-
-These distressed assets were treated as a lower-bound segment of the observed market rather than as direct equivalents of open-market transaction prices. They were kept in the wider data system as reference layers and were not used as training labels for the deployed open-market model. A sample of the raw BDO and bank ROPA input structure is documented in Appendix A.
 
 \subsubsection{\texorpdfstring{\textbf{Administrative and Macroeconomic Data}}{Administrative and Macroeconomic Data}}\label{administrative-and-macroeconomic-data}
 
@@ -96,7 +80,7 @@ These distressed assets were treated as a lower-bound segment of the observed ma
 
 \subsubsection{\texorpdfstring{\textbf{Target Variable}}{Target Variable}}\label{target-variable}
 
-The canonical ABT retained three market tiers---\emph{open\_market}, \emph{bank\_ropa}, and \emph{floor\_price}---to preserve the broader valuation evidence base. However, the predictive task of the thesis is the estimation of \emph{open-market residential price}. Accordingly, model fitting filtered the ABT to \emph{market\_segment = open\_market} before estimation, while foreclosure and administrative floor-price records were kept as reference layers in the wider data system rather than as training labels for the deployed model. The target variable was \emph{price\_per\_sqm}, fitted on the log scale as \emph{log\_price}; predictions were back-transformed and multiplied by area to recover total price for reporting and for the OLS baseline comparison.
+The predictive task of the thesis is the estimation of open-market residential price. The target variable was \emph{price\_per\_sqm}, fitted on the log scale as \emph{log\_price}; predictions were back-transformed and multiplied by area to recover total price for reporting and for the OLS baseline comparison.
 
 The complete feature matrix schema is documented in Appendix A.
 
@@ -118,18 +102,18 @@ The data preparation process proceeded through the stages summarized in Figure~\
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.95\textwidth]{diagrams/Data-Pipeline-Updated.png}
-\caption{Data pipeline from multi-source ingestion to the modeling-ready Analytics Base Table.}
+\caption{Data pipeline from multi-portal ingestion to the modeling-ready Analytics Base Table.}
 \label{fig:data-pipeline}
 \end{figure}
 
 \begin{enumerate}
-\item \textbf{Ingestion}: Open-market listings were collected from Lamudi (bulk \emph{requests} scraper plus a Playwright browser scraper), FilipinoHomes (backend JSON interface), and DotProperty (portal listings). Bank foreclosure data was ingested from Excel via Pandas, and Pag-IBIG floor-price records from structured PDFs and Excel exports.
-\item \textbf{Filtering}: The dataset was restricted to residential properties within Metro Cebu---Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion---using point-in-polygon checks against the six LGU boundaries. The canonical ABT retained all three market tiers, but the modeling scripts filtered to \emph{open\_market} observations only before fitting.
+\item \textbf{Ingestion}: Open-market listings were collected from Lamudi (bulk \emph{requests} scraper plus a Playwright browser scraper), FilipinoHomes (backend JSON interface), and DotProperty (portal listings).
+\item \textbf{Filtering}: The dataset was restricted to residential properties within Metro Cebu---Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion---using point-in-polygon checks against the six LGU boundaries.
 \item \textbf{Parsing, Cleaning, and De-duplication}: Price and area fields were normalized across portals (currency symbols and commas stripped; rows without explicit numerical prices dropped). Distressed and mortgage-assumption listings (for example, ``for assume'' or ``pasalo'' postings, which quote loan balances rather than market value) were removed. Duplicate listings were collapsed on coordinate, price, and area, and a spatial cap limited the number of listings per location cell. A per-stratum price-per-square-meter sanity band removed area-entry errors and extreme mispricing.
 \item \textbf{Geocoding (Address to Coordinates)}: Property addresses were batch-geocoded through the Google Maps Geocoding API to obtain latitude and longitude. The service was selected for project-level address resolution in Metro Cebu, where listings often reference barangays, landmarks, or compound descriptors rather than standardized street-number formats. Results were cached locally to avoid redundant API calls. FilipinoHomes listings carried precise embedded coordinates and bypassed text geocoding.
 \item \textbf{BIR Zonal Value Extraction and Barangay Join}: Official BIR zonal value schedules were sourced from the Revenue District Office files covering the six-LGU study area. A custom parser extracted street-level values by residential classification code and aggregated them to the barangay level as the median per classification. Each property was assigned a barangay through reverse geocoding, which served as the join key to the BIR summary table, yielding \emph{bir\_zonal\_rr\_median} coverage across the open-market ABT.
 \item \textbf{GIS Augmentation}: From geocoded coordinates, the geospatial feature set described in \S3.4.1 was computed: road-network distances to eight polycentric and regional anchor nodes; category-specific MCRAI component scores derived from curated amenity inventories; the \emph{mcrai\_composite}; and a spatial lag variable capturing the mean price of neighboring same-type properties within 500 m. Network shortest paths were computed on the OSM road graph, with Haversine fallback only when a point could not be snapped cleanly to the network.
-\item \textbf{Final ABT Assembly and Stratum Split}: All engineered features were merged into a single Analytics Base Table and saved as a flat CSV. The modeling-ready subset was produced by filtering to \emph{open\_market}, dropping rows with null \emph{price\_per\_sqm} or \emph{spatial\_lag\_price}, applying integrity flags, and then splitting into the condominium, house, and vacant-lot strata for separate model fitting.
+\item \textbf{Final ABT Assembly and Stratum Split}: All engineered features were merged into a single Analytics Base Table and saved as a flat CSV. The modeling-ready subset was produced by dropping rows with null \emph{price\_per\_sqm} or \emph{spatial\_lag\_price}, applying integrity flags, and then splitting into the condominium, house, and vacant-lot strata for separate model fitting.
 \end{enumerate}
 
 \textbf{Tools}: Python (Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Requests, Playwright, OSMnx), Google Maps Geocoding and Places APIs, and QGIS for spatial visualization.

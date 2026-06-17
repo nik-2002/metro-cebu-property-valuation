@@ -10,7 +10,7 @@
 ## Project Context (Durable Design Decisions)
 - **Spatial scope**: 6 LGUs — Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, Consolacion.
 - **Naga City**: CBD node only (industrial anchor, JICA Roadmap 2050 basis). Not in the training data scope.
-- **Data tiers**: open_market (Lamudi listings), bank_ropa (bank foreclosures), floor_price (BDO / Pag-IBIG floor prices).
+- **Data scope (Decision 54, 2026-06-17)**: open_market only. The ABT is open-market residential listings from three online portals (Lamudi, FilipinoHomes, DotProperty). The earlier bank_ropa (bank foreclosures) and floor_price (BDO / Pag-IBIG) tiers were **dropped from the research** — they were never merged into any ABT and are not modeled. Do not reintroduce them into the narrative.
 - **CBD nodes**: 8 — CBP, Mandaue, Mactan, SRP, Talisay Tabunok, Consolacion, Naga City, Airport. Grounded in Giuliano & Small (1991) and JICA Mega Cebu Roadmap 2050.
 - **Current MCRAI model features**: education, grocery, health, hospitals, recreation, security, tourism, retail_density, plus `mcrai_composite`. Finance is retired; transport is represented by road-distance features, not as an MCRAI category in the deployed models.
 - **Target variable**: `price_per_sqm`. `valuation_gap = price_per_sqm − bir_zonal_rr_median` is a derived diagnostic column, not a model feature.
@@ -99,5 +99,5 @@
 - Do not convert nuanced paragraphs into bullet-heavy summaries unless the user asks.
 - Do not make unsupported methodological defenses on behalf of the thesis.
 - Do not prioritize elegance over accuracy in methods, results, or literature sections.
-- Do not conflate the deployed price surface (open_market only) with the full ABT which contains all three market segments.
+- Do not reintroduce the retired bank_ropa / floor_price tiers into the manuscript or data narrative (Decision 54). The dataset is open_market only.
 - Do not save project state (ABT row counts, decision outcomes, task progress) to CLAUDE.md — those belong in `task.md` and memory files.

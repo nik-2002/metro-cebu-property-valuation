@@ -93,9 +93,9 @@ This study focuses on the residential real estate market within Metro Cebu. Whil
 
 The primary data sources include:
 
-The study drew on six data sources covering open-market listings, bank foreclosure records, administrative floor-price benchmarks, BIR zonal values, geospatial APIs, and road network data. Each source is described in detail in Chapter 3, Section 3.2.
+The study drew on open-market residential listings from several online property portals, BIR zonal values, geospatial APIs, and road network data. Each source is described in detail in Chapter 3, Section 3.2.
 
-The study evaluated three predictive models: \textbf{Hedonic Regression (OLS)}, \textbf{Random Forest}, and \textbf{XGBoost} (see Section 1.6 for rationale). To respect the very different price-per-square-meter logics of different property types, the models were fitted separately for condominiums, houses, and vacant lots. Geospatial features were engineered through geocoding, road-network distance, MCRAI scoring, and spatial lag computation. The canonical ABT preserved the wider market evidence base, but the final fitted models were restricted to the \emph{open\_market} segment so that the deployed output stayed aligned with market-facing asking-price evidence.
+The study evaluated three predictive models: \textbf{Hedonic Regression (OLS)}, \textbf{Random Forest}, and \textbf{XGBoost} (see Section 1.6 for rationale). To respect the very different price-per-square-meter logics of different property types, the models were fitted separately for condominiums, houses, and vacant lots. Geospatial features were engineered through geocoding, road-network distance, MCRAI scoring, and spatial lag computation. The fitted models were trained on open-market residential listings so that the deployed output stayed aligned with market-facing asking-price evidence.
 
 The study produced two applied deliverables: QGIS-ready spatial layers for valuation review and a web application combining an open-market residential price surface with property-level prediction and explanation.
 
