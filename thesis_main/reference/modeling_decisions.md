@@ -2281,4 +2281,21 @@ note that "House" aggregates house-and-lot, single-detached, townhouse, and apar
 verified against the data (first hand-estimate was wrong and corrected). Final build: 107 pages, 0
 undefined references.
 
+**Figure-and-paraphrase sweep (2026-06-17, follow-up).** A keyword grep only catches the exact tier
+words, so a second sweep checked figures and paraphrases. Findings: (1) the embedded pipeline diagram
+`diagrams/Data-Pipeline-Updated.png` was **stale** — it pictured `bank_ropa 320` + `floor_price 108`
+ingestion and an old `abt_clean.csv 2,075 rows / 1,647 open_market`. Per Nico's choice it was **replaced
+with a native TikZ figure** (added `\usepackage{tikz}` + libraries; 6-node Ingest→Clean→Geocode/BIR→GIS→
+ABT 3,616→Stratify flow) so it is version-controlled and always matches the text. The old PNG and the
+stale `.drawio`/`.mermaid`/`Feature-Engineering-Table.tex` sources remain on disk but are no longer
+referenced. (2) Ch2 paraphrase "combines multi-source property evidence" → "open-market listings from
+multiple online portals." (3) **Non-tier number bug caught while reading:** Ch5's first strata table
+listed membership 1,300/1,223/849 but a "Total **3,616**" (those sum to **3,372**). Fixed the total to
+3,372 and added a note explaining the 244-row gap (≈91 condo / 78 house / 75 lot), driven by
+null-target / null spatial-lag rows plus the lot scope filter — verified against `abt_clean.csv` (a first
+draft of the note wrongly said "mostly vacant lots" and was corrected). Remaining "liquidation /
+forced-sale / conservative-filtering / three-tier-ablation" hits were confirmed legitimate, not tier
+references. Build after the sweep: 108 pages, 0 undefined. Not visually rendered (poppler not installed),
+but the TikZ compiles and its 90 mm width fits the text block.
+
 **Next decision number: 55.**

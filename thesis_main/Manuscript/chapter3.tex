@@ -101,8 +101,28 @@ The data preparation process proceeded through the stages summarized in Figure~\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{diagrams/Data-Pipeline-Updated.png}
-\caption{Data pipeline from multi-portal ingestion to the modeling-ready Analytics Base Table.}
+\begin{tikzpicture}[
+  font=\footnotesize,
+  node distance=8mm and 9mm,
+  stage/.style={rectangle, rounded corners, draw=black!70, fill=black!4,
+    align=center, text width=24mm, minimum height=13mm, inner sep=3pt},
+  outbox/.style={rectangle, rounded corners, draw=black!70, fill=black!10,
+    align=center, text width=24mm, minimum height=13mm, inner sep=3pt},
+  arr/.style={-{Stealth[length=2mm]}, draw=black!70, thick}
+]
+\node[stage] (ingest) {\textbf{Ingest}\\Lamudi, FilipinoHomes, DotProperty};
+\node[stage, right=of ingest] (clean) {\textbf{Clean \& dedup}\\parse price/area, drop distressed, spatial cap};
+\node[stage, right=of clean] (geo) {\textbf{Geocode \& BIR join}\\Google Maps; barangay zonal median};
+\node[stage, below=of geo] (gis) {\textbf{GIS features}\\node distances, MCRAI, spatial lag};
+\node[stage, left=of gis] (abt) {\textbf{Assemble ABT}\\3{,}616 open-market rows};
+\node[outbox, left=of abt] (strat) {\textbf{Stratify}\\Condo / Houses / Vacant Lot};
+\draw[arr] (ingest) -- (clean);
+\draw[arr] (clean) -- (geo);
+\draw[arr] (geo) -- (gis);
+\draw[arr] (gis) -- (abt);
+\draw[arr] (abt) -- (strat);
+\end{tikzpicture}
+\caption{Data pipeline from multi-portal open-market ingestion to the modeling-ready Analytics Base Table and the three modeling strata.}
 \label{fig:data-pipeline}
 \end{figure}
 

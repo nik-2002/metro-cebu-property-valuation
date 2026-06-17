@@ -38,10 +38,11 @@ Condominium & 1{,}300 & Vertical residential units \\
 Houses & 1{,}223 & Single Detached, House and Lot, Townhouse \\
 Vacant Lot & 849 & Bare land within the lot scope filter \\
 \midrule
-Total & 3{,}616 & Open-market listings \\
+Total modeled & 3{,}372 & Rows entering the three strata \\
 \bottomrule
 \end{tabular}
 \end{center}
+\textit{Note.} The three strata sum to 3{,}372 of the 3{,}616 open-market rows. The 244-row difference falls across all three strata (about 91 condominiums, 78 houses, and 75 lots) and comes from the model-requirement filters: rows with a null target or a null spatial-lag value (no same-type neighbor within 500 m), plus vacant lots removed by the lot scope filter (area outside 80--2{,}000 sqm or price below half the BIR zonal value).
 \end{table}
 
 The vacant-lot stratum used an additional scope filter, keeping lots between 80 and 2{,}000 square meters with a price of at least half the BIR zonal value, to exclude commercial-scale parcels and obvious data errors.
