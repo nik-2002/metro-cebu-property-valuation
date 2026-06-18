@@ -147,9 +147,34 @@ def map_properties():
     print("wrote properties_by_stratum.png")
 
 
+def map_amenities():
+    lgu = load_lgu()
+    cats = {"education": "Education", "grocery": "Grocery", "health": "Health",
+            "hospitals": "Hospitals", "recreation": "Recreation",
+            "retail_density": "Retail density", "security": "Security", "tourism": "Tourism"}
+    colors = {"education": "#1f77b4", "grocery": "#ff7f0e", "health": "#2ca02c",
+              "hospitals": "#d62728", "recreation": "#9467bd", "retail_density": "#8c564b",
+              "security": "#e377c2", "tourism": "#17becf"}
+    poi = THESIS / "QGIS" / "data" / "mcrai_pois"
+    layers = {c: gpd.read_file(poi / f"mcrai_{c}_pois.geojson").to_crs(epsg=UTM) for c in cats}
+    fig, ax = plt.subplots(figsize=(8.4, 8.4))
+    base(ax, lgu, fill="#f7f8f9", label_lgu=False)
+    for c in sorted(cats, key=lambda k: -len(layers[k])):  # densest first
+        layers[c].plot(ax=ax, color=colors[c], markersize=4, alpha=0.5, linewidth=0, zorder=4)
+    handles = [Line2D([0], [0], marker="o", color="w", markerfacecolor=colors[c], markersize=8,
+                      label=f"{cats[c]} (n={len(layers[c])})") for c in cats]
+    ax.legend(handles=handles, loc="upper right", frameon=True, fontsize=8,
+              title="MCRAI amenity category")
+    scale_bar(ax)
+    fig.tight_layout()
+    fig.savefig(OUT / "amenities_map.png", dpi=220, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote amenities_map.png")
+
+
 if __name__ == "__main__":
-    # map_study_area() retired: the manuscript study-area map is node-free
-    # (lgu_boundaries.png); CBD nodes were dropped per author review.
+    # map_study_area() retired: study-area map is node-free (lgu_boundaries.png).
     map_lgu_boundaries()
     map_properties()
+    map_amenities()
     print("done ->", OUT)

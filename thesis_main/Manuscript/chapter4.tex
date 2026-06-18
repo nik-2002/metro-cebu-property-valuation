@@ -139,7 +139,14 @@ mcrai\_composite & 0.2\% & Positive-weight composite coverage was effectively co
 \end{center}
 \end{table}
 
-Table~\ref{tab:mcrai-zero-rates} shows that MCRAI coverage was generally strong, but not uniform. Education, the composite, tourism, and grocery had very low zero rates, while security and retail density had higher zero rates. The higher security zero rate, concentrated unevenly across LGUs, was one reason that category was later dropped from the vacant-lot model.
+Table~\ref{tab:mcrai-zero-rates} shows that MCRAI coverage was generally strong, but not uniform. Education, the composite, tourism, and grocery had very low zero rates, while security and retail density had higher zero rates. The higher security zero rate, concentrated unevenly across LGUs, was one reason that category was later dropped from the vacant-lot model. Map~\ref{map:amenities} shows the spatial distribution of the curated amenity points across the eight MCRAI categories.
+
+\begin{ccmap}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{diagrams/amenities_map.png}
+\caption{Curated amenity points across Metro Cebu for the eight MCRAI categories.}
+\label{map:amenities}
+\end{ccmap}
 
 A rank-based exploratory check on the open-market subset showed that location and accessibility fields aligned positively with unit price, while several size-related structural fields moved in the opposite direction. The BIR residential benchmark and the MCRAI composite were positively associated with \emph{price\_per\_sqm}, while floor area, bedrooms, and bathrooms were negatively associated with it. This does not mean the target was inverted. It reflects the arithmetic of a per-square-meter target and the composition of the sample: compact condominiums in Cebu City and Lapu-Lapu City tend to command higher PHP per square meter, while larger detached homes and land-oriented listings more often sit in lower-density submarkets where total asking price can still be high but price per square meter is lower. Consistent with this reading, the same structural variables remained positively associated with total asking price.
 
