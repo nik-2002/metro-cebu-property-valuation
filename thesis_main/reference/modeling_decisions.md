@@ -2328,3 +2328,53 @@ fifth recommendation reworded from "keep the web application and QGIS outputs co
 web application consistent with the saved model artifacts. Build clean: 107 pages, 0 undefined references.
 
 **Next decision number: 56.**
+
+## Decision 56 — Web app reframed as a prototype; institutional-use claims dropped; recommendations recalibrated to industry standards; MCRAI baseline parameters owned (2026-06-18)
+
+**Context.** During the chapter-by-chapter voice pass (Chapters 1–10 reviewed and built clean), Nico
+raised three connected scope concerns about how the deliverable and the recommendations were positioned:
+(1) the web application was framed as an operational decision-support tool, but the model's error
+(MdAPE 19/23/38; COD 37.7/35.8/55.9; PRD 1.20–1.48 — well outside IAAO ratio norms) does not support
+confident stand-alone use; (2) the manuscript claimed **public institutions (BIR, LGU assessors,
+lenders) would use** the tool; (3) the recommendations were too many (14) and some overclaimed. He also
+asked whether the MCRAI formula/parameters are covered in the methodology and flagged that they feel
+arbitrary (the gravity decay especially) — a candidate reason for the limited gains.
+
+**Decisions.**
+1. **Prototype framing.** The web application is a **prototype for triangulation, not a stand-alone
+   valuation tool**, with the reasoning made explicit (substantial model error, especially vacant lots).
+   Applied across abstract, Ch1 (deliverable + significance), Ch3 (deliverable subsection), Ch9
+   (practical contribution). "valuation tool" → "valuation prototype."
+2. **Institutional-use dropped.** Removed the Ch10 Policy recommendation that BIR / LGU assessors /
+   lending institutions use the surface + valuation-gap as a monitoring layer; "screening for
+   institutional review" → "screening during appraisal review"; softened the Ch1 Banks/Lending
+   beneficiary (complements, does not feed, their valuation) and dropped "lenders" from the Ch9 user list.
+3. **Recommendations recalibrated (~13 → 8 + a deployment note).** Dropped the Naga-City
+   training-extension rec (not substantial). Softened the **valuation-gap** rec to a *research signal,
+   not an appraisal input* — the gap comes from asking prices through a non-assessment-grade model and
+   needs validation against recorded transactions before operational use. **Future Research now leads
+   with making the geospatial/MCRAI feature computation more objective** (β, radii, weights estimated
+   from data), absorbing the old decay-calibration and externality recs. Collapsed the 3 Deployment recs
+   into a 3-sentence "A Note on Deployment" side note (deployment was not a primary aim). Added
+   assessment-grade caveats so claims sit between over- and under-claiming.
+4. **MCRAI baseline parameters owned (Ch3).** Confirmed the formula/parameters ARE in the methodology —
+   Ch3 §3.4.1 (gravity formula, β=2, 0.5 km floor, the radii table) plus the Ch6 "MCRAI Composite Weight
+   Derivation" subsection — but the **values** (β=2, radii) were asserted without justification (only the
+   weights are OLS-derived). Added a sentence after the Ch3 radii table that both justifies (β=2 is the
+   conventional inverse-square gravity setting; radii are baseline catchment scales) and **owns** the
+   limitation (judgment-based baselines, not locally estimated), forward-referencing the Ch10
+   future-research item.
+
+**OHANA framing note.** The critique was written as **MCRAI's own parameterization being arbitrary**, NOT
+as "based on Project OHANA" — consistent with the standing decision that MCRAI *replaced* OHANA (OHANA was
+not applied). If the lineage itself is later judged a weakness, that is a separate Ch2/Ch3 revision.
+
+**Also in this pass (logged for completeness; numeric/citation fixes, not scope decisions).** Fixed the
+"five-to-six points" OLS-vs-tree overstatement in Ch7 and Ch9 (houses gained only 2.4 pts); resolved the
+assembled-ABT (3,616) vs modeling-subset (3,372) terminology and a Ch5 self-contradiction + Appendix B
+note; fixed the Stage 1/Stage 2 mislabel in Ch10; APA author-doubling in Ch8; the Ch2 macroeconomic
+de-scope (cut the Macroeconomic Determinants subsection, Wibowo→Tanamal correction, dropped Becsky-Nagy);
+the Ch4 collection-funnel table (16,561 raw → 3,616 retained, OnePropertee shown excluded). Verified RQ4
+multipliers (2.2× Cebu City → 4.8× Mandaue, lots) against valuation_gap_summary.csv. All builds clean.
+
+**Next decision number: 57.**
