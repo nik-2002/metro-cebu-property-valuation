@@ -89,3 +89,10 @@ Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). 
 \caption{SHAP beeswarm summary, deployed vacant-lot Random Forest.}
 \label{fig:shap-lot-bee}
 \end{figure}
+
+\clearpage
+\section*{Appendix D: Feature Snapshots by Stratum}
+
+The tables below show example properties from each modeling stratum together with their full model-feature values, illustrating the per-stratum feature sets described in Chapters 3 and 6. Each column is one open-market listing chosen near the 30th, 50th, and 70th percentile of price per square meter, so the examples are representative rather than extreme. The one-hot city indicators use Cebu City as the reference category, so a property with zeros in all city rows is in Cebu City.
+
+\input{feature_snapshots}
