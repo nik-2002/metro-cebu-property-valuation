@@ -51,7 +51,7 @@ The vacant-lot stratum used an additional scope filter, keeping lots between 80 
 
 \subsection{\texorpdfstring{\textbf{Missing Data Treatment}}{Missing Data Treatment}}\label{missing-data-treatment}
 
-Missing-data treatment followed the practical pattern of the project: keep the file usable, preserve meaning when possible, and avoid inventing information that the sources did not provide.
+The missing-data treatment kept rows usable while keeping every imputation visible and leaving structurally absent fields unimputed.
 
 The first structural decision involved size variables. The thesis used \emph{area\_sqm} as the main size feature, with floor area preferred when available and lot area used as fallback. This mattered because vacant lots are priced on land area while condominium listings are priced on floor area. Vacant lots carried only this size field; they had no bedroom or bathroom attributes, and none were imputed for them.
 
