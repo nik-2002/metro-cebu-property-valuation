@@ -6,7 +6,6 @@ This chapter covers the CRISP-DM modeling phase for the prepared open-market dat
 
 The study used three models because each one served a different role. Ordinary Least Squares (OLS) was the interpretable hedonic baseline rooted in implicit-price theory \parencite{rosen1974}. Random Forest was included because it can capture non-linear relationships and feature interactions without a fixed functional form \parencite{breiman2001}. XGBoost was included because gradient boosting usually performs well on structured tabular data \parencite{chen2016}. Chapter 3 introduced these models conceptually; the focus here is the fitting setup used in the saved implementation.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Stratified Fitting and Leak-Free Validation}}{Stratified Fitting and Leak-Free Validation}}\label{stratified-fitting}
 
@@ -34,7 +33,6 @@ Common supervised target & log\_price & Log of price per square meter \\
 \end{center}
 \end{table}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Per-Stratum Feature Sets}}{Per-Stratum Feature Sets}}\label{per-stratum-feature-sets}
 
@@ -42,13 +40,11 @@ The feature matrix was not identical across strata. As described in Chapter 3, e
 
 The tree-based models used each stratum's full retained feature set. The OLS baseline used a slightly tighter version within each stratum, removing variables that were highly collinear with adjacent CBD-distance terms and replacing raw area fields with a log-area term, so the baseline followed a stable log-linear hedonic form. These tighter controls were a stability choice for coefficient interpretation, not a claim that the dropped columns lacked predictive value, since tree splits tolerate redundant and correlated predictors more easily.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{OLS Hedonic Baseline}}{OLS Hedonic Baseline}}\label{ols-hedonic-baseline}
 
 Within each stratum the OLS baseline was fit in \emph{statsmodels} on the log price-per-square-meter target. It was the most constrained specification of the three because it had to remain stable enough for coefficient interpretation. Heteroscedasticity and non-normal residuals were treated as diagnostic issues for the OLS comparator and addressed with robust (HC3) standard errors; they were not blockers for the deployed tree models. OLS was retained as an interpretable comparator and as the basis for screening the MCRAI category signs, not as the deployed model.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Random Forest}}{Random Forest}}\label{random-forest}
 
@@ -71,19 +67,16 @@ Vacant Lot & 300 & 1.0 & 1 \\
 \footnotesize{Maximum depth was left unbounded in all three strata.}
 \end{table}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{XGBoost}}{XGBoost}}\label{xgboost}
 
 The XGBoost comparator was fit with the \emph{XGBRegressor} implementation from the \emph{xgboost} package \parencite{chen2016}, on the same per-stratum feature sets and the same \emph{log\_price} target as the Random Forest. This kept the comparison fair across the two tree-based models. As Chapter 7 reports, XGBoost performed comparably to the Random Forest in every stratum but did not surpass it.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Hyperparameter Tuning}}{Hyperparameter Tuning}}\label{hyperparameter-tuning-ch6}
 
 The tree-based models were tuned with the same grid search and grouped cross-validation set out in Chapter 3, using the median absolute percentage error as the selection criterion so that tuning stayed aligned with the headline deployment metric. The tuning curves were close to flat across the search range, which indicated that the models were not very sensitive to these settings at this data size, and the deployed parameters sat at or near the defaults. The per-stratum hyperparameter sweep figures are included in the appendix material in \texttt{EDA/plots/11\_hyperparameter\_tuning/}.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{MCRAI Composite Weight Derivation}}{MCRAI Composite Weight Derivation}}\label{mcrai-stage2-weight-derivation}
 
@@ -109,7 +102,6 @@ mcrai\_recreation & 0.222 & Composite (condo/house); not retained for lots \\
 
 To avoid rank deficiency, the composite and its component categories were not used together in the same model: the condominium and house models used the composite, and the vacant-lot model used the individual components.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{SHAP Setup}}{SHAP Setup}}\label{shap-setup}
 

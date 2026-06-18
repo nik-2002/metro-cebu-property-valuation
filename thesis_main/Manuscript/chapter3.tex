@@ -33,7 +33,6 @@ Within each stratum, three supervised learning approaches were compared in order
 \item \textbf{XGBoost Regressor}: A gradient boosting algorithm optimized for predictive accuracy on structured tabular data \parencite{chen2016}. It was evaluated under the same protocol as a second tree-based candidate \parencite{nyanda2024}.
 \end{enumerate}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Data Sources}}{Data Sources}}\label{data-sources}
 
@@ -94,7 +93,6 @@ Licensed real estate brokers from the CPRE network were included as a validation
 \item \textbf{Outlier Review}: Examining cases with high prediction error to distinguish likely data issues from genuine market anomalies.
 \end{enumerate}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Data Pipeline}}{Data Pipeline}}\label{data-pipeline}
 
@@ -139,7 +137,6 @@ The data preparation process proceeded through the stages summarized in Figure~\
 
 \textbf{Tools}: Python (Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Requests, Playwright, OSMnx), and the Google Maps Geocoding and Places APIs.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Feature Engineering}}{Feature Engineering}}\label{feature-engineering}
 
@@ -209,7 +206,6 @@ The \emph{mcrai\_*} component scores were available individually, and a separate
 
 \item \textbf{Spatial Lag Variable}: To capture neighborhood price effects, \emph{spatial\_lag\_price} was computed as the mean price of other \emph{same-type} properties within a 500 m neighborhood of each target property. Restricting the neighborhood to the same stratum kept the comparison like-for-like, and the 500 m radius matched the micro-scale at which the MCRAI amenity signals operate. Properties with no same-type neighbor within this radius received a null lag and were excluded from model fitting. This variable operationalized Tobler's First Law of Geography in a form that could be used directly by the regression and tree models \parencite{tobler1970movie}.
 \end{enumerate}
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Pre-processing}}{Pre-processing}}\label{pre-processing}
 
@@ -230,7 +226,6 @@ Step & Method & Rationale \\
 \end{center}
 \end{table}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Modeling Strategy}}{Modeling Strategy}}\label{modeling-strategy}
 
@@ -262,7 +257,6 @@ Model quality was estimated with five-fold grouped cross-validation (GroupKFold)
 
 For the tree-based models, a parameter grid was searched under the same grouped cross-validation, with the median absolute percentage error as the selection criterion. The Random Forest grid covered the number of trees, the share of features considered at each split, the minimum samples per leaf, and the maximum depth; the XGBoost grid covered the number of trees, learning rate, depth, and subsample. The per-stratum best settings were recorded in the deployment manifest. The tuning curves were close to flat across the search range, which indicated that the models were not very sensitive to these settings at this data size, and the deployed parameters sat at or near the defaults.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Evaluation and Explainability}}{Evaluation and Explainability}}\label{evaluation-and-explainability}
 
@@ -316,7 +310,6 @@ SHAP was used to interpret model outputs at both the dataset and property level,
 
 This kept the model interpretable enough to work as a support tool rather than an opaque prediction system. The model was judged not just on how accurately it predicted price, but also on whether its outputs could be examined and discussed in terms practitioners understand.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Deliverables}}{Deliverables}}\label{deliverables}
 

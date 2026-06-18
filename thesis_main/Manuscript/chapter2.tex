@@ -6,7 +6,6 @@ This chapter reviews the existing body of knowledge on data-driven property valu
 
 The review moves from valuation concepts and the Philippine setting to the practical constraints that shape valuation work in emerging markets. It then turns to modeling approaches, the use of geospatial features in property valuation, the scope of macroeconomic factors, and the compliance issues that matter if these models are to be used in practice. The chapter closes by identifying the specific gap that this study addresses in the Metro Cebu context.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Core Concepts and Philippine Context}}{Core Concepts and Philippine Context}}\label{core-concepts-and-philippine-context}
 
@@ -24,7 +23,6 @@ For market-level context, the Bangko Sentral ng Pilipinas (BSP) publishes the Re
 
 \textcite{agosto2020} conducted the only Cebu-specific empirical study on land value determinants, surveying 51 real estate practitioners. The study identified transport accessibility as the primary driver of land values, followed by neighborhood quality and environmental conditions. However, the study was survey-based and did not utilize property-level geocoded data or machine learning methods. That leaves a gap between what Cebu practitioners identify as important and what has actually been tested using property-level data and predictive models.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{The Core Problem: Data Scarcity in Emerging Markets}}{The Core Problem: Data Scarcity in Emerging Markets}}\label{the-core-problem-data-scarcity-in-emerging-markets}
 
@@ -37,7 +35,6 @@ International literature consistently identifies data scarcity---not valuer misc
 
 Taken together, these studies suggest that valuation error in emerging markets is often rooted less in professional failure than in thin, inconsistent, or inaccessible market data. That framing matters for this study because it shifts attention from individual appraisal practice to the quality, structure, and availability of the information on which valuation depends.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Modeling Approaches: Traditional vs.~Machine Learning}}{Modeling Approaches: Traditional vs.~Machine Learning}}\label{modeling-approaches-traditional-vs.-machine-learning}
 
@@ -85,7 +82,6 @@ Work from Southeast Asia points in a similar direction. In Indonesia, \textcite{
 
 Review studies suggest that this is not an isolated pattern. \textcite{grinsztajn2022} found that tree-based ensembles such as Random Forest and XGBoost remain highly competitive with, and often outperform, deep learning on structured tabular data. \textcite{moreno2025} and \textcite{sharma2024} likewise report strong performance from XGBoost in house price prediction tasks. SHAP-based explainability \parencite{lundberg2017}, meanwhile, can narrow the interpretability gap between less transparent ML models and more conventional hedonic approaches.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Geospatial Feature Engineering in Property Valuation}}{Geospatial Feature Engineering in Property Valuation}}\label{geospatial-feature-engineering-in-property-valuation}
 
@@ -126,7 +122,6 @@ This study incorporates a \textbf{spatial lag variable}---the mean price of prop
 
 This matters in Metro Cebu because value shifts are unlikely to be evenly distributed across the urban area. Infrastructure projects such as the CBRT and Metro Cebu Expressway, uneven amenity access, and strong variation across neighborhoods all create spatial differences that a purely structural model would miss. In that sense, geospatial feature engineering is not an optional enhancement but a way of making the valuation model more responsive to how the city is actually changing.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Integrating Value Drivers: Indexing vs.~Raw Features}}{Integrating Value Drivers: Indexing vs.~Raw Features}}\label{integrating-value-drivers-indexing-vs.-raw-features}
 
@@ -134,13 +129,11 @@ A critical challenge in geospatial ML models is how to operationalize distance m
 
 Recent work suggests that raw distance variables are often too fragmented to stand on their own. \textcite{reyblanco2024}, for example, show that accessibility indices built from point-of-interest data can improve housing price prediction in both hedonic regression and Random Forest models. Grouping individual distances and counts into broader measures such as transit accessibility or commercial density can preserve the locational signal while reducing overlap across variables. For this study, that approach provides a practical way to translate \citeauthor{agosto2020}'s (\citeyear{agosto2020}) qualitative value drivers into features that can be used consistently in the model.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Macroeconomic Factors and Study Scope}}{Macroeconomic Factors and Study Scope}}\label{macroeconomic-factors-and-study-scope}
 
 Broad macroeconomic conditions, such as exchange rates, inflation, and interest rates, influence the direction of a housing market over time. This study does not model those forces. Its design is cross-sectional: it explains differences in price per square meter across locations at a single point in time, using property attributes and spatial features rather than market-wide cycles. Macroeconomic determinants therefore fall outside the scope of the present model. They remain a sensible direction for later work, and Chapter 10 records them as a recommendation for further research.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Compliance and Explainability: IVS 2025}}{Compliance and Explainability: IVS 2025}}\label{compliance-and-explainability-ivs-2025}
 
@@ -158,7 +151,6 @@ For this study, the IVS revisions matter in two practical ways.
 \item \textbf{Human-in-the-Loop Validation}: Licensed real estate brokers from the CPRE network are engaged to review model outputs, satisfying IVS 105's professional judgement mandate. This makes the model a \emph{decision-support tool}, not a replacement for the appraiser.
 \end{enumerate}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Synthesis and Research Gap}}{Synthesis and Research Gap}}\label{synthesis-and-research-gap}
 
@@ -168,7 +160,6 @@ What remains missing is a Cebu-specific study that brings those strands together
 
 This thesis addresses that gap by developing a Metro Cebu valuation model that combines open-market listings from multiple online portals, tree-based machine learning, geospatial feature engineering, SHAP-based explainability, and professional review. The aim is not to replace appraisal judgement, but to produce a more transparent and spatially grounded decision-support tool for the local market.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Bridge to Methodology}}{Bridge to Methodology}}\label{bridge-to-methodology}
 

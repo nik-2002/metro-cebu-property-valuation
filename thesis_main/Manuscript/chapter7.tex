@@ -10,7 +10,6 @@ The study led with two headline metrics and kept three more as supporting diagno
 
 The mean absolute percentage error (MAPE) was retained as a supporting metric because it is the figure most other studies report, which makes cross-study comparison possible, though it is sensitive to the error tail. The coefficient of dispersion (COD) measured how tightly the ratio of predicted to actual price clustered, and the price-related differential (PRD) checked whether the model valued cheaper and more expensive properties even-handedly. COD and PRD are reported in the spirit of assessment ratio studies; the thesis does not claim compliance with IAAO ratio-study thresholds, and those values are used only as context.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Final Model Comparison}}{Final Model Comparison}}\label{final-model-comparison}
 
@@ -36,7 +35,6 @@ Vacant Lot & 44.8 & \textbf{38.4} & 40.2 & 26\% & 1.48 \\
 
 The OLS baseline trailed the tree models in every stratum, which confirmed that a linear hedonic specification was useful as an interpretable comparator but was not the best predictive option for this data. The condominium and house models reached a typical error near 19 and 23 percent, while the vacant-lot model was clearly the hardest, with a typical error near 38 percent. That ordering is revisited in the residual analysis below.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Best Model Selection}}{Best Model Selection}}\label{best-model-selection}
 
@@ -44,7 +42,6 @@ The Random Forest was selected as the production model in all three strata. It p
 
 The comparison also showed a clear division of roles. OLS remained the interpretable hedonic benchmark used for coefficient-based reference and for grounding the MCRAI composite weights. The tree models were the stronger predictors. The evaluation phase therefore retained the Random Forest as the production estimator for each stratum while keeping OLS as the econometric baseline.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Do the Geospatial Features Help? (Ablation)}}{Do the Geospatial Features Help? (Ablation)}}\label{ablation}
 
@@ -70,7 +67,6 @@ Vacant Lot & 51.5 & 42.3 & \textbf{38.6} \\
 
 Compared with a structural-only model, the full geospatial set improved every stratum: condominiums by about 5.7 points, houses by about 4.2 points, and vacant lots by about 13.0 points. The decomposition is more revealing. When the engineered geospatial features were added \emph{on top of} administrative location, they carried a clear additional gain for condominiums (about 3.7 points) and vacant lots (about 3.8 points), but added essentially nothing for houses (about $-0.7$ points, a slight worsening). For houses, knowing the city and the BIR zonal value already captured most of the location signal, and the custom geospatial features mostly duplicated it. The reading is that the model's engineered features add the most value precisely where administrative benchmarks are weakest, which is vertical condominiums and bare lots.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{SHAP Feature Attribution}}{SHAP Feature Attribution}}\label{shap-feature-attribution}
 
@@ -105,7 +101,6 @@ Across all three strata, location-related features (CBD distances, MCRAI, and th
 \label{fig:shap-lot}
 \end{figure}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Residual Analysis}}{Residual Analysis}}\label{residual-analysis}
 
@@ -113,7 +108,6 @@ The residual pattern was consistent and informative across all three strata. At 
 
 These extreme misses were not random. They were atypically cheap listings whose low price reflects something the listing does not record, such as condition, title issues, distressed or pre-selling pricing, or, for lots, terrain and access. The model sees a normal location and size and reasonably predicts a normal price. This is the same finding seen three ways: the PRD above 1.0 in every stratum (a mild tendency to over-value cheaper properties), the gap between the good typical error and the larger average error, and the heavy worst-decile over-prediction. The vacant-lot stratum showed the strongest version of this, which is why its typical error stayed near 38 percent. Chapter 9 records the specific data limitations behind this tail.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{\textbf{Benchmark Comparison}}{Benchmark Comparison}}\label{benchmark-comparison}
 
