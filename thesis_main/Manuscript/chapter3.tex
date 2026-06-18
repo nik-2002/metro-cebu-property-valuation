@@ -4,7 +4,7 @@
 
 This study used a quantitative, non-experimental design to model residential property values in Metro Cebu. The analysis was predictive in that it estimated prices from observed property characteristics, and prescriptive in that the results were later organized for spatial decision support. The training target was the price per square meter of each property (\emph{price\_per\_sqm}), log-transformed as \emph{log\_price} for model fitting. A per-square-meter target was used because it places condominiums, houses, and bare lots on a comparable unit basis and reduces the distortion that raw total price introduces when property sizes differ widely. Predicted unit prices were multiplied by floor or lot area to recover a total price in Philippine Peso for reporting. The independent variables included structural, geospatial, and administrative features. Macroeconomic indicators were reviewed during study design but were not retained in the final fitted specification.
 
-Rather than fitting one model across all property types, the study estimated three separate models, one for each property stratum: condominiums, houses, and vacant lots. This stratified design responded directly to a problem identified during the earlier defense: a single model trained on mixed property types must reconcile price-per-square-meter levels that differ several times over---vertical condominium space, built houses, and bare land are priced on different logics---which inflates error and blurs interpretation. The hedonic literature supports this choice, finding that housing markets are segmented by the sorting of heterogeneous households and that stratified models fit better than pooled ones \parencite{droes2019,usman2020}. Splitting the data by property type let each model learn the value structure of its own market segment. The strata sizes are shown in Table~\ref{tab:chapter3-strata}.
+Rather than fitting one model across all property types, the study estimated three separate models, one for each property stratum: condominiums, houses, and vacant lots. This stratified design responded directly to a problem identified during the earlier defense: a single model trained on mixed property types must reconcile price-per-square-meter levels that differ several times over. Vertical condominium space, built houses, and bare land are priced on different logics, and pooling them inflates error and blurs interpretation. The hedonic literature supports this choice, finding that housing markets are segmented by the sorting of heterogeneous households and that stratified models fit better than pooled ones \parencite{droes2019,usman2020}. Splitting the data by property type let each model learn the value structure of its own market segment. The strata sizes are shown in Table~\ref{tab:chapter3-strata}.
 
 \begin{table}[htbp]
 \caption{Open-Market Modeling Strata}
@@ -18,10 +18,11 @@ Condominium & 1{,}300 & Vertical residential units \\
 Houses & 1{,}223 & Single Detached, House and Lot, Townhouse \\
 Vacant Lot & 849 & Bare land, area 80--2{,}000 sqm, price $\geq \tfrac{1}{2}$ BIR zonal \\
 \midrule
-Total & 3{,}616 & Open-market listings only \\
+Total modeled & 3{,}372 & Rows entering the three strata \\
 \bottomrule
 \end{tabular}
 \end{center}
+\textit{Note.} The three strata are drawn from the 3{,}616-row open-market ABT. The 244-row difference comes from the model-requirement filters (null target or null spatial-lag value, plus the vacant-lot scope filter); Chapter 5 reports the per-stratum breakdown.
 \end{table}
 
 Within each stratum, three supervised learning approaches were compared in order to balance interpretability and predictive performance, while also testing whether GIS-derived and administrative variables improved the model beyond structural features alone:
@@ -128,7 +129,7 @@ The data preparation process proceeded through the stages summarized in Figure~\
 
 \begin{enumerate}
 \item \textbf{Ingestion}: Open-market listings were collected from Lamudi (bulk \emph{requests} scraper plus a Playwright browser scraper), FilipinoHomes (backend JSON interface), and DotProperty (portal listings).
-\item \textbf{Filtering}: The dataset was restricted to residential properties within Metro Cebu---Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion---using point-in-polygon checks against the six LGU boundaries.
+\item \textbf{Filtering}: The dataset was restricted to residential properties within the six study LGUs (Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion) using point-in-polygon checks against their boundaries.
 \item \textbf{Parsing, Cleaning, and De-duplication}: Price and area fields were normalized across portals (currency symbols and commas stripped; rows without explicit numerical prices dropped). Distressed and mortgage-assumption listings (for example, ``for assume'' or ``pasalo'' postings, which quote loan balances rather than market value) were removed. Duplicate listings were collapsed on coordinate, price, and area, and a spatial cap limited the number of listings per location cell. A per-stratum price-per-square-meter sanity band removed area-entry errors and extreme mispricing.
 \item \textbf{Geocoding (Address to Coordinates)}: Property addresses were batch-geocoded through the Google Maps Geocoding API to obtain latitude and longitude. The service was selected for project-level address resolution in Metro Cebu, where listings often reference barangays, landmarks, or compound descriptors rather than standardized street-number formats. Results were cached locally to avoid redundant API calls. FilipinoHomes listings carried precise embedded coordinates and bypassed text geocoding.
 \item \textbf{BIR Zonal Value Extraction and Barangay Join}: Official BIR zonal value schedules were sourced from the Revenue District Office files covering the six-LGU study area. A custom parser extracted street-level values by residential classification code and aggregated them to the barangay level as the median per classification. Each property was assigned a barangay through reverse geocoding, which served as the join key to the BIR summary table, yielding \emph{bir\_zonal\_rr\_median} coverage across the open-market ABT.
@@ -311,7 +312,7 @@ SHAP was used to interpret model outputs at both the dataset and property level,
 \item \textbf{Local SHAP (Force Plots)}: Explained individual predictions. For example: \emph{``This Mactan condominium is predicted higher because of stronger neighborhood prices and accessibility, but the smaller floor area pulls the estimate down.''}
 \end{itemize}
 
-This helped keep the model interpretable enough to function as a support tool rather than a purely opaque prediction system. In practical terms, the model was evaluated not only by how accurately it predicted price, but also by whether its outputs could still be examined and discussed in terms that practitioners could understand.
+This kept the model interpretable enough to work as a support tool rather than an opaque prediction system. The model was judged not just on how accurately it predicted price, but also on whether its outputs could be examined and discussed in terms practitioners understand.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
