@@ -2378,3 +2378,32 @@ the Ch4 collection-funnel table (16,561 raw → 3,616 retained, OnePropertee sho
 multipliers (2.2× Cebu City → 4.8× Mandaue, lots) against valuation_gap_summary.csv. All builds clean.
 
 **Next decision number: 57.**
+
+## Decision 57 — Adviser review round: visual assets, front-matter classification, SHAP plot, page layout (2026-06-18)
+
+**Context.** Nico relayed a list of manuscript comments from review. Items spanned quick text fixes, a batch of new visual assets, and a couple of layout/classification decisions.
+
+**Text/layout fixes.**
+- Ch7 residual sentence: "106 percent / 97 percent / 181 percent" → 106\%/97\%/181\%.
+- Ch5: reworded the off-putting missing-data lead-in (dropped "practical pattern of the project" / "avoid inventing information that the sources did not provide").
+- Abstract: already 282 words (within the required 200--300) — no change.
+- main.tex: \clearpage before every chapter (and the bibliography + appendix) so each chapter starts at the top of a new page.
+
+**Front-matter classification (item 7).** Split into five lists: List of Tables, List of Figures, List of Maps, List of Pictures, List of Appendices. Added custom float types via the `float` package — `ccmap` ("Map", auto-lists to `.lom`) and `ccpic` ("Picture", `.lop`) — with `\captionsetup` matching the APA figure-caption style (bold label on its own line, italic title). `maps_list.tex`/`pictures_list.tex` now auto-generate via `\listof`.
+
+**Maps (items 4, 8a) — `Scripts/generate_manuscript_maps.py`** (geopandas, UTM 51N, scale bars; reproducible from `lgu_boundaries.geojson` + `mcrai_pois/*.geojson` + `abt_clean.csv`):
+- Map 1 (Ch1): clean node-free 6-LGU study area, replacing the busy road-network `Study-Area-Map.png`. **CBD-node stars removed per Nico** (irrelevant to a scope map); this also absorbed the separate boundary map, so Ch4's duplicate was dropped.
+- Map 2 (Ch4): open-market listings colored by stratum, with legend + counts.
+- Map 3 (Ch4): the 8 MCRAI amenity categories. Built from the existing `QGIS/data/mcrai_pois/*.geojson` (Nico pointed these out — no new export needed; transport layer excluded as retired).
+
+**SHAP plot (item 8b).** Nico (and classmates) found the beeswarm hard to read at first glance. Confirmed it is information-dense (3 encodings: feature, signed SHAP value, feature value via color) and not intuitive on first look. Decision: lead Ch7 with simpler **mean |SHAP| bar charts** (top 12 features/stratum, `Scripts/generate_shap_bars.py` from the deployed pkls); move the directional **beeswarms to Appendix C** with a "how to read this" note. Direction is still covered via OLS signs + Ch8 discussion.
+
+**Webapp screenshots (item 5).** Captured the three views headlessly (Playwright chromium from the scraper cache; installed the `playwright` pip pkg into the project `.venv`) against the running FastAPI app (the backend mounts the build at `/`, so the Predictor shows a **live** prediction: PHP 216,101/sqm + SHAP breakdown). Placed as Pictures 1--3 in the Ch3 Deliverables subsection (ccpic floats → List of Pictures).
+
+**Feature snapshots (item 6).** Three transposed per-stratum tables (features as rows, 3 example properties as columns) in new **Appendix D**, from the exact deployed feature matrix (`Scripts/generate_feature_snapshots.py`); example rows chosen near the 30/50/70th price-per-sqm percentile so they are representative.
+
+**Appendices now A--D:** A Data Documentation, B Supplementary Tables, C SHAP Beeswarm Plots, D Feature Snapshots. Manuscript grew 107 → 123 pp across the round; every build clean, 0 undefined.
+
+**Note for a later pass.** Webapp screenshots are landscape at text-width → render small on portrait pages; option to rotate to landscape pages or crop to key panels if desired.
+
+**Next decision number: 58.**
