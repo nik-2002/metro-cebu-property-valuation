@@ -74,7 +74,7 @@ Compared with a structural-only model, the full geospatial set improved every st
 
 \subsection{\texorpdfstring{\textbf{SHAP Feature Attribution}}{SHAP Feature Attribution}}\label{shap-feature-attribution}
 
-SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum beeswarms in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} show this directly. Grouping the SHAP contributions into blocks gives the clearest summary:
+SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum SHAP importance in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} shows this directly. These charts rank each feature by its mean absolute SHAP value, that is, the average size of its effect on the predicted price. The directional beeswarm versions, which also show whether high or low feature values push the prediction up or down, are provided in Appendix C. Grouping the SHAP contributions into blocks gives the clearest summary:
 
 \begin{itemize}
 \item \textbf{Condominium}: neighborhood price level (spatial lag, about 34 percent of the SHAP magnitude) and CBD-distance access (about 30 percent) led, with unit size and bedrooms next. Administrative benchmarks contributed little.
@@ -86,22 +86,22 @@ Across all three strata, location-related features (CBD distances, MCRAI, and th
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_summary.png}
-\caption{SHAP Beeswarm Summary for the Deployed Condominium Random Forest}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_bar.png}
+\caption{Mean absolute SHAP value by feature, deployed condominium Random Forest (top 12 features).}
 \label{fig:shap-condo}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_summary.png}
-\caption{SHAP Beeswarm Summary for the Deployed House Random Forest}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_bar.png}
+\caption{Mean absolute SHAP value by feature, deployed house Random Forest (top 12 features).}
 \label{fig:shap-houses}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_summary.png}
-\caption{SHAP Beeswarm Summary for the Deployed Vacant-Lot Random Forest}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_bar.png}
+\caption{Mean absolute SHAP value by feature, deployed vacant-lot Random Forest (top 12 features).}
 \label{fig:shap-lot}
 \end{figure}
 
