@@ -4,7 +4,7 @@
 
 This chapter reviews the existing body of knowledge on data-driven property valuation, drawing from both Philippine and international literature. It establishes the theoretical foundations underpinning this study, surveys empirical evidence on machine learning approaches to real estate pricing, and identifies a critical research gap: the absence of a Cebu-specific, property-level, ML-augmented valuation model.
 
-The review moves from valuation concepts and the Philippine setting to the practical constraints that shape valuation work in emerging markets. It then turns to modeling approaches, the use of geospatial features in property valuation, macroeconomic influences, and the compliance issues that matter if these models are to be used in practice. The chapter closes by identifying the specific gap that this study addresses in the Metro Cebu context.
+The review moves from valuation concepts and the Philippine setting to the practical constraints that shape valuation work in emerging markets. It then turns to modeling approaches, the use of geospatial features in property valuation, the scope of macroeconomic factors, and the compliance issues that matter if these models are to be used in practice. The chapter closes by identifying the specific gap that this study addresses in the Metro Cebu context.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -79,7 +79,7 @@ Given a sample size close to that of this study, the Tanzania study is useful le
 
 \subsubsection{\texorpdfstring{\textbf{Southeast Asian Applications}}{Southeast Asian Applications}}\label{southeast-asian-applications}
 
-Work from Southeast Asia points in a similar direction. In Indonesia, Wibowo et al. (2023) found that adding macroeconomic and spatial variables, including coordinates and amenity proximity, improved residential price prediction in Surabaya. In Malaysia, \textcite{jaafar2021} showed that Random Forest best captured the value contribution of heritage characteristics for pre-war shophouses in Penang, outperforming more conventional regression approaches. While these studies come from different property contexts, they suggest that in fast-changing urban markets, spatial information is not just supplementary detail but part of the valuation signal itself.
+Work from Southeast Asia points in a similar direction. In Indonesia, \textcite{tanamal2023} used a Random Forest model to sort Surabaya houses into price categories from a set of agent-sourced attributes, including land and building area, number of rooms, road width, building age, and area classification, and reported that the tree-based approach handled this mixed attribute data well. In Malaysia, \textcite{jaafar2021} showed that Random Forest best captured the value contribution of heritage characteristics for pre-war shophouses in Penang, outperforming more conventional regression approaches. These studies come from different property contexts, but together they suggest that tree-based models are well suited to the varied attribute data that residential valuation depends on in fast-changing urban markets.
 
 \subsubsection{\texorpdfstring{\textbf{Comparative Reviews}}{Comparative Reviews}}\label{comparative-reviews}
 
@@ -136,18 +136,9 @@ Recent work suggests that raw distance variables are often too fragmented to sta
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{\texorpdfstring{\textbf{Macroeconomic Determinants}}{Macroeconomic Determinants}}\label{macroeconomic-determinants}
+\subsection{\texorpdfstring{\textbf{Macroeconomic Factors and Study Scope}}{Macroeconomic Factors and Study Scope}}\label{macroeconomic-factors-and-study-scope}
 
-While structural and locational attributes shape the price of an individual property, broader macroeconomic conditions influence the direction of the market as a whole. \textcite{nworah2023}, in their study of real estate investment performance in Lagos from 2005 to 2022, found that exchange rate movements and inflation were both significantly associated with real estate outcomes.
-
-\begin{itemize}
-\item \textbf{Exchange Rate vs.~Real Estate}: $r = -0.925$ (the strongest predictor).
-\item \textbf{Inflation vs.~Real Estate}: $r = -0.508$ (significant but weaker).
-\end{itemize}
-
-In the Philippine case, that relationship is plausibly tied to remittance flows as well. In 2024, OFW remittances reached USD 38.3 billion nationally, and when the peso weakens, remitted income converts into more pesos. For households in Cebu, that can strengthen purchasing power and feed housing demand, which helps make sense of the 11.5\% property price growth reported for Metro Cebu. The point is not that exchange rates alone explain local price movement, but that broader macro conditions can shape the direction and intensity of demand.
-
-A macro control such as the \textbf{BSP RPPI quarterly index} is therefore relevant in principle, following \textcite{udomsap2020}, who confirmed that interest rates and macroeconomic conditions are significant determinants of housing prices.
+Broad macroeconomic conditions, such as exchange rates, inflation, and interest rates, influence the direction of a housing market over time. This study does not model those forces. Its design is cross-sectional: it explains differences in price per square meter across locations at a single point in time, using property attributes and spatial features rather than market-wide cycles. Macroeconomic determinants therefore fall outside the scope of the present model. They remain a sensible direction for later work, and Chapter 10 records them as a recommendation for further research.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
