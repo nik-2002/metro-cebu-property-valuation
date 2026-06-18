@@ -18,7 +18,7 @@ The cleaning that produced the open-market ABT followed the valuation basis of t
 
 Several filters were applied during the multi-portal cleaning step. Distressed and mortgage-assumption listings, which quote loan balances rather than market value, were removed by keyword. Duplicate listings were collapsed on coordinate, price, and area, and a spatial cap limited the number of listings per location cell so that a few dense clusters could not dominate a stratum. A per-stratum price-per-square-meter sanity band removed area-entry errors and extreme mispricing. One condominium record was dropped because it was a misclassified house-sized unit.
 
-The remaining model-requirement filters were tied to the target and the spatial-lag feature. Rows with a null \emph{price\_per\_sqm} were removed because the target could not be computed, and rows with a null \emph{spatial\_lag\_price} were removed because the neighborhood-price feature was part of the final design. After all filtering, the open-market ABT held 3{,}616 rows across the cleaned residential taxonomy: Condominium, House and Lot, Townhouse, Single Detached, and Vacant Lot.
+The remaining model-requirement filters were tied to the target and the spatial-lag feature. Rows with a null \emph{price\_per\_sqm} were removed because the target could not be computed, and rows with a null \emph{spatial\_lag\_price} were removed because the neighborhood-price feature was part of the final design. These filters reduced the assembled 3{,}616-row ABT to the 3{,}372-row modeling subset, drawn from the cleaned residential taxonomy: Condominium, House and Lot, Townhouse, Single Detached, and Vacant Lot.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
