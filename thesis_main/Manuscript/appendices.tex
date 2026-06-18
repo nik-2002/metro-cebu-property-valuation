@@ -1,4 +1,4 @@
-\section*{Appendix A: Data Documentation}
+\section{Data Documentation}
 
 Figure~\ref{fig:abt-snapshot} shows a slice of the assembled analytics base table as stored, illustrating the row-level structure behind the schema tables that follow. The full table holds 51 columns; the slice shows a representative subset.
 
@@ -49,7 +49,7 @@ Feature Group & Variables & Type \\
 \end{center}
 \end{table}
 
-\section*{Appendix B: Supplementary Tables}
+\section{Supplementary Tables}
 
 \begin{table}[H]
 \caption{Geographic Distribution of the Final Open-Market ABT by LGU and Property Type}
@@ -74,7 +74,7 @@ Total & 3{,}616 & 100.00\% & 1{,}391 & 1{,}301 & 924 \\
 \end{table}
 
 \clearpage
-\section*{Appendix C: SHAP Beeswarm Plots}
+\section{SHAP Beeswarm Plots}
 
 Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). The beeswarm plots below carry the same ranking but add the directional detail. Each dot is one property; its horizontal position is that property's SHAP value (how much the feature pushed the predicted price per square meter up or down), and its color is the underlying feature value (red high, blue low). A band of red dots on the right therefore means high values of that feature raise the prediction. The vertical spread only separates overlapping dots and has no other meaning.
 
@@ -100,14 +100,14 @@ Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). 
 \end{figure}
 
 \clearpage
-\section*{Appendix D: Feature Snapshots by Stratum}
+\section{Feature Snapshots by Stratum}
 
 The tables below show example properties from each modeling stratum together with their full model-feature values, illustrating the per-stratum feature sets described in Chapters 3 and 6. Each column is one open-market listing chosen near the 30th, 50th, and 70th percentile of price per square meter, so the examples are representative rather than extreme. The one-hot city indicators use Cebu City as the reference category, so a property with zeros in all city rows is in Cebu City.
 
 \input{feature_snapshots}
 
 \clearpage
-\section*{Appendix E: OLS Diagnostic Plots}
+\section{OLS Diagnostic Plots}
 
 These plots support the OLS baseline diagnostics discussed in Chapters 3 and 6. They apply to the interpretable OLS comparator, not the deployed Random Forest, which does not assume constant error variance or freedom from collinearity.
 
