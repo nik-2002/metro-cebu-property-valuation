@@ -81,7 +81,7 @@ The XGBoost comparator was fit with the \emph{XGBRegressor} implementation from 
 
 \subsection{\texorpdfstring{\textbf{Hyperparameter Tuning}}{Hyperparameter Tuning}}\label{hyperparameter-tuning-ch6}
 
-For the tree-based models, a parameter grid was searched under the same grouped cross-validation, with the median absolute percentage error as the selection criterion so that tuning stayed aligned with the headline deployment metric. The Random Forest grid covered the number of trees, the share of features per split, the minimum samples per leaf, and the maximum depth; the XGBoost grid covered the number of trees, learning rate, depth, and subsample. The tuning curves were close to flat across the search range, which indicated that the models were not very sensitive to these settings at this data size, and the deployed parameters sat at or near the defaults. The per-stratum hyperparameter sweep figures are included in the appendix material in \texttt{EDA/plots/11\_hyperparameter\_tuning/}.
+The tree-based models were tuned with the same grid search and grouped cross-validation set out in Chapter 3, using the median absolute percentage error as the selection criterion so that tuning stayed aligned with the headline deployment metric. The tuning curves were close to flat across the search range, which indicated that the models were not very sensitive to these settings at this data size, and the deployed parameters sat at or near the defaults. The per-stratum hyperparameter sweep figures are included in the appendix material in \texttt{EDA/plots/11\_hyperparameter\_tuning/}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
