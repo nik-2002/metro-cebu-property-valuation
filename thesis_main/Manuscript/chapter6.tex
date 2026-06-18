@@ -14,7 +14,7 @@ Rather than fitting one model across all property types, the pipeline split the 
 
 Model quality was estimated with five-fold grouped cross-validation (GroupKFold), where the groups were coordinate clusters. Listings that shared a location were kept together in the same fold, so a property could not appear in both training and test folds in near-identical spatial form. This was a deliberate guard against coordinate leakage, which would otherwise flatter a spatial model whose neighborhood and spatial-lag features make co-located listings resemble copies of one another. All headline metrics in Chapter 7 were computed out-of-fold under this protocol. A separate analysis re-ran the models under a conventional random 80:20 split to compare against an external benchmark study; that comparison is reported in Chapter 7 and is not the basis for the deployed metrics.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Stratified Modeling Setup}
 \label{tab:chapter6-split}
 \begin{center}
@@ -54,7 +54,7 @@ Within each stratum the OLS baseline was fit in \emph{statsmodels} on the log pr
 
 The Random Forest was the deployed model in all three strata, fit with \emph{scikit-learn}'s \emph{RandomForestRegressor} using 300 trees \parencite{breiman2001}. The per-stratum settings selected under grouped cross-validation are listed in Table~\ref{tab:chapter6-rf-params}. No scaling step was applied before fitting, since tree models are invariant to monotone feature scaling.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Deployed Random Forest Settings by Stratum}
 \label{tab:chapter6-rf-params}
 \begin{center}
@@ -91,7 +91,7 @@ The MCRAI composite was built from the OLS coefficient signs rather than by forc
 
 The remaining categories, including security, tourism, and retail density, were not used in the composite because their OLS coefficients were negative or near zero, which is interpreted in Chapter 8 as spatial sorting rather than direct disamenity. The condominium and house models used the composite as their single accessibility summary, while the vacant-lot model used the individual categories instead, because for bare land the categories were not interchangeable.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{MCRAI Composite Weights (Positive-Coefficient Categories)}
 \label{tab:chapter6-mcrai-weights}
 \begin{center}

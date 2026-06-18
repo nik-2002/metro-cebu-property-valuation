@@ -36,6 +36,9 @@
 \providecommand*{\theHnone}{\arabic{none}}
 \setlength{\parindent}{0.5in}
 \setlength{\parskip}{0pt}
+% Let pages run naturally short instead of vertically stretching content to the
+% bottom margin; keeps trailing whitespace tidy around in-place [H] floats.
+\raggedbottom
 
 % --- Bibliography (APA 7 via biblatex) ---
 \usepackage[style=apa, backend=biber]{biblatex}

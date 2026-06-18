@@ -1,6 +1,6 @@
 \section*{Appendix A: Data Documentation}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Sample Structure of Cleaned Open-Market Listing Records}
 \label{tab:chapter3-lamudi-structure}
 \begin{center}
@@ -20,7 +20,7 @@ Latitude / Longitude & Latitude, Longitude & Direct coordinate mapping \\
 \end{center}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Final Feature Matrix Schema Used for the Modeling Workflow}
 \label{tab:chapter3-feature-matrix}
 \begin{center}
@@ -42,7 +42,7 @@ Feature Group & Variables & Type \\
 
 \section*{Appendix B: Supplementary Tables}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Geographic Distribution of the Final Open-Market ABT by LGU and Property Type}
 \label{tab:appendix-abt-city-distribution}
 \begin{center}
@@ -69,21 +69,21 @@ Total & 3{,}616 & 100.00\% & 1{,}391 & 1{,}301 & 924 \\
 
 Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). The beeswarm plots below carry the same ranking but add the directional detail. Each dot is one property; its horizontal position is that property's SHAP value (how much the feature pushed the predicted price per square meter up or down), and its color is the underlying feature value (red high, blue low). A band of red dots on the right therefore means high values of that feature raise the prediction. The vertical spread only separates overlapping dots and has no other meaning.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_summary.png}
 \caption{SHAP beeswarm summary, deployed condominium Random Forest.}
 \label{fig:shap-condo-bee}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_summary.png}
 \caption{SHAP beeswarm summary, deployed house Random Forest.}
 \label{fig:shap-houses-bee}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_summary.png}
 \caption{SHAP beeswarm summary, deployed vacant-lot Random Forest.}

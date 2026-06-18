@@ -16,7 +16,7 @@ The mean absolute percentage error (MAPE) was retained as a supporting metric be
 
 Table~\ref{tab:model-comparison} presents the head-to-head comparison of the three approaches within each stratum. The direction was the same across property types: the two tree-based models beat the OLS hedonic baseline in every stratum, by about two percentage points of MdAPE for houses and by five to six points for condominiums and vacant lots. The Random Forest edged out XGBoost in all three strata by a small margin. The gap between Random Forest and XGBoost was narrow enough to call the two comparable, with Random Forest the modest winner.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Leak-Free Cross-Validated Comparison by Stratum (Median Absolute Percentage Error)}
 \label{tab:model-comparison}
 \begin{center}
@@ -50,7 +50,7 @@ The comparison also showed a clear division of roles. OLS remained the interpret
 
 To test whether the engineered geospatial features earned their place, each stratum's Random Forest was refitted in three tiers under the same folds: structural features only; then adding administrative location (city and BIR zonal value); then adding the full geospatial set (node distances, MCRAI, spatial lag). Table~\ref{tab:ablation} reports the change in typical error.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Ablation by Feature Tier (MdAPE, Leak-Free Cross-Validation)}
 \label{tab:ablation}
 \begin{center}
@@ -84,21 +84,21 @@ SHAP was applied to each deployed Random Forest so that its prediction logic cou
 
 Across all three strata, location-related features (CBD distances, MCRAI, and the spatial lag) carried the large majority of the attribution, which is consistent with the value-driver question in RQ1. The substantive interpretation of why these features dominate in Metro Cebu is developed in Chapter 8.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_bar.png}
 \caption{Mean absolute SHAP value by feature, deployed condominium Random Forest (top 12 features).}
 \label{fig:shap-condo}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_bar.png}
 \caption{Mean absolute SHAP value by feature, deployed house Random Forest (top 12 features).}
 \label{fig:shap-houses}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_bar.png}
 \caption{Mean absolute SHAP value by feature, deployed vacant-lot Random Forest (top 12 features).}

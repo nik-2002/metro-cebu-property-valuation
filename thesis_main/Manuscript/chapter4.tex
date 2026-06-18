@@ -8,7 +8,7 @@ The frozen open-market ABT had 3{,}616 rows and 51 columns, assembled from sever
 
 Table~\ref{tab:abt-source-composition} traces each portal from raw scrape to the rows retained in the final ABT. Lamudi was the largest contributor, through a bulk scraper and a later browser-based batch that recovered listings after the site added an anti-bot wall. FilipinoHomes and DotProperty widened the coverage and reduced dependence on any single portal. A fourth portal, OnePropertee, was scraped but excluded entirely after its records were found to contaminate the model, so it appears here only as raw volume.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Open-Market Collection Funnel and Composition by Source}
 \label{tab:abt-source-composition}
 \begin{center}
@@ -37,7 +37,7 @@ The ABT covered six LGUs: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City,
 
 The ABT columns can be grouped into eight blocks. The table below gives the main groups and their purpose.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Analytics Base Table Schema by Feature Group}
 \label{tab:abt-schema}
 \begin{center}
@@ -74,7 +74,7 @@ Initial exploration focused on target distribution, property-type mix, geographi
 
 Property-type composition is shown in Table~\ref{tab:property-type-composition}. Condominiums were the largest class, and vacant lots had far lower median unit prices than vertical or built housing types. This mix is exactly why the study modeled the property types separately rather than pooling them.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Property-Type Composition and Median price\_per\_sqm (Open-Market ABT)}
 \label{tab:property-type-composition}
 \begin{center}
@@ -94,7 +94,7 @@ Apartment & 2 & 0.1\% & PHP~160{,}363 \\
 \footnotesize{Counts are for the full open-market ABT before the per-stratum scope filters applied in Chapter 5.}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{../EDA/price_by_property_type.png}
 \caption{Distribution of price\_per\_sqm by property type (outliers hidden). Condominiums commanded the highest unit prices; vacant lots had the lowest, reflecting their land-only composition without built area.}
@@ -103,21 +103,21 @@ Apartment & 2 & 0.1\% & PHP~160{,}363 \\
 
 Geographic spread in the open-market subset was uneven. Cebu City had the highest median unit price at about PHP~113{,}600 per square meter, followed by Mandaue City at about PHP~96{,}100 and Lapu-Lapu City at about PHP~92{,}100. Talisay City, Minglanilla, and Consolacion formed a lower-price band, with medians between about PHP~47{,}100 and PHP~56{,}800 per square meter. The premium open-market signal therefore stayed concentrated in the core and island submarkets rather than the peripheral suburban LGUs. The CBD-distance matrix also showed that several southern-corridor distances moved together closely, an early warning that the linear baseline would later need a collinearity check even though the nodes remained substantively meaningful. Map~\ref{map:properties} shows how the listings were distributed across the study area by stratum.
 
-\begin{ccmap}[htbp]
+\begin{ccmap}[H]
 \centering
 \includegraphics[width=0.92\textwidth]{diagrams/properties_by_stratum.png}
 \caption{Open-market listings across Metro Cebu, colored by modeling stratum.}
 \label{map:properties}
 \end{ccmap}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{../EDA/price_by_city_open_market.png}
 \caption{Distribution of price\_per\_sqm by LGU for the open-market subset (outliers hidden). Cebu City, Mandaue, and Lapu-Lapu showed the highest median unit prices; Talisay, Minglanilla, and Consolacion formed a lower-price band.}
 \label{fig:price-by-city}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Overall Zero Rates for Metro Cebu Residential Accessibility Index Fields}
 \label{tab:mcrai-zero-rates}
 \begin{center}
@@ -141,7 +141,7 @@ mcrai\_composite & 0.2\% & Positive-weight composite coverage was effectively co
 
 Table~\ref{tab:mcrai-zero-rates} shows that MCRAI coverage was generally strong, but not uniform. Education, the composite, tourism, and grocery had very low zero rates, while security and retail density had higher zero rates. The higher security zero rate, concentrated unevenly across LGUs, was one reason that category was later dropped from the vacant-lot model. Map~\ref{map:amenities} shows the spatial distribution of the curated amenity points across the eight MCRAI categories.
 
-\begin{ccmap}[htbp]
+\begin{ccmap}[H]
 \centering
 \includegraphics[width=0.92\textwidth]{diagrams/amenities_map.png}
 \caption{Curated amenity points across Metro Cebu for the eight MCRAI categories.}
@@ -156,7 +156,7 @@ A rank-based exploratory check on the open-market subset showed that location an
 
 Data quality checks looked at missingness, integrity, source differences, and external-data contamination issues that were fixed before freeze.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Major Missingness Patterns in the Open-Market ABT}
 \label{tab:missingness-patterns}
 \begin{center}
@@ -182,7 +182,7 @@ floor\_area\_sqm / area\_sqm & 2.5\% & Residual portal incompleteness \\
 
 The largest missingness issue was structural. Lot area was fully missing in the open-market file because listings report floor area rather than lot area; this reflects a source limitation, not random noise, and it is the reason the vacant-lot model relies on lot size while the other strata use floor area. The bedroom and bathroom gaps were concentrated in portal listings and were median-imputed with audit flags for the condominium and house strata, while vacant lots carried no bedroom or bathroom fields at all.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{../EDA/missingness_top15.png}
 \caption{Top fields by missingness rate in the frozen open-market ABT. Lot area dominated because it was structurally absent in open-market listings rather than randomly missing.}
