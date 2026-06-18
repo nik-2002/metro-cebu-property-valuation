@@ -6,25 +6,27 @@ This chapter covers the CRISP-DM data understanding phase for the frozen analyti
 
 The frozen open-market ABT had 3{,}616 rows and 51 columns. It collected open-market residential listings from several online property portals into one file.
 
-Table~\ref{tab:abt-source-composition} shows the source mix. Lamudi was the largest contributor, through a bulk scraper and a later browser-based batch that recovered listings after the site added an anti-bot wall. FilipinoHomes and DotProperty widened the coverage and reduced dependence on any single portal.
+Table~\ref{tab:abt-source-composition} traces each portal from raw scrape to the rows retained in the final ABT. Lamudi was the largest contributor, through a bulk scraper and a later browser-based batch that recovered listings after the site added an anti-bot wall. FilipinoHomes and DotProperty widened the coverage and reduced dependence on any single portal. A fourth portal, OnePropertee, was scraped but excluded entirely after its records were found to contaminate the model, so it appears here only as raw volume.
 
 \begin{table}[htbp]
-\caption{Open-Market ABT Composition by Source}
+\caption{Open-Market Collection Funnel and Composition by Source}
 \label{tab:abt-source-composition}
 \begin{center}
-\begin{tabular}{L{0.30\textwidth} L{0.12\textwidth} L{0.11\textwidth} L{0.27\textwidth}}
+\begin{tabular}{L{0.27\textwidth} L{0.16\textwidth} L{0.17\textwidth} L{0.11\textwidth}}
 \toprule
-Source & Rows & Share & Role in ABT \\
+Source & Raw scraped & Retained in ABT & Share \\
 \midrule
-Lamudi (bulk) & 1{,}578 & 43.6\% & Arm's-length asking-price listings \\
-FilipinoHomes & 1{,}203 & 33.3\% & Listings with precise embedded coordinates \\
-DotProperty & 565 & 15.6\% & Listings geocoded from barangay text \\
-Lamudi (browser batch) & 270 & 7.5\% & Anti-bot recovery batch \\
+Lamudi (bulk) & 4{,}477 & 1{,}578 & 43.6\% \\
+Lamudi (browser) & 665 & 270 & 7.5\% \\
+FilipinoHomes & 3{,}894 & 1{,}203 & 33.3\% \\
+DotProperty & 3{,}721 & 565 & 15.6\% \\
+OnePropertee & 3{,}804 & --- & --- \\
 \midrule
-Total & 3{,}616 & 100.0\% & Frozen open-market ABT \\
+Total & 16{,}561 & 3{,}616 & 100.0\% \\
 \bottomrule
 \end{tabular}
 \end{center}
+\textit{Note.} Retained counts are listings that survived geocoding, the six-LGU and residential filters, distressed-listing removal, the price-per-square-meter sanity band, deduplication, and the spatial cap. The browser-batch figure counts net-new listings after deduplication against the existing ABT. OnePropertee was excluded after its city-centroid geocoding and mis-extracted per-square-meter prices were found to contaminate the model.
 \end{table}
 
 The ABT covered six LGUs: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed as a CBD distance anchor but was not a training LGU. Cebu City and Lapu-Lapu City together held the largest share of rows, reflecting the concentration of online residential listings in the core and island submarkets.
