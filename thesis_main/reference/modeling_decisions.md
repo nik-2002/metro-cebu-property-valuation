@@ -2407,3 +2407,21 @@ multipliers (2.2× Cebu City → 4.8× Mandaue, lots) against valuation_gap_summ
 **Note for a later pass.** Webapp screenshots are landscape at text-width → render small on portrait pages; option to rotate to landscape pages or crop to key panels if desired.
 
 **Next decision number: 58.**
+
+## Decision 58 — Review round 2: float placement, page-layout cleanup, extra assets (2026-06-19)
+
+**Context.** A second batch of adviser/author comments after the visual round (D57). Two prior layout fixes interacted badly: the per-chapter `\clearpage` (D57) plus pinning all floats `[H]` (also D57) produced large mid-page gaps where tables/figures could not pack. The author also flagged the enlarged webapp screenshots spilling into the right margin and breaking reading cadence, and asked for a couple of extra assets and the appendix asterisk fix.
+
+**Decisions / fixes.**
+1. **Appendix heading asterisk.** The stray `*` under each appendix title came from `\section*` (starred) in apa7 appendix mode. Switched to unstarred `\section{Title}` (apa7 auto-prints "Appendix A"–"Appendix F"); lettered float numbering (Table A1, Figure E1) preserved, body "Appendix A/C/D/E/F" references still match the A–F order.
+2. **Webapp screenshots.** Reverted from `1.13\textwidth` (spilled the right margin) back to `\textwidth`, and MOVED them out of the Ch3 Deliverables subsection into a new **Appendix F: Web Application Screenshots** at the end (they were eating ~3 half-empty pages mid-method and breaking cadence). Ch3 now points to "Appendix F (Pictures 1–3)."
+3. **Table/figure packing.** Reverted body-chapter floats `[H]` → `[htbp]` so LaTeX packs sequential tables instead of forcing each in place. Verified by rendering: Table 9 ("Performance Metrics") had been alone atop a page with ~60% empty below; now Tables 9–10 pack onto consecutive full pages. Appendix floats stay `[H]` (order matters, end-of-doc gaps fine). `\raggedbottom` retained.
+4. **Orphan-rule pages.** Removed the trailing `\rule` section-divider at the END of chapters 1/2/3/6 — redundant before a chapter break, and one had stranded a near-blank rule-only page (old body p10). No orphan-rule pages remain; the in-body `\rule` dividers between subsections are kept.
+5. **ABT snapshot (D57 follow-through, also this round).** Added a spreadsheet-style ABT slice image (Figure A1, 12 of 51 cols) to Appendix A via `Scripts/generate_abt_snapshot_image.py`.
+6. **OLS diagnostic plots → new Appendix E.** Answered the author's question: the heteroscedasticity (OLS residuals-vs-fitted) and multicollinearity (VIF) plots EXISTED in `EDA/plots/{06_ols_residuals,05_multicollinearity}` but were never shown in the manuscript. Added Appendix E with residuals-vs-fitted ×3 + VIF ×3. (The "heterogeneity" across-group price plots are already in Ch4.)
+
+**Asset scripts (reproducible, in `Scripts/`):** `generate_manuscript_maps.py`, `generate_shap_bars.py`, `generate_feature_snapshots.py`, `generate_abt_snapshot_image.py`. Appendices now A–F. Manuscript settled at 127 pp; builds clean, 0 undefined, only 2 pre-existing minor table-width overfulls. Remaining sparse pages are legitimate (full-figure pages; chapter-end short pages from the start-on-new-page rule).
+
+**Verification method note.** Pages were checked by rendering to PNG (`pdftoppm`) and viewing — text-only inspection cannot catch layout gaps. Keep doing this for any layout-affecting change.
+
+**Next decision number: 59.**
