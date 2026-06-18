@@ -4,7 +4,7 @@ This chapter covers the CRISP-DM data understanding phase for the frozen analyti
 
 \subsection{\texorpdfstring{\textbf{Initial Data Collection}}{Initial Data Collection}}\label{initial-data-collection}
 
-The frozen open-market ABT had 3{,}616 rows and 51 columns. It collected open-market residential listings from several online property portals into one file.
+The frozen open-market ABT had 3{,}616 rows and 51 columns, assembled from several online property portals into one file. This chapter describes that full assembled table. Not every row could serve as a training example: of the 3{,}616 rows, 3{,}372 met the modeling requirements and were used to fit the three stratified models. The remaining 244 rows are clean but lack a value the models require, either a computable target or the spatial-lag neighbor feature, and Chapter 5 details how they were filtered before fitting.
 
 Table~\ref{tab:abt-source-composition} traces each portal from raw scrape to the rows retained in the final ABT. Lamudi was the largest contributor, through a bulk scraper and a later browser-based batch that recovered listings after the site added an anti-bot wall. FilipinoHomes and DotProperty widened the coverage and reduced dependence on any single portal. A fourth portal, OnePropertee, was scraped but excluded entirely after its records were found to contaminate the model, so it appears here only as raw volume.
 
