@@ -26,7 +26,7 @@ The remaining model-requirement filters were tied to the target and the spatial-
 
 The modeling-ready data was split into three strata for separate model fitting, because condominiums, houses, and vacant lots are priced on very different per-square-meter logics. Table~\ref{tab:chapter5-strata-split} shows the resulting sizes.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Open-Market ABT Split into Modeling Strata}
 \label{tab:chapter5-strata-split}
 \begin{center}
@@ -81,7 +81,7 @@ As described in Chapters 3 and 6, the feature set was then trimmed per stratum f
 
 The final preparation step converted each stratum into model matrices. City and property type were one-hot encoded with \emph{drop\_first = True}. After encoding and numeric-null handling, the retained feature counts were 21 for condominiums, 24 for houses, and 22 for vacant lots, as summarized in Table~\ref{tab:chapter5-final-matrix}. Instead of a single train-test split, model quality was estimated with five-fold grouped cross-validation by coordinate cluster, so that co-located listings could not leak across folds.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Final Modeling-Ready Matrices by Stratum}
 \label{tab:chapter5-final-matrix}
 \begin{center}

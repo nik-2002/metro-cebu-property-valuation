@@ -6,7 +6,7 @@ This study used a quantitative, non-experimental design to model residential pro
 
 Rather than fitting one model across all property types, the study estimated three separate models, one for each property stratum: condominiums, houses, and vacant lots. This stratified design responded directly to a problem identified during the earlier defense: a single model trained on mixed property types must reconcile price-per-square-meter levels that differ several times over. Vertical condominium space, built houses, and bare land are priced on different logics, and pooling them inflates error and blurs interpretation. The hedonic literature supports this choice, finding that housing markets are segmented by the sorting of heterogeneous households and that stratified models fit better than pooled ones \parencite{droes2019,usman2020}. Splitting the data by property type let each model learn the value structure of its own market segment. The strata sizes are shown in Table~\ref{tab:chapter3-strata}.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Open-Market Modeling Strata}
 \label{tab:chapter3-strata}
 \begin{center}
@@ -39,7 +39,7 @@ Within each stratum, three supervised learning approaches were compared in order
 
 Because direct deed-of-sale transaction records are not publicly accessible in the Philippines, the study used open-market online listings as the closest available proxy for current residential prices. Listings represent asking prices rather than settled transactions, but at scale they capture pricing patterns that are often missing from sparse official records \parencite{sousa2024}. To widen coverage and reduce dependence on any single platform's inventory, listings were collected from several property portals rather than one site. Table~\ref{tab:chapter3-data-sources} summarizes the data sources and their roles.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Summary of Data Sources Used in the Thesis Workflow}
 \label{tab:chapter3-data-sources}
 \begin{center}
@@ -100,7 +100,7 @@ Licensed real estate brokers from the CPRE network were included as a validation
 
 The data preparation process proceeded through the stages summarized in Figure~\ref{fig:data-pipeline} and described below, implemented in Python.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
   font=\footnotesize,
@@ -143,7 +143,7 @@ The data preparation process proceeded through the stages summarized in Figure~\
 
 \subsection{\texorpdfstring{\textbf{Feature Engineering}}{Feature Engineering}}\label{feature-engineering}
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Feature Categories Used in the Thesis Workflow}
 \label{tab:chapter3-feature-categories}
 \begin{center}
@@ -182,7 +182,7 @@ MCRAI_{ic} = \sum_{j \in c} \frac{1}{\max(d_{ij}, 0.5)^{\beta}}, \qquad \beta = 
 
 where \(d_{ij}\) is the road-network distance in kilometers from property \(i\) to amenity \(j\), floored at 0.5 km to prevent singular values for immediately adjacent points. Each category was evaluated only within its designated search radius \(r_c\), reflecting the fact that some amenities operate at neighborhood scale while others serve wider urban catchments.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{MCRAI Categories and Search Radii}
 \label{tab:chapter3-mcrai-radii}
 \begin{center}
@@ -213,7 +213,7 @@ The \emph{mcrai\_*} component scores were available individually, and a separate
 
 \subsection{\texorpdfstring{\textbf{Pre-processing}}{Pre-processing}}\label{pre-processing}
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Pre-processing Steps Applied to the Modeling Subset}
 \label{tab:chapter3-preprocessing}
 \begin{center}
@@ -270,7 +270,7 @@ For the tree-based models, a parameter grid was searched under the same grouped 
 
 The headline metrics were the median absolute percentage error (MdAPE) and the share of predictions within 20 percent of the actual price (PE20), because they describe how the model does for a typical property and resist distortion from a small number of extreme misses. Mean absolute percentage error (MAPE), the coefficient of dispersion (COD), and the price-related differential (PRD) were retained as supporting diagnostics, with COD and PRD reported in the spirit of assessment ratio studies. The study does not claim compliance with IAAO ratio-study standards; those thresholds are used only as context.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Performance Metrics Used in Model Evaluation}
 \label{tab:chapter3-performance-metrics}
 \begin{center}
@@ -290,7 +290,7 @@ Metric & Description & Purpose \\
 
 \subsubsection{\texorpdfstring{\textbf{Benchmark Studies Used for Later Comparison}}{Benchmark Studies Used for Later Comparison}}\label{benchmark-targets}
 
-\begin{table}[H]
+\begin{table}[htbp]
 \caption{Benchmark Studies Used to Contextualize Later Evaluation Results}
 \label{tab:chapter3-benchmark-studies}
 \begin{center}
@@ -330,27 +330,5 @@ The main applied output of the study was a prototype web-based decision-support 
 \item \textbf{Supporting Locational Layers}: CBD-node, road-network, and amenity-accessibility context used to interpret the price surface geographically.
 \end{enumerate}
 
-The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers. Given the model's remaining error, the application is intended as a prototype for inspection and triangulation rather than a production valuation system. Pictures~\ref{pic:market}--\ref{pic:predictor} show its three views.
+The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers. Given the model's remaining error, the application is intended as a prototype for inspection and triangulation rather than a production valuation system. Appendix~F (Pictures~\ref{pic:market}--\ref{pic:predictor}) shows its three views.
 
-\begin{ccpic}[H]
-\centering
-\includegraphics[width=1.13\textwidth]{diagrams/webapp_market_map.png}
-\caption{Prototype web application, Market Map view: open-market listings with filters and market-intelligence summaries.}
-\label{pic:market}
-\end{ccpic}
-
-\begin{ccpic}[H]
-\centering
-\includegraphics[width=1.13\textwidth]{diagrams/webapp_price_surface.png}
-\caption{Prototype web application, Price Surface view: the predicted price-per-square-meter surface aggregated by barangay.}
-\label{pic:surface}
-\end{ccpic}
-
-\begin{ccpic}[H]
-\centering
-\includegraphics[width=1.13\textwidth]{diagrams/webapp_predictor.png}
-\caption{Prototype web application, Property Predictor view: a property-level prediction with its SHAP contribution breakdown.}
-\label{pic:predictor}
-\end{ccpic}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

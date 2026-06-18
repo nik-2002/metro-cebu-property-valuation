@@ -161,3 +161,29 @@ Variance inflation factors above the conventional thresholds (5 to 10) flag pred
 \caption{Variance inflation factors, vacant-lot stratum.}
 \label{fig:vif-lot}
 \end{figure}
+
+\clearpage
+\section{Web Application Screenshots}
+
+The prototype web-based decision-support application has three views, captured below. The backend runs the exact deployed Random Forest models, so the Property Predictor view shows a live prediction with its SHAP contribution breakdown.
+
+\begin{ccpic}[H]
+\centering
+\includegraphics[width=\textwidth]{diagrams/webapp_market_map.png}
+\caption{Prototype web application, Market Map view: open-market listings with filters and market-intelligence summaries.}
+\label{pic:market}
+\end{ccpic}
+
+\begin{ccpic}[H]
+\centering
+\includegraphics[width=\textwidth]{diagrams/webapp_price_surface.png}
+\caption{Prototype web application, Price Surface view: the predicted price-per-square-meter surface aggregated by barangay.}
+\label{pic:surface}
+\end{ccpic}
+
+\begin{ccpic}[H]
+\centering
+\includegraphics[width=\textwidth]{diagrams/webapp_predictor.png}
+\caption{Prototype web application, Property Predictor view: a property-level prediction with its SHAP contribution breakdown.}
+\label{pic:predictor}
+\end{ccpic}
