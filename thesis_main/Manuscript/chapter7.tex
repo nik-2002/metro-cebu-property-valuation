@@ -65,6 +65,7 @@ Vacant Lot & 51.5 & 42.3 & \textbf{38.6} \\
 \bottomrule
 \end{tabular}
 \end{center}
+\footnotesize{The + Geospatial tier adds the full geospatial set (all node distances, all MCRAI categories, and the spatial lag). The deployed models use the per-stratum trimmed feature sets described in Chapter 6, so their MdAPE differs slightly from this column (Table~\ref{tab:model-comparison}).}
 \end{table}
 
 Compared with a structural-only model, the full geospatial set improved every stratum: condominiums by about 5.7 points, houses by about 4.2 points, and vacant lots by about 13.0 points. The decomposition is more revealing. When the engineered geospatial features were added \emph{on top of} administrative location, they carried a clear additional gain for condominiums (about 3.7 points) and vacant lots (about 3.8 points), but added essentially nothing for houses (about $-0.7$ points, a slight worsening). For houses, knowing the city and the BIR zonal value already captured most of the location signal, and the custom geospatial features mostly duplicated it. The reading is that the model's engineered features add the most value precisely where administrative benchmarks are weakest, which is vertical condominiums and bare lots.
