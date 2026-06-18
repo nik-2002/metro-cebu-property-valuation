@@ -330,6 +330,27 @@ The main applied output of the study was a prototype web-based decision-support 
 \item \textbf{Supporting Locational Layers}: CBD-node, road-network, and amenity-accessibility context used to interpret the price surface geographically.
 \end{enumerate}
 
-The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers. Given the model's remaining error, the application is intended as a prototype for inspection and triangulation rather than a production valuation system.
+The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers. Given the model's remaining error, the application is intended as a prototype for inspection and triangulation rather than a production valuation system. Pictures~\ref{pic:market}--\ref{pic:predictor} show its three views.
+
+\begin{ccpic}[htbp]
+\centering
+\includegraphics[width=\textwidth]{diagrams/webapp_market_map.png}
+\caption{Prototype web application, Market Map view: open-market listings with filters and market-intelligence summaries.}
+\label{pic:market}
+\end{ccpic}
+
+\begin{ccpic}[htbp]
+\centering
+\includegraphics[width=\textwidth]{diagrams/webapp_price_surface.png}
+\caption{Prototype web application, Price Surface view: the predicted price-per-square-meter surface aggregated by barangay.}
+\label{pic:surface}
+\end{ccpic}
+
+\begin{ccpic}[htbp]
+\centering
+\includegraphics[width=\textwidth]{diagrams/webapp_predictor.png}
+\caption{Prototype web application, Property Predictor view: a property-level prediction with its SHAP contribution breakdown.}
+\label{pic:predictor}
+\end{ccpic}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
