@@ -29,7 +29,14 @@ Total & 16{,}561 & 3{,}616 & 100.0\% \\
 \textit{Note.} Retained counts are listings that survived geocoding, the six-LGU and residential filters, distressed-listing removal, the price-per-square-meter sanity band, deduplication, and the spatial cap. The browser-batch figure counts net-new listings after deduplication against the existing ABT. OnePropertee was excluded after its city-centroid geocoding and mis-extracted per-square-meter prices were found to contaminate the model.
 \end{table}
 
-The ABT covered six LGUs: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed as a CBD distance anchor but was not a training LGU. Cebu City and Lapu-Lapu City together held the largest share of rows, reflecting the concentration of online residential listings in the core and island submarkets.
+The ABT covered six LGUs: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed as a CBD distance anchor but was not a training LGU. Cebu City and Lapu-Lapu City together held the largest share of rows, reflecting the concentration of online residential listings in the core and island submarkets. Map~\ref{map:lgu} shows the boundaries of the six study LGUs.
+
+\begin{ccmap}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth]{diagrams/lgu_boundaries.png}
+\caption{The six study LGUs of Metro Cebu.}
+\label{map:lgu}
+\end{ccmap}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -101,7 +108,14 @@ Apartment & 2 & 0.1\% & PHP~160{,}363 \\
 \label{fig:price-by-property-type}
 \end{figure}
 
-Geographic spread in the open-market subset was uneven. Cebu City had the highest median unit price at about PHP~113{,}600 per square meter, followed by Mandaue City at about PHP~96{,}100 and Lapu-Lapu City at about PHP~92{,}100. Talisay City, Minglanilla, and Consolacion formed a lower-price band, with medians between about PHP~47{,}100 and PHP~56{,}800 per square meter. The premium open-market signal therefore stayed concentrated in the core and island submarkets rather than the peripheral suburban LGUs. The CBD-distance matrix also showed that several southern-corridor distances moved together closely, an early warning that the linear baseline would later need a collinearity check even though the nodes remained substantively meaningful.
+Geographic spread in the open-market subset was uneven. Cebu City had the highest median unit price at about PHP~113{,}600 per square meter, followed by Mandaue City at about PHP~96{,}100 and Lapu-Lapu City at about PHP~92{,}100. Talisay City, Minglanilla, and Consolacion formed a lower-price band, with medians between about PHP~47{,}100 and PHP~56{,}800 per square meter. The premium open-market signal therefore stayed concentrated in the core and island submarkets rather than the peripheral suburban LGUs. The CBD-distance matrix also showed that several southern-corridor distances moved together closely, an early warning that the linear baseline would later need a collinearity check even though the nodes remained substantively meaningful. Map~\ref{map:properties} shows how the listings were distributed across the study area by stratum.
+
+\begin{ccmap}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{diagrams/properties_by_stratum.png}
+\caption{Open-market listings across Metro Cebu, colored by modeling stratum.}
+\label{map:properties}
+\end{ccmap}
 
 \begin{figure}[htbp]
 \centering
