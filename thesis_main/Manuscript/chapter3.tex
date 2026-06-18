@@ -320,7 +320,7 @@ This kept the model interpretable enough to work as a support tool rather than a
 
 \subsubsection{\texorpdfstring{\textbf{Web Decision-Support Application}}{Web Decision-Support Application}}\label{web-application}
 
-The main applied output of the study was a web-based decision-support application that organized model results across Metro Cebu. Rather than presenting results only as tables or summary statistics, the application was designed to show how predicted values, valuation-gap diagnostics, and locational patterns were distributed across the study area:
+The main applied output of the study was a prototype web-based decision-support application that organized model results across Metro Cebu. Rather than presenting results only as tables or summary statistics, the application was designed to show how predicted values, valuation-gap diagnostics, and locational patterns were distributed across the study area:
 
 \begin{enumerate}
 \item \textbf{Predicted Price Layers}: Point or surface outputs summarizing predicted open-market residential values across Metro Cebu.
@@ -328,6 +328,6 @@ The main applied output of the study was a web-based decision-support applicatio
 \item \textbf{Supporting Locational Layers}: CBD-node, road-network, and amenity-accessibility context used to interpret the price surface geographically.
 \end{enumerate}
 
-The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers.
+The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers. Given the model's remaining error, the application is intended as a prototype for inspection and triangulation rather than a production valuation system.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

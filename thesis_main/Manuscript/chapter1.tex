@@ -70,7 +70,7 @@ Addressing this fragmented evidence problem benefits multiple stakeholders:
 \begin{enumerate}
 \item \textbf{Real Estate Brokers and Appraisers}: Provides an additional evidence layer for comparing local market knowledge against structured property, location, and benchmark data. SHAP-based explainability and a web interface can help make the model's reasoning easier to inspect during professional review.
 \item \textbf{Property Sellers, Buyers, and Investors}: Provides a transparent reference for interpreting whether an asking price appears high, low, or typical relative to observable market-facing evidence. It does not determine the final selling price, but it can make the starting point for discussion more evidence-based.
-\item \textbf{Banks and Lending Institutions}: Provides supplemental spatial and market-facing evidence that can be compared with collateral-oriented valuation outputs, especially where location and surrounding market conditions materially affect price.
+\item \textbf{Banks and Lending Institutions}: Offers market-facing spatial evidence on how location and surrounding market conditions relate to residential price, which complements rather than substitutes for collateral-oriented valuation.
 \item \textbf{Local Government Units (LGUs)}: Maps the divergence between market-facing asking-price evidence and administrative benchmarks, which can help identify where benchmark schedules may require closer review.
 \end{enumerate}
 
@@ -95,7 +95,7 @@ The study drew on open-market residential listings from several online property 
 
 The study evaluated three predictive models: \textbf{Hedonic Regression (OLS)}, \textbf{Random Forest}, and \textbf{XGBoost} (see Section 1.6 for rationale). To respect the very different price-per-square-meter logics of different property types, the models were fitted separately for condominiums, houses, and vacant lots. Geospatial features were engineered through geocoding, road-network distance, MCRAI scoring, and spatial lag computation. The fitted models were trained on open-market residential listings so that the deployed output stayed aligned with market-facing asking-price evidence.
 
-The study produced an applied deliverable: a web application combining an open-market residential price surface with property-level prediction and explanation.
+The study produced an applied deliverable: a prototype web application combining an open-market residential price surface with property-level prediction and explanation. Because the model still carries substantial error for some property types, the application is presented as a prototype for triangulation rather than a tool for confident stand-alone valuation.
 
 \subsubsection{\texorpdfstring{\textbf{Limitations}}{Limitations}}\label{limitations}
 
