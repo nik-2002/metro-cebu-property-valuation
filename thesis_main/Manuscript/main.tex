@@ -21,6 +21,10 @@
 \usepackage{float}
 \newfloat{ccmap}{htbp}{lom}\floatname{ccmap}{Map}
 \newfloat{ccpic}{htbp}{lop}\floatname{ccpic}{Picture}
+% Match APA figure-caption style for the custom Map/Picture floats:
+% bold label on its own line, italic caption text.
+\captionsetup[ccmap]{labelfont=bf,labelsep=newline,font=it,justification=raggedright,singlelinecheck=false}
+\captionsetup[ccpic]{labelfont=bf,labelsep=newline,font=it,justification=raggedright,singlelinecheck=false}
 % Flush-left (ragged-right) fixed-width column type for tables, to match the APA flush-left body
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \geometry{left=1.5in,right=1in,top=1in,bottom=1in}

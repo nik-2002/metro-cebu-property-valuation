@@ -148,7 +148,8 @@ def map_properties():
 
 
 if __name__ == "__main__":
-    map_study_area()
+    # map_study_area() retired: the manuscript study-area map is node-free
+    # (lgu_boundaries.png); CBD nodes were dropped per author review.
     map_lgu_boundaries()
     map_properties()
     print("done ->", OUT)
