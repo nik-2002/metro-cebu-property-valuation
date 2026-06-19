@@ -13,14 +13,14 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
-# ---- deck palette ----
-BG      = "#FAF8F4"
-INK     = "#1A1A1A"
-MUTED   = "#9A968C"
-ACCENT  = "#2F5D50"   # deep green
-ACCENT2 = "#7FA99B"   # mid green
-ACCENT3 = "#CFE0D8"   # light green tint
-RED     = "#B4543F"   # excluded / reference
+# ---- deck palette (cool / neutral) ----
+BG      = "#FAFBFC"
+INK     = "#1E2530"
+MUTED   = "#8A92A0"
+ACCENT  = "#33455E"   # deep slate blue
+ACCENT2 = "#6B89A8"   # steel blue
+ACCENT3 = "#C5D2DF"   # light cool blue-grey
+RED     = "#A86B6B"   # muted dusty rose — excluded / reference only
 
 plt.rcParams.update({
     "figure.facecolor": BG, "axes.facecolor": BG, "savefig.facecolor": BG,
@@ -180,12 +180,12 @@ def mcrai_catchment():
     import matplotlib.patches as mp
     # (radius_km, label, color)
     rings = [
-        (1.0, "Retail density", "#B4543F"),
-        (1.5, "Recreation",     "#C9962F"),
-        (2.0, "Grocery · Health · Security", "#2F5D50"),
-        (2.5, "Education",      "#3E7CB1"),
-        (3.0, "Tourism",        "#7A6FAF"),
-        (5.0, "Hospitals",      "#6B6B66"),
+        (1.0, "Retail density", "#33455E"),
+        (1.5, "Recreation",     "#46627F"),
+        (2.0, "Grocery · Health · Security", "#5B7A99"),
+        (2.5, "Education",      "#7592AE"),
+        (3.0, "Tourism",        "#93AAC2"),
+        (5.0, "Hospitals",      "#A9B8C8"),
     ]
     fig, ax = plt.subplots(figsize=(10.6, 7.0))
     ax.set_aspect("equal")
@@ -196,8 +196,8 @@ def mcrai_catchment():
                 bbox=dict(boxstyle="round,pad=0.18", fc=BG, ec="none", alpha=.9))
     # amenity dots within each ring
     import math
-    pts = {0.7:("#B4543F",4), 1.2:("#C9962F",3), 1.6:("#2F5D50",5), 2.2:("#3E7CB1",3),
-           2.7:("#7A6FAF",2), 4.2:("#6B6B66",2)}
+    pts = {0.7:("#33455E",4), 1.2:("#46627F",3), 1.6:("#5B7A99",5), 2.2:("#7592AE",3),
+           2.7:("#93AAC2",2), 4.2:("#A9B8C8",2)}
     ang0 = 0.6
     for k,(rr,(col,n)) in enumerate(pts.items()):
         for j in range(n):
@@ -252,6 +252,90 @@ def abt_snapshot_wide():
     print("wrote abt_snapshot_wide.png  (18 of 51 cols)")
 
 
+# ============================================================ 7. MODEL COMPARISON (MdAPE)
+def model_comparison():
+    # from model_comparison_stratified.csv (MdAPE), verified
+    strata = ["Condominium", "Houses", "Vacant Lot"]
+    ols = [25.77, 24.32, 30.37]
+    rf  = [15.92, 24.27, 23.34]   # in-fold comparison table values
+    xgb = [15.89, 24.32, 29.39]
+    x = range(len(strata)); w = 0.26
+    fig, ax = plt.subplots(figsize=(11, 6.2))
+    b1 = ax.bar([i - w for i in x], ols, w, color=ACCENT3, label="OLS (hedonic baseline)")
+    b2 = ax.bar(list(x),            rf,  w, color=ACCENT,  label="Random Forest (deployed)")
+    b3 = ax.bar([i + w for i in x], xgb, w, color=ACCENT2, label="XGBoost")
+    for bars in (b1, b2, b3):
+        for b in bars:
+            ax.text(b.get_x()+b.get_width()/2, b.get_height()+0.5, f"{b.get_height():.1f}",
+                    ha="center", va="bottom", fontsize=11, color=INK)
+    ax.set_xticks(list(x)); ax.set_xticklabels(strata, fontsize=14)
+    ax.set_ylabel("MdAPE  (%, lower is better)", fontsize=12); ax.set_ylim(0, 36)
+    ax.legend(loc="upper left", frameon=False, fontsize=11.5)
+    ax.set_title("Tree models beat the linear baseline in every stratum",
+                 fontsize=17, fontweight="bold", color=ACCENT, loc="left", pad=14)
+    style_ax(ax)
+    fig.tight_layout(); fig.savefig(os.path.join(OUT, "model_comparison.png"), dpi=150); plt.close(fig)
+    print("wrote model_comparison.png")
+
+
+# ============================================================ 8. MCRAI WEIGHTING (two-stage)
+def mcrai_weighting():
+    import matplotlib.patches as mp
+    fig, ax = plt.subplots(figsize=(11.5, 6.0)); ax.axis("off")
+    ax.set_xlim(0, 100); ax.set_ylim(0, 100)
+    def card(x, y, w, h, title, lines, fc=BG, ec=ACCENT):
+        ax.add_patch(mp.FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.6,rounding_size=2",
+                     fc=fc, ec=ec, lw=1.6))
+        ax.text(x+w/2, y+h-5, title, ha="center", va="top", fontsize=11.5, fontweight="bold", color=ACCENT, linespacing=1.3)
+        ax.text(x+w/2, y+h-17, lines, ha="center", va="top", fontsize=10.3, color=INK, linespacing=1.5)
+    card(2, 30, 27, 46, "STAGE 1\nLet the market speak",
+         "Fit a regression using each\namenity category on its own.\n\nWhich categories actually\nraise price?  (the sign tells us)")
+    card(36.5, 30, 27, 46, "Keep the positives",
+         "Education  ↑\nGrocery  ↑\nRecreation  ↑\n\nSecurity, tourism, retail →\nnegative / mixed → not in\nthe composite", fc="#EEF2F6")
+    card(71, 30, 27, 46, "STAGE 2\nTurn strength into weights",
+         "Normalize the positive\ncoefficients so they sum to 1:\n\nEducation   0.447\nGrocery      0.345\nRecreation  0.222", fc=BG, ec=ACCENT)
+    for x0 in (29.4, 63.8):
+        ax.annotate("", xy=(x0+6.6, 53), xytext=(x0, 53),
+                    arrowprops=dict(arrowstyle="-|>", color=ACCENT, lw=2.2))
+    ax.text(50, 20, "The weights are derived from Cebu's own market behavior — not assumed.",
+            ha="center", fontsize=12, color=ACCENT, fontstyle="italic", fontweight="bold")
+    fig.tight_layout(); fig.savefig(os.path.join(OUT, "mcrai_weighting.png"), dpi=150); plt.close(fig)
+    print("wrote mcrai_weighting.png")
+
+
+# ============================================================ 9. FEATURE SELECTION FUNNEL
+def feature_selection():
+    import matplotlib.patches as mp
+    fig, ax = plt.subplots(figsize=(11.5, 6.0)); ax.axis("off")
+    ax.set_xlim(0, 100); ax.set_ylim(0, 100)
+    # pool
+    ax.add_patch(mp.FancyBboxPatch((6, 64), 88, 22, boxstyle="round,pad=0.6,rounding_size=2",
+                 fc="#EEF2F6", ec=ACCENT, lw=1.6))
+    ax.text(50, 80, "Full feature pool", ha="center", fontsize=13, fontweight="bold", color=ACCENT)
+    ax.text(50, 71, "structural · 8 CBD distances · 8 MCRAI categories + composite · BIR zonal · spatial lag · city dummies",
+            ha="center", fontsize=10, color=INK)
+    # screens
+    screens = ["Variance Inflation\n(drop collinear)", "OLS significance\n(keep what matters)",
+               "Leave-one-block\nablation", "MCRAI zero rates\n(drop empty categories)"]
+    bw = 21; gap = 2.0; x0 = 6
+    for i, sc in enumerate(screens):
+        x = x0 + i*(bw+gap)
+        ax.add_patch(mp.FancyBboxPatch((x, 40), bw, 14, boxstyle="round,pad=0.5,rounding_size=2",
+                     fc=BG, ec=ACCENT2, lw=1.4))
+        ax.text(x+bw/2, 47, sc, ha="center", va="center", fontsize=9.6, color=INK, linespacing=1.4)
+    ax.annotate("", xy=(50, 55), xytext=(50, 63), arrowprops=dict(arrowstyle="-|>", color=ACCENT, lw=2.2))
+    ax.annotate("", xy=(50, 31), xytext=(50, 39), arrowprops=dict(arrowstyle="-|>", color=ACCENT, lw=2.2))
+    # three sets
+    sets = [("Condominium", "21 features", 9), ("Houses", "24 features", 39.5), ("Vacant Lot", "22 features", 70)]
+    for name, cnt, x in sets:
+        ax.add_patch(mp.FancyBboxPatch((x, 8), 21, 18, boxstyle="round,pad=0.5,rounding_size=2",
+                     fc=ACCENT, ec=ACCENT, lw=0))
+        ax.text(x+10.5, 19, name, ha="center", fontsize=11.5, fontweight="bold", color="white")
+        ax.text(x+10.5, 12.5, cnt, ha="center", fontsize=11, color="#C5D2DF")
+    fig.tight_layout(); fig.savefig(os.path.join(OUT, "feature_selection.png"), dpi=150); plt.close(fig)
+    print("wrote feature_selection.png")
+
+
 if __name__ == "__main__":
     funnel()
     ablation()
@@ -259,4 +343,7 @@ if __name__ == "__main__":
     listings_by_lgu()
     mcrai_catchment()
     abt_snapshot_wide()
+    model_comparison()
+    mcrai_weighting()
+    feature_selection()
     print("OUT:", OUT)
