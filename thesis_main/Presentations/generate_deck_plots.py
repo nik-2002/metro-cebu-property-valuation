@@ -254,11 +254,12 @@ def abt_snapshot_wide():
 
 # ============================================================ 7. MODEL COMPARISON (MdAPE)
 def model_comparison():
-    # from model_comparison_stratified.csv (MdAPE), verified
+    # from model_comparison_groupcv.csv (MdAPE) — leak-free GroupKFold(5), all three
+    # models on identical folds. RF matches the deployment manifest exactly.
     strata = ["Condominium", "Houses", "Vacant Lot"]
-    ols = [25.77, 24.32, 30.37]
-    rf  = [15.92, 24.27, 23.34]   # in-fold comparison table values
-    xgb = [15.89, 24.32, 29.39]
+    ols = [24.47, 25.06, 44.79]
+    rf  = [19.32, 22.67, 38.36]   # == deployment_manifest.json metrics_group_cv
+    xgb = [19.81, 23.64, 40.22]
     x = range(len(strata)); w = 0.26
     fig, ax = plt.subplots(figsize=(11, 6.2))
     b1 = ax.bar([i - w for i in x], ols, w, color=ACCENT3, label="OLS (hedonic baseline)")
@@ -269,7 +270,7 @@ def model_comparison():
             ax.text(b.get_x()+b.get_width()/2, b.get_height()+0.5, f"{b.get_height():.1f}",
                     ha="center", va="bottom", fontsize=11, color=INK)
     ax.set_xticks(list(x)); ax.set_xticklabels(strata, fontsize=14)
-    ax.set_ylabel("MdAPE  (%, lower is better)", fontsize=12); ax.set_ylim(0, 36)
+    ax.set_ylabel("MdAPE  (%, lower is better)", fontsize=12); ax.set_ylim(0, 50)
     ax.legend(loc="upper left", frameon=False, fontsize=11.5)
     ax.set_title("Tree models beat the linear baseline in every stratum",
                  fontsize=17, fontweight="bold", color=ACCENT, loc="left", pad=14)
@@ -336,6 +337,63 @@ def feature_selection():
     print("wrote feature_selection.png")
 
 
+# ============================================================ 10. DATA PIPELINE (6 stages)
+def pipeline_flow():
+    import matplotlib.patches as mp
+    fig, ax = plt.subplots(figsize=(13.0, 4.6)); ax.axis("off")
+    ax.set_xlim(0, 100); ax.set_ylim(18, 100)
+
+    stages = [
+        ("1 · Ingest",
+         "16,561 raw listings\nscraped across\nfour portals\n(five batches)"),
+        ("2 · Clean & filter",
+         "drop distressed /\n“For Assume” · de-dup ·\nprice-per-sqm band ·\nresidential + 6 LGUs ·\nOnePropertee excluded"),
+        ("3 · Geocode",
+         "Google Maps API\n→ coordinates\n(FilipinoHomes\narrived geocoded)"),
+        ("4 · BIR join",
+         "spatial join to BIR\nzonal-value areas\n→ benchmark\ncolumn"),
+        ("5 · Geospatial\nfeatures",
+         "osmnx road-network\ndistance to 8 nodes ·\nMCRAI access ·\n500 m spatial lag"),
+        ("6 · ABT",
+         "3,616 open-market\nrecords\n× 51 columns"),
+    ]
+    n = len(stages); w = 14.3; gap = 2.0; x0 = 2.0; ytop = 52; h = 44
+    for i, (title, body) in enumerate(stages):
+        x = x0 + i * (w + gap)
+        last = (i == n - 1)
+        fc = ACCENT if last else BG
+        ax.add_patch(mp.FancyBboxPatch((x, ytop), w, h, boxstyle="round,pad=0.5,rounding_size=2",
+                     fc=fc, ec=ACCENT, lw=1.5))
+        ax.text(x + w / 2, ytop + h - 4, title, ha="center", va="top", fontsize=10.2,
+                fontweight="bold", color=("white" if last else ACCENT), linespacing=1.3)
+        ax.text(x + w / 2, ytop + h - 16, body, ha="center", va="top", fontsize=8.6,
+                color=("#E7EDF3" if last else INK), linespacing=1.55)
+    for i in range(n - 1):
+        xr = x0 + i * (w + gap) + w
+        ax.annotate("", xy=(xr + gap, ytop + h / 2), xytext=(xr, ytop + h / 2),
+                    arrowprops=dict(arrowstyle="-|>", color=ACCENT2, lw=2.0))
+
+    # phase brackets ----------------------------------------------------------
+    def bracket(xa, xb, y, color, label):
+        ax.plot([xa, xb], [y, y], color=color, lw=1.8)
+        for xx in (xa, xb):
+            ax.plot([xx, xx], [y, y + 2.6], color=color, lw=1.8)
+        ax.text((xa + xb) / 2, y - 5, label, ha="center", va="top",
+                fontsize=10.2, color=color, fontweight="bold", linespacing=1.4)
+    left_a = x0; right_a = x0 + 2 * (w + gap) + w           # cards 1-3
+    left_b = x0 + 3 * (w + gap); right_b = x0 + 5 * (w + gap) + w  # cards 4-6
+    bracket(left_a, right_a, 48, ACCENT,
+            "Row filtering\n16,561 → 3,616 rows")
+    bracket(left_b, right_b, 48, ACCENT2,
+            "Feature enrichment\n→ 51 columns, no rows dropped")
+
+    ax.text(50, 26, "Cleaning prunes the rows; the join and geospatial steps add columns, not drop records.",
+            ha="center", fontsize=11.5, color=ACCENT, fontstyle="italic", fontweight="bold")
+    fig.savefig(os.path.join(OUT, "pipeline_flow.png"), dpi=150,
+                bbox_inches="tight", pad_inches=0.2); plt.close(fig)
+    print("wrote pipeline_flow.png")
+
+
 if __name__ == "__main__":
     funnel()
     ablation()
@@ -346,4 +404,5 @@ if __name__ == "__main__":
     model_comparison()
     mcrai_weighting()
     feature_selection()
+    pipeline_flow()
     print("OUT:", OUT)

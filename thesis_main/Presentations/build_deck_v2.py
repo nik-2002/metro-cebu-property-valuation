@@ -146,6 +146,12 @@ add("Significance and scope",
 # ----------------------------------------------------------- CH2
 sec("2 · Review of Related Literature")
 add(divider_num="02", title="Review of Related Literature", divider_sub="What is known, and the gap")
+add("The core obstacle: data scarcity",
+    lead("International work consistently finds that <b>data scarcity &mdash; not valuer misconduct &mdash; is the primary obstacle</b> to accurate valuation in developing markets.") +
+    bullets([
+      "<b>Kenya</b> &mdash; a census of 427 Nairobi valuers ranked &ldquo;limited information&rdquo; as the top valuation problem <span class='c'>(Cheloti, 2021)</span>.",
+      "<b>Nigeria (Lagos)</b> &mdash; of 300 valuers surveyed, <b>92.7%</b> cited insufficient market evidence as the main challenge <span class='c'>(Ajibola, 2010)</span>.",
+      "This reframes the Metro Cebu problem: the fix is not better judgment but a better, shared evidence base."]))
 add("Two modeling traditions",
     two_col(
       "<div class='subh'>Hedonic regression</div>" + bullets([
@@ -188,11 +194,7 @@ add("Research design and data sources",
        ["Road network via osmnx", "Network distances to economic nodes"]],
       note="Target variable: price per square meter. A licensed-broker check validated plausibility."))
 add("The data pipeline",
-    lead("Six stages turn raw listings into a model-ready analytics base table (ABT).") +
-    bullets(["<b>Ingest</b> &rarr; <b>Clean</b> &rarr; <b>Geocode</b> &rarr; <b>BIR join</b> &rarr; <b>GIS features</b> &rarr; <b>ABT</b>.",
-       "Spatial features &mdash; road-network distances, MCRAI accessibility, neighborhood price lag &mdash; are computed from geocoded coordinates.",
-       "Collection funnel: <b>16,561 raw listings &rarr; 3,616</b> clean open-market records."]) +
-    takeaway("Every spatial feature is constructed in the pipeline &mdash; the contribution is in the construction."))
+    fig_full(DECK+"pipeline_flow.png"))
 add("Geospatial features &mdash; distance to economic centers",
     fig_analysis(DG+"study_area_clean.png",
       ["Shortest-path <b>road-network distance</b> (not straight-line) to <b>eight</b> economic nodes.",
@@ -215,15 +217,28 @@ add("MCRAI &mdash; categories and reach",
          ["Recreation", "1.5"], ["Security", "2.0"], ["Tourism", "3.0"], ["Retail density", "1.0"]]),
       bullets([
         "Eight categories, each at its typical catchment scale.",
-        "The reach values follow standard accessibility conventions &mdash; a sensible baseline.",
+        "Each reach is set to the category's catchment and refined for Metro Cebu &mdash; wider for hospitals and schools, tighter for everyday retail.",
         "Transport access is measured <b>separately</b>, as road distance to the eight nodes.",
-        "Banking proximity was dropped &mdash; no comparable study treats it as a residential amenity."])))
+        "Banking proximity was not kept &mdash; none of the residential studies reviewed treat it as a distinct amenity, and it overlaps with the commercial access the CBD distances already carry."])))
 add("MCRAI &mdash; how the weights were chosen",
     fig_analysis(DECK+"mcrai_weighting.png",
       ["We did not assume the weights &mdash; we let the market reveal them, in two stages.",
        "<b>Stage 1:</b> fit a regression and check which categories actually raise price (the sign).",
        "<b>Stage 2:</b> for the positive ones, turn their strength into weights that sum to one.",
        "Result: <b>education 0.447, grocery 0.345, recreation 0.222</b>."], wide=True))
+add("The two stages, in depth",
+    two_col(
+      "<div class='subh'>Stage 1 &mdash; find the implicit prices</div>" + bullets([
+        "Fit a hedonic regression: price per square meter against the amenity categories together, alongside the structural and location controls.",
+        "Each category's coefficient is its <b>implicit price</b> &mdash; how much buyers actually pay for that kind of access, holding everything else fixed <span class='c'>(Rosen, 1974)</span>.",
+        "The <b>sign</b> tells us premium or penalty; <b>significance</b> tells us whether the signal is reliable.",
+        "Three categories come through as clear positive premiums: education, grocery, recreation."]),
+      "<div class='subh'>Stage 2 &mdash; turn prices into weights</div>" + bullets([
+        "Keep only the positive, significant categories &mdash; the ones the market rewards.",
+        "Normalize their coefficients so they sum to one: <b>education 0.447, grocery 0.345, recreation 0.222</b>.",
+        "Negative or noisy categories (security, tourism, retail) are <b>not forced into the composite</b>; they stay as their own model features.",
+        "The composite then reflects <b>what Cebu buyers pay for</b>, not an assumed weighting."])) +
+    takeaway("The regression discovers the weights &mdash; we do not impose them. A two-stage hedonic approach grounded in implicit-price theory and prior accessibility work."))
 add("Two more design choices",
     two_col(
       "<div class='subh'>Neighborhood price (spatial lag)</div>" + bullets([
@@ -232,11 +247,11 @@ add("Two more design choices",
       "<div class='subh'>Target variable</div>" + bullets([
         "The model predicts the <b>log of price per square meter</b>.",
         "Logging tames the skew; predictions are converted back for the price surface."])))
-add("Evaluation protocol &mdash; an honest test",
+add("Evaluation protocol",
     lead("The headline numbers are estimated under a deliberately strict protocol.") +
     bullets(["<b>GroupKFold(5)</b>, with groups defined by <b>coordinate cluster</b>.",
        "The same location can never appear in both training and test folds.",
-       "This is stricter than a random 80/20 split &mdash; it stops the model from memorizing a neighborhood and flattering itself.",
+       "This is stricter than a random 80/20 split &mdash; it prevents the model from memorizing a neighborhood and overstating its accuracy.",
        "Every reported accuracy figure is out-of-fold."]))
 
 # ----------------------------------------------------------- CH4
@@ -284,7 +299,7 @@ add("Cleaning kept every decision visible",
        "Structurally-absent fields (bedrooms/bathrooms for vacant lots) were left <b>unimputed</b>, not faked.",
        "Hard duplicates were dropped and a price-per-square-meter sanity band applied.",
        "The modeling subset is <b>3,372</b> of the 3,616 assembled rows, after model-requirement filters."]) +
-    takeaway("The aim was a clean, honest table &mdash; usable rows without inventing evidence."))
+    takeaway("The aim was a clean, defensible table &mdash; usable rows without inventing evidence."))
 add("A data-integrity story",
     lead("One finding shaped how much the rest of the results can be trusted.") +
     bullets(["Early models were dominated by a single suspicious feature in the SHAP rankings.",
@@ -308,12 +323,13 @@ add("How the three feature sets were chosen",
 sec("6 · Modeling")
 add(divider_num="06", title="Modeling", divider_sub="Stratified models, selection, tuning")
 add("One model cannot price three markets",
-    fig_analysis(EDA+"01_target/all_strata_price_boxplot.png",
-      ["The condominium median runs <b>about 5.8&times;</b> the vacant-lot median.",
-       "Built area and land-only follow fundamentally different price logic.",
-       "A single pooled model averages these into one blurred equation.",
-       "So the study fits <b>three separate models</b> &mdash; backed by Dr&ouml;es et al. (2019) and Usman et al. (2020)."],
-      "Stratifying is itself an evidence-based finding, not a convenience."))
+    lead("The price distributions shown earlier settle the modeling design.") +
+    stat_line("5.8&times;", "The condominium median price per square meter runs about 5.8 times the vacant-lot median.") +
+    bullets([
+      "Built area and land-only follow fundamentally different price logic.",
+      "A single pooled model averages these into one blurred equation that fits none of them well.",
+      "So the study fits <b>three separate models</b>, one per property type &mdash; backed by Dr&ouml;es et al. (2019) and Usman et al. (2020)."]) +
+    takeaway("Stratifying is itself an evidence-based finding, not a convenience."))
 # -- full feature lists, one slide per stratum --
 add("Features used &mdash; Condominium (21)",
     feat_cols([
@@ -338,6 +354,23 @@ add("Features used &mdash; Vacant Lot (22)",
       ("Benchmark", ["bir_zonal_rr_median", "spatial_lag_price"]),
       ("City indicators (5)", ["Consolacion", "Lapu-Lapu City", "Mandaue City", "Minglanilla", "Talisay City"]),
     ]) + "<div class='tnote'>Lots have no beds/baths and use individual MCRAI categories (not the composite), since bare land responds to specific nearby access.</div>")
+add("Why the three feature sets differ",
+    two_col(
+      table(["Statistical check", "What was done"],
+        [["CBD nodes cluster, so their distances correlate <span class='c'>(VIF &gt; 5)</span>",
+          "Kept in the <b>trees</b> &mdash; splits handle correlation; the OLS baseline trimmed the redundant terms per stratum"],
+         ["MCRAI composite is a fixed blend of its own parts",
+          "Dropped from the OLS baseline (unstable); kept for the trees and for SHAP"],
+         ["Zonal value carried both raw and logged",
+          "One form dropped in the OLS baseline (double-counting)"],
+         ["Residual spread grows with price (heteroscedasticity)",
+          "OLS reported with HC3 robust errors; the trees are unaffected"]]),
+      bullets([
+        "<b>Vacant lots</b> carry land only &mdash; no bedrooms or bathrooms to model &mdash; and lean on <b>individual MCRAI access</b> categories, since bare land responds to specific nearby amenities.",
+        "<b>Houses</b> span sub-types (single-detached, house-and-lot, townhouse), so property-type indicators stay in.",
+        "<b>Condominiums</b> keep the structural attributes and the single MCRAI composite.",
+        "Correlated spatial features were <b>kept in the deployed trees on purpose</b> &mdash; dropping them would throw away real location signal."])) +
+    takeaway("Collinearity was a problem for the interpretable OLS baseline, not for the deployed trees &mdash; so the diagnostics shaped the baseline, while the strata themselves differ mainly by what each property type actually has."))
 add("The model lineup",
     two_col(
       bullets(["<b>OLS hedonic</b> &mdash; interpretable baseline (HC3 robust errors) <span class='c'>(Rosen, 1974)</span>.",
@@ -346,24 +379,43 @@ add("The model lineup",
       bullets(["<b>SHAP</b> explains every prediction, feature by feature <span class='c'>(Lundberg &amp; Lee, 2017)</span>.",
         "OLS doubles as the diagnostic that screens MCRAI category signs.",
         "All three fit per stratum on the log price-per-sqm target."])))
+add("Why these three models?",
+    lead("The shortlist spans the interpretability&ndash;accuracy spectrum. Other families were considered and set aside for clear reasons.") +
+    table(["Model considered", "Why it was not retained"],
+      [["Support Vector Regression", "Expensive to tune; weak native interpretability; usually trails boosting on tabular data"],
+       ["LASSO / Ridge", "Constrained by linearity; effectively subsumed by the OLS baseline"],
+       ["Deep Neural Networks", "Need &gt;10,000 labeled samples; the dataset is far smaller, and global interpretability is lost"]],
+      note="The three retained models (OLS, Random Forest, XGBoost) fit the sample size, the tabular structure, and the need for explainability."))
 add("Hyperparameters and tuning",
-    lead("Each Random Forest was tuned per stratum, with the winner chosen by grouped-CV median error (MdAPE).") +
+    lead("The deployed Random Forest was tuned per stratum; the two comparators ran at standard settings, so the head-to-head stayed fair.") +
+    "<div class='subh'>Random Forest &mdash; deployed, tuned per stratum</div>" +
     table(["Stratum", "Trees", "Max features", "Min leaf", "Max depth"],
       [["Condominium", "300", "0.7", "1", "none"],
        ["Houses", "300", "1.0", "2", "none"],
        ["Vacant Lot", "300", "1.0", "1", "none"]],
-      note="Selection basis: lowest GroupKFold MdAPE among the random-forest grid (random_state = 42)."))
+      note="Winner chosen by lowest GroupKFold MdAPE among the random-forest grid (random_state = 42).") +
+    "<div class='subh'>Comparators &mdash; standard settings</div>" +
+    table(["Model", "Configuration"],
+      [["XGBoost", "300 trees, learning rate 0.05, max depth 6 &mdash; held constant across the three strata"],
+       ["OLS hedonic", "Log-log specification with HC3 robust standard errors &mdash; a fixed functional form, no tuning grid"]],
+      note="The comparators were run at common, defensible defaults; only the chosen family (Random Forest) was tuned for deployment."))
 
 # ----------------------------------------------------------- CH7
 sec("7 · Evaluation")
 add(divider_num="07", title="Evaluation", divider_sub="Accuracy, model comparison, ablation")
-add("Headline accuracy",
-    table(["Property type", "MdAPE (typical error)", "PE20 (within 20%)"],
-      [["Condominium", "19.3%", "51%"],
-       ["Houses", "22.7%", "44%"],
-       ["Vacant Lot", "38.4%", "26%"]],
-      note="Deployed Random Forest, leak-free GroupKFold. Supporting diagnostics: MAPE, COD, PRD. The study does not claim IAAO assessment-grade compliance.") +
-    takeaway("Condominiums and houses estimate well; vacant lots remain the weakest stratum."))
+add("Headline accuracy &mdash; all three models",
+    "<div class='subh'>MdAPE &mdash; typical error (lower is better)</div>" +
+    table(["Property type", "OLS", "Random Forest &dagger;", "XGBoost"],
+      [["Condominium", "24.5%", "19.3%", "19.8%"],
+       ["Houses", "25.1%", "22.7%", "23.6%"],
+       ["Vacant Lot", "44.8%", "38.4%", "40.2%"]]) +
+    "<div class='subh'>PE20 &mdash; share within 20% (higher is better)</div>" +
+    table(["Property type", "OLS", "Random Forest &dagger;", "XGBoost"],
+      [["Condominium", "40%", "51%", "50%"],
+       ["Houses", "41%", "44%", "43%"],
+       ["Vacant Lot", "22%", "26%", "27%"]],
+      note="&dagger; Deployed. All three scored under identical leak-free GroupKFold(5) by coordinate cluster; Random Forest matches the deployment manifest. Supporting diagnostics: MAPE, COD, PRD. The study does not claim IAAO assessment-grade compliance.") +
+    takeaway("Both tree models beat OLS in every stratum; Random Forest is best-or-tied and was deployed. Condominiums and houses estimate well; vacant lots remain the weakest."))
 add("Reading the metrics",
     bullets(["<b>MdAPE</b> &mdash; the median absolute percentage error; half of estimates fall within this band. Robust to a few extreme listings.",
        "<b>PE20</b> &mdash; the share of estimates within 20% of the listing; the practical hit-rate.",
@@ -373,7 +425,7 @@ add("Which model performed best? (RQ2)",
     fig_analysis(DECK+"model_comparison.png",
       ["Under identical leak-free folds, <b>both tree models beat the OLS baseline</b> in every stratum.",
        "Random Forest and XGBoost are close; RF edges it on the deployed grouped-CV (19.3 vs 19.8 / 22.7 vs 23.6 / 38.4 vs 40.2).",
-       "Because the tree models are so close, the honest reading is &ldquo;RF best-or-tied.&rdquo;",
+       "Because the tree models are so close, the fair reading is &ldquo;RF best-or-tied.&rdquo;",
        "<b>Random Forest was deployed</b> &mdash; robust on small samples, and simpler to maintain."]))
 add("Do geospatial features earn their place? (RQ3)",
     fig_analysis(DECK+"ablation_tiers.png",
@@ -381,6 +433,14 @@ add("Do geospatial features earn their place? (RQ3)",
        "Geospatial features improve <b>every</b> stratum vs structural-only: condo +5.7, houses +4.2, lot +13.0 points.",
        "On top of administrative location (city + BIR zonal): condo +3.7, lot +3.8, but houses &asymp; &minus;0.7.",
        "<b>They add the most where benchmarks are weakest</b> &mdash; vertical condos and bare land."]))
+add("Where the model errs (residual analysis)",
+    lead("The error pattern is consistent and informative across all three strata.") +
+    bullets([
+      "At the <b>center</b> of the distribution the models are close to unbiased &mdash; median signed error within a few percent of zero.",
+      "The damage is concentrated in the <b>tails</b>: a few extreme misses, not broad bias.",
+      "Those misses are <b>atypically cheap listings</b> &mdash; their low price reflects what the listing does not record: condition, title issues, distressed or pre-selling pricing, or (for lots) terrain.",
+      "The model cannot see these factors, so it over-predicts them &mdash; the data ceiling, made concrete."]) +
+    takeaway("The model is reliable for typical properties; it cannot price what the data never captured."))
 
 # ----------------------------------------------------------- CH8
 sec("8 · Results & Discussion")
@@ -425,8 +485,8 @@ add("The valuation gap (RQ4)",
        "The gap is <b>large, positive, and systematic</b> &mdash; BIR zonal values sit well below the open market.",
        "Read it as a <b>research signal that benchmarks are stale</b> &mdash; not a correction factor to apply."]))
 add("Is the model good enough?",
-    lead("A measured answer, consistent with the manuscript.") +
-    bullets(["As a <b>triangulation reference</b>, yes &mdash; but held-out error stays substantial even in the best strata.",
+    lead("Yes &mdash; as a <b>reference for triangulating price</b>, and within clear limits.") +
+    bullets(["The typical error stays substantial even in the best strata, so it informs a valuation judgment rather than settling it.",
        "Strongest for condominiums and houses; only indicative for vacant lots and thin LGU&times;type cells.",
        "It complements professional appraisal judgment; it does not replace it."]))
 
@@ -476,7 +536,8 @@ add("For practice and policy",
         "Treat the valuation gap as a research signal; validate against transactions before any operational use."]),
       "<div class='subh'>Policy</div>" + bullets([
         "Keep recognizing secondary and corridor subcenters (Mactan, Consolacion, Naga), not just CBP.",
-        "Use MCRAI as an adaptable template, not a finished index."])))
+        "Use MCRAI as an adaptable template, not a finished index.",
+        "On deployment: the prototype shows its open-market-only scope and should be refreshed as data drifts."])))
 add("For future research",
     bullets(["Put MCRAI on an empirical footing &mdash; estimate the decay rate, radii, and weights from data rather than fixing them.",
        "Test spatial heterogeneity directly with Geographically Weighted Regression (GWR / MGWR).",
@@ -631,9 +692,7 @@ def render():
                        f'<div class="hdr"><span class="sec">{s["section"]}</span><span class="pg">{i} / {n}</span></div>'
                        '<div class="hrule"></div>'
                        f'<div class="title">{s["title"]}</div>'
-                       f'<div class="body">{s["body"]}</div>'
-                       '<div class="foot"><span>Predicting Open-Market Residential Property Values in Metro Cebu</span>'
-                       '<span>C. D. Estreba</span></div></div>')
+                       f'<div class="body">{s["body"]}</div></div>')
         out.append('</div>')
     out.append('</div></body></html>')
     return "".join(out)
