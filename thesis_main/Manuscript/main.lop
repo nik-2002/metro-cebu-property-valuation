@@ -1,3 +1,6 @@
-\contentsline {ccpic}{\numberline {1}{\ignorespaces Prototype web application, Market Map view: open-market listings with filters and market-intelligence summaries.}}{106}{ccpic.1}%
-\contentsline {ccpic}{\numberline {2}{\ignorespaces Prototype web application, Price Surface view: the predicted price-per-square-meter surface aggregated by barangay.}}{107}{ccpic.2}%
-\contentsline {ccpic}{\numberline {3}{\ignorespaces Prototype web application, Property Predictor view: a property-level prediction with its SHAP contribution breakdown.}}{108}{ccpic.3}%
+\contentsline {ccpic}{\numberline {1}{\ignorespaces Lamudi Philippines listing portal, the primary open-market source (1{,}578 bulk-scraped rows plus 270 from the later browser-based batch).}}{94}{ccpic.1}%
+\contentsline {ccpic}{\numberline {2}{\ignorespaces FilipinoHomes listing portal, the second open-market source (1{,}203 rows).}}{95}{ccpic.2}%
+\contentsline {ccpic}{\numberline {3}{\ignorespaces DotProperty Philippines listing portal, the third open-market source (565 rows).}}{96}{ccpic.3}%
+\contentsline {ccpic}{\numberline {4}{\ignorespaces Prototype web application, Market Map view: open-market listings with filters and market-intelligence summaries.}}{110}{ccpic.4}%
+\contentsline {ccpic}{\numberline {5}{\ignorespaces Prototype web application, Price Surface view: the predicted price-per-square-meter surface aggregated by barangay.}}{111}{ccpic.5}%
+\contentsline {ccpic}{\numberline {6}{\ignorespaces Prototype web application, Property Predictor view: a property-level prediction with its SHAP contribution breakdown.}}{112}{ccpic.6}%

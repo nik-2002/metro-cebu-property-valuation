@@ -54,8 +54,34 @@ Log format per entry: **Decision** — what was decided · **Why** — reason/gr
 - **Why:** Author worried it might not be explicit; review found it adequately explicit and referenced. Reopen only if the panel names a specific gap.
 - **Status:** Closed (verified, no change).
 
+### D-08 — MCRAI composite weights verified against code; keep deployed values, fix wording
+- **Decision:** Keep `0.447 / 0.345 / 0.222` in the manuscript (they match the deployed model) and reword so we do NOT claim they are normalized / sum to 1. Described instead as the positive Stage~1 OLS implicit prices rescaled into the fixed deployed weights, with transport noted as retired to the road-distance features. No model re-run. (Author chose this over renormalizing in code, 2026-06-28.)
+- **Verification trail:**
+  - `modeling_decisions.md` Decision 20 — 4-category normalized weights: education 0.401, grocery 0.310, recreation 0.199, transport 0.102.
+  - Decision 29 — retired transport; printed `0.447 / 0.345 / 0.222` and claimed "Sum = 1.000 (rounding-adjusted in implementation)" — but those print values actually sum to **1.014**.
+  - `Scripts/compute_hansen_scores.py:112-117` — hard-codes exactly `0.447 / 0.345 / 0.222` with **no normalization step**. This is the deployed reality; the manuscript matches it.
+- **Why the 1.014 sum is immaterial:** `mcrai_composite` is a model feature; scaling it by a constant is monotonic, so RF split-based predictions are unchanged and OLS only rescales that one coefficient. The overshoot has no effect on results.
+- **Affects:** `chapter3.tex` §3.4.1 MCRAI composite paragraph. **Done** (wording fixed).
+- **Status:** Closed.
+
+### D-09 — CBD node selection grounded in the JICA Roadmap (item #4)
+- **Decision:** Added `jica2015metrocebu` to the Network Distance Features paragraph, grounding the 8-node selection in the JICA Roadmap Study (the documented local planning basis from project notes / CLAUDE.md), alongside the existing `giuliano1991subcenters`.
+- **Why:** Panel wanted references/ground truth for the 8 CBD nodes; only Giuliano & Small was cited. JICA is the verified local basis for treating Naga, the airport, Mactan, and SRP as anchors.
+- **Did NOT use:** `mcmillen2003employment` — flagged PLACEHOLDER in `biblio.bib` ("confirm details in Zotero"). Do not cite until verified.
+- **Affects:** `chapter3.tex` §3.4.1. **Done.**
+- **Status:** Closed.
+
+### D-10 — RF-vs-XGBoost justified on use, not just metrics (item #6)
+- **Decision:** Kept the existing robustness/simplicity framing and added a paragraph in ch7 Best Model Selection: the model backs a decision-support tool, so stable/reproducible/retrainable estimates matter more than a marginal, non-robust accuracy gain; RF averages over independent trees (lower overfitting on the 849–1,300-row noisy per-stratum samples) vs. boosting's sequential residual fitting; flat tuning curves showed boosting's extra capacity bought no reliable gain. Citations: `grinsztajn2022` (tree models strong default on tabular data), `ramolete2023`/`viray2023` (PH ML valuation context).
+- **Why:** Panel wanted a robust, business/real-world justification with reference papers, not a performance-only argument.
+- **Citation caution:** claims kept to what the sources clearly support — `grinsztajn2022` for tabular tree-model strength; the PH papers cited only as "ML valuation practice in the Philippine setting," not as RF-specific endorsements.
+- **Also:** changed ch6 MCRAI wording "renormalized" → "rescaled" for consistency with D-08.
+- **Affects:** `chapter7.tex` §Best Model Selection, `chapter6.tex` §MCRAI. **Done.**
+- **Status:** Closed.
+
 ## ⚠️ Flags for author to verify
-- **MCRAI composite weights sum:** text states education 0.447 + grocery 0.345 + recreation 0.222 = **1.014**, not 1.000. If these are normalized weights they should sum to 1; likely a rounding/typo. Verify against the Stage 1 OLS output / `modeling_decisions.md` and correct the three numbers. (Not changed by Claude — would require inventing values.)
+- **(Resolved — see D-08)** Composite weights `0.447/0.345/0.222` verified as the deployed values. Kept as-is with corrected wording; no model change.
+- **Doc hygiene (modeling branch, future):** `modeling_decisions.md` Decision 29 prints weights that sum to 1.014 while claiming "Sum = 1.000." Consider correcting that note on `dev/modeling` so the decision log is internally consistent. Not a manuscript blocker.
 
 ## Decisions to be made (open questions)
 - **#2 Sensitivity method:** weight-perturbation grid? leave-one-category-out? β sweep? Pick what is computationally cheap and panel-legible.

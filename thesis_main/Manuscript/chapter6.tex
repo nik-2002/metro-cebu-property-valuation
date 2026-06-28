@@ -80,7 +80,7 @@ The tree-based models were tuned with the same grid search and grouped cross-val
 
 \subsection{\texorpdfstring{\textbf{MCRAI Composite Weight Derivation}}{MCRAI Composite Weight Derivation}}\label{mcrai-stage2-weight-derivation}
 
-The MCRAI composite was built from the OLS coefficient signs rather than by forcing all categories into one additive score. It retained only the positive-coefficient household-access categories and renormalized them into a three-part weight vector: 0.447 for education, 0.345 for grocery, and 0.222 for recreation. Transport accessibility was represented separately through the road-network distance features rather than as a composite category, and finance was retired from the framework.
+The MCRAI composite was built from the OLS coefficient signs rather than by forcing all categories into one additive score. It retained only the positive-coefficient household-access categories and rescaled their implicit prices into a three-part weight vector: 0.447 for education, 0.345 for grocery, and 0.222 for recreation. Transport accessibility was represented separately through the road-network distance features rather than as a composite category, and finance was retired from the framework.
 
 The remaining categories, including security, tourism, and retail density, were not used in the composite because their OLS coefficients were negative or near zero, which is interpreted in Chapter 8 as spatial sorting rather than direct disamenity. The condominium and house models used the composite as their single accessibility summary, while the vacant-lot model used the individual categories instead, because for bare land the categories were not interchangeable.
 
