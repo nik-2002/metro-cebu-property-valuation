@@ -37,7 +37,7 @@
 | 6 | ✅ **RF vs XGBoost — robust justification** | DONE. Strengthened ch7 Best Model Selection with intended-use framing (stable/reproducible/retrainable estimates for a decision-support tool), RF's lower overfitting risk on small noisy per-stratum samples, and citations: `grinsztajn2022` (tree models on tabular data), `ramolete2023`/`viray2023` (PH ML valuation). | — | Ch7 §Best Model Selection | — |
 | 7 | ✅ **Distance computation — review** | DONE. Added why network distance over straight-line (road network, Mactan crossings, terrain) + named algorithm/units (shortest-path, Dijkstra, meters). | — | Ch3 §3.4.1 | — |
 | 8 | ✅ **Keep positives / remove non-positives (MCRAI composite)** | DONE. Spelled out the two-stage derivation and why negatives/non-significant are excluded but kept as standalone features. Weights `0.447/0.345/0.222` verified against `compute_hansen_scores.py` (match deployed model); wording fixed to not claim sum=1 (see decision log D-08). | — | Ch3 §3.4.1 | — |
-| 9 | **Accuracy verdict / acceptance** | Metrics reported (MdAPE/PE20, MAPE/COD/PRD) but no explicit "is this acceptable?" statement (0 hits "acceptable"). | Add a clear verdict: is the accuracy acceptable, and acceptable *for what use* (decision-support, not formal appraisal). | Ch8 Results/Discussion or Ch9 Conclusions | Low–Med |
+| 9 | ✅ **Accuracy verdict / acceptance** | DONE. Added Ch8 subsection "Is the Accuracy Acceptable?" — explicit fitness-for-use verdict tied to the real numbers (MdAPE 19/23/38, PE20 51/44/26%, COD 36–56, PRD 1.20–1.48): acceptable for decision-support (condo/house), weak for vacant lots; not IAAO/assessment-grade. Brief verdict echoed in Ch9 summary. | — | Ch8 §Is the Accuracy Acceptable?, Ch9 | — |
 
 ---
 

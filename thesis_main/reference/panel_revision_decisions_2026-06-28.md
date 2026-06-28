@@ -79,6 +79,13 @@ Log format per entry: **Decision** — what was decided · **Why** — reason/gr
 - **Affects:** `chapter7.tex` §Best Model Selection, `chapter6.tex` §MCRAI. **Done.**
 - **Status:** Closed.
 
+### D-11 — Explicit accuracy verdict added (item #9)
+- **Decision:** Added a dedicated Ch8 subsection "Is the Accuracy Acceptable?" giving a direct fitness-for-use verdict, and echoed a one-sentence verdict in the Ch9 summary. Framing: acceptable for explainable decision-support over the open-market segment (condo ~19%, house ~23% typical error, competitive with Ramolete's band and beating OLS + BIR zonal); vacant lots (~38%) usable only as a rough indicator; explicitly NOT IAAO assessment-grade (COD 36–56, PRD 1.20–1.48 outside ratio-study uniformity) and not a substitute for formal appraisal. Added the PRD>1 fairness caveat (over-values the cheap tail).
+- **Why:** Panel item #8/#9 wanted a clear verdict on whether the accuracy is acceptable, not just reported metrics.
+- **Citation note:** Matched Ch7's existing descriptive reference to "IAAO ratio-study thresholds" — no IAAO bib entry exists, so none was invented.
+- **Affects:** `chapter8.tex` (new subsection), `chapter9.tex` (summary sentence). **Done.**
+- **Status:** Closed.
+
 ## ⚠️ Flags for author to verify
 - **(Resolved — see D-08)** Composite weights `0.447/0.345/0.222` verified as the deployed values. Kept as-is with corrected wording; no model change.
 - **Doc hygiene (modeling branch, future):** `modeling_decisions.md` Decision 29 prints weights that sum to 1.014 while claiming "Sum = 1.000." Consider correcting that note on `dev/modeling` so the decision log is internally consistent. Not a manuscript blocker.
