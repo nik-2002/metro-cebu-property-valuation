@@ -111,6 +111,16 @@
 
 \clearpage
 \appendix
+% Continuous (non-letter) numbering for appendix tables and figures, per the
+% BSDS format guide (numbered consecutively throughout the manuscript). This
+% overrides apa7's per-appendix counter reset and the \theappendix prefix,
+% while keeping the lettered appendix section headers (Appendix A, B, C...).
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\makeatletter
+\patchcmd{\section}{\setcounter{figure}{0}}{}{}{}
+\patchcmd{\section}{\setcounter{table}{0}}{}{}{}
+\makeatother
 \input{appendices}
 
 \end{document}

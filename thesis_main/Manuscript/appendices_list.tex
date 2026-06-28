@@ -1,11 +1,16 @@
-\clearpage
+% No \clearpage: let the List of Appendices follow the List of Pictures on the same page.
+\vspace{0.45in}
 \phantomsection
 \addcontentsline{toc}{section}{List of Appendices}
 \section*{List of Appendices}
 
-\noindent Appendix A\hfill Data Documentation\\
-Appendix B\hfill Supplementary Tables\\
-Appendix C\hfill SHAP Beeswarm Plots\\
-Appendix D\hfill Feature Snapshots by Stratum\\
-Appendix E\hfill OLS Diagnostic Plots\\
-Appendix F\hfill Web Application Screenshots
+\begingroup
+\setlength{\parindent}{0pt}
+\noindent\makebox[1.05in][l]{Appendix~\ref{app:datadoc}}Data Documentation\dotfill\pageref{app:datadoc}\par
+\noindent\makebox[1.05in][l]{Appendix~\ref{app:portals}}Data Source Portals\dotfill\pageref{app:portals}\par
+\noindent\makebox[1.05in][l]{Appendix~\ref{app:supptables}}Supplementary Tables\dotfill\pageref{app:supptables}\par
+\noindent\makebox[1.05in][l]{Appendix~\ref{app:shap}}SHAP Beeswarm Plots\dotfill\pageref{app:shap}\par
+\noindent\makebox[1.05in][l]{Appendix~\ref{app:snapshots}}Feature Snapshots by Stratum\dotfill\pageref{app:snapshots}\par
+\noindent\makebox[1.05in][l]{Appendix~\ref{app:olsdiag}}OLS Diagnostic Plots\dotfill\pageref{app:olsdiag}\par
+\noindent\makebox[1.05in][l]{Appendix~\ref{app:webapp}}Web Application Screenshots\dotfill\pageref{app:webapp}\par
+\endgroup

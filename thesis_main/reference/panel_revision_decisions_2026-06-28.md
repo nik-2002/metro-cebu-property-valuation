@@ -86,6 +86,17 @@ Log format per entry: **Decision** — what was decided · **Why** — reason/gr
 - **Affects:** `chapter8.tex` (new subsection), `chapter9.tex` (summary sentence). **Done.**
 - **Status:** Closed.
 
+### D-12 — Front-matter list cleanup (formatting; adviser will check)
+- **Decisions (author-confirmed 2026-06-28):**
+  1. **Continuous numbering** for appendix tables/figures (Tables 23–28, Figures 8–17) instead of apa7's default letter-prefixed A1/C1/D1. Matches the BSDS format guide ("numbered consecutively throughout"). Implemented in `main.tex` by overriding `\thetable`/`\thefigure` after `\appendix` and `\patchcmd`-ing out apa7's per-appendix `\setcounter` resets. Appendix SECTION letters (Appendix A–G) are preserved.
+  2. **Combined short lists** to save space: List of Maps follows List of Figures on one page; List of Pictures + List of Appendices + List of Abbreviations share a page. Done by removing forced `\clearpage`s (kept one before Pictures). APA 7 does not govern front-matter list pagination, so this is permitted; the BSDS guide *implies* one-per-page (vii–xii) but does not forbid sharing — **flag for adviser/Sir Randy at the formatting check.**
+  3. **List of Tables** kept all appendix tables (per guide); still ~2 pages — accepted as normal.
+- **Bugs fixed along the way:**
+  - The hand-typed List of Appendices was out of sync (wrong titles B–F, missing Appendix G). Rebuilt correctly (A–G) with page numbers via `\label`/`\pageref` on each appendix section.
+  - `chapter3.tex` hard-coded "Appendix~F" for the web-app screenshots, which are actually **Appendix G**. Replaced with `\ref{app:webapp}` so it auto-resolves.
+- **Verified:** recompiled, no undefined refs; rendered front-matter pages confirm continuous numbering and the combined layout.
+- **Status:** Closed (pending adviser sign-off on the combined-page layout).
+
 ## ⚠️ Flags for author to verify
 - **(Resolved — see D-08)** Composite weights `0.447/0.345/0.222` verified as the deployed values. Kept as-is with corrected wording; no model change.
 - **Doc hygiene (modeling branch, future):** `modeling_decisions.md` Decision 29 prints weights that sum to 1.014 while claiming "Sum = 1.000." Consider correcting that note on `dev/modeling` so the decision log is internally consistent. Not a manuscript blocker.
