@@ -97,6 +97,13 @@ Log format per entry: **Decision** — what was decided · **Why** — reason/gr
 - **Verified:** recompiled, no undefined refs; rendered front-matter pages confirm continuous numbering and the combined layout.
 - **Status:** Closed (pending adviser sign-off on the combined-page layout).
 
+### D-13 — Ethical Considerations section added (item #3)
+- **Decision:** Added a `\subsection{Ethical Considerations}` at the end of Chapter 3 (Methodology), since the panel tied the comment to data acquisition. Content: (1) no human subjects / no PII — property is the unit of analysis, public listing advertisements, only valuation attributes retained, no login-restricted pages; public administrative + geospatial inputs; (2) non-commercial academic use + data minimization, data-integrity-as-ethics (OnePropertee removal, asking-price disclosure); (3) responsible use of outputs — decision-support not authoritative appraisal, honest error reporting, PRD>1 fairness caveat (least reliable at the cheap/vacant-lot end where buyers are most exposed), SHAP transparency.
+- **Deliberately NOT claimed** (to avoid unverifiable/false statements): no blanket "complied with all terms of service" claim (Lamudi's anti-bot/CAPTCHA wall was bypassed with Playwright per §3.2, so a blanket ToS-compliance claim would be unsafe); wording kept to "publicly accessible listing pages, no login-restricted pages." No invented ethics-board approval.
+- **⚠️ Author must confirm before final:** (a) whether the BSDS program required a separate ethics-clearance/IRB form (the section currently states the work fell outside human-subjects review — adjust if the program required a form); (b) whether to add an explicit terms-of-use statement.
+- **Affects:** `chapter3.tex` (new subsection). **Done** (recompile pending).
+- **Status:** Closed pending author confirmation of (a)/(b).
+
 ## ⚠️ Flags for author to verify
 - **(Resolved — see D-08)** Composite weights `0.447/0.345/0.222` verified as the deployed values. Kept as-is with corrected wording; no model change.
 - **Doc hygiene (modeling branch, future):** `modeling_decisions.md` Decision 29 prints weights that sum to 1.014 while claiming "Sum = 1.000." Consider correcting that note on `dev/modeling` so the decision log is internally consistent. Not a manuscript blocker.
