@@ -2229,3 +2229,31 @@ recorded as a possible future improvement only. **The manuscript rewrite must st
 cite the 24-row evidence CSV.**
 
 **Next decision number: 54.**
+
+---
+
+## Decision 56 — MCRAI scoring sensitivity analysis (robustness check; no pipeline change) (2026-06-28)
+
+> Numbered 56 to avoid collision with Decisions 54–55, which exist on the manuscript/data branch only.
+
+**Context**: Panel comment (2026-06-28) asked for a sensitivity analysis on the MCRAI scoring. Implemented in `Scripts/sensitivity_mcrai_weights.py` (non-destructive; reads `abt_condo.csv`/`abt_houses.csv`, reuses the `finalize_stratified_groupcv.py` machinery, writes `Models/sensitivity_mcrai_weights.csv`).
+
+**Design**: Ceteris paribus — each stratum's deployed RF `best_params` held fixed; leak-free GroupKFold(5) re-run; ONLY `mcrai_composite` rebuilt from the existing `mcrai_*` columns under each variant. Covers Condominium + Houses (the strata that use the composite). Vacant Lot uses individual MCRAI categories (Decision 49) and is invariant to composite weights by construction.
+
+**Variants & result** (group-CV MdAPE):
+
+| Variant | Condo | Houses |
+|---|---|---|
+| Baseline (OLS-derived 0.447/0.345/0.222) | 19.3 | 22.7 |
+| Equal weights (3 positive cats) | 19.3 | 22.6 |
+| All 8 categories, equal (keep-positives OFF) | 19.8 | 22.9 |
+| No composite (MCRAI removed) | 19.5 | 22.6 |
+| ±25% weight perturbation (50 draws) | mean\|Δ\|=0.20, max 0.55 | mean\|Δ\|=0.34, max 0.73 |
+
+**Findings**: (1) Results are robust — any reasonable weighting (or none) lands within ~0.5pp, consistent with the SHAP finding that the composite is a minor feature for built homes. (2) The keep-positives screening (Decision 20) is mildly helpful, not load-bearing: the positive-only composite beats the all-8 alternative by ~0.2–0.5pp. PRD/COD essentially unchanged across variants.
+
+**Status**: Done. No change to the deployed pipeline. Written up in manuscript Ch7 §Sensitivity of the MCRAI Scoring (Table) with a forward reference from Ch3 §3.4.1.
+
+**Future (optional, not done here)**: β-decay / radii sensitivity would also move the Lot stratum but requires re-scoring (network recompute); deferred.
+
+**Next decision number: 57.**
