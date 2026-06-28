@@ -37,6 +37,26 @@ Log format per entry: **Decision** — what was decided · **Why** — reason/gr
 
 ---
 
+### D-05 — Distance computation: add network-vs-straight-line rationale + algorithm (item #7)
+- **Decision:** Kept the existing operational description; added (a) why network distance was chosen over Haversine (Metro Cebu road network, Mactan bridge crossings, terrain routing) and (b) named the algorithm and units (shortest-path, Dijkstra, meters).
+- **Why:** Panel found the distance computation unclear in the presentation; the text described *how* but not *why network distance*, and never named the algorithm.
+- **Affects:** `chapter3.tex` §3.4.1 Network Distance Features. **Done.**
+- **Status:** Closed.
+
+### D-06 — Keep-positives / remove non-positives made explicit (item #8)
+- **Decision:** Spelled out the two-stage weight derivation (Stage 1 OLS → normalize significant positive coefficients → Stage 2 composite weights) and stated explicitly why negative/non-significant categories are excluded from the composite (a benefit index should not net in price-reducing categories) while remaining available as standalone stratum features.
+- **Why:** Panel asked for the rationale behind keeping positives and dropping non-positives in the MCRAI scoring. Grounded in `modeling_decisions.md` (two-stage method, "Weight derivation — Two-Stage Method").
+- **Affects:** `chapter3.tex` §3.4.1 MCRAI composite paragraph. **Done.** Sets up item #2 (sensitivity should stress-test this exclusion).
+- **Status:** Closed.
+
+### D-07 — Stratification is already explicit; no rewrite (item #5)
+- **Decision:** No edit. Stratification is explicitly motivated and cited at `chapter3.tex` line 7 (`droes2019`, `usman2020`), operationalized in §3.4 (per-stratum feature trimming), and the leak-free GroupKFold rationale is in `chapter6.tex` §Stratified Fitting.
+- **Why:** Author worried it might not be explicit; review found it adequately explicit and referenced. Reopen only if the panel names a specific gap.
+- **Status:** Closed (verified, no change).
+
+## ⚠️ Flags for author to verify
+- **MCRAI composite weights sum:** text states education 0.447 + grocery 0.345 + recreation 0.222 = **1.014**, not 1.000. If these are normalized weights they should sum to 1; likely a rounding/typo. Verify against the Stage 1 OLS output / `modeling_decisions.md` and correct the three numbers. (Not changed by Claude — would require inventing values.)
+
 ## Decisions to be made (open questions)
 - **#2 Sensitivity method:** weight-perturbation grid? leave-one-category-out? β sweep? Pick what is computationally cheap and panel-legible.
 - **#4 CBD references:** which exact sources to cite for the 8-node selection (JICA Mega Cebu Roadmap 2050 + which polycentric papers).
