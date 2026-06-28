@@ -104,6 +104,14 @@ Log format per entry: **Decision** — what was decided · **Why** — reason/gr
 - **Affects:** `chapter3.tex` (new subsection). **Done** (recompile pending).
 - **Status:** Closed pending author confirmation of (a)/(b).
 
+### D-14 — MCRAI scoring sensitivity analysis (item #2)
+- **Decision:** Ran the weighting/keep-positives tier of the sensitivity analysis directly on `dev/modeling` (`Scripts/sensitivity_mcrai_weights.py`, logged there as Decision 56), and wrote it up in the manuscript. Ceteris-paribus: deployed RF params held fixed, leak-free GroupKFold(5) re-run, only `mcrai_composite` rebuilt per variant (baseline OLS-derived / equal-3 / all-8 keep-positives-off / no-composite / ±25% perturbation). Condo + Houses only (Lot drops the composite, so invariant by design).
+- **Result:** Robust — every variant within ~0.5pp of baseline MdAPE (condo 19.3, house 22.7). Keep-positives screening mildly helpful (~0.2–0.5pp), not load-bearing. Consistent with SHAP (composite minor for built homes). This is a strong panel answer: the conclusions do not depend on the MCRAI scoring choices.
+- **Manuscript:** new Ch7 §Sensitivity of the MCRAI Scoring with Table; forward reference added to Ch3 §3.4.1 (ties to item #8).
+- **Scope note:** the β-decay / radii tier (which would also move the Lot stratum) requires network re-scoring and was deferred — offer as a Codex follow-up on `dev/modeling` if the panel wants the decay parameter stress-tested too.
+- **Cross-branch:** code/results/Decision 56 on `dev/modeling`; prose on `dev/manuscript`.
+- **Status:** Closed (weighting tier). β tier optional/open.
+
 ## ⚠️ Flags for author to verify
 - **(Resolved — see D-08)** Composite weights `0.447/0.345/0.222` verified as the deployed values. Kept as-is with corrected wording; no model change.
 - **Doc hygiene (modeling branch, future):** `modeling_decisions.md` Decision 29 prints weights that sum to 1.014 while claiming "Sum = 1.000." Consider correcting that note on `dev/modeling` so the decision log is internally consistent. Not a manuscript blocker.

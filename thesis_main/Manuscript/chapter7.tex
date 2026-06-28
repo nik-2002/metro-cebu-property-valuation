@@ -70,6 +70,31 @@ Vacant Lot & 51.5 & 42.3 & \textbf{38.6} \\
 Compared with a structural-only model, the full geospatial set improved every stratum: condominiums by about 5.7 points, houses by about 4.2 points, and vacant lots by about 13.0 points. The decomposition is more revealing. When the engineered geospatial features were added \emph{on top of} administrative location, they carried a clear additional gain for condominiums (about 3.7 points) and vacant lots (about 3.8 points), but added essentially nothing for houses (about $-0.7$ points, a slight worsening). For houses, knowing the city and the BIR zonal value already captured most of the location signal, and the custom geospatial features mostly duplicated it. The reading is that the model's engineered features add the most value precisely where administrative benchmarks are weakest, which is vertical condominiums and bare lots.
 
 
+\subsection{\texorpdfstring{\textbf{Sensitivity of the MCRAI Scoring}}{Sensitivity of the MCRAI Scoring}}\label{mcrai-sensitivity}
+
+Because the MCRAI composite rests on specific design choices---which categories enter the index and what weights they carry (Section~\ref{geospatial-feature-engineering})---it is fair to ask whether the model's results depend on those choices. This was tested directly. Holding each stratum's deployed Random Forest configuration fixed, the \emph{mcrai\_composite} was rebuilt under several weighting schemes and the leak-free group-CV evaluation was re-run for the two strata that use it, condominiums and houses. The vacant-lot model uses the individual MCRAI categories rather than the composite, so it is unaffected by the composite weights by construction and is not included here.
+
+\begin{table}[htbp]
+\caption[Sensitivity of group-CV error to the MCRAI composite weighting\dots]{Sensitivity of condominium and house group-CV error to the MCRAI composite weighting. Random Forest hyperparameters were held at the deployed settings; only \emph{mcrai\_composite} was rebuilt for each variant.}
+\label{tab:mcrai-sensitivity}
+\begin{center}
+\small
+\begin{tabular}{L{0.40\textwidth} L{0.11\textwidth} L{0.10\textwidth} L{0.11\textwidth} L{0.10\textwidth}}
+\toprule
+Weighting variant & Condo MdAPE & Condo PE20 & House MdAPE & House PE20 \\
+\midrule
+Baseline (OLS-derived 0.447/0.345/0.222) & 19.3 & 51\% & 22.7 & 44\% \\
+Equal weights (three positive categories) & 19.3 & 51\% & 22.6 & 44\% \\
+All eight categories, equal (keep-positives off) & 19.8 & 50\% & 22.9 & 44\% \\
+No composite (MCRAI signal removed) & 19.5 & 51\% & 22.6 & 45\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+\footnotesize{A further check perturbed the three baseline weights randomly by up to 25\% over 50 draws: MdAPE shifted by a mean of 0.20 points (condominium) and 0.34 points (houses), and at most 0.55 and 0.73 points respectively.}
+\end{table}
+
+Two readings follow from Table~\ref{tab:mcrai-sensitivity}. First, the valuation results are not an artifact of the particular MCRAI weights. Equal weighting, a composite built from all eight categories, removing the composite entirely, and random perturbation of the weights all landed within about half a percentage point of the deployed result. This is consistent with the SHAP attribution below, where the composite is a minor contributor for built homes. Second, the keep-positives screening described in Section~\ref{geospatial-feature-engineering} is mildly helpful rather than load-bearing: the positive-only composite edged out the all-eight alternative by roughly 0.2 to 0.5 points of typical error, so the decision improves interpretability without the study's conclusions resting on it.
+
 \subsection{\texorpdfstring{\textbf{SHAP Feature Attribution}}{SHAP Feature Attribution}}\label{shap-feature-attribution}
 
 SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum SHAP importance in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} shows this directly. These charts rank each feature by its mean absolute SHAP value, that is, the average size of its effect on the predicted price. The directional beeswarm versions, which also show whether high or low feature values push the prediction up or down, are provided in Appendix C. Grouping the SHAP contributions into blocks gives the clearest summary:
