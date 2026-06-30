@@ -93,7 +93,16 @@ No composite (MCRAI signal removed) & 19.5 & 51\% & 22.6 & 45\% \\
 \footnotesize{A further check perturbed the three baseline weights randomly by up to 25\% over 50 draws: MdAPE shifted by a mean of 0.20 points (condominium) and 0.34 points (houses), and at most 0.55 and 0.73 points respectively.}
 \end{table}
 
-Two readings follow from Table~\ref{tab:mcrai-sensitivity}. First, the valuation results are not an artifact of the particular MCRAI weights. Equal weighting, a composite built from all eight categories, removing the composite entirely, and random perturbation of the weights all landed within about half a percentage point of the deployed result. This is consistent with the SHAP attribution below, where the composite is a minor contributor for built homes. Second, the keep-positives screening described in Section~\ref{geospatial-feature-engineering} is mildly helpful rather than load-bearing: the positive-only composite edged out the all-eight alternative by roughly 0.2 to 0.5 points of typical error, so the decision improves interpretability without the study's conclusions resting on it.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{../EDA/plots/10_stratified_models/sensitivity_mcrai_weights.png}
+\caption[Sensitivity of deployed-model error to the MCRAI composite weighting\dots]{Sensitivity of deployed-model error to the MCRAI composite weighting (condominium and house models).}
+\label{fig:mcrai-sensitivity}
+\end{figure}
+
+Figure~\ref{fig:mcrai-sensitivity} summarizes the same result visually. The left panel plots the change in typical error (MdAPE) from the deployed baseline for each weighting variant against a shaded band of one percentage point, the threshold below which a difference is treated as negligible; every variant falls inside it. The right panel shows the spread of typical error across 50 random perturbations that shift the baseline weights by up to 25 percent, with the deployed baseline marked by a dashed line; both strata stay tightly clustered on that line. The vacant-lot model does not appear in either panel because it draws on the individual MCRAI categories rather than the composite, so it is unaffected by the composite weights by construction; its scoring is instead governed by the distance-decay exponent and search radii, which this experiment holds fixed.
+
+Two readings follow from Table~\ref{tab:mcrai-sensitivity} and Figure~\ref{fig:mcrai-sensitivity}. First, the valuation results are not an artifact of the particular MCRAI weights. Equal weighting, a composite built from all eight categories, removing the composite entirely, and random perturbation of the weights all landed within about half a percentage point of the deployed result. This is consistent with the SHAP attribution below, where the composite is a minor contributor for built homes. Second, the keep-positives screening described in Section~\ref{geospatial-feature-engineering} is mildly helpful rather than load-bearing: the positive-only composite edged out the all-eight alternative by roughly 0.2 to 0.5 points of typical error, so the decision improves interpretability without the study's conclusions resting on it.
 
 \subsection{\texorpdfstring{\textbf{SHAP Feature Attribution}}{SHAP Feature Attribution}}\label{shap-feature-attribution}
 
