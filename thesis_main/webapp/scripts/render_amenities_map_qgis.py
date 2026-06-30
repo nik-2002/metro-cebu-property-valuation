@@ -33,6 +33,11 @@ TMP_GEOJSON = "/tmp/amenity_points.geojson"
 
 WEBMERC = "EPSG:3857"
 
+# user-selected map framing (EPSG:4326) captured from the QGIS canvas 2026-06-30;
+# shared by all three Metro Cebu maps. xmin, ymin, xmax, ymax.
+USER_BBOX = (123.71034639970264, 10.189215977449143,
+             124.10600490419463, 10.501316464439972)
+
 # data category value -> (display label, color). tab10-style qualitative palette.
 CATEGORIES = [
     ("Education",   "Education",      "#1f77b4"),
@@ -97,27 +102,24 @@ def main():
         if lyr.isValid():
             project.addMapLayer(lyr)
 
-    # frame to the amenity-point extent, then clamp east edge to drop Olango
+    # user-selected framing captured from the QGIS canvas (EPSG:4326): all six
+    # LGUs in view with the eastern Olango islands cropped off.
     webmerc = QgsCoordinateReferenceSystem(WEBMERC)
-    xform = QgsCoordinateTransform(pts.crs(), webmerc, project)
-    ext = xform.transformBoundingBox(pts.extent())
-    listings = json.load(open(os.path.join(DATA, "listings.json")))
-    max_lon = max(r["longitude"] for r in listings)
-    ll = QgsCoordinateTransform(QgsCoordinateReferenceSystem("EPSG:4326"), webmerc, project)
-    east_cap = ll.transform(max_lon, sum(r["latitude"] for r in listings) / len(listings)).x()
-    mx, my = ext.width() * 0.04, ext.height() * 0.06
-    ext = QgsRectangle(ext.xMinimum() - mx, ext.yMinimum() - my,
-                       east_cap + ext.width() * 0.04, ext.yMaximum() + my)
+    ll2wm = QgsCoordinateTransform(QgsCoordinateReferenceSystem("EPSG:4326"), webmerc, project)
+    ext = ll2wm.transformBoundingBox(QgsRectangle(*USER_BBOX))
 
     layout = QgsPrintLayout(project)
     layout.initializeDefaults()
     page = layout.pageCollection().pages()[0]
-    PW, PH = 290, 250
+    # size the map frame to the captured bbox aspect so nothing framed is cropped
+    MAP_W, TOP, BOT = 270, 24, 14
+    MAP_H = MAP_W * ext.height() / ext.width()
+    PW, PH = MAP_W + 20, MAP_H + TOP + BOT
     page.setPageSize(QgsLayoutSize(PW, PH, QgsUnitTypes.LayoutMillimeters))
 
     m = QgsLayoutItemMap(layout)
-    m.attemptMove(QgsLayoutPoint(10, 24, QgsUnitTypes.LayoutMillimeters))
-    m.attemptResize(QgsLayoutSize(PW - 20, PH - 34, QgsUnitTypes.LayoutMillimeters))
+    m.attemptMove(QgsLayoutPoint(10, TOP, QgsUnitTypes.LayoutMillimeters))
+    m.attemptResize(QgsLayoutSize(MAP_W, MAP_H, QgsUnitTypes.LayoutMillimeters))
     m.setExtent(ext)
     m.setLayers([pts, lgu, basemap])
     m.setBackgroundColor(QColor("white"))
