@@ -2257,3 +2257,48 @@ cite the 24-row evidence CSV.**
 **Future (optional, not done here)**: β-decay / radii sensitivity would also move the Lot stratum but requires re-scoring (network recompute); deferred.
 
 **Next decision number: 57.**
+
+---
+
+## Decision 57 — MCRAI beta / radius sensitivity analysis (robustness check; no pipeline change) (2026-06-30)
+
+**Context**: The composite-weight sensitivity in Decision 56 did not touch the two upstream MCRAI scoring parameters that also shape the deployed features: the distance-decay exponent `BETA` and the category search radii. This heavier sensitivity run was implemented in `Scripts/sensitivity_mcrai_beta_radii.py` to cover **all three strata**, including Vacant Lot, which cannot be tested by composite-weight perturbation because it uses the individual MCRAI categories (Decision 49).
+
+**Design**: Non-destructive, ceteris paribus. The script reads `abt_condo.csv`, `abt_houses.csv`, and `abt_lot.csv` into memory only; loads the Metro Cebu road graph once; computes per-property, per-category network distances once at the widest required radius (`baseline radius * 1.25`); then re-derives all 8 `mcrai_*` category columns plus `mcrai_composite` for each variant from the cached distances. Each stratum is re-evaluated with the deployed `best_params` from `Models/stratified/deployment_manifest.json`; RF hyperparameters do **not** change across variants. Output written to `Models/sensitivity_mcrai_beta_radii.csv`.
+
+**Variants tested**:
+- Baseline: `BETA=2.0`, radius scale `1.00`
+- Beta only: `1.5`, `2.5`
+- Radii only: `0.75x`, `1.25x`
+
+**Results** (group-CV MdAPE, with delta vs this experiment's recomputed baseline):
+
+| Stratum | Variant | Beta | Radius scale | MdAPE | PE20 | Delta MdAPE vs baseline |
+|---|---|---:|---:|---:|---:|---:|
+| Condo | baseline | 2.0 | 1.00 | 19.31 | 50.92 | +0.00 |
+| Condo | beta_1.5 | 1.5 | 1.00 | 19.69 | 50.62 | +0.38 |
+| Condo | beta_2.5 | 2.5 | 1.00 | 19.32 | 51.08 | +0.02 |
+| Condo | radii_0.75x | 2.0 | 0.75 | 19.33 | 51.38 | +0.03 |
+| Condo | radii_1.25x | 2.0 | 1.25 | 19.57 | 50.77 | +0.26 |
+| Houses | baseline | 2.0 | 1.00 | 22.82 | 44.40 | +0.00 |
+| Houses | beta_1.5 | 1.5 | 1.00 | 22.90 | 44.73 | +0.08 |
+| Houses | beta_2.5 | 2.5 | 1.00 | 23.11 | 44.07 | +0.29 |
+| Houses | radii_0.75x | 2.0 | 0.75 | 23.16 | 44.15 | +0.35 |
+| Houses | radii_1.25x | 2.0 | 1.25 | 23.47 | 43.83 | +0.65 |
+| Vacant Lot | baseline | 2.0 | 1.00 | 39.27 | 25.91 | +0.00 |
+| Vacant Lot | beta_1.5 | 1.5 | 1.00 | 37.92 | 26.62 | -1.35 |
+| Vacant Lot | beta_2.5 | 2.5 | 1.00 | 40.30 | 24.97 | +1.04 |
+| Vacant Lot | radii_0.75x | 2.0 | 0.75 | 39.62 | 24.85 | +0.35 |
+| Vacant Lot | radii_1.25x | 2.0 | 1.25 | 38.99 | 27.09 | -0.28 |
+
+**Findings**:
+1. **Condo remains robust**: all perturbations stay within `+0.38pp` of baseline MdAPE, with the baseline/`beta_2.5`/`radii_0.75x` cases effectively tied.
+2. **Houses are also robust, but wider radii hurt more than beta changes**: the worst case is `radii_1.25x` at `+0.65pp`, while beta-only changes stay within `+0.29pp`.
+3. **Vacant Lot is the key addition and the most sensitive stratum**: beta changes move MdAPE by `-1.35pp` (`beta_1.5`) to `+1.04pp` (`beta_2.5`), while radius-only changes are smaller (`-0.28pp` to `+0.35pp`).
+4. The sensitivity pattern supports the current interpretation of the deployed pipeline: the MCRAI scoring choices are **not load-bearing** for the built-home strata, but they matter more for land, where the model keeps the individual accessibility categories by design (Decision 49).
+
+**Conclusion**: Keep the deployed MCRAI scoring baseline (`BETA=2.0`, current category radii) unchanged. The built-home strata are comfortably robust, and although Vacant Lot is somewhat beta-sensitive, the observed movement is still modest enough for a robustness note rather than a pipeline revision this close to defense. If a future post-defense refinement is pursued, `BETA` is the first MCRAI scoring knob worth revisiting for land.
+
+**Status**: Done. No change to the deployed models, manifest, or processed ABT files. This is a robustness appendix / Chapter 7 discussion item, not a pipeline change.
+
+**Next decision number: 58.**
