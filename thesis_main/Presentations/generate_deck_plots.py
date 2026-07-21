@@ -56,27 +56,30 @@ def funnel():
     ret    = [r[2] for r in rows]
     y = range(len(rows))
 
-    fig, ax = plt.subplots(figsize=(11, 6.2))
-    ax.barh(y, raw, color=ACCENT3, height=0.66, label="Raw scraped")
-    ax.barh(y, ret, color=ACCENT,  height=0.66, label="Retained in ABT")
+    fig, ax = plt.subplots(figsize=(11.5, 6.6))
+    xmax = max(raw); off = xmax * 0.013
+    ax.barh(y, raw, color=ACCENT3, height=0.60, label="Raw scraped", zorder=1)
+    ax.barh(y, ret, color=ACCENT,  height=0.60, label="Retained in ABT", zorder=2)
     for i, (rw, rt) in enumerate(zip(raw, ret)):
-        ax.text(rw + 90, i, f"{rw:,}", va="center", ha="left", fontsize=12, color=MUTED)
+        # both counts sit just past the END of their own bar — never inside, never clipped
+        ax.text(rw + off, i, f"{rw:,}", va="center", ha="left", fontsize=12, color=MUTED)
         if rt > 0:
-            ax.text(rt - 90, i, f"{rt:,}", va="center", ha="right", fontsize=12,
-                    color="white", fontweight="bold")
+            ax.text(rt + off, i, f"{rt:,}", va="center", ha="left", fontsize=12,
+                    color=ACCENT, fontweight="bold")
         else:
-            ax.text(120, i, "excluded — contamination", va="center", ha="left",
+            ax.text(off, i, "excluded — contamination", va="center", ha="left",
                     fontsize=11, color=RED, fontstyle="italic")
     ax.set_yticks(list(y)); ax.set_yticklabels(labels, fontsize=13)
     ax.invert_yaxis()
     ax.set_xlabel("Listings", fontsize=12)
-    ax.set_xlim(0, 5200)
-    ax.legend(loc="lower right", frameon=False, fontsize=12)
+    ax.set_xlim(0, xmax * 1.16)
     ax.set_title("16,561 raw listings  →  3,616 clean open-market records",
-                 fontsize=18, fontweight="bold", color=ACCENT, loc="left", pad=16)
+                 fontsize=18, fontweight="bold", color=ACCENT, loc="left", pad=18)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.09), ncol=2,
+              frameon=False, fontsize=12)
     style_ax(ax)
-    fig.tight_layout()
-    fig.savefig(os.path.join(OUT, "funnel_collection.png"), dpi=150)
+    fig.savefig(os.path.join(OUT, "funnel_collection.png"), dpi=150,
+                bbox_inches="tight", pad_inches=0.22)
     plt.close(fig)
     print("wrote funnel_collection.png")
 
@@ -394,6 +397,18 @@ def pipeline_flow():
     print("wrote pipeline_flow.png")
 
 
+# ============================================================ 11. MCRAI FORMULA (image)
+def mcrai_formula():
+    # Rendered as an image so PowerPoint never has to typeset subscripts/sigma.
+    fig = plt.figure(figsize=(7.4, 1.5)); fig.patch.set_alpha(0)
+    tex = (r"$\mathrm{MCRAI}_{ic}=\sum_{j\in c}\dfrac{1}{\max(d_{ij},\,0.5)^{2}}$")
+    fig.text(0.5, 0.5, tex, ha="center", va="center", fontsize=30, color="#1E2530")
+    fig.savefig(os.path.join(OUT, "formula_mcrai.png"), dpi=220,
+                bbox_inches="tight", pad_inches=0.18, transparent=True)
+    plt.close(fig)
+    print("wrote formula_mcrai.png")
+
+
 if __name__ == "__main__":
     funnel()
     ablation()
@@ -405,4 +420,5 @@ if __name__ == "__main__":
     mcrai_weighting()
     feature_selection()
     pipeline_flow()
+    mcrai_formula()
     print("OUT:", OUT)
