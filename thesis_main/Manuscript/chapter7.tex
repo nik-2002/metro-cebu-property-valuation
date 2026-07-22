@@ -111,7 +111,7 @@ Two readings follow from Table~\ref{tab:mcrai-sensitivity} and Figure~\ref{fig:m
 
 \subsection{SHAP Feature Attribution}\label{shap-feature-attribution}
 
-SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum SHAP importance in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} shows this directly. These charts rank each feature by its mean absolute SHAP value, that is, the average size of its effect on the predicted price. The directional beeswarm versions, which also show whether high or low feature values push the prediction up or down, are provided in Appendix C. Grouping the SHAP contributions into blocks gives the clearest summary:
+SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum SHAP importance in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} shows this directly. These charts rank each feature by its mean absolute SHAP value, that is, the average size of its effect on the predicted price. The directional beeswarm versions, which also show whether high or low feature values push the prediction up or down, are provided in Appendix~\ref{app:shap}. Grouping the SHAP contributions into blocks gives the clearest summary:
 
 \begin{itemize}
 \item \textbf{Condominium} (Figure~\ref{fig:shap-condo}): neighborhood price level (spatial lag, about 34 percent of the SHAP magnitude) and CBD-distance access (about 30 percent) led, with unit size and bedrooms next. Administrative benchmarks contributed little.
@@ -119,13 +119,13 @@ SHAP was applied to each deployed Random Forest so that its prediction logic cou
 \item \textbf{Vacant Lot} (Figure~\ref{fig:shap-lot}): distance to the Cebu Business Park alone accounted for close to half of the model's attribution, and the individual MCRAI amenity categories together carried about 22 percent, their largest share in any stratum.
 \end{itemize}
 
-Across all three strata, location-related features (CBD distances, MCRAI, and the spatial lag) carried the large majority of the attribution, which is consistent with the value-driver question in RQ1. The substantive interpretation of why these features dominate in Metro Cebu is developed in Chapter 8.
+Across all three strata, location-related features (CBD distances, MCRAI, and the spatial lag) carried the large majority of the attribution, which is consistent with the value-driver question in RQ1. The beeswarm versions in Appendix~\ref{app:shap} add the direction behind these magnitudes: a higher neighborhood price lag and shorter distances to the CBD nodes push the predicted value upward, and the retained MCRAI access lifts value where amenities are denser. Because these directions match the signs from the OLS screening, the tree models did not learn counterintuitive reversals of the hedonic relationships. The substantive interpretation of why these features dominate in Metro Cebu is developed in Chapter 8.
 
 \begin{figure}[H]
 \centering
 \caption{Mean Absolute SHAP Value by Feature: Condominium Model}
 \includegraphics[width=\figstd]{../EDA/plots/10_stratified_models/shap_condo_rf_bar.png}
-\figurenote{Deployed condominium Random Forest, top 12 features.}
+\figurenote{Top 12 features of the deployed condominium Random Forest, ranked by mean absolute SHAP value.}
 \label{fig:shap-condo}
 \end{figure}
 
@@ -133,7 +133,7 @@ Across all three strata, location-related features (CBD distances, MCRAI, and th
 \centering
 \caption{Mean Absolute SHAP Value by Feature: House Model}
 \includegraphics[width=\figstd]{../EDA/plots/10_stratified_models/shap_houses_rf_bar.png}
-\figurenote{Deployed house Random Forest, top 12 features.}
+\figurenote{Top 12 features of the deployed house Random Forest, ranked by mean absolute SHAP value.}
 \label{fig:shap-houses}
 \end{figure}
 
@@ -141,7 +141,7 @@ Across all three strata, location-related features (CBD distances, MCRAI, and th
 \centering
 \caption{Mean Absolute SHAP Value by Feature: Vacant-Lot Model}
 \includegraphics[width=\figstd]{../EDA/plots/10_stratified_models/shap_lot_rf_bar.png}
-\figurenote{Deployed vacant-lot Random Forest, top 12 features.}
+\figurenote{Top 12 features of the deployed vacant-lot Random Forest, ranked by mean absolute SHAP value.}
 \label{fig:shap-lot}
 \end{figure}
 

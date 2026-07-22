@@ -101,19 +101,19 @@ Total & 3{,}616 & 100.00\% & 1{,}391 & 1{,}301 & 924 \\
 \bottomrule
 \end{tabular}
 \end{center}
-\textit{Note.} The Condo, House, and Lot columns group the full assembled ABT by property type; the House column aggregates house-and-lot, single-detached, townhouse, and apartment listings. These full-ABT groups (1{,}391, 1{,}301, and 924) are larger than the modeling strata (1{,}300, 1{,}223, and 849) because 244 rows were held out of fitting by the model-requirement filters described in Chapter~5. Chapter~4 reports the finer property-type breakdown.
+\textit{Note.} Columns group the full assembled ABT by property type (House aggregates house-and-lot, single-detached, townhouse, and apartment). These full-ABT counts exceed the modeling strata because 244 rows were held out at fitting (Chapter~5). Chapter~4 gives the finer property-type breakdown.
 \end{table}
 
 \clearpage
 \section{SHAP Beeswarm Plots}\label{app:shap}
 
-Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). The beeswarm plots in Figures~\ref{fig:shap-condo-bee}, \ref{fig:shap-houses-bee}, and \ref{fig:shap-lot-bee} carry the same ranking but add the directional detail. Each dot is one property; its horizontal position is that property's SHAP value (how much the feature pushed the predicted price per square meter up or down), and its color is the underlying feature value (red high, blue low). A band of red dots on the right therefore means high values of that feature raise the prediction. The vertical spread only separates overlapping dots and has no other meaning.
+Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). The beeswarm plots in Figures~\ref{fig:shap-condo-bee}, \ref{fig:shap-houses-bee}, and \ref{fig:shap-lot-bee} carry the same ranking but add the direction of each feature's effect; the note under Figure~\ref{fig:shap-condo-bee} explains how to read them.
 
 \begin{figure}[H]
 \centering
 \caption{SHAP Beeswarm Summary: Condominium Model}
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_summary.png}
-\figurenote{Deployed condominium Random Forest.}
+\figurenote{Deployed condominium Random Forest, top 20 features. Each dot is one condominium listing, and its horizontal position is that listing's SHAP value --- how far, and in which direction, the feature moved the predicted price per square meter. Dots to the right of zero raised the prediction; dots to the left lowered it. Color encodes the underlying feature value, from low (blue) to high (red), so a band of red dots on the right means high values of that feature push value upward. Features are ordered from most to least important, and the vertical spread only separates overlapping dots.}
 \label{fig:shap-condo-bee}
 \end{figure}
 
@@ -121,7 +121,7 @@ Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). 
 \centering
 \caption{SHAP Beeswarm Summary: House Model}
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_summary.png}
-\figurenote{Deployed house Random Forest.}
+\figurenote{Deployed house Random Forest, top 20 features; see Figure~\ref{fig:shap-condo-bee} for how to read the beeswarm.}
 \label{fig:shap-houses-bee}
 \end{figure}
 
@@ -129,7 +129,7 @@ Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). 
 \centering
 \caption{SHAP Beeswarm Summary: Vacant-Lot Model}
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_summary.png}
-\figurenote{Deployed vacant-lot Random Forest.}
+\figurenote{Deployed vacant-lot Random Forest, top 20 features; see Figure~\ref{fig:shap-condo-bee} for how to read the beeswarm.}
 \label{fig:shap-lot-bee}
 \end{figure}
 
@@ -152,21 +152,24 @@ A funnel shape, where the spread of residuals widens or narrows across fitted va
 \begin{figure}[H]
 \centering
 \caption{OLS Residuals Versus Fitted Values: Condominium Stratum}
-\includegraphics[width=0.72\textwidth]{../EDA/plots/06_ols_residuals/Condo_residuals_vs_fitted.png}
+\includegraphics[width=\textwidth]{../EDA/plots/06_ols_residuals/Condo_residuals_vs_fitted.png}
+\figurenote{OLS comparator, condominium stratum. Points are residuals plotted against fitted log-price; the solid line is a LOWESS trend and the dashed line marks the zero-residual reference. A funnel-shaped spread or a curved trend would flag heteroscedasticity or misspecification.}
 \label{fig:resid-condo}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{OLS Residuals Versus Fitted Values: House Stratum}
-\includegraphics[width=0.72\textwidth]{../EDA/plots/06_ols_residuals/Houses_residuals_vs_fitted.png}
+\includegraphics[width=\textwidth]{../EDA/plots/06_ols_residuals/Houses_residuals_vs_fitted.png}
+\figurenote{OLS comparator, house stratum; see Figure~\ref{fig:resid-condo} for how to read the plot.}
 \label{fig:resid-houses}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{OLS Residuals Versus Fitted Values: Vacant-Lot Stratum}
-\includegraphics[width=0.72\textwidth]{../EDA/plots/06_ols_residuals/Lot_residuals_vs_fitted.png}
+\includegraphics[width=\textwidth]{../EDA/plots/06_ols_residuals/Lot_residuals_vs_fitted.png}
+\figurenote{OLS comparator, vacant-lot stratum; see Figure~\ref{fig:resid-condo} for how to read the plot.}
 \label{fig:resid-lot}
 \end{figure}
 
@@ -178,21 +181,24 @@ Variance inflation factors above the conventional thresholds (5 to 10) flag pred
 \begin{figure}[H]
 \centering
 \caption{Variance Inflation Factors: Condominium Stratum}
-\includegraphics[width=0.72\textwidth]{../EDA/plots/05_multicollinearity/Condo_vif.png}
+\includegraphics[width=\textwidth]{../EDA/plots/05_multicollinearity/Condo_vif.png}
+\figurenote{OLS comparator, condominium stratum. Each bar is a retained feature's variance inflation factor; higher bars indicate stronger collinearity with the other predictors, and values above the conventional 5--10 range motivated the per-stratum feature trimming.}
 \label{fig:vif-condo}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{Variance Inflation Factors: House Stratum}
-\includegraphics[width=0.72\textwidth]{../EDA/plots/05_multicollinearity/Houses_vif.png}
+\includegraphics[width=\textwidth]{../EDA/plots/05_multicollinearity/Houses_vif.png}
+\figurenote{OLS comparator, house stratum; see Figure~\ref{fig:vif-condo} for how to read the plot.}
 \label{fig:vif-houses}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{Variance Inflation Factors: Vacant-Lot Stratum}
-\includegraphics[width=0.72\textwidth]{../EDA/plots/05_multicollinearity/Lot_vif.png}
+\includegraphics[width=\textwidth]{../EDA/plots/05_multicollinearity/Lot_vif.png}
+\figurenote{OLS comparator, vacant-lot stratum; see Figure~\ref{fig:vif-condo} for how to read the plot.}
 \label{fig:vif-lot}
 \end{figure}
 

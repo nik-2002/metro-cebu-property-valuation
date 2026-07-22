@@ -40,8 +40,10 @@ Total modeled & 3{,}372 & Rows entering the three strata \\
 \bottomrule
 \end{tabular}
 \end{center}
-\textit{Note.} The three strata sum to 3{,}372 of the 3{,}616 assembled open-market rows, and these 3{,}372 are the rows used to fit the models. The 244-row difference comes from the model-requirement filters applied at fitting: rows with no computable \emph{price\_per\_sqm} target, rows with no same-type neighbor within 500 m for the spatial-lag feature, and vacant lots outside the lot-scope band (area outside 80--2{,}000 sqm or price below half the BIR zonal value). These rows are clean but cannot serve as training examples, so they remain in the assembled ABT for description while the stratified models are fit on the 3{,}372-row modeling subset.
+\textit{Note.} The three strata sum to the 3{,}372-row modeling subset used to fit the models; the remaining 244 of the 3{,}616 assembled rows were held out by the model-requirement filters (see below).
 \end{table}
+
+The 244-row gap between the assembled ABT and the modeling subset comes from three model-requirement filters applied at fitting: rows with no computable \emph{price\_per\_sqm} target, rows with no same-type neighbor within 500 m for the spatial-lag feature, and vacant lots outside the lot-scope band. These rows are clean but cannot serve as training examples, so they stay in the assembled ABT for description only.
 
 The vacant-lot stratum used an additional scope filter, keeping lots between 80 and 2{,}000 square meters with a price of at least half the BIR zonal value, to exclude commercial-scale parcels and obvious data errors.
 
