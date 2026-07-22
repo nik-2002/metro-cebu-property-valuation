@@ -207,18 +207,24 @@ Variance inflation factors above the conventional thresholds (5 to 10) flag pred
 
 The prototype web-based decision-support application has three views, captured below. The backend runs the exact deployed Random Forest models, so the Property Predictor view shows a live prediction with its SHAP contribution breakdown.
 
+\begingroup
+\setlength{\intextsep}{3pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
 \begin{figure}[H]
 \centering
 \caption{Prototype Web Application: Market Map View}
-\includegraphics[width=\textwidth]{diagrams/webapp_market_map.png}
+\includegraphics[width=0.87\textwidth]{diagrams/webapp_market_map.png}
 \figurenote{Open-market listings with filters and market-intelligence summaries.}
 \label{pic:market}
 \end{figure}
 
+\clearpage
+
 \begin{figure}[H]
 \centering
 \caption{Prototype Web Application: Price Surface View}
-\includegraphics[width=\textwidth]{diagrams/webapp_price_surface.png}
+\includegraphics[width=0.87\textwidth]{diagrams/webapp_price_surface.png}
 \figurenote{Predicted price-per-square-meter surface aggregated by barangay.}
 \label{pic:surface}
 \end{figure}
@@ -226,7 +232,8 @@ The prototype web-based decision-support application has three views, captured b
 \begin{figure}[H]
 \centering
 \caption{Prototype Web Application: Property Predictor View}
-\includegraphics[width=\textwidth]{diagrams/webapp_predictor.png}
+\includegraphics[width=0.87\textwidth]{diagrams/webapp_predictor.png}
 \figurenote{Property-level prediction with its SHAP contribution breakdown.}
 \label{pic:predictor}
 \end{figure}
+\endgroup
