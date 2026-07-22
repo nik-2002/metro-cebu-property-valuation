@@ -1,12 +1,12 @@
-\section{Methodology}\label{methodology}
+\section{Chapter 3: Methodology}\label{methodology}
 
-\subsection{\texorpdfstring{\textbf{Research Design}}{Research Design}}\label{research-design}
+\subsection{Research Design}\label{research-design}
 
 This study used a quantitative, non-experimental design to model residential property values in Metro Cebu. The analysis was predictive in that it estimated prices from observed property characteristics, and prescriptive in that the results were later organized for spatial decision support. The training target was the price per square meter of each property (\emph{price\_per\_sqm}), log-transformed as \emph{log\_price} for model fitting. A per-square-meter target was used because it places condominiums, houses, and bare lots on a comparable unit basis and reduces the distortion that raw total price introduces when property sizes differ widely. Predicted unit prices were multiplied by floor or lot area to recover a total price in Philippine Peso for reporting. The independent variables included structural, geospatial, and administrative features. Macroeconomic indicators were reviewed during study design but were not retained in the final fitted specification.
 
 Rather than fitting one model across all property types, the study estimated three separate models, one for each property stratum: condominiums, houses, and vacant lots. This stratified design responded directly to a problem identified during the earlier defense: a single model trained on mixed property types must reconcile price-per-square-meter levels that differ several times over. Vertical condominium space, built houses, and bare land are priced on different logics, and pooling them inflates error and blurs interpretation. The hedonic literature supports this choice, finding that housing markets are segmented by the sorting of heterogeneous households and that stratified models fit better than pooled ones \parencite{droes2019,usman2020}. Splitting the data by property type let each model learn the value structure of its own market segment. The strata sizes are shown in Table~\ref{tab:chapter3-strata}.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Open-Market Modeling Strata}
 \label{tab:chapter3-strata}
 \begin{center}
@@ -34,11 +34,11 @@ Within each stratum, three supervised learning approaches were compared in order
 \end{enumerate}
 
 
-\subsection{\texorpdfstring{\textbf{Data Sources}}{Data Sources}}\label{data-sources}
+\subsection{Data Sources}\label{data-sources}
 
 Because direct deed-of-sale transaction records are not publicly accessible in the Philippines, the study used open-market online listings as the closest available proxy for current residential prices. Listings represent asking prices rather than settled transactions, but at scale they capture pricing patterns that are often missing from sparse official records \parencite{sousa2024}. To widen coverage and reduce dependence on any single platform's inventory, listings were collected from several property portals rather than one site. Table~\ref{tab:chapter3-data-sources} summarizes the data sources and their roles.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Summary of Data Sources Used in the Thesis Workflow}
 \label{tab:chapter3-data-sources}
 \begin{center}
@@ -46,16 +46,16 @@ Because direct deed-of-sale transaction records are not publicly accessible in t
 \toprule
 Source & Role & Volume & Nature \\
 \midrule
-\textbf{Open-Market Listings} & Training label source & Lamudi, FilipinoHomes, DotProperty (3{,}616 rows) & Asking / market-facing \\
-\textbf{BIR Zonal Values} & Administrative benchmark & Per barangay & Static / regulatory \\
-\textbf{Google Maps APIs} & Geocoding and POI retrieval & Per property & Geospatial / dynamic \\
-\textbf{OpenStreetMap Road Network} & Routing and network topology & Per property / destination pair & Geospatial / open data \\
+Open-Market Listings & Training label source & Lamudi, FilipinoHomes, DotProperty (3{,}616 rows) & Asking / market-facing \\
+BIR Zonal Values & Administrative benchmark & Per barangay & Static / regulatory \\
+Google Maps APIs & Geocoding and POI retrieval & Per property & Geospatial / dynamic \\
+OpenStreetMap Road Network & Routing and network topology & Per property / destination pair & Geospatial / open data \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-\subsubsection{\texorpdfstring{\textbf{Open-Market Listings}}{Open-Market Listings}}\label{secondary-data-market-ceiling-price-online-listings}
+\subsubsection{Open-Market Listings}\label{secondary-data-market-ceiling-price-online-listings}
 
 To represent current asking prices in the residential market, the study collected listings from public online property portals. These listings became the training scope for the deployed price-surface model, and they were gathered in two phases.
 
@@ -63,14 +63,14 @@ The first phase scraped Lamudi, the largest portal in the study, in two scraper 
 
 The second phase widened coverage to two additional portals: FilipinoHomes, accessed through its backend JSON interface, which returned precise embedded coordinates for 1{,}203 listings; and DotProperty, which contributed 565 listings geocoded from their barangay-level address text. A fourth portal, OnePropertee, was scraped but dropped from the final dataset after its records were found to contaminate the model: its per-square-meter prices were frequently mis-extracted and its listings were geocoded to city centroids, which together produced large, systematic over-predictions on its rows. After merging, de-duplication, and the integrity filters described in Section~3.3, the open-market Analytics Base Table held 3{,}616 rows. A sample of the cleaned listing structure is documented in Appendix A.
 
-\subsubsection{\texorpdfstring{\textbf{Administrative and Macroeconomic Data}}{Administrative and Macroeconomic Data}}\label{administrative-and-macroeconomic-data}
+\subsubsection{Administrative and Macroeconomic Data}\label{administrative-and-macroeconomic-data}
 
 \begin{itemize}
 \item \textbf{BIR Zonal Values}: Official zonal values per barangay, used as administrative benchmark features and as the basis for the derived valuation-gap diagnostic \parencite{bir_nd}.
 \item \textbf{RPPI Review}: The BSP residential price index was reviewed during study design as a possible macro-control, but it was not retained in the final fitted specification \parencite{bsp2025}. The deployed model is cross-sectional and listing-level, so quarterly RPPI movements were not joined as an active model feature in the final ABT.
 \end{itemize}
 
-\subsubsection{\texorpdfstring{\textbf{Geospatial Data Sources}}{Geospatial Data Sources}}\label{geospatial-data-sources}
+\subsubsection{Geospatial Data Sources}\label{geospatial-data-sources}
 
 \begin{itemize}
 \item \textbf{Google Maps Geocoding API}: Converted property addresses into latitude/longitude coordinates and supported reverse geocoding of barangay names for the BIR join \parencite{googlemaps2025}.
@@ -78,13 +78,13 @@ The second phase widened coverage to two additional portals: FilipinoHomes, acce
 \item \textbf{OpenStreetMap Road Network}: Provided the street graph used for network-distance computation through the \emph{osmnx} workflow \parencite{boeing2017osmnx,boeing2019urban}. In the final implementation, OSM was used for routing and network topology rather than as the primary POI source.
 \end{itemize}
 
-\subsubsection{\texorpdfstring{\textbf{Target Variable}}{Target Variable}}\label{target-variable}
+\subsubsection{Target Variable}\label{target-variable}
 
 The predictive task of the thesis is the estimation of open-market residential price. The target variable was \emph{price\_per\_sqm}, fitted on the log scale as \emph{log\_price}; predictions were back-transformed and multiplied by area to recover total price for reporting and for the OLS baseline comparison.
 
 The complete feature matrix schema is documented in Appendix A.
 
-\subsubsection{\texorpdfstring{\textbf{Validation Layer: Human-in-the-Loop}}{Validation Layer: Human-in-the-Loop}}\label{validation-layer-human-in-the-loop}
+\subsubsection{Validation Layer: Human-in-the-Loop}\label{validation-layer-human-in-the-loop}
 
 Licensed real estate brokers from the CPRE network were included as a validation layer, not to replace statistical evaluation, but to check whether the model outputs remained plausible within local market practice. Their role was limited to two tasks:
 
@@ -94,12 +94,13 @@ Licensed real estate brokers from the CPRE network were included as a validation
 \end{enumerate}
 
 
-\subsection{\texorpdfstring{\textbf{Data Pipeline}}{Data Pipeline}}\label{data-pipeline}
+\subsection{Data Pipeline}\label{data-pipeline}
 
 The data preparation process proceeded through the stages summarized in Figure~\ref{fig:data-pipeline} and described below, implemented in Python.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
+\caption{Data Pipeline From Portal Ingestion to Modeling Strata}
 \begin{tikzpicture}[
   font=\footnotesize,
   node distance=8mm and 9mm,
@@ -121,7 +122,7 @@ The data preparation process proceeded through the stages summarized in Figure~\
 \draw[arr] (gis) -- (abt);
 \draw[arr] (abt) -- (strat);
 \end{tikzpicture}
-\caption[Data pipeline from multi-portal open-market ingestion\dots]{Data pipeline from multi-portal open-market ingestion to the modeling-ready Analytics Base Table and the three modeling strata.}
+\figurenote{Flow from multi-portal open-market ingestion to the modeling-ready Analytics Base Table and the three modeling strata.}
 \label{fig:data-pipeline}
 \end{figure}
 
@@ -138,9 +139,11 @@ The data preparation process proceeded through the stages summarized in Figure~\
 \textbf{Tools}: Python (Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Requests, Playwright, OSMnx), and the Google Maps Geocoding and Places APIs.
 
 
-\subsection{\texorpdfstring{\textbf{Feature Engineering}}{Feature Engineering}}\label{feature-engineering}
+\subsection{Feature Engineering}\label{feature-engineering}
 
-\begin{table}[htbp]
+The engineered features fall into the categories listed in Table~\ref{tab:chapter3-feature-categories}.
+
+\begin{table}[H]
 \caption{Feature Categories Used in the Thesis Workflow}
 \label{tab:chapter3-feature-categories}
 \begin{center}
@@ -148,13 +151,13 @@ The data preparation process proceeded through the stages summarized in Figure~\
 \toprule
 Category & Features & Source \\
 \midrule
-\textbf{Structural} & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, imputation flags & Listing portals \\
-\textbf{Locational} & City, Barangay, Latitude/Longitude & Google Maps API \\
-\textbf{Geospatial} & Network distance to Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport & Geocoding + OSM road network \\
-\textbf{MCRAI} & Eight component scores (education, grocery, health, hospitals, recreation, security, tourism, retail density) plus \emph{mcrai\_composite} & Places API POI inventory + network routing \\
-\textbf{Spatial Lag} & Mean price of neighboring same-type properties within 500 m & Computed from data \\
-\textbf{Administrative} & BIR zonal-value features per barangay & BIR schedules \\
-\textbf{Metadata} & Source and market-segment fields retained in ABT but excluded from the fitted feature matrix & Engineered \\
+Structural & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, imputation flags & Listing portals \\
+Locational & City, Barangay, Latitude/Longitude & Google Maps API \\
+Geospatial & Network distance to Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport & Geocoding + OSM road network \\
+MCRAI & Eight component scores (education, grocery, health, hospitals, recreation, security, tourism, retail density) plus \emph{mcrai\_composite} & Places API POI inventory + network routing \\
+Spatial Lag & Mean price of neighboring same-type properties within 500 m & Computed from data \\
+Administrative & BIR zonal-value features per barangay & BIR schedules \\
+Metadata & Source and market-segment fields retained in ABT but excluded from the fitted feature matrix & Engineered \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -162,7 +165,7 @@ Category & Features & Source \\
 
 \textbf{Engineered variables}: \emph{price\_per\_sqm}, \emph{valuation\_gap} (a diagnostic field, not a model feature), and derived log-price terms for the modeling target and baseline regression. The listing \emph{source} field was kept in the ABT for auditing but excluded from the feature matrix, because it is not available at prediction time for a new property.
 
-\subsubsection{\texorpdfstring{\textbf{Geospatial Feature Engineering}}{Geospatial Feature Engineering}}\label{geospatial-feature-engineering}
+\subsubsection{Geospatial Feature Engineering}\label{geospatial-feature-engineering}
 
 Geospatial feature construction was the part of the method that most directly connected the valuation model to the urban structure of Metro Cebu. Rather than treating location as a background descriptor, this stage translated network accessibility, amenity access, and neighborhood context into variables that could enter the model explicitly.
 
@@ -179,7 +182,9 @@ MCRAI_{ic} = \sum_{j \in c} \frac{1}{\max(d_{ij}, 0.5)^{\beta}}, \qquad \beta = 
 
 where \(d_{ij}\) is the road-network distance in kilometers from property \(i\) to amenity \(j\), floored at 0.5 km to prevent singular values for immediately adjacent points. Each category was evaluated only within its designated search radius \(r_c\), reflecting the fact that some amenities operate at neighborhood scale while others serve wider urban catchments.
 
-\begin{table}[htbp]
+Table~\ref{tab:chapter3-mcrai-radii} lists each category, its representative points of interest, and its search radius.
+
+\begin{table}[H]
 \caption{MCRAI Categories and Search Radii}
 \label{tab:chapter3-mcrai-radii}
 \begin{center}
@@ -207,9 +212,11 @@ The \emph{mcrai\_*} component scores were available individually, and a separate
 \item \textbf{Spatial Lag Variable}: To capture neighborhood price effects, \emph{spatial\_lag\_price} was computed as the mean price of other \emph{same-type} properties within a 500 m neighborhood of each target property. Restricting the neighborhood to the same stratum kept the comparison like-for-like, and the 500 m radius matched the micro-scale at which the MCRAI amenity signals operate. Properties with no same-type neighbor within this radius received a null lag and were excluded from model fitting. This variable operationalized Tobler's First Law of Geography in a form that could be used directly by the regression and tree models \parencite{tobler1970movie}.
 \end{enumerate}
 
-\subsection{\texorpdfstring{\textbf{Pre-processing}}{Pre-processing}}\label{pre-processing}
+\subsection{Pre-processing}\label{pre-processing}
 
-\begin{table}[htbp]
+Table~\ref{tab:chapter3-preprocessing} summarizes the pre-processing steps applied to the modeling subset before fitting.
+
+\begin{table}[H]
 \caption{Pre-processing Steps Applied to the Modeling Subset}
 \label{tab:chapter3-preprocessing}
 \begin{center}
@@ -217,25 +224,25 @@ The \emph{mcrai\_*} component scores were available individually, and a separate
 \toprule
 Step & Method & Rationale \\
 \midrule
-\textbf{Integrity Filtering} & Remove rows with null \emph{price\_per\_sqm}, null \emph{spatial\_lag\_price}, or explicit integrity flags & Keeps the modeling subset consistent with the final pipeline \\
-\textbf{Log Transformation} & Apply log transform to \emph{price\_per\_sqm} to form the modeling target & Reduces right skew while keeping a per-unit target \\
-\textbf{Missing Values} & Median imputation for remaining numeric fields; explicit zeros for structurally absent or all-null fields & Preserves usable rows while handling sparse engineered fields \\
-\textbf{Encoding} & Dummy encoding for city and property type & Required for the fitted design matrix while keeping barangay for joins and reporting \\
+Integrity Filtering & Remove rows with null \emph{price\_per\_sqm}, null \emph{spatial\_lag\_price}, or explicit integrity flags & Keeps the modeling subset consistent with the final pipeline \\
+Log Transformation & Apply log transform to \emph{price\_per\_sqm} to form the modeling target & Reduces right skew while keeping a per-unit target \\
+Missing Values & Median imputation for remaining numeric fields; explicit zeros for structurally absent or all-null fields & Preserves usable rows while handling sparse engineered fields \\
+Encoding & Dummy encoding for city and property type & Required for the fitted design matrix while keeping barangay for joins and reporting \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
 
-\subsection{\texorpdfstring{\textbf{Modeling Strategy}}{Modeling Strategy}}\label{modeling-strategy}
+\subsection{Modeling Strategy}\label{modeling-strategy}
 
-\subsubsection{\texorpdfstring{\textbf{Stratified Models and Per-Stratum Feature Selection}}{Stratified Models and Per-Stratum Feature Selection}}\label{stratified-models}
+\subsubsection{Stratified Models and Per-Stratum Feature Selection}\label{stratified-models}
 
 Each property stratum was fitted separately, and the feature set for each stratum was trimmed using evidence from the exploratory analysis rather than kept identical across all three. The trimming drew on variance inflation factors, OLS coefficient significance, leave-one-block ablation, and MCRAI zero-rate checks. This produced a methodological contribution of its own: the model recognizes that different property types are priced by different geospatial structure.
 
 All three strata dropped the redundant BIR log and commercial-zonal columns and the two road-class distance features, which added little once the eight node distances were present. The condominium and house models then collapsed the eight individual MCRAI categories into the single \emph{mcrai\_composite}, because for built homes the categories were strongly inter-correlated (roughly 0.57 to 0.96) and behaved as one accessibility summary. The vacant-lot model kept six individual MCRAI categories (education, grocery, health, hospitals, recreation, tourism), which were informative for bare land, but dropped the composite (which was collinear with its own components), security (an uneven data layer with a high zero rate), and retail density (near-zero correlation with lot price). The net feature counts were 21 for condominiums, 24 for houses, and 22 for vacant lots, at accuracy comparable to the fuller feature sets. The plain reading is that built homes are summarized well by one accessibility index, while bare land responds to specific kinds of amenity access.
 
-\subsubsection{\texorpdfstring{\textbf{Hedonic Equation}}{Hedonic Equation}}\label{hedonic-equation}
+\subsubsection{Hedonic Equation}\label{hedonic-equation}
 
 The hedonic regression took the following log-linear form for the baseline comparator within each stratum:
 
@@ -249,22 +256,24 @@ The hedonic regression took the following log-linear form for the baseline compa
 
 The dependent variable is the log of price per square meter (\emph{log\_price}), consistent with the training target used for OLS, Random Forest, and XGBoost. Predicted unit prices are back-transformed and multiplied by area to recover total price before the business-facing figures are reported. In this form, the hedonic model retains its interpretive structure while allowing administrative and spatial variables to enter directly into the price equation. This makes it possible to compare a more conventional valuation framework with the tree-based models without stripping out the locational features that are central to the study.
 
-\subsubsection{\texorpdfstring{\textbf{Evaluation Protocol: Leak-Free Cross-Validation}}{Evaluation Protocol: Leak-Free Cross-Validation}}\label{evaluation-protocol}
+\subsubsection{Evaluation Protocol: Leak-Free Cross-Validation}\label{evaluation-protocol}
 
 Model quality was estimated with five-fold grouped cross-validation (GroupKFold), where the groups were coordinate clusters. Listings that shared the same location were forced into the same fold so that a property used in training could not reappear, in near-identical spatial form, in the test fold. This guarded against the coordinate leakage that would otherwise flatter a spatial model, since the spatial lag and neighborhood features can make co-located listings look almost like copies of one another. All reported headline metrics were computed out-of-fold under this protocol.
 
-\subsubsection{\texorpdfstring{\textbf{Hyperparameter Tuning}}{Hyperparameter Tuning}}\label{hyperparameter-tuning}
+\subsubsection{Hyperparameter Tuning}\label{hyperparameter-tuning}
 
 For the tree-based models, a parameter grid was searched under the same grouped cross-validation, with the median absolute percentage error as the selection criterion. The Random Forest grid covered the number of trees, the share of features considered at each split, the minimum samples per leaf, and the maximum depth; the XGBoost grid covered the number of trees, learning rate, depth, and subsample. The per-stratum best settings were recorded in the deployment manifest. The tuning curves were close to flat across the search range, which indicated that the models were not very sensitive to these settings at this data size, and the deployed parameters sat at or near the defaults.
 
 
-\subsection{\texorpdfstring{\textbf{Evaluation and Explainability}}{Evaluation and Explainability}}\label{evaluation-and-explainability}
+\subsection{Evaluation and Explainability}\label{evaluation-and-explainability}
 
-\subsubsection{\texorpdfstring{\textbf{Performance Metrics}}{Performance Metrics}}\label{performance-metrics}
+\subsubsection{Performance Metrics}\label{performance-metrics}
 
 The headline metrics were the median absolute percentage error (MdAPE) and the share of predictions within 20 percent of the actual price (PE20), because they describe how the model does for a typical property and resist distortion from a small number of extreme misses. Mean absolute percentage error (MAPE), the coefficient of dispersion (COD), and the price-related differential (PRD) were retained as supporting diagnostics, with COD and PRD reported in the spirit of assessment ratio studies. The study does not claim compliance with IAAO ratio-study standards; those thresholds are used only as context.
 
-\begin{table}[htbp]
+Table~\ref{tab:chapter3-performance-metrics} defines each metric and the role it plays in evaluation.
+
+\begin{table}[H]
 \caption{Performance Metrics Used in Model Evaluation}
 \label{tab:chapter3-performance-metrics}
 \begin{center}
@@ -272,19 +281,21 @@ The headline metrics were the median absolute percentage error (MdAPE) and the s
 \toprule
 Metric & Description & Purpose \\
 \midrule
-\textbf{MdAPE} & Median Absolute Percentage Error & Headline; typical-property error, robust to outliers \\
-\textbf{PE20} & Share of predictions within 20\% of actual & Headline; plain-language accuracy rate \\
-\textbf{MAPE} & Mean Absolute Percentage Error & Supporting; comparable across studies but tail-sensitive \\
-\textbf{COD} & Coefficient of Dispersion & Supporting; uniformity of the ratio of predicted to actual \\
-\textbf{PRD} & Price-Related Differential & Supporting; checks for regressivity (under/over-valuing by price level) \\
+MdAPE & Median Absolute Percentage Error & Headline; typical-property error, robust to outliers \\
+PE20 & Share of predictions within 20\% of actual & Headline; plain-language accuracy rate \\
+MAPE & Mean Absolute Percentage Error & Supporting; comparable across studies but tail-sensitive \\
+COD & Coefficient of Dispersion & Supporting; uniformity of the ratio of predicted to actual \\
+PRD & Price-Related Differential & Supporting; checks for regressivity (under/over-valuing by price level) \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
-\subsubsection{\texorpdfstring{\textbf{Benchmark Studies Used for Later Comparison}}{Benchmark Studies Used for Later Comparison}}\label{benchmark-targets}
+\subsubsection{Benchmark Studies Used for Later Comparison}\label{benchmark-targets}
 
-\begin{table}[htbp]
+Table~\ref{tab:chapter3-benchmark-studies} lists the benchmark studies used to contextualize the later evaluation results.
+
+\begin{table}[H]
 \caption{Benchmark Studies Used to Contextualize Later Evaluation Results}
 \label{tab:chapter3-benchmark-studies}
 \begin{center}
@@ -299,7 +310,7 @@ Study & Context & MAPE & Use in This Thesis \\
 \end{center}
 \end{table}
 
-\subsubsection{\texorpdfstring{\textbf{SHAP Explainability}}{SHAP Explainability}}\label{shap-explainability}
+\subsubsection{SHAP Explainability}\label{shap-explainability}
 
 SHAP was used to interpret model outputs at both the dataset and property level, which was important to keep the results reviewable in valuation practice and consistent with international valuation standards on transparency \parencite{ivs2025}.
 
@@ -311,9 +322,9 @@ SHAP was used to interpret model outputs at both the dataset and property level,
 This kept the model interpretable enough to work as a support tool rather than an opaque prediction system. The model was judged not just on how accurately it predicted price, but also on whether its outputs could be examined and discussed in terms practitioners understand.
 
 
-\subsection{\texorpdfstring{\textbf{Deliverables}}{Deliverables}}\label{deliverables}
+\subsection{Deliverables}\label{deliverables}
 
-\subsubsection{\texorpdfstring{\textbf{Web Decision-Support Application}}{Web Decision-Support Application}}\label{web-application}
+\subsubsection{Web Decision-Support Application}\label{web-application}
 
 The main applied output of the study was a prototype web-based decision-support application that organized model results across Metro Cebu. Rather than presenting results only as tables or summary statistics, the application was designed to show how predicted values, valuation-gap diagnostics, and locational patterns were distributed across the study area:
 
@@ -323,9 +334,9 @@ The main applied output of the study was a prototype web-based decision-support 
 \item \textbf{Supporting Locational Layers}: CBD-node, road-network, and amenity-accessibility context used to interpret the price surface geographically.
 \end{enumerate}
 
-The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers. Given the model's remaining error, the application is intended as a prototype for inspection and triangulation rather than a production valuation system. Appendix~\ref{app:webapp} (Pictures~\ref{pic:market}--\ref{pic:predictor}) shows its three views.
+The application used a TypeScript and Leaflet front end for the map interface, backed by a Python (FastAPI) service that ran the exact deployed Random Forest models for inference, so that no modeling logic was reimplemented on the client side. In practical use, the application centered on a predicted residential price surface for Metro Cebu while also supporting property-level prediction checks and SHAP-based explanation views. Its purpose was to make the model easier to inspect, both geographically, by comparing values across locations, and at the level of individual predictions and their underlying value drivers. Given the model's remaining error, the application is intended as a prototype for inspection and triangulation rather than a production valuation system. Appendix~\ref{app:webapp} (Figures~\ref{pic:market}--\ref{pic:predictor}) shows its three views.
 
-\subsection{\texorpdfstring{\textbf{Ethical Considerations}}{Ethical Considerations}}\label{ethical-considerations}
+\subsection{Ethical Considerations}\label{ethical-considerations}
 
 The study raised a limited but real set of ethical considerations, centered on how the data were collected and how the model's outputs should be used.
 

@@ -1,14 +1,14 @@
-\section{Introduction}\label{introduction}
+\section{Chapter 1: Introduction}\label{introduction}
 
-\subsection{\texorpdfstring{\textbf{Background of the Study}}{Background of the Study}}\label{background-of-the-study}
+\subsection{Background of the Study}\label{background-of-the-study}
 
-\subsubsection{\texorpdfstring{\textbf{What is Real Estate?}}{What is Real Estate?}}\label{what-is-real-estate}
+\subsubsection{What is Real Estate?}\label{what-is-real-estate}
 
-Real estate sits at the intersection of shelter, commerce, and investment. Under Article 415 of the Philippine Civil Code, immovable property includes land, buildings, and permanent attachments. Unlike many other assets, real estate is both something people use and something people must price, finance, sell, tax, and sometimes defend as collateral.
+Real estate sits at the intersection of shelter, commerce, and investment. In valuation practice, real estate refers to the physical land together with the buildings and other improvements permanently attached to it, while real property refers to the rights, interests, and benefits that arise from its ownership \parencite{ivs2025}. Philippine law rests on the same physical basis: Article 415 of the Civil Code classifies land, buildings, and permanent attachments as immovable property. Unlike many other assets, real estate is both something people use and something people must price, finance, sell, tax, and sometimes defend as collateral.
 
 In practice, a property price is rarely decided by one actor alone. A seller needs a reasonable listing range. A buyer needs to know whether an asking price is defensible. Brokers and agents bring local market knowledge and comparable evidence into negotiations. Banks assess collateral risk. Appraisers estimate value under professional standards. Local government units set administrative benchmarks such as zonal values for taxation. These actors do not all ask the same question, but they all depend on evidence that can make a price range understandable.
 
-\subsubsection{\texorpdfstring{\textbf{Real Estate in Cebu}}{Real Estate in Cebu}}\label{real-estate-in-cebu}
+\subsubsection{Real Estate in Cebu}\label{real-estate-in-cebu}
 
 Cebu has become one of the Philippines' most dynamic regional economies, recording 7.3\% growth in 2024 \parencite{psa_cebu2025}. Much of this growth has come from the IT-BPM sector, the expansion of call center activity, and the post-pandemic recovery of tourism, hospitality, and retail. These shifts have fed directly into demand for residential and mixed-use property.
 
@@ -16,9 +16,9 @@ Across Metro Cebu, particularly Cebu City, Mandaue, Lapu-Lapu, Talisay, Minglani
 
 That pressure is also being reinforced by infrastructure projects that are changing accessibility across the urban area. The Cebu Bus Rapid Transit (CBRT), the Metro Cebu Expressway, and the continued development of the South Road Properties are likely to affect land values by altering connectivity, travel times, and the attractiveness of nearby locations. For a valuation study, these spatial shifts matter because they change not only where demand is strongest, but also how quickly older reference points can become less informative.
 
-\subsubsection{\texorpdfstring{\textbf{The Problem: How is Price Decided in Cebu?}}{The Problem: How is Price Decided in Cebu?}}\label{the-problem-how-is-price-decided-in-cebu}
+\subsubsection{The Problem: How is Price Decided in Cebu?}\label{the-problem-how-is-price-decided-in-cebu}
 
-Despite this growth, a seller or buyer in Metro Cebu still does not have a simple public source that says what a specific residential property is likely to command in the current market. Instead, pricing is usually assembled from several partial reference points. Each one is useful, but each one answers a different question.
+Metro Cebu's residential market is expanding quickly, yet a seller or buyer still does not have a simple public source that says what a specific residential property is likely to command in the current market. Instead, pricing is usually assembled from several partial reference points. Each one is useful, but each one answers a different question.
 
 First, broker and agent opinions remain important because they reflect local knowledge of subdivisions, barangays, comparable properties, buyer inquiries, and negotiation conditions. The limitation is not the absence of expertise. The limitation is that this evidence is not always standardized, transparent, or reproducible across practitioners, especially in markets where transaction data are thin or difficult to access. Studies of developing-country valuation problems similarly point to limited and unreliable market information as a major source of valuation difficulty, rather than simply individual professional failure \parencite{cheloti2021,ajibola2010}.
 
@@ -26,7 +26,7 @@ Second, bank appraisals provide formal valuation evidence, but their purpose is 
 
 The result is not that existing references are useless. Rather, the problem is that they are difficult to compare because they serve different purposes, follow different assumptions, and update at different speeds. For buyers and sellers, this makes price ranges harder to interpret. For brokers and appraisers, it limits the availability of a common evidence base for explaining judgments. For banks, it complicates collateral assessment. For local governments, it weakens the connection between administrative benchmarks and market-facing price evidence. Metro Cebu therefore has active valuation activity, but still lacks a transparent, spatially detailed reference layer for interpreting property-level residential price evidence.
 
-\subsubsection{\texorpdfstring{\textbf{Why Metro Cebu, and Why Now?}}{Why Metro Cebu, and Why Now?}}\label{why-metro-cebu-and-why-now}
+\subsubsection{Why Metro Cebu, and Why Now?}\label{why-metro-cebu-and-why-now}
 
 Three converging factors make it timely to build a data-driven decision-support layer for Metro Cebu:
 
@@ -36,21 +36,21 @@ Three converging factors make it timely to build a data-driven decision-support 
 \item \textbf{Market-facing and geospatial data can now be organized more systematically}: Online platforms such as Lamudi, open geospatial data, and geocoding tools enable the construction of a property-level dataset without requiring private deed-of-sale records. This does not make the data equivalent to verified transactions, but it does allow market-facing asking-price evidence to be mapped, modeled, and compared more transparently.
 \end{enumerate}
 
-\subsubsection{\texorpdfstring{\textbf{Ideal Scenario}}{Ideal Scenario}}\label{ideal-scenario}
+\subsubsection{Ideal Scenario}\label{ideal-scenario}
 
 The core problem is not that Cebu lacks valuation activity, professional judgment, or local market knowledge. The problem is that these judgments are often made against fragmented references. An ideal decision-support layer would organize observable property attributes, location, nearby amenities, benchmark values, and surrounding market-facing prices in one transparent framework. Such a layer would not replace brokers, banks, appraisers, or government benchmarks. Instead, it would help users see where a property sits relative to observable market evidence and why a model places weight on certain value drivers.
 
 This study therefore does not claim to produce a final appraised market value. It develops a transparent, geospatial decision-support model for interpreting market-facing residential asking-price evidence in Metro Cebu. Delivered through a web application, the model is intended as an additional reference layer that supports professional review and transparent comparison, consistent with valuation-standard concerns around data, inputs, and model explainability \parencite{ivs2025}.
 
 
-\subsection{\texorpdfstring{\textbf{Statement of the Problem}}{Statement of the Problem}}\label{statement-of-the-problem}
+\subsection{Statement of the Problem}\label{statement-of-the-problem}
 
 \textbf{Decision Problem}: How can real estate stakeholders in Metro Cebu compare residential property price evidence more transparently, when broker judgment, bank valuation, government benchmarks, and online listings each serve a different purpose?
 
 \textbf{Research Problem}: These references are difficult to compare at the property level, and no Cebu-specific study identified in the reviewed literature combines property-level asking-price data with geospatial features, such as network distance, MCRAI scoring, and spatial autocorrelation, while also providing a spatial decision-support layer for valuation practice.
 
 
-\subsection{\texorpdfstring{\textbf{Research Questions}}{Research Questions}}\label{research-questions}
+\subsection{Research Questions}\label{research-questions}
 
 \begin{enumerate}
 \item What value drivers significantly influence residential property prices in Metro Cebu?
@@ -60,7 +60,7 @@ This study therefore does not claim to produce a final appraised market value. I
 \end{enumerate}
 
 
-\subsection{\texorpdfstring{\textbf{Significance of the Study}}{Significance of the Study}}\label{significance-of-the-study}
+\subsection{Significance of the Study}\label{significance-of-the-study}
 
 Addressing this fragmented evidence problem benefits multiple stakeholders:
 
@@ -74,18 +74,19 @@ Addressing this fragmented evidence problem benefits multiple stakeholders:
 This study is significant within the Philippine context because it develops a Cebu-specific, property-level valuation workflow that integrates GIS-based feature engineering with explainable machine learning. While prior Philippine machine learning studies focus on Metro Manila or broader indicator-based approaches, no work identified in the reviewed literature applies geocoded network-distance features, MCRAI scoring, and spatial autocorrelation to property-level residential asking-price data for Metro Cebu. By delivering results through a web application, the study extends predictive analytics into applied decision support for a fragmented local market.
 
 
-\subsection{\texorpdfstring{\textbf{Scope and Limitations}}{Scope and Limitations}}\label{scope-and-limitations}
+\subsection{Scope and Limitations}\label{scope-and-limitations}
 
-\subsubsection{\texorpdfstring{\textbf{Scope}}{Scope}}\label{scope}
+\subsubsection{Scope}\label{scope}
 
-This study focuses on the residential real estate market within Metro Cebu. While the National Economic and Development Authority (NEDA) defines Metro Cebu as encompassing 13 LGUs, this study operationally scopes ``Metro Cebu'' to its central urban core: \textbf{Cebu City, Mandaue, Lapu-Lapu, Talisay, Minglanilla, and Consolacion}. This constraint supports high data density and robust geospatial analysis, as these six LGUs represent the most active transaction zones and the highest concentration of infrastructure development. Map~\ref{fig:study-area} shows the spatial extent of this scope.
+This study focuses on the residential real estate market within Metro Cebu. While the National Economic and Development Authority (NEDA) defines Metro Cebu as encompassing 13 LGUs, this study operationally scopes ``Metro Cebu'' to its central urban core: \textbf{Cebu City, Mandaue, Lapu-Lapu, Talisay, Minglanilla, and Consolacion}. This constraint supports high data density and robust geospatial analysis, as these six LGUs represent the most active transaction zones and the highest concentration of infrastructure development. Figure~\ref{fig:study-area} shows the spatial extent of this scope.
 
-\begin{ccmap}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.92\textwidth]{diagrams/lgu_boundaries.png}
-\caption{Metro Cebu study area: the six local government units considered.}
+\caption{Metro Cebu Study Area}
+\includegraphics[width=\figfull]{diagrams/lgu_boundaries.png}
+\figurenote{The six local government units considered in the study scope.}
 \label{fig:study-area}
-\end{ccmap}
+\end{figure}
 
 The study drew on open-market residential listings from several online property portals, BIR zonal values, geospatial APIs, and road network data. Each source is described in detail in Chapter 3, Section 3.2.
 
@@ -93,7 +94,7 @@ The study evaluated three predictive models: \textbf{Hedonic Regression (OLS)}, 
 
 The study produced an applied deliverable: a prototype web application combining an open-market residential price surface with property-level prediction and explanation. Because the model still carries substantial error for some property types, the application is presented as a prototype for triangulation rather than a tool for confident stand-alone valuation.
 
-\subsubsection{\texorpdfstring{\textbf{Limitations}}{Limitations}}\label{limitations}
+\subsubsection{Limitations}\label{limitations}
 
 \begin{enumerate}
 \item \textbf{Open-Market Listing Bias}: The deployed model was fitted on open-market listings rather than verified deed-of-sale transactions. This kept the prediction target aligned with market-facing pricing, but it also meant that seller strategy and asking-price noise remained in the data.
@@ -104,7 +105,7 @@ The study produced an applied deliverable: a prototype web application combining
 \end{enumerate}
 
 
-\subsection{\texorpdfstring{\textbf{Model Selection Rationale}}{Model Selection Rationale}}\label{model-selection-rationale}
+\subsection{Model Selection Rationale}\label{model-selection-rationale}
 
 This study employs three complementary models that span the interpretability--accuracy spectrum. These model families are common in comparable real estate prediction studies and provide a practical basis for comparing an interpretable hedonic baseline with non-linear tree-based alternatives \parencite{yacim2018,pai2020}.
 
@@ -114,11 +115,11 @@ This study employs three complementary models that span the interpretability--ac
 \item \textbf{XGBoost} \parencite{chen2016} was included as a strong candidate for predictive accuracy: gradient boosting consistently performs well on structured tabular data \parencite{grinsztajn2022} and integrates natively with SHAP \parencite{lundberg2017} to provide property-level explainability, which supports transparent professional review under valuation-standard concerns. Chapter 7 compares these models using accuracy, robustness, and deployment suitability rather than treating a single error metric as the only basis for selection.
 \end{itemize}
 
-\subsubsection{\texorpdfstring{\textbf{Why Not Other Models?}}{Why Not Other Models?}}\label{why-not-other-models}
+\subsubsection{Why Not Other Models?}\label{why-not-other-models}
 
-Several alternatives were evaluated but ultimately set aside:
+Several alternatives were evaluated but ultimately set aside. Table~\ref{tab:chapter1-model-exclusions} lists these models and the rationale for excluding each.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Models Considered but Not Retained in the Study Design}
 \label{tab:chapter1-model-exclusions}
 \begin{center}

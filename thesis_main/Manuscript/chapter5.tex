@@ -1,8 +1,8 @@
-\section{Data Preparation}\label{data-preparation}
+\section{Chapter 5: Data Preparation}\label{data-preparation}
 
 This chapter covers the CRISP-DM data preparation phase for the frozen analytics base table (ABT). Chapter 4 described the condition of the data. This chapter explains what was done to turn that file into a modeling-ready dataset. The focus here is on filtering, missing-data treatment, feature engineering, encoding, and the stratum split used by the modeling script.
 
-\subsection{\texorpdfstring{\textbf{Scope of Preparation Work}}{Scope of Preparation Work}}\label{scope-of-preparation-work}
+\subsection{Scope of Preparation Work}\label{scope-of-preparation-work}
 
 The preparation work produced a frozen open-market ABT of 3{,}616 rows for the six-LGU study scope: Cebu City, Mandaue City, Lapu-Lapu City, Talisay City, Minglanilla, and Consolacion. Naga City stayed in the system only as a CBD distance anchor through \emph{dist\_naga\_city\_m}; it was not part of the training LGU set.
 
@@ -11,7 +11,7 @@ This open-market ABT was assembled from several listing portals: Lamudi (1{,}578
 The goal of this phase was to turn that frozen ABT into the exact matrices used by the stratified modeling pipeline. This meant keeping the ABT as the reference file, then applying integrity filters and splitting the data by property type for separate model fitting.
 
 
-\subsection{\texorpdfstring{\textbf{Cleaning and Filtering}}{Cleaning and Filtering}}\label{cleaning-and-filtering}
+\subsection{Cleaning and Filtering}\label{cleaning-and-filtering}
 
 The cleaning that produced the open-market ABT followed the valuation basis of the thesis. Open-market listings represent the closest available proxy to Market Value in the IVS sense \parencite{ivs2025}.
 
@@ -20,11 +20,11 @@ Several filters were applied during the multi-portal cleaning step. Distressed a
 The remaining model-requirement filters were tied to the target and the spatial-lag feature. Rows with a null \emph{price\_per\_sqm} were removed because the target could not be computed, and rows with a null \emph{spatial\_lag\_price} were removed because the neighborhood-price feature was part of the final design. These filters reduced the assembled 3{,}616-row ABT to the 3{,}372-row modeling subset, drawn from the cleaned residential taxonomy: Condominium, House and Lot, Townhouse, Single Detached, and Vacant Lot.
 
 
-\subsection{\texorpdfstring{\textbf{Stratum Split}}{Stratum Split}}\label{stratum-split}
+\subsection{Stratum Split}\label{stratum-split}
 
 The modeling-ready data was split into three strata for separate model fitting, because condominiums, houses, and vacant lots are priced on very different per-square-meter logics. Table~\ref{tab:chapter5-strata-split} shows the resulting sizes.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Open-Market ABT Split into Modeling Strata}
 \label{tab:chapter5-strata-split}
 \begin{center}
@@ -46,7 +46,7 @@ Total modeled & 3{,}372 & Rows entering the three strata \\
 The vacant-lot stratum used an additional scope filter, keeping lots between 80 and 2{,}000 square meters with a price of at least half the BIR zonal value, to exclude commercial-scale parcels and obvious data errors.
 
 
-\subsection{\texorpdfstring{\textbf{Missing Data Treatment}}{Missing Data Treatment}}\label{missing-data-treatment}
+\subsection{Missing Data Treatment}\label{missing-data-treatment}
 
 The missing-data treatment kept rows usable while keeping every imputation visible and leaving structurally absent fields unimputed.
 
@@ -55,12 +55,12 @@ The first structural decision involved size variables. The thesis used \emph{are
 For condominiums and houses, bedrooms and bathrooms were sometimes missing and were median-imputed, with audit flags retained so imputed values stayed visible. In the condominium stratum, 242 rows had an imputed bedroom value and 146 an imputed bathroom value; in the house stratum, 39 rows had an imputed bedroom value and 62 an imputed bathroom value. After filtering and encoding, any remaining numeric nulls were median-imputed as a final safeguard, and structurally absent columns were filled with zero rather than imputed.
 
 
-\subsection{\texorpdfstring{\textbf{Market Segment Treatment}}{Market Segment Treatment}}\label{market-segment-treatment}
+\subsection{Market Segment Treatment}\label{market-segment-treatment}
 
 The deployed task of the thesis was the estimation of open-market residential prices, and the dataset was made up of open-market listings only. The deployed map therefore estimates open-market residential price levels across Metro Cebu; it does not estimate forced-sale or administrative floor-price values.
 
 
-\subsection{\texorpdfstring{\textbf{Feature Engineering}}{Feature Engineering}}\label{feature-engineering-ch5}
+\subsection{Feature Engineering}\label{feature-engineering-ch5}
 
 Most of the heavy feature engineering had already been completed before this chapter, but Chapter 5 still had to decide which engineered fields would enter each stratum's matrix.
 
@@ -71,11 +71,11 @@ The \emph{spatial\_lag\_price} field, the mean price of other same-type properti
 As described in Chapters 3 and 6, the feature set was then trimmed per stratum from exploratory evidence. All three strata dropped the redundant BIR log and commercial-zonal columns and the two road-class distance features. The condominium and house models used the single MCRAI composite, while the vacant-lot model used six individual MCRAI categories and dropped the composite. The OLS baseline used a slightly tighter set within each stratum, replacing the raw area fields with a log-area term and removing variables that were collinear with adjacent CBD-distance terms, to keep the hedonic coefficients stable.
 
 
-\subsection{\texorpdfstring{\textbf{Encoding and Final Modeling-Ready Matrices}}{Encoding and Final Modeling-Ready Matrices}}\label{encoding-and-final-modeling-ready-dataset}
+\subsection{Encoding and Final Modeling-Ready Matrices}\label{encoding-and-final-modeling-ready-dataset}
 
 The final preparation step converted each stratum into model matrices. City and property type were one-hot encoded with \emph{drop\_first = True}. After encoding and numeric-null handling, the retained feature counts were 21 for condominiums, 24 for houses, and 22 for vacant lots, as summarized in Table~\ref{tab:chapter5-final-matrix}. Instead of a single train-test split, model quality was estimated with five-fold grouped cross-validation by coordinate cluster, so that co-located listings could not leak across folds.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Final Modeling-Ready Matrices by Stratum}
 \label{tab:chapter5-final-matrix}
 \begin{center}

@@ -17,17 +17,24 @@
 \usepackage{longtable}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
-% Custom float types so Maps and Pictures get their own auto-generated lists
+% APA 7: everything that is not a table is a Figure. Maps and web-app
+% screenshots use the standard figure float (no separate Map/Picture lists).
 \usepackage{float}
-\newfloat{ccmap}{htbp}{lom}\floatname{ccmap}{Map}
-\newfloat{ccpic}{htbp}{lop}\floatname{ccpic}{Picture}
-% Match APA figure-caption style for the custom Map/Picture floats:
-% bold label on its own line, italic caption text.
-\captionsetup[ccmap]{labelfont=bf,labelsep=newline,font=it,justification=raggedright,singlelinecheck=false}
-\captionsetup[ccpic]{labelfont=bf,labelsep=newline,font=it,justification=raggedright,singlelinecheck=false}
+% APA 7 figure notes are flush left; override the \centering inherited from the
+% figure float so \figurenote does not render centered under the image.
+\renewcommand{\figurenote}[1]{\par{\raggedright\small\textit{\notelabel.}\space #1\par}}
+% Table notes: APA 7 prints an italic "Note." label, flush left, below the table.
+% Replaces the manual \footnotesize{...} notes so every table note carries "Note."
+\renewcommand{\tablenote}[1]{\par\vspace{2pt}{\raggedright\small\textit{\notelabel.}\space #1\par}}
 % Flush-left (ragged-right) fixed-width column type for tables, to match the APA flush-left body
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\geometry{left=1.5in,right=1in,top=1in,bottom=1in}
+\geometry{letterpaper,left=1.5in,right=1in,top=1in,bottom=1in}
+
+% --- Remove the APA running head (short title repeated in the header) per the
+% capstone format guide; keep page numbers (top right, as apa7 places them). ---
+\fancypagestyle{titlepage}{\fancyhf{}\rhead{\thepage}\renewcommand{\headrulewidth}{0pt}}
+\fancypagestyle{otherpage}{\fancyhf{}\rhead{\thepage}\renewcommand{\headrulewidth}{0pt}}
+\pagestyle{otherpage}
 
 \providecommand{\tightlist}{%
     \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -37,8 +44,31 @@
 \setlength{\parindent}{0.5in}
 \setlength{\parskip}{0pt}
 % Let pages run naturally short instead of vertically stretching content to the
-% bottom margin; keeps trailing whitespace tidy around in-place [H] floats.
+% bottom margin; keeps trailing whitespace tidy around edge-anchored floats.
 \raggedbottom
+
+% --- Float placement (APA 7: embedded figures sit at the TOP or BOTTOM of a
+% shared page, never mid-text). LaTeX's stock float parameters are too strict
+% and eject large figures onto near-blank pages; loosen them so a figure may
+% fill most of a page top/bottom before spilling, and require very little text
+% to accompany a float. This is what eliminates the wasted-whitespace pages. ---
+\renewcommand{\topfraction}{0.9}      % a top float may occupy up to 90% of the page
+\renewcommand{\bottomfraction}{0.9}   % same for bottom floats
+\renewcommand{\textfraction}{0.08}    % as little as 8% text needed on a float page-share
+\renewcommand{\floatpagefraction}{0.7}% only bump to a float-only page if it fills 70%+
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+% Default all figure/table floats to top/bottom/float-page (APA), overriding the
+% class's htb default; explicit per-float specifiers still win where given.
+\floatplacement{figure}{tbp}
+\floatplacement{table}{tbp}
+
+% --- Semantic figure widths. One knob per size tier instead of scattered
+% magic numbers, so "make figures a little smaller" is a single edit here. ---
+\newcommand{\figfull}{\textwidth}        % full text-block width (maps, wide panels)
+\newcommand{\figstd}{0.85\textwidth}     % standard single-plot figures
+\newcommand{\fignarrow}{0.7\textwidth}   % tall/narrow single-panel figures
 
 % --- Bibliography (APA 7 via biblatex) ---
 \usepackage[style=apa, backend=biber]{biblatex}
@@ -64,6 +94,12 @@
 \clearpage
 \phantomsection
 \addcontentsline{toc}{section}{Table of Contents}
+% Keep the TOC double-spaced (format guide: "double-spaced throughout"). To keep
+% it from sprawling — and to match the guide's compact front-matter layout — list
+% only chapters (\section) and their first-level sections (\subsection); omit the
+% deeper \subsubsection entries. This shortens the list legitimately without
+% touching line spacing.
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 \clearpage
@@ -76,8 +112,6 @@
 \addcontentsline{toc}{section}{List of Figures}
 \listoffigures
 
-\input{maps_list}
-\input{pictures_list}
 \input{appendices_list}
 \input{abbreviations}
 
