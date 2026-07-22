@@ -54,18 +54,24 @@ Target & \emph{price\_per\_sqm}, \emph{price\_php}, \emph{log\_price} & Numeric 
 
 Open-market listings were collected from three public real-estate portals: Lamudi, FilipinoHomes, and DotProperty. Figures~\ref{pic:portal-lamudi}, \ref{pic:portal-filipinohomes}, and \ref{pic:portal-dotproperty} show each portal's residential listing interface at the time of collection, documenting the public sources behind the assembled ABT described in Chapter~5. A fourth portal, OnePropertee, was also scraped but excluded from the final ABT after its records were found to carry mis-extracted per-square-meter prices and centroid-level geocoding.
 
+\begingroup
+\setlength{\intextsep}{3pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
 \begin{figure}[H]
 \centering
 \caption{Lamudi Philippines Listing Portal}
-\includegraphics[width=\textwidth]{diagrams/portal_lamudi.png}
+\includegraphics[width=0.84\textwidth]{diagrams/portal_lamudi.png}
 \figurenote{Primary open-market source (1{,}578 bulk-scraped rows plus 270 from the later browser-based batch).}
 \label{pic:portal-lamudi}
 \end{figure}
 
+\clearpage
+
 \begin{figure}[H]
 \centering
 \caption{FilipinoHomes Listing Portal}
-\includegraphics[width=\textwidth]{diagrams/portal_filipinohomes.png}
+\includegraphics[width=0.84\textwidth]{diagrams/portal_filipinohomes.png}
 \figurenote{Second open-market source (1{,}203 rows).}
 \label{pic:portal-filipinohomes}
 \end{figure}
@@ -73,10 +79,11 @@ Open-market listings were collected from three public real-estate portals: Lamud
 \begin{figure}[H]
 \centering
 \caption{DotProperty Philippines Listing Portal}
-\includegraphics[width=\textwidth]{diagrams/portal_dotproperty.png}
+\includegraphics[width=0.84\textwidth]{diagrams/portal_dotproperty.png}
 \figurenote{Third open-market source (565 rows).}
 \label{pic:portal-dotproperty}
 \end{figure}
+\endgroup
 
 \section{Supplementary Tables}\label{app:supptables}
 
@@ -178,18 +185,24 @@ A funnel shape, where the spread of residuals widens or narrows across fitted va
 
 Variance inflation factors above the conventional thresholds (5 to 10) flag predictors whose information is largely carried by other features. These checks informed the per-stratum feature trimming described in Chapters 3 and 6. Figures~\ref{fig:vif-condo}, \ref{fig:vif-houses}, and \ref{fig:vif-lot} show the variance inflation factors for the condominium, house, and vacant-lot strata.
 
+\begingroup
+\setlength{\intextsep}{3pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
 \begin{figure}[H]
 \centering
 \caption{Variance Inflation Factors: Condominium Stratum}
-\includegraphics[width=\textwidth]{../EDA/plots/05_multicollinearity/Condo_vif.png}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/05_multicollinearity/Condo_vif.png}
 \figurenote{OLS comparator, condominium stratum. Each bar is a retained feature's variance inflation factor; higher bars indicate stronger collinearity with the other predictors, and values above the conventional 5--10 range motivated the per-stratum feature trimming.}
 \label{fig:vif-condo}
 \end{figure}
 
+\clearpage
+
 \begin{figure}[H]
 \centering
 \caption{Variance Inflation Factors: House Stratum}
-\includegraphics[width=\textwidth]{../EDA/plots/05_multicollinearity/Houses_vif.png}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/05_multicollinearity/Houses_vif.png}
 \figurenote{OLS comparator, house stratum; see Figure~\ref{fig:vif-condo} for how to read the plot.}
 \label{fig:vif-houses}
 \end{figure}
@@ -197,10 +210,11 @@ Variance inflation factors above the conventional thresholds (5 to 10) flag pred
 \begin{figure}[H]
 \centering
 \caption{Variance Inflation Factors: Vacant-Lot Stratum}
-\includegraphics[width=\textwidth]{../EDA/plots/05_multicollinearity/Lot_vif.png}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/05_multicollinearity/Lot_vif.png}
 \figurenote{OLS comparator, vacant-lot stratum; see Figure~\ref{fig:vif-condo} for how to read the plot.}
 \label{fig:vif-lot}
 \end{figure}
+\endgroup
 
 \clearpage
 \section{Web Application Screenshots}\label{app:webapp}
