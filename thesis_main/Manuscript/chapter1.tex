@@ -84,7 +84,6 @@ This study focuses on the residential real estate market within Metro Cebu. Whil
 \centering
 \caption{Metro Cebu Study Area}
 \includegraphics[width=\figfull]{diagrams/lgu_boundaries.png}
-\figurenote{The six local government units considered in the study scope.}
 \label{fig:study-area}
 \end{figure}
 
@@ -128,7 +127,7 @@ Several alternatives were evaluated but ultimately set aside. Table~\ref{tab:cha
 Model & Rationale for Exclusion \\
 \midrule
 Deep Neural Networks & Require \textgreater{}10,000 labeled samples; the dataset size is insufficient, and global interpretability is sacrificed. \\
-Support Vector Regression & Computationally expensive to tune; poor native interpretability; generally weaker than boosting on tabular data. \\
+Support Vector Regression & Training scales poorly as the sample grows, and results are sensitive to kernel choice and feature scaling; it offers poor native interpretability and, in practice, does not outperform tree-based boosting on structured tabular data. \\
 LASSO / Ridge & Constrained by linearity assumptions; effectively subsumed by the OLS baseline for this study. \\
 \bottomrule
 \end{tabular}

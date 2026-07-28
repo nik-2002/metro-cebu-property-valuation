@@ -98,13 +98,13 @@ def table_for(key, csv, label):
     lines = [f"\\begin{{table}}[htbp]",
              f"\\caption{{Feature snapshot --- {label} stratum ({X.shape[1]} model features).}}",
              f"\\label{{tab:snapshot-{key}}}",
-             "\\begin{center}", "\\footnotesize",
+             "\\footnotesize", "\\noindent",
              f"\\begin{{tabular}}{{{cols}}}", "\\toprule", head + " \\\\", "\\midrule"]
     for col in X.columns:
         binary = is_binary(col, X[col])
         vals = " & ".join(fmt(col, X.loc[r, col], binary) for r in idx)
         lines.append(f"{esc(pretty(col))} & {vals} \\\\")
-    lines += ["\\bottomrule", "\\end{tabular}", "\\end{center}", "\\end{table}", ""]
+    lines += ["\\bottomrule", "\\end{tabular}", "\\end{table}", ""]
     return "\n".join(lines)
 
 

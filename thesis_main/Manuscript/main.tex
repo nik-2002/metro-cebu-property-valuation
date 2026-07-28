@@ -63,6 +63,11 @@
 % class's htb default; explicit per-float specifiers still win where given.
 \floatplacement{figure}{tbp}
 \floatplacement{table}{tbp}
+% --- Breathing room above/below every in-text [H] float. Ms. Kim asked for
+% "space before" tables and figures throughout; float.sty emits \intextsep both
+% above and below an [H] float, so widening it once spaces all of them uniformly
+% (default is ~12pt, i.e. under one double-spaced line — too tight against text). ---
+\setlength{\intextsep}{20pt plus 5pt minus 3pt}
 
 % --- Semantic figure widths. One knob per size tier instead of scattered
 % magic numbers, so "make figures a little smaller" is a single edit here. ---
@@ -107,7 +112,7 @@
 \addcontentsline{toc}{section}{List of Tables}
 \listoftables
 
-\vspace{0.45in}
+\clearpage
 \phantomsection
 \addcontentsline{toc}{section}{List of Figures}
 \listoffigures

@@ -111,10 +111,13 @@ A critical consideration in property valuation is \textbf{spatial autocorrelatio
 
 Two approaches address spatial effects in modeling:
 
+% Ms. Kim: remove the extra space before this enumeration (list top-separation).
+\begingroup\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}
 \begin{enumerate}
 \item \textbf{Spatial Lag Model (SLM)}: Includes a spatially weighted average of neighboring property prices as an independent variable, directly capturing the effect of nearby market conditions on a property's value.
 \item \textbf{Moran's I Statistic}: A diagnostic measure of global spatial autocorrelation \parencite{moran1950}. A statistically significant positive Moran's I in the residuals of a non-spatial model indicates that spatial effects are present and should be incorporated.
 \end{enumerate}
+\endgroup
 
 This study incorporates a \textbf{spatial lag variable}---the mean price of properties within a defined radius---as a feature in the ML models. This operationalizes Tobler's law within the predictive framework without imposing the parametric constraints of formal spatial econometric models.
 
@@ -139,10 +142,13 @@ Broad macroeconomic conditions, such as exchange rates, inflation, and interest 
 
 The International Valuation Standards (2025), effective January 31, 2025, introduced two critical new chapters relevant to data-driven valuation:
 
+% Ms. Kim: remove the extra space before this list (list top-separation).
+\begingroup\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}
 \begin{itemize}
 \item \textbf{IVS 104 (Data and Inputs)}: Mandates that data used in valuations must be Accurate, Complete, Timely, and Transparent. Sources must be traceable from their origin (``provenance requirement'').
 \item \textbf{IVS 105 (Valuation Models)}: Explicitly states that \emph{``No model without the valuer applying professional judgement can produce an IVS-compliant valuation.''} Automated Valuation Models (AVMs) must be tested, transparent, and paired with professional review.
 \end{itemize}
+\endgroup
 
 For this study, the IVS revisions matter in two practical ways.
 
