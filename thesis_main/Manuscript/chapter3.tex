@@ -143,11 +143,13 @@ The data preparation process proceeded through the stages summarized in Figure~\
 
 The engineered features fall into the categories listed in Table~\ref{tab:chapter3-feature-categories}.
 
+\textbf{Engineered variables}: \emph{price\_per\_sqm}, \emph{valuation\_gap} (a diagnostic field, not a model feature), and derived log-price terms for the modeling target and baseline regression. The listing \emph{source} field was kept in the ABT for auditing but excluded from the feature matrix, because it is not available at prediction time for a new property.
+
 \begin{table}[H]
 \caption{Feature Categories Used in the Thesis Workflow}
 \label{tab:chapter3-feature-categories}
 \begin{center}
-\begin{tabular}{L{0.18\textwidth} L{0.50\textwidth} L{0.24\textwidth}}
+\begin{tabular}{L{0.18\textwidth} L{0.50\textwidth} L{0.235\textwidth}}
 \toprule
 Category & Features & Source \\
 \midrule
@@ -162,8 +164,6 @@ Metadata & Source and market-segment fields retained in ABT but excluded from th
 \end{tabular}
 \end{center}
 \end{table}
-
-\textbf{Engineered variables}: \emph{price\_per\_sqm}, \emph{valuation\_gap} (a diagnostic field, not a model feature), and derived log-price terms for the modeling target and baseline regression. The listing \emph{source} field was kept in the ABT for auditing but excluded from the feature matrix, because it is not available at prediction time for a new property.
 
 \subsubsection{Geospatial Feature Engineering}\label{geospatial-feature-engineering}
 
