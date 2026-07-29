@@ -12,6 +12,13 @@
 \usepackage{graphicx}
 % Insert the official Library annex PDFs verbatim (no recreation/scaling/recolor).
 \usepackage{pdfpages}
+% Overlay helper to fill the official annexes' blank lines in the MANUSCRIPT copy
+% only (the source PDFs are never modified). Args: {x}{baseline-y}{text}, both
+% coordinates in points measured from the page's top-left corner (the same space
+% as the forms' own layout), so fills land on the existing blank lines. Set in the
+% document's Times (a clean, legible fill; the basic TeX Live lacks Helvetica T1).
+\newcommand{\annexfill}[3]{\node[anchor=base,inner sep=0pt,font=\footnotesize]%
+  at ([xshift=#1pt,yshift=-#2pt]current page.north west) {#3};}
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{booktabs}
@@ -103,9 +110,42 @@
 % (no recreation, retyping, cropping, scaling, or recoloring). The roman page
 % number is shown top-right via the otherpage style; it lands in the forms' blank
 % top-right margin. Annex 1: iii, Annex 2: iv-v, Annex 3: vi.
-\includepdf[pages=1,pagecommand={\thispagestyle{otherpage}\phantomsection\addcontentsline{toc}{section}{Declaration of Authenticity by Thesis Writer}}]{../Annex 1 Declaration of Authenticity by Thesis Writer.pdf}
-\includepdf[pages=1,pagecommand={\thispagestyle{otherpage}\phantomsection\addcontentsline{toc}{section}{Authorization by Author}}]{../Annex 2 Authorization by Author.pdf}
-\includepdf[pages=2,pagecommand={\thispagestyle{otherpage}}]{../Annex 2 Authorization by Author.pdf}
+% Annex 1 (Declaration): name, thesis title (two lines), printed name on the
+% signature line (room left above for a handwritten signature), and the date.
+\includepdf[pages=1,pagecommand={%
+  \thispagestyle{otherpage}%
+  \phantomsection\addcontentsline{toc}{section}{Declaration of Authenticity by Thesis Writer}%
+  \begin{tikzpicture}[remember picture,overlay]%
+    \annexfill{311}{256}{Chris Dominic Estreba}%
+    \annexfill{306}{315}{Predicting Open-Market Residential Property Values in Metro}%
+    \annexfill{306}{335}{Cebu Using Machine Learning and Geospatial Features}%
+    \annexfill{470}{454}{Chris Dominic Estreba}%
+    \annexfill{466}{507}{July 28, 2026}%
+  \end{tikzpicture}%
+}]{../Annex 1 Declaration of Authenticity by Thesis Writer.pdf}
+% Annex 2 page 1 (Authorization): name and thesis title (two lines).
+\includepdf[pages=1,pagecommand={%
+  \thispagestyle{otherpage}%
+  \phantomsection\addcontentsline{toc}{section}{Authorization by Author}%
+  \begin{tikzpicture}[remember picture,overlay]%
+    \annexfill{217}{148}{Chris Dominic Estreba}%
+    \annexfill{306}{175}{Predicting Open-Market Residential Property Values in Metro}%
+    \annexfill{306}{189}{Cebu Using Machine Learning and Geospatial Features}%
+  \end{tikzpicture}%
+}]{../Annex 2 Authorization by Author.pdf}
+% Annex 2 page 2: execution date, printed name on the signature line (room to
+% sign above), and the two-line address.
+\includepdf[pages=2,pagecommand={%
+  \thispagestyle{otherpage}%
+  \begin{tikzpicture}[remember picture,overlay]%
+    \annexfill{265}{392}{July 28,}%
+    \annexfill{327}{392}{26}%
+    \annexfill{410}{471}{Chris Dominic Estreba}%
+    \annexfill{422}{539}{159 Mother Ignacia Avenue}%
+    \annexfill{422}{566}{South Triangle, Quezon City}%
+  \end{tikzpicture}%
+}]{../Annex 2 Authorization by Author.pdf}
+% Annex 3 (Terms of Use): no fill; the "I accept" checkbox is left blank.
 \includepdf[pages=1,pagecommand={\thispagestyle{otherpage}\phantomsection\addcontentsline{toc}{section}{Terms of Use}}]{../Annex 3 Terms of Use.pdf}
 % \input{dedication}  % Dedication is optional; removed per APA 7 capstone format
 \input{abstract}
