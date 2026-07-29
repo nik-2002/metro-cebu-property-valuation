@@ -10,6 +10,8 @@
 
 % --- Packages ---
 \usepackage{graphicx}
+% Insert the official Library annex PDFs verbatim (no recreation/scaling/recolor).
+\usepackage{pdfpages}
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{booktabs}
@@ -96,10 +98,15 @@
 
 \input{title_page}
 \input{approval_sheet}
-% UA&P Library digital-deposit annexes, appended right after the approval sheet
-% per the LIB-clearance requirement (Declaration of Authenticity, Authorization
-% by Author, Terms of Use).
-\input{library_annexes}
+% UA&P Library digital-deposit annexes, inserted verbatim from the official PDFs
+% Ms. Kim provided (thesis_main/), right after the approval sheet. Included as-is
+% (no recreation, retyping, cropping, scaling, or recoloring). The roman page
+% number is shown top-right via the otherpage style; it lands in the forms' blank
+% top-right margin. Annex 1: iii, Annex 2: iv-v, Annex 3: vi.
+\includepdf[pages=1,pagecommand={\thispagestyle{otherpage}\phantomsection\addcontentsline{toc}{section}{Declaration of Authenticity by Thesis Writer}}]{../Annex 1 Declaration of Authenticity by Thesis Writer.pdf}
+\includepdf[pages=1,pagecommand={\thispagestyle{otherpage}\phantomsection\addcontentsline{toc}{section}{Authorization by Author}}]{../Annex 2 Authorization by Author.pdf}
+\includepdf[pages=2,pagecommand={\thispagestyle{otherpage}}]{../Annex 2 Authorization by Author.pdf}
+\includepdf[pages=1,pagecommand={\thispagestyle{otherpage}\phantomsection\addcontentsline{toc}{section}{Terms of Use}}]{../Annex 3 Terms of Use.pdf}
 % \input{dedication}  % Dedication is optional; removed per APA 7 capstone format
 \input{abstract}
 \input{acknowledgment}
