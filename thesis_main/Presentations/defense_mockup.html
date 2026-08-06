@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defense Deck — Design Mockup</title>
+<style>
+  :root{
+    --bg:#FAF8F4;          /* warm off-white */
+    --ink:#1A1A1A;         /* near-black text */
+    --muted:#6B6B66;       /* secondary text */
+    --accent:#2F5D50;      /* grounded deep green */
+    --accent-soft:#E7EEEA; /* accent tint */
+    --line:#D9D6CF;
+    --slide-w:1280px;
+    --slide-h:720px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#E9E6E0;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:var(--ink);
+    padding:48px 0 96px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page-title{
+    text-align:center;color:#555;font-size:14px;letter-spacing:.18em;
+    text-transform:uppercase;margin-bottom:36px;
+  }
+  .deck{display:flex;flex-direction:column;align-items:center;gap:40px}
+  .slide{
+    width:var(--slide-w);height:var(--slide-h);background:var(--bg);
+    border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.16);
+    position:relative;overflow:hidden;display:flex;flex-direction:column;
+    justify-content:center;padding:96px 110px;
+  }
+  .tag{ /* tiny archetype label outside the design — review only */
+    position:absolute;top:-26px;left:2px;font-size:12px;color:#8a8a8a;letter-spacing:.04em;
+  }
+  /* ---- typography scale ---- */
+  .kicker{font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;font-weight:700}
+  h1{font-size:62px;line-height:1.1;font-weight:700;letter-spacing:-.5px}
+  h2{font-size:48px;line-height:1.15;font-weight:700;letter-spacing:-.3px}
+  .lead{font-size:40px;line-height:1.25;font-weight:400}
+  .sub{font-size:24px;color:var(--muted);margin-top:28px;font-weight:400}
+  .q{font-size:30px;color:var(--accent);font-weight:700;margin-top:24px}
+
+  /* ---- title slide ---- */
+  .title-slide{justify-content:center}
+  .title-slide .meta{margin-top:56px;font-size:22px;color:var(--muted);line-height:1.7}
+  .rule{width:64px;height:5px;background:var(--accent);margin:34px 0}
+
+  /* ---- divider ---- */
+  .divider{background:var(--accent);color:#fff;justify-content:center}
+  .divider .num{font-size:26px;letter-spacing:.3em;opacity:.7;margin-bottom:18px}
+  .divider h2{font-size:84px;color:#fff}
+
+  /* ---- picture slide ---- */
+  .pic-slide{flex-direction:row;align-items:center;gap:72px;padding:96px 96px}
+  .pic-frame{
+    flex:1.15;height:100%;background:repeating-linear-gradient(45deg,#ECE9E2,#ECE9E2 14px,#E5E1D9 14px,#E5E1D9 28px);
+    border:2px dashed #BDB9AF;border-radius:8px;display:flex;align-items:center;justify-content:center;
+    color:#9a968c;font-size:18px;text-align:center;
+  }
+  .pic-copy{flex:1;display:flex;flex-direction:column;justify-content:center}
+
+  /* ---- two-point ---- */
+  .points{list-style:none;margin-top:40px}
+  .points li{font-size:30px;line-height:1.5;padding-left:34px;position:relative;margin-bottom:22px}
+  .points li::before{content:"";position:absolute;left:0;top:14px;width:14px;height:14px;background:var(--accent);border-radius:3px}
+
+  /* ---- plot slide ---- */
+  .plot-slide{padding:72px 90px 64px}
+  .plot-slide .kicker{margin-bottom:18px}
+  .plot-wrap{flex:1;display:flex;align-items:center;justify-content:center;margin-top:8px;min-height:0}
+  .plot-wrap img{max-width:100%;max-height:430px;object-fit:contain}
+  .caption{font-size:24px;color:var(--ink);margin-top:14px}
+
+  /* ---- table slide ---- */
+  table{width:100%;border-collapse:collapse;margin-top:40px;font-size:30px}
+  th,td{text-align:left;padding:22px 18px;border-bottom:1px solid var(--line)}
+  thead th{font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--accent)}
+  td.num{font-variant-numeric:tabular-nums;font-weight:700}
+  tbody tr:last-child td{border-bottom:none}
+
+  .big-stat{font-size:120px;font-weight:700;color:var(--accent);line-height:1}
+</style>
+</head>
+<body>
+  <div class="page-title">Defense Deck — Design Mockup (7 archetypes)</div>
+  <div class="deck">
+
+    <!-- 1. TITLE -->
+    <div style="position:relative">
+      <span class="tag">archetype: TITLE</span>
+      <div class="slide title-slide">
+        <div class="kicker">UA&amp;P · BS Data Science · June 2026</div>
+        <h1>Predicting Open-Market<br>Residential Property Values<br>in Metro Cebu</h1>
+        <div class="rule"></div>
+        <div class="lead" style="font-size:30px;color:var(--muted)">Using Machine Learning and Geospatial Features</div>
+        <div class="meta">Chris Dominic Estreba<br>BS Data Science Capstone</div>
+      </div>
+    </div>
+
+    <!-- 2. PICTURE SLIDE -->
+    <div style="position:relative">
+      <span class="tag">archetype: PICTURE (one line + photo)</span>
+      <div class="slide pic-slide">
+        <div class="pic-frame">[ photo: a Cebu family / a home ]</div>
+        <div class="pic-copy">
+          <h2>Everyone needs<br>a place to live.</h2>
+          <div class="q">But what is it worth?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. DIVIDER -->
+    <div style="position:relative">
+      <span class="tag">archetype: SECTION DIVIDER</span>
+      <div class="slide divider">
+        <div class="num">02</div>
+        <h2>The Market</h2>
+      </div>
+    </div>
+
+    <!-- 4. TWO-POINT -->
+    <div style="position:relative">
+      <span class="tag">archetype: TWO / THREE POINTS</span>
+      <div class="slide">
+        <div class="kicker">Objectives</div>
+        <ul class="points">
+          <li><strong>Predictive</strong> — estimate open-market price per sqm across Metro Cebu.</li>
+          <li><strong>Prescriptive</strong> — show where those estimates diverge from official benchmarks.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. PLOT SLIDE -->
+    <div style="position:relative">
+      <span class="tag">archetype: PLOT (real EDA image wired in)</span>
+      <div class="slide plot-slide">
+        <div class="kicker">The finding that changed everything</div>
+        <div class="plot-wrap">
+          <img src="../EDA/plots/01_target/all_strata_price_boxplot.png" alt="price by stratum">
+        </div>
+        <div class="caption">Condos, houses, and lots are different markets — the condo median is about <strong>5.8×</strong> the vacant-lot median.</div>
+      </div>
+    </div>
+
+    <!-- 6. TABLE (the one dense slide) -->
+    <div style="position:relative">
+      <span class="tag">archetype: RESULTS TABLE (the one allowed dense slide)</span>
+      <div class="slide">
+        <div class="kicker">Headline accuracy</div>
+        <table>
+          <thead><tr><th>Property type</th><th>Typical error (MdAPE)</th><th>Within 20% (PE20)</th></tr></thead>
+          <tbody>
+            <tr><td>Condominium</td><td class="num">19.3%</td><td class="num">51%</td></tr>
+            <tr><td>Houses</td><td class="num">22.7%</td><td class="num">44%</td></tr>
+            <tr><td>Vacant Lot</td><td class="num">38.4%</td><td class="num">26%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 7. CLOSE -->
+    <div style="position:relative">
+      <span class="tag">archetype: CLOSE</span>
+      <div class="slide" style="justify-content:center">
+        <div class="lead">A clearer starting point for the family<br>deciding what a home is worth —</div>
+        <h2 style="margin-top:22px;color:var(--accent)">not the last word on it.</h2>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

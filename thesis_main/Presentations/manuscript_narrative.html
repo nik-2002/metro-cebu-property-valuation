@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manuscript Narrative — source for the deck</title>
+<style>
+  :root{--bg:#FAF8F4;--ink:#23231f;--muted:#6B6B66;--accent:#2F5D50;--soft:#E7EEEA;--line:#E0DCD3;--num:#1d4a3f;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#EEEBE4;color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;padding:48px 16px 120px}
+  .wrap{max-width:920px;margin:0 auto;background:var(--bg);border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,.12);padding:60px 64px}
+  header h1{font-size:34px;font-weight:700;letter-spacing:-.3px;color:var(--accent);line-height:1.15}
+  header .meta{color:var(--muted);font-size:14px;margin-top:8px;letter-spacing:.02em}
+  .spine{background:var(--soft);border-left:5px solid var(--accent);border-radius:6px;padding:20px 24px;margin:28px 0 8px;font-size:18px;line-height:1.5}
+  .spine b{color:var(--accent)}
+  .legend{font-size:13px;color:var(--muted);margin:14px 0 36px}
+  .legend .n{background:#dfeae4;color:var(--num);font-weight:700;border-radius:4px;padding:1px 6px;font-variant-numeric:tabular-nums}
+  section{margin:0 0 34px;padding:0 0 30px;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  h2{font-size:23px;color:var(--accent);font-weight:700;margin-bottom:4px}
+  .maps{font-size:12.5px;color:var(--muted);font-style:italic;margin-bottom:14px;letter-spacing:.02em}
+  .lead-in{font-weight:600;margin-bottom:10px}
+  ul{list-style:none;margin:0}
+  li{position:relative;padding-left:22px;margin-bottom:10px;font-size:15.5px}
+  li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;background:var(--accent);border-radius:2px}
+  li b{color:var(--ink)}
+  .n{background:#dfeae4;color:var(--num);font-weight:700;border-radius:4px;padding:1px 6px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .cite{color:var(--muted);font-style:italic}
+  .tag{display:inline-block;background:var(--accent);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:4px;padding:2px 9px;margin-right:8px;vertical-align:2px}
+  .sub{font-weight:700;color:var(--accent);font-size:14px;margin:14px 0 6px}
+  footer{color:var(--muted);font-size:13px;margin-top:30px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Manuscript Narrative</h1>
+    <div class="meta">Predicting Open-Market Residential Property Values in Metro Cebu · source notes for the defense deck · grounded in the manuscript, nothing invented</div>
+  </header>
+
+  <div class="spine">
+    <b>The spine —</b> Metro Cebu has an active, fast-changing property market but <b>no trustworthy, property-level price reference</b>; this study builds one — open-market listings + engineered geospatial features + stratified, explainable ML — delivered as a web prototype, while measuring how far official benchmarks lag the market.
+  </div>
+  <div class="legend"><span class="n">numbers</span> are highlighted so they're easy to lift into slides · <span class="cite">grey italics</span> = citation · the arc <b>problem → field → method → data → prep → build → appraisal → meaning → close</b> is CRISP-DM. Each chapter header shows its <b>deck section ↔ manuscript page</b> (printed page numbers from the compiled PDF).</div>
+
+  <section>
+    <h2>Ch 1 — Introduction</h2>
+    <div class="maps">deck: The Property · The Market · The Question &nbsp;•&nbsp; manuscript pp. 1–9 (Research Questions p. 4)</div>
+    <ul>
+      <li><b>Setup:</b> Cebu is booming — <span class="n">7.3%</span> economic growth in 2024 <span class="cite">(PSA Cebu, 2025)</span>, driven by IT-BPM and tourism; home prices rose <span class="n">11.5%</span> in 2025 <span class="cite">(BSP, 2025)</span>, the highest rate outside Metro Manila.</li>
+      <li><b>The problem:</b> a buyer or seller has no simple public source for what a property should command. Price is pieced from <b>four partial references</b>, each answering a different question: <b>broker opinions</b> (not standardized), <b>bank appraisals</b> (lending-risk basis), <b>BIR zonal values</b> (taxation, not live, often stale — <span class="cite">BIR n.d.; Otsuka et al., 2023</span>), <b>online listings</b> (asking prices, seller noise).</li>
+      <li><b>The diagnosis:</b> the references aren't useless — they're <b>fragmented</b> (different purposes, assumptions, update speeds), so they don't compare. Metro Cebu lacks a transparent, spatially detailed reference layer.</li>
+      <li><b>Why now:</b> prices outrun slow references; infrastructure (CBRT, Expressway) is redrawing accessibility; geospatial + listing data are now feasible.</li>
+      <li><b>The stance:</b> this does <b>not</b> produce a final appraised value — it's a transparent decision-support layer that complements professionals <span class="cite">(IVSC, 2025)</span>.</li>
+      <li><b>Research Questions:</b> (1) value drivers; (2) best model among Hedonic / RF / XGBoost for deployment; (3) do geospatial features beat structural-only, and how by type; (4) how large is the gap vs BIR zonal.</li>
+      <li><b>Scope:</b> <span class="n">6</span> LGUs, <span class="n">8</span> CBD nodes, open-market only deployed; web-app deliverable (a prototype for triangulation).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 2 — Review of Related Literature</h2>
+    <div class="maps">deck: The Field &nbsp;•&nbsp; manuscript pp. 10–19 (geospatial p. 14, spatial autocorrelation p. 16)</div>
+    <ul>
+      <li><b>Traditional vs ML:</b> hedonic (interpretable) vs ML; tree models tend to outperform on tabular data <span class="cite">(Grinsztajn et al., 2022)</span>; regional evidence <span class="cite">(Tanamal et al., 2023 — Surabaya RF)</span>, with a Tanzania RF (~53%) as a small-sample caution.</li>
+      <li><b>Philippine work</b> is Manila / Pangasinan-centric <span class="cite">(Viray, 2023; Ramolete et al., 2023)</span> — little property-level, geospatially rich work.</li>
+      <li><b>Location is price:</b> distance and accessibility are robust drivers; <b>Agosto (2020) is the only Cebu-specific study — transport accessibility is the primary driver of Cebu land value.</b> Accessibility indexing <span class="cite">(Hansen, 1959)</span>; raw distances too fragmented alone <span class="cite">(Rey-Blanco, 2024)</span>.</li>
+      <li><b>Macroeconomic factors</b> acknowledged but out of scope (the study is cross-sectional).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 3 — Methodology</h2>
+    <div class="maps">deck: The Data (the "how it's built" slides) &nbsp;•&nbsp; manuscript pp. 20–37 (feature engineering p. 27, modeling strategy p. 31, metrics p. 34)</div>
+    <ul>
+      <li><b>Design:</b> quantitative, non-experimental; predictive + prescriptive.</li>
+      <li><b>Data:</b> 3 listing portals, BIR zonal, geospatial APIs (Google / OSM); target = <b>price per sqm</b>; broker human-in-the-loop check.</li>
+      <li><b>Pipeline:</b> ingest → clean → geocode → BIR → GIS features → ABT (funnel <span class="n">16,561</span> → <span class="n">3,616</span>).</li>
+      <li><b>Network distance:</b> shortest-path road distance to <span class="n">8</span> polycentric nodes (osmnx Dijkstra) <span class="cite">(Giuliano &amp; Small, 1991; McMillen, 2003; JICA, 2015; Boeing, 2017)</span>.</li>
+      <li><b>MCRAI:</b> gravity formula, <b>β = 2</b> inverse-square decay; <span class="n">8</span> amenity categories, each with its own radius (1–5 km); composite = the positive-OLS categories with weights <b>edu 0.447 / grocery 0.345 / recreation 0.222</b> <span class="cite">(Hansen, 1959)</span>.</li>
+      <li><b>Spatial lag:</b> mean price of nearby same-type listings within <span class="n">500 m</span> <span class="cite">(Tobler, 1970)</span>.</li>
+      <li><b>Modeling strategy:</b> stratified (3 types) + per-stratum feature selection; OLS hedonic equation; <b>leak-free GroupKFold</b>; hyperparameter tuning.</li>
+      <li><b>Eval + explainability:</b> MdAPE / PE20 headline, MAPE / COD / PRD supporting; SHAP. <b>Deliverable:</b> the web app.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 4 — Data Understanding</h2>
+    <div class="maps">deck: The Data (EDA) &nbsp;•&nbsp; manuscript pp. 38–47</div>
+    <ul>
+      <li><b>Collection funnel</b> by source (<span class="n">16,561</span> → <span class="n">3,616</span>; OnePropertee excluded for contamination).</li>
+      <li><b>Target:</b> price per sqm is right-skewed; condos command the highest unit prices, vacant lots the lowest.</li>
+      <li><b>Geographic spread (uneven):</b> Cebu City <span class="n">~₱113,600/sqm</span>, Mandaue <span class="n">~₱96,100</span>, Lapu-Lapu <span class="n">~₱92,100</span>; Talisay, Minglanilla, Consolacion form a lower band (<span class="n">~₱47,100–56,800</span>).</li>
+      <li><b>Collinearity warning:</b> several southern-corridor CBD distances move together — flagged for the linear baseline.</li>
+      <li><b>MCRAI zero rates:</b> highest for security (<span class="n">26.6%</span>), near-complete for education (<span class="n">0.3%</span>) — coverage, not true absence.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 5 — Data Preparation</h2>
+    <div class="maps">deck: Groundwork &nbsp;•&nbsp; manuscript pp. 48–52</div>
+    <ul>
+      <li><b>Cleaning, honestly:</b> imputation kept visible (flags); structurally-absent fields (e.g., beds/baths for lots) left unimputed, not faked; hard duplicates dropped; a price-per-sqm sanity band applied.</li>
+      <li><b>Modeling subset:</b> <span class="n">3,372</span> of the <span class="n">3,616</span> assembled ABT; target log-transformed; split into the three strata.</li>
+      <li><b>The data-integrity story:</b> one scale-selector feature was quietly dominating the target (it had come to mean two different things across scrape batches); tracing and fixing it is why the metrics can be trusted.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 6 — Modeling</h2>
+    <div class="maps">deck: The Build &nbsp;•&nbsp; manuscript pp. 53–58 (per-stratum feature sets p. 53)</div>
+    <ul>
+      <li><b>Why stratify:</b> the condo median runs <span class="n">≈ 5.8×</span> the vacant-lot median — built area vs land-only are different price logics; pooling blurs them <span class="cite">(Dröes et al., 2019; Usman et al., 2020)</span>.</li>
+      <li><b>Three strata:</b> Condominium <span class="n">1,300</span> · Houses <span class="n">1,223</span> · Vacant Lot <span class="n">849</span>.</li>
+      <li><b>Per-stratum feature sets</b> trimmed by VIF + OLS significance + ablation + MCRAI zero rates → <span class="n">21 / 24 / 22</span> features. Condos &amp; houses use the MCRAI composite; lots use 6 individual MCRAI categories.</li>
+      <li><b>The lineup:</b> OLS hedonic baseline (HC3 robust) <span class="cite">(Rosen, 1974)</span>, Random Forest <span class="cite">(Breiman, 2001)</span>, XGBoost <span class="cite">(Chen &amp; Guestrin, 2016)</span>, SHAP <span class="cite">(Lundberg &amp; Lee, 2017)</span>.</li>
+      <li><b>Evaluation:</b> leak-free GroupKFold by coordinate cluster — the same spot can't be in train and test.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 7 — Evaluation</h2>
+    <div class="maps">deck: The Appraisal &nbsp;•&nbsp; manuscript pp. 59–66 (ablation p. 61)</div>
+    <ul>
+      <li><b>Headline accuracy (MdAPE / PE20):</b> Condo <span class="n">19.3% / 51%</span> · Houses <span class="n">22.7% / 44%</span> · Vacant Lot <span class="n">38.4% / 26%</span>. Supporting: MAPE, COD, PRD. Not claiming IAAO compliance.</li>
+      <li><b>Model comparison:</b> tree models beat OLS in every stratum; <b>RF edged XGBoost</b> (19.3 vs 19.8 / 22.7 vs 23.6 / 38.4 vs 40.2) → deployed for robustness + simplicity.</li>
+      <li><b>Ablation</b> (Structural / +Administrative / +Geospatial): Condo <span class="n">24.9 → 23.0 → 19.3</span> · Houses <span class="n">27.1 → 22.3 → 23.0</span> · Lot <span class="n">51.5 → 42.3 → 38.6</span>. Geospatial improves every stratum vs structural-only (<span class="n">+5.7 / +4.2 / +13.0</span>).</li>
+      <li><b>Peer benchmark:</b> comparable studies report MAPE ~48–53% <span class="cite">(Nyanda, 2024)</span> — context that the errors are competitive.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 8 — Results &amp; Discussion</h2>
+    <div class="maps">deck: The Appraisal (SHAP + interpretation) &nbsp;•&nbsp; manuscript pp. 67–72</div>
+    <ul>
+      <li><b>Three points:</b> (1) location dominates every stratum; (2) drivers differ by type — condos → neighborhood price / spatial lag; houses &amp; lots → distance to Cebu Business Park; lots → individual amenities; (3) MCRAI is selective, not uniform.</li>
+      <li><b>Polycentric, not monocentric:</b> a corridor with several active peaks. CBP still anchors land and houses (bid-rent), while condos spread weight across the Mactan / airport / Consolacion nodes <span class="cite">(Giuliano &amp; Small, 1991; McMillen, 2003; JICA, 2015)</span>.</li>
+      <li><b>Mactan submarket:</b> a bundle effect (airport access, bridge connectivity, tourism-adjacent condos), not a raw "island premium."</li>
+      <li><b>MCRAI + spatial sorting:</b> negative signs on security / tourism / retail density reflect sorting and congestion, not that the amenity is harmful <span class="cite">(Tiebout, 1956; Bayer &amp; McMillan, 2012; Yang et al., 2016)</span>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 9 — Conclusions</h2>
+    <div class="maps">deck: The Close &nbsp;•&nbsp; manuscript pp. 73–78 (RQ answers p. 73)</div>
+    <ul>
+      <li><b>RQ1</b> — Location dominates; drivers differ by type (polycentric accessibility + submarket segmentation, not one citywide gradient).</li>
+      <li><b>RQ2</b> — Tree models beat OLS everywhere; Random Forest best-or-tied, deployed.</li>
+      <li><b>RQ3</b> — Geospatial features materially help, most where administrative benchmarks are weakest (condos, lots).</li>
+      <li><b>RQ4</b> — Vacant-lot market price <span class="n">≈ 3×</span> the BIR benchmark overall — from <span class="n">~2.2×</span> in Cebu City to <span class="n">~4.8×</span> in Mandaue; large, positive, systematic.</li>
+      <li><b>Contributions:</b> methodological (per-type modeling, polycentric distances, two-stage MCRAI, leak-free CV); practical (a reproducible, explainable web prototype — TypeScript + Leaflet + Python).</li>
+      <li><b>Limitations:</b> asking-price ceiling (not deed-of-sale), cross-sectional snapshot, vacant-lot data ceiling, thin peripheral cells.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ch 10 — Recommendations</h2>
+    <div class="maps">deck: The Close &nbsp;•&nbsp; manuscript pp. 79–end</div>
+    <ul>
+      <li><b>Practice:</b> read the surface as triangulation, not a final number; weight polycentric distance + property type over the amenity composite; treat the valuation gap as a research signal, not a correction factor (validate vs transactions first).</li>
+      <li><b>Policy:</b> keep recognizing secondary / corridor subcenters (Mactan, Consolacion, Naga), not just CBP; MCRAI as an adaptable template, not a finished index.</li>
+      <li><b>Future research:</b> estimate MCRAI parameters (β, radii, weights) from data; test GWR / MGWR for spatial heterogeneity; enrich parcel attributes (frontage, corner-lot) and add a time dimension + macro indicators <span class="cite">(Udomsap &amp; Abid, 2020)</span>.</li>
+      <li><b>Close:</b> a demonstrated, reproducible workflow — a defensible template for local valuation analytics, not the last word.</li>
+    </ul>
+  </section>
+
+  <footer>Every figure and claim above traces to the manuscript, the deployment manifest, or the EDA outputs. Pull freely into the deck.</footer>
+</div>
+</body>
+</html>
