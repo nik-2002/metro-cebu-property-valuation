@@ -54,3 +54,21 @@
 4. Do the heavier analysis: #2 (sensitivity).
 5. Polish: #1 (better map).
 6. Recompile, then route to Sir Randy → advisor (formatting) → print.
+
+---
+
+## E. Sir Randy's direct review — received 2026-07-11 (binding: he is adviser + panelist)
+
+Annotated PDF (APA `main.docx`/`main.pdf` build) with 3 anchored comments + 4 written items.
+
+| # | Item | Location | Status |
+|---|------|----------|--------|
+| R1 | "What is Real Estate?" — add ≥1 **definition with citation** | `chapter1.tex` §Background | ✅ Added IVS-2025 real estate / real property definition `\parencite{ivs2025}`; kept Civil Code Art. 415 grounding. |
+| R2 | "Despite **this** growth" — ambiguous "this"; lead with a complete statement | `chapter1.tex` §The Problem opener | ✅ Rewrote to "Metro Cebu's residential market is expanding quickly, yet a seller or buyer still does not have…" |
+| R3 | Don't label **"Map 1/Map 2"** — use **"Figure 1"** etc. (APA 7: any non-table visual is a Figure) | custom floats in `main.tex` | ✅ Converted all 3 `ccmap` (Map) + 6 `ccpic` (Picture) floats to `figure`; fixed 4 in-text refs; removed custom float defs + List of Maps/List of Pictures. Now one Figure sequence (Fig 1–27). |
+| R4 | Proper **APA 7 figure/table formatting** (author read: presentation, not citation style) | all floats | ✅ Reformatted all 27 figures to APA anatomy: number+**italic title-case title moved ABOVE the image** (`\caption` before `\includegraphics`), sentence description **demoted to a flush-left `\figurenote{}` BELOW the image** (added preamble `\renewcommand\figurenote` for flush-left). Tables already APA (title-case caption + Note above table). |
+| R5 | ~~One figure is **low quality** (adviser's Image #4)~~ — **NOT a manuscript figure** | n/a | ✅ **RESOLVED (no action).** Image #4 was the **APA figure format guide** Randy attached as a reference; it merely came through blurry in the review session. Re-sent clean, it is the APA figure-anatomy diagram already used to drive R4. No low-quality figure exists in the manuscript to regenerate. |
+
+**Verification:** `main.tex` recompiles clean (pdflatex ×3 + biber, 0 undefined refs, 130 pp). Study-area map renders as **Figure 1**; no "Map"/"Picture" labels remain in the PDF; single List of Figures (27 entries).
+
+**Next:** all R1–R5 resolved → regenerate `main.docx` from the updated LaTeX → return to Sir Randy → adviser formatting check → print.

@@ -21,3 +21,7 @@ ROPA & Real and Other Properties Acquired \\
 RPPI & Residential Real Estate Price Index \\
 SHAP & SHapley Additive exPlanations \\
 \end{longtable}
+% This abbreviations list is a longtable, which silently steps the \table
+% counter even though it has no \caption — that consumed "Table 1" and made the
+% first real table start at 2. Undo the phantom step so numbering starts at 1.
+\addtocounter{table}{-1}

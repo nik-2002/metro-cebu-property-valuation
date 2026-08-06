@@ -1,11 +1,12 @@
 \section{Data Documentation}\label{app:datadoc}
 
-Figure~\ref{fig:abt-snapshot} shows a slice of the assembled analytics base table as stored, illustrating the row-level structure behind the schema tables that follow. The full table holds 51 columns; the slice shows a representative subset.
+Figure~\ref{fig:abt-snapshot} shows a slice of the assembled analytics base table as stored, illustrating the row-level structure behind the schema tables that follow. The full table holds 51 columns; the slice shows a representative subset. Table~\ref{tab:chapter3-lamudi-structure} shows the sample structure of the cleaned listing records, and Table~\ref{tab:chapter3-feature-matrix} documents the final feature-matrix schema used for the modeling workflow.
 
 \begin{figure}[H]
 \centering
+\caption{Snapshot of the Assembled Open-Market ABT}
 \makebox[\textwidth][c]{\includegraphics[width=1.18\textwidth]{diagrams/abt_snapshot.png}}
-\caption{Snapshot of the assembled open-market ABT (12 of 51 columns, first rows).}
+\figurenote{12 of 51 columns, first rows.}
 \label{fig:abt-snapshot}
 \end{figure}
 
@@ -37,13 +38,13 @@ Latitude / Longitude & Latitude, Longitude & Direct coordinate mapping \\
 \toprule
 Feature Group & Variables & Type \\
 \midrule
-\textbf{Identifiers / Metadata} & Property ID, source portal (stored in ABT; excluded from the final fitted feature matrix) & Metadata \\
-\textbf{Structural} & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, vacancy / imputation flags & Numeric / Categorical \\
-\textbf{Locational} & City, Barangay, Latitude, Longitude, \emph{is\_mactan\_island} & Numeric / Categorical \\
-\textbf{Geospatial} & Network distance to Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport & Numeric (meters) \\
-\textbf{MCRAI} & \emph{mcrai\_education} through \emph{mcrai\_retail\_density}, plus \emph{mcrai\_composite} & Numeric (index scores) \\
-\textbf{Administrative / Neighborhood} & BIR zonal-value features and \emph{spatial\_lag\_price} & Numeric (PHP) \\
-\textbf{Target} & \emph{price\_per\_sqm}, \emph{price\_php}, \emph{log\_price} & Numeric \\
+Identifiers / Metadata & Property ID, source portal (stored in ABT; excluded from the final fitted feature matrix) & Metadata \\
+Structural & Lot Area, Floor Area, Bedrooms, Bathrooms, Property Type, vacancy / imputation flags & Numeric / Categorical \\
+Locational & City, Barangay, Latitude, Longitude, \emph{is\_mactan\_island} & Numeric / Categorical \\
+Geospatial & Network distance to Cebu Business Park, Mandaue CBD, Mactan CBD, SRP, Talisay Tabunok, Consolacion, Naga City, and Airport & Numeric (meters) \\
+MCRAI & \emph{mcrai\_education} through \emph{mcrai\_retail\_density}, plus \emph{mcrai\_composite} & Numeric (index scores) \\
+Administrative / Neighborhood & BIR zonal-value features and \emph{spatial\_lag\_price} & Numeric (PHP) \\
+Target & \emph{price\_per\_sqm}, \emph{price\_php}, \emph{log\_price} & Numeric \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -51,36 +52,48 @@ Feature Group & Variables & Type \\
 
 \section{Data Source Portals}\label{app:portals}
 
-Open-market listings were collected from three public real-estate portals: Lamudi, FilipinoHomes, and DotProperty. The screenshots below show each portal's residential listing interface at the time of collection, documenting the public sources behind the assembled ABT described in Chapter~5. A fourth portal, OnePropertee, was also scraped but excluded from the final ABT after its records were found to carry mis-extracted per-square-meter prices and centroid-level geocoding.
+Open-market listings were collected from three public real-estate portals: Lamudi, FilipinoHomes, and DotProperty. Figures~\ref{pic:portal-lamudi}, \ref{pic:portal-filipinohomes}, and \ref{pic:portal-dotproperty} show each portal's residential listing interface at the time of collection, documenting the public sources behind the assembled ABT described in Chapter~5. A fourth portal, OnePropertee, was also scraped but excluded from the final ABT after its records were found to carry mis-extracted per-square-meter prices and centroid-level geocoding.
 
-\begin{ccpic}[H]
+\begingroup
+\setlength{\intextsep}{3pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{diagrams/portal_lamudi.png}
-\caption[Lamudi Philippines listing portal, the primary open-market source\dots]{Lamudi Philippines listing portal, the primary open-market source (1{,}578 bulk-scraped rows plus 270 from the later browser-based batch).}
+\caption{Lamudi Philippines Listing Portal}
+\includegraphics[width=0.84\textwidth]{diagrams/portal_lamudi.png}
+\figurenote{Primary open-market source (1{,}578 bulk-scraped rows plus 270 from the later browser-based batch).}
 \label{pic:portal-lamudi}
-\end{ccpic}
+\end{figure}
 
-\begin{ccpic}[H]
+\clearpage
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{diagrams/portal_filipinohomes.png}
-\caption[FilipinoHomes listing portal, the second open-market source\dots]{FilipinoHomes listing portal, the second open-market source (1{,}203 rows).}
+\caption{FilipinoHomes Listing Portal}
+\includegraphics[width=0.84\textwidth]{diagrams/portal_filipinohomes.png}
+\figurenote{Second open-market source (1{,}203 rows).}
 \label{pic:portal-filipinohomes}
-\end{ccpic}
+\end{figure}
 
-\begin{ccpic}[H]
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{diagrams/portal_dotproperty.png}
-\caption[DotProperty Philippines listing portal, the third open-market source\dots]{DotProperty Philippines listing portal, the third open-market source (565 rows).}
+\caption{DotProperty Philippines Listing Portal}
+\includegraphics[width=0.84\textwidth]{diagrams/portal_dotproperty.png}
+\figurenote{Third open-market source (565 rows).}
 \label{pic:portal-dotproperty}
-\end{ccpic}
+\end{figure}
+\endgroup
 
-\section{Supplementary Tables}\label{app:supptables}
+\section{Supplementary Table}\label{app:supptables}
+
+Table~\ref{tab:appendix-abt-city-distribution} reports the geographic distribution of the final open-market ABT across the six LGUs, broken down by property type.
 
 \begin{table}[H]
-\caption{Geographic Distribution of the Final Open-Market ABT by LGU and Property Type}
+\caption[Geographic Distribution of the Final Open-Market ABT]{Geographic Distribution of the Final Open-Market ABT by LGU and Property Type}
 \label{tab:appendix-abt-city-distribution}
 \begin{center}
-\begin{tabular}{L{0.20\textwidth} L{0.09\textwidth} L{0.09\textwidth} L{0.10\textwidth} L{0.10\textwidth} L{0.10\textwidth}}
+\begin{tabular}{L{0.20\textwidth} L{0.09\textwidth} L{0.11\textwidth} L{0.10\textwidth} L{0.10\textwidth} L{0.10\textwidth}}
 \toprule
 City or Municipality & Rows & Share & Condo & House & Lot \\
 \midrule
@@ -95,39 +108,42 @@ Total & 3{,}616 & 100.00\% & 1{,}391 & 1{,}301 & 924 \\
 \bottomrule
 \end{tabular}
 \end{center}
-\textit{Note.} The Condo, House, and Lot columns group the full assembled ABT by property type; the House column aggregates house-and-lot, single-detached, townhouse, and apartment listings. These full-ABT groups (1{,}391, 1{,}301, and 924) are larger than the modeling strata (1{,}300, 1{,}223, and 849) because 244 rows were held out of fitting by the model-requirement filters described in Chapter~5. Chapter~4 reports the finer property-type breakdown.
+\textit{Note.} Columns group the full assembled ABT by property type (House aggregates house-and-lot, single-detached, townhouse, and apartment). These full-ABT counts exceed the modeling strata because 244 rows were held out at fitting (Chapter~5). Chapter~4 gives the finer property-type breakdown.
 \end{table}
 
 \clearpage
 \section{SHAP Beeswarm Plots}\label{app:shap}
 
-Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). The beeswarm plots below carry the same ranking but add the directional detail. Each dot is one property; its horizontal position is that property's SHAP value (how much the feature pushed the predicted price per square meter up or down), and its color is the underlying feature value (red high, blue low). A band of red dots on the right therefore means high values of that feature raise the prediction. The vertical spread only separates overlapping dots and has no other meaning.
+Chapter 7 reports SHAP feature importance as mean absolute values (bar charts). The beeswarm plots in Figures~\ref{fig:shap-condo-bee}, \ref{fig:shap-houses-bee}, and \ref{fig:shap-lot-bee} carry the same ranking but add the direction of each feature's effect; the note under Figure~\ref{fig:shap-condo-bee} explains how to read them.
 
 \begin{figure}[H]
 \centering
+\caption{SHAP Beeswarm Summary: Condominium Model}
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_summary.png}
-\caption{SHAP beeswarm summary, deployed condominium Random Forest.}
+\figurenote{Deployed condominium Random Forest, top 20 features. Each dot is one condominium listing, and its horizontal position is that listing's SHAP value --- how far, and in which direction, the feature moved the predicted price per square meter. Dots to the right of zero raised the prediction; dots to the left lowered it. Color encodes the underlying feature value, from low (blue) to high (red), so a band of red dots on the right means high values of that feature push value upward. Features are ordered from most to least important, and the vertical spread only separates overlapping dots.}
 \label{fig:shap-condo-bee}
 \end{figure}
 
 \begin{figure}[H]
 \centering
+\caption{SHAP Beeswarm Summary: House Model}
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_summary.png}
-\caption{SHAP beeswarm summary, deployed house Random Forest.}
+\figurenote{Deployed house Random Forest, top 20 features; see Figure~\ref{fig:shap-condo-bee} for how to read the beeswarm.}
 \label{fig:shap-houses-bee}
 \end{figure}
 
 \begin{figure}[H]
 \centering
+\caption{SHAP Beeswarm Summary: Vacant-Lot Model}
 \includegraphics[width=0.80\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_summary.png}
-\caption{SHAP beeswarm summary, deployed vacant-lot Random Forest.}
+\figurenote{Deployed vacant-lot Random Forest, top 20 features; see Figure~\ref{fig:shap-condo-bee} for how to read the beeswarm.}
 \label{fig:shap-lot-bee}
 \end{figure}
 
 \clearpage
 \section{Feature Snapshots by Stratum}\label{app:snapshots}
 
-The tables below show example properties from each modeling stratum together with their full model-feature values, illustrating the per-stratum feature sets described in Chapters 3 and 6. Each column is one open-market listing chosen near the 30th, 50th, and 70th percentile of price per square meter, so the examples are representative rather than extreme. The one-hot city indicators use Cebu City as the reference category, so a property with zeros in all city rows is in Cebu City.
+Tables~\ref{tab:snapshot-condo}, \ref{tab:snapshot-houses}, and \ref{tab:snapshot-lot} show example properties from each modeling stratum together with their full model-feature values, illustrating the per-stratum feature sets described in Chapters 3 and 6. Each column is one open-market listing chosen near the 30th, 50th, and 70th percentile of price per square meter, so the examples are representative rather than extreme. The one-hot city indicators use Cebu City as the reference category, so a property with zeros in all city rows is in Cebu City.
 
 \input{feature_snapshots}
 
@@ -138,77 +154,100 @@ These plots support the OLS baseline diagnostics discussed in Chapters 3 and 6. 
 
 \subsection*{Heteroscedasticity (Residuals vs.\ Fitted)}
 
-A funnel shape, where the spread of residuals widens or narrows across fitted values, indicates heteroscedasticity. This is why the OLS comparator was reported with HC3 robust standard errors rather than treated as a blocker for the deployed tree models.
+A funnel shape, where the spread of residuals widens or narrows across fitted values, indicates heteroscedasticity. This is why the OLS comparator was reported with HC3 robust standard errors rather than treated as a blocker for the deployed tree models. Figures~\ref{fig:resid-condo}, \ref{fig:resid-houses}, and \ref{fig:resid-lot} show the residual-versus-fitted plots for the condominium, house, and vacant-lot strata.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{../EDA/plots/06_ols_residuals/Condo_residuals_vs_fitted.png}
-\caption{OLS residuals versus fitted values, condominium stratum.}
+\caption{OLS Residuals Versus Fitted Values: Condominium Stratum}
+\includegraphics[width=\textwidth]{../EDA/plots/06_ols_residuals/Condo_residuals_vs_fitted.png}
+\figurenote{OLS comparator, condominium stratum. Points are residuals plotted against fitted log-price; the solid line is a LOWESS trend and the dashed line marks the zero-residual reference. A funnel-shaped spread or a curved trend would flag heteroscedasticity or misspecification.}
 \label{fig:resid-condo}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{../EDA/plots/06_ols_residuals/Houses_residuals_vs_fitted.png}
-\caption{OLS residuals versus fitted values, house stratum.}
+\caption{OLS Residuals Versus Fitted Values: House Stratum}
+\includegraphics[width=\textwidth]{../EDA/plots/06_ols_residuals/Houses_residuals_vs_fitted.png}
+\figurenote{OLS comparator, house stratum; see Figure~\ref{fig:resid-condo} for how to read the plot.}
 \label{fig:resid-houses}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{../EDA/plots/06_ols_residuals/Lot_residuals_vs_fitted.png}
-\caption{OLS residuals versus fitted values, vacant-lot stratum.}
+\caption{OLS Residuals Versus Fitted Values: Vacant-Lot Stratum}
+\includegraphics[width=\textwidth]{../EDA/plots/06_ols_residuals/Lot_residuals_vs_fitted.png}
+\figurenote{OLS comparator, vacant-lot stratum; see Figure~\ref{fig:resid-condo} for how to read the plot.}
 \label{fig:resid-lot}
 \end{figure}
 
 \clearpage
 \subsection*{Multicollinearity (Variance Inflation Factors)}
 
-Variance inflation factors above the conventional thresholds (5 to 10) flag predictors whose information is largely carried by other features. These checks informed the per-stratum feature trimming described in Chapters 3 and 6.
+Variance inflation factors above the conventional thresholds (5 to 10) flag predictors whose information is largely carried by other features. These checks informed the per-stratum feature trimming described in Chapters 3 and 6. Figures~\ref{fig:vif-condo}, \ref{fig:vif-houses}, and \ref{fig:vif-lot} show the variance inflation factors for the condominium, house, and vacant-lot strata.
 
+\begingroup
+\setlength{\intextsep}{3pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{../EDA/plots/05_multicollinearity/Condo_vif.png}
-\caption{Variance inflation factors, condominium stratum.}
+\caption{Variance Inflation Factors: Condominium Stratum}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/05_multicollinearity/Condo_vif.png}
+\figurenote{OLS comparator, condominium stratum. Each bar is a retained feature's variance inflation factor; higher bars indicate stronger collinearity with the other predictors, and values above the conventional 5--10 range motivated the per-stratum feature trimming.}
 \label{fig:vif-condo}
 \end{figure}
 
+\clearpage
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{../EDA/plots/05_multicollinearity/Houses_vif.png}
-\caption{Variance inflation factors, house stratum.}
+\caption{Variance Inflation Factors: House Stratum}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/05_multicollinearity/Houses_vif.png}
+\figurenote{OLS comparator, house stratum; see Figure~\ref{fig:vif-condo} for how to read the plot.}
 \label{fig:vif-houses}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.72\textwidth]{../EDA/plots/05_multicollinearity/Lot_vif.png}
-\caption{Variance inflation factors, vacant-lot stratum.}
+\caption{Variance Inflation Factors: Vacant-Lot Stratum}
+\includegraphics[width=0.82\textwidth]{../EDA/plots/05_multicollinearity/Lot_vif.png}
+\figurenote{OLS comparator, vacant-lot stratum; see Figure~\ref{fig:vif-condo} for how to read the plot.}
 \label{fig:vif-lot}
 \end{figure}
+\endgroup
 
 \clearpage
 \section{Web Application Screenshots}\label{app:webapp}
 
 The prototype web-based decision-support application has three views, captured below. The backend runs the exact deployed Random Forest models, so the Property Predictor view shows a live prediction with its SHAP contribution breakdown.
 
-\begin{ccpic}[H]
+\begingroup
+\setlength{\intextsep}{3pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{diagrams/webapp_market_map.png}
-\caption[Prototype web application, Market Map view\dots]{Prototype web application, Market Map view: open-market listings with filters and market-intelligence summaries.}
+\caption{Prototype Web Application: Market Map View}
+\includegraphics[width=0.87\textwidth]{diagrams/webapp_market_map.png}
+\figurenote{Open-market listings with filters and market-intelligence summaries.}
 \label{pic:market}
-\end{ccpic}
+\end{figure}
 
-\begin{ccpic}[H]
+\clearpage
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{diagrams/webapp_price_surface.png}
-\caption[Prototype web application, Price Surface view\dots]{Prototype web application, Price Surface view: the predicted price-per-square-meter surface aggregated by barangay.}
+\caption{Prototype Web Application: Price Surface View}
+\includegraphics[width=0.87\textwidth]{diagrams/webapp_price_surface.png}
+\figurenote{Predicted price-per-square-meter surface aggregated by barangay.}
 \label{pic:surface}
-\end{ccpic}
+\end{figure}
 
-\begin{ccpic}[H]
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{diagrams/webapp_predictor.png}
-\caption[Prototype web application, Property Predictor view\dots]{Prototype web application, Property Predictor view: a property-level prediction with its SHAP contribution breakdown.}
+\caption{Prototype Web Application: Property Predictor View}
+\includegraphics[width=0.87\textwidth]{diagrams/webapp_predictor.png}
+\figurenote{Property-level prediction with its SHAP contribution breakdown.}
 \label{pic:predictor}
-\end{ccpic}
+\end{figure}
+\endgroup

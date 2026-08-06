@@ -1,8 +1,8 @@
-\section{Evaluation}\label{evaluation}
+\section{Chapter 7: Evaluation}\label{evaluation}
 
 This chapter presents the CRISP-DM evaluation phase for the final set of fitted models. Chapter 6 explained how the OLS baseline, Random Forest, and XGBoost were specified and trained within each property stratum. The focus here is the leak-free cross-validated evidence used to judge model quality, select the production model, and examine the error pattern of the retained model. Broader interpretation of what these results mean for Metro Cebu valuation practice is reserved for Chapter 8.
 
-\subsection{\texorpdfstring{\textbf{Evaluation Approach}}{Evaluation Approach}}\label{evaluation-approach}
+\subsection{Evaluation Approach}\label{evaluation-approach}
 
 All reported metrics were computed out-of-fold under five-fold grouped cross-validation, with coordinate clusters as the groups, so that co-located listings could not appear in both training and test folds. Predictions were made on the log price-per-square-meter target, then back-transformed; percentage errors were computed on the per-square-meter scale.
 
@@ -11,12 +11,12 @@ The study led with two headline metrics and kept three more as supporting diagno
 The mean absolute percentage error (MAPE) was retained as a supporting metric because it is the figure most other studies report, which makes cross-study comparison possible, though it is sensitive to the error tail. The coefficient of dispersion (COD) measured how tightly the ratio of predicted to actual price clustered, and the price-related differential (PRD) checked whether the model valued cheaper and more expensive properties even-handedly. COD and PRD are reported in the spirit of assessment ratio studies; the thesis does not claim compliance with IAAO ratio-study thresholds, and those values are used only as context.
 
 
-\subsection{\texorpdfstring{\textbf{Final Model Comparison}}{Final Model Comparison}}\label{final-model-comparison}
+\subsection{Final Model Comparison}\label{final-model-comparison}
 
 Table~\ref{tab:model-comparison} presents the head-to-head comparison of the three approaches within each stratum. The direction was the same across property types: the two tree-based models beat the OLS hedonic baseline in every stratum, by about two percentage points of MdAPE for houses and by five to six points for condominiums and vacant lots. The Random Forest edged out XGBoost in all three strata by a small margin. The gap between Random Forest and XGBoost was narrow enough to call the two comparable, with Random Forest the modest winner.
 
-\begin{table}[htbp]
-\caption{Leak-Free Cross-Validated Comparison by Stratum (Median Absolute Percentage Error)}
+\begin{table}[H]
+\caption[Leak-Free Cross-Validated Comparison by Stratum]{Leak-Free Cross-Validated Comparison by Stratum (Median Absolute Percentage Error)}
 \label{tab:model-comparison}
 \begin{center}
 \small
@@ -30,13 +30,13 @@ Vacant Lot & 44.8 & \textbf{38.4} & 40.2 & 26\% & 1.48 \\
 \bottomrule
 \end{tabular}
 \end{center}
-\footnotesize{MdAPE values per model; PE20 and PRD shown for the deployed Random Forest. Supporting diagnostics for the Random Forest: condominium COD 37.7 / MAPE 36.5; houses COD 35.8 / MAPE 35.1; vacant lot COD 55.9 / MAPE 58.3.}
+\tablenote{MdAPE values per model; PE20 and PRD shown for the deployed Random Forest. Supporting diagnostics for the Random Forest: condominium COD 37.7 / MAPE 36.5; houses COD 35.8 / MAPE 35.1; vacant lot COD 55.9 / MAPE 58.3.}
 \end{table}
 
 The OLS baseline trailed the tree models in every stratum, which confirmed that a linear hedonic specification was useful as an interpretable comparator but was not the best predictive option for this data. The condominium and house models reached a typical error near 19 and 23 percent, while the vacant-lot model was clearly the hardest, with a typical error near 38 percent. That ordering is revisited in the residual analysis below.
 
 
-\subsection{\texorpdfstring{\textbf{Best Model Selection}}{Best Model Selection}}\label{best-model-selection}
+\subsection{Best Model Selection}\label{best-model-selection}
 
 The Random Forest was selected as the production model in all three strata. It posted the lowest MdAPE of the three approaches in every stratum, and it did so while remaining the simpler tree model to deploy and maintain, since it depends only on scikit-learn and is less sensitive to parameter choices than gradient boosting at this data size. Because the Random Forest advantage over XGBoost was small, the deployment decision is framed honestly as ``Random Forest best or tied, deployed for robustness and simplicity'' rather than as a decisive accuracy win.
 
@@ -45,11 +45,11 @@ The choice also followed from the intended use of the model rather than from acc
 The comparison also showed a clear division of roles. OLS remained the interpretable hedonic benchmark used for coefficient-based reference and for grounding the MCRAI composite weights. The tree models were the stronger predictors. The evaluation phase therefore retained the Random Forest as the production estimator for each stratum while keeping OLS as the econometric baseline.
 
 
-\subsection{\texorpdfstring{\textbf{Do the Geospatial Features Help? (Ablation)}}{Do the Geospatial Features Help? (Ablation)}}\label{ablation}
+\subsection{Do the Geospatial Features Help? (Ablation)}\label{ablation}
 
 To test whether the engineered geospatial features earned their place, each stratum's Random Forest was refitted in three tiers under the same folds: structural features only; then adding administrative location (city and BIR zonal value); then adding the full geospatial set (node distances, MCRAI, spatial lag). Table~\ref{tab:ablation} reports the change in typical error.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \caption{Ablation by Feature Tier (MdAPE, Leak-Free Cross-Validation)}
 \label{tab:ablation}
 \begin{center}
@@ -64,17 +64,19 @@ Vacant Lot & 51.5 & 42.3 & \textbf{38.6} \\
 \bottomrule
 \end{tabular}
 \end{center}
-\footnotesize{The + Geospatial tier adds the full geospatial set (all node distances, all MCRAI categories, and the spatial lag). The deployed models use the per-stratum trimmed feature sets described in Chapter 6, so their MdAPE differs slightly from this column (Table~\ref{tab:model-comparison}).}
+\tablenote{The + Geospatial tier adds the full geospatial set (all node distances, all MCRAI categories, and the spatial lag). The deployed models use the per-stratum trimmed feature sets described in Chapter 6, so their MdAPE differs slightly from this column (Table~\ref{tab:model-comparison}).}
 \end{table}
 
 Compared with a structural-only model, the full geospatial set improved every stratum: condominiums by about 5.7 points, houses by about 4.2 points, and vacant lots by about 13.0 points. The decomposition is more revealing. When the engineered geospatial features were added \emph{on top of} administrative location, they carried a clear additional gain for condominiums (about 3.7 points) and vacant lots (about 3.8 points), but added essentially nothing for houses (about $-0.7$ points, a slight worsening). For houses, knowing the city and the BIR zonal value already captured most of the location signal, and the custom geospatial features mostly duplicated it. The reading is that the model's engineered features add the most value precisely where administrative benchmarks are weakest, which is vertical condominiums and bare lots.
 
 
-\subsection{\texorpdfstring{\textbf{Sensitivity of the MCRAI Scoring}}{Sensitivity of the MCRAI Scoring}}\label{mcrai-sensitivity}
+\subsection{Sensitivity of the MCRAI Scoring}\label{mcrai-sensitivity}
 
-Because the MCRAI composite rests on specific design choices---which categories enter the index and what weights they carry (Section~\ref{geospatial-feature-engineering})---it is fair to ask whether the model's results depend on those choices. This was tested directly. Holding each stratum's deployed Random Forest configuration fixed, the \emph{mcrai\_composite} was rebuilt under several weighting schemes and the leak-free group-CV evaluation was re-run for the two strata that use it, condominiums and houses. The vacant-lot model uses the individual MCRAI categories rather than the composite, so it is unaffected by the composite weights by construction and is not included here.
+Because the MCRAI composite rests on specific design choices---which categories enter the index and what weights they carry (described under geospatial feature engineering in Chapter~3)---it is fair to ask whether the model's results depend on those choices. This was tested directly. Holding each stratum's deployed Random Forest configuration fixed, the \emph{mcrai\_composite} was rebuilt under several weighting schemes and the leak-free group-CV evaluation was re-run for the two strata that use it, condominiums and houses. The vacant-lot model uses the individual MCRAI categories rather than the composite, so it is unaffected by the composite weights by construction and is not included here.
 
-\begin{table}[htbp]
+Table~\ref{tab:mcrai-sensitivity} reports the condominium and house group-CV error under each weighting variant.
+
+\begin{table}[H]
 \caption[Sensitivity of group-CV error to the MCRAI composite weighting\dots]{Sensitivity of condominium and house group-CV error to the MCRAI composite weighting. Random Forest hyperparameters were held at the deployed settings; only \emph{mcrai\_composite} was rebuilt for each variant.}
 \label{tab:mcrai-sensitivity}
 \begin{center}
@@ -90,62 +92,68 @@ No composite (MCRAI signal removed) & 19.5 & 51\% & 22.6 & 45\% \\
 \bottomrule
 \end{tabular}
 \end{center}
-\footnotesize{A further check perturbed the three baseline weights randomly by up to 25\% over 50 draws: MdAPE shifted by a mean of 0.20 points (condominium) and 0.34 points (houses), and at most 0.55 and 0.73 points respectively.}
+\tablenote{A further check perturbed the three baseline weights randomly by up to 25\% over 50 draws: MdAPE shifted by a mean of 0.20 points (condominium) and 0.34 points (houses), and at most 0.55 and 0.73 points respectively.}
 \end{table}
 
-\begin{figure}[htbp]
+Figure~\ref{fig:mcrai-sensitivity} presents the same sensitivity check visually.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{../EDA/plots/10_stratified_models/sensitivity_mcrai_weights.png}
-\caption[Sensitivity of deployed-model error to the MCRAI composite weighting\dots]{Sensitivity of deployed-model error to the MCRAI composite weighting (condominium and house models).}
+\caption{Sensitivity of Model Error to MCRAI Composite Weighting}
+\includegraphics[width=\figfull]{../EDA/plots/10_stratified_models/sensitivity_mcrai_weights.png}
+\figurenote{Deployed condominium and house models.}
 \label{fig:mcrai-sensitivity}
 \end{figure}
 
-Figure~\ref{fig:mcrai-sensitivity} summarizes the same result visually. The left panel plots the change in typical error (MdAPE) from the deployed baseline for each weighting variant against a shaded band of one percentage point, the threshold below which a difference is treated as negligible; every variant falls inside it. The right panel shows the spread of typical error across 50 random perturbations that shift the baseline weights by up to 25 percent, with the deployed baseline marked by a dashed line; both strata stay tightly clustered on that line. The vacant-lot model does not appear in either panel because it draws on the individual MCRAI categories rather than the composite, so it is unaffected by the composite weights by construction; its scoring is instead governed by the distance-decay exponent and search radii, which this experiment holds fixed.\footnote{A separate robustness check varied those two scoring parameters directly across all three strata, recomputing the MCRAI scores from the road network for each setting (distance-decay exponent of 1.5, 2.0, and 2.5; search radii scaled to 0.75, 1.0, and 1.25 times their deployed values). The condominium and house models stayed within about 0.7 percentage points of their baseline typical error throughout. The vacant-lot model was the only stratum to move appreciably, by up to roughly 1.3 percentage points, and only in response to the decay exponent rather than the radii. The deployed settings (exponent 2.0, current radii) were retained.}
+The left panel plots the change in typical error (MdAPE) from the deployed baseline for each weighting variant against a shaded band of one percentage point, the threshold below which a difference is treated as negligible; every variant falls inside it. The right panel shows the spread of typical error across 50 random perturbations that shift the baseline weights by up to 25 percent, with the deployed baseline marked by a dashed line; both strata stay tightly clustered on that line. The vacant-lot model does not appear in either panel because it draws on the individual MCRAI categories rather than the composite, so it is unaffected by the composite weights by construction; its scoring is instead governed by the distance-decay exponent and search radii, which this experiment holds fixed.\footnote{A separate robustness check varied those two scoring parameters directly across all three strata, recomputing the MCRAI scores from the road network for each setting (distance-decay exponent of 1.5, 2.0, and 2.5; search radii scaled to 0.75, 1.0, and 1.25 times their deployed values). The condominium and house models stayed within about 0.7 percentage points of their baseline typical error throughout. The vacant-lot model was the only stratum to move appreciably, by up to roughly 1.3 percentage points, and only in response to the decay exponent rather than the radii. The deployed settings (exponent 2.0, current radii) were retained.}
 
-Two readings follow from Table~\ref{tab:mcrai-sensitivity} and Figure~\ref{fig:mcrai-sensitivity}. First, the valuation results are not an artifact of the particular MCRAI weights. Equal weighting, a composite built from all eight categories, removing the composite entirely, and random perturbation of the weights all landed within about half a percentage point of the deployed result. This is consistent with the SHAP attribution below, where the composite is a minor contributor for built homes. Second, the keep-positives screening described in Section~\ref{geospatial-feature-engineering} is mildly helpful rather than load-bearing: the positive-only composite edged out the all-eight alternative by roughly 0.2 to 0.5 points of typical error, so the decision improves interpretability without the study's conclusions resting on it.
+Two readings follow from Table~\ref{tab:mcrai-sensitivity} and Figure~\ref{fig:mcrai-sensitivity}. First, the valuation results are not an artifact of the particular MCRAI weights. Equal weighting, a composite built from all eight categories, removing the composite entirely, and random perturbation of the weights all landed within about half a percentage point of the deployed result. This is consistent with the SHAP attribution below, where the composite is a minor contributor for built homes. Second, the keep-positives screening described under geospatial feature engineering in Chapter~3 is mildly helpful rather than load-bearing: the positive-only composite edged out the all-eight alternative by roughly 0.2 to 0.5 points of typical error, so the decision improves interpretability without the study's conclusions resting on it.
 
-\subsection{\texorpdfstring{\textbf{SHAP Feature Attribution}}{SHAP Feature Attribution}}\label{shap-feature-attribution}
+\subsection{SHAP Feature Attribution}\label{shap-feature-attribution}
 
-SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum SHAP importance in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} shows this directly. These charts rank each feature by its mean absolute SHAP value, that is, the average size of its effect on the predicted price. The directional beeswarm versions, which also show whether high or low feature values push the prediction up or down, are provided in Appendix C. Grouping the SHAP contributions into blocks gives the clearest summary:
+SHAP was applied to each deployed Random Forest so that its prediction logic could be described transparently. Because the models are stratified, the value-driver structure differs by property type, and the per-stratum SHAP importance in Figures~\ref{fig:shap-condo}--\ref{fig:shap-lot} shows this directly. These charts rank each feature by its mean absolute SHAP value, that is, the average size of its effect on the predicted price. The directional beeswarm versions, which also show whether high or low feature values push the prediction up or down, are provided in Appendix~\ref{app:shap}. Grouping the SHAP contributions into blocks gives the clearest summary:
 
 \begin{itemize}
-\item \textbf{Condominium}: neighborhood price level (spatial lag, about 34 percent of the SHAP magnitude) and CBD-distance access (about 30 percent) led, with unit size and bedrooms next. Administrative benchmarks contributed little.
-\item \textbf{Houses}: distance to the Cebu Business Park was the single strongest feature, and CBD distances as a block (about 39 percent) led, followed by structural size (about 35 percent) and neighborhood price.
-\item \textbf{Vacant Lot}: distance to the Cebu Business Park alone accounted for close to half of the model's attribution, and the individual MCRAI amenity categories together carried about 22 percent, their largest share in any stratum.
+\item \textbf{Condominium} (Figure~\ref{fig:shap-condo}): neighborhood price level (spatial lag, about 34 percent of the SHAP magnitude) and CBD-distance access (about 30 percent) led, with unit size and bedrooms next. Administrative benchmarks contributed little.
+\item \textbf{Houses} (Figure~\ref{fig:shap-houses}): distance to the Cebu Business Park was the single strongest feature, and CBD distances as a block (about 39 percent) led, followed by structural size (about 35 percent) and neighborhood price.
+\item \textbf{Vacant Lot} (Figure~\ref{fig:shap-lot}): distance to the Cebu Business Park alone accounted for close to half of the model's attribution, and the individual MCRAI amenity categories together carried about 22 percent, their largest share in any stratum.
 \end{itemize}
 
-Across all three strata, location-related features (CBD distances, MCRAI, and the spatial lag) carried the large majority of the attribution, which is consistent with the value-driver question in RQ1. The substantive interpretation of why these features dominate in Metro Cebu is developed in Chapter 8.
+Across all three strata, location-related features (CBD distances, MCRAI, and the spatial lag) carried the large majority of the attribution, which is consistent with the value-driver question in RQ1. The beeswarm versions in Appendix~\ref{app:shap} add the direction behind these magnitudes: a higher neighborhood price lag and shorter distances to the CBD nodes push the predicted value upward, and the retained MCRAI access lifts value where amenities are denser. Because these directions match the signs from the OLS screening, the tree models did not learn counterintuitive reversals of the hedonic relationships. The substantive interpretation of why these features dominate in Metro Cebu is developed in Chapter 8.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_condo_rf_bar.png}
-\caption[Mean absolute SHAP value, deployed condominium Random Forest\dots]{Mean absolute SHAP value by feature, deployed condominium Random Forest (top 12 features).}
+\caption{Mean Absolute SHAP Value by Feature: Condominium Model}
+\includegraphics[width=\figstd]{../EDA/plots/10_stratified_models/shap_condo_rf_bar.png}
+\figurenote{Top 12 features of the deployed condominium Random Forest, ranked by mean absolute SHAP value.}
 \label{fig:shap-condo}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_houses_rf_bar.png}
-\caption[Mean absolute SHAP value, deployed house Random Forest\dots]{Mean absolute SHAP value by feature, deployed house Random Forest (top 12 features).}
+\caption{Mean Absolute SHAP Value by Feature: House Model}
+\includegraphics[width=\figstd]{../EDA/plots/10_stratified_models/shap_houses_rf_bar.png}
+\figurenote{Top 12 features of the deployed house Random Forest, ranked by mean absolute SHAP value.}
 \label{fig:shap-houses}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.82\textwidth]{../EDA/plots/10_stratified_models/shap_lot_rf_bar.png}
-\caption[Mean absolute SHAP value, deployed vacant-lot Random Forest\dots]{Mean absolute SHAP value by feature, deployed vacant-lot Random Forest (top 12 features).}
+\caption{Mean Absolute SHAP Value by Feature: Vacant-Lot Model}
+\includegraphics[width=\figstd]{../EDA/plots/10_stratified_models/shap_lot_rf_bar.png}
+\figurenote{Top 12 features of the deployed vacant-lot Random Forest, ranked by mean absolute SHAP value.}
 \label{fig:shap-lot}
 \end{figure}
 
 
-\subsection{\texorpdfstring{\textbf{Residual Analysis}}{Residual Analysis}}\label{residual-analysis}
+\subsection{Residual Analysis}\label{residual-analysis}
 
 The residual pattern was consistent and informative across all three strata. At the center of the distribution the models were close to unbiased, with median signed errors within a few percent of zero. The damage was concentrated in the error tail. For each stratum, the worst tenth of predictions were properties priced far below the norm for their location and size, and the model predicted the location-implied price and overshot: the worst-decile condominiums were over-predicted by about 106\%, houses by about 97\%, and vacant lots by about 181\%.
 
 These extreme misses were not random. They were atypically cheap listings whose low price reflects something the listing does not record, such as condition, title issues, distressed or pre-selling pricing, or, for lots, terrain and access. The model sees a normal location and size and reasonably predicts a normal price. This is the same finding seen three ways: the PRD above 1.0 in every stratum (a mild tendency to over-value cheaper properties), the gap between the good typical error and the larger average error, and the heavy worst-decile over-prediction. The vacant-lot stratum showed the strongest version of this, which is why its typical error stayed near 38 percent. Chapter 9 records the specific data limitations behind this tail.
 
 
-\subsection{\texorpdfstring{\textbf{Benchmark Comparison}}{Benchmark Comparison}}\label{benchmark-comparison}
+\subsection{Benchmark Comparison}\label{benchmark-comparison}
 
 The closest Philippine reference point is \textcite{ramolete2023}, who reported MAPE in the 10 to 21 percent range using a richer feature set on a larger, house-dominated dataset under a random train-test split. Two adjustments make the comparison fair. First, the present models were re-evaluated under their random 80/20 protocol rather than the stricter grouped cross-validation, which raised the Random Forest MAPE only modestly (about 5.1 points for condominiums, 1.3 for houses, and 1.8 for vacant lots). This showed that coordinate leakage was a small part of the gap, not the main story. Second, leading with the median rather than the mean, the typical condominium error of about 16 percent and house error of about 22 percent under the matched split sit at the top of Ramolete's band, so the median property is competitive while a hard-case tail inflates the mean.
 

@@ -26,11 +26,15 @@ EDA = os.path.join(BASE, "EDA")
 
 d = pd.read_csv(ABT)
 
+# Median line drawn in solid black so it stays visible in black-and-white printing
+# (matplotlib's default orange median washes out in grayscale).
+MEDIANPROPS = dict(color="black", linewidth=1.6)
+
 # ---- 1. price_per_sqm by city (boxplot, outliers hidden, sorted by median) ----
 order = d.groupby("city")["price_per_sqm"].median().sort_values().index.tolist()
 data = [d.loc[d.city == c, "price_per_sqm"].dropna().values for c in order]
 fig, ax = plt.subplots(figsize=(11, 6))
-ax.boxplot(data, labels=order, showfliers=False, vert=True)
+ax.boxplot(data, labels=order, showfliers=False, vert=True, medianprops=MEDIANPROPS)
 ax.set_title("open_market price_per_sqm by city (outliers hidden)")
 ax.set_ylabel("price_per_sqm (PHP)")
 ax.set_xlabel("city")
@@ -43,7 +47,7 @@ plt.close(fig)
 torder = d.groupby("property_type")["price_per_sqm"].median().sort_values().index.tolist()
 tdata = [d.loc[d.property_type == t, "price_per_sqm"].dropna().values for t in torder]
 fig, ax = plt.subplots(figsize=(11, 6))
-ax.boxplot(tdata, labels=torder, showfliers=False, vert=True)
+ax.boxplot(tdata, labels=torder, showfliers=False, vert=True, medianprops=MEDIANPROPS)
 ax.set_title("open_market price_per_sqm by property type (outliers hidden)")
 ax.set_ylabel("price_per_sqm (PHP)")
 ax.set_xlabel("property_type")
